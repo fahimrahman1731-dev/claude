@@ -1,0 +1,140 @@
+nicknamed|v|A|{nickname} given an informal name|ডাকনাম দেওয়া হয়েছিল|The tall player was nicknamed "the Tower".|The city is nicknamed the Big Apple.
+niece|n|I|the daughter of your brother or sister|ভাগ্নি; ভাতিজি|My niece starts school next year.|She bought a dress for her niece.
+night|n|E|the time when it is dark|রাত|The heart keeps working at night while we sleep.|We stayed at a hotel for one night.
+no|det/adv|E|not any; used to give a negative answer|না; কোনো ... নেই|There is no milk left.|No, I don't want any tea.
+nod|v/n|I|to move the head up and down to agree|মাথা নাড়ানো (সম্মতিতে)|She gave a small nod to show she agreed.|If you understand, please nod.
+noise|n|E|a loud or unpleasant sound|শব্দ; কোলাহল|The noise from the street kept me awake.|Please don't make so much noise.
+norm|n|A|what is usual or expected|নিয়ম; প্রচলিত মান|Working from home has become the norm.|In this village, large families are the norm.
+northern|adj|I|{north} in or from the north|উত্তরাঞ্চলীয়|Snow falls in the northern mountains.|She grew up in a northern town.
+nostalgic|adj|A|missing happy times from the past|স্মৃতিকাতর|Old songs make my father feel nostalgic.|The photos made her nostalgic for her childhood.
+not|adv|E|used to make a sentence negative|না|I am not hungry.|The answer is not correct.
+noted|v/adj|A|{note} noticed; well known|লক্ষ করেছিল; খ্যাত|The detective noted a strange mark on the floor.|She is a noted scientist.
+nothing|pron|E|not anything|কিছুই না|There was nothing in the box.|Nothing could make him change his mind.
+noticeable|adj|A|{notice} easy to see|লক্ষণীয়|There was a noticeable improvement in her grades.|The scar is barely noticeable.
+noticed|v|I|{notice} became aware of|লক্ষ করেছিল|I noticed a crack in the window.|Nobody noticed that she had left.
+novel|n/adj|I|a long written story; new and unusual|উপন্যাস; অভিনব|I am reading a novel about a detective.|They had a novel idea for the project.
+now|adv|E|at this time|এখন|I am busy now.|Now is the best time to start.
+numerous|adj|A|many|অসংখ্য|The festival has numerous events.|She has won numerous prizes.
+nurse|n|E|a person trained to care for sick people|নার্স; সেবিকা|The nurse checked my temperature.|My aunt works as a nurse.
+nutrients|n|A|{nutrient} substances that help living things grow|পুষ্টি উপাদান|Plants take nutrients from the soil.|Fruit is full of important nutrients.
+nutrition|n|A|food and how it affects health|পুষ্টি|Good nutrition helps children grow.|The class teaches basic nutrition.
+obesity|n|A|being very overweight|স্থূলতা|Obesity is a growing health problem.|Sugary drinks can lead to obesity.
+object|n|I|a thing that you can see or touch|বস্তু|A strange object fell from the sky.|Each object in the display has a small label.
+observation|n|A|{observe} watching carefully; a comment|পর্যবেক্ষণ|Scientists learn through careful observation.|She made an interesting observation.
+observations|n|A|{observation} things you notice by watching|পর্যবেক্ষণসমূহ|Write down your observations in the notebook.|Their observations changed the theory.
+observe|v|A|to watch carefully|পর্যবেক্ষণ করা|Observe the changes in the liquid.|Birdwatchers observe birds in the wild.
+obstacle|n|A|something in the way|বাধা|Lack of money was the biggest obstacle.|She overcame every obstacle to succeed.
+obtain|v|A|to get|অর্জন করা; সংগ্রহ করা|You must obtain a visa before you travel.|Scientists obtain data from satellites.
+obvious|adj|A|easy to see or understand|সুস্পষ্ট|The answer was obvious.|It was obvious that she was upset.
+occasion|n|A|a special event; a time when something happens|উপলক্ষ|A wedding is a happy occasion.|On one occasion, I forgot my keys.
+occasionally|adv|A|{occasion} sometimes|মাঝেমধ্যে|I occasionally visit my uncle.|It occasionally snows here.
+occur|v|A|to happen|ঘটা|Earthquakes occur often in Japan.|Did it occur to you to call me?
+occurred|v|A|{occur} happened|ঘটেছিল|The accident occurred at midnight.|An idea suddenly occurred to her.
+ocean|n|E|the large salty water that covers most of the earth|মহাসাগর|Whales live in the ocean.|The Pacific is the largest ocean.
+of|prep|E|belonging to; made from; containing|-এর|A cup of tea, please.|The capital of Bangladesh is Dhaka.
+off|adv/prep|E|away from; not on|বন্ধ; থেকে সরে|Turn off the lights.|He fell off his bike.
+offense|n|A|a crime; something that upsets people|অপরাধ; অসন্তোষ|Stealing is a serious offense.|I meant no offense.
+offers|v/n|I|{offer} gives the chance to have; proposals|প্রস্তাব দেয়; প্রস্তাব|The hotel offers free breakfast.|She received two job offers.
+office|n|E|a room or building where people work|অফিস|My father works in an office downtown.|The post office closes at five.
+officers|n|A|{officer} people with authority in the police or army|কর্মকর্তা|Two police officers came to the house.|The officers led their soldiers into battle.
+official|adj/n|A|approved by people in authority; a person in authority|সরকারি; কর্মকর্তা|The results are now official.|A government official visited the school.
+often|adv|E|many times|প্রায়ই|I often walk to school.|Visitors often swim in the lake.
+old|adj|E|having lived or existed for a long time|পুরানো; বৃদ্ধ|He fixed his old shoe with string.|My grandfather is very old.
+on|prep|E|touching the top of; on a day|উপর; -এ|The book is on the table.|The shop is closed on Sunday.
+once|adv/conj|E|one time; as soon as|একবার; যখনই|I have been to Paris once.|Once you finish, you can go home.
+one|num/pron|E|the number 1|এক|I have one brother.|Which one do you want?
+online|adj/adv|I|connected to the internet|অনলাইন|I bought the tickets online.|Many classes are now online.
+only|adv/adj|E|no more than; single|শুধু; একমাত্র|She was only five years old.|He is the only child in the family.
+onto|prep|E|to a position on|উপরে|The cat jumped onto the roof.|He stepped onto the soft sand.
+open|adj/v|E|not closed; to make not closed|খোলা; খোলা|The valves open and close with every heartbeat.|The shop is open until nine.
+opened|v|E|{open} made not closed|খুলেছিল|She opened the window.|A new library opened last week.
+operatic|adj|A|{opera} like opera|অপেরা-ধর্মী|She has a powerful operatic voice.|The film has an operatic ending.
+operative|adj/n|A|working; a secret agent|কার্যকর; গুপ্তচর|The new rules become operative in May.|The operative waited in the dark alley.
+opinion|n|I|what you think about something|মতামত|In my opinion, the film was too long.|Ask your teacher for her opinion.
+opinions|n|I|{opinion} views|মতামতসমূহ|People have different opinions about the plan.|Share your opinions in the comments.
+opportunities|n|A|{opportunity} chances|সুযোগসমূহ|The city offers many job opportunities.|Travel gives you opportunities to learn.
+opportunity|n|A|a chance to do something|সুযোগ|This is a great opportunity to practice English.|She missed the opportunity to speak.
+or|conj|E|used to show choices|অথবা|Would you like tea or coffee?|Hurry, or you will miss the bus.
+orbit|n/v|A|the path of an object around a planet or star|কক্ষপথ; প্রদক্ষিণ করা|The moon moves in orbit around the earth.|Satellites orbit our planet.
+orchestra|n|A|a large group of musicians|অর্কেস্ট্রা|The orchestra played Beethoven.|She plays the violin in the school orchestra.
+organization|n|A|{organize} a group with a purpose; planning|সংগঠন; সংগঠিত করা|She works for a charity organization.|Good organization saves time.
+organize|v|A|to plan and arrange|সংগঠিত করা; আয়োজন করা|Let's organize a party for her birthday.|Organize your notes by topic.
+organizing|v|A|{organize} planning and arranging|গুছিয়ে রাখা; আয়োজন করা|I spent the weekend organizing my books.|She is organizing a charity concert.
+origin|n|A|where something comes from|উৎপত্তি|The origin of the word is Latin.|Scientists study the origin of the universe.
+original|adj|A|{origin} first; new and different|মৌলিক; আসল|This is the original painting, not a copy.|She had an original idea.
+originality|n|A|{original} being new and different|মৌলিকত্ব|The student won first prize for originality.|Critics praised the film's originality.
+originally|adv|A|{original} at first|মূলত; প্রথমে|The house was originally a school.|She is originally from Khulna.
+orphaned|adj/v|A|{orphan} left without parents|এতিম|The orphaned elephant was raised by keepers.|He was orphaned at the age of six.
+other|adj/pron|E|different; the remaining|অন্য|I have two sisters; one is a doctor, and the other is a teacher.|Do you have any other questions?
+our|det|E|belonging to us|আমাদের|This is our house.|Our teacher is very kind.
+out|adv|E|away from the inside|বাইরে|She went out for a walk.|A fire broke out in the kitchen.
+outcomes|n|A|{outcome} results|ফলাফল|New treatments have improved health outcomes.|Nobody can predict the outcomes of the election.
+outdoor|adj|I|happening outside|বহিরাঙ্গন|The school has an outdoor swimming pool.|We enjoy outdoor activities in spring.
+outdoors|adv|I|outside, in the open air|বাইরে; খোলা আকাশের নিচে|Children should play outdoors every day.|We ate dinner outdoors.
+outside|adv/prep|E|not inside|বাইরে|It is cold outside.|Wait for me outside the bank.
+outsource|v|A|to pay another company to do work|বাইরের প্রতিষ্ঠানকে কাজ দেওয়া|Many firms outsource customer service.|The school decided to outsource its cleaning.
+outstanding|adj|A|excellent|অসামান্য|She gave an outstanding performance.|The hotel offers outstanding service.
+over|prep/adv|E|above; more than; finished|উপরে; বেশি; শেষ|The plane flew over the city.|Strong winds can make tall trees topple over.
+overcoming|v|A|{overcome} defeating a difficulty|কাটিয়ে ওঠা|Overcoming fear takes courage.|The book is about overcoming poverty.
+overthrew|v|A|{overthrow} removed a ruler by force|ক্ষমতাচ্যুত করেছিল|The people overthrew the cruel king.|The army overthrew the government in 1975.
+overwhelmed|adj/v|A|{overwhelm} under too much pressure|অভিভূত; চাপে দিশেহারা|She felt overwhelmed by work.|The hospital was overwhelmed with patients.
+own|adj/v|E|belonging to yourself; to have|নিজের; মালিক হওয়া|In the past, people grew their own food.|They own a small shop.
+owners|n|I|{owner} people who own something|মালিকরা|The owners worked hard to improve the bakery.|Dog owners must clean up after their pets.
+ownership|n|A|{owner} owning something|মালিকানা|The ownership of the land is unclear.|Home ownership is rising.
+oxygen|n|I|a gas in the air that we need to breathe|অক্সিজেন|Green plants release oxygen into the air.|Climbers carried oxygen up the mountain.
+packaging|n|A|{package} materials used to wrap products|মোড়ক|Too much plastic packaging harms the environment.|The packaging was bright and colorful.
+pages|n|E|{page} sheets of paper in a book|পৃষ্ঠাগুলো|The book has three hundred pages.|Her letters filled many pages.
+paid|v|E|{pay} gave money for|পরিশোধ করেছিল|I paid for the tickets online.|She is paid well for her work.
+pain|n|E|the feeling of being hurt|ব্যথা|He felt a sharp pain in his back.|The medicine eased the pain.
+painted|v|E|{paint} covered with paint; made a picture|রং করেছিল; এঁকেছিল|We painted the kitchen yellow.|She painted a portrait of her mother.
+painter|n|I|{paint} a person who paints|চিত্রশিল্পী|The painter worked on the ceiling for months.|My uncle is a house painter.
+painters|n|A|{painter} artists who paint|চিত্রশিল্পীরা|Famous painters lived in this village.|The painters finished the walls in two days.
+paintings|n|I|{painting} pictures made with paint|চিত্রকর্ম|The museum displays paintings from Spain.|Her paintings sell for high prices.
+pair|n|E|two things of the same kind|জোড়া|I need to buy a pair of shoes.|They walked in pairs, and each pair held hands.
+palaces|n|A|{palace} large homes of kings and queens|প্রাসাদসমূহ|The city is famous for its royal palaces.|Old palaces are now museums.
+panels|n|A|{panel} flat pieces; groups of experts|প্যানেল|Solar panels cover the roof.|The display has wooden panels.
+paper|n|E|thin material for writing or wrapping|কাগজ|He found a crumpled piece of paper.|Please recycle used paper.
+parallel|adj|A|side by side and never meeting|সমান্তরাল|The two roads run parallel to each other.|Draw two parallel lines.
+parents|n|E|{parent} mother and father|বাবা-মা|My parents work in a hospital.|Teachers meet with parents every term.
+park|n/v|E|a public garden; to leave a car|পার্ক; গাড়ি রাখা|We played football in the park.|You can park behind the building.
+parks|n|E|{park} public gardens|পার্কগুলো|The city has many green parks.|National parks protect wildlife.
+parliament|n|A|the group of elected people who make laws|সংসদ|Parliament passed a new law.|She was elected to parliament.
+part|n|E|a piece of a whole|অংশ|Music is part of our culture.|Everyone can play a part in recycling.
+participants|n|A|{participant} people who take part|অংশগ্রহণকারীরা|All participants received a certificate.|The study had two hundred participants.
+participate|v|A|to take part|অংশগ্রহণ করা|Everyone can participate in the discussion.|She will participate in the race.
+particle|n|A|a very small piece|কণা|A particle of dust landed in my eye.|Each particle of light carries energy.
+particular|adj|A|specific; special|নির্দিষ্ট; বিশেষ|Is there a particular book you want?|She is very particular about food.
+particularly|adv|A|{particular} especially|বিশেষ করে|I love fruit, particularly mangoes.|The exam was particularly difficult.
+partnership|n|A|{partner} working together as partners|অংশীদারিত্ব|The two companies formed a partnership.|The school has a partnership with a local museum.
+parts|n|E|{part} pieces of a whole|অংশসমূহ|The heart has four parts.|The car needs new parts.
+party|n|E|a social event; a political group|পার্টি; দল|We had a party for her birthday.|Which party won the election?
+pass|v|E|to go past; to succeed in a test|অতিক্রম করা; পাস করা|Did you pass the exam?|He waited for the night to pass.
+passage|n|A|a short piece of text; a narrow way|অনুচ্ছেদ; পথ|Read the passage and answer the questions.|A narrow passage led to the garden.
+passed|v|E|{pass} went past; succeeded|পার হয়েছিল; পাস করেছিল|She passed all her exams.|Time passed slowly in the waiting room.
+passenger|n|I|a person traveling in a vehicle|যাত্রী|Every passenger must wear a seat belt.|The bus had only one passenger.
+passport|n|I|an official document for traveling abroad|পাসপোর্ট|Don't forget your passport.|She renewed her passport last month.
+password|n|I|a secret word for access|পাসওয়ার্ড|Choose a strong password.|I forgot my email password.
+past|n/adj/prep|E|the time before now; beyond|অতীত; পেরিয়ে|In the past, people traveled by horse.|Walk past the bank and turn left.
+patent|n|A|a legal right to an invention|পেটেন্ট|She got a patent for her new design.|The company owns the patent on the medicine.
+patience|n|A|{patient} the ability to wait calmly|ধৈর্য|Teaching young children needs patience.|My patience is running out.
+patient|n/adj|I|a sick person; able to wait calmly|রোগী; ধৈর্যশীল|The doctor visited the patient.|Be patient; the bus will come.
+patterns|n|A|{pattern} repeated designs or ways|নকশা; ধরন|The fabric has bright patterns.|Scientists study weather patterns.
+peace|n|E|a time without war; calm|শান্তি|The two countries signed a peace treaty.|I need some peace and quiet.
+peaceful|adj|I|{peace} calm and quiet|শান্তিপূর্ণ|The beach is peaceful in the morning.|They held a peaceful protest.
+peacefulness|n|A|{peaceful} a calm, quiet state|প্রশান্তি|The garden gave her a sense of peacefulness.|We enjoyed the peacefulness of the village.
+peak|n/adj|A|the top of a mountain; the busiest time|চূড়া; সর্বোচ্চ সময়|Buses are crowded during peak hours.|They reached the peak at noon.
+pen|n|E|a tool for writing with ink|কলম|Can I borrow your pen?|Write your answers in blue pen.
+peninsula|n|A|land almost surrounded by water|উপদ্বীপ|Italy is a peninsula.|The town sits at the tip of a peninsula.
+people|n|E|{person} human beings|মানুষ|Many people came to the bakery.|Travel helps you meet new people.
+perceive|v|A|to notice or understand|উপলব্ধি করা|Animals perceive danger quickly.|How do others perceive you?
+percentage|n|A|{percent} an amount out of one hundred|শতাংশ|A large percentage of students passed.|What percentage of the money did you save?
+perceptions|n|A|{perception} ways of seeing or understanding|ধারণা; উপলব্ধি|The book challenges traditional perceptions of beauty.|Public perceptions of the police are changing.
+perform|v|A|to do; to entertain an audience|সম্পাদন করা; পরিবেশন করা|The band will perform at the festival.|Doctors perform hundreds of operations a year.
+performance|n|A|{perform} how well something works; a show|কর্মক্ষমতা; পরিবেশনা|The company's performance improved this year.|Her performance in the play was moving.
+performances|n|A|{performance} shows|পরিবেশনাসমূহ|The festival has live performances every night.|The actor gave three performances a day.
+period|n|A|a length of time|সময়কাল|The museum shows art from that period.|There will be a short trial period.
+permanent|adj|A|lasting forever or for a long time|স্থায়ী|She found a permanent job.|The damage was permanent.
+persevere|v|A|to keep trying despite difficulty|অধ্যবসায়ী হওয়া|You must persevere in the face of adversity.|If you persevere, you will improve.
+personal|adj|A|{person} belonging to one person|ব্যক্তিগত|Keep your personal details private.|She balanced personal and professional goals.
+personalities|n|A|{personality} characters; famous people|ব্যক্তিত্ব|The twins have very different personalities.|TV personalities attended the event.
+personality|n|A|{person} a person's character|ব্যক্তিত্ব|She has a friendly personality.|Personality matters more than looks.

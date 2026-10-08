@@ -1,0 +1,140 @@
+tradition|n|A|a custom passed down over time|ঐতিহ্য|It is a tradition to eat sweets during Eid.|The village keeps its music tradition alive.
+traditional|adj|A|{tradition} following old customs|ঐতিহ্যবাহী|She wore a traditional sari.|The restaurant serves traditional food.
+traditions|n|A|{tradition} customs passed down|ঐতিহ্যসমূহ|Different countries have different traditions.|The festival celebrates local traditions.
+train|n/v|E|a line of connected railway cars; to teach skills|ট্রেন; প্রশিক্ষণ দেওয়া|We took the train to Chittagong.|Coaches train athletes every day.
+training|n|A|{train} teaching skills|প্রশিক্ষণ|Astronauts need years of training.|The new workers began their training.
+trains|n|E|{train} railway vehicles|ট্রেনগুলো|Trains made travel much faster.|The trains were delayed by snow.
+transfers|n|A|{transfer} changes from one bus or train to another|পরিবর্তন; স্থানান্তর|The journey involves two transfers.|Fewer transfers would make the bus faster.
+transform|v|A|to change completely|রূপান্তর করা|Technology can transform the way we learn.|The new park will transform the area.
+transmit|v|A|to send signals; to pass on|প্রেরণ করা; সংক্রমিত করা|Radios transmit signals through the air.|Mosquitoes can transmit disease.
+transport|n/v|A|vehicles for moving people; to carry|পরিবহন; বহন করা|The city needs better public transport.|Ships transport goods across the sea.
+trapped|v|A|{trap} caught and unable to escape|আটকে পড়া|The miners were trapped underground.|A bird was trapped in the room.
+trash|n|E|things thrown away|আবর্জনা|Take out the trash, please.|Sorting trash makes recycling easier.
+travel|n/v|E|to go from one place to another|ভ্রমণ করা; ভ্রমণ|I love to travel by train.|Avoid travel during the storm.
+traveled|v|I|{travel} went from place to place|ভ্রমণ করেছিল|We traveled across India last year.|She has traveled to ten countries.
+traveling|v|I|{travel} going from place to place|ভ্রমণ করছে|She is traveling for work this week.|Traveling alone can be exciting.
+travels|v/n|I|{travel} goes from place to place; journeys|ভ্রমণ করে; ভ্রমণসমূহ|Blood travels around the body.|He wrote a book about his travels.
+treasure|n|A|valuable things such as gold and jewels|গুপ্তধন; সম্পদ|The pirates buried their treasure.|This old book is a real treasure.
+treated|v|A|{treat} dealt with; cared for medically|আচরণ করেছিল; চিকিৎসা করেছিল|The doctor treated the wound.|She was treated unfairly at work.
+treatment|n|A|{treat} medical care|চিকিৎসা|The patient is receiving treatment.|There is a new treatment for the disease.
+treats|n/v|A|{treat} special sweet foods; deals with|মিষ্টান্ন; আচরণ করে|The bakery sells sweet treats.|She treats everyone with kindness.
+treaty|n|A|a formal agreement between countries|চুক্তি|The two nations signed a peace treaty.|The treaty ended the war.
+tree|n|E|a tall plant with a trunk and branches|গাছ|A bird sat in the tree.|They planted a mango tree.
+tremendous|adj|A|very great|বিপুল; প্রচণ্ড|The athletes were under tremendous pressure.|The project was a tremendous success.
+tried|v|E|{try} attempted|চেষ্টা করেছিল|He tried to fix the shoe.|I tried sushi for the first time.
+trip|n|E|a journey to a place|ভ্রমণ; সফর|We went on a school trip to the museum.|Have a good trip!
+troops|n|A|soldiers|সৈন্যদল|Troops were sent to the border.|The troops returned home.
+trouble|n|A|problems or difficulty|সমস্যা; ঝামেলা|I had trouble finding the house.|The car is giving us trouble.
+try|v|E|to attempt|চেষ্টা করা|Try to finish the test on time.|Would you like to try this cake?
+trying|v|E|{try} attempting|চেষ্টা করছে|She is trying to learn French.|Keep trying until you succeed.
+tuition|n|A|money paid for teaching; teaching|টিউশন ফি; পাঠদান|University tuition is expensive.|He gives private tuition in math.
+tuned|v/adj|A|{tune} adjusted; listening for news|সুর মেলানো; সঙ্গে থাকা|Stay tuned for the latest weather updates.|The piano was tuned before the concert.
+tunnel|n|I|a passage under the ground|সুড়ঙ্গ|The train went through a tunnel.|Workers dug a tunnel under the river.
+tunnels|n|I|{tunnel} passages under the ground|সুড়ঙ্গসমূহ|Rabbits live in tunnels.|The city has tunnels for its metro.
+turning|v/n|A|{turn} changing direction; a corner|বাঁক নেওয়া; মোড়|The leaves are turning red.|Take the second turning on the left.
+tutor|n|A|a private teacher|গৃহশিক্ষক|Her tutor helps her with math.|He works as an English tutor.
+tutorial|n|A|a lesson for a small group; a step-by-step guide|টিউটোরিয়াল|We have a history tutorial on Thursday.|Watch the video tutorial to learn the app.
+two|num|E|the number 2|দুই|I have two brothers.|The station is two kilometers away.
+typical|adj|A|usual; normal|সাধারণ; বৈশিষ্ট্যপূর্ণ|Rice and fish are typical Bengali food.|It was a typical summer day.
+ubiquitous|adj|A|found everywhere|সর্বব্যাপী|Mobile phones are ubiquitous today.|Plastic bags have become ubiquitous.
+ultimately|adv|A|{ultimate} in the end|শেষ পর্যন্ত|The manager is ultimately responsible.|Ultimately, the decision is yours.
+uncertain|adj|A|not sure|অনিশ্চিত|The future felt uncertain.|I am uncertain about the date.
+uncertainty|n|A|{uncertain} not being sure|অনিশ্চয়তা|There is uncertainty about the weather.|The crew faced days of uncertainty.
+uncovered|v|A|{uncover} found; revealed|উন্মোচন করেছিল|Archaeologists uncovered an ancient tomb.|Journalists uncovered the truth.
+under|prep|E|below|নিচে|The cat is under the table.|Many animals are under threat.
+undergo|v|A|to experience something difficult|সম্মুখীন হওয়া; ভোগ করা|He will undergo surgery next week.|The city will undergo big changes.
+undergraduate|n/adj|A|a university student studying for a first degree|স্নাতক পর্যায়ের শিক্ষার্থী|She is an undergraduate at Dhaka University.|The course is for undergraduate students.
+undermine|v|A|to weaken gradually|দুর্বল করা|Constant lies can undermine trust between friends.|Poor sleep may undermine your performance at school.
+understand|v|E|to know the meaning of|বোঝা|I don't understand the question.|Scientists want to understand the ocean.
+understanding|n|A|{understand} knowledge; sympathy|বোঝাপড়া; উপলব্ধি|She has a good understanding of math.|Thank you for your understanding.
+understood|v|A|{understand} knew the meaning of|বুঝেছিল|I understood the lesson.|Nobody understood his joke.
+uneasy|adj|A|worried; uncomfortable|অস্বস্তিকর; উদ্বিগ্ন|She felt uneasy in the dark street.|There was an uneasy silence.
+unhappy|adj|I|{happy} not happy|অসুখী|He was unhappy with his grade.|The unhappy child cried all night.
+uninhabited|adj|A|with no people living there|জনমানবহীন|They sailed to an uninhabited island.|The old village is now uninhabited.
+unique|adj|A|the only one of its kind|অনন্য|Each person's fingerprints are unique.|The building has a unique design.
+universe|n|A|everything that exists in space|মহাবিশ্ব|The universe is billions of years old.|Scientists study how the universe began.
+university|n|I|a place of higher education|বিশ্ববিদ্যালয়|She studies at a university in Dhaka.|The university library is huge.
+unlike|prep|A|different from|অসদৃশ; ভিন্ন|Unlike her sister, she loves sports.|The new phone is unlike any other.
+unprecedented|adj|A|never happened before|নজিরবিহীন|Prices rose at unprecedented rates.|The storm caused unprecedented damage.
+until|prep/conj|E|up to the time when|পর্যন্ত|Wait here until I come back.|The shop is open until nine.
+unusual|adj|A|{usual} not common|অস্বাভাবিক|It is unusual to see snow here.|She has an unusual name.
+up|adv/prep|E|toward a higher place|উপরে|She walked up the stairs.|Please stand up when the judge enters.
+upcoming|adj|A|coming soon|আসন্ন|We are preparing for the upcoming exams.|The upcoming week will be busy.
+updates|n|A|{update} new information|হালনাগাদ তথ্য|Check the website for updates.|The app installs updates automatically.
+upload|v|A|to send files from a device to the internet|আপলোড করা|Upload your photos to the website.|It took an hour to upload the video.
+upset|adj|I|unhappy and worried|মনখারাপ; বিচলিত|She was upset about the news.|Don't be upset; it was an accident.
+urban|adj|A|relating to cities|শহুরে|Urban areas are often crowded.|The city has an urban planning office.
+us|pron|E|the speaker and others (object)|আমাদের|Can you help us?|The guide showed us the temple.
+use|v/n|E|to do something with a tool or thing|ব্যবহার করা|The bakers use fresh ingredients.|Can I use your phone?
+useful|adj|E|{use} helpful|উপকারী; দরকারি|This dictionary is very useful.|She gave me useful advice.
+usually|adv|A|{usual} normally|সাধারণত|I usually walk to school.|It usually rains in July.
+vaccine|n|A|a substance that protects against disease|টিকা|The vaccine protects children from measles.|Scientists developed a vaccine quickly.
+valley|n|I|low land between hills|উপত্যকা|A river runs through the valley.|The village lies in a green valley.
+valuable|adj|A|{value} worth a lot|মূল্যবান|The necklace is very valuable.|She gave me valuable advice.
+valuables|n|A|{valuable} expensive personal items|মূল্যবান জিনিসপত্র|Keep your valuables safe while traveling.|Guests can leave valuables at the front desk.
+value|n/v|A|how much something is worth; to think important|মূল্য; মূল্য দেওয়া|The value of the house has risen.|I value your opinion.
+values|n|A|{value} beliefs about what is important|মূল্যবোধ|The film questioned societal values.|Our family values honesty.
+valves|n|A|{valve} flaps that open and close to control flow|ভালভ|The heart has four valves.|Engineers checked the valves in the pipe.
+vapor|n|A|tiny drops of water or gas in the air|বাষ্প|Water vapor rises from the lake.|A thin vapor drifted over the field.
+variable|n/adj|A|something that can change|পরিবর্তনশীল|Temperature is a variable in the experiment.|The weather here is variable.
+variety|n|A|many different types|বৈচিত্র্য; বিভিন্নতা|The market sells a variety of fruits.|I like variety in my diet.
+various|adj|A|several different|বিভিন্ন|The shop sells various kinds of tea.|She has lived in various countries.
+vary|v|A|to be different; to change|ভিন্ন হওয়া|Prices vary from shop to shop.|Temperatures vary throughout the year.
+vast|adj|A|very large|বিশাল|The desert is vast and empty.|She has a vast knowledge of history.
+vastness|n|A|{vast} huge size|বিশালতা|The ocean stretched endlessly; its vastness amazed us.|Astronauts talk about the vastness of space.
+vegetable|n|E|a plant eaten as food|সবজি|Carrot is my favorite vegetable.|Eat a vegetable with every meal.
+vegetables|n|E|{vegetable} plants eaten as food|শাকসবজি|We bought fresh vegetables at the market.|Farmers grow vegetables near the river.
+vehicle|n|A|a car, bus, truck or similar machine|যানবাহন|The vehicle stopped at the light.|This electric vehicle can travel three hundred kilometers.
+vents|n|A|{vent} openings that let air or gas out|ভেন্ট; নির্গমন পথ|Hot gas escaped from the vents of the volcano.|Clean the air vents in the kitchen.
+verify|v|A|to check that something is true|যাচাই করা|Please verify your email address.|Scientists verify results by repeating tests.
+versatile|adj|A|having many uses or skills|বহুমুখী|A knife is a versatile tool.|She is a versatile actor.
+versus|prep|A|against|বনাম|Tonight's match is Brazil versus Argentina.|We compared city life versus village life.
+very|adv|E|extremely|খুব|The soup is very hot.|Thank you very much.
+vibrant|adj|A|full of life and color|প্রাণবন্ত|The market is vibrant and noisy.|She painted the walls in vibrant colors.
+victory|n|A|winning a battle or game|বিজয়|The team celebrated its victory.|The army won a great victory.
+video|n|E|recorded moving pictures|ভিডিও|We watched a video about whales.|She made a video of her trip.
+views|n|A|{view} opinions; things you can see|মতামত; দৃশ্য|People have different views on the issue.|The hotel has great views of the sea.
+village|n|E|a small community in the countryside|গ্রাম|My grandparents live in a village.|The village has one school.
+villages|n|E|{village} small communities in the countryside|গ্রামগুলো|People left villages to work in cities.|Small villages dot the hills.
+violently|adv|A|{violent} with great force|প্রচণ্ডভাবে|The ground shook violently.|The storm violently shook the trees.
+violin|n|I|a musical instrument played with a bow|বেহালা|She plays the violin in an orchestra.|He bought an old violin.
+virtual|adj|A|existing on computers; almost|ভার্চুয়াল|We took a virtual tour of the museum.|The project is a virtual success.
+virus|n|A|a tiny germ that causes disease; harmful computer code|ভাইরাস|The flu is caused by a virus.|A virus damaged my computer.
+visas|n|A|{visa} official permits to enter a country|ভিসা|Tourists need visas to enter the country.|The embassy issues hundreds of visas a day.
+visible|adj|A|able to be seen|দৃশ্যমান|The mountains are visible from here.|The scar is barely visible.
+vision|n|A|the ability to see; an idea of the future|দৃষ্টিশক্তি; দূরদর্শিতা|Glasses improve your vision.|She has a clear vision for the company.
+visitor|n|I|{visit} a person who visits|দর্শনার্থী|We had a visitor from Japan.|Each visitor must sign the book.
+visitors|n|I|{visitor} people who visit|দর্শনার্থীরা|The museum welcomes many visitors.|Visitors love the old castle.
+vital|adj|A|extremely important|অত্যাবশ্যক|Water is vital for life.|She played a vital role in the team.
+vitamin|n|A|a substance in food needed for health|ভিটামিন|Oranges are rich in vitamin C.|Doctors may recommend a vitamin supplement.
+vivid|adj|A|bright and clear|উজ্জ্বল; স্পষ্ট|She has vivid memories of her childhood.|The painting uses vivid colors.
+voice|n|E|the sound made when speaking or singing|কণ্ঠস্বর|She has a beautiful voice.|His voice was calm and steady.
+volcano|n|A|a mountain that can erupt with lava|আগ্নেয়গিরি|The volcano erupted last year.|They hiked to the edge of the volcano.
+volunteer|n/v|A|a person who works without pay|স্বেচ্ছাসেবক|She is a volunteer at the hospital.|Many students volunteer to clean the beach.
+vote|n/v|A|to choose in an election|ভোট; ভোট দেওয়া|Citizens vote for their leaders.|The vote was very close.
+voyage|n|A|a long journey by sea or space|সমুদ্রযাত্রা|The voyage across the ocean took months.|The ship began its first voyage.
+vulnerable|adj|A|easily hurt|ঝুঁকিপূর্ণ; অরক্ষিত|Old people are vulnerable to disease.|The village is vulnerable to floods.
+wage|n|A|money paid for work, usually by the hour|মজুরি|The minimum wage has increased.|Workers asked for a higher wage.
+waited|v|E|{wait} stayed until something happened|অপেক্ষা করেছিল|We waited for the bus for an hour.|He waited for the night to pass.
+wake|v|E|to stop sleeping|জেগে ওঠা|I wake up at six every day.|Don't wake the baby.
+walk|v/n|E|to move on foot|হাঁটা|I walk to school every day.|Let's go for a walk.
+walked|v|E|{walk} moved on foot|হেঁটেছিল|He walked slowly with his broken shoe.|We walked along the beach.
+walking|v/n|E|{walk} moving on foot|হাঁটা|Walking is good exercise.|She was walking home when it started to rain.
+wall|n|E|a side of a room or building|দেয়াল|A clock hung on the wall.|They built a stone wall around the garden.
+walls|n|E|{wall} sides of a room or building|দেয়ালগুলো|The walls were covered with cobwebs.|Paintings hung on the walls.
+wanted|v|E|{want} wished for|চেয়েছিল|She wanted to be a pilot.|I wanted to say something, but I stayed quiet.
+war|n|E|fighting between countries or groups|যুদ্ধ|The war lasted four years.|Many people died in the war.
+warm|adj|E|a little hot|উষ্ণ|The water was warm.|Wear a warm coat.
+was|v/aux|E|{be} past of "be" for I, he, she, it|ছিল|The weather was cold yesterday.|She was reading when I called.
+watch|n/v|E|a small clock worn on the wrist; to look at|ঘড়ি; দেখা|My watch stopped working.|We watch the news every evening.
+watched|v|E|{watch} looked at|দেখেছিল|We watched a film last night.|The detective watched the man carefully.
+watching|v|E|{watch} looking at|দেখছে|The children are watching cartoons.|She was watching the birds.
+water|n|E|the clear liquid we drink|পানি|Drink two glasses of water.|The river gives water to the farms.
+waterfall|n|I|water falling from a height|জলপ্রপাত|We swam under the waterfall.|The waterfall is fifty meters high.
+waters|n|A|{water} an area of sea or river|জলরাশি|The ship sailed into dangerous waters.|Fish are plentiful in these waters.
+wave|n/v|E|a moving line of water; to move your hand|ঢেউ; হাত নাড়ানো|A big wave hit the boat.|She waved goodbye, and I began to wave back.
+wavered|v|A|{waver} became unsteady; hesitated|দোদুল্যমান হয়েছিল|His voice wavered as he spoke.|She never wavered in her decision.
+waves|n|E|{wave} moving lines of water|ঢেউগুলো|Gentle waves washed over the sand.|The waves were too big for swimming.
+way|n|E|a method; a route|উপায়; পথ|What is the best way to learn English?|Can you tell me the way to the station?
+ways|n|E|{way} methods; routes|উপায়সমূহ|There are many ways to save energy.|Travel shows you new ways of life.
+we|pron|E|the speaker and others (subject)|আমরা|We live in Dhaka.|We are going to the beach tomorrow.

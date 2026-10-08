@@ -1,0 +1,140 @@
+manage|v|I|to control or organize; to succeed in doing|পরিচালনা করা; সামলানো|She will manage the new shop.|Did you manage to finish the test?
+management|n|A|{manage} controlling and organizing; the managers|ব্যবস্থাপনা|Good time management helps students succeed.|The management decided to hire more staff.
+manager|n|I|{manage} a person in charge of a business or team|ব্যবস্থাপক|The manager apologized to the customers.|My sister is a bank manager.
+mandatory|adj|A|required by a rule|বাধ্যতামূলক|Safety training is mandatory for all workers.|Wearing a seat belt is mandatory.
+mansion|n|A|a very large house|প্রাসাদোপম বাড়ি|The rich family lived in a huge mansion.|The old mansion is now a museum.
+manufacture|v/n|A|to make goods in large numbers|উৎপাদন করা|The company will manufacture electric bikes.|The manufacture of cars uses a lot of steel.
+manufacturing|n|A|{manufacture} making goods in factories|উৎপাদন শিল্প|Manufacturing is a big part of the economy.|Many manufacturing jobs moved overseas.
+manuscript|n|A|a handwritten or original text|পাণ্ডুলিপি|The ancient manuscript was found in a cave.|She sent her manuscript to a publisher.
+many|det/pron|E|a large number of|অনেক|Many people came to the concert.|How many brothers do you have?
+map|n|E|a drawing of an area showing roads and places|মানচিত্র|We used a map to find the museum.|The map shows every river in the country.
+maps|n|E|{map} drawings of areas|মানচিত্রগুলো|Old maps hung on the walls of the library.|Phone maps help drivers avoid traffic.
+marches|n/v|A|{march} organized walks for a cause; walks like soldiers|মিছিল; কুচকাওয়াজ|Students organized marches for climate action.|The band marches through the town every spring.
+marine|adj|A|relating to the sea|সামুদ্রিক|Marine life is threatened by plastic.|She studies marine biology.
+marked|v|A|{mark} showed or indicated|চিহ্নিত করেছিল|The event marked the end of the war.|The teacher marked our tests overnight.
+market|n|E|a place where people buy and sell goods|বাজার|We bought fresh vegetables at the market.|The phone market is very competitive.
+markets|n|E|{market} places for buying and selling|বাজারগুলো|The city has three large markets.|Global markets fell after the news.
+massive|adj|A|very large and heavy|বিশাল|A massive rock blocked the road.|The film was a massive success.
+mast|n|A|the tall pole that holds a ship's sails|মাস্তুল|The old fisherman leaned against the mast.|The storm broke the ship's mast.
+masterpiece|n|A|an excellent work of art|সেরা শিল্পকর্ম|The painting is considered a masterpiece.|The novel is her masterpiece.
+materials|n|I|{material} substances used to make things|উপকরণসমূহ|Recycling turns old materials into new products.|The house was built with local materials.
+mathematics|n|I|the study of numbers and shapes|গণিত|She won a prize in mathematics.|Mathematics is important for engineers.
+mattered|v|A|{matter} was important|গুরুত্বপূর্ণ ছিল|Nothing mattered except getting home.|Her opinion mattered to him.
+may|aux|E|might; used to ask or give permission|হয়তো; পারা (অনুমতি)|It may rain later today.|May I open the window?
+mayor|n|A|the leader of a city council|মেয়র|The mayor opened the new park.|She was elected mayor last year.
+me|pron|E|the speaker (object)|আমাকে|Can you help me?|She gave me a present.
+meadow|n|A|a field of grass and flowers|তৃণভূমি|Cows grazed in the green meadow.|We had a picnic in the meadow.
+meaning|n|I|what something means|অর্থ|What is the meaning of this word?|Her work gives her life meaning.
+meanwhile|adv|A|at the same time|ইতিমধ্যে; এর মধ্যে|I cooked dinner; meanwhile, my sister set the table.|The train was late. Meanwhile, the rain got heavier.
+measure|v/n|I|to find the size or amount of something|মাপা; পরিমাপ|Measure the room before you buy a carpet.|Use a cup to measure the rice.
+measurement|n|A|{measure} a size or amount found by measuring|পরিমাপ|Take an accurate measurement of the window.|The tailor wrote down every measurement.
+measures|n/v|A|{measure} actions taken; finds the size of|ব্যবস্থাসমূহ; মাপে|The government took measures to reduce pollution.|This device measures your heart rate.
+mechanical|adj|A|{machine} relating to machines|যান্ত্রিক|The plane was delayed by a mechanical problem.|He is studying mechanical engineering.
+medicine|n|I|substances that treat illness; the science of treating illness|ওষুধ; চিকিৎসাবিজ্ঞান|Take this medicine twice a day.|She wants to study medicine.
+medieval|adj|A|from the Middle Ages (about 500–1500)|মধ্যযুগীয়|The town has a medieval castle.|Medieval knights wore heavy armor.
+meeting|n|I|{meet} a gathering of people for discussion|সভা|The meeting starts at ten.|We had a meeting with the teacher.
+melody|n|A|a tune|সুর|The song has a beautiful melody.|She hummed a simple melody.
+melts|v|I|{melt} turns from solid to liquid|গলে যায়|Ice melts in the sun.|Chocolate melts in your mouth.
+members|n|I|{member} people in a group|সদস্যরা|The club has fifty members.|All family members came to the wedding.
+memories|n|I|{memory} things you remember|স্মৃতিসমূহ|I have happy memories of my childhood.|The photos brought back memories.
+memorize|v|I|to learn by heart|মুখস্থ করা|I need to memorize this poem.|Actors memorize their lines.
+memory|n|I|the ability to remember; something remembered|স্মৃতি|Exercise can boost memory.|My earliest memory is of the sea.
+mental|adj|I|relating to the mind|মানসিক|Exercise is good for mental health.|The job requires mental strength.
+mentioned|v|I|{mention} spoke about briefly|উল্লেখ করেছিল|The parrot mentioned the dog's bad smell.|She mentioned that she was moving.
+merely|adv|A|only|কেবল|It was merely a joke.|He is merely a beginner.
+messages|n|E|{message} pieces of information sent to someone|বার্তাসমূহ|The soldiers sent messages of hope.|I have three new messages on my phone.
+met|v|E|{meet} came together with|দেখা হয়েছিল|We met at a party last year.|Their eyes met across the stage.
+meter|n|A|a unit of length; a measuring device|মিটার|The pool is only one meter deep at the shallow end.|The gas meter is outside the house.
+method|n|A|a way of doing something|পদ্ধতি|This is the best method for learning words.|Scientists explained their method.
+methodology|n|A|{method} a system of methods used in research|পদ্ধতিবিদ্যা|The researchers explained the methodology they used to analyze the data.|Her thesis has a clear methodology.
+meticulous|adj|A|very careful about details|অতি যত্নশীল; খুঁতখুঁতে|The project needed meticulous planning.|He is meticulous about his work.
+miasma|n|A|an unpleasant smell or atmosphere|দুর্গন্ধ; দূষিত বাষ্প|A miasma of smoke hung over the city.|The swamp gave off a thick miasma.
+microscope|n|A|a tool that makes tiny things look bigger|অণুবীক্ষণ যন্ত্র|We looked at cells under a microscope.|The microscope revealed tiny bacteria.
+middle|n/adj|E|the center|মাঝখান|There is a table in the middle of the room.|She is the middle child.
+midnight|n|E|twelve o'clock at night|মধ্যরাত|The shop closes at midnight.|We stayed awake until midnight.
+might|aux|E|may possibly|হয়তো|I might visit you next week.|It might snow tonight.
+migration|n|A|{migrate} moving from one place to another|অভিবাসন; পরিযান|The migration of birds happens every autumn.|Rural migration made cities grow.
+miles|n|E|{mile} units of distance (about 1.6 km each)|মাইল|The village is ten miles from the city.|We walked for miles.
+milk|n|E|white liquid from cows and other animals|দুধ|I drink a glass of milk every night.|Babies need milk to grow.
+mind|n/v|I|the part of a person that thinks; to care about|মন; আপত্তি করা|She has a sharp mind.|Do you mind if I sit here?
+mineral|n|A|a natural substance found in rocks or food|খনিজ|Iron is an important mineral for the body.|The mountains are rich in mineral resources.
+minister|n|A|a member of the government; a religious leader|মন্ত্রী|The education minister visited our school.|The minister spoke to reporters.
+minor|adj|A|small; not important|ছোট; গৌণ|The car had minor damage.|It was only a minor problem.
+minority|n|A|a smaller part of a group|সংখ্যালঘু|Only a minority of students voted.|The law protects minority languages.
+minuscule|adj|A|extremely small|অতি ক্ষুদ্র|The chance of winning is minuscule.|She wrote in minuscule letters.
+minutes|n|E|{minute} periods of sixty seconds|মিনিট|Boil the eggs for two to three minutes.|The bus comes every ten minutes.
+mirror|n|E|glass that reflects images|আয়না|She looked at herself in the mirror.|The car's side mirror was broken.
+miserable|adj|A|very unhappy|দুঃখী; শোচনীয়|He felt miserable after the argument.|The weather was cold and miserable.
+mismanagement|n|A|{management} bad management|অব্যবস্থাপনা|Fiscal mismanagement led to the crisis.|The project failed because of mismanagement.
+mission|n|A|an important task; a journey with a purpose|মিশন; লক্ষ্য|The mission to the moon was a success.|Her mission is to help poor children.
+mist|n|I|thin fog|কুয়াশা|His breath formed a thin mist in the cold air.|The mountains were covered in mist.
+mistakes|n|E|{mistake} errors|ভুলসমূহ|Everyone makes mistakes when learning something new.|Check your essay for spelling mistakes.
+modeling|n|A|{model} working as a model; making models|মডেলিং|She has a career in fashion modeling.|Computer modeling helps predict the weather.
+moderate|adj|A|medium; not extreme|মাঝারি; পরিমিত|Doctors recommend moderate exercise.|The town has a moderate climate.
+modern|adj|E|new; of the present time|আধুনিক|The city has many modern buildings.|Modern phones can do almost anything.
+modify|v|A|to change slightly|পরিবর্তন করা|We had to modify our plans.|Engineers modify the design after each test.
+molecule|n|A|the smallest unit of a substance|অণু|A water molecule has three atoms.|Scientists studied each molecule under a powerful microscope.
+molten|adj|A|melted by great heat|গলিত|Molten rock flowed from the volcano.|The sea looked like molten gold at sunset.
+moment|n|I|a very short time; a particular time|মুহূর্ত|Wait a moment, please.|It was the happiest moment of my life.
+moments|n|I|{moment} short periods of time|মুহূর্তগুলো|The film has some funny moments.|We shared many happy moments together.
+monarch|n|A|a king or queen|রাজা বা রানি|The monarch gave a speech to the nation.|The country has had the same monarch for decades.
+money|n|E|coins and notes used to buy things|টাকা|I saved money for a new bike.|Money cannot buy happiness.
+monument|n|A|a structure built to remember a person or event|স্মৃতিস্তম্ভ|The monument honors soldiers who died in the war.|Tourists photograph the famous monument.
+monuments|n|A|{monument} structures built to remember people or events|স্মৃতিস্তম্ভসমূহ|The city is full of historic monuments.|Ancient monuments attract many visitors.
+moonlight|n|A|light from the moon|জ্যোৎস্না|The lake shone in the moonlight.|They walked home by moonlight.
+more|det/adv|E|a larger amount|আরও|I need more time.|The city needs more buses.
+moreover|adv|A|in addition|অধিকন্তু|The hotel is cheap; moreover, it is close to the beach.|Moreover, the new law will create jobs.
+morning|n|E|the early part of the day|সকাল|I study best in the morning.|The market opens early in the morning.
+mosque|n|I|a building for Muslim prayer|মসজিদ|The old mosque has beautiful arches.|Hundreds of people pray at the mosque on Friday.
+most|det/adv|E|the largest amount; very|সবচেয়ে; অধিকাংশ|Most students passed the exam.|This is the most beautiful beach I have seen.
+mostly|adv|A|{most} mainly|বেশিরভাগ|The audience was mostly young people.|The weather was mostly sunny.
+mother|n|E|a female parent|মা|My mother is a teacher.|She called her mother every evening.
+motivated|adj|A|{motivate} eager to do something|অনুপ্রাণিত|Motivated students learn faster.|He was motivated by a desire to help.
+motivations|n|A|{motivation} reasons for doing something|প্রেরণাসমূহ|People have different motivations for learning English.|The detective considered the thief's motivations.
+mountains|n|E|{mountain} very high hills|পর্বতমালা|We hiked in the mountains.|Snow covers the mountains in winter.
+move|v|E|to change place or position|নড়াচড়া করা; সরানো|Boats move goods along the river.|Please move your car.
+moved|v|E|{move} changed place|সরেছিল; চলে গিয়েছিল|We moved to a new house.|A shadow moved through the alley.
+movement|n|A|{move} a change of position; a group working for change|চলাচল; আন্দোলন|The movement of the train made me sleepy.|The movement fought for women's rights.
+movements|n|A|{movement} changes of position; groups working for change|চলাচল; আন্দোলনসমূহ|The dancer's movements were graceful.|Student movements changed the country's history.
+moving|v/adj|E|{move} changing place; causing strong feelings|চলমান; হৃদয়স্পর্শী|The train was already moving.|It was a moving speech.
+mowing|v|I|{mow} cutting grass|ঘাস কাটা|He was mowing the lawn on Sunday.|Mowing the grass is hard work in summer.
+much|det/adv|E|a large amount|অনেক; খুব|I don't have much time.|Thank you very much.
+multinational|adj|A|operating in many countries|বহুজাতিক|She works for a multinational company.|Multinational firms moved their factories abroad.
+muscle|n|I|body tissue that makes movement possible|পেশি|He pulled a muscle while running.|The heart is a muscle.
+muscles|n|I|{muscle} body tissues that make movement possible|পেশিসমূহ|Exercise makes your muscles stronger.|My muscles ached after the hike.
+museums|n|I|{museum} buildings that display important objects|জাদুঘরসমূহ|The city has many free museums.|Museums keep objects from the past.
+music|n|E|organized sounds that people enjoy|সংগীত|I listen to music every day.|The festival had live music.
+must|aux|E|to be necessary|অবশ্যই|You must wear a seat belt.|We must leave now.
+my|det|E|belonging to me|আমার|This is my book.|My brother lives in Dhaka.
+mysterious|adj|A|{mystery} strange and hard to explain|রহস্যময়|A mysterious letter arrived this morning.|The old house is dark and mysterious.
+mythology|n|A|a collection of ancient stories about gods|পুরাণ|She loves Greek mythology.|Hindu mythology is full of heroes and gods.
+narrative|n|A|a story; a description of events|বর্ণনা; আখ্যান|The book is a narrative of his journey.|The film has a strong narrative.
+narrator|n|A|{narrate} the person who tells a story|কথক|The narrator of the novel is a young boy.|The narrator speaks in a calm, slow voice.
+narrow|adj|I|not wide|সরু|The street is too narrow for buses.|We walked along a narrow path.
+national|adj|I|{nation} relating to a whole country|জাতীয়|Today is a national holiday.|She plays for the national team.
+nationalism|n|A|{national} strong pride in your country|জাতীয়তাবাদ|Nationalism grew stronger during the war.|The book studies nationalism in Europe.
+nations|n|I|{nation} countries|জাতিসমূহ|Leaders from many nations met in Geneva.|The United Nations was founded in 1945.
+native|adj/n|A|born in a place; from a place|স্থানীয়; জন্মসূত্রে|Bengali is her native language.|The tiger is native to this region.
+natural|adj|I|{nature} not made by people|প্রাকৃতিক|Recycling protects natural habitats.|The country is rich in natural resources.
+naturally|adv|A|{natural} in a natural way; of course|স্বাভাবিকভাবে|She is naturally shy.|Plants naturally turn toward the light.
+nature|n|I|the natural world; character|প্রকৃতি; স্বভাব|We should protect nature.|It is in his nature to help others.
+near|prep/adj|E|close to|কাছে|We live near the station.|The school is near the river.
+nearby|adj/adv|I|close by|কাছাকাছি|There is a nearby park.|My cousins live nearby.
+nearest|adj|E|{near} closest|সবচেয়ে কাছের|Where is the nearest hospital?|The nearest shop is two kilometers away.
+nearly|adv|A|almost|প্রায়|It is nearly ten o'clock.|I nearly missed the bus.
+nebula|n|A|a cloud of gas and dust in space|নীহারিকা|New stars are born inside a nebula.|The telescope captured a colorful nebula.
+necessary|adj|A|needed|প্রয়োজনীয়|Water is necessary for life.|Is it necessary to book a table?
+needs|n/v|E|{need} things required; requires|প্রয়োজন|The heart needs oxygen to work.|Every child has different needs.
+negotiate|v|A|to discuss to reach an agreement|আলোচনা করা; দরকষাকষি করা|The workers will negotiate a new contract.|You can negotiate the price at the market.
+negotiation|n|A|{negotiate} discussion to reach an agreement|আলোচনা; দরকষাকষি|After a long negotiation, they agreed on a price.|Negotiation skills are important in business.
+negotiations|n|A|{negotiation} formal discussions to reach agreement|আলোচনাসমূহ|The contract negotiations lasted all week.|Peace negotiations will begin next month.
+neighbor|n|I|a person who lives near you|প্রতিবেশী|Our neighbor has a big dog.|She invited her neighbor for tea.
+neighborhood|n|I|{neighbor} the area around where you live|পাড়া; এলাকা|We live in a quiet neighborhood.|There is a new café in the neighborhood.
+nephew|n|I|the son of your brother or sister|ভাগ্নে; ভাতিজা|My nephew is five years old.|She bought a toy for her nephew.
+nervous|adj|I|worried and anxious|নার্ভাস; উদ্বিগ্ন|I always feel nervous before exams.|The nervous man kept looking at the door.
+nest|n|I|a home that birds build|বাসা (পাখির)|A bird built a nest in the tree.|The eggs are safe in the nest.
+network|n|A|a system of connected things or people|নেটওয়ার্ক|The city has a good bus network.|Social media helps people build a network.
+never|adv|E|not at any time|কখনো না|I have never been to Japan.|She never eats meat.
+nevertheless|adv|A|despite that|তবুও|It was raining; nevertheless, we went out.|The task was hard. Nevertheless, she finished it.
+new|adj|E|recently made or bought; not known before|নতুন|I bought a new phone.|Exercise slowly when you try something new.
+newly|adv|A|{new} recently|সদ্য|The newly built bridge opened today.|They are a newly married couple.

@@ -1,0 +1,140 @@
+success|n|A|achieving what you wanted|সাফল্য|The concert was a great success.|Hard work is the key to her success.
+successful|adj|A|{success} achieving what you wanted|সফল|She runs a successful business.|The operation was successful.
+such|det|E|of this kind; very|এমন; এত|It was such a lovely day.|Fruits such as mangoes are very sweet.
+sudden|adj|A|happening quickly and unexpectedly|আকস্মিক|There was a sudden change in the weather.|His sudden death shocked everyone.
+suddenly|adv|A|{sudden} quickly and unexpectedly|হঠাৎ|Suddenly, the lights went out.|The soldier suddenly saw a speck in the sky.
+sufficient|adj|A|enough|যথেষ্ট|We have sufficient time to finish.|The evidence was not sufficient.
+sugary|adj|A|{sugar} full of sugar|চিনিযুক্ত|Sugary drinks are bad for your teeth.|Children love sugary snacks.
+suggest|v|A|to offer an idea|প্রস্তাব দেওয়া|I suggest we leave early.|The results suggest a link between sleep and memory.
+summarize|v|A|to give the main points briefly|সংক্ষেপে বলা|Please summarize the findings in one page.|Can you summarize the story in three sentences?
+summer|n|E|the warmest season|গ্রীষ্মকাল|We go to the beach every summer.|The summer was very hot this year.
+sunny|adj|E|{sun} with a lot of sunshine|রৌদ্রোজ্জ্বল|It is a sunny day today.|The beach is quiet on sunny mornings.
+sunrise|n|I|the time when the sun comes up|সূর্যোদয়|We woke up early to watch the sunrise.|Farmers start work at sunrise.
+sunscreen|n|I|cream that protects skin from the sun|সানস্ক্রিন|Put on sunscreen before you go outside.|She forgot her sunscreen and got burned.
+sunset|n|E|the time when the sun goes down|সূর্যাস্ত|We watched the sunset from the beach.|The shop closes at sunset.
+supplies|n|A|{supply} things needed, such as food and tools|সরবরাহ; রসদ|Buy food supplies before the storm.|The crew ran low on supplies.
+supply|n/v|A|an amount available; to provide|সরবরাহ; সরবরাহ করা|The town has a good water supply.|The farm will supply milk to the school.
+support|n/v|A|help; to help or hold up|সহায়তা; সমর্থন করা|Parents support their children's learning.|Pillars support the roof.
+sure|adj|E|certain|নিশ্চিত|Are you sure about the time?|He wasn't sure where he was going.
+surface|n|A|the top or outside layer|পৃষ্ঠ; উপরিভাগ|The surface of the lake was calm.|Clean the surface before painting.
+surgery|n|A|medical treatment by cutting the body|অস্ত্রোপচার|She needs surgery on her knee.|The surgery took four hours.
+surges|n/v|A|{surge} sudden increases|আকস্মিক বৃদ্ধি|Power surges damaged the equipment.|Shops see sudden surges in demand before the holidays.
+surprised|adj|I|{surprise} feeling surprise|বিস্মিত|I was surprised to see her at the party.|The surprised teacher smiled.
+surrender|v/n|A|to stop fighting and accept defeat|আত্মসমর্পণ করা|The army refused to surrender.|The war ended with the enemy's surrender.
+surrounded|v|A|{surround} on every side|ঘেরা|The house is surrounded by trees.|She was surrounded by friends.
+surveillance|n|A|careful watching of people|নজরদারি|The bank is under video surveillance.|Many people worry about government surveillance.
+survive|v|A|to continue to live|টিকে থাকা; বেঁচে থাকা|Plants cannot survive without water.|Few animals survive in the desert.
+sustain|v|A|to keep something going|টিকিয়ে রাখা|The country cannot sustain such fast growth.|A light meal can sustain you until dinner.
+sustainable|adj|A|{sustain} able to continue without harming the environment|টেকসই|Farmers need sustainable methods.|Bikes are a sustainable way to travel.
+swam|v|E|{swim} moved through water|সাঁতার কেটেছিল|We swam in the lake.|The fish swam away quickly.
+sweetly|adv|A|{sweet} in a pleasant, kind way|মধুরভাবে|The girl smiled sweetly.|The birds sang sweetly.
+syllabus|n|A|the list of topics in a course|পাঠ্যসূচি|Check the syllabus for the exam topics.|The new syllabus includes more reading.
+symbol|n|A|a sign that represents something|প্রতীক|The dove is a symbol of peace.|What does this symbol mean?
+symmetrical|adj|A|the same on both sides|প্রতিসম|A butterfly's wings are symmetrical.|The building has a symmetrical design.
+symphony|n|A|a long piece of music for an orchestra|সিম্ফনি|The orchestra played a famous symphony.|Beethoven's ninth symphony is famous around the world.
+symptom|n|A|a sign of illness|লক্ষণ|A fever is a common symptom of flu.|Tiredness can be a symptom of stress.
+system|n|A|a set of connected parts working together|ব্যবস্থা|The city has a good transport system.|The heart is part of the circulatory system.
+tail|n|E|the part at the back of an animal's body|লেজ|The dog wagged its tail.|A comet has a long tail.
+tale|n|A|a story|গল্প; কাহিনি|My grandmother told us an old tale.|It is a tale of love and loss.
+talent|n|A|a natural ability|প্রতিভা|She has a talent for music.|The show looks for young talent.
+tall|adj|E|high|লম্বা|My brother is very tall.|There is a tall tree in the garden.
+taste|n/v|E|the flavor of food; to try food|স্বাদ; স্বাদ নেওয়া|This soup has a strange taste.|Taste the sauce before adding salt.
+tasted|v|E|{taste} had a flavor; tried food|স্বাদ নিয়েছিল|The cake tasted delicious.|I tasted the soup and added salt.
+taught|v|E|{teach} gave lessons|শিখিয়েছিল|My mother taught me to cook.|She taught English for twenty years.
+tax|n|A|money paid to the government|কর|The government raised the tax on fuel.|Everyone must pay income tax.
+teacher|n|E|{teach} a person who teaches|শিক্ষক|Our teacher gave us homework.|She wants to be a teacher.
+team|n|E|a group of people working or playing together|দল|Our team won the match.|She leads a team of nurses.
+tear|n/v|I|a drop of water from the eye; to pull apart|অশ্রু; ছেঁড়া|A tear rolled down her cheek.|Be careful not to tear the paper.
+technician|n|A|a person who looks after machines or equipment|কারিগর; প্রযুক্তিবিদ|A technician fixed the printer.|She works as a lab technician.
+technological|adj|A|{technology} relating to technology|প্রযুক্তিগত|We live in an age of technological change.|The company is a technological leader.
+technologies|n|A|{technology} kinds of technology|প্রযুক্তিসমূহ|New technologies are changing farming.|Solar and wind are clean technologies.
+technology|n|A|the use of science in machines and tools|প্রযুক্তি|Technology makes our lives easier.|Schools need modern technology.
+tedious|adj|A|long and boring|ক্লান্তিকর; একঘেয়ে|Copying the lists was a tedious task.|The journey was long and tedious.
+telescope|n|A|a tool for seeing distant objects|দূরবীক্ষণ যন্ত্র|We looked at the moon through a telescope.|The telescope can see distant galaxies.
+tell|v|E|to say something to someone|বলা|Please tell me the truth.|Can you tell me the way to the station?
+telling|v|E|{tell} saying to someone|বলছে|She kept telling us the same story.|The bird was telling everyone about the dog.
+temperature|n|A|how hot or cold something is|তাপমাত্রা|The temperature dropped at night.|The nurse took my temperature.
+temperatures|n|A|{temperature} measures of heat|তাপমাত্রাসমূহ|Temperatures are rising around the world.|High temperatures damaged the crops.
+temple|n|I|a building for worship|মন্দির|We visited an old Hindu temple.|The temple was built in the tenth century.
+temples|n|I|{temple} buildings for worship|মন্দিরসমূহ|Ancient temples stand in the jungle.|The city is famous for its temples.
+temporary|adj|A|lasting for a short time|অস্থায়ী|She has a temporary job for the summer.|The road closure is only temporary.
+tennis|n|E|a game with rackets and a ball|টেনিস|We play tennis on Saturdays.|She won the tennis match.
+tension|n|A|nervous pressure; tightness|উত্তেজনা; টান|There was tension in the air before the battle.|The rope broke under tension.
+tensions|n|A|{tension} unfriendly feelings between groups|উত্তেজনা; বিরোধ|Tensions between the two countries grew.|The talks helped reduce tensions.
+term|n|A|a word or phrase; a part of a school year|পরিভাষা; টার্ম|What does this term mean?|The new term starts in January.
+territory|n|A|land controlled by a country or animal|ভূখণ্ড; এলাকা|The army crossed into enemy territory.|Wolves defend their territory.
+test|n/v|E|an exam; to check|পরীক্ষা|We have a math test tomorrow.|Doctors will test your blood.
+text|n|A|written words; a message on a phone|লেখা; পাঠ্য; বার্তা|Read the text carefully.|I sent her a text.
+textbook|n|A|a book used for study|পাঠ্যবই|Open your textbook to page ten.|The history textbook has many maps.
+textiles|n|A|{textile} cloth and fabrics|বস্ত্র|Bangladesh exports many textiles.|The museum displays traditional textiles.
+than|conj|E|used to compare|চেয়ে|My brother is taller than me.|I would rather walk than wait for the bus.
+that|det/pron/conj|E|used to point to something; introduces a clause|ওই; যে|Who is that man near the gate?|I think that she is right.
+the|det|E|used before a noun that is known|নির্দিষ্ট আর্টিকেল (the)|Please close the door quietly.|She is the tallest girl in our class.
+theater|n|I|a building for plays or films|থিয়েটার; নাট্যশালা|We saw a play at the theater.|The old theater has red seats.
+theaters|n|I|{theater} buildings for plays or films|থিয়েটারগুলো|The film opens in theaters on Friday.|Most theaters closed during the storm.
+their|det|E|belonging to them|তাদের|The children lost their ball.|Farmers sold their vegetables at the market.
+them|pron|E|people or things already mentioned (object)|তাদের; ওদের|I called them yesterday.|The teacher gave them extra time.
+theme|n|A|the main idea|মূলভাব; বিষয়|The theme of the novel is friendship.|The party had a pirate theme.
+themselves|pron|E|those people or things (reflexive)|নিজেরা; নিজেদের|The children dressed themselves for school.|The players blamed themselves for the loss.
+then|adv|E|at that time; next|তখন; তারপর|First mix the flour, then add the eggs.|We lived in a small village then.
+theory|n|A|an idea that explains something|তত্ত্ব|Darwin's theory explains evolution.|In theory, the plan should work.
+therapy|n|A|treatment for illness|থেরাপি; চিকিৎসা|She needs physical therapy for her knee.|Music therapy helps some patients.
+there|adv/pron|E|in that place; used to say something exists|সেখানে; আছে|There is a cat on the roof.|Put the box over there.
+therefore|adv|A|for that reason|অতএব|He was ill; therefore, he stayed home.|The roads were icy and therefore dangerous.
+these|det/pron|E|the ones here|এগুলো|These shoes are too small.|Are these your keys?
+thesis|n|A|a long piece of writing for a degree; a main idea|অভিসন্দর্ভ; মূল বক্তব্য|She is writing her thesis on climate change.|The philosopher's thesis was provocative.
+they|pron|E|people or things already mentioned (subject)|তারা|They live next door.|When the guests arrived, they brought flowers.
+thick|adj|E|wide between two sides; dense|পুরু; ঘন|The castle has thick walls.|Thick fog covered the road.
+thing|n|E|an object; a fact or idea|জিনিস; বিষয়|The first thing I do each morning is drink water.|That is a strange thing to say.
+things|n|E|{thing} objects; facts|জিনিসপত্র|Pack your things for the trip.|Things will get better soon.
+think|v|E|to have an idea or opinion|ভাবা; মনে করা|I think it will rain.|Think carefully before you answer.
+thinking|n/v|A|{think} using the mind|চিন্তা; ভাবনা|Schools should teach critical thinking.|I am thinking about my future.
+this|det/pron|E|the one here|এটি|This book is very interesting.|Is this your bag?
+thorough|adj|A|complete and careful|পুঙ্খানুপুঙ্খ|The police made a thorough investigation.|Give the room a thorough clean.
+those|det/pron|E|the ones there|ওগুলো|Those birds fly south every winter.|Can you pass me those plates?
+though|conj|E|despite the fact that|যদিও|Though it was late, she kept working.|He smiled, even though he was sad.
+thought|v/n|E|{think} had an idea; an idea|ভেবেছিল; চিন্তা|I thought you were at home.|That's a kind thought.
+thoughts|n|A|{thought} ideas|চিন্তাসমূহ|He wrote his thoughts in a diary.|She tried to control her thoughts.
+thousands|n|A|{thousand} many thousands|হাজার হাজার|Thousands of people attended the festival.|The bird flew thousands of kilometers.
+thread|n|A|a thin string for sewing; a thin line|সুতো|She needs a needle and thread.|A light thread of smoke rose from the chimney.
+threat|n|A|a danger; a warning of harm|হুমকি|Pollution is a threat to wildlife.|Many animals are under threat.
+threaten|v|A|{threat} to put in danger; to warn of harm|হুমকি দেওয়া|Floods threaten the coastal towns.|Rising seas could threaten whole islands.
+three|num|E|the number 3|তিন|I have three sisters.|The meeting lasted three hours.
+thrive|v|A|to grow well; to be successful|উন্নতি করা; ভালোভাবে বেড়ে ওঠা|Plants thrive in warm, wet weather.|Small businesses thrive near the station.
+throne|n|A|the special chair of a king or queen|সিংহাসন|The prince will take the throne next year.|The king sat on a golden throne.
+through|prep|E|from one side to the other|ভেতর দিয়ে|The train went through a long tunnel.|We walked through the park.
+throughout|prep|A|in every part of; during all of|সর্বত্র; পুরো সময় ধরে|It rained throughout the night.|The song is popular throughout the world.
+thunder|n|I|the loud noise after lightning|বজ্রধ্বনি|The thunder woke the baby.|We heard thunder in the distance.
+thus|adv|A|as a result; in this way|এভাবে; ফলে|The roads were icy; thus, the school closed.|She saved money and thus bought a car.
+ticket|n|E|a paper that lets you travel or enter|টিকিট|I bought a train ticket.|Show your ticket at the gate.
+tied|v|E|{tie} fastened with string|বেঁধেছিল|He tied his shoe with string.|The boat was tied to the dock.
+time|n|E|minutes, hours and days; a moment|সময়|What time is it?|Good time management helps students.
+timeless|adj|A|{time} never going out of date|চিরন্তন|The novel tells a timeless story.|Her style is simple and timeless.
+timeline|n|A|a schedule of events|সময়রেখা|The project timeline is very tight.|Draw a timeline of the war.
+times|n|E|{time} occasions; periods|বার; সময়|I have been there three times.|In ancient times, people hunted for food.
+timing|n|A|{time} choosing when to do something|সময় নির্ধারণ|The timing of the meeting was perfect.|Good jokes need good timing.
+tiny|adj|E|very small|অতি ক্ষুদ্র|The baby has tiny fingers.|A tiny insect landed on my hand.
+to|prep|E|in the direction of; used before a verb|-তে; -এর দিকে|I walk to school every day.|She wants to learn French.
+today|n/adv|E|this day|আজ|Today is my birthday.|I have a lot of work today.
+together|adv|E|with each other|একসাথে|We worked together on the project.|The family eats dinner together.
+toil|n/v|A|hard work|কঠোর পরিশ্রম|Years of toil left his hands rough.|Farmers toil in the fields all day.
+told|v|E|{tell} said to someone|বলেছিল|She told me a secret.|In the evening, people told stories.
+tolerance|n|A|{tolerate} accepting people who are different|সহনশীলতা|The school teaches tolerance and respect.|He has a low tolerance for noise.
+tomb|n|A|a place where a dead person is buried|সমাধি|The king's tomb was full of gold.|Archaeologists opened the tomb.
+tombs|n|A|{tomb} places where dead people are buried|সমাধিসমূহ|Ancient tombs were found in the desert.|The tombs are decorated with paintings.
+tomorrow|n/adv|E|the day after today|আগামীকাল|I will see you tomorrow.|Tomorrow will be sunny.
+too|adv|E|also; more than enough|ও; খুব বেশি|This coffee is too hot.|I want to come with you too.
+took|v|E|{take} carried; needed (time)|নিয়েছিল|She took her umbrella.|The trip took three hours.
+tools|n|E|{tool} things used for work|যন্ত্রপাতি|The carpenter keeps his tools in a box.|Early humans made tools from stone.
+torn|adj/v|A|{tear} pulled apart|ছেঁড়া|His jeans were torn at the knee.|She was torn between two choices.
+touched|v|E|{touch} put the hand on; moved emotionally|ছুঁয়েছিল; হৃদয় স্পর্শ করেছিল|She touched the soft fur.|I was touched by your kind letter.
+tough|adj|A|difficult; strong|কঠিন; শক্ত|It was a tough decision.|These boots are tough enough for the mountains.
+tourism|n|A|{tour} the business of travel for pleasure|পর্যটন|Tourism brings money to the island.|The country depends on tourism.
+tourist|n|I|{tour} a person traveling for pleasure|পর্যটক|The tourist asked for directions.|Every tourist visits the old fort.
+towards|prep|E|in the direction of|দিকে|The dog ran towards the gate.|We walked towards the river.
+tower|n|I|a tall narrow building|টাওয়ার; মিনার|The clock tower is in the center of town.|We climbed to the top of the tower.
+towers|n|I|{tower} tall narrow buildings|টাওয়ারগুলো|The city has many glass towers.|The castle has four towers.
+town|n|E|a place smaller than a city where people live|শহর|They live in a small town.|Goods moved from one town to another by boat.
+towns|n|E|{town} places where people live|শহরগুলো|The wave destroyed several coastal towns.|Small towns are quieter than cities.
+toy|n|E|an object for children to play with|খেলনা|The child loves his new toy.|She gave her old toy to her sister.
+trade|n/v|A|buying and selling goods|বাণিজ্য|Trade between the two countries is growing.|The town grew rich from trade.

@@ -1,0 +1,140 @@
+rights|n|A|{right} things people are allowed by law or morally|অধিকারসমূহ|The new law protects the rights of workers.|Workers marched for equal rights.
+ring|n/v|E|a circle of metal worn on a finger; to make a bell sound|আংটি; বাজা|She wore a gold ring.|The phone began to ring during dinner.
+rise|n/v|A|an increase; to go up|বৃদ্ধি; ওঠা|The sun will rise at six tomorrow.|There has been a rise in prices.
+risk|n/v|A|the possibility of danger or loss|ঝুঁকি|Smoking increases the risk of disease.|The crew took a great risk to escape.
+risks|n|A|{risk} possible dangers|ঝুঁকিসমূহ|Sharing personal data online has risks.|Doctors explained the risks of the operation.
+ritual|n|A|a set of actions done in the same way each time|আচার; রীতি|Morning tea is my daily ritual.|The wedding included an ancient ritual.
+river|n|E|a large natural stream of water|নদী|The river flows into the sea.|We swam in the river last summer.
+rivers|n|E|{river} large natural streams of water|নদীসমূহ|Bangladesh has hundreds of rivers.|Pollution has damaged many rivers.
+road|n|E|a way for cars to travel on|রাস্তা|The road to the village is narrow.|Look both ways before crossing the road.
+roads|n|E|{road} ways for cars|রাস্তাগুলো|The roads were flooded after the storm.|Cities connect to each other by roads and rivers.
+roast|v/adj|I|to cook in an oven or over fire|ঝলসানো; রোস্ট করা|Roast the chicken for an hour.|We had roast beef for dinner.
+robot|n|I|a machine that can do tasks automatically|রোবট|The robot cleans the floor by itself.|Factories use a robot to paint cars.
+rock|n|E|hard stone; a type of music|পাথর; রক সংগীত|He sat on a large rock by the sea.|She likes rock music.
+role|n|A|the part someone plays|ভূমিকা|Education plays a significant role in development.|He got the main role in the play.
+roles|n|A|{role} parts played|ভূমিকাসমূহ|Women's roles in society have changed.|The actor played three roles in the film.
+roof|n|E|the top cover of a building|ছাদ|The cat is on the roof.|Rain leaked through the old roof.
+rooftops|n|A|{rooftop} the tops of buildings|ছাদগুলোর উপরিভাগ|We watched fireworks over the rooftops.|Snow covered the rooftops of the town.
+room|n|E|a part of a building with walls|ঘর|The detective entered the dimly lit room.|Is there room for one more person?
+roots|n|A|{root} parts of a plant under the ground; origins|শিকড়; উৎস|The tree's roots go deep into the soil.|Jazz has its roots in African music.
+rope|n|E|thick, strong string|দড়ি|They tied the boat with a rope.|The climbers held the rope tightly.
+rose|v/n|E|{rise} went up; a flower|উঠেছিল; গোলাপ|The sun rose over the hills.|He gave her a red rose.
+rotate|v|A|to turn around a center|ঘোরা|Fan blades rotate very quickly.|Farmers rotate crops each year.
+route|n|A|a way from one place to another|পথ|This is the fastest route to the airport.|The bus route changed last week.
+routine|n|A|a regular way of doing things|নিয়মিত কাজ|Exercise is part of my daily routine.|She likes a fixed morning routine.
+rubber|n|A|a stretchy material|রাবার|Tires are made of rubber.|Use a rubber band to hold the papers.
+ruins|n|A|{ruin} the remains of old buildings|ধ্বংসাবশেষ|We visited the ancient ruins.|The castle is now in ruins.
+rule|n/v|A|an instruction about what is allowed; to govern|নিয়ম; শাসন করা|Follow the rule about phones.|The king will rule the country.
+ruled|v|A|{rule} governed|শাসন করেছিল|The family ruled the region for centuries.|Britain once ruled India.
+ruler|n|A|{rule} a person who rules; a tool for measuring|শাসক; রুলার|The ruler was loved by his people.|Draw a line with a ruler.
+run|v|E|to move fast on foot; to operate|দৌড়ানো; চালানো|Buses run every ten minutes.|I run in the park every morning.
+rural|adj|A|relating to the countryside|গ্রামীণ|Many rural areas have no hospital.|She prefers rural life to city life.
+rustling|n/adj|A|{rustle} a soft dry sound|খসখস শব্দ|We heard a soft rustling sound in the leaves.|The rustling of paper disturbed the class.
+sadness|n|I|{sad} the feeling of being sad|দুঃখ|The soldiers tried to hide their sadness.|Her eyes were full of sadness.
+safe|adj|E|not in danger|নিরাপদ|Keep your valuables in a safe place.|It is safe to swim here.
+safety|n|I|{safe} being safe|নিরাপত্তা|Wear goggles for safety in the lab.|Road safety is taught in schools.
+said|v|E|{say} spoke words|বলেছিল|She said she was tired.|"I knew it," he said quietly.
+sail|n/v|I|cloth that catches wind on a boat; to travel by boat|পাল; জাহাজে যাওয়া|The wind filled the sail.|They plan to sail around the world.
+salary|n|A|money paid for work each month|বেতন|She earns a good salary.|His salary increased after the promotion.
+sales|n|A|{sale} the selling of goods; amounts sold|বিক্রয়|Sales of electric cars are rising.|She works in sales.
+same|adj|E|not different|একই|We are in the same class.|Tomorrow will be the same as today.
+sample|n/v|A|a small part that shows what the whole is like|নমুনা|The nurse took a blood sample.|Try a free sample of cheese.
+sand|n|E|tiny pieces of rock on beaches and deserts|বালি|The children built a castle in the sand.|The sand was soft under our feet.
+sandwiches|n|E|{sandwich} bread with a filling|স্যান্ডউইচ|We made sandwiches for the picnic.|The café sells cheese sandwiches.
+sat|v|E|{sit} rested on a seat|বসেছিল|We sat around the fire and told stories.|She sat next to me on the bus.
+satellite|n|A|an object that moves around a planet|উপগ্রহ|The satellite sends TV signals.|The moon is a natural satellite.
+saving|v/n|A|{save} keeping money; rescuing|সঞ্চয় করা; বাঁচানো|She is saving money for a car.|The doctor was praised for saving lives.
+saw|v|E|{see} looked at|দেখেছিল|I saw a rainbow this morning.|She saw an old man with a heavy bag.
+say|v|E|to speak words|বলা|What did you say?|Customers say the bread is the best in town.
+saying|v/n|E|{say} speaking words; a well-known phrase|বলছে; প্রবাদ|He sat there without saying a word.|"Practice makes perfect" is a famous saying.
+scanning|v|A|{scan} looking carefully over an area|খুঁটিয়ে দেখা|The soldier stood scanning the horizon.|She was scanning the list for her name.
+scarce|adj|A|not enough; rare|দুর্লভ; অপ্রতুল|Water is scarce in the desert.|Jobs were scarce after the war.
+scene|n|A|a place where something happens; part of a play|দৃশ্য; ঘটনাস্থল|Police arrived at the scene of the crime.|The final scene of the film was sad.
+scenery|n|A|the natural view of an area|প্রাকৃতিক দৃশ্য|The scenery in the mountains is beautiful.|We enjoyed the scenery from the train.
+scenes|n|A|{scene} views; parts of a film|দৃশ্যসমূহ|The film has many iconic scenes.|Crowds gathered in chaotic scenes.
+scenic|adj|A|{scene} having beautiful views|মনোরম|We took the scenic route along the coast.|The village is very scenic.
+scent|n|A|a pleasant smell|সুগন্ধ|The scent of flowers filled the garden.|Dogs follow a scent with their noses.
+schedule|n/v|A|a plan of times for events|সময়সূচি|Check the train schedule.|We will schedule the meeting for Monday.
+scheduled|v|A|{schedule} planned for a time|নির্ধারিত|The flight is scheduled to leave at noon.|A meeting has been scheduled for Friday.
+scholarship|n|A|money given to pay for study|বৃত্তি|The university has offered me a scholarship.|She won a scholarship to study abroad.
+school|n|E|a place where children learn|বিদ্যালয়|I walk to school every day.|Her school has a big library.
+science|n|E|the study of the natural world|বিজ্ঞান|Science explains how things work.|She is good at science.
+scientific|adj|A|{science} relating to science|বৈজ্ঞানিক|They used a scientific method.|The scientific community welcomed the discovery.
+scientist|n|I|{science} a person who studies science|বিজ্ঞানী|The scientist studied the virus.|She wants to become a scientist.
+scissors|n|I|a tool with two blades for cutting|কাঁচি|Cut the paper with scissors.|Pass me the scissors, please.
+scraping|n/v|A|{scrape} the sound of rubbing a hard surface|ঘষার শব্দ; চাঁছা|The only sound was the scraping of forks on plates.|He was scraping ice off the car window.
+screen|n|I|the flat surface where pictures appear|পর্দা; স্ক্রিন|His eyes were fixed on the screen.|My phone screen is cracked.
+script|n|A|the written words of a play or film|পাণ্ডুলিপি; চিত্রনাট্য|The actors read the script together.|She wrote the script for the film.
+scrutinize|v|A|to examine very closely|খুঁটিয়ে পরীক্ষা করা|Lawyers scrutinize every detail of a contract.|The teacher will scrutinize our essays.
+sculpture|n|A|art made by shaping stone, metal or wood|ভাস্কর্য|A bronze sculpture stands in the square.|She studies sculpture at art school.
+sea|n|E|the large body of salt water|সমুদ্র|We swam in the sea.|The sea was calm this morning.
+seam|n|A|the line where two pieces of cloth are sewn|সেলাইয়ের জোড়|He kept picking at the seam of his sleeve.|The seam of my jeans tore.
+search|n/v|A|to look carefully for something|খোঁজ; অনুসন্ধান করা|The search for the missing child lasted all night.|Scientists search for life on other planets.
+seating|n|A|{seat} places to sit|বসার ব্যবস্থা|Buses need more seating.|The stadium has seating for fifty thousand people.
+second|adj/n|E|next after the first; one sixtieth of a minute|দ্বিতীয়; সেকেন্ড|She came second in the race.|Wait a second, please.
+security|n|A|{secure} protection from danger|নিরাপত্তা|Airport security checked our bags.|Online security is very important.
+see|v|E|to notice with your eyes|দেখা|I can see the mountains from here.|Let me see your ticket.
+seed|n|I|a small part of a plant that grows into a new plant|বীজ|Plant the seed in warm soil.|An apple seed can grow into a tree.
+seeing|v|E|{see} noticing with the eyes|দেখা|Seeing the ocean for the first time was amazing.|Travel means seeing new places.
+seemed|v|E|{seem} appeared to be|মনে হয়েছিল|The library seemed colder than usual.|She seemed happy with her exam results.
+seen|v|E|{see} past participle of see|দেখা হয়েছে|Have you seen my keys?|I have never seen snow.
+segregated|adj/v|A|{segregate} separated by race or group|পৃথকীকৃত|Schools were segregated in the past.|Rubbish is segregated before recycling.
+select|v|A|to choose|নির্বাচন করা|Select one answer from the list.|The team will select a new captain.
+semester|n|A|half of a school year|সেমিস্টার|The new semester starts in January.|She took five courses this semester.
+seminar|n|A|a class where a small group discusses a subject|সেমিনার|I have a history seminar on Tuesday.|The seminar was about climate policy.
+sense|n|A|a feeling; a power like sight or hearing|বোধ; ইন্দ্রিয়|Dogs have a strong sense of smell.|She has a great sense of humor.
+sent|v|E|{send} caused to go|পাঠিয়েছিল|I sent you an email.|The letter was sent last week.
+separate|adj/v|A|not joined; to divide|আলাদা; আলাদা করা|Keep raw meat separate from vegetables.|Separate the eggs into two bowls.
+sequel|n|A|a book or film that continues a story|পরবর্তী পর্ব|The sequel was better than the first film.|She is writing a sequel to her novel.
+series|n|A|several things that come one after another|ধারাবাহিক|The TV series has five seasons.|There was a series of accidents.
+serious|adj|A|important; not joking|গুরুতর; গম্ভীর|Pollution is a serious problem.|Are you serious about moving to Canada?
+service|n|A|help given to customers; a system that provides something|সেবা|The bakery is known for friendly service.|The bus service is slow.
+services|n|A|{service} systems that provide help|সেবাসমূহ|The city needs better bus services.|The bank offers online services.
+set|v/n|E|to put; a group of things|রাখা; সেট|She set the plates in front of us.|I bought a set of pencils.
+settlement|n|A|{settle} a place where people live; an agreement|বসতি; মীমাংসা|The settlement grew into a town.|They reached a settlement after long talks.
+settler|n|A|{settle} a person who moves to live in a new place|বসতি স্থাপনকারী|Each settler received a small piece of land.|The first settler arrived in 1820.
+settlers|n|A|{settler} people who move to live in a new place|বসতি স্থাপনকারীরা|Early settlers built houses near the river.|The settlers farmed the land.
+several|det|E|more than two but not many|বেশ কয়েকটি|I have read several books this month.|Several students were absent.
+shadow|n|A|a dark area made when light is blocked|ছায়া|The tree cast a long shadow.|A shadow moved across the wall.
+shadows|n|A|{shadow} dark areas made by blocked light|ছায়াগুলো|The children played with their shadows.|Shadows grow longer in the evening.
+shallow|adj|A|not deep|অগভীর|The water is shallow near the shore.|Children swim in the shallow end of the pool.
+shape|n|E|the outer form of something|আকার|The cloud had the shape of a heart.|The light took the shape of a bird.
+shapes|n|E|{shape} outer forms|আকারসমূহ|Children learn colors and shapes.|The cookies came in different shapes.
+share|v/n|E|to give part of something to others|ভাগ করা|Good friends share their worries with each other.|Please share your ideas with the class.
+shared|v|E|{share} gave part of; used together|ভাগ করে নিয়েছিল|We shared a pizza.|The sisters shared a room.
+sharp|adj|E|having a thin cutting edge; clever|ধারালো; তীক্ষ্ণ|Be careful, the knife is sharp.|The soldier had sharp eyes.
+she|pron|E|a female person already mentioned|সে (স্ত্রী)|My sister said she would come.|She works at the hospital.
+shelf|n|E|a flat board for holding things|তাক|The book is on the top shelf.|She reached the shelf with a ladder.
+shell|n|I|the hard outer cover of an egg, nut or sea animal|খোলস|The turtle hid inside its shell.|She found a pretty shell on the beach.
+shirt|n|E|a piece of clothing for the upper body|শার্ট|He wore a white shirt.|I need to iron my shirt.
+shoe|n|E|something you wear on your foot|জুতা|He tied his old shoe with string.|I lost one shoe at the beach.
+shoes|n|E|{shoe} things worn on the feet|জুতা (জোড়া)|I need to buy a pair of shoes.|Take off your shoes at the door.
+shop|n/v|E|a place where things are sold|দোকান|The shop opens at nine.|We shop at the market on Fridays.
+shore|n|A|the land along the edge of the sea or a lake|তীর|We walked along the shore.|The boat returned to the shore.
+short|adj|E|not long or tall|ছোট|The film was short.|In winter the days are short and cold.
+shorten|v|A|{short} to make shorter|ছোট করা|Can you shorten these trousers?|They decided to shorten the meeting.
+should|aux|E|used to give advice|উচিত|You should drink more water.|People should stay indoors during the storm.
+shoulder|n|E|the part of the body where the arm joins|কাঁধ|She looked over her shoulder.|He carried the bag on his shoulder.
+shout|v/n|I|to say something very loudly|চিৎকার করা|Don't shout in the library.|We heard a shout from the street.
+showcasing|v|A|{showcase} displaying the best of something|প্রদর্শন করছে|The festival is showcasing local artists.|The museum is showcasing new designs.
+showed|v|E|{show} let someone see; proved|দেখিয়েছিল|She showed me her photos.|The study showed clear results.
+showing|v/n|A|{show} letting someone see|দেখাচ্ছে|The cinema is showing a new film.|He is showing signs of improvement.
+shut|v/adj|E|to close; closed|বন্ধ করা; বন্ধ|The windows were shut tight.|Please shut the door.
+shy|adj|E|nervous with other people|লাজুক|The shy boy hid behind his mother.|She was too shy to speak in class.
+siblings|n|A|{sibling} brothers and sisters|ভাইবোন|I have three siblings.|The siblings shared a small bedroom.
+siege|n|A|surrounding a place to force it to surrender|অবরোধ|The city survived a long siege.|The siege lasted six months.
+sigh|v/n|I|to breathe out loudly to show sadness or relief|দীর্ঘশ্বাস ফেলা|She gave a sigh of relief.|He began to sigh when he saw the homework.
+sights|n|A|{sight} interesting places to see|দর্শনীয় স্থান|We saw all the sights of Paris.|The guide showed us the main sights.
+sign|n/v|A|a notice; a mark; to write your name|চিহ্ন; সাইনবোর্ড; সই করা|The sign says "No parking."|Please sign the form.
+signal|n/v|A|a sign or sound that gives information|সংকেত|My phone has no signal here.|The driver gave a signal to turn.
+significant|adj|A|important; large enough to matter|উল্লেখযোগ্য|The discovery had a significant impact on modern medicine.|There was a significant rise in prices.
+significantly|adv|A|{significant} in an important way; a lot|উল্লেখযোগ্যভাবে|Her English improved significantly.|Prices rose significantly last year.
+signs|n|A|{sign} notices; marks showing something|চিহ্নসমূহ|Follow the signs to the exit.|There are signs of rain.
+silence|n|A|complete quiet|নীরবতা|There was silence in the room.|The silence between them grew.
+silently|adv|A|{silent} without sound|নিঃশব্দে|The cat moved silently.|She read the letter silently.
+silver|n/adj|E|a shiny gray valuable metal|রুপা|She wore silver earrings.|The team won a silver medal.
+similar|adj|A|almost the same|একই রকম|The two sisters look similar.|We have similar interests.
+simple|adj|E|easy; not complicated|সহজ|The recipe is very simple.|She wore a simple dress.
+simplify|v|A|{simple} to make easier|সরল করা|Can you simplify the instructions?|Teachers simplify hard texts for beginners.
+since|prep/conj|E|from a time in the past until now; because|থেকে; যেহেতু|I have lived here since 2015.|Since it was raining, we stayed inside.
+single|adj|A|only one; not married|একক; অবিবাহিত|Not a single student was late.|He is still single.

@@ -1,0 +1,140 @@
+sings|v|E|{sing} makes music with the voice|গান গায়|My sister sings in the school choir.|A small bird sings outside my window every morning.
+singularity|n|A|a single point of infinite density; something unique|এককতা; অনন্যতা|Scientists believe a black hole contains a singularity.|The singularity of her style made her famous.
+sip|v/n|I|to drink slowly in small amounts|চুমুক দেওয়া|Take a small sip of the hot tea.|She likes to sip coffee while she reads.
+sipping|v|A|{sip} drinking slowly|চুমুক দিচ্ছে|He sat on the porch sipping lemonade.|Sipping water during the day keeps you fresh.
+size|n|E|how big something is|আকার; মাপ|What size are your shoes?|The city has grown in size.
+sizes|n|E|{size} measurements of how big things are|মাপসমূহ|The shirts come in three sizes.|Rocks of all sizes lay on the beach.
+skeptical|adj|A|doubtful|সন্দিহান|Scientists were skeptical about the claim.|I am skeptical that the plan will work.
+sketched|v|A|{sketch} drew quickly|খসড়া এঁকেছিল|The artist sketched the old bridge.|She sketched a map on a napkin.
+skill|n|E|the ability to do something well|দক্ষতা|Reading is an important skill.|Cooking is a useful skill.
+skillful|adj|A|{skill} having great skill|দক্ষ|He is a skillful driver.|The skillful surgeon saved the patient.
+skills|n|E|{skill} abilities to do things well|দক্ষতাসমূহ|The bakers worked to improve their skills.|Learning new skills keeps the brain active.
+skin|n|E|the outer layer of the body|ত্বক|Sunscreen protects your skin.|The baby has soft skin.
+sky|n|E|the space above the earth|আকাশ|The sky was red over the desert.|Ash rained down from the sky.
+sleep|n/v|E|rest when the eyes are closed|ঘুম; ঘুমানো|I usually sleep eight hours.|Sleep is important for memory.
+slightly|adv|A|{slight} a little|সামান্য|The price rose slightly.|She felt slightly nervous.
+slipping|v|A|{slip} sliding by accident; moving quietly|পিছলে যাচ্ছে|He was slipping on the icy path.|Time was slipping away.
+slow|adj|E|not fast|ধীর|The bus was very slow today.|Slow music helps me relax.
+slowly|adv|E|{slow} not quickly|ধীরে|Start your new exercise routine slowly.|The old man walked slowly.
+slows|v|A|{slow} becomes slower|ধীর করে; ধীর হয়|Traffic slows down near the school.|Cold weather slows the growth of plants.
+small|adj|E|little in size|ছোট|They live in a small house.|Small changes can make a big difference.
+smelled|v|E|{smell} had a smell; noticed a smell|গন্ধ পেয়েছিল; গন্ধ ছিল|The kitchen smelled of fresh bread.|I smelled smoke and called for help.
+smile|n/v|E|a happy expression with the mouth|হাসি; হাসা|She gave me a warm smile.|Smile for the camera!
+smudges|n|A|{smudge} dirty marks|দাগ|There were smudges of ash on the windowsill.|Clean the smudges off the glass.
+snapshot|n|A|a quick photo; a brief view|দ্রুত তোলা ছবি; সংক্ষিপ্ত চিত্র|She took a snapshot of the sunset.|The survey gives a snapshot of public opinion.
+snow|n/v|E|frozen water that falls from the sky|তুষার|Children played in the snow.|It may snow tonight in the mountains.
+so|adv/conj|E|very; therefore|এত; তাই|The film was so funny.|It was raining, so we stayed home.
+soaring|v/adj|A|{soar} flying high; rising quickly|উড়ছে; দ্রুত বাড়ছে|An eagle was soaring above the valley.|Soaring prices worry many families.
+social|adj|A|relating to society or friends|সামাজিক|Humans are social animals.|She spends hours on social media.
+societal|adj|A|{society} relating to society|সামাজিক|Rising prices caused societal unrest.|The study looks at societal changes.
+society|n|A|people living together in a community|সমাজ|Education is important for society.|Modern society depends on technology.
+soft|adj|E|not hard; gentle|নরম; মৃদু|The bed is very soft.|She spoke in a soft voice.
+softly|adv|I|{soft} gently and quietly|মৃদুভাবে|She sang softly to the baby.|Rain fell softly on the roof.
+software|n|A|programs used by computers|সফটওয়্যার|The company makes accounting software.|Update the software on your phone.
+soil|n|I|the top layer of the earth where plants grow|মাটি|Rice grows well in wet soil.|Worms make the soil healthy.
+solar|adj|A|relating to the sun|সৌর|Solar panels turn sunlight into electricity.|There will be a solar eclipse next year.
+sold|v|E|{sell} gave in exchange for money|বিক্রি করেছিল|They sold their old car.|The tickets sold out in an hour.
+soldier|n|I|a person in an army|সৈনিক|The soldier wrote letters to his family.|A young soldier guarded the gate.
+soldiers|n|I|{soldier} people in an army|সৈন্যরা|The soldiers marched through the town.|Thousands of soldiers fought in the battle.
+solid|adj/n|A|hard and firm; not liquid or gas|কঠিন; শক্ত|Ice is water in solid form.|The table is made of solid wood.
+solidify|v|A|{solid} to become solid|কঠিন হওয়া; দৃঢ় করা|Lava will solidify as it cools.|The win helped solidify her lead.
+solos|n|A|{solo} parts played or sung by one person|একক পরিবেশনা|The guitarist played two long solos.|Her violin solos were the highlight of the concert.
+solstices|n|A|{solstice} the longest and shortest days of the year|অয়নান্ত দিবস|The ancient stones mark the summer and winter solstices.|People celebrated the solstices with fires.
+some|det|E|an amount or number of|কিছু|Would you like some tea?|Some buses arrive late.
+something|pron|E|a thing that is not named|কিছু|I have something to tell you.|Something is wrong with my phone.
+sometimes|adv|E|on some occasions|মাঝে মাঝে|I sometimes walk to work.|Sometimes the trains are late.
+son|n|E|a male child|ছেলে; পুত্র|Their son is a doctor.|She bought a bike for her son.
+soon|adv|E|in a short time|শীঘ্রই|The bus will arrive soon.|I hope to see you soon.
+sophisticated|adj|A|advanced and complex|উন্নত; জটিল|The lab uses sophisticated technology.|She has sophisticated taste in music.
+sorting|v|A|{sort} arranging into groups|বাছাই করা|Sorting trash makes recycling easier.|She spent the morning sorting old letters.
+sound|n/v|E|something you hear; to seem|শব্দ; মনে হওয়া|The sound of rain helped me sleep.|Did you hear that strange sound outside?
+sounds|n/v|E|{sound} things you hear; seems|শব্দসমূহ; মনে হয়|It was one of the loudest sounds in history.|That sounds like fun.
+soup|n|E|liquid food made by boiling vegetables or meat|স্যুপ|She made chicken soup for dinner.|The soup is too hot to eat.
+source|n|A|where something comes from|উৎস|The sun is a source of energy.|Check the source of the information.
+sources|n|A|{source} places where things come from|উৎসসমূহ|Renewable sources of energy include wind and sun.|The article cites many sources.
+southern|adj|I|{south} in or from the south|দক্ষিণাঞ্চলীয়|The southern coast is warm all year.|She grew up in a southern village.
+space|n|E|an empty area; the area beyond the earth|জায়গা; মহাকাশ|There is no space in my bag.|Astronauts travel into space.
+spacecraft|n|A|a vehicle that travels in space|মহাকাশযান|The spacecraft landed on Mars.|Engineers built the spacecraft in five years.
+spaghetti|n|I|long thin pasta|স্প্যাগেটি|We had spaghetti with tomato sauce.|Cook the spaghetti for ten minutes.
+sparks|n|A|{spark} tiny bright pieces of fire|স্ফুলিঙ্গ|Sparks flew from the wizard's hands.|The fire sent sparks into the air.
+sparsely|adv|A|{sparse} thinly; with few people or things|বিরলভাবে; কমসংখ্যক|The desert is sparsely populated.|The room was sparsely furnished.
+special|adj|E|different from usual; important|বিশেষ|Today is a special day.|Astronauts need special training.
+species|n|A|a group of similar animals or plants|প্রজাতি|The tiger is an endangered species.|Scientists found a new species of frog.
+specific|adj|A|exact; particular|নির্দিষ্ট|Give me a specific example.|The medicine is for a specific illness.
+specimen|n|A|an example used for study|নমুনা|The scientist examined a rock specimen.|The museum has a rare specimen of a bird.
+speck|n|A|a tiny spot|কণা; বিন্দু|A speck of dust landed on the screen.|The plane was a tiny speck in the blue sky.
+speeches|n|A|{speech} formal talks|বক্তৃতাসমূহ|The leaders gave speeches at the ceremony.|Her speeches inspired many people.
+speed|n|E|how fast something moves|গতি|The car was moving at high speed.|Reduce your speed near schools.
+spell|n/v|E|magic words; to say or write the letters of a word|জাদুমন্ত্র; বানান করা|The wizard cast a spell.|How do you spell your name?
+spend|v|E|to use money or time|ব্যয় করা; কাটানো|Visitors spend the whole day at the festival.|I don't want to spend too much money.
+spent|v|E|{spend} used money or time|ব্যয় করেছিল; কাটিয়েছিল|We spent a week in Sylhet.|She spent all her savings on a car.
+spice|n|I|a powder or seed that gives flavor to food|মশলা|Cumin is a popular spice.|Add a little spice to the soup.
+spinning|v/adj|A|{spin} turning around quickly|ঘুরছে|His head was spinning after the long day.|The wheel kept spinning.
+spleen|n|A|an organ near the stomach that filters blood|প্লীহা|The spleen helps fight infections.|He hurt his spleen in the accident.
+spontaneous|adj|A|unplanned; happening naturally|স্বতঃস্ফূর্ত|We made a spontaneous decision to go to the beach.|The crowd broke into spontaneous applause.
+sporting|adj|A|{sport} relating to sport|ক্রীড়া-সংক্রান্ত|The city hosts many sporting events.|He owns a sporting goods shop.
+spot|n/v|A|a place; a small mark; to notice|জায়গা; দাগ; লক্ষ করা|The bakery is a popular spot for breakfast.|Can you spot the mistake?
+spread|v/n|A|to cover a larger area; to open out|ছড়িয়ে পড়া|The news spread quickly.|Spread butter on the bread.
+spring|n|E|the season after winter|বসন্তকাল|Flowers bloom in spring.|We plan to travel next spring.
+square|n/adj|E|a shape with four equal sides; an open area in a town|বর্গক্ষেত্র; চত্বর|The market is in the main square.|Draw a square on the page.
+stadium|n|I|a large sports ground with seats|স্টেডিয়াম|The stadium was full for the final.|They are building a new stadium.
+stage|n|A|a raised platform for performing; a step in a process|মঞ্চ; ধাপ|The actors walked onto the stage.|The project is in its first stage.
+stained|adj/v|A|{stain} marked; colored|দাগযুক্ত; রঙিন|The church has stained glass windows.|His shirt was stained with coffee.
+stairs|n|E|steps inside a building|সিঁড়ি|She ran up the stairs.|The stairs lead to the roof.
+stand|v|E|to be on your feet|দাঁড়ানো|Please stand up when the teacher enters.|I can't stand loud music.
+standard|n/adj|A|a level of quality; usual|মান; প্রচলিত|The hotel offers a high standard of service.|This is the standard size for a passport photo.
+standing|v/adj|A|{stand} on the feet; continuing|দাঁড়িয়ে; স্থায়ী|He was standing by the door.|We have a standing order for bread.
+staple|n/adj|A|a basic, common item; a small wire for paper|প্রধান খাদ্য; স্ট্যাপল|Rice is a staple food in Asia.|Put a staple in the corner of the pages.
+stare|v|A|to look at for a long time|তাকিয়ে থাকা|It is rude to stare at strangers.|She began to stare at the strange light.
+stars|n|E|{star} points of light in the night sky; famous people|তারা; তারকা|We counted the stars at night.|Film stars walked on the red carpet.
+started|v|E|{start} began|শুরু করেছিল|The bakery started as a family business.|It started to rain.
+station|n|E|a place where trains or buses stop|স্টেশন|Meet me at the train station.|The police station is on Main Street.
+statue|n|A|a stone or metal figure of a person or animal|মূর্তি|A statue of the poet stands in the park.|They built a statue to honor the king.
+statues|n|A|{statue} stone or metal figures|মূর্তিসমূহ|Ancient statues line the temple walls.|Tourists photograph the statues.
+stay|v|E|to remain in a place|থাকা|We will stay at a hotel.|The string helped the shoe stay on his foot.
+steady|adj|A|firm; not changing|স্থির; অবিচল|Her voice was calm and steady.|Prices have stayed steady this year.
+steep|adj|A|rising or falling sharply|খাড়া|The path up the hill is steep.|There was a steep rise in prices.
+stem|n|A|the main stalk of a plant|কাণ্ড; ডাঁটা|Cut the stem of the flower.|Water travels up the stem to the leaves.
+step|n/v|E|a movement of the foot; one stage|ধাপ; পা ফেলা|Take one step forward.|The first step is the hardest.
+steps|n|E|{step} movements of the feet; stairs|পদক্ষেপ; সিঁড়ি|His boots left steps in the sand.|Follow the steps in the guide.
+still|adv/adj|E|continuing; not moving|এখনও; স্থির|I am still hungry.|Please keep still for the photo.
+stillness|n|A|{still} complete quiet and calm|নিস্তব্ধতা|A loud cry broke the stillness of the night.|I love the stillness of early morning.
+stirred|v|A|{stir} moved slightly; mixed|নড়ে উঠেছিল; নাড়া দিয়েছিল|Something stirred in the dark water.|She stirred the soup slowly.
+stomach|n|I|the organ where food is digested|পাকস্থলী; পেট|My stomach hurts when I eat too fast.|She felt butterflies in her stomach.
+stone|n|E|hard rock|পাথর|The house is built of stone.|He threw a stone into the lake.
+stonework|n|A|{stone} parts of a building made of stone|পাথরের কাজ|The old stonework of the bridge needs repair.|Visitors admired the stonework of the temple.
+stood|v|E|{stand} was on the feet|দাঁড়িয়েছিল|The soldier stood at his post all night.|An old tree stood in the garden.
+stop|v/n|E|to end moving or doing; a place where a bus stops|থামা; স্টপ|Stop at the red light.|The bus stop is near my house.
+stopped|v|E|{stop} ended moving|থেমেছিল|The rain stopped at noon.|She stopped to check her phone.
+stopping|v|A|{stop} ending moving|থামছে|The train is stopping at every station.|Stopping smoking improves your health.
+stops|v/n|E|{stop} ends moving; places where buses stop|থামে; স্টপসমূহ|The music stops at midnight.|The bus makes ten stops.
+storage|n|A|{store} space for keeping things|সংরক্ষণ; গুদাম|The basement is used for storage.|Phones have more storage than before.
+store|n/v|E|a shop; to keep for later|দোকান; সংরক্ষণ করা|I bought milk at the store.|Apps store your personal details.
+stories|n|E|{story} accounts of events|গল্পসমূহ|My grandfather told us stories at night.|The newspaper printed several stories about the flood.
+storm|n|E|bad weather with strong wind and rain|ঝড়|The storm knocked down trees.|A big storm is coming tonight.
+story|n|E|an account of events, true or imagined|গল্প|She read a story to her son.|The film is based on a true story.
+strain|n/v|A|pressure or stress; to injure a muscle|চাপ; টান লাগা|Long hours put a strain on her health.|Don't strain your back lifting boxes.
+strange|adj|E|unusual|অদ্ভুত|We heard a strange noise.|The red sky looked strange.
+strategy|n|A|a plan for achieving a goal|কৌশল|We need a strategy to win.|Fill the small words first: it is a good strategy.
+stream|n|I|a small river; a flow|ঝরনা; স্রোতধারা|A stream runs behind the house.|A stream of people left the stadium.
+street|n|E|a road in a town|রাস্তা|The street outside was shining and wet.|They live on a busy street.
+streets|n|E|{street} roads in a town|রাস্তাগুলো|The streets were full of people.|Narrow streets wind through the old city.
+strength|n|A|{strong} being strong|শক্তি|Lifting weights builds muscle strength.|Her greatest strength is patience.
+strengthen|v|A|{strength} to make stronger|শক্তিশালী করা|Exercise will strengthen your muscles.|The two countries want to strengthen their ties.
+strengthens|v|A|{strengthen} makes stronger|শক্তিশালী করে|Reading strengthens your vocabulary.|Steel strengthens the concrete.
+stress|n/v|A|worry and pressure; to emphasize|মানসিক চাপ; জোর দেওয়া|Exams cause a lot of stress.|The teacher wants to stress the importance of reading.
+string|n|E|thin rope|সুতো; দড়ি|He tied the shoe with a piece of string.|The guitar has a broken string.
+structure|n|A|the way parts are arranged; a building|গঠন; কাঠামো|The structure of the essay is clear.|The bridge is a huge steel structure.
+struggle|n/v|A|a hard effort; to try hard|সংগ্রাম; লড়াই করা|The film shows the struggle to survive.|Many students struggle with grammar.
+student|n|E|a person who studies|শিক্ষার্থী|She is a student at Dhaka University.|Every student must wear a uniform.
+students|n|E|{student} people who study|শিক্ষার্থীরা|Students get cheaper bus tickets.|The students listened carefully.
+study|n/v|E|to learn about a subject|অধ্যয়ন; পড়াশোনা করা|I study English every evening.|A new study shows the benefits of sleep.
+stumbled|v|A|{stumble} walked unsteadily; almost fell|হোঁচট খেয়েছিল|He stumbled down the dark street.|She stumbled over a rock.
+stunning|adj|A|{stun} extremely beautiful or impressive|অত্যাশ্চর্য|The view from the top was stunning.|She wore a stunning red dress.
+style|n|A|a way of doing something; fashion|শৈলী; ধরন|I like her style of writing.|The building is in a modern style.
+subject|n|E|a topic; an area of study|বিষয়|My favorite subject is history.|Please don't change the subject.
+submit|v|A|to give work for judgment|জমা দেওয়া|Submit your essay by Friday.|You must submit the form online.
+substantial|adj|A|large in amount|উল্লেখযোগ্য; বিশাল|She received a substantial amount of money.|The storm caused substantial damage.
+subtle|adj|A|not obvious|সূক্ষ্ম|There is a subtle difference between the two colors.|Her humor is subtle.
+suburb|n|A|an area at the edge of a city|শহরতলি|They moved to a quiet suburb.|Our suburb has good schools.
+succeed|v|A|to achieve what you want|সফল হওয়া|If you work hard, you will succeed.|Few new restaurants succeed in their first year.

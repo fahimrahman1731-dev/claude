@@ -1,0 +1,81 @@
+weaken|v|A|{weak} to make or become weaker|দুর্বল করা|Illness can weaken the body.|The storm began to weaken over land.
+weakness|n|A|{weak} lack of strength; a fault|দুর্বলতা|After the fever, she felt great weakness.|His biggest weakness is impatience.
+wealth|n|A|a large amount of money or property|সম্পদ|The family built its wealth through trade.|Health is more important than wealth.
+weapon|n|A|an object used to fight|অস্ত্র|The soldier carried a weapon.|Police found the weapon in the river.
+weather|n|E|the state of the air: sun, rain, wind|আবহাওয়া|The weather is sunny today.|Check the weather before you travel.
+website|n|I|pages on the internet under one address|ওয়েবসাইট|The school has a new website.|Book tickets on the museum website.
+weekend|n|E|Saturday and Sunday|সপ্তাহান্ত|We will visit our grandparents this weekend.|The shop is closed at the weekend.
+weight|n|I|how heavy something is|ওজন|What is the weight of the bag?|He lost weight by eating less sugar.
+weird|adj|I|very strange|অদ্ভুত|I heard a weird noise last night.|She wore a weird hat to the party.
+welcome|v/adj|E|to greet in a friendly way|স্বাগত জানানো|Welcome to our home!|The school will welcome new students on Monday.
+welcoming|adj|A|{welcome} friendly to visitors|আন্তরিক; স্বাগতপূর্ণ|The teacher created a welcoming classroom.|The hotel staff were warm and welcoming.
+welfare|n|A|health and happiness; help from the government|কল্যাণ; সমাজকল্যাণ|The charity cares for the welfare of children.|Some families depend on welfare payments.
+well|adv/adj|E|in a good way; healthy|ভালোভাবে; সুস্থ|She speaks English well.|It is well known that exercise helps mental health.
+wellbeing|n|A|{well} being healthy and happy|সুস্থতা; কল্যাণ|Exercise improves your wellbeing.|Schools care about student wellbeing.
+wellness|n|A|{well} good health|সুস্থতা|The hotel has a wellness center.|Sleep is important for wellness.
+went|v|E|{go} moved or traveled|গিয়েছিল|We went to the beach yesterday.|She went home early.
+were|v/aux|E|{be} past of "be" for you, we and they|ছিল|The children were happy.|Where were you last night?
+western|adj|I|{west} in or from the west|পশ্চিমাঞ্চলীয়|The western coast is rocky.|He likes western films.
+wetland|n|A|land covered with shallow water|জলাভূমি|Many birds live in the wetland.|The wetland protects the town from floods.
+whales|n|I|{whale} very large sea mammals|তিমি|Blue whales are the largest animals on Earth.|We watched whales from the boat.
+what|pron/det|E|used to ask about things|কী|What is your name?|I don't know what she said.
+wheat|n|I|a grain used to make flour|গম|Bread is made from wheat.|Farmers grow wheat in the north.
+when|adv/conj|E|at what time; at the time that|কখন; যখন|When does the train leave?|I was sleeping when you called.
+where|adv/conj|E|in or to what place|কোথায়; যেখানে|Where do you live?|This is the house where I was born.
+whether|conj|A|if (used with two possibilities)|কিনা|I don't know whether she will come.|Tell me whether you agree or not.
+which|det/pron|E|used to ask about choices; that|কোনটি; যা|Which bus goes to the airport?|The book, which I bought yesterday, is great.
+while|conj|E|during the time that; whereas|যখন; যদিও|I read while I wait for the bus.|She likes tea, while her brother prefers coffee.
+whiskey|n|A|a strong alcoholic drink|হুইস্কি|The detective smelled spilled whiskey in the room.|The bottle of whiskey was half empty.
+whisper|v/n|I|to speak very quietly|ফিসফিস করা|She began to whisper a secret to me.|He spoke in a whisper.
+whispering|v|A|{whisper} speaking very quietly|ফিসফিস করছে|The audience was whispering during the play.|I heard someone whispering behind me.
+who|pron|E|which person|কে|Who is your teacher?|The man who lives next door is a doctor.
+whole|adj|E|complete; all of|সম্পূর্ণ; পুরো|She ate the whole cake.|The whole class passed the test.
+whom|pron|A|which person (object)|কাকে|To whom did you send the letter?|The woman whom we met is a doctor.
+whose|det/pron|E|belonging to which person|কার|Whose bag is this?|The boy whose dog was lost is crying.
+why|adv|E|for what reason|কেন|Why are you late?|I don't know why she left.
+wide|adj|E|large from side to side|চওড়া|The river is very wide.|The shop sells a wide range of goods.
+widely|adv|A|{wide} by many people; in many places|ব্যাপকভাবে|English is widely spoken.|The news was widely reported.
+widen|v|A|{wide} to make wider|প্রশস্ত করা|The city plans to widen the road.|The gap between rich and poor may widen.
+widespread|adj|A|happening in many places|ব্যাপক|The plan has widespread support.|There was widespread damage after the storm.
+width|n|A|{wide} how wide something is|প্রস্থ|Measure the width of the door.|The width of the river is fifty meters.
+wife|n|E|a married woman|স্ত্রী|His wife is a teacher.|He bought flowers for his wife.
+wilderness|n|A|wild, empty land|জনহীন প্রান্তর|The explorers traveled through the wilderness.|Bears live in the wilderness.
+wildlife|n|A|wild animals and plants|বন্যপ্রাণী|The park protects local wildlife.|Pollution harms wildlife in rivers and lakes.
+will|aux|E|used to talk about the future|করবে|It will rain tomorrow.|I will call you later.
+windows|n|E|{window} openings in walls with glass|জানালাগুলো|The windows were shut tight.|Open the windows to let in air.
+winds|n|I|{wind} moving air|বাতাস (বহুবচন)|Strong winds knocked down trees.|The winds were too strong for sailing.
+wings|n|I|{wing} the parts a bird or plane uses to fly|ডানা|The bird spread its wings.|The plane's wings were covered with ice.
+winter|n|E|the coldest season|শীতকাল|It snows in winter.|We wear warm clothes in winter.
+wireless|adj|A|without wires|তারবিহীন|The café has free wireless internet.|I use a wireless mouse.
+with|prep|E|together with; using|সঙ্গে; দিয়ে|I went to the market with my mother.|Cut the paper with scissors.
+within|prep|A|inside; before the end of|ভেতরে; মধ্যে|Please reply within two days.|The castle is within the old city walls.
+without|prep|E|not having|ছাড়া|I can't live without music.|She left without saying goodbye.
+witnessed|v|A|{witness} saw an event happen|প্রত্যক্ষ করেছিল|She witnessed the accident.|The city witnessed great changes.
+won|v|E|{win} was the winner|জিতেছিল|Our team won the match.|She won a prize for her painting.
+wonder|v/n|A|to think about with curiosity; amazement|ভাবা; বিস্ময়|I wonder what time it is.|The pyramids are a wonder of the world.
+wondered|v|A|{wonder} thought about with curiosity|ভেবেছিল|She wondered if he was telling the truth.|I wondered where my keys were.
+wood|n|E|the hard material of trees|কাঠ|The table is made of wood.|We collected wood for the fire.
+word|n|E|a unit of language|শব্দ|What does this word mean?|He left without saying a word.
+words|n|E|{word} units of language|শব্দসমূহ|Learn ten new words every day.|Her words made me feel better.
+work|n/v|E|a job; to do a job|কাজ; কাজ করা|I work in a bank.|My mother goes to work at eight.
+worked|v|E|{work} did a job; functioned|কাজ করেছিল|People worked hard in the fields.|The plan worked perfectly.
+workers|n|E|{worker} people who work|শ্রমিকরা|The workers asked for higher wages.|Factory workers start early.
+working|v/adj|E|{work} doing a job; functioning|কাজ করছে|She is working on a new project.|My phone is not working.
+works|v/n|E|{work} does a job; functions|কাজ করে|The heart works day and night.|This machine works well.
+world|n|E|the earth and all its people|পৃথিবী; বিশ্ব|She wants to travel around the world.|English is spoken all over the world.
+worldwide|adj/adv|A|{world} in every part of the world|বিশ্বব্যাপী|The company sells its products worldwide.|The song was a worldwide hit.
+worried|adj|I|{worry} anxious|চিন্তিত|My mother was worried about me.|The worried farmer looked at the sky.
+worry|v/n|I|to feel anxious|চিন্তা করা; দুশ্চিন্তা|Don't worry about the test.|Many people worry about their privacy online.
+would|aux|E|{will} used for polite requests and imagined situations|করত; চাইতাম|Would you like some tea?|I would travel the world if I were rich.
+wound|n|A|an injury where the skin is cut|ক্ষত|The nurse cleaned the wound.|The wound healed slowly.
+wrapped|v|I|{wrap} covered with paper or cloth|মোড়ানো|She wrapped the gift in red paper.|The baby was wrapped in a blanket.
+write|v|E|to make words on paper or a screen|লেখা|Please write your name here.|I write in my journal every night.
+wrong|adj|E|not correct|ভুল|Your answer is wrong.|I took the wrong bus.
+wrongful|adj|A|{wrong} unfair; illegal|অন্যায়|He sued for wrongful arrest.|The court corrected a wrongful decision.
+wrote|v|E|{write} made words on paper|লিখেছিল|She wrote a letter to her friend.|Soldiers wrote home from the front.
+year|n|E|a period of twelve months|বছর|I started school last year.|The fiscal year begins in July.
+yet|adv/conj|E|until now; but|এখনও; তবু|I haven't finished yet.|The test was hard, yet she passed.
+you|pron|E|the person spoken to|তুমি; আপনি|Are you ready for the exam?|I will help you.
+young|adj|E|not old|তরুণ; অল্পবয়সী|She is too young to drive.|Young people love this music.
+younger|adj|E|{young} less old|ছোট (বয়সে)|My younger brother is ten.|She looks younger than her age.
+your|det|E|belonging to you|তোমার; আপনার|What is your name?|Exercise can boost your memory.

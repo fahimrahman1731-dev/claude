@@ -1,0 +1,140 @@
+personalized|adj|A|{personalize} made for one particular person|ব্যক্তিগতকৃত|Doctors can now offer personalized treatment.|She received a personalized birthday card.
+persuade|v|A|to convince someone to do something|রাজি করানো|I tried to persuade my father to buy a dog.|Advertisements persuade people to spend money.
+phenomenon|n|A|a remarkable event or fact|ঘটনা; প্রাকৃতিক বিস্ময়|A rainbow is a natural phenomenon.|Online shopping is a modern phenomenon.
+philosophy|n|A|the study of ideas about life and knowledge|দর্শন|She studied philosophy at university.|His philosophy is to enjoy every day.
+phone|n|E|a telephone|ফোন|He checked his phone for messages.|Please turn off your phone in class.
+photograph|n|I|a picture taken with a camera|আলোকচিত্র|She took a photograph of the sunset.|The photograph shows my grandparents' wedding.
+photography|n|A|{photograph} taking photographs|আলোকচিত্রবিদ্যা|He is taking a photography class.|Nature photography requires patience.
+photos|n|E|{photo} pictures taken with a camera|ছবি|Visitors take photos of the beach.|She posted the photos online.
+phrases|n|I|{phrase} small groups of words|বাক্যাংশ|Learn useful phrases before you travel.|The teacher underlined the key phrases.
+physical|adj|I|relating to the body|শারীরিক|Regular exercise can improve your physical health.|The job involves a lot of physical work.
+physician|n|A|a doctor|চিকিৎসক|Ask your physician before taking new medicine.|She is a respected physician in the city.
+physics|n|A|the science of matter and energy|পদার্থবিদ্যা|Physics explains why objects fall.|He teaches physics at the college.
+pick|v|E|to choose; to take from a plant|বেছে নেওয়া; তোলা|Pick one card from the deck.|Blood goes to the lungs to pick up fresh oxygen.
+picked|v|E|{pick} chose; took from a plant|বেছে নিয়েছিল; তুলেছিল|She picked the red dress.|They picked apples in the orchard.
+picnic|n|I|a meal eaten outside|বনভোজন|We had a picnic by the lake.|Pack sandwiches for the picnic.
+picture|n|E|a drawing, painting or photo|ছবি|The child drew a picture of a house.|There is a picture of the sea on the wall.
+pie|n|E|food with pastry and a filling|পাই|She baked an apple pie.|We had chicken pie for dinner.
+piece|n|E|a part of something|টুকরো|Would you like a piece of cake?|He found a piece of paper on the floor.
+pillars|n|A|{pillar} tall posts that support a building|স্তম্ভসমূহ|Stone pillars hold up the roof of the temple.|Trust and respect are the pillars of friendship.
+pillow|n|E|a soft cushion for your head in bed|বালিশ|I need a softer pillow.|She put her head on the pillow and fell asleep.
+pioneer|n|A|one of the first people to do something|পথিকৃৎ|She was a pioneer in computer science.|The pioneer families built farms in the valley.
+pistol|n|A|a small gun|পিস্তল|The agent kept a tight grip on the hidden pistol.|The police found a pistol in the car.
+places|n|E|{place} locations|স্থানসমূহ|We visited many beautiful places.|Travel lets you see new places.
+plagiarism|n|A|copying someone else's work as your own|চৌর্যবৃত্তি (লেখা)|Plagiarism is a serious offense at university.|The software checks essays for plagiarism.
+plan|n/v|E|an idea of how to do something|পরিকল্পনা|What is your plan for the weekend?|We plan to visit Sylhet in May.
+planet|n|I|a large object that moves around a star|গ্রহ|Mars is the fourth planet from the sun.|We must protect our planet.
+plants|n|E|{plant} living things that grow in the ground|উদ্ভিদ|Plants need water and sunlight.|She waters the plants every morning.
+plateau|n|A|a large area of high, flat land|মালভূমি|The village sits on a high plateau.|Prices reached a plateau last year.
+platform|n|A|a raised flat surface; a place to wait for trains; an online service|প্ল্যাটফর্ম|The train leaves from platform three.|The app is a platform for selling crafts.
+player|n|E|{play} a person who takes part in a game|খেলোয়াড়|He is the best player on the team.|Each player gets five cards.
+players|n|E|{player} people who take part in a game|খেলোয়াড়রা|The players shook hands after the match.|Football players train every day.
+playful|adj|I|{play} fun and active|খেলাধুলাপ্রিয়|The playful puppy chased its tail.|She gave him a playful smile.
+playing|v|E|{play} taking part in a game; making music|খেলছে; বাজাচ্ছে|The children are playing in the park.|He is playing the guitar.
+plays|v/n|E|{play} takes part in; theater works|খেলে; নাটক|Sleep plays a crucial role in learning.|Shakespeare wrote many plays.
+playwright|n|A|a person who writes plays|নাট্যকার|The playwright watched the first show from the back.|She is a famous playwright.
+plot|n|A|the story of a book or film; a piece of land|কাহিনি; জমির টুকরো|The novel has an exciting plot.|They bought a small plot of land.
+pocket|n|E|a small bag sewn into clothes|পকেট|She put her phone in her pocket.|My coat has a hole in the pocket.
+poem|n|I|a piece of writing with rhythm|কবিতা|She wrote a poem about the sea.|We read a famous poem in class.
+poetry|n|A|{poem} poems in general|কাব্য; কবিতা|Tagore's poetry is loved by millions.|She reads poetry every night.
+point|n/v|I|an idea; a sharp end; to show with a finger|বিষয়; বিন্দু; নির্দেশ করা|That is a good point.|Don't point at people.
+police|n|I|the people who enforce the law|পুলিশ|Call the police if you see a crime.|The police closed the road.
+policies|n|A|{policy} plans of action|নীতিমালা|The government changed its economic policies.|Read the school's policies carefully.
+policy|n|A|a plan of action of a government or organization|নীতি|The new policy bans phones in class.|Foreign policy is decided by the president.
+polished|adj/v|A|{polish} made shiny by rubbing|পালিশ করা; চকচকে|The street was shining like it had been polished.|He polished his shoes before the interview.
+political|adj|A|{politics} about government|রাজনৈতিক|We discussed political issues in class.|She has strong political views.
+pollen|n|A|yellow powder from flowers|পরাগরেণু|Bees carry pollen from flower to flower.|Pollen makes some people sneeze.
+pollution|n|I|harmful substances in the air, water or land|দূষণ|Air pollution is a problem in big cities.|Recycling reduces pollution in rivers and seas.
+pond|n|I|a small area of still water|পুকুর|Ducks swim in the pond.|The children caught fish in the village pond.
+popular|adj|E|liked by many people|জনপ্রিয়|Football is popular in Brazil.|She is popular with her classmates.
+population|n|A|the number of people living in a place|জনসংখ্যা|The population of the city is growing.|India has a huge population.
+porch|n|I|a covered area at the entrance of a house|বারান্দা (প্রবেশপথের)|We sat on the porch in the evening.|She left the parcel on the porch.
+port|n|I|a town or area where ships stop|বন্দর|Chittagong is a busy port.|The ship arrived at the port in the morning.
+portrait|n|A|a painting or photo of a person|প্রতিকৃতি|The artist painted a portrait of the queen.|A portrait of her grandfather hangs in the hall.
+portray|v|A|to show or describe in a certain way|চিত্রিত করা|The film tries to portray village life honestly.|Actors portray historical figures.
+portrayal|n|A|{portray} the way something is shown|চিত্রায়ণ|The film was criticized for its portrayal of race.|Her portrayal of the queen won an award.
+positions|n|A|{position} places; jobs|অবস্থান; পদ|Players took their positions on the field.|The company has three open positions.
+positive|adj|I|good; hopeful; certain|ইতিবাচক; নিশ্চিত|The teacher creates a positive classroom.|Are you positive that you locked the door?
+possession|n|A|{possess} owning something; something owned|দখল; সম্পত্তি|The police found drugs in his possession.|Her most valuable possession is a old watch from her mother.
+possible|adj|E|able to happen or be done|সম্ভব|Is it possible to finish today?|Come as soon as possible.
+post|n/v|A|a job; a pole; to send by mail|পদ; খুঁটি; ডাকে পাঠানো|The soldier stood at his post all night.|I will post the letter tomorrow.
+posture|n|A|the way you hold your body|ভঙ্গি|Good posture prevents back pain.|Sit up straight to improve your posture.
+potential|n/adj|A|possible ability; possible|সম্ভাবনা; সম্ভাব্য|Every child has the potential to succeed.|We discussed potential problems.
+pour|v|E|to make liquid flow out of a container|ঢালা|Pour the water carefully into the glass.|It started to pour with rain.
+poverty|n|A|being very poor|দারিদ্র্য|Millions of people live in poverty.|Education helps reduce poverty.
+power|n|I|energy; control; strength|শক্তি; ক্ষমতা; বিদ্যুৎ|The storm cut the power to the village.|The king had great power.
+powerful|adj|I|{power} very strong|শক্তিশালী|A powerful earthquake hit the region.|She gave a powerful speech.
+practice|n/v|E|doing something often to improve|অনুশীলন|Daily practice makes a big difference.|I practice the piano every day.
+practices|n|A|{practice} usual ways of doing things|চর্চা; প্রথা|The company changed its business practices.|Farming practices differ by region.
+praise|n/v|I|words of approval|প্রশংসা|The film received critical praise.|Teachers praise students for good work.
+pram|n|A|a baby carriage (British; US: stroller)|শিশুর গাড়ি (ব্রিটিশ)|She pushed the pram along the kerb.|The baby slept in her pram in the park.
+precise|adj|A|exact|সুনির্দিষ্ট|We need precise measurements.|At that precise moment, the phone rang.
+precision|n|A|{precise} being exact|নির্ভুলতা|Surgeons work with great precision.|The machine cuts metal with precision.
+predator|n|A|an animal that hunts others|শিকারি প্রাণী|The lion is a powerful predator.|Small fish hide from every predator.
+predict|v|A|to say what will happen|ভবিষ্যদ্বাণী করা|Scientists try to predict earthquakes.|Nobody can predict the future.
+predictive|adj|A|{predict} able to predict|ভবিষ্যদ্বাণীমূলক|The phone uses predictive text.|Predictive models help banks spot fraud.
+prehistoric|adj|A|from the time before written history|প্রাগৈতিহাসিক|We saw prehistoric cave paintings.|Prehistoric people used stone tools.
+prejudice|n|A|an unfair opinion formed without knowledge|কুসংস্কার; পূর্বধারণা|The law fights racial prejudice.|She faced prejudice because of her accent.
+preliminary|adj|A|coming before the main part|প্রাথমিক|The preliminary results look promising.|They held a preliminary meeting.
+premieres|n|A|{premiere} first showings of films or plays|প্রথম প্রদর্শনী|The actor attended three premieres this year.|Film premieres attract many photographers.
+prepared|adj/v|I|{prepare} ready|প্রস্তুত|Be prepared for heavy rain.|She prepared dinner for ten people.
+present|n/adj/v|I|now; a gift; to show|বর্তমান; উপহার; উপস্থাপন করা|Each student will present a project.|She gave me a present.
+presentation|n|A|{present} a talk to show information|উপস্থাপনা|I have to give a presentation tomorrow.|Her presentation was clear and interesting.
+preserve|v|A|to keep safe from harm or change|সংরক্ষণ করা|We must preserve our traditions.|Salt helps preserve fish.
+president|n|I|the leader of a country or organization|রাষ্ট্রপতি; সভাপতি|The president gave a speech.|She is president of the student club.
+pressure|n|A|force pressing on something; stress|চাপ|Check the tire pressure.|Students feel pressure before exams.
+pretending|v|A|{pretend} acting as if something is true|ভান করছে|He was pretending to be asleep.|The children are pretending to be pirates.
+pretty|adj/adv|E|attractive; fairly|সুন্দর; বেশ|She wore a pretty dress.|The test was pretty easy.
+prevail|v|A|to win; to be common|জয়ী হওয়া; প্রচলিত থাকা|Justice will prevail in the end.|Dry weather will prevail this week.
+prevent|v|A|to stop something from happening|প্রতিরোধ করা|Washing hands helps prevent disease.|A tall fence can prevent the dog from escaping.
+previous|adj|A|earlier|পূর্ববর্তী|Her previous job was in a bank.|The previous owner painted the house.
+prey|n|A|an animal hunted by another|শিকার|The eagle caught its prey.|Mice are prey for owls.
+price|n|E|the amount of money something costs|দাম|The price of rice went up.|What is the price of this book?
+prices|n|E|{price} amounts of money things cost|দামসমূহ|Lower prices could attract more riders.|Food prices rose sharply.
+primarily|adv|A|{primary} mainly|প্রধানত|The course is primarily for beginners.|The tool is primarily used for cutting.
+primary|adj|A|main; first|প্রাথমিক; প্রধান|Her primary goal is to pass the exam.|My sister teaches at a primary school.
+principal|n/adj|A|the head of a school; main|প্রধান শিক্ষক; প্রধান|The principal spoke at the assembly.|Rice is the principal crop.
+principle|n|A|a basic rule or belief|নীতি|Honesty is an important principle.|The machine works on a simple principle.
+prioritize|v|A|to treat as most important|অগ্রাধিকার দেওয়া|Prioritize the questions you can answer.|We must prioritize safety.
+prioritizes|v|A|{prioritize} treats as most important|অগ্রাধিকার দেয়|The school prioritizes reading skills.|She prioritizes her family over work.
+priority|n|A|the most important thing|অগ্রাধিকার|Safety is our top priority.|Space exploration is a priority for the agency.
+privacy|n|A|{private} freedom from being watched|গোপনীয়তা|Apps should respect user privacy.|Close the curtain for privacy.
+private|adj|A|personal; not public|ব্যক্তিগত; বেসরকারি|This is a private conversation.|She goes to a private school.
+privilege|n|A|a special right or advantage|সুবিধা; বিশেষাধিকার|It is a privilege to meet you.|Education should be a right, not a privilege.
+probably|adv|A|almost certainly|সম্ভবত|It will probably rain tomorrow.|She is probably at home.
+process|n/v|A|a series of steps; to deal with|প্রক্রিয়া|Recycling is a simple process.|The bank will process your application.
+produce|v/n|A|to make; fruit and vegetables|উৎপাদন করা; ফসল|Factories produce cars and machines.|The market sells fresh produce.
+produced|v|A|{produce} made|উৎপাদিত|The factory produced a thousand bikes.|The film was produced in India.
+product|n|A|{produce} something made to be sold|পণ্য|The company launched a new product.|Cheese is a dairy product.
+production|n|A|{produce} making goods|উৎপাদন|Rice production increased this year.|The film is still in production.
+productive|adj|A|{produce} getting a lot done|উৎপাদনশীল|We had a productive meeting.|She is most productive in the morning.
+productivity|n|A|{productive} how much work is done|উৎপাদনশীলতা|New machines increased productivity.|Sleep affects your productivity.
+products|n|A|{product} things made to be sold|পণ্যসমূহ|Recycled materials become new products.|The shop sells local products.
+profession|n|A|a job that needs special training|পেশা|Teaching is a noble profession.|What is your profession?
+professionals|n|A|{professional} people trained for a skilled job|পেশাজীবী|Health professionals work long hours.|The team hired young professionals.
+professor|n|A|a senior university teacher|অধ্যাপক|The professor gave a lecture on history.|She is a professor of chemistry.
+profit|n|A|money gained after costs|মুনাফা|The shop made a small profit.|They sold the house at a profit.
+profits|n|A|{profit} money gained after costs|মুনাফাসমূহ|Company profits rose this year.|Lower costs mean higher profits.
+profound|adj|A|deep; very great|গভীর|The book had a profound effect on me.|She has a profound knowledge of history.
+profuse|adj|A|in large amounts|প্রচুর|He offered profuse apologies.|The cut caused profuse bleeding.
+program|n|I|a plan of activities; computer software; a TV show|কর্মসূচি; প্রোগ্রাম|The school has a reading program.|My favorite TV program starts at eight.
+progress|n|A|movement toward a goal|অগ্রগতি|She is making good progress in English.|Technology has brought great progress.
+project|n|I|a planned piece of work|প্রকল্প|We worked on a science project.|The project will take two years.
+prolonged|adj|A|{prolong} lasting a long time|দীর্ঘস্থায়ী|Prolonged drought damaged the crops.|There was a prolonged silence.
+prominent|adj|A|important; easy to see|বিশিষ্ট; সুস্পষ্ট|She is a prominent writer.|The tower is a prominent landmark.
+promise|n/v|I|to say you will certainly do something|প্রতিশ্রুতি; কথা দেওয়া|I promise to call you tonight.|He kept his promise.
+promises|n|I|{promise} statements that you will do something|প্রতিশ্রুতিসমূহ|The letters were full of promises.|Politicians make many promises.
+promote|v|A|to help to grow; to advertise; to give a higher job|প্রচার করা; পদোন্নতি দেওয়া|The festival helps promote local businesses.|The company will promote her to manager.
+promoted|v|A|{promote} given a higher job; advertised|পদোন্নতি পেয়েছিল|She was promoted to head nurse.|The new film was promoted on social media.
+promotes|v|A|{promote} helps grow; advertises|প্রচার করে; উৎসাহিত করে|Exercise promotes good health.|The poster promotes the concert.
+pronunciation|n|A|the way a word is said|উচ্চারণ|Her English pronunciation is excellent.|Check the pronunciation in a dictionary.
+proof|n|A|evidence that something is true|প্রমাণ|Do you have proof of your address?|There is no proof that he lied.
+proper|adj|A|correct; suitable|সঠিক; উপযুক্ত|Return the equipment to its proper place.|Wear proper shoes for hiking.
+properties|n|A|{property} qualities; buildings or land owned|বৈশিষ্ট্য; সম্পত্তি|Metals have useful properties.|The family owns several properties.
+protect|v|I|to keep safe|রক্ষা করা|Sunscreen helps protect your skin.|We must protect endangered animals.
+protein|n|A|a substance in food that builds muscles|প্রোটিন|Eggs are a good source of protein.|Athletes need more protein.
+proteins|n|A|{protein} substances that build the body|প্রোটিনসমূহ|Proteins are made of amino acids.|The body uses proteins to repair muscles.
+protest|n/v|A|a strong public complaint|প্রতিবাদ|Students held a peaceful protest.|Workers protest against low pay.
+prototype|n|A|the first model of a new design|প্রাথমিক নমুনা|The engineers tested the prototype.|The first prototype was too heavy.
+proud|adj|I|feeling pleased about an achievement|গর্বিত|I am proud of my sister.|The proud parents watched the ceremony.
+provide|v|A|to give or supply|প্রদান করা|The river can provide water for many farms.|The hotel will provide towels.
