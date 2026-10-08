@@ -1,0 +1,14 @@
+[
+  {
+    "id": "guide",
+    "title": "DET Reading: Strategy Guide and Vocabulary Bank",
+    "file": "det-reading-strategy-guide-and-vocabulary-bank.md",
+    "parser": "guide"
+  },
+  {
+    "id": "harvest",
+    "title": "DET Reading Vocabulary Harvest, Part 2 (2026)",
+    "file": "det-reading-vocabulary-harvest-part-2-2026.md",
+    "parser": "harvest"
+  }
+]
