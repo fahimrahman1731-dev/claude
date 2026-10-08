@@ -1,0 +1,141 @@
+# word|pos|level|definition ({base} for forms)|bengali|sentence 1|sentence 2[|more]
+abandon|v|A|to leave behind completely; to give up|পরিত্যাগ করা; ছেড়ে দেওয়া|The crew had to abandon the sinking ship before dawn.|Never abandon your plan just because the first step is hard.
+abandonment|n|A|{abandon} being left with no help|পরিত্যাগ; ফেলে যাওয়া|The old house showed signs of abandonment, with broken windows everywhere.|Many pets suffer from abandonment when families move away.
+abdicating|v|A|{abdicate} giving up the position of king or queen|সিংহাসন ত্যাগ করা|The king shocked the nation by abdicating the throne to marry.|After abdicating, the former queen lived quietly in the countryside.
+ability|n|E|the skill or power to do something|সামর্থ্য; দক্ষতা|She has the ability to solve hard math problems quickly.|Sleep affects your ability to concentrate in class.
+able|adj|E|having the skill or chance to do something|সক্ষম|After weeks of practice, he was able to swim across the pool.|Will you be able to come to the meeting tomorrow?
+abolish|v|A|to end a law or system officially|বিলুপ্ত করা; রহিত করা|Many people campaigned to abolish slavery in the nineteenth century.|The new government promised to abolish the unfair tax.
+abolished|v|A|{abolish} officially ended|বিলুপ্ত করা হয়েছিল|The school abolished its strict uniform rules last year.|Slavery was abolished in Britain's colonies in 1834.
+about|prep/adv|E|on the subject of; roughly|সম্পর্কে; প্রায়|We talked about our favorite books during lunch.|The journey takes about three hours by train.
+above|prep/adv|E|higher than|উপরে|A small lamp hung above the kitchen table.|Temperatures rose above forty degrees last summer.
+abroad|adv|I|in or to a foreign country|বিদেশে|She plans to study abroad in Canada next year.|Many workers send money home from jobs abroad.
+absorb|v|I|to take in liquid, heat or information|শোষণ করা|Dark clothes absorb more heat from the sun.|It takes time to absorb so much new information.
+abundant|adj|A|plentiful; more than enough|প্রচুর|The region is abundant in fresh water and fertile soil.|Fish were abundant in the river before the factory opened.
+academic|adj|I|relating to study and education|শিক্ষাগত; একাডেমিক|Her academic results improved after she joined the study group.|The academic year begins in September.
+accept|v|E|to agree to take or believe something|গ্রহণ করা; মেনে নেওয়া|Please accept this small gift as a thank-you.|He could not accept that his team had lost.
+access|n/v|I|a way to reach or use something|প্রবেশাধিকার; ব্যবহারের সুযোগ|Many villages still lack access to clean water.|You need a password to access the school website.
+accidentally|adv|I|by chance, not on purpose|দুর্ঘটনাক্রমে; অনিচ্ছাকৃতভাবে|I accidentally deleted the file I needed.|She accidentally dropped her phone into the sink.
+accolades|n|A|{accolade} awards and praise|প্রশংসা ও পুরস্কার|The film won many accolades at international festivals.|Despite the accolades, the scientist stayed humble.
+accommodate|v|A|to provide space for; to adjust to|জায়গা দেওয়া; মানিয়ে নেওয়া|The hall can accommodate five hundred guests.|Teachers try to accommodate students with different needs.
+accommodation|n|A|{accommodate} a place to stay|থাকার ব্যবস্থা|The price includes flights and hotel accommodation.|Finding cheap accommodation near the university is difficult.
+accounts|n|I|{account} records of money; descriptions|হিসাব; বিবরণ|She checks the company accounts every month.|Witness accounts of the accident were very different.
+accumulate|v|A|to collect or build up over time|জমা করা; জমে ওঠা|Dust will accumulate if you never clean the shelves.|Over many years, he managed to accumulate great wealth.
+accurate|adj|I|correct and exact|নির্ভুল|The weather forecast was accurate this time.|Doctors need accurate information to make a diagnosis.
+accurately|adv|I|{accurate} exactly; without mistakes|নির্ভুলভাবে|Measure the liquid accurately before you pour it.|The witness accurately described the thief's clothes.
+achieve|v|I|to succeed in doing something|অর্জন করা|With hard work, you can achieve your goals.|The team hopes to achieve a better result this season.
+achieved|v|I|{achieve} succeeded in reaching|অর্জন করেছে|She achieved the highest score in her class.|The country has achieved great progress in education.
+achievement|n|I|{achieve} something done successfully|অর্জন; সাফল্য|Finishing the marathon was a great achievement for him.|The award recognizes a lifetime of achievement in science.
+achievements|n|I|{achievement} things done successfully|অর্জনসমূহ|The museum celebrates the achievements of local inventors.|Write down your achievements before the job interview.
+achieving|v|I|{achieve} succeeding in reaching|অর্জন করা (চলমান)|She is close to achieving her dream of becoming a pilot.|Achieving balance between work and rest is not easy.
+acknowledge|v|A|to admit or recognize|স্বীকার করা|The company refused to acknowledge the problem.|Please acknowledge my email when you receive it.
+acquire|v|A|to get or gain|অর্জন করা; লাভ করা|Children acquire language by listening to adults.|The museum hopes to acquire the painting next year.
+across|prep|E|from one side to the other|পার হয়ে; জুড়ে|They walked across the bridge at sunset.|The news spread quickly across the country.
+actions|n|E|{action} things that people do|কাজকর্ম|Small actions like recycling can help the planet.|He apologized for his actions at the party.
+active|adj|E|busy doing things; moving|সক্রিয়|My grandmother stays active by walking every day.|The volcano is still active and could erupt.
+activists|n|I|{activist} people who campaign for change|আন্দোলনকর্মী|Climate activists marched through the city center.|The activists collected thousands of signatures.
+activities|n|E|{activity} things people do|কার্যকলাপ|The camp offers many outdoor activities for children.|Reading and painting are relaxing activities.
+activity|n|E|something you do; movement|কার্যকলাপ|Physical activity keeps your heart healthy.|There was a lot of activity in the market this morning.
+actor|n|E|{act} a person who performs in plays or films|অভিনেতা|The actor forgot his lines on opening night.|She met a famous actor at the airport.
+actress|n|E|{actor} a woman who acts in plays or films|অভিনেত্রী|The young actress won an award for her first role.|The actress practiced her lines in front of a mirror.
+adapt|v|I|to change to fit new conditions|খাপ খাওয়ানো|Animals must adapt to survive in the desert.|It took me a month to adapt to the new school.
+addiction|n|I|a strong need you cannot stop|আসক্তি|Phone addiction is common among teenagers.|He sought help for his gambling addiction.
+addictive|adj|A|{addict} hard to stop doing|আসক্তিকর|Some video games are designed to be addictive.|Sugar can be surprisingly addictive.
+additional|adj|I|{addition} extra; more|অতিরিক্ত|The hotel charges an additional fee for breakfast.|We need additional chairs for the guests.
+address|n/v|E|where someone lives; to deal with|ঠিকানা; সমাধানে মন দেওয়া|Please write your address on the form.|The mayor promised to address the traffic problem.
+adequate|adj|A|enough for a need|যথেষ্ট; পর্যাপ্ত|The students did not have adequate time to finish.|Make sure the plants get adequate sunlight.
+adjacent|adj|A|next to|সংলগ্ন; পাশের|The library is adjacent to the main hall.|Fire spread quickly to the adjacent buildings.
+adjust|v|I|to change slightly to fit|সামঞ্জস্য করা|You can adjust the seat to your height.|It took my eyes a moment to adjust to the dark.
+admire|v|I|to respect and like|প্রশংসা করা; শ্রদ্ধা করা|I admire people who stay calm under pressure.|Tourists stopped to admire the old cathedral.
+advance|n/v|I|forward movement; to move forward|অগ্রগতি; এগিয়ে যাওয়া|Book your tickets in advance to get a good seat.|The army began to advance toward the city.
+advanced|adj|I|{advance} at a high level; modern|উন্নত; উচ্চস্তরের|The hospital uses advanced technology to scan patients.|She is taking an advanced English course.
+advantage|n|I|something that helps you succeed|সুবিধা|Speaking two languages is a big advantage at work.|The home team had the advantage of a loud crowd.
+adventure|n|I|an exciting experience|অভিযান; রোমাঞ্চকর অভিজ্ঞতা|Their trip through the jungle was a real adventure.|The book tells the adventure of a boy and his dog.
+adventurers|n|A|{adventurer} people who seek exciting journeys|অভিযাত্রী|Brave adventurers once sailed into unknown seas.|The cave attracts adventurers from around the world.
+advice|n|E|an opinion about what someone should do|পরামর্শ|My teacher gave me good advice about the exam.|Ask a doctor for advice before taking new medicine.
+advise|v|I|to tell someone what they should do|পরামর্শ দেওয়া|Doctors advise people to drink plenty of water.|I would advise you to leave early because of traffic.
+advisor|n|I|{advise} a person who gives advice|উপদেষ্টা|My academic advisor helped me choose my courses.|The president met with his financial advisor.
+advocate|v/n|A|to support publicly; a supporter|সমর্থন করা; সমর্থক|Many doctors advocate a diet rich in vegetables.|She has been a strong advocate for children's rights.
+advocates|v/n|A|{advocate} supports publicly; supporters|সমর্থন করে; সমর্থকরা|The report advocates more funding for public schools.|Advocates of the plan say it will create jobs.
+affect|v|I|to have an influence on|প্রভাবিত করা|Lack of sleep can affect your memory.|The storm did not affect our flight.
+afford|v|I|to have enough money for|সামর্থ্য থাকা|We cannot afford a new car this year.|Many families can barely afford rent in the city.
+affordable|adj|I|{afford} not too expensive|সাশ্রয়ী|The city needs more affordable housing.|This shop sells good, affordable shoes.
+afraid|adj|E|feeling fear|ভীত|The little girl was afraid of the dark.|Don't be afraid to ask questions in class.
+after|prep/conj|E|later than|পরে|We went for a walk after dinner.|After the rain stopped, the children ran outside.
+afternoon|n|E|the time between midday and evening|বিকেল|The meeting is on Tuesday afternoon.|I usually take a short nap in the afternoon.
+again|adv|E|one more time|আবার|Could you say that again, please?|The shop will open again after the holiday.
+against|prep|E|opposing; touching|বিরুদ্ধে; গায়ে হেলান দিয়ে|Our team will play against the champions on Friday.|He leaned his bike against the wall.
+age|n|E|how old someone or something is|বয়স; যুগ|Children start school at the age of six.|We live in an age of fast technology.
+aging|adj/v|I|{age} growing old|বার্ধক্য; বুড়ো হওয়া|Japan has a rapidly aging population.|Regular exercise can slow the effects of aging.
+air|n|E|the gas we breathe|বাতাস|Open the window to let in some fresh air.|The smell of smoke lingered in the air.
+aircraft|n|I|a plane or helicopter|বিমান; আকাশযান|The aircraft landed safely despite the storm.|The museum displays an old military aircraft.
+airplane|n|E|a vehicle that flies with wings|উড়োজাহাজ|The airplane took off on time.|My little brother drew an airplane on the wall.
+airport|n|E|a place where planes land and take off|বিমানবন্দর|We took a taxi to the airport at dawn.|The airport was crowded with holiday travelers.
+alert|adj/n|I|watchful and ready; a warning|সতর্ক; সতর্কবার্তা|Drivers must stay alert on long journeys.|My phone gave an alert about heavy rain.
+algorithm|n|A|a set of steps a computer follows|অ্যালগরিদম; ধাপে ধাপে নিয়ম|The app uses an algorithm to suggest songs.|Students wrote a simple algorithm to sort numbers.
+alignment|n|A|{align} being in a straight line or in agreement|সারিবদ্ধতা; সমন্বয়|The stones were placed in perfect alignment with the sunrise.|Check the alignment of the wheels before a long trip.
+all|det/pron|E|every one; the whole amount|সব; সমস্ত|All the students passed the final exam.|She spent all her money on books.
+alliance|n|A|an agreement to work together|জোট; মৈত্রী|The two countries formed an alliance against the invaders.|Small shops created an alliance to compete with big stores.
+allocate|v|A|to give out for a purpose|বরাদ্দ করা|The school will allocate more money to science labs.|Allocate enough time for each question in the test.
+allow|v|E|to let someone do something|অনুমতি দেওয়া|My parents allow me to stay up late on weekends.|The new bridge will allow faster travel to the city.
+allowed|v|E|{allow} permitted|অনুমতি দেওয়া হয়েছে|Phones are not allowed in the exam room.|The guard allowed us to enter the garden.
+allowing|v|E|{allow} letting; permitting|অনুমতি দিয়ে|Allowing children to play outside builds confidence.|The tunnel opened last year, allowing faster deliveries.
+allows|v|E|{allow} lets; permits|অনুমতি দেয়|The app allows users to share photos.|Our school allows students to bring laptops.
+almost|adv|E|nearly|প্রায়|It is almost time for dinner.|She almost missed the bus this morning.
+along|prep/adv|E|following the length of|বরাবর; সঙ্গে|We walked along the beach at sunset.|Bring your sister along to the party.
+already|adv|E|before now|ইতিমধ্যে|I have already finished my homework.|The train had already left when we arrived.
+also|adv|E|in addition; too|এছাড়াও; ও|She plays the piano and also sings in a choir.|The hotel also offers free breakfast.
+alternative|n/adj|A|another choice|বিকল্প|Solar power is a clean alternative to coal.|If the road is closed, take the alternative route.
+although|conj|E|despite the fact that|যদিও|Although it was raining, we went for a walk.|He passed the test, although he did not study much.
+always|adv|E|at all times; every time|সবসময়|She always drinks tea in the morning.|The museum is always busy on Sundays.
+amazed|adj|I|{amaze} very surprised|বিস্মিত|We were amazed by the size of the waterfall.|The teacher was amazed at how fast the boy learned.
+ambiguous|adj|A|unclear, with more than one meaning|দ্ব্যর্থক; অস্পষ্ট|The ambiguous instructions confused many students.|His answer was ambiguous, so nobody knew what he meant.
+among|prep|E|in the middle of a group|মধ্যে|The house stood among tall trees.|Football is popular among young people.
+ample|adj|A|more than enough|প্রচুর; যথেষ্ট|There is ample parking behind the stadium.|You will have ample time to finish the essay.
+an|det|E|one (used before a vowel sound)|একটি|She ate an orange after lunch.|It took an hour to reach the coast.
+analysis|n|A|careful study of the parts of something|বিশ্লেষণ|The analysis of the data took several weeks.|A blood analysis showed that he was healthy.
+analyze|v|I|to examine carefully|বিশ্লেষণ করা|Scientists analyze water samples from the lake.|Let us analyze why the plan failed.
+ancestor|n|I|a family member from long ago|পূর্বপুরুষ|My ancestor arrived here as a farmer in 1850.|The horse's ancestor was a small forest animal.
+ancestors|n|I|{ancestor} family members from long ago|পূর্বপুরুষগণ|Our ancestors built these stone walls by hand.|Many people want to learn where their ancestors came from.
+ancient|adj|I|very old; from long ago|প্রাচীন|The ancient ruins attract thousands of tourists.|Ancient Egyptians built huge pyramids.
+and|conj|E|joins words or ideas|এবং|I bought bread and milk at the shop.|She smiled and waved at her friends.
+angered|v|I|{anger} made angry|রাগিয়ে দিয়েছে|The price rises angered many customers.|His rude reply angered the teacher.
+angry|adj|E|feeling strong displeasure|রাগান্বিত|My father was angry when I broke the window.|Angry fans shouted at the referee.
+animals|n|E|{animal} living creatures that are not plants|প্রাণী|Farmers keep animals such as cows and goats.|Many wild animals live in the national park.
+animation|n|I|moving pictures made from drawings or computers|অ্যানিমেশন|The studio is famous for its colorful animation.|She studied animation at art college.
+animators|n|A|{animator} people who make cartoons|অ্যানিমেটর|The animators drew every frame of the film by hand.|Young animators often start by making short videos.
+announced|v|I|{announce} said publicly|ঘোষণা করেছে|The principal announced a holiday on Friday.|The airline announced a delay because of fog.
+announcement|n|I|{announce} a public statement|ঘোষণা|Please listen to the announcement about the train delay.|The company made an announcement about new jobs.
+another|det/pron|E|one more; a different one|আরেকটি|Would you like another cup of tea?|She moved to another city for work.
+answer|n/v|E|a reply; to reply|উত্তর|Please write your answer in the box.|Nobody could answer the teacher's difficult question.
+anticipate|v|A|to expect|প্রত্যাশা করা; আগাম অনুমান করা|We anticipate heavy traffic during the holiday.|Good drivers anticipate danger before it happens.
+anxiety|n|I|worry and nervousness|উদ্বেগ|Exercise can reduce anxiety and depression.|She felt anxiety before her first job interview.
+anxious|adj|I|worried and nervous|উদ্বিগ্ন|He was anxious about his exam results.|The anxious parents waited outside the hospital.
+any|det/pron|E|some, of whatever kind|কোনো|Do you have any questions?|There isn't any milk in the fridge.
+anything|pron|E|a thing of any kind|কিছু|I didn't eat anything for breakfast.|Is there anything I can do to help?
+anywhere|adv|I|in or to any place|যেকোনো জায়গায়|You can sit anywhere you like.|With a laptop, people can work from anywhere.
+apartment|n|E|a set of rooms to live in, inside a building|ফ্ল্যাট; অ্যাপার্টমেন্ট|They rent a small apartment near the station.|Our apartment is on the fifth floor.
+apologize|v|I|to say sorry|ক্ষমা চাওয়া|You should apologize to your sister.|The airline had to apologize for the long delay.
+apparent|adj|A|clear; easy to see|স্পষ্ট; প্রতীয়মান|For no apparent reason, the dog began to bark.|It soon became apparent that we were lost.
+appear|v|I|to come into sight; to seem|দেখা দেওয়া; মনে হওয়া|Stars appear in the sky after sunset.|The new teacher seems kind, but some rules appear strict.
+appearance|n|I|{appear} the way someone looks; arrival|চেহারা; আবির্ভাব|She changed her appearance with a new haircut.|The singer made a surprise appearance at the festival.
+appeared|v|I|{appear} came into sight|দেখা দিল|A rainbow appeared after the storm.|Her name appeared in the local newspaper.
+apples|n|E|{apple} round fruits|আপেল|We picked apples from the branches of the old tree.|She baked a pie with fresh apples.
+application|n|I|{apply} a formal request; a computer program|আবেদন; অ্যাপ|I sent my application for the job last week.|This application helps you learn new words.
+appointment|n|I|{appoint} an arranged meeting time|সাক্ষাতের সময়; অ্যাপয়েন্টমেন্ট|I have a dentist appointment at ten o'clock.|Please call to make an appointment with the doctor.
+appreciate|v|A|to value; to be grateful for|কৃতজ্ঞ হওয়া; মূল্য বোঝা|I really appreciate your help with the move.|You learn to appreciate home after a long trip.
+approach|n/v|I|a way of dealing with something; to come near|পদ্ধতি; কাছে আসা|We need a new approach to this problem.|The cat slowly began to approach the bird.
+appropriate|adj|A|suitable|উপযুক্ত|Jeans are not appropriate for a job interview.|The teacher chose an appropriate book for young readers.
+approximately|adv|A|about; roughly|প্রায়; আনুমানিক|The bridge is approximately two kilometers long.|Approximately half of the students passed.
+apps|n|E|{app} programs on a phone or computer|অ্যাপ|Many apps collect data about their users.|She deleted three apps to free up space on her phone.
+archaeologist|n|A|a person who studies ancient remains|প্রত্নতত্ত্ববিদ|The archaeologist found pottery buried in the sand.|An archaeologist explained how the temple was built.
+arches|n|A|{arch} curved tops of doors or bridges|খিলান|The old bridge rests on three stone arches.|Tall arches decorate the entrance of the mosque.
+architecture|n|A|the design of buildings|স্থাপত্য|The city is famous for its modern architecture.|She wants to study architecture at university.
+archive|n|A|a collection of old records|মহাফেজখানা; সংরক্ষণাগার|The newspaper keeps an archive of every issue.|Historians searched the archive for old letters.
+are|aux/v|E|present form of "be" for you, we and they|হয়; আছে (বহুবচন)|Where are my keys?|The children are playing in the garden.
+area|n|E|a part of a place|এলাকা|This area of the city is very quiet at night.|There is a picnic area near the lake.
+areas|n|E|{area} parts of a place|এলাকাসমূহ|Some rural areas still have no internet.|Avoid low areas near the river during floods.
+argue|v|I|to disagree with angry words; to give reasons|তর্ক করা; যুক্তি দেওয়া|My brothers argue about who uses the computer.|Some experts argue that homework should be shorter.
+army|n|E|a large group of soldiers|সেনাবাহিনী|Her grandfather served in the army for ten years.|The army built a bridge after the flood.
+around|prep/adv|E|on every side; about|চারপাশে; প্রায়|We sat around the fire and told stories.|The film starts at around seven o'clock.
+arranged|v|I|{arrange} planned; put in order|ব্যবস্থা করেছে; সাজিয়েছে|The school arranged a trip to the museum.|She arranged the flowers in a tall vase.
+arrival|n|I|{arrive} reaching a place|আগমন|The arrival of the train was delayed by snow.|We celebrated the arrival of the new baby.

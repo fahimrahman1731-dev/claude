@@ -46,7 +46,7 @@ export const MASTERY: MasteryPolicy = {
 
 /** Weights for the live priority score (study-material evidence + personal history). */
 export const PRIORITY = {
-  highAt: 6,
+  highAt: 5,
   mediumAt: 3,
   perConsecutiveMistake: 2.5,
   perMistake: 1,
@@ -91,11 +91,10 @@ export interface Settings {
   difficulty: Difficulty;
   adaptive: boolean;
   timerMode: TimerMode;
-  /** Per-mode durations used in Timed Mode. */
-  modeTimers: Record<Mode, number>;
-  /** Advanced words get the "difficult vocabulary" duration when it is longer. */
+  /** Per-mode durations (seconds) used in Custom Timer Mode. */
+  customTimers: Record<Mode, number>;
+  /** In Timed Mode, advanced words get the "difficult vocabulary" preset (30 s). */
   longerTimerForAdvanced: boolean;
-  customSeconds: number;
   questionsPerSession: number;
   newWordsPerSession: number;
   reviewsPerSession: number;
@@ -109,6 +108,8 @@ export interface Settings {
   retentionReviews: boolean;
   showSkip: boolean;
   paragraphsPerSession: number;
+  /** Optional URL of a server that generates extra practice sentences (see server/ai-proxy.mjs). Empty = off. */
+  aiEndpoint: string;
 }
 
 /**
@@ -120,9 +121,8 @@ export const DEFAULT_SETTINGS: Settings = {
   difficulty: 'easy',
   adaptive: true,
   timerMode: 'timed',
-  modeTimers: { ...MODE_TIMERS },
+  customTimers: { ...MODE_TIMERS, 'fill-blanks': 30, spelling: 30, 'small-words': 15, endings: 30, 'read-complete': 240 },
   longerTimerForAdvanced: true,
-  customSeconds: 25,
   questionsPerSession: 20,
   newWordsPerSession: 8,
   reviewsPerSession: 12,
@@ -135,7 +135,17 @@ export const DEFAULT_SETTINGS: Settings = {
   retentionReviews: true,
   showSkip: true,
   paragraphsPerSession: 3,
+  aiEndpoint: '',
 };
+
+/** Seconds allowed for one question, or null in Untimed Mode. */
+export function questionSeconds(settings: Settings, mode: Mode, difficulty: Difficulty): number | null {
+  if (settings.timerMode === 'untimed') return null;
+  if (settings.timerMode === 'custom') return Math.max(1, settings.customTimers[mode] ?? MODE_TIMERS[mode]);
+  const base = MODE_TIMERS[mode];
+  if (mode !== 'read-complete' && settings.longerTimerForAdvanced && difficulty === 'advanced') return Math.max(base, TIMER_PRESETS.difficult);
+  return base;
+}
 
 export const MODE_INFO: Record<Mode, { title: string; short: string; description: string }> = {
   'read-complete': {

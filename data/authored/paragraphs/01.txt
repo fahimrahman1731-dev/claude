@@ -1,0 +1,12 @@
+# === id | title | topic | level (E/I/A)
+# The first and last sentences stay complete; gaps are chosen automatically
+# from the words in between (every other eligible word, never side by side).
+
+=== p001 | The Village Market | city life | E
+Every Saturday, the village holds a small market in the main square. Farmers arrive early with fresh vegetables, eggs and bread. They set up their tables before the sun is high, and the first customers come soon after. Children run between the stalls while their parents look for the best prices. Some people come only to meet friends and talk about the week. By noon, most of the food is gone, and the farmers begin to pack their boxes. The square is quiet again by two o'clock.
+
+=== p002 | A Letter from Grandmother | story | E
+When I opened the old box, I found a letter from my grandmother. She wrote it in the summer before I was born. In the letter, she described her small garden and the birds that visited it every morning. She also wrote about her hopes for the family and the future. Her handwriting was careful, and she used blue ink on thin paper. I read the letter twice, and then I put it back in the box. I still keep it on the shelf above my desk.
+
+=== p003 | Why We Recycle | environment | I
+Recycling turns used materials into new products instead of sending them to a landfill. When people sort paper, glass and plastic at home, the materials can be collected and processed more easily. Factories then use these materials to make bottles, boxes and even clothes. This process uses less energy than making products from raw materials. It also reduces pollution and protects natural habitats from mining and logging. However, recycling only works when people clean their items and put them in the correct bins. Small daily actions can make a big difference over time.

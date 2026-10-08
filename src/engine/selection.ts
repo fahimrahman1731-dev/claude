@@ -29,13 +29,15 @@ export interface SelectionState {
   adaptive: boolean;
   retentionReviews: boolean;
   lastWordId?: string;
-  focus: 'normal' | 'mistakes';
+  focus: 'normal' | 'mistakes' | 'mastered' | 'words';
   rng: () => number;
 }
 
 export interface Selection {
   word: VocabWord;
   reason: SelectionReason;
+  /** Which session quota this question uses: in-session follow-ups use none. */
+  bucket: 'new' | 'review' | 'none';
 }
 
 function byScore(state: SelectionState) {
@@ -76,7 +78,20 @@ export function selectNext(state: SelectionState): Selection | undefined {
       return (pb.lastPracticedAt ?? 0) - (pa.lastPracticedAt ?? 0);
     });
     const w = missed[0];
-    return w ? { word: w, reason: 'mistake-focus' } : undefined;
+    return w ? { word: w, reason: 'mistake-focus', bucket: 'none' } : undefined;
+  }
+
+  if (state.focus === 'mastered' || state.focus === 'words') {
+    // Review chosen words: least recently practiced first, never the same word twice in a row.
+    const cands = pool.filter((w) => {
+      const p = progress.get(w.id);
+      if (!notLast(w)) return false;
+      if (state.focus === 'mastered') return p?.status === 'mastered';
+      return !p || p.dueSeq === undefined || p.dueSeq <= seq || p.status !== 'learning';
+    });
+    cands.sort((a, b) => (progress.get(a.id)?.lastPracticedAt ?? 0) - (progress.get(b.id)?.lastPracticedAt ?? 0));
+    const w = cands[0] ?? (state.focus === 'words' ? pool.find(notLast) ?? pool[0] : undefined);
+    return w ? { word: w, reason: state.focus === 'mastered' ? 'retention' : 'extra-practice', bucket: 'none' } : undefined;
   }
 
   const urgent: VocabWord[] = [];
@@ -109,14 +124,18 @@ export function selectNext(state: SelectionState): Selection | undefined {
       return overdue !== 0 ? overdue : livePriorityScore(b, pb) - livePriorityScore(a, pa);
     });
     const p = progress.get(urgent[0].id)!;
-    return { word: urgent[0], reason: p.consecutiveIncorrect > 0 ? 'mistake-review' : 'second-context' };
+    return { word: urgent[0], reason: p.consecutiveIncorrect > 0 ? 'mistake-review' : 'second-context', bucket: 'none' };
   }
 
   dueLearning.sort(byScore(state));
   retention.sort((a, b) => (progress.get(a.id)!.nextReviewAt ?? 0) - (progress.get(b.id)!.nextReviewAt ?? 0));
   const reviewQueue: Selection[] = [
-    ...dueLearning.map((w) => ({ word: w, reason: (progress.get(w.id)!.consecutiveIncorrect > 0 ? 'mistake-review' : 'due-review') as SelectionReason })),
-    ...retention.map((w) => ({ word: w, reason: 'retention' as SelectionReason })),
+    ...dueLearning.map((w) => ({
+      word: w,
+      reason: (progress.get(w.id)!.consecutiveIncorrect > 0 ? 'mistake-review' : 'due-review') as SelectionReason,
+      bucket: 'review' as const,
+    })),
+    ...retention.map((w) => ({ word: w, reason: 'retention' as SelectionReason, bucket: 'review' as const })),
   ];
   const reviewOpen = state.reviewsServed < state.quotas.reviews && reviewQueue.length > 0;
   const newOpen = state.newIntroduced < state.quotas.newWords && fresh.length > 0;
@@ -128,7 +147,7 @@ export function selectNext(state: SelectionState): Selection | undefined {
     for (const lvl of order) {
       const cands = fresh.filter((w) => w.difficulty === lvl).sort(byScore(state));
       const w = pickTop(cands, 4, rng);
-      if (w) return { word: w, reason: 'new' };
+      if (w) return { word: w, reason: 'new', bucket: 'new' };
     }
     return undefined;
   };
@@ -142,14 +161,14 @@ export function selectNext(state: SelectionState): Selection | undefined {
   if (newOpen) return pickNew();
 
   // Quotas used up or nothing due: keep the session going.
-  if (reviewQueue.length) return { ...reviewQueue[0], reason: reviewQueue[0].reason };
+  if (reviewQueue.length) return reviewQueue[0];
   const extra = pickNew();
   if (extra) return extra;
   waiting.sort((a, b) => (progress.get(a.id)?.dueSeq ?? 0) - (progress.get(b.id)?.dueSeq ?? 0));
-  if (waiting.length) return { word: waiting[0], reason: 'extra-practice' };
+  if (waiting.length) return { word: waiting[0], reason: 'extra-practice', bucket: 'none' };
   const any = pool.filter(notLast);
-  const w = pickTop(any, any.length, rng);
-  return w ? { word: w, reason: 'extra-practice' } : pool[0] ? { word: pool[0], reason: 'extra-practice' } : undefined;
+  const w = pickTop(any, any.length, rng) ?? pool[0];
+  return w ? { word: w, reason: 'extra-practice', bucket: 'none' } : undefined;
 }
 
 /**
