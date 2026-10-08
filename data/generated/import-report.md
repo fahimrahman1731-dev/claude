@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `4a81b291dbf3`, generated 2026-10-08T14:10:05.727Z.
+Data version `cb8ab9fac582`, generated 2026-10-08T14:11:51.125Z.
 
 ## Totals
 
@@ -18,9 +18,9 @@ Data version `4a81b291dbf3`, generated 2026-10-08T14:10:05.727Z.
 | Entries needing example sentences (fewer than 2 valid) | 0 |
 | Practice-ready words (2+ distinct valid sentences) | 2601 |
 | Sentence contexts | 5202 |
-| Read and Complete paragraphs | 3 |
-| Paragraph gaps | 60 |
-| Total practice contexts | 5262 |
+| Read and Complete paragraphs | 45 |
+| Paragraph gaps | 900 |
+| Total practice contexts | 6102 |
 | Failed sources | 0 |
 | Failed sections | 0 |
 

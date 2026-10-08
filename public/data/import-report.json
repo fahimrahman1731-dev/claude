@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T14:10:05.727Z",
+ "generatedAt": "2026-10-08T14:11:51.125Z",
  "sources": [
   {
    "id": "guide",
@@ -254,9 +254,9 @@
   "needingSentences": 0,
   "practiceReady": 2601,
   "sentenceContexts": 5202,
-  "paragraphs": 3,
-  "paragraphGaps": 60,
-  "totalPracticeContexts": 5262,
+  "paragraphs": 45,
+  "paragraphGaps": 900,
+  "totalPracticeContexts": 6102,
   "definitionsFromSources": 349,
   "definitionsWrittenForApp": 2252,
   "bengaliGlosses": 2601,
@@ -490,5 +490,5 @@
  "notes": [
   "Bank 1 says 37 more small words filled one gap each, but does not list them. They cannot be imported."
  ],
- "version": "4a81b291dbf3"
+ "version": "cb8ab9fac582"
 }

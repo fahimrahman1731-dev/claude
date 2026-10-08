@@ -1,12 +1,12 @@
 import { useMemo, useRef, useState } from 'react';
 import { livePriority } from '../../engine/priority';
+import { searchWords, type SearchBy } from '../../engine/search';
 import type { Difficulty, Priority } from '../../engine/types';
 import { importWordList, makeCustomWord, type ImportReport } from '../../services/words';
 import { useApp, useProgressMap, useSettings } from '../app-context';
 import { DifficultyBadge, Empty, PriorityBadge, StatusBadge, usePager } from '../components';
 import { Link, navigate, wordPath } from '../router';
 
-type SearchBy = 'word' | 'prefix' | 'suffix' | 'bengali' | 'meaning';
 const POS_LABEL: Record<string, string> = { n: 'noun', v: 'verb', adj: 'adjective', adv: 'adverb', prep: 'preposition', conj: 'conjunction', pron: 'pronoun', det: 'determiner', aux: 'auxiliary', num: 'number', func: 'grammar word', interj: 'interjection' };
 
 export function LibraryPage() {
@@ -29,17 +29,9 @@ export function LibraryPage() {
   }, [store]);
   const allPos = useMemo(() => [...new Set(store.words.flatMap((w) => w.pos))].sort(), [store]);
 
-  const rows = useMemo(() => {
-    const needle = q.trim().toLowerCase();
-    return store.words
-      .filter((w) => {
-        if (needle) {
-          if (by === 'word' && !w.word.includes(needle)) return false;
-          if (by === 'prefix' && !w.word.startsWith(needle.replace(/-$/, ''))) return false;
-          if (by === 'suffix' && !w.word.endsWith(needle.replace(/^-/, ''))) return false;
-          if (by === 'bengali' && !(w.bengali ?? '').includes(q.trim())) return false;
-          if (by === 'meaning' && !w.definition.toLowerCase().includes(needle)) return false;
-        }
+  const rows = useMemo(
+    () =>
+      searchWords(store.words, q, by).filter((w) => {
         if (pos && !w.pos.includes(pos)) return false;
         if (diff && w.difficulty !== diff) return false;
         if (source && !w.sources.includes(source)) return false;
@@ -47,17 +39,9 @@ export function LibraryPage() {
         if (prio && livePriority(w, p) !== prio) return false;
         if (status && (p?.status ?? 'new') !== status) return false;
         return true;
-      })
-      .sort((a, b) => {
-        if (needle && by === 'word') {
-          // exact match first, then words that start with the search
-          const ra = a.word === needle ? 0 : a.word.startsWith(needle) ? 1 : 2;
-          const rb = b.word === needle ? 0 : b.word.startsWith(needle) ? 1 : 2;
-          if (ra !== rb) return ra - rb;
-        }
-        return a.word.localeCompare(b.word);
-      });
-  }, [store, q, by, pos, diff, source, prio, status, progress]);
+      }),
+    [store, q, by, pos, diff, source, prio, status, progress],
+  );
   const { slice, pager, reset } = usePager(rows, 50);
 
   return (
