@@ -1,0 +1,140 @@
+colder|adj|E|{cold} more cold|আরও ঠান্ডা|The air grew colder as we climbed the mountain.|This winter is colder than last year.
+collaborate|v|A|to work together|একসাথে কাজ করা|Scientists from five countries collaborate on the project.|The two artists decided to collaborate on a new album.
+collaboration|n|A|{collaborate} working together|সহযোগিতা|The film was a collaboration between two studios.|Good managers ensure collaboration across diverse teams.
+collapsed|v|I|{collapse} fell down suddenly; failed|ধসে পড়েছিল|The old roof collapsed under the weight of the snow.|The empire collapsed after years of war.
+colleague|n|I|a person you work with|সহকর্মী|My colleague covered my shift when I was sick.|She discussed the report with a colleague.
+collect|v|E|to gather together|সংগ্রহ করা|Many apps collect data about their users.|My brother likes to collect old coins.
+collectivist|adj|A|putting the group before the individual|সমষ্টিবাদী|In a collectivist culture, family needs often come first.|The book compares individualist and collectivist societies.
+college|n|E|a place for study after school|কলেজ|She is in her first year of college.|My brother studies engineering at a local college.
+collide|v|A|to crash into each other|সংঘর্ষ হওয়া|Two cars may collide on this icy road.|When galaxies collide, new stars can form.
+colonialism|n|A|one country ruling another country|উপনিবেশবাদ|Many nations gained independence after the end of colonialism.|The museum explores the history of colonialism in Africa.
+colonization|n|A|{colony} taking control of a land and settling it|উপনিবেশ স্থাপন|Some scientists dream of the colonization of Mars.|The colonization of the island changed its culture forever.
+colony|n|A|a land ruled by another country; a group of animals|উপনিবেশ; দল|The island was once a British colony.|An ant colony can have thousands of members.
+color|n|E|red, blue, green and so on|রং|What is your favorite color?|The leaves change color in autumn.
+column|n|I|a tall post; a vertical list|স্তম্ভ; কলাম|A stone column holds up the roof.|Write the answers in the left column.
+combine|v|I|to join or mix together|একত্র করা; মেশানো|Combine the flour and sugar in a bowl.|The course will combine theory with practice.
+combined|v|I|{combine} joined together|একত্রিত|The two schools combined to form one large school.|His talent combined with hard work made him a star.
+come|v|E|to move toward or arrive|আসা|Please come to my party on Saturday.|Thousands of visitors come to the festival every year.
+comes|v|E|{come} moves toward or arrives|আসে|The bus comes every ten minutes.|Fresh blood comes back to the heart from the lungs.
+comet|n|A|a bright object with a tail that moves around the sun|ধূমকেতু|A comet appeared in the night sky last spring.|The tail of the comet is made of ice and dust.
+comfort|n/v|I|a pleasant, relaxed feeling; to make someone feel better|সান্ত্বনা; আরাম|The letters gave comfort to the soldiers' families.|She tried to comfort her crying brother.
+comfortable|adj|I|{comfort} pleasant to use or be in|আরামদায়ক|This chair is very comfortable.|Wear comfortable shoes for the long walk.
+commemorate|v|A|to honor the memory of an event or person|স্মরণ করা|A statue was built to commemorate the victory.|The city holds a parade to commemorate its founding.
+commissioned|v|A|{commission} officially asked someone to make something|কাজের ফরমায়েশ দিয়েছিল|The king commissioned a portrait of his daughter.|The museum commissioned a new sculpture for the garden.
+commitment|n|A|{commit} a strong promise; dedication|প্রতিশ্রুতি; অঙ্গীকার|The company showed its commitment to clean energy.|Learning an instrument takes a lot of commitment.
+committee|n|A|a group chosen to make decisions|কমিটি|The committee will meet on Monday.|She was elected to the school committee.
+common|adj|E|happening often; shared|সাধারণ; প্রচলিত|Colds are common in winter.|The two friends have a lot in common.
+communicate|v|I|to share information or feelings|যোগাযোগ করা|Dolphins communicate with clicks and whistles.|It is important to communicate clearly with your team.
+communication|n|I|{communicate} sharing information|যোগাযোগ|Good communication prevents many problems.|The internet changed global communication.
+communities|n|I|{community} groups of people living in one area|সম্প্রদায়সমূহ|Remote communities often lack expert engineers.|The flood affected communities along the river.
+community|n|I|people living in one area or sharing interests|সম্প্রদায়; সমাজ|The festival brings the whole community together.|She volunteers at the community library.
+companions|n|A|{companion} people who travel or spend time with you|সঙ্গী|The travelers became close companions on the long journey.|Dogs are loyal companions.
+company|n|E|a business; being with other people|কোম্পানি; সঙ্গ|She works for a software company.|I enjoy your company.
+compare|v|I|to look at how things are similar or different|তুলনা করা|Compare the prices before you buy.|Scientists compare data from different years.
+compared|v|I|{compare} looked at similarities and differences|তুলনা করা হয়েছে|Recycling uses less energy compared to making new products.|She compared the two maps carefully.
+compensate|v|A|to make up for a loss|ক্ষতিপূরণ দেওয়া|The airline will compensate passengers for the delay.|Hard work can compensate for a lack of talent.
+compete|v|I|to try to win against others|প্রতিযোগিতা করা|Ten teams will compete in the final.|Small shops cannot compete with online prices.
+competent|adj|A|having enough skill|দক্ষ; যোগ্য|We need a competent worker to fix the roof.|She is a competent driver after only a month.
+competitions|n|A|{competition} contests|প্রতিযোগিতাসমূহ|The school enters many science competitions.|He has won three cooking competitions.
+competitor|n|I|{compete} a person or company trying to win|প্রতিযোগী|Our main competitor lowered its prices.|Each competitor received a medal.
+complained|v|I|{complain} said you were unhappy about something|অভিযোগ করেছিল|The guests complained about the noise.|The parrot complained that the food was cold.
+complete|adj/v|E|whole; to finish|সম্পূর্ণ; শেষ করা|Please complete this assignment by Monday.|The puzzle is not complete; one piece is missing.
+completed|v|E|{complete} finished|সম্পন্ন করেছে|She completed the race in under an hour.|The new bridge was completed last spring.
+completely|adv|I|{complete} totally|সম্পূর্ণভাবে|I completely forgot about the meeting.|The forest was completely destroyed by the fire.
+complex|adj|A|having many parts; hard to understand|জটিল|The human brain is incredibly complex.|The instructions were too complex for young children.
+complexities|n|A|{complexity} complicated parts|জটিলতাসমূহ|The novel explores the complexities of family life.|New students must learn to navigate the complexities of society.
+complicated|adj|A|hard to understand|জটিল|The rules of the game are complicated.|Filling in tax forms is a complicated process.
+component|n|A|a part of a larger whole|উপাদান; অংশ|Trust is a key component of friendship.|The factory makes one component of the engine.
+compose|v|A|to write music or poetry; to form|রচনা করা; গঠন করা|She likes to compose songs on the piano.|Eleven players compose a football team.
+composer|n|A|{compose} a person who writes music|সুরকার|Mozart was a famous composer.|The composer conducted the orchestra himself.
+comprehensive|adj|A|complete, covering everything|ব্যাপক; সর্বাঙ্গীণ|The report gives a comprehensive view of the problem.|We need a comprehensive study before we decide.
+computer|n|E|an electronic machine that processes information|কম্পিউটার|I wrote my essay on the computer.|The school bought a new computer for every classroom.
+concentrate|v|A|to focus your attention|মনোযোগ দেওয়া|I can't concentrate with the TV on.|Concentrate on the questions you can answer.
+concert|n|E|a performance of music|কনসার্ট|We went to a rock concert last night.|The school concert raised money for charity.
+conclude|v|A|to end; to decide after thinking|সমাপ্ত করা; সিদ্ধান্তে আসা|The president will conclude the meeting with a short speech.|After much thought, I conclude that the plan will not work.
+conclusion|n|A|{conclude} the end; a final decision|উপসংহার; সিদ্ধান্ত|Write a short conclusion for your essay.|The scientists reached a surprising conclusion.
+conditions|n|I|{condition} the situation; rules of an agreement|পরিস্থিতি; শর্ত|Working conditions in the factory improved.|Read the conditions before you sign.
+confident|adj|I|sure of yourself|আত্মবিশ্বাসী|She felt confident before the exam.|The confident speaker kept eye contact with the audience.
+confirm|v|A|to say that something is true or certain|নিশ্চিত করা|Please confirm your booking by email.|The tests will confirm the doctor's opinion.
+conflict|n|A|a serious disagreement; a fight|সংঘাত; বিরোধ|The conflict between the two countries lasted years.|She tries to avoid conflict at work.
+confused|adj|I|{confuse} not able to understand|বিভ্রান্ত|I was confused by the strange instructions.|The tourists looked confused at the busy station.
+connect|v|I|to join together|সংযুক্ত করা|Connect the printer to your laptop.|A new road will connect the two villages.
+conquer|v|A|to take control by force; to overcome|জয় করা|The emperor wanted to conquer the whole region.|She worked hard to conquer her fear of flying.
+conquered|v|A|{conquer} took control by force|জয় করেছিল|The army conquered the city in a single day.|He finally conquered his fear of the water.
+conquest|n|A|{conquer} taking control by force|বিজয়; দখল|The conquest of the island took ten years.|The book describes the Spanish conquest of Mexico.
+conscious|adj|A|awake and aware|সচেতন|The patient was conscious after the operation.|She made a conscious effort to eat less sugar.
+consequences|n|A|{consequence} results, often bad|পরিণাম|The decision had serious consequences for the global economy.|Think about the consequences before you act.
+consequently|adv|A|as a result|ফলস্বরূপ|He missed the bus and consequently arrived late.|Sales fell; consequently, the shop closed.
+conservation|n|A|protecting nature|সংরক্ষণ|The park was created for wildlife conservation.|Water conservation is important in dry regions.
+consider|v|I|to think carefully about|বিবেচনা করা|Please consider my offer.|We should consider the cost before we buy a car.
+considerable|adj|A|large in amount|উল্লেখযোগ্য; যথেষ্ট|The repairs will take a considerable amount of time.|The new phone has considerable capabilities.
+considering|v|A|{consider} thinking about|বিবেচনা করছে|I am considering changing my career.|Considering the weather, the trip went well.
+consist|v|A|to be made of|গঠিত হওয়া|The test will consist of three parts.|Breakfast may consist of bread and tea.
+consistent|adj|A|always the same|সামঞ্জস্যপূর্ণ; ধারাবাহিক|The experiment gave consistent results.|Be consistent with your study schedule.
+constant|adj|I|happening all the time; not changing|অবিরাম; স্থির|The constant noise made it hard to sleep.|Keep the oven at a constant temperature.
+constitution|n|A|the basic laws of a country|সংবিধান|The constitution protects freedom of speech.|The new constitution was approved by voters.
+constraint|n|A|a limit|সীমাবদ্ধতা|Time is our biggest constraint.|Each budget constraint forced the school to cut trips.
+consumer|n|A|a person who buys goods or services|ভোক্তা|The consumer has the right to a refund.|Consumer spending rose during the holidays.
+contagious|adj|A|spreading easily to others|সংক্রামক; ছোঁয়াচে|Her enthusiasm was contagious.|The flu is very contagious, so stay home.
+contain|v|I|to have inside|ধারণ করা|These drinks contain a lot of sugar.|The box may contain old letters.
+contained|v|I|{contain} had inside|ধারণ করেছিল|The envelope contained a single blue coin.|The report contained several errors.
+container|n|I|{contain} an object for holding things|পাত্র|Pour the liquid into the glass container.|Store the rice in an airtight container.
+contemporary|adj|A|modern; living at the same time|সমসাময়িক; আধুনিক|The gallery shows contemporary art.|Shakespeare was contemporary with Galileo.
+content|n/adj|I|what is inside; happy and satisfied|বিষয়বস্তু; সন্তুষ্ট|The content of the book is suitable for children.|He was content with a simple life.
+contest|n|I|a competition|প্রতিযোগিতা|She won a singing contest at school.|The contest was open to anyone under eighteen.
+continent|n|I|one of the large land masses of the earth|মহাদেশ|Africa is the second largest continent.|They traveled across the continent by train.
+contract|n|A|a legal written agreement|চুক্তি|She signed a two-year contract with the club.|The contract negotiations lasted all week.
+contrast|n/v|A|a clear difference|বৈপরীত্য|There is a sharp contrast between rich and poor areas.|The white walls contrast with the dark floor.
+contribute|v|A|to give or add to something|অবদান রাখা|Everyone can contribute ideas to the project.|Pollution can contribute to health problems.
+control|n/v|I|power over something; to direct|নিয়ন্ত্রণ|The pilot lost control of the plane.|You can control the lights with your phone.
+controlled|v|I|{control} directed or limited|নিয়ন্ত্রণ করেছিল|The young wizard controlled the fire with his hands.|The temperature is carefully controlled in the museum.
+controversial|adj|A|causing disagreement|বিতর্কিত|The new law is very controversial.|It was a controversial decision to close the hospital.
+controversy|n|A|public disagreement|বিতর্ক|The film caused controversy as well as admiration.|There is controversy over the new airport.
+convenient|adj|A|easy and useful; near|সুবিধাজনক|The hotel is in a convenient location.|Is Monday a convenient time for the meeting?
+conversation|n|I|a talk between people|কথোপকথন|We had a long conversation about our plans.|The conversation stopped when the teacher came in.
+convince|v|A|to make someone believe something|বিশ্বাস করানো; রাজি করানো|The lawyer tried to convince the jury.|I couldn't convince my father to buy a dog.
+cooked|v|E|{cook} prepared food with heat|রান্না করেছিল|My mother cooked rice and fish for dinner.|The vegetables were cooked in coconut milk.
+cookies|n|E|{cookie} small sweet baked snacks|কুকিজ; বিস্কুট|We baked chocolate cookies for the party.|The children ate all the cookies.
+cooking|n/v|E|{cook} preparing food with heat|রান্না|Water from the river is used for drinking and cooking.|She is cooking soup in the kitchen.
+cooperation|n|A|working together toward a goal|সহযোগিতা|International cooperation is needed to fight climate change.|Thank you for your cooperation.
+coral|n|I|a hard sea substance made by tiny animals|প্রবাল|Warm water is killing the coral in the reef.|She bought a necklace made of red coral.
+corner|n|E|the point where two lines or walls meet|কোণ; মোড়|There is a bakery on the corner of our street.|Put the plant in the corner of the room.
+corporation|n|A|a large company|কর্পোরেশন; বড় কোম্পানি|She works for a large international corporation.|The corporation announced record profits.
+correct|adj/v|E|right; to fix mistakes|সঠিক; সংশোধন করা|Your answer is correct.|The teacher will correct our essays this weekend.
+corroborates|v|A|{corroborate} supports with evidence|সমর্থন করে; প্রমাণ দেয়|A second witness corroborates her story.|The new data corroborates the earlier findings.
+cost|n/v|E|the price; to have a price of|খরচ; দাম হওয়া|The cost of living has risen sharply.|How much does this jacket cost?
+costume|n|I|clothes worn to look like someone else|পোশাক; সাজ|She wore a pirate costume to the party.|The actor changed his costume between scenes.
+could|aux|E|{can} was able to; might|পারত; পারে|I could swim when I was five.|It could rain later this afternoon.
+council|n|A|a group elected to make decisions for an area|পরিষদ|The city council approved the new park.|She was elected to the student council.
+countless|adj|I|{count} too many to count|অসংখ্য|There are countless stars in the sky.|He has helped countless students.
+countries|n|E|{country} nations|দেশসমূহ|Many countries signed the climate agreement.|She has visited twenty countries.
+country|n|E|a nation; land outside cities|দেশ; গ্রামাঞ্চল|Bangladesh is a country in South Asia.|We spent the weekend in the country.
+countryside|n|I|land outside towns and cities|গ্রামাঞ্চল|We enjoyed a quiet walk in the countryside.|The countryside is green after the rains.
+courage|n|I|bravery|সাহস|It takes courage to speak the truth.|The firefighter showed great courage.
+course|n|E|a set of lessons; a route|কোর্স; পথ|She is taking a course in photography.|The ship changed course because of the storm.
+courses|n|E|{course} sets of lessons|কোর্সসমূহ|Students must pass their courses to graduate.|The college offers evening courses for adults.
+court|n|I|a place where legal cases are decided; a sports area|আদালত; খেলার মাঠ|The case will go to court next month.|They played tennis on the court behind the school.
+cousin|n|E|the child of your aunt or uncle|চাচাতো/মামাতো/খালাতো/ফুফাতো ভাই-বোন|My cousin lives in Chittagong.|I spent the summer with my cousin and her family.
+covered|v|I|{cover} put something over; was on top of|ঢাকা ছিল|The books were covered in dust.|Snow covered the mountains.
+covering|n/v|I|{cover} something that covers; putting over|আবরণ; ঢাকা দেওয়া|A thin covering of ice made the road dangerous.|She is covering the plants to protect them from frost.
+cows|n|E|{cow} large farm animals that give milk|গরু|The cows walked slowly back to the barn.|The farmer milks the cows every morning.
+cracking|v|I|{crack} breaking with a line|ফাটল ধরছে|The ice was cracking under our feet.|Old paint is cracking on the walls.
+craft|n|I|a skill of making things by hand|কারুশিল্প|Weaving is a traditional craft in this village.|He learned the craft of carpentry from his father.
+crafts|n|I|{craft} handmade objects|হস্তশিল্প|The market sells local crafts and food.|Children made paper crafts in class.
+crawled|v|I|{crawl} moved on hands and knees|হামাগুড়ি দিয়েছিল|The baby crawled across the floor.|Exhausted, he crawled into bed.
+create|v|I|to make something new|সৃষ্টি করা|The bakers create new recipes every month.|Artists create beauty from simple materials.
+creates|v|I|{create} makes something new|সৃষ্টি করে|The teacher creates a welcoming classroom.|The factory creates hundreds of jobs.
+creating|v|I|{create} making something new|সৃষ্টি করছে|She is creating a website for her business.|Creating art helps many people relax.
+creative|adj|I|{create} good at making new things|সৃজনশীল|My sister is very creative and loves to paint.|We need a creative solution to this problem.
+creatures|n|I|{creature} living animals|প্রাণী|Strange creatures live at the bottom of the ocean.|The forest is full of tiny creatures.
+crest|n|A|the top of a hill or wave|চূড়া; শিখর|The surfer rode the crest of the wave.|We stopped at the crest of the hill to rest.
+crime|n|I|an act that breaks the law|অপরাধ|Crime has fallen in the city this year.|Stealing is a serious crime.
+critical|adj|A|very important; finding faults; careful|গুরুত্বপূর্ণ; সমালোচনামূলক|Schools should teach critical thinking.|The next few hours are critical for the patient.
+crop|n|I|a plant grown for food|ফসল|Rice is the main crop in this region.|Farmers lost their crop to the drought.
+crowded|adj|E|{crowd} full of people|ভিড়পূর্ণ|The train was crowded during rush hour.|We avoided the crowded beach.
+crucial|adj|A|extremely important|অত্যন্ত গুরুত্বপূর্ণ|Sleep plays a crucial role in learning.|This is a crucial moment in the game.
+crystal|n|A|a clear mineral; fine glass|স্ফটিক|Salt forms tiny crystal shapes when water dries.|The crystal glasses sparkled on the table.
+cuisine|n|A|a style of cooking|রন্ধনশৈলী|Italian cuisine is popular around the world.|The restaurant serves traditional Bengali cuisine.
+cultural|adj|I|{culture} relating to culture|সাংস্কৃতিক|The city hosts a cultural festival every year.|There are cultural differences between the two regions.
+culture|n|I|the customs, art and ideas of a group|সংস্কৃতি|Music is an important part of our culture.|She wants to learn about Japanese culture.
+cultures|n|I|{culture} customs and ideas of groups|সংস্কৃতিসমূহ|The festival celebrates many cultures.|Children learn about different cultures at school.

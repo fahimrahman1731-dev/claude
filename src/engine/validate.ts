@@ -29,12 +29,22 @@ export function checkContext(raw: string, word: string, wordId: string, origin: 
   if (n > MAX_WORDS) warnings.push(`long sentence (${n} words)`);
   const occurrence = s.slice(loc.start, loc.end);
   if (occurrence.toLowerCase() !== word.toLowerCase()) errors.push('target spelling does not match');
+  const giveaway = revealingWord(s.slice(0, loc.start) + ' ' + s.slice(loc.end), word);
+  if (giveaway) warnings.push(`giveaway: “${giveaway}” shows most of the answer`);
   if (errors.length) return { errors, warnings };
   return {
     context: { id: contextId(wordId, s), wordId, sentence: s, start: loc.start, end: loc.end, origin },
     errors,
     warnings,
   };
+}
+
+/** Another word in the sentence that contains nearly all of the target (canal → "canals") would give the answer away. */
+export function revealingWord(rest: string, word: string): string | undefined {
+  const w = word.toLowerCase();
+  if (w.length < 5) return undefined;
+  const stem = w.slice(0, w.length - 1);
+  return (rest.toLowerCase().match(/[a-z]+/g) ?? []).find((t) => t !== w && t.includes(stem));
 }
 
 /**

@@ -1,0 +1,140 @@
+artifact|n|I|an object made by people long ago|প্রত্নবস্তু; নিদর্শন|The museum displays a rare artifact from the Bronze Age.|Each artifact in the tomb was carefully labeled.
+artifacts|n|I|{artifact} objects made by people long ago|প্রত্নবস্তুসমূহ|Divers found ancient artifacts on the sea floor.|The students examined clay artifacts in the history lab.
+artificial|adj|I|made by people, not natural|কৃত্রিম|The cake contains no artificial colors.|Artificial intelligence can now translate simple texts.
+artist|n|E|{art} a person who paints, draws or makes art|শিল্পী|The artist painted the mural in two weeks.|My cousin wants to become a professional artist.
+artists|n|E|{artist} people who make art|শিল্পীরা|Local artists sold their paintings at the festival.|Many famous artists lived in this small town.
+arts|n|E|{art} painting, music, theater and similar activities|কলা; শিল্পকলা|The city spends money on the arts every year.|She studied the arts before becoming a teacher.
+as|prep/conj|E|in the role of; because; in the same way|হিসেবে; যেহেতু; যেমন|She works as a nurse in the city hospital.|Fruits such as mangoes are sweet and juicy.
+ash|n|I|the gray powder left after something burns|ছাই|Ash from the volcano covered the nearby village.|He found cigarette ash on the windowsill.
+ashamed|adj|I|feeling guilty or embarrassed|লজ্জিত|He felt ashamed of the lie he had told.|Don't be ashamed to ask for help.
+asking|v|E|{ask} putting a question; requesting|জিজ্ঞাসা করা|She kept asking about the missing letter.|Thank you for asking me to join the team.
+aspirations|n|A|{aspiration} hopes and ambitions|উচ্চাকাঙ্ক্ষা; আকাঙ্ক্ষা|She balanced her personal aspirations with her duties to her family.|The survey asked students about their career aspirations.
+assembly|n|A|a gathering; putting parts together|সমাবেশ; সংযোজন|The principal spoke at the morning assembly.|Robots handle the assembly of cars in the factory.
+assess|v|A|to judge or evaluate|মূল্যায়ন করা|Engineers came to assess the damage after the earthquake.|Teachers assess students through tests and projects.
+assessment|n|A|{assess} a judgment or test of quality|মূল্যায়ন|The final assessment counts for half of the grade.|An expert gave an honest assessment of the risks.
+assignment|n|I|{assign} a piece of work given to a student|অ্যাসাইনমেন্ট; নির্ধারিত কাজ|I must finish my history assignment by Friday.|The journalist's first assignment was a story about floods.
+assistant|n|I|{assist} a person who helps someone|সহকারী|The doctor's assistant took my temperature.|She works as a shop assistant on weekends.
+assume|v|A|to suppose something is true without proof|ধরে নেওয়া|Don't assume that everyone agrees with you.|The new manager will assume responsibility for the project.
+asteroid|n|A|a large rock that moves around the sun|গ্রহাণু|Scientists are watching an asteroid that will pass near Earth.|A huge asteroid may have ended the age of dinosaurs.
+astonishing|adj|A|very surprising|বিস্ময়কর|The magician's act was truly astonishing.|The city grew at an astonishing speed.
+astronaut|n|I|a person who travels into space|মহাকাশচারী|The astronaut spent six months on the space station.|As a child, she dreamed of becoming an astronaut.
+astrophysics|n|A|the science of stars and space|জ্যোতির্পদার্থবিদ্যা|He earned a degree in astrophysics before joining the observatory.|Astrophysics tries to explain how galaxies form.
+at|prep|E|in or near a place or time|-এ; -তে|We met at the train station.|The shop closes at nine o'clock.
+atmosphere|n|I|the air around the earth; the feeling of a place|বায়ুমণ্ডল; পরিবেশ|The festival had a happy, friendly atmosphere.|Gases in the atmosphere trap heat from the sun.
+atom|n|A|the smallest unit of a chemical element|পরমাণু|An atom is too small to see with a normal microscope.|Each water molecule contains one oxygen atom.
+atrium|n|A|a large open hall inside a building|অলিন্দ; ভবনের খোলা হলঘর|The hotel atrium was filled with plants and light.|Visitors gathered in the glass atrium before the tour.
+attack|n/v|I|a violent act; to try to hurt|আক্রমণ|The soldiers prepared for an attack at dawn.|Some snakes attack only when they feel threatened.
+attempt|n/v|I|a try; to try|প্রচেষ্টা; চেষ্টা করা|She passed the test on her second attempt.|The climbers will attempt to reach the summit tomorrow.
+attendance|n|A|{attend} being present|উপস্থিতি|Attendance at the meeting was very low.|The school rewards perfect attendance.
+attended|v|I|{attend} went to an event or place|উপস্থিত ছিল|Over a thousand people attended the concert.|She attended a small school in the mountains.
+attention|n|I|careful notice|মনোযোগ|Please pay attention to the instructions.|The bright poster caught my attention.
+attic|n|I|a room under the roof of a house|চিলেকোঠা|We found old photos in a box in the attic.|The attic is too hot to use in summer.
+attract|v|I|to pull toward; to make interested|আকর্ষণ করা|Bright flowers attract bees and butterflies.|The city wants to attract more tourists.
+attracted|v|I|{attract} pulled toward; interested|আকৃষ্ট করেছে|The new park attracted many families.|She was attracted by the smell of fresh bread.
+audience|n|I|people watching or listening|দর্শক; শ্রোতা|The audience clapped loudly at the end of the play.|The speaker made the audience laugh.
+audio|n/adj|I|recorded sound|অডিও; শব্দ|The audio on the video was too quiet.|You can download the audio version of the book.
+author|n|I|a writer of a book or article|লেখক|The author signed copies of her new novel.|Who is the author of this poem?
+authorities|n|A|{authority} officials who make or enforce rules|কর্তৃপক্ষ|The authorities closed the road because of the flood.|Report the stolen car to the authorities.
+authority|n|A|power to give orders; an official group|কর্তৃত্ব; কর্তৃপক্ষ|The police have the authority to stop cars.|She is an authority on ancient languages.
+autobiography|n|A|a book about your own life|আত্মজীবনী|The athlete wrote an autobiography about her career.|His autobiography offers a look into a difficult childhood.
+automated|adj|A|{automate} done by machines without people|স্বয়ংক্রিয়|The factory uses an automated packaging system.|You will hear an automated message when you call.
+automatic|adj|I|working by itself|স্বয়ংক্রিয়|The automatic doors opened as we approached.|Breathing is an automatic action of the body.
+automatically|adv|A|{automatic} by itself, without effort|স্বয়ংক্রিয়ভাবে|The lights turn off automatically at midnight.|Your work is saved automatically every minute.
+automation|n|A|{automate} the use of machines to do work|স্বয়ংক্রিয়করণ|Automation has replaced many factory jobs.|Banks use automation to process payments faster.
+autumn|n|E|the season between summer and winter|শরৎকাল|Leaves turn red and yellow in autumn.|The school year starts in the autumn.
+available|adj|I|able to be used or obtained|পাওয়া যায়; প্রাপ্তিসাধ্য|Tickets are available at the box office.|The doctor is not available until Monday.
+avenue|n|I|a wide street in a town|সড়ক; অ্যাভিনিউ|The parade moved slowly down the avenue.|Our office is on Fifth Avenue.
+average|n/adj|I|usual or typical; the middle amount|গড়; সাধারণ|The average temperature in July is thirty degrees.|He is a student of average height.
+avoid|v|I|to stay away from|এড়িয়ে চলা|Try to avoid sugary drinks.|Drivers should avoid the flooded roads.
+awards|n|E|{award} prizes|পুরস্কার|The film won three awards last night.|The school gives awards for good attendance.
+awareness|n|A|{aware} knowledge or understanding|সচেতনতা|The campaign raised awareness about clean water.|Mental health awareness is growing in schools.
+baby|n|E|a very young child|শিশু|The baby is sleeping, so be very quiet.|They brought the new baby home from the hospital.
+bacteria|n|A|very small living things, some cause illness|ব্যাকটেরিয়া|Washing your hands removes harmful bacteria.|Some bacteria help us digest food.
+bag|n|E|a container made of cloth, paper or plastic|ব্যাগ|She packed her bag for the school trip.|Please put the apples in a paper bag.
+bake|v|E|to cook in an oven|সেঁকা; বেক করা|We bake bread every Friday morning.|My aunt loves to bake cakes for birthdays.
+bakery|n|E|{bake} a shop that makes bread and cakes|বেকারি|The bakery sells fresh bread every morning.|There is a long line outside the new bakery.
+balance|n/v|I|a steady position; equal amounts|ভারসাম্য|She lost her balance and fell off the bike.|It is hard to balance work and study.
+balanced|adj|I|{balance} having good proportions|সুষম; ভারসাম্যপূর্ণ|A balanced diet includes fruit and vegetables.|The report gave a balanced view of both sides.
+balcony|n|A|an outdoor platform on a building|বারান্দা|We drank tea on the balcony and watched the sunset.|Flowers hung from every balcony on the street.
+ball|n|E|a round object used in games|বল|The boy found his ball under the bed.|She kicked the ball into the net.
+band|n|E|a group of musicians; a strip|ব্যান্ড; দল|The band played at the wedding.|She tied her hair with a rubber band.
+banks|n|E|{bank} the sides of a river; places that keep money|তীর; ব্যাংক|Trees grew along the banks of the river.|Most banks close early on Saturday.
+basement|n|I|a room below the ground floor|ভূগর্ভস্থ ঘর|The basement flooded during the storm.|We keep old furniture in the basement.
+basic|adj|E|simple; most important|মৌলিক|Everyone should learn basic first aid.|The hotel room was basic but clean.
+basically|adv|I|{basic} in the most important ways|মূলত|The plan is basically good, but it needs details.|Basically, we need more time.
+battery|n|I|a device that stores electric power|ব্যাটারি|My phone battery died during the call.|The car would not start because the battery was dead.
+battle|n|I|a fight between armies; a struggle|যুদ্ধ; লড়াই|The battle lasted for three days.|Her battle with illness inspired many people.
+battles|n|I|{battle} fights between armies|যুদ্ধসমূহ|The museum describes the major battles of the war.|Small daily battles with traffic make him tired.
+be|v/aux|E|to exist; used to describe|হওয়া|Please be quiet in the library.|It will be cold tomorrow morning.
+beak|n|I|the hard mouth of a bird|ঠোঁট (পাখির)|The bird held a worm in its beak.|A parrot uses its strong beak to crack nuts.
+beans|n|E|{bean} seeds eaten as food|শিম; বিনস|We had rice and beans for dinner.|Coffee is made from roasted beans.
+bear|n/v|I|a large wild animal; to carry or accept|ভালুক; সহ্য করা|A brown bear was fishing in the river.|I can't bear the noise from the construction site.
+beautiful|adj|E|very pleasant to look at|সুন্দর|The view from the hill is beautiful.|She wore a beautiful dress to the wedding.
+beautifully|adv|I|{beautiful} in a beautiful way|সুন্দরভাবে|The choir sang beautifully at the ceremony.|The room was beautifully decorated with lights.
+became|v|E|{become} began to be|হয়ে উঠল|The small town became a busy city.|She became a doctor at the age of twenty-eight.
+because|conj|E|for the reason that|কারণ|We stayed inside because it was raining.|Because the bus was late, he missed the exam.
+become|v|E|to begin to be|হয়ে ওঠা|In a few weeks, caterpillars become butterflies.|He wants to become a famous chef.
+bed|n|E|a piece of furniture for sleeping|বিছানা|I go to bed at ten every night.|The cat sleeps at the end of my bed.
+bedroom|n|E|a room for sleeping|শোবার ঘর|My bedroom has a big window.|Her bedroom is painted pale green and has a soft carpet.
+been|v/aux|E|{be} past participle of "be"|হয়েছে; ছিল|I have been to Paris twice.|She has been sick since Monday.
+before|prep/conj|E|earlier than|আগে|Wash your hands before you eat.|I had never seen snow before that winter.
+began|v|E|{begin} started|শুরু হয়েছিল|The concert began at eight o'clock.|She began to learn English at the age of ten.
+begin|v|E|to start|শুরু করা|Let's begin the lesson with a short test.|The rainy season will begin next month.
+beginning|n/v|I|{begin} the start|শুরু; আরম্ভ|The beginning of the film was very slow.|It is beginning to rain.
+behavior|n|I|{behave} the way someone acts|আচরণ|The teacher praised the class for their good behavior.|Scientists study the behavior of whales.
+behind|prep|E|at the back of|পিছনে|The cat hid behind the sofa.|Our team was behind by two goals at halftime.
+being|v/n|E|{be} existing; a living thing|হওয়া; সত্তা|The bridge is being repaired this month.|Every human being needs food and water.
+belief|n|I|something you think is true|বিশ্বাস|It is a common belief that carrots help you see.|Her belief in hard work never changed.
+beliefs|n|I|{belief} things people think are true|বিশ্বাসসমূহ|People have different religious beliefs.|The book challenges our beliefs about success.
+believe|v|E|to think something is true|বিশ্বাস করা|I believe you are telling the truth.|Many children believe in magic.
+beneficial|adj|A|{benefit} helpful; good for you|উপকারী|Regular exercise is beneficial to your health.|The new law has had beneficial effects on small businesses.
+benefits|n|I|{benefit} advantages; helpful results|সুবিধা; উপকার|The benefits of reading include a larger vocabulary.|The job offers good health benefits.
+best|adj|E|{good} better than all others|সেরা|This is the best pizza in town.|Try your best on the test.
+better|adj|E|{good} more good|আরও ভালো|Your writing is getting better every week.|I feel better after a good night's sleep.
+between|prep|E|in the space that separates two things|মাঝখানে|The bank is between the school and the park.|You can choose between tea and coffee.
+beyond|prep|I|on the far side of; more than|পেরিয়ে; সীমার বাইরে|The village lies beyond those hills.|The problem is beyond my understanding.
+bias|n|A|an unfair preference for or against something|পক্ষপাত|The judge must decide without bias.|Researchers checked the survey for bias.
+big|adj|E|large|বড়|They live in a big house near the beach.|Moving abroad is a big decision.
+biodiversity|n|A|the variety of plants and animals in a place|জীববৈচিত্র্য|Rainforests have the greatest biodiversity on Earth.|Pollution is reducing biodiversity in the ocean.
+biography|n|A|a book about someone's life|জীবনী|I am reading a biography of a famous scientist.|Her biography was turned into a film.
+biology|n|I|the science of living things|জীববিজ্ঞান|We studied plant cells in biology class.|She wants to study marine biology.
+bird|n|E|an animal with feathers and wings|পাখি|A small bird built a nest in our garden.|The bird repeated every word the man said.
+birds|n|E|{bird} animals with feathers and wings|পাখিরা|Birds fly south when winter comes.|We heard birds singing at dawn.
+blanket|n|E|a warm cover for a bed|কম্বল|She wrapped the baby in a soft blanket.|We sat on a blanket in the park.
+blocks|n|I|{block} solid pieces; groups of buildings|ব্লক; খণ্ড|The school is two blocks from my house.|Children built a tower with wooden blocks.
+blood|n|E|the red liquid in the body|রক্ত|The nurse took a blood sample.|The heart pumps blood around the body.
+bloom|v/n|I|to produce flowers|ফুল ফোটা|Roses bloom in early summer.|The cherry trees were in full bloom.
+blossom|n/v|I|a flower on a tree; to develop|মুকুল; বিকশিত হওয়া|Apple blossom covered the branches in spring.|Their friendship began to blossom at university.
+blue|adj|E|the color of a clear sky|নীল|She wore a blue dress to the party.|The sky was clear and blue all day.
+board|n/v|E|a flat piece of wood; to get on a vehicle|বোর্ড; (যানবাহনে) ওঠা|The teacher wrote the answer on the board.|Passengers may board the plane now.
+bodies|n|I|{body} the physical forms of people or animals|দেহ; শরীর|Our bodies need water to work properly.|Scientists study the bodies of ancient animals.
+body|n|E|the physical form of a person or animal|শরীর|Exercise keeps your body strong.|The human body has over two hundred bones.
+boil|v|E|to heat liquid until it bubbles|ফোটানো; সেদ্ধ করা|Boil the water before you add the pasta.|Water will boil at a lower temperature in the mountains.
+bold|adj|I|brave; strong and clear|সাহসী; স্পষ্ট|It was a bold decision to quit his job.|The title is printed in bold letters.
+bone|n|E|a hard part inside the body|হাড়|The dog chewed on a big bone.|She broke a bone in her arm.
+book|n/v|E|a written work; to reserve|বই; বুক করা|I borrowed a book from the library.|We need to book a table for dinner.
+books|n|E|{book} written works|বইপত্র|The shelf was full of old books.|She reads two books every month.
+boots|n|E|{boot} strong shoes that cover the ankle|বুট জুতা|Wear your boots because the path is muddy.|The astronaut's boots left marks in the dust.
+border|n|I|the line between two countries or areas|সীমান্ত; সীমানা|We showed our passports at the border.|The garden has a border of white flowers.
+born|v|E|{bear} came into life|জন্মগ্রহণ করা|My brother was born in 2010.|She was born in a small village by the sea.
+both|det/pron|E|the two together|উভয়|Both of my parents are teachers.|She speaks English and Bengali equally well, so she can help both groups.
+bought|v|E|{buy} paid money for|কিনেছিল|I bought a new jacket yesterday.|They bought their first house last year.
+boundaries|n|A|{boundary} lines that mark limits|সীমানা|The river forms one of the boundaries of the farm.|Good friends respect each other's boundaries.
+box|n|E|a container with flat sides|বাক্স|The gift came in a red box.|Put the old toys in a cardboard box.
+brain|n|E|the organ inside the head that controls thinking|মস্তিষ্ক|Sleep helps the brain store new memories.|The brain uses a lot of energy.
+branch|n|I|a part of a tree; a local office|শাখা; ডাল|A bird sat on the branch outside my window.|The bank opened a new branch downtown.
+brave|adj|E|not afraid|সাহসী|The brave firefighter saved the child.|It was brave of you to speak in front of everyone.
+bread|n|E|food made from flour and baked|রুটি|We bought a loaf of bread at the corner shop.|The bakery is famous for its sweet bread.
+breakfast|n|E|the first meal of the day|সকালের নাশতা|I eat eggs for breakfast.|Breakfast is served from seven to ten.
+breaking|v|I|{break} separating into pieces|ভেঙে যাওয়া|Tall buildings bend in the wind without breaking.|He was punished for breaking the school rules.
+breaks|v/n|I|{break} separates into pieces; short rests|ভাঙে; বিরতি|Glass breaks easily if you drop it.|Workers take short breaks every two hours.
+breath|n|I|air taken into the lungs|শ্বাস|Take a deep breath before you speak.|On cold days you can see your breath.
+breathe|v|I|to take air into the lungs|শ্বাস নেওয়া|Fish breathe through their gills.|It was hard to breathe in the smoky room.
+breed|v/n|A|to produce young; a type of animal|প্রজনন করা; জাত|Many birds breed in the spring.|The farmer raises a rare breed of sheep.
+breeze|n|I|a light, gentle wind|মৃদু বাতাস|A cool breeze came from the sea.|The curtains moved in the evening breeze.
+bridge|n|E|a structure built over a river or road|সেতু|The old bridge crosses the river near the market.|They built a new bridge after the flood.
+briefcase|n|I|a flat case for carrying papers|ব্রিফকেস|The lawyer opened his briefcase and took out the contract.|She carried a slim leather briefcase to work.
+bright|adj|E|full of light; clever|উজ্জ্বল; মেধাবী|The room was bright and sunny.|She is a bright student who learns quickly.
+broken|adj/v|E|{break} damaged; in pieces|ভাঙা|The window was broken during the storm.|He walked slowly because of his broken leg.
+brought|v|E|{bring} carried to a place|এনেছিল|She brought cookies to the party.|The storm brought heavy rain to the city.
+budget|n|I|a plan for how money will be spent|বাজেট|The school has a small budget for trips.|We need to stay within our budget.

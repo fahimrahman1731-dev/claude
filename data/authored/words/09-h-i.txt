@@ -1,0 +1,140 @@
+highly|adv|A|{high} very; to a high degree|অত্যন্ত|Exercise is highly effective in reducing stress.|She is a highly skilled surgeon.
+highway|n|I|a main road between cities|মহাসড়ক|The highway was closed after the accident.|We drove along the highway for three hours.
+hilarious|adj|A|very funny|হাস্যকর; খুব মজার|The film was so hilarious that we cried with laughter.|Everyone found the parrot's jokes hilarious.
+hill|n|E|a raised area of land, smaller than a mountain|পাহাড়; টিলা|The children ran down the hill.|Our house is on top of a hill.
+him|pron|E|a male person already mentioned (object)|তাকে (পুরুষ)|I called him yesterday.|Tell him to wait for me.
+hire|v|I|to employ; to pay to use something|নিয়োগ দেওয়া; ভাড়া নেওয়া|The company will hire ten new workers.|We can hire bikes near the beach.
+his|det/pron|E|belonging to a male person|তার (পুরুষ)|He forgot his umbrella.|Is this coat his?
+historic|adj|A|{history} important in history|ঐতিহাসিক|The signing of the treaty was a historic moment.|The town has many historic buildings.
+historical|adj|A|{history} relating to the past|ইতিহাস-সংক্রান্ত|She enjoys reading historical novels.|The museum keeps historical records.
+historically|adv|A|{historical} in the past; in terms of history|ঐতিহাসিকভাবে|Historically, this area was a fishing village.|The site is historically important.
+history|n|E|the study of past events|ইতিহাস|I love learning about ancient history.|It was the loudest sound ever recorded in human history.
+hokum|n|A|nonsense meant to trick people|বাজে কথা; ধাপ্পা|The doctor said the miracle cure was pure hokum.|Most of the advertisement is hokum.
+hole|n|E|an empty space in something|গর্ত; ছিদ্র|There is a hole in my sock.|The dog dug a hole in the garden.
+home|n/adv|E|the place where you live|বাড়ি|I stayed home because I was sick.|Their home is full of books.
+homemaker|n|A|{home} a person who manages a home|গৃহিণী; গৃহকর্তা|Her mother was a homemaker who raised six children.|Being a homemaker is hard work.
+hometown|n|I|{home} the town where you grew up|জন্মশহর|She returned to her hometown after college.|My hometown is famous for its sweets.
+honest|adj|I|telling the truth|সৎ|Please give me an honest answer.|He is an honest and hardworking man.
+honor|n/v|A|respect; to show respect|সম্মান; সম্মান জানানো|It is an honor to meet you.|The city will honor its war heroes.
+hope|n/v|E|a wish for something good; to want something to happen|আশা|I hope you feel better soon.|The letters gave the families hope.
+hoping|v|E|{hope} wishing|আশা করছে|We are hoping for good weather.|She wrote home, hoping for news.
+horizon|n|A|the line where the earth seems to meet the sky|দিগন্ত|The sun sat low on the horizon.|A ship appeared on the horizon.
+hospital|n|E|a place where sick people are treated|হাসপাতাল|She works as a nurse at the hospital.|He stayed in the hospital for a week.
+host|n/v|I|a person who invites guests; to hold an event|আয়োজক; আয়োজন করা|Our host welcomed us at the door.|The city will host the games next year.
+hosted|v|I|{host} held an event|আয়োজন করেছিল|The school hosted a science fair.|The country hosted the World Cup.
+hostile|adj|A|unfriendly; aggressive|শত্রুভাবাপন্ন|The explorers met a hostile tribe.|The desert is a hostile environment.
+hot|adj|E|having a high temperature|গরম|Be careful, the soup is hot.|It is very hot in Dhaka in May.
+hours|n|E|{hour} periods of sixty minutes|ঘণ্টা|The flight took six hours.|Buses are crowded during peak hours.
+house|n|E|a building where people live|বাড়ি|They live in a small house by the river.|Our house has a red roof.
+houses|n|E|{house} buildings where people live|বাড়িগুলো|In the past, houses were made of wood and stone.|The street has twenty houses.
+housewarming|n/adj|A|a party for a new home|গৃহপ্রবেশের অনুষ্ঠান|We were invited to a housewarming party.|They brought a plant as a housewarming gift.
+how|adv|E|in what way|কীভাবে|How do you spell your name?|She showed me how to cook rice.
+however|adv|I|but; despite this|তবে; যাইহোক|The plan is good; however, it is expensive.|However hard he tried, he could not open the door.
+hug|n/v|E|to hold someone close in your arms|আলিঙ্গন করা|She gave her son a big hug.|Friends often hug when they meet.
+huge|adj|E|very large|বিশাল|An elephant is a huge animal.|The concert was a huge success.
+hullabaloo|n|A|a lot of noise and fuss|হট্টগোল|There was a great hullabaloo when the star arrived.|I don't understand all the hullabaloo about the new phone.
+humor|n|A|the quality of being funny|রসবোধ|She has a great sense of humor.|The book mixes humor and sadness.
+hunter|n|I|{hunt} a person who hunts animals|শিকারি|The hunter followed the deer's tracks.|An owl is a skilled night hunter.
+hunters|n|I|{hunter} people who hunt|শিকারিরা|Early hunters used stone tools.|The hunters returned with nothing.
+hunts|v/n|A|{hunt} searches; chases animals|শিকার করে; খোঁজে|The lion hunts at night.|The police organized hunts for the escaped prisoner.
+hydrogen|n|A|the lightest gas|হাইড্রোজেন|Water is made of hydrogen and oxygen.|Some buses run on hydrogen.
+hygiene|n|A|keeping yourself and things clean|স্বাস্থ্যবিধি; পরিচ্ছন্নতা|Good hygiene prevents disease.|Hospitals have strict hygiene rules.
+hypothesis|n|A|an idea to be tested|অনুমিত সিদ্ধান্ত; প্রকল্প|The experiment supported our hypothesis.|Scientists test each hypothesis carefully.
+identify|v|A|to recognize; to find|শনাক্ত করা|Can you identify the bird in this photo?|Doctors must identify the cause of the illness.
+identity|n|A|who someone is|পরিচয়|Show your identity card at the gate.|Language is part of our cultural identity.
+ideologies|n|A|{ideology} systems of political ideas|মতাদর্শসমূহ|The two parties have very different ideologies.|The war was a clash of ideologies.
+if|conj|E|on the condition that|যদি|If it rains, we will stay home.|Call me if you need help.
+ignore|v|I|to pay no attention to|উপেক্ষা করা|Don't ignore the warning signs.|She tried to ignore the noise.
+illness|n|I|{ill} a disease|অসুস্থতা|He missed school because of illness.|Stress can lead to illness.
+illnesses|n|I|{illness} diseases|রোগসমূহ|Doctors can detect illnesses earlier than before.|Common illnesses spread quickly in winter.
+illustrate|v|A|to explain with examples; to draw pictures for|ব্যাখ্যা করা; চিত্রিত করা|Let me illustrate the point with a story.|She was hired to illustrate a children's book.
+imagery|n|A|pictures created by words or images|চিত্রকল্প|The poem uses powerful imagery.|Satellite imagery shows the size of the fire.
+imaginative|adj|A|{imagine} full of new ideas|কল্পনাপ্রবণ; সৃজনশীল|The imaginative story won first prize.|Children are naturally imaginative.
+imagine|v|I|to form a picture in your mind|কল্পনা করা|Imagine you are on a beach.|I can't imagine life without music.
+imaging|n|A|making pictures of the inside of the body|ইমেজিং; চিত্রগ্রহণ|Advanced imaging helps doctors find tumors.|The hospital bought new imaging equipment.
+immediate|adj|A|happening now, without delay|তাৎক্ষণিক|The situation needs immediate action.|We received an immediate reply.
+immediately|adv|A|{immediate} at once|অবিলম্বে|Call the doctor immediately.|She recognized him immediately.
+immense|adj|A|extremely large|বিশাল; অপরিমেয়|The palace has an immense garden.|She felt immense relief.
+immigrant|n|A|a person who moves to live in another country|অভিবাসী|Her grandfather was an immigrant from Italy.|The city welcomes every new immigrant family.
+immune|adj|A|protected from a disease|রোগপ্রতিরোধী|The vaccine makes you immune to the virus.|Vitamin C supports the immune system.
+impact|n|A|a strong effect|প্রভাব|The discovery had a significant impact on modern medicine.|The impact of the crash broke the window.
+imperative|adj|A|extremely important; urgent|অত্যাবশ্যক|It is imperative that we act now.|Clean water is imperative for good health.
+implement|v|A|to put into action|বাস্তবায়ন করা|The school will implement the new rules in May.|We need money to implement this strategy.
+import|v/n|A|to bring goods from another country|আমদানি করা; আমদানি|Many countries import oil.|Rice is a major import here.
+importance|n|I|{important} being important|গুরুত্ব|Never forget the importance of sleep.|The teacher stressed the importance of practice.
+important|adj|E|having great value or effect|গুরুত্বপূর্ণ|It is important to drink water.|She has an important meeting today.
+imprisoned|v|A|{imprison} put in prison|কারারুদ্ধ|The journalist was imprisoned for his articles.|The princess was imprisoned in a tower.
+improve|v|E|to make better|উন্নত করা|The city plans to improve public transportation.|Reading every day will improve your English.
+improving|v|I|{improve} getting better|উন্নতি হচ্ছে|Her English is improving quickly.|Better medicine is improving health outcomes.
+in|prep|E|inside; during|-এ; ভেতরে|The keys are in my bag.|We first met in the summer of 2019.
+include|v|I|to contain as part of a whole|অন্তর্ভুক্ত করা|The price does not include breakfast.|Good lessons include real examples.
+included|v|I|{include} contained as part|অন্তর্ভুক্ত ছিল|Lunch is included in the ticket price.|She included a photo with her letter.
+including|prep|I|{include} with as part of the group|সহ|Ten people, including two children, were on the boat.|The museum is open every day, including holidays.
+income|n|A|money earned|আয়|Her income increased after the promotion.|Many families live on a low income.
+inconvenient|adj|A|causing trouble or difficulty|অসুবিধাজনক|Monday is an inconvenient day for the meeting.|The bus stop is in an inconvenient place.
+increase|n/v|I|to become larger; a rise|বৃদ্ধি করা; বৃদ্ধি|Prices may increase next year.|There was a sharp increase in visitors.
+increased|v|I|{increase} became larger|বেড়েছে|Sales increased by twenty percent.|Automation has increased production.
+increasingly|adv|A|{increasing} more and more|ক্রমবর্ধমানভাবে|The city is becoming increasingly crowded.|Remote work is increasingly common.
+incredible|adj|A|hard to believe; amazing|অবিশ্বাস্য|The view from the top was incredible.|She told an incredible story.
+independence|n|A|{independent} freedom from control|স্বাধীনতা|The country gained independence in 1971.|Teenagers want more independence.
+independent|adj|A|free; not controlled by others|স্বাধীন|She is a very independent child.|The country became independent after the war.
+indicate|v|A|to show or point to|নির্দেশ করা|The results indicate a problem.|Please indicate your choice with a tick.
+indoors|adv|I|inside a building|ঘরের ভেতরে|Stay indoors during the storm.|We played games indoors because it was raining.
+industry|n|A|the production of goods; a type of business|শিল্প|The tourism industry employs many people.|Heavy industry pollutes the river.
+inequality|n|A|{equality} unfair differences between groups|বৈষম্য|Income inequality is growing in many countries.|The report studies inequality in education.
+inevitable|adj|A|certain to happen|অনিবার্য|Some change is inevitable as you grow older.|Delays were inevitable after the storm.
+infection|n|A|a disease caused by germs|সংক্রমণ|Clean the cut to prevent infection.|She has an ear infection.
+infections|n|A|{infection} diseases caused by germs|সংক্রমণসমূহ|Antibiotics treat bacterial infections.|Washing hands reduces infections.
+inflation|n|A|a general rise in prices|মুদ্রাস্ফীতি|Inflation made food more expensive.|The bank raised interest rates to fight inflation.
+influence|n/v|A|an effect on someone; to affect|প্রভাব; প্রভাবিত করা|Parents have a strong influence on their children.|Advertising can influence what we buy.
+influential|adj|A|{influence} having great influence|প্রভাবশালী|She is an influential writer.|The book was influential in changing the law.
+information|n|I|{inform} facts about something|তথ্য|The website has useful information.|Please send me more information about the course.
+ingenuity|n|A|clever skill in solving problems|উদ্ভাবনী দক্ষতা|The prisoners escaped through sheer ingenuity.|Critics praised the author's ingenuity.
+ingredient|n|I|one of the foods in a recipe|উপকরণ|Rice is the main ingredient in this dish.|The secret ingredient is a little honey.
+ingredients|n|I|{ingredient} foods used in a recipe|উপকরণসমূহ|The bakery uses fresh ingredients.|Mix all the ingredients in a bowl.
+inhospitable|adj|A|too harsh to live in; unfriendly|বসবাসের অযোগ্য|Antarctica is an inhospitable place.|The deep ocean is inhospitable to most life.
+initial|adj|A|first|প্রাথমিক|The initial results look good.|Her initial reaction was surprise.
+injuries|n|I|{injury} damage to the body|আঘাতসমূহ|Warming up helps prevent injuries.|The driver suffered minor injuries.
+injury|n|I|damage to the body|আঘাত|He missed the match because of an injury.|The injury took months to heal.
+innovation|n|A|a new idea or method|উদ্ভাবন|The company is known for innovation.|Each innovation changed the way we work.
+innovative|adj|A|{innovation} new and original|উদ্ভাবনী|The team found innovative solutions to the problem.|She runs an innovative school.
+inscription|n|A|words written on stone or metal|শিলালিপি; খোদাইলিপি|The inscription on the stone is three thousand years old.|The ring has a short inscription inside.
+insect|n|E|a small animal with six legs|পোকা; কীট|An ant is an insect.|A strange insect landed on my arm.
+inspection|n|A|{inspect} a careful check|পরিদর্শন|The car must pass a safety inspection.|Inspection of the factory found several problems.
+inspire|v|A|to give someone the desire to do something|অনুপ্রাণিত করা|Good teachers inspire their students.|Nature can inspire great art.
+inspired|v|A|{inspire} given the desire to act|অনুপ্রাণিত|The film was inspired by a true story.|She felt inspired after the talk.
+instability|n|A|{stability} lack of stability|অস্থিতিশীলতা|Political instability scared away investors.|The country suffered internal instability.
+instance|n|A|an example|উদাহরণ|For instance, apples are rich in fiber.|In this instance, the rule does not apply.
+instead|adv|I|as a replacement|বরং; পরিবর্তে|We stayed home instead of going out.|There was no coffee, so I drank tea instead.
+institution|n|A|a large organization such as a university|প্রতিষ্ঠান|The university is a respected institution.|The bank is the oldest institution in town.
+instructed|v|A|{instruct} told to do something|নির্দেশ দিয়েছিল|Pour the liquid as instructed.|The pilot instructed passengers to sit down.
+instrument|n|I|a tool; an object for making music|যন্ত্র; বাদ্যযন্ত্র|The violin is a difficult instrument.|Doctors use a special instrument to check your ears.
+insufficient|adj|A|not enough|অপর্যাপ্ত|There was insufficient evidence to convict him.|Insufficient sleep affects your memory.
+intelligence|n|A|the ability to learn and understand|বুদ্ধিমত্তা|Dolphins show great intelligence.|Artificial intelligence is changing many jobs.
+intensity|n|A|{intense} strength or force|তীব্রতা|The intensity of the storm surprised everyone.|Increase the intensity of your workout slowly.
+interest|n/v|I|wanting to know more; money paid on a loan|আগ্রহ; সুদ|She has a strong interest in science.|The bank charges interest on loans.
+interesting|adj|E|{interest} holding your attention|আকর্ষণীয়|The museum was very interesting.|She told an interesting story.
+interface|n|A|the way a user and a computer interact|ইন্টারফেস|The app has a simple interface.|The new interface is easier to use.
+international|adj|A|between countries|আন্তর্জাতিক|The airport has many international flights.|International cooperation is needed to stop pollution.
+internet|n|E|the global computer network|ইন্টারনেট|I found the answer on the internet.|The village now has fast internet.
+internship|n|A|a short period of work to gain experience|ইন্টার্নশিপ|She did an internship at a newspaper.|The internship lasts three months.
+interpret|v|A|to explain the meaning of; to translate speech|ব্যাখ্যা করা; দোভাষী হওয়া|Scientists interpret the data carefully.|Can you interpret for my grandmother?
+interview|n/v|I|a formal meeting with questions|সাক্ষাৎকার|I have a job interview tomorrow.|The journalist will interview the mayor.
+into|prep|E|to the inside of|ভেতরে|Pour the water into the container.|She walked into the room.
+intriguing|adj|A|very interesting and a bit mysterious|কৌতূহলোদ্দীপক|The novel has an intriguing plot.|She made an intriguing suggestion.
+invaded|v|A|{invade} entered by force|আক্রমণ করেছিল|The army invaded the country in spring.|Ants invaded the kitchen.
+invasion|n|A|{invade} entering a country by force|আক্রমণ; অনুপ্রবেশ|The invasion began at dawn.|Reading her diary was an invasion of privacy.
+invention|n|A|{invent} something newly created|আবিষ্কার; উদ্ভাবন|The telephone was a great invention.|Her invention helps farmers save water.
+inventor|n|A|{invent} a person who invents things|উদ্ভাবক|The inventor showed his new machine.|Who was the inventor of the light bulb?
+invest|v|A|to put money into something for profit|বিনিয়োগ করা|The country plans to invest in renewable energy.|He decided to invest his savings in a small business.
+investigate|v|A|to examine to find the truth|তদন্ত করা|Police will investigate the cause of the fire.|Scientists investigate how birds migrate.
+investment|n|A|{invest} money put into something|বিনিয়োগ|Education is a good investment.|The investment created hundreds of jobs.
+invisible|adj|A|not able to be seen|অদৃশ্য|Air is invisible, but we can feel it move.|The ink was invisible until it was heated.
+involve|v|A|to include as a necessary part|জড়িত করা; অন্তর্ভুক্ত করা|The job will involve some travel.|Try to involve everyone in the discussion.
+is|v/aux|E|{be} third-person present of "be"|হয়; আছে|The sky is blue today.|My brother is a doctor.
+island|n|I|land surrounded by water|দ্বীপ|They spent a week on a tropical island.|The island is reached by boat.
+isolated|adj|A|{isolate} far from others; alone|বিচ্ছিন্ন|They live in an isolated village.|She felt isolated in the new city.
+issues|n|I|{issue} problems; topics|সমস্যা; বিষয়|The city has serious transport issues.|We discussed political issues in class.
+it|pron|E|a thing already mentioned|এটি|I lost my pen; have you seen it?|It is raining again.
+item|n|I|a single thing in a list or group|জিনিস; পদ|Each item in the shop has a price tag.|The first item on the agenda is the budget.
+items|n|I|{item} single things|জিনিসপত্র|Clean the items before recycling them.|She bought three items at the market.

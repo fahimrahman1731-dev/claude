@@ -1,0 +1,140 @@
+frozen|adj/v|I|{freeze} turned to ice; very cold|হিমায়িত; জমে যাওয়া|The lake was frozen all winter.|She bought a bag of frozen peas.
+fruits|n|E|{fruit} sweet parts of plants that hold seeds|ফলমূল|Mangoes and bananas are tropical fruits.|Eat different fruits every day.
+frustrated|adj|I|{frustrate} upset because you cannot do something|হতাশ; বিরক্ত|He felt frustrated when the computer crashed again.|Frustrated drivers waited in the traffic jam.
+fulfill|v|A|to do what is promised or needed|পূরণ করা|She worked hard to fulfill her dream.|The company could not fulfill the order on time.
+fully|adv|I|{full} completely|সম্পূর্ণভাবে|The hotel is fully booked.|I fully understand your concern.
+fun|n/adj|E|enjoyment|মজা|We had so much fun at the beach.|The other birds made fun of the parrot.
+functionality|n|A|{function} the range of things something can do|কার্যক্ষমতা|The new update improves the app's functionality.|The chair's design combines beauty and functionality.
+fundamental|adj|A|basic and most important|মৌলিক|Honesty is a fundamental principle of science.|There is a fundamental difference between the two plans.
+fungal|adj|A|{fungus} relating to fungi such as mushrooms|ছত্রাকজনিত|Damp rooms can cause fungal growth on walls.|The doctor treated the fungal infection with cream.
+fur|n|I|the thick hair of an animal|পশম|The cat's soft fur kept it warm.|Polar bears have thick white fur.
+furious|adj|A|extremely angry|ক্রুদ্ধ|My father was furious about the broken window.|The furious customer demanded a refund.
+furniture|n|I|tables, chairs, beds and similar objects|আসবাবপত্র|We bought new furniture for the living room.|The old furniture was given to charity.
+furthermore|adv|A|in addition|তদুপরি; অধিকন্তু|The plan is cheap; furthermore, it is easy to do.|Furthermore, the report shows that sales have doubled.
+fuse|n/v|A|a safety device in electric circuits; to join together|ফিউজ; জোড়া লাগানো|The lights went out because a fuse blew.|Heat can fuse two pieces of metal.
+future|n/adj|E|the time after now|ভবিষ্যৎ|Nobody knows what the future will bring.|She has big plans for the future.
+gained|v|I|{gain} got or increased|লাভ করেছিল|The country gained independence in 1971.|He gained five kilograms during the holidays.
+galaxy|n|A|a huge group of stars|ছায়াপথ|Our solar system is in the Milky Way galaxy.|Astronomers discovered a distant galaxy.
+gallery|n|I|a place where art is shown|চিত্রশালা; গ্যালারি|We visited an art gallery in Paris.|Her paintings hang in the national gallery.
+galloping|v|A|{gallop} running fast like a horse|দ্রুত ছুটছে|The horses were galloping across the field.|Prices are galloping ahead of wages.
+game|n|E|an activity with rules that you play|খেলা|Chess is a game of skill.|We watched the football game on TV.
+games|n|E|{game} activities with rules|খেলাগুলো|The children played games in the garden.|She enjoys word games on her phone.
+gap|n|I|a space between two things|ফাঁক; ব্যবধান|There is a gap in the fence.|The gap between rich and poor is growing.
+gardens|n|E|{garden} areas where plants are grown|বাগানগুলো|The palace gardens are open to the public.|Many houses on the street have small gardens.
+gate|n|E|a door in a fence or wall|ফটক; গেট|Please close the gate behind you.|Our flight leaves from gate twelve.
+gateways|n|A|{gateway} entrances; ways to reach something|প্রবেশপথ|The old city had four stone gateways.|Libraries are gateways to knowledge.
+gathered|v|I|{gather} came together; collected|জড়ো হয়েছিল|A crowd gathered outside the stadium.|She gathered wood for the fire.
+gatherings|n|A|{gathering} meetings of people|সমাবেশ|Family gatherings are common during the holidays.|Large gatherings were banned during the outbreak.
+gave|v|E|{give} handed to someone|দিয়েছিল|She gave me a book for my birthday.|The teacher gave us extra homework.
+gaze|n/v|A|a long, steady look; to look steadily|দৃষ্টি; একদৃষ্টে তাকানো|She fixed her gaze on the horizon.|His steady gaze made the young soldier nervous.
+gazing|v|A|{gaze} looking for a long time|একদৃষ্টে তাকিয়ে|The boy was gazing out of the window.|We spent the night gazing at the stars.
+gender|n|A|being male or female|লিঙ্গ|The job is open to everyone, regardless of gender.|The study compared results by age and gender.
+generally|adv|A|{general} usually; mostly|সাধারণত|I generally go to bed at ten.|The weather is generally warm in April.
+generate|v|A|to produce|উৎপন্ন করা|Wind turbines generate electricity.|The festival will generate income for the town.
+generation|n|A|people born around the same time|প্রজন্ম|My generation grew up with smartphones.|The recipe has been passed down for a generation.
+generous|adj|I|happy to give|উদার|My aunt is very generous with her time.|Thank you for your generous gift.
+genetic|adj|A|relating to genes passed from parents|জিনগত|Eye color is a genetic trait.|Scientists studied the genetic makeup of the virus.
+genre|n|A|a type of art, music or writing|ধারা|Mystery is my favorite genre of novel.|Jazz is a musical genre from America.
+gentle|adj|I|soft and kind|কোমল; মৃদু|Gentle waves washed over the sand.|Be gentle with the baby.
+gently|adv|I|{gentle} softly; carefully|আলতোভাবে|Stir the mixture gently.|She gently closed the door.
+genuine|adj|A|real; sincere|খাঁটি; আন্তরিক|The bag is made of genuine leather.|She showed genuine interest in our project.
+geography|n|I|the study of the earth's surface and countries|ভূগোল|We learned about rivers in geography class.|The geography of the region makes travel difficult.
+geometric|adj|A|made of regular shapes and lines|জ্যামিতিক|The rug has a geometric pattern.|Islamic art often uses geometric designs.
+geometrically|adv|A|{geometric} in regular shapes and lines|জ্যামিতিকভাবে|The garden was geometrically arranged in squares.|The tiles fit together geometrically.
+gets|v|E|{get} receives; becomes|পায়; হয়ে যায়|The heart gets fresh blood from the lungs.|It gets cold at night in the desert.
+giants|n|I|{giant} very large people, animals or companies|দানব; বৃহৎ প্রতিষ্ঠান|Whales are the gentle giants of the ocean.|Tech giants control much of the internet.
+glacier|n|A|a large mass of slowly moving ice|হিমবাহ|The glacier has melted a lot in ten years.|We hiked across the glacier with a guide.
+glance|n/v|I|a quick look; to look quickly|এক নজর; এক ঝলক তাকানো|She took a quick glance at her watch.|He didn't even glance at the menu.
+glass|n|E|a hard clear material; a cup for drinking|কাচ; গ্লাস|Would you like a glass of milk?|The window is made of thick glass.
+global|adj|A|relating to the whole world|বৈশ্বিক|Climate change is a global problem.|The company has a global network of offices.
+globalization|n|A|{global} the world becoming more connected|বিশ্বায়ন|Globalization has changed how goods are made.|Some workers lost jobs because of globalization.
+globe|n|I|the world; a round map of the earth|পৃথিবী; গ্লোব|She has traveled across the globe.|The teacher pointed to India on the globe.
+go|v|E|to move or travel|যাওয়া|We go to school by bus.|Let's go to the beach on Sunday.
+goal|n|I|something you want to achieve; a score in football|লক্ষ্য; গোল|My goal is to pass the exam.|He scored the winning goal.
+goalkeepers|n|A|{goalkeeper} players who guard the goal|গোলরক্ষকরা|Both goalkeepers made great saves.|Goalkeepers wear special gloves.
+goals|n|I|{goal} aims; scores|লক্ষ্যসমূহ; গোল|Write down your goals for this year.|The team scored three goals.
+goes|v|E|{go} moves or travels|যায়|My sister goes to university in Dhaka.|Blood goes from the heart to the lungs.
+going|v|E|{go} moving or traveling|যাচ্ছে|Where are you going?|I am going to visit my grandmother.
+gold|n|E|a valuable yellow metal|সোনা|She wore a gold ring.|The sunset turned the sea to molten gold.
+gone|v|E|{go} left; no longer here|চলে গেছে|By noon, all the bread was gone.|He has gone to the market.
+good|adj|E|of high quality; pleasant|ভালো|She is a good teacher.|Have a good day!
+goodness|n|A|{good} the quality of being good|সততা; ভালোত্ব|She believes in the goodness of people.|The soup is full of natural goodness.
+goods|n|I|things that are made to be sold|পণ্য|Ships carry goods between countries.|The shop sells household goods.
+government|n|I|the group that rules a country|সরকার|The government announced new taxes.|She works for the local government.
+gown|n|I|a long formal dress; a loose robe|গাউন; লম্বা পোশাক|She wore a silk gown to the ball.|He put on a warm dressing gown after his bath.
+grade|n|I|a mark for school work; a year at school|নম্বর; শ্রেণি|She got a high grade on her essay.|My brother is in the fifth grade.
+gradual|adj|A|happening slowly|ক্রমিক; ধীরে ধীরে|There has been a gradual rise in temperatures.|Learning a language is a gradual process.
+gradually|adv|A|{gradual} slowly over time|ধীরে ধীরে|The noise gradually increased.|Her health gradually improved.
+graduate|n/v|A|a person with a degree; to finish a course|স্নাতক; স্নাতক হওয়া|She will graduate from university next year.|He is a graduate of the state college.
+grains|n|A|{grain} seeds such as rice and wheat; tiny pieces|শস্যদানা|Rice and wheat are important grains.|Grains of sand stuck to her feet.
+grammar|n|I|the rules of a language|ব্যাকরণ|English grammar can be confusing.|Check your grammar before you submit the essay.
+grand|adj|I|large and impressive|জমকালো; বিশাল|They stayed in a grand hotel by the sea.|The palace has a grand staircase.
+grandeur|n|A|great size and beauty|মহিমা; জাঁকজমক|The grandeur of the mountains took our breath away.|The old palace still has some of its grandeur.
+grandfather|n|E|the father of your parent|দাদা/নানা|My grandfather tells great stories.|Her grandfather was a farmer.
+grandmother|n|E|the mother of your parent|দাদি/নানি|My grandmother lives with us.|She learned to cook from her grandmother.
+grateful|adj|I|thankful|কৃতজ্ঞ|I am grateful for your help.|The grateful family sent a card.
+gravitational|adj|A|{gravity} relating to gravity|মহাকর্ষীয়|Gravitational force keeps the planets in orbit.|The moon's gravitational pull causes tides.
+gravity|n|A|the force that pulls things toward the earth|মাধ্যাকর্ষণ|Gravity makes apples fall from trees.|Astronauts float because there is little gravity in space.
+gray|adj|E|the color between black and white|ধূসর|The sky was gray and cloudy.|He wore a gray suit to the interview.
+graze|v|A|to eat grass; to scrape the skin|ঘাস খাওয়া; ছড়ে যাওয়া|Cows graze in the field all day.|She fell and got a graze on her knee.
+great|adj|E|very good; very large|চমৎকার; বিশাল|We had a great time at the beach.|The Great Wall is very long.
+grew|v|E|{grow} became larger|বেড়ে উঠেছিল|People grew their own food in the past.|The town grew quickly after the railway came.
+grocery|n|I|a shop that sells food|মুদি দোকান|I bought milk at the grocery store.|The grocery on our street closes at nine.
+ground|n|E|the surface of the earth|মাটি|The ground was dry and dusty.|She sat on the ground to rest.
+group|n|E|a number of people or things together|দল|A group of students waited outside.|Work in a group of four.
+grow|v|E|to become larger; to plant and raise|বড় হওয়া; চাষ করা|Farmers grow rice along the river.|Children grow very fast.
+growing|v/adj|I|{grow} becoming larger|বাড়ছে|There is a growing interest in electric cars.|The light kept growing brighter.
+growth|n|I|{grow} an increase in size|বৃদ্ধি|The country has seen rapid economic growth.|Sleep is important for a child's growth.
+guess|v/n|I|to give an answer without being sure|অনুমান করা|Can you guess my age?|If you don't know, make a guess.
+guide|n/v|I|a person who shows the way; to lead|পথপ্রদর্শক; পথ দেখানো|Our guide showed us the old temple.|The lights guide planes to the runway.
+guitar|n|I|a musical instrument with strings|গিটার|He plays the guitar in a band.|She bought a new guitar.
+habitat|n|A|the natural home of an animal or plant|আবাসস্থল|The forest is the habitat of many birds.|Pollution is destroying the frog's habitat.
+habits|n|I|{habit} things you do regularly|অভ্যাস|Good sleep habits improve health.|Apps record our habits.
+had|aux/v|E|{have} past of "have"|ছিল|We had a lovely time.|She had already left when I arrived.
+hallway|n|I|a passage inside a building|বারান্দা; করিডোর|Our coats hang in the hallway.|The hallway was dark and narrow.
+hammer|n|I|a tool for hitting nails|হাতুড়ি|He used a hammer to fix the shelf.|The hammer fell on his foot.
+hand|n|E|the part of the arm with fingers|হাত|Raise your hand if you know the answer.|She held a cup in her hand.
+hands|n|E|{hand} the parts of the arms with fingers|হাত (বহুবচন)|Wash your hands before eating.|His hands were shaking.
+happen|v|E|to take place|ঘটা|What will happen if it rains?|Accidents happen when people rush.
+happily|adv|E|{happy} in a happy way|আনন্দে|The dog wagged its tail happily.|They lived happily in the village.
+happiness|n|I|{happy} the feeling of being happy|সুখ|Money cannot buy happiness.|Exercise increases feelings of happiness.
+harbor|n|I|a safe place for ships|পোতাশ্রয়; বন্দর|Fishing boats rested in the harbor.|The city grew around a natural harbor.
+hard|adj/adv|E|difficult; firm; with effort|কঠিন; শক্ত; কঠোরভাবে|The owners worked hard to improve the bakery.|This bread is too hard to eat.
+harder|adj/adv|E|{hard} more difficult; with more effort|আরও কঠিন|Distributing power in remote areas is harder.|You need to study harder.
+hardly|adv|A|almost not|খুব কমই|I could hardly hear the speaker.|She hardly ever eats meat.
+hardware|n|A|the physical parts of a computer|হার্ডওয়্যার|The computer needs new hardware.|Software problems are easier to fix than hardware faults.
+harvest|n/v|I|the time when crops are gathered; to gather crops|ফসল কাটা|The rice harvest begins in November.|Farmers harvest apples in autumn.
+has|aux/v|E|{have} third-person form of "have"|আছে; করেছে|She has two brothers.|The train has already left.
+hat|n|E|a covering for the head|টুপি|Wear a hat in the sun.|He took off his hat when he entered.
+hatch|v|A|to come out of an egg|ডিম ফুটে বের হওয়া|The chicks will hatch next week.|Turtle eggs hatch on the beach.
+have|aux/v|E|to own; used to form tenses|আছে; করেছি|I have a younger sister.|We have finished our homework.
+he|pron|E|a male person or animal already mentioned|সে (পুরুষ)|My brother said he would call later.|Where did he put the keys?
+head|n/v|E|the top part of the body; to go toward|মাথা; দিকে যাওয়া|I hit my head on the low door frame.|We will head home after lunch.
+heal|v|A|to become healthy again|সেরে ওঠা|The wound will heal in a few days.|Time can heal a broken heart.
+health|n|I|the condition of the body and mind|স্বাস্থ্য|Exercise is good for your health.|Mental health matters as much as physical fitness.
+healthcare|n|A|{health} medical services|স্বাস্থ্যসেবা|Everyone should have access to healthcare.|Healthcare costs are rising.
+healthy|adj|E|{health} well; good for health|সুস্থ; স্বাস্থ্যকর|Children need food to grow strong and healthy.|A healthy breakfast gives you energy.
+hear|v|E|to receive sounds with the ears|শোনা|Can you hear the music?|I could hear birds outside.
+heard|v|E|{hear} received sounds|শুনেছিল|The explosion was so loud it was heard far away.|I heard the news on the radio.
+heart|n|E|the organ that pumps blood|হৃদয়; হৃৎপিণ্ড|The heart has four parts.|She has a kind heart.
+heat|n/v|I|warmth; to make warm|তাপ; গরম করা|The heat of the sun melted the snow.|Heat the soup for five minutes.
+heats|v|I|{heat} makes warm|গরম করে|The sun heats the earth.|This small stove heats the whole room.
+heavy|adj|E|weighing a lot|ভারী|This box is too heavy to lift.|Heavy rain caused floods.
+hefty|adj|A|large and heavy; large in amount|ভারী; বিপুল|He carried a hefty bag of rice.|The company paid a hefty fine.
+height|n|I|how tall something is|উচ্চতা|What is your height?|The plane flew at a great height.
+held|v|E|{hold} kept in the hands; organized|ধরে রেখেছিল; আয়োজন করেছিল|She held the baby gently.|The meeting was held in the main hall.
+helmet|n|I|a hard hat that protects the head|হেলমেট|Always wear a helmet when you ride a bike.|The astronaut checked his helmet.
+help|v/n|E|to make something easier for someone|সাহায্য করা|Can you help me with my homework?|Thank you for your help.
+helped|v|E|{help} assisted|সাহায্য করেছিল|The children helped their parents in the fields.|A stranger helped me find the station.
+helpful|adj|I|{help} useful; willing to help|সহায়ক|The guide was very helpful.|Here are some helpful tips for the test.
+helping|v/n|I|{help} assisting|সাহায্য করছে|She is known for helping students who struggle.|Thank you for helping me move.
+helps|v|E|{help} assists|সাহায্য করে|Exercise helps prevent injuries.|My sister helps me with math.
+her|pron/det|E|a female person already mentioned; belonging to her|তাকে; তার (স্ত্রী)|I gave her my phone number.|Her bag is on the table.
+herders|n|A|{herder} people who look after groups of animals|পশুপালক|The herders moved their sheep to the mountains.|Herders in Mongolia live in round tents.
+here|adv|E|in or to this place|এখানে|Please come here and sit next to me.|I have lived here for ten years.
+heritage|n|A|traditions and buildings passed down from the past|ঐতিহ্য|The old mosque is part of our heritage.|The city protects its cultural heritage.
+hesitate|v|A|to pause before doing something|দ্বিধা করা|Don't hesitate to ask for help.|If you ever feel unsafe, do not hesitate to call the police.
+hidden|adj/v|I|{hide} not easy to find|লুকানো|The treasure was hidden under a rock.|He kept a hidden pistol in his coat.
+hide|v|E|to put out of sight|লুকানো|The children like to hide behind the curtains.|Soldiers tried to hide their sadness in letters.
+high|adj|E|tall; far above the ground|উঁচু|The wall is very high.|Prices are high this year.
+highlight|n/v|A|the best part; to mark as important|মূল আকর্ষণ; চিহ্নিত করা|The concert was the highlight of the trip.|Highlight the key words in yellow.

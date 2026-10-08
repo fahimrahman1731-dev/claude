@@ -1,0 +1,140 @@
+itinerary|n|A|a plan for a journey|ভ্রমণসূচি|Our travel agent sent us the itinerary for the trip.|The itinerary includes three days in Cox's Bazar.
+its|det|E|belonging to it|এর; তার (বস্তু/প্রাণী)|The dog wagged its tail.|The company changed its name last year.
+itself|pron|E|the thing already mentioned (reflexive)|নিজেই; নিজেকে|The cat cleaned itself after dinner.|The town itself is small, but the area is huge.
+jealous|adj|I|unhappy because someone has what you want|ঈর্ষান্বিত|He was jealous of his brother's new bike.|Jealous friends are not true friends.
+jet|n|I|a fast plane; a strong stream of liquid or gas|জেট বিমান; জোরালো ধারা|The jet flew over the city at great speed.|A jet of water shot out of the broken pipe.
+jewelry|n|I|rings, necklaces and similar decorations|গয়না|She keeps her jewelry in a small box.|The shop sells handmade silver jewelry.
+job|n|E|work that you are paid for|চাকরি; কাজ|My sister has a new job at the bank.|Mowing the lawn is my weekend job.
+jobs|n|E|{job} paid work|চাকরিসমূহ|The river provides jobs for many people.|New factories created thousands of jobs.
+join|v|E|to become a member of; to connect|যোগ দেওয়া|Would you like to join our club?|Thousands of people join the festival every year.
+joints|n|A|{joint} places where two bones or parts meet|অস্থিসন্ধি; জোড়া|Cold weather makes my joints ache.|The plumber sealed the joints in the pipe.
+jots|v|A|{jot} writes quickly|দ্রুত লিখে রাখে|He jots down his thoughts in a notebook.|She jots a quick note before every meeting.
+journal|n|I|a diary; a magazine about a subject|দিনলিপি; সাময়িকী|I write in my journal before sleep.|The study was published in a medical journal.
+journey|n|I|a trip from one place to another|যাত্রা; ভ্রমণ|The journey to the village took six hours.|Learning English is a long journey.
+joyful|adj|I|{joy} very happy|আনন্দময়|The wedding was a joyful occasion.|Joyful music filled the streets.
+judgment|n|A|an opinion or decision; good sense|বিচার; বিচারবুদ্ধি|Use your judgment when choosing friends.|The court will give its judgment on Friday.
+judicial|adj|A|relating to courts and judges|বিচারবিভাগীয়|The judicial system must be fair.|The country is planning judicial reforms.
+juice|n|E|liquid from fruit|রস; জুস|I drink orange juice every morning.|She squeezed the juice from a lemon.
+jumped|v|E|{jump} pushed off the ground with the legs|লাফিয়েছিল|The cat jumped onto the table.|He jumped into the river to save the boy.
+jungle|n|I|a thick tropical forest|জঙ্গল|Tigers hide in the jungle.|The explorers cut a path through the jungle.
+just|adv|E|only; exactly; very recently|শুধু; ঠিক; এইমাত্র|I just finished my homework.|It was just what I wanted.
+justice|n|A|fair treatment; the legal system|ন্যায়বিচার|The victims are still waiting for justice.|She works in the justice department.
+justify|v|A|to give a good reason for|যৌক্তিকতা দেখানো|Can you justify the cost of this project?|Nothing can justify violence.
+juvenile|adj|A|young; not yet adult|কিশোর; অপ্রাপ্তবয়স্ক|The zoo has a juvenile elephant.|He works with juvenile offenders.
+keep|v|E|to continue to have; to continue doing|রাখা; চালিয়ে যাওয়া|You can keep the book.|Keep walking until you see the bridge.
+keeps|v|E|{keep} continues to have or do|রাখে; চালিয়ে যায়|Recycling keeps the land and water cleaner.|She keeps her room very tidy.
+kept|v|E|{keep} continued to have or do|রেখেছিল|He kept the letter for years.|We kept walking despite the rain.
+kerb|n|A|the edge of a pavement (British; US: curb)|ফুটপাতের কিনারা (ব্রিটিশ)|The taxi stopped right next to the kerb.|She tripped over the kerb outside the shop.
+key|n/adj|E|a tool that opens a lock; most important|চাবি; মূল|I lost the key to my bike lock.|Practice is the key to success.
+keyboard|n|I|the set of keys used to type|কীবোর্ড|My laptop keyboard is missing a letter.|She plays the keyboard in a band.
+kindness|n|I|{kind} being kind|দয়া|Thank you for your kindness.|Small acts of kindness can change a life.
+kingdom|n|I|a country ruled by a king or queen|রাজ্য|The kingdom was rich and peaceful.|Saudi Arabia is a kingdom.
+kitchen|n|E|the room where food is cooked|রান্নাঘর|My mother is cooking in the kitchen.|The kitchen smelled of fresh bread.
+knew|v|E|{know} had information in the mind|জানত|I knew the answer but forgot it.|She knew the test would be hard.
+knife|n|E|a tool with a sharp blade for cutting|ছুরি|Cut the bread with a sharp knife.|He used a knife to open the box.
+know|v|E|to have information in your mind|জানা|Do you know the way to the station?|I know her from school.
+knowledge|n|I|{know} information and understanding|জ্ঞান|Reading increases your knowledge.|She has a deep knowledge of history.
+known|v/adj|I|{know} recognized; familiar|পরিচিত|The teacher is known for helping students.|Her name is known all over the country.
+labeled|v|A|{label} marked with a name or description|লেবেল লাগানো|Each jar was labeled with a date.|He was unfairly labeled a troublemaker.
+labor|n|A|work, especially hard physical work|শ্রম|The farm needs a lot of manual labor.|Labor costs have gone up.
+laboratory|n|A|a room for scientific experiments|গবেষণাগার|The students tested water in the laboratory.|She works in a medical laboratory.
+lack|n/v|A|not having enough of something|অভাব; ঘাটতি|Many villages lack clean water.|A lack of sleep makes you tired.
+ladder|n|I|steps used for climbing|মই|He climbed a ladder to fix the roof.|Hold the ladder steady for me.
+lamp|n|E|a device that gives light|বাতি|Turn on the lamp next to the bed.|The old lamp burned oil.
+landfill|n|A|a place where trash is buried|ভাগাড়; ময়লা ফেলার স্থান|Most plastic ends up in a landfill.|The city opened a new landfill outside town.
+landfills|n|A|{landfill} places where trash is buried|ভাগাড়সমূহ|Recycling keeps paper out of landfills.|Old landfills can pollute groundwater.
+landing|n|A|{land} arriving on the ground; the floor at the top of stairs|অবতরণ; সিঁড়ির চাতাল|The plane made a smooth landing.|She left her bag on the landing.
+landmark|n|A|a famous building or place that is easy to recognize|দর্শনীয় স্থান; চিহ্ন|The tower is the city's most famous landmark.|Use the mosque as a landmark to find my house.
+landscape|n|A|the appearance of an area of land|প্রাকৃতিক দৃশ্য|The landscape changed from desert to forest.|She paints beautiful landscape pictures.
+language|n|I|a system of words for communication|ভাষা|Bengali is my first language.|Learning a new language takes time.
+large|adj|E|big|বড়|They live in a large house.|A large crowd gathered outside.
+late|adj/adv|E|after the expected time|দেরি|The bus was late again.|I stayed up late last night.
+later|adv/adj|E|{late} after some time|পরে|I will call you later.|The rules changed later in the year.
+latest|adj|I|{late} newest|সর্বশেষ|Check the latest weather updates.|Have you seen her latest film?
+laugh|v/n|E|to make sounds that show you find something funny|হাসা|The joke made everyone laugh.|She has a loud laugh.
+laughing|v|E|{laugh} making sounds of amusement|হাসছে|The children were laughing at the clown.|I couldn't stop laughing.
+laughter|n|I|{laugh} the sound of laughing|হাসি|The room was full of laughter.|Laughter is good for your health.
+lava|n|A|hot liquid rock from a volcano|লাভা|Lava flowed down the side of the volcano.|The village was buried under lava.
+lawn|n|I|an area of short grass|লন; ঘাসের মাঠ|He mows the lawn every Saturday.|The children played on the lawn.
+laws|n|I|{law} official rules|আইনসমূহ|Drivers must obey traffic laws.|The country passed new laws to protect forests.
+lay|v|A|to put down carefully; {lie} past of "lie"|রাখা; শুয়েছিল|Hens lay eggs every day.|She lay on the grass and looked at the clouds.
+lead|v/n|A|to guide or be first; a heavy metal|নেতৃত্ব দেওয়া; সীসা|She will lead the team next year.|Old pipes were often made of lead.
+leadership|n|A|{leader} the ability or position of leading|নেতৃত্ব|The company improved under her leadership.|Good leadership needs good listening.
+leaf|n|E|a flat green part of a plant|পাতা|A leaf fell from the tree.|The caterpillar ate the whole leaf.
+leaning|v|I|{lean} bending or resting against something|হেলান দিয়ে|He was leaning against the wall.|The old tower is leaning to one side.
+learning|n/v|E|{learn} gaining knowledge|শেখা|Learning a language takes patience.|She is learning to play the guitar.
+leaving|v|E|{leave} going away from|চলে যাচ্ছে|The train is leaving in five minutes.|The thief left without leaving any traces.
+lecture|n|A|a talk given to students|বক্তৃতা|The professor gave a lecture on climate change.|I missed the morning lecture.
+led|v|A|{lead} guided; was in charge of|নেতৃত্ব দিয়েছিল|She led the team to victory.|The path led to a small lake.
+left|v/adj|E|{leave} went away; opposite of right|চলে গিয়েছিল; বাম|He left the house at seven.|Turn left at the bank.
+legacy|n|A|something that continues after a person or event|উত্তরাধিকার; রেখে যাওয়া প্রভাব|The film's legacy has continued for decades.|His greatest legacy is the school he founded.
+legal|adj|A|allowed by law; relating to law|আইনি; বৈধ|Is it legal to park here?|She needs legal advice.
+legend|n|A|an old traditional story; a famous person|কিংবদন্তি|The legend tells of a golden city.|The singer is a living legend.
+legislation|n|A|laws|আইন প্রণয়ন; আইন|New legislation protects workers' rights.|The government passed legislation to ban plastic bags.
+length|n|I|{long} how long something is|দৈর্ঘ্য|The length of the bridge is two kilometers.|The essay must be a certain length.
+less|det/adv|I|a smaller amount|কম|Recycling uses less energy.|I want to spend less time on my phone.
+let|v|E|to allow|দেওয়া; অনুমতি দেওয়া|Let me help you with that bag.|My parents let me stay out late.
+letter|n|E|a written message; a symbol of the alphabet|চিঠি; বর্ণ|I wrote a letter to my grandmother.|The word begins with the letter B.
+letters|n|E|{letter} written messages; symbols|চিঠিপত্র; বর্ণমালা|Soldiers wrote letters to their families.|Count the letters in the word.
+library|n|E|a place where books are kept|গ্রন্থাগার|I borrowed three books from the library.|The library closes at eight.
+license|n|A|an official document that gives permission|লাইসেন্স|You need a license to drive a car.|The shop lost its license to sell medicine.
+life|n|E|the state of being alive; a way of living|জীবন|City life is busy and noisy.|Travel shows you different ways of life.
+light|n/adj|E|brightness; not heavy|আলো; হালকা|The light from my phone flickered.|This bag is very light.
+lightning|n|I|a flash of light in the sky during a storm|বজ্রপাত|Lightning struck the tall tree.|We saw lightning over the sea.
+like|prep/v|E|similar to; to enjoy|মতো; পছন্দ করা|She looks like her mother.|I like reading in the evening.
+likely|adj|A|probable|সম্ভাব্য|It is likely to rain tomorrow.|The most likely winner is the home team.
+line|n|E|a long thin mark; a row of people|রেখা; সারি|Draw a straight line.|There was a long line outside the bakery.
+lines|n|E|{line} words in a play; long marks|সংলাপ; রেখা|The actor forgot his lines.|Write your name on the lines below.
+lingered|v|A|{linger} stayed longer than expected|রয়ে গিয়েছিল|The smell of smoke lingered in the air.|Guests lingered after the party.
+linked|v/adj|A|{link} connected|সংযুক্ত|Sleep and memory are closely linked.|The two towns are linked by a railway.
+liquid|n/adj|A|a substance that flows, like water|তরল|Pour the liquid into a cup.|Mercury is a liquid metal.
+list|n/v|E|a series of items written one after another|তালিকা|I made a list of things to buy.|Please list three reasons.
+listen|v|E|to pay attention to sound|শোনা|Listen carefully to the instructions.|I like to listen to music while I cook.
+liter|n|A|a unit for measuring liquid|লিটার|Buy a liter of milk.|The car uses one liter of fuel every fifteen kilometers.
+literacy|n|A|the ability to read and write|সাক্ষরতা|Literacy rates have risen across the country.|The program teaches adult literacy.
+literature|n|A|books, plays and poems of high quality|সাহিত্য|She studies English literature.|Bengali literature has a long history.
+little|adj|E|small; not much|ছোট; অল্প|They live in a little house.|I have little money left.
+live|v/adj|E|to have your home; happening now|বাস করা; সরাসরি|Millions of people live near the river.|The festival has live music every night.
+livelier|adj|A|{lively} more active and energetic|আরও প্রাণবন্ত|The market is livelier in the evening.|The second half of the game was livelier.
+lively|adj|I|full of life and energy|প্রাণবন্ত|The town has a lively night market.|We had a lively discussion in class.
+living|n/adj|E|{live} earning money; alive|জীবিকা; জীবিত|She makes a living as a teacher.|All living things need water.
+loan|n|A|money borrowed that must be paid back|ঋণ|He took a loan to buy a car.|The bank refused the loan.
+local|adj|E|of the nearby area|স্থানীয়|We shop at the local market.|Local artists showed their work.
+located|adj|A|{locate} in a particular place|অবস্থিত|The island is located between Java and Sumatra.|Our office is located downtown.
+location|n|A|{locate} a place|অবস্থান|The hotel is in a great location.|Share your location on the map.
+lonely|adj|I|sad because you are alone|নিঃসঙ্গ|He felt lonely in the new city.|The lonely road went on for miles.
+looked|v|E|{look} turned the eyes toward; seemed|তাকিয়েছিল; মনে হয়েছিল|She looked out of the window.|The sky looked strange and red.
+looking|v|E|{look} turning the eyes toward|তাকিয়ে আছে; খুঁজছে|Everyone was looking at the screen.|I am looking for my glasses.
+loose|adj|A|not tight or fixed|ঢিলা|My shoe has a loose string.|The detective found a loose coin.
+loosely|adv|A|{loose} not tightly|ঢিলাভাবে|Tie the rope loosely.|The film is loosely based on a true story.
+lose|v|I|to not have something any longer; to be defeated|হারানো; হেরে যাওয়া|Don't lose your ticket.|Our team might lose the final.
+loss|n|A|{lose} losing something|ক্ষতি; হারানো|The company reported a loss this year.|The loss of her dog made her sad.
+loud|adj|E|making a lot of noise|উচ্চস্বরে; জোরালো|The music is too loud.|We heard a loud bang.
+loudly|adv|E|{loud} with a lot of noise|জোরে|The dog barked loudly.|Please don't talk loudly in the library.
+love|n/v|E|a strong feeling of liking|ভালোবাসা|I love my family.|The bakers put love into every cake.
+loved|v|E|{love} felt strong affection for|ভালোবাসত|She loved her grandmother very much.|Audiences loved the new film.
+low|adj|E|not high|নিচু; কম|The bridge is too low for big trucks.|The crew survived on low supplies.
+lower|adj/v|I|{low} less high; to reduce|নিম্নতর; কমানো|Companies moved factories to find lower costs.|Please lower your voice.
+loyalty|n|A|{loyal} being faithful|আনুগত্য|Dogs are famous for their loyalty.|The shop rewards customer loyalty.
+luggage|n|I|bags for travel|মালপত্র|Our luggage was lost at the airport.|You can take one piece of luggage.
+lunar|adj|A|relating to the moon|চন্দ্র-সংক্রান্ত|A lunar eclipse happens when Earth blocks the sun's light.|The lunar calendar decides the date of the festival.
+lunch|n|E|a meal in the middle of the day|দুপুরের খাবার|We eat lunch at one o'clock.|She packed a lunch for the trip.
+lungs|n|I|{lung} the organs used for breathing|ফুসফুস|Smoking damages your lungs.|Blood picks up fresh oxygen in the lungs.
+lyrics|n|A|the words of a song|গানের কথা|I know all the lyrics to this song.|The lyrics are about lost love.
+machine|n|E|a device that does work|যন্ত্র|The washing machine is broken.|This machine makes coffee.
+made|v|E|{make} created; caused|তৈরি করেছিল|Houses were made of wood and stone.|She made a cake for the party.
+magnet|n|A|metal that pulls iron toward it|চুম্বক|The magnet picked up the nails.|A fridge magnet held the photo.
+magnetic|adj|A|{magnet} having the power of a magnet|চৌম্বক|The earth has a magnetic field.|The card has a magnetic strip.
+magnificent|adj|A|grand and beautiful|চমৎকার; জমকালো|We enjoyed a magnificent view from the hotel.|The palace is truly magnificent.
+magnifying|adj/v|A|{magnify} making things look bigger|বিবর্ধক|The detective used a magnifying glass.|The lens works by magnifying the light.
+mail|n/v|E|letters and parcels; to send by post|ডাক; চিঠিপত্র|The mail arrives at ten o'clock.|Please mail this letter for me.
+main|adj|E|most important|প্রধান|The main road was closed.|What is the main idea of the passage?
+mainly|adv|A|{main} mostly|প্রধানত|The town is mainly known for its beaches.|Visitors are mainly students.
+maintain|v|A|to keep in good condition; to continue|বজায় রাখা; রক্ষণাবেক্ষণ করা|It is hard to maintain a balance between work and rest.|The city must maintain the old bridges.
+maintaining|v|A|{maintain} keeping in good condition|বজায় রাখা|Maintaining a garden takes time.|She is maintaining good grades.
+maintenance|n|A|{maintain} keeping things in good condition|রক্ষণাবেক্ষণ|The pool is closed for maintenance.|Cars need regular maintenance.
+major|adj|A|large or important|প্রধান; গুরুত্বপূর্ণ|The storm caused major damage.|Traffic is a major problem in the city.
+make|v|E|to create; to cause|তৈরি করা|Let's make a cake.|Small changes can make a big difference.
+making|v|E|{make} creating|তৈরি করছে|She is making dinner.|Making products from raw materials uses more energy.
+mammal|n|A|an animal that feeds its babies milk|স্তন্যপায়ী প্রাণী|A whale is a mammal, not a fish.|The bat is the only mammal that can fly.
+man|n|E|an adult male person|মানুষ; পুরুষ|An old man sat on the bench.|The man in the blue coat is my uncle.

@@ -1,0 +1,140 @@
+cure|n/v|I|a treatment that ends an illness; to make well|নিরাময়; সারিয়ে তোলা|Scientists are still searching for a cure for the common cold.|Rest and fluids can cure a mild fever.
+curious|adj|I|wanting to know or learn|কৌতূহলী|The curious child asked a hundred questions.|I am curious about how planes stay in the air.
+current|adj/n|I|happening now; a flow of water or electricity|বর্তমান; স্রোত|What is your current address?|The river current was too strong for swimming.
+currently|adv|I|{current} at the present time|বর্তমানে|She is currently studying in London.|The museum is currently closed for repairs.
+curriculum|n|A|the subjects taught in a school or course|পাঠ্যক্রম|Coding is now part of the school curriculum.|The university changed its English curriculum.
+curtain|n|E|cloth that hangs over a window or stage|পর্দা|She opened the curtain to let in the sun.|The curtain rose and the play began.
+custom|n|I|a traditional way of doing something|প্রথা; রীতি|It is a custom here to remove your shoes indoors.|Giving sweets at weddings is an old custom.
+customer|n|E|a person who buys from a shop or business|ক্রেতা; গ্রাহক|The shop gave every customer a free gift.|A happy customer often returns.
+cyber|adj|A|relating to computers and the internet|সাইবার; ইন্টারনেট-সংক্রান্ত|Banks invest heavily in cyber security.|The company was the victim of a cyber attack.
+daily|adj/adv|E|every day|দৈনিক; প্রতিদিন|Walking is part of my daily routine.|The newspaper is published daily.
+dairy|n/adj|I|milk and foods made from milk|দুগ্ধজাত|Cheese and yogurt are dairy products.|She cannot eat dairy because of an allergy.
+danger|n|E|the possibility of harm|বিপদ|The sign warned of danger from falling rocks.|Doctors say the patient is out of danger.
+dangerous|adj|E|{danger} able to cause harm|বিপজ্জনক|It is dangerous to swim during a storm.|Some snakes are extremely dangerous.
+dark|adj|E|with little or no light|অন্ধকার|It gets dark early in winter.|She wore a dark blue coat.
+darkness|n|I|{dark} the absence of light|অন্ধকার|The room was in complete darkness.|Owls hunt in darkness.
+data|n|I|facts and numbers collected for study|তথ্য; উপাত্ত|The scientists collected data for five years.|Apps often store personal data without asking.
+database|n|A|organized information stored in a computer|ডেটাবেস|The library keeps every book in a database.|Hackers broke into the company database.
+daughter|n|E|a female child|কন্যা; মেয়ে|Their daughter is starting school this year.|She lives with her daughter in Sylhet.
+day|n|E|a period of twenty-four hours|দিন|It was a sunny day at the beach.|I study English for an hour every day.
+days|n|E|{day} periods of twenty-four hours|দিনগুলো|The trip lasted five days.|In those days, few people owned a car.
+dazzling|adj|A|{dazzle} very bright; very impressive|চোখ-ধাঁধানো|The dancer gave a dazzling performance.|The snow was dazzling in the sunlight.
+deadline|n|I|a time by which something must be finished|শেষ সময়সীমা|The deadline for the essay is Friday.|We worked late to meet the deadline.
+debate|n/v|A|a formal discussion of opposing views|বিতর্ক|Our school won the national debate competition.|Experts debate whether homework helps young children.
+debrief|v/n|A|to meet and review what happened|পর্যালোচনা সভা করা|The team will debrief after the product launch.|Pilots debrief with their instructor after each flight.
+debt|n|I|money that you owe|ঋণ|He worked two jobs to pay off his debt.|The country's debt has grown quickly.
+decade|n|I|a period of ten years|দশক|Prices have doubled in the last decade.|She lived in Japan for a decade.
+decided|v|E|{decide} made a choice|সিদ্ধান্ত নিয়েছিল|We decided to stay home because of the rain.|She decided to study medicine.
+decision|n|I|{decide} a choice that you make|সিদ্ধান্ত|Moving abroad was a difficult decision.|The referee's decision surprised everyone.
+deck|n|I|the floor of a ship; a set of cards|জাহাজের ডেক; তাসের প্যাকেট|Passengers walked on the deck to watch the sunset.|Shuffle the deck before you deal the cards.
+decline|n/v|A|a decrease; to go down; to refuse politely|হ্রাস; প্রত্যাখ্যান করা|There has been a sharp decline in bird numbers.|I must decline your kind invitation.
+declined|v|A|{decline} went down; refused|কমে গেছে; প্রত্যাখ্যান করেছিল|Sales declined during the winter months.|She declined the job offer.
+decorate|v|I|to make something look more attractive|সাজানো|We decorate the house with lights for the festival.|The children will decorate the cake.
+decorated|v|I|{decorate} made attractive|সাজানো হয়েছিল|The hall was decorated with flowers.|The soldier was decorated for bravery.
+decrease|n/v|A|to become smaller; a reduction|হ্রাস পাওয়া; হ্রাস|Exercise can decrease stress.|There was a decrease in crime last year.
+dedicated|adj/v|A|{dedicate} committed; given to a purpose|নিবেদিত|She is a dedicated teacher who stays late to help.|The museum is dedicated to modern art.
+deep|adj|E|going far down|গভীর|The lake is very deep in the middle.|Take a deep breath and relax.
+defeat|n/v|I|a loss; to win against|পরাজয়; পরাজিত করা|The army suffered a heavy defeat.|Our team hopes to defeat the champions.
+defense|n|I|protection against attack|প্রতিরক্ষা|The castle walls were built for defense.|The team has a strong defense.
+defies|v|A|{defy} refuses to obey; goes against|অমান্য করে; উপেক্ষা করে|The tower defies gravity with its strange shape.|The child often defies his parents.
+define|v|I|to explain the meaning of|সংজ্ঞায়িত করা|Can you define this word in your own words?|Your choices define who you are.
+definitely|adv|I|certainly|অবশ্যই; নিশ্চিতভাবে|I will definitely come to your party.|This is definitely the best soup I have tasted.
+deforestation|n|A|cutting down large areas of forest|বন উজাড়|Deforestation threatens many animal species.|Farming is a major cause of deforestation.
+degree|n|I|a unit of temperature or angle; a university qualification|ডিগ্রি|The temperature dropped by one degree.|She has a degree in economics.
+delays|n|I|{delay} times when something is late|বিলম্ব|Snow caused long delays at the airport.|Passengers complained about constant train delays.
+deliberate|adj|A|done on purpose; careful|ইচ্ছাকৃত; সুচিন্তিত|It was a deliberate choice to leave early.|He walked with slow, deliberate steps.
+deliberation|n|A|{deliberate} long, careful thinking|সুবিবেচনা; বিচার-বিবেচনা|After much deliberation, I decided to accept the offer.|The jury's deliberation lasted two days.
+delicious|adj|E|tasting very good|সুস্বাদু|The mango was sweet and delicious.|My grandmother makes delicious fish curry.
+delighted|adj|I|{delight} very pleased|আনন্দিত|We were delighted with the results.|She was delighted to see her old friend.
+delivered|v|I|{deliver} brought to someone; spoke|পৌঁছে দিয়েছিল; বলেছিল|The parcel was delivered this morning.|The actor delivered his lines with confidence.
+demand|n/v|A|a strong request; the need for goods|দাবি; চাহিদা|Demand for electric cars is rising.|The workers demand higher wages.
+democracy|n|A|government chosen by the people|গণতন্ত্র|In a democracy, citizens vote for their leaders.|The country became a democracy in 1991.
+demonstrate|v|A|to show clearly|প্রদর্শন করা; প্রমাণ করা|The teacher will demonstrate the experiment.|These results demonstrate the value of practice.
+denied|v|I|{deny} said something is not true; refused|অস্বীকার করেছিল|He denied breaking the window.|They were denied entry to the club.
+density|n|A|how closely packed something is|ঘনত্ব|The city has a high population density.|Water has a greater density than oil.
+departure|n|I|{depart} leaving|প্রস্থান|Our departure was delayed by two hours.|Check the departure board for your gate.
+depend|v|I|to rely on; to be decided by|নির্ভর করা|Many families depend on fishing for income.|Our plans depend on the weather.
+dependence|n|A|{depend} needing something or someone|নির্ভরতা|The country wants to reduce its dependence on oil.|Some patients develop a dependence on strong painkillers.
+depth|n|I|{deep} how deep something is|গভীরতা|The depth of the pool is two meters.|She spoke with great depth of feeling.
+descendants|n|A|{descendant} people who come from the same ancestor|বংশধর|The king's descendants still live in the palace.|Many descendants of the settlers stayed on the island.
+describe|v|I|to say what something is like|বর্ণনা করা|Can you describe the man you saw?|Describe your favorite place in three sentences.
+description|n|I|{describe} words that say what something is like|বর্ণনা|The police gave a description of the missing car.|Her description of the beach was beautiful.
+desert|n|I|a dry area with little rain|মরুভূমি|Camels can travel for days in the desert.|The Sahara is the largest hot desert.
+design|n/v|I|a plan or pattern; to plan|নকশা; নকশা করা|Engineers design skyscrapers to sway in the wind.|I love the design of your dress.
+designed|v|I|{design} planned for a purpose|পরিকল্পিত; নকশা করা|The system was designed to be fair.|This phone was designed for older people.
+designs|n|I|{design} plans or patterns|নকশাসমূহ|The architect showed us three designs for the house.|Her jewelry designs are sold worldwide.
+desire|n|I|a strong wish|আকাঙ্ক্ষা|He had a strong desire to travel.|Her desire for knowledge never faded.
+desperate|adj|A|very worried and willing to try anything|মরিয়া; হতাশাগ্রস্ত|The desperate farmers prayed for rain.|She was desperate to find her lost cat.
+desperation|n|A|{desperate} a feeling of having no hope|হতাশা; মরিয়া ভাব|In desperation, he called his old teacher for help.|The empty well became a symbol of desperation.
+despite|prep|I|without being stopped by|সত্ত্বেও|Despite the rain, the match continued.|She passed the exam despite being ill.
+dessert|n|E|sweet food eaten after a meal|মিষ্টান্ন; ডেজার্ট|We had ice cream for dessert.|Would you like to see the dessert menu?
+destination|n|I|the place you are going to|গন্তব্য|Paris is a popular tourist destination.|We reached our destination after six hours.
+detailed|adj|I|{detail} with many details|বিস্তারিত|The guide gave us detailed instructions.|She drew a detailed map of the island.
+details|n|I|{detail} small facts|খুঁটিনাটি; বিবরণ|Apps can store details about your habits.|Please send me the details of the trip.
+detect|v|A|to notice or discover|শনাক্ত করা|Dogs can detect smells that people cannot.|Doctors use scans to detect illness early.
+deteriorate|v|A|to get worse|অবনতি হওয়া|Conditions will deteriorate if nobody helps.|Old paper can deteriorate in damp rooms.
+determine|v|A|to find out; to decide|নির্ধারণ করা|Tests will determine the cause of the fire.|Your effort will determine your result.
+determined|adj|I|{determine} having a firm decision to do something|দৃঢ়প্রতিজ্ঞ|She was determined to finish the race.|A determined student does not give up.
+devastating|adj|A|{devastate} very destructive|বিধ্বংসী|The devastating earthquake destroyed thousands of homes.|Losing the final was a devastating blow for the team.
+develop|v|I|to grow or make grow; to create|বিকাশ করা; উন্নত করা|Children develop quickly in the first years.|The company plans to develop a new app.
+developed|v/adj|I|{develop} grew; advanced|উন্নত; বিকশিত|The town developed into a busy port.|Developed countries use more energy per person.
+developing|v/adj|I|{develop} growing; not yet fully industrial|উন্নয়নশীল; বিকাশমান|Developing countries often lack good roads.|She is developing a new skill every month.
+development|n|I|{develop} growth; progress|উন্নয়ন; বিকাশ|Education plays a big role in economic development.|The development of the vaccine took years.
+device|n|I|a machine or tool for a purpose|যন্ত্র; ডিভাইস|This small device measures your heart rate.|Turn off every electronic device before takeoff.
+devotion|n|A|{devote} deep love or loyalty|নিষ্ঠা; ভক্তি|The nurse cared for patients with great devotion.|Her devotion to her family was clear.
+diagnosis|n|A|identifying an illness|রোগনির্ণয়|The doctor made a diagnosis after the tests.|An early diagnosis can save lives.
+dictionary|n|I|a book that explains the meanings of words|অভিধান|Look up the word in a dictionary.|My English dictionary has over two thousand pages.
+did|aux/v|E|{do} past of "do"|করেছিল|Did you finish your homework?|She did her best in the race.
+diet|n|I|the food you usually eat|খাদ্যাভ্যাস|A balanced diet includes fruit and vegetables.|He changed his diet to lose weight.
+differ|v|A|to be different|ভিন্ন হওয়া|Opinions differ on the best way to learn.|The two cars differ only in color.
+difference|n|I|{differ} the way things are not the same|পার্থক্য|What is the difference between these two words?|A good teacher can make a big difference.
+different|adj|E|{differ} not the same|ভিন্ন|We have different opinions about the film.|She wore a different dress every day.
+difficult|adj|E|hard to do or understand|কঠিন|The last question was very difficult.|It is difficult to sleep in the heat.
+digest|v|A|to break down food in the body|হজম করা|Some people cannot digest milk easily.|It takes time to digest a big meal.
+digital|adj|I|using computer technology|ডিজিটাল|Digital cameras made film less popular.|We live in a digital age.
+dim|adj|I|not bright|ম্লান; আবছা|The room was dim and quiet.|A dim light glowed at the end of the tunnel.
+dimension|n|A|a measurement such as length or width; an aspect|মাত্রা; দিক|Write down each dimension of the box.|The problem has an important social dimension.
+diminish|v|A|to become smaller or less|কমে যাওয়া|The pain will diminish over time.|Nothing could diminish her joy.
+dinner|n|E|the main meal of the evening|রাতের খাবার|We eat dinner at eight o'clock.|They invited us to dinner on Friday.
+diploma|n|A|a certificate for finishing a course|ডিপ্লোমা|She received her diploma at the graduation ceremony.|He earned a diploma in nursing.
+director|n|I|{direct} a person who manages or leads a film|পরিচালক|The director chose a young actor for the main role.|She is the director of the hospital.
+dirt|n|E|soil; something that makes things unclean|ময়লা; মাটি|The children came home covered in dirt.|Wipe the dirt off your shoes.
+disappointed|adj|I|{disappoint} sad because something was not as hoped|হতাশ|I was disappointed by the ending of the film.|The fans were disappointed when the match was canceled.
+discipline|n|A|training to obey rules; a subject of study|শৃঙ্খলা; শাস্ত্র|Learning an instrument requires discipline.|History is an academic discipline.
+discovered|v|I|{discover} found for the first time|আবিষ্কার করেছিল|Scientists discovered a new species of frog.|We discovered a small café near the station.
+discoveries|n|A|{discovery} things found for the first time|আবিষ্কারসমূহ|Her discoveries changed modern medicine.|The museum displays recent discoveries from the desert.
+discovery|n|I|{discover} finding something for the first time|আবিষ্কার|The discovery of penicillin saved millions of lives.|The ancient ship was an exciting discovery.
+discuss|v|I|to talk about|আলোচনা করা|Let's discuss the plan after lunch.|The class will discuss the novel tomorrow.
+disease|n|I|an illness|রোগ|Mosquitoes can spread disease.|Heart disease is a common health problem.
+displacement|n|A|{displace} being forced out of a place or job|বাস্তুচ্যুতি; স্থানচ্যুতি|The war caused the displacement of thousands of families.|Automation may lead to the displacement of workers.
+display|n/v|I|an arrangement for people to see; to show|প্রদর্শনী; প্রদর্শন করা|The museum has a display of old coins.|Shops display their best goods in the window.
+disrupted|v|A|{disrupt} interrupted; caused trouble|ব্যাহত হয়েছিল|The storm disrupted train services.|Loud music disrupted the meeting.
+dissertation|n|A|a long piece of writing for a university degree|অভিসন্দর্ভ; গবেষণাপত্র|She wrote her dissertation on climate policy.|He spent a year researching his dissertation.
+dissolve|v|A|to mix into a liquid and disappear|দ্রবীভূত হওয়া|Sugar will dissolve quickly in hot tea.|Stir until the salt begins to dissolve.
+distance|n|I|how far apart two places are|দূরত্ব|The distance between the two towns is fifty kilometers.|We could see the mountains in the distance.
+distant|adj|I|far away|দূরবর্তী|They traveled to a distant country.|She heard a distant noise.
+distinguish|v|A|to see the difference between|পার্থক্য করা|Can you distinguish between the two sounds?|It is hard to distinguish the twins.
+distribute|v|A|to share out among people|বিতরণ করা|Volunteers distribute food to poor families.|The power company must distribute energy efficiently.
+district|n|I|an area of a city or country|জেলা; এলাকা|She lives in a quiet district of the capital.|The business district is busy on weekdays.
+diverse|adj|A|varied; including many types|বৈচিত্র্যময়|London has a diverse population.|The museum shows a diverse collection of art.
+diversity|n|A|{diverse} variety|বৈচিত্র্য|The school celebrates cultural diversity.|The diversity of plants in the forest is amazing.
+do|aux/v|E|to perform an action|করা|What do you want for dinner?|Please do your homework before playing.
+doctor|n|E|a person trained to treat sick people|ডাক্তার|The doctor checked my throat.|She wants to become a doctor.
+documentary|n|A|a film about real events|প্রামাণ্যচিত্র|We watched a documentary about whales.|The documentary won an award.
+does|aux/v|E|{do} third-person form of "do"|করে|Where does your brother work?|She does yoga every morning.
+dog|n|E|an animal kept as a pet or for guarding|কুকুর|Our dog is friendly with everyone.|The dog barked at the mail carrier.
+dominance|n|A|{dominant} being more powerful than others|আধিপত্য|The team's dominance lasted ten years.|Lions show dominance by roaring.
+dominant|adj|A|most powerful or important|প্রভাবশালী; প্রধান|Humans are the dominant species on Earth.|Red is the dominant color in the painting.
+dominate|v|A|to control; to be the most important|আধিপত্য করা|Tall buildings dominate the skyline.|One company tries to dominate the market.
+done|v|E|{do} finished; completed|শেষ হয়েছে; করা হয়েছে|Have you done your homework?|The cake is done when it turns golden.
+donuts|n|E|{donut} sweet fried rings of dough|ডোনাট|We bought a box of donuts for the office.|The bakery sells donuts with chocolate on top.
+door|n|E|a movable panel at an entrance|দরজা|Please close the door quietly.|Someone knocked on the door.
+doors|n|E|{door} movable panels at entrances|দরজাগুলো|The doors open at nine o'clock.|The train doors closed suddenly.
+doubt|n/v|I|a feeling of not being sure; to not believe|সন্দেহ|There is no doubt that she will win.|I doubt the bus will come on time.
+down|adv/prep|E|toward a lower place|নিচে|She walked down the stairs.|Write down your answer.
+download|v/n|I|to copy from the internet to a device|ডাউনলোড করা|You can download the app for free.|The download took ten minutes.
+downtown|adv/n|I|in or to the center of a city|শহরের কেন্দ্রস্থলে|We took the bus downtown.|Downtown is full of shops and offices.
+dramatically|adv|A|{dramatic} suddenly and greatly|নাটকীয়ভাবে|Prices rose dramatically last year.|The weather changed dramatically in an hour.
+draw|v|E|to make a picture with a pencil or pen|আঁকা|The children like to draw animals.|Can you draw a map of your town?
+drawer|n|I|a box that slides in and out of furniture|ড্রয়ার|The keys are in the top drawer.|She opened the drawer and took out a pen.
+dream|n/v|E|images in sleep; a hope|স্বপ্ন|I had a strange dream last night.|Her dream is to become a pilot.

@@ -147,8 +147,9 @@ export function buildVocab(
     const contexts: Context[] = [];
     for (const s of a?.sentences ?? []) {
       const c = checkContext(s, m.word, id, 'authored');
-      if (c.context) contexts.push(c.context);
-      else invalidSentences.push({ word: m.word, problem: `${c.errors.join('; ')} — “${s}”` });
+      const giveaway = c.warnings.find((x) => x.startsWith('giveaway'));
+      if (c.context && !giveaway) contexts.push(c.context);
+      else invalidSentences.push({ word: m.word, problem: `${giveaway ?? c.errors.join('; ')} — “${s}”` });
     }
     const set = checkContextSet(contexts, m.word);
     for (const r of set.rejected) invalidSentences.push({ word: m.word, problem: `${r.reason} — “${r.sentence}”` });
