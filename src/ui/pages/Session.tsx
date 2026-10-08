@@ -531,15 +531,19 @@ function Feedback({ session, outcome, busy, onNext }: { session: SessionRecord; 
   const settings = useSettings();
   const bn = settings.language === 'en-bn';
   const nextRef = useRef<HTMLButtonElement>(null);
-  useEffect(() => nextRef.current?.focus(), []);
+  // The feedback appears while the answer is still being saved (button disabled); focus it once enabled.
+  useEffect(() => {
+    if (!busy) nextRef.current?.focus();
+  }, [busy]);
   useNextKey(onNext, !busy);
   const last = session.index >= session.target;
+  const paragraph = outcome.questionId.startsWith('read-complete|');
   const nextBtn = (
     <button ref={nextRef} className="btn primary big" onClick={onNext} disabled={busy}>
-      {last ? 'Finish session' : 'Next question'} <kbd>Enter</kbd>
+      {last ? 'Finish session' : paragraph ? 'Next paragraph' : 'Next question'} <kbd>Enter</kbd>
     </button>
   );
-  if (outcome.questionId.startsWith('read-complete|')) {
+  if (paragraph) {
     return <ParagraphFeedback session={session} outcome={outcome} nextBtn={nextBtn} bn={bn} />;
   }
   const g = outcome.gaps[0];

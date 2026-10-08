@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T14:11:51.125Z",
+ "generatedAt": "2026-10-08T14:28:58.418Z",
  "sources": [
   {
    "id": "guide",
@@ -490,5 +490,5 @@
  "notes": [
   "Bank 1 says 37 more small words filled one gap each, but does not list them. They cannot be imported."
  ],
- "version": "cb8ab9fac582"
+ "version": "c21a0dc0eafa"
 }

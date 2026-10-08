@@ -42,11 +42,18 @@ if (existsSync(parDir)) {
 }
 
 const { data, report } = buildVocab(extraction, authored, paragraphs, errors);
-const body = JSON.stringify({ ...data, version: '' });
+// The version is a hash of the content only, so an unchanged rebuild keeps the
+// previous timestamp and writes identical files.
+const body = JSON.stringify([{ ...data, version: '', generatedAt: '' }, { ...report, generatedAt: '' }]);
 data.version = createHash('sha256').update(body).digest('hex').slice(0, 12);
+const outFile = join(root, 'public/data/vocab.json');
+if (existsSync(outFile)) {
+  const previous = JSON.parse(readFileSync(outFile, 'utf8')) as { version?: string; generatedAt?: string };
+  if (previous.version === data.version && previous.generatedAt) data.generatedAt = report.generatedAt = previous.generatedAt;
+}
 
 mkdirSync(join(root, 'public/data'), { recursive: true });
-writeFileSync(join(root, 'public/data/vocab.json'), JSON.stringify(data));
+writeFileSync(outFile, JSON.stringify(data));
 writeFileSync(join(root, 'public/data/import-report.json'), JSON.stringify({ ...report, version: data.version }, null, 1));
 mkdirSync(join(root, 'data/generated'), { recursive: true });
 writeFileSync(join(root, 'data/generated/import-report.md'), toMarkdown(report, data.version));

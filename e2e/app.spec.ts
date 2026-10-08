@@ -87,7 +87,9 @@ test('TEST 10 + TEST 5 (browser): search a word, master it, and see it move to t
     await expect(page.locator('.q-sentence')).toBeVisible();
     await answerGap(page, 'significant');
     await expect(page.locator('.feedback-head.good')).toContainText('✓ Correct');
+    await expect(page.getByRole('button', { name: /^(Next question|Finish session)/ })).toBeFocused();
     await page.keyboard.press('Enter');
+    if (i === 0) await expect(page.locator('.gap input')).toBeFocused();
   }
   await expect(page.getByRole('heading', { name: 'Session finished' })).toBeVisible();
   await page.goto('/#/completed');
@@ -113,6 +115,7 @@ test('Read and Complete: a paragraph with many gaps is scored word by word', asy
   await page.getByRole('button', { name: 'Submit paragraph' }).click();
   await expect(page.getByText(new RegExp(`/${n} words correct`))).toBeVisible();
   await expect(page.getByText(/Small grammar words:/)).toBeVisible();
+  await expect(page.getByRole('button', { name: /^Next paragraph/ })).toBeFocused();
 });
 
 test('mobile layout has no horizontal scroll and the menu opens', async ({ browser }) => {

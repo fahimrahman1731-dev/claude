@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `cb8ab9fac582`, generated 2026-10-08T14:11:51.125Z.
+Data version `c21a0dc0eafa`, generated 2026-10-08T14:28:58.418Z.
 
 ## Totals
 

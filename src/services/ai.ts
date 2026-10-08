@@ -31,8 +31,11 @@ export async function generateContexts(endpoint: string, word: VocabWord, count 
   } catch (e) {
     throw new Error(`The sentence server could not be reached (${e instanceof Error ? e.message : 'network error'}). Practice still works with the existing sentences.`);
   }
-  if (!res.ok) throw new Error(`The sentence server returned an error (${res.status}). Practice still works with the existing sentences.`);
-  const body = (await res.json()) as { sentences?: unknown };
+  const body = (await res.json().catch(() => ({}))) as { sentences?: unknown; error?: unknown };
+  if (!res.ok) {
+    const detail = typeof body.error === 'string' ? body.error : `It returned error ${res.status}.`;
+    throw new Error(`The sentence server could not help: ${detail} Practice still works with the existing sentences.`);
+  }
   const sentences = Array.isArray(body.sentences) ? body.sentences.filter((s): s is string => typeof s === 'string') : [];
   const rejected: GeneratedContexts['rejected'] = [];
   const fresh: Context[] = [];

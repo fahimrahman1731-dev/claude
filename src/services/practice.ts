@@ -341,7 +341,10 @@ export class PracticeService {
             errorTypes: attempt.errorTypes,
             becameMastered: applied.becameMastered,
             lostMastery: applied.lostMastery,
-            schedule: applied.explanation,
+            schedule:
+              s.focus === 'words' && applied.gap !== undefined
+                ? `${applied.explanation} (In this practice-selected-words session it can come back sooner; normal practice keeps the spacing.)`
+                : applied.explanation,
             usedUkVariant: !!check?.usedUkVariant,
             previousMistakes: mistakes(prev),
           });
