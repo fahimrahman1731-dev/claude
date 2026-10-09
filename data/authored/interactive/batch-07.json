@@ -1,0 +1,1492 @@
+[
+ {
+  "id": "ir-clear-2018",
+  "sourceId": "clear-2018",
+  "genre": "expository",
+  "topic": "technology",
+  "difficulty": "easy",
+  "title": "Electrical cable",
+  "passage": "An electrical cable is made of two or more wires running side by side and bonded, twisted, or braided together to form a single assembly, the ends of which can be connected to two devices, enabling the transfer of electrical signals from one device to the other. Cables are used for a wide range of purposes, and each must be tailored for that purpose. Cables are used extensively in electronic devices for power and signal circuits. Long-distance communication takes place over undersea cables. Power cables are used for bulk transmission of alternating and direct current power, especially using high-voltage cable. Electrical cables are extensively used in building wiring for lighting, power and control circuits permanently installed in buildings. Since all the circuit conductors required can be installed in a cable at one time, installation labor is saved compared to certain other wiring methods.",
+  "sentencesPartEndsAfter": "Cables are used extensively in electronic devices for power and signal circuits.",
+  "blanks": [
+   {
+    "answer": "is",
+    "distractors": [
+     "are",
+     "be",
+     "were",
+     "am"
+    ],
+    "why": "The singular subject 'An electrical cable' needs 'is' in 'is made of'."
+   },
+   {
+    "answer": "wires",
+    "distractors": [
+     "wire",
+     "wiring",
+     "rivers",
+     "chairs"
+    ],
+    "why": "After 'two or more' a plural noun is needed, and a cable is made of wires."
+   },
+   {
+    "answer": "single",
+    "distractors": [
+     "lonely",
+     "alone",
+     "empty",
+     "lazy"
+    ],
+    "why": "'A single assembly' means one unit made from all the wires; 'lonely' and 'alone' describe people's feelings."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "whom",
+     "what",
+     "who",
+     "whose"
+    ],
+    "why": "'The ends of which' refers back to the assembly, a thing, so 'which' is needed."
+   },
+   {
+    "answer": "connected",
+    "distractors": [
+     "connects",
+     "connection",
+     "explained",
+     "borrowed"
+    ],
+    "why": "After 'can be' we need a past participle, and cable ends are 'connected to' devices."
+   },
+   {
+    "answer": "range",
+    "distractors": [
+     "ranges",
+     "ranging",
+     "road",
+     "size"
+    ],
+    "why": "'A wide range of' is a fixed phrase meaning many different kinds."
+   },
+   {
+    "answer": "that",
+    "distractors": [
+     "those",
+     "these",
+     "them",
+     "they"
+    ],
+    "why": "'That purpose' points back to the one purpose of each cable; 'those' and 'these' need a plural noun."
+   },
+   {
+    "answer": "extensively",
+    "distractors": [
+     "extensive",
+     "extremely",
+     "politely",
+     "hungrily"
+    ],
+    "why": "An adverb is needed after 'are used', and 'used extensively' means used a lot."
+   }
+  ],
+  "missingSentence": "Electrical cables are extensively used in building wiring for lighting, power and control circuits permanently installed in buildings.",
+  "missingDistractors": [
+   "In a building this ground is carried to each electrical device on two wires.",
+   "The transformer is often part of the inverter and can't be seen.",
+   "If two computers send data at the same time, a collision will occur."
+  ],
+  "missingWhy": "The last sentence talks about installing conductors and saving installation labor, so the missing sentence must first introduce cables used for wiring inside buildings.",
+  "highlights": [
+   {
+    "question": "Where does communication over long distances take place?",
+    "answer": "over undersea cables"
+   },
+   {
+    "question": "What benefit comes from installing all the conductors in one cable at the same time?",
+    "answer": "installation labor is saved"
+   }
+  ],
+  "idea": {
+   "answer": "Cables are made for many different uses, such as carrying power, sending signals and long-distance communication.",
+   "distractors": [
+    "Ethernet has been the most common way to link computers in a network since the 1990s.",
+    "Copper is used to make cables because it is cheap and easy to stretch.",
+    "An electrical cable is usually made of a single wire that carries power to one device."
+   ],
+   "why": "The passage says cables are used for a wide range of purposes, including power and signal circuits and undersea communication."
+  },
+  "titleDistractors": [
+   "Ethernet",
+   "Voltage",
+   "Copper"
+  ],
+  "titleWhy": "The whole passage explains what an electrical cable is and the many ways cables are used; Ethernet, voltage and copper are only related topics."
+ },
+ {
+  "id": "ir-clear-2195",
+  "sourceId": "clear-2195",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "intermediate",
+  "title": "Lung",
+  "passage": "The lungs are the primary organs of respiration in humans and many other animals including a few fish and some snails. In mammals and most other vertebrates, two lungs are located near the backbone on either side of the heart. Their function in the respiratory system is to extract oxygen from the atmosphere and transfer it into the bloodstream, and to release carbon dioxide from the bloodstream into the atmosphere, in a process of gas exchange. Respiration is driven by different muscular systems in different species. Mammals, reptiles and birds use their musculoskeletal systems to support and foster breathing. In early tetrapods, air was driven into the lungs by the pharyngeal muscles via buccal pumping, a mechanism still seen in amphibians. In humans, the primary muscle that drives breathing is the diaphragm. The lungs also provide airflow that makes vocal sounds including human speech possible.",
+  "sentencesPartEndsAfter": "Their function in the respiratory system is to extract oxygen from the atmosphere and transfer it into the bloodstream, and to release carbon dioxide from the bloodstream into the atmosphere, in a process of gas exchange.",
+  "blanks": [
+   {
+    "answer": "including",
+    "distractors": [
+     "include",
+     "includes",
+     "inclusion",
+     "during"
+    ],
+    "why": "'Including' introduces examples of the animals that have lungs."
+   },
+   {
+    "answer": "located",
+    "distractors": [
+     "location",
+     "locating",
+     "invited",
+     "elected"
+    ],
+    "why": "'Are located near' means 'are found near'; it tells where the lungs are."
+   },
+   {
+    "answer": "either",
+    "distractors": [
+     "neither",
+     "both",
+     "whether",
+     "rather"
+    ],
+    "why": "'On either side' means on each of the two sides; 'both' would need the plural 'sides'."
+   },
+   {
+    "answer": "function",
+    "distractors": [
+     "functional",
+     "functions",
+     "fiction",
+     "failure"
+    ],
+    "why": "'Their function ... is to' tells what the lungs do; the plural 'functions' does not agree with 'is'."
+   },
+   {
+    "answer": "extract",
+    "distractors": [
+     "extraction",
+     "extracts",
+     "explain",
+     "excuse"
+    ],
+    "why": "After 'is to' a base verb is needed; the lungs extract (take) oxygen from the air."
+   },
+   {
+    "answer": "it",
+    "distractors": [
+     "them",
+     "its",
+     "they",
+     "him"
+    ],
+    "why": "'It' is the object of 'transfer' and refers to oxygen, which is singular."
+   },
+   {
+    "answer": "release",
+    "distractors": [
+     "released",
+     "releasing",
+     "repair",
+     "remember"
+    ],
+    "why": "Parallel with 'to extract', 'to release' needs a base verb; the lungs let carbon dioxide out."
+   },
+   {
+    "answer": "exchange",
+    "distractors": [
+     "exchanged",
+     "exchanging",
+     "station",
+     "stove"
+    ],
+    "why": "'Gas exchange' names the process of taking in one gas and giving out another."
+   }
+  ],
+  "missingSentence": "In humans, the primary muscle that drives breathing is the diaphragm.",
+  "missingDistractors": [
+   "Vertebrates can be further divided into mammals, fish, birds, reptiles, and amphibians.",
+   "Asexual reproduction, except for occasional identical twinning, is absent in birds and mammals.",
+   "The number of vertebrates has declined by 52% over the last forty years."
+  ],
+  "missingWhy": "The sentences before describe the muscles that drive breathing in different animals, so the missing sentence names the main breathing muscle in humans.",
+  "highlights": [
+   {
+    "question": "Where are the two lungs found in mammals and most other vertebrates?",
+    "answer": "near the backbone on either side of the heart"
+   },
+   {
+    "question": "How was air moved into the lungs of early tetrapods?",
+    "answer": "by the pharyngeal muscles via buccal pumping"
+   }
+  ],
+  "idea": {
+   "answer": "The lungs take oxygen from the air into the blood and send carbon dioxide out of the body.",
+   "distractors": [
+    "Fish and snails cannot breathe air because none of them have lungs.",
+    "Only mammals use muscles to move air into and out of their lungs.",
+    "Particles from car fumes and smoking can enter the lungs and cause damage."
+   ],
+   "why": "The third sentence says the lungs extract oxygen into the bloodstream and release carbon dioxide into the atmosphere."
+  },
+  "titleDistractors": [
+   "Moving Mucus Matters for Lung Health",
+   "The Evolution of the Atmosphere",
+   "Extinction"
+  ],
+  "titleWhy": "The whole passage describes the lungs: where they are, what they do and which muscles drive breathing; mucus, the atmosphere and extinction are not its subject."
+ },
+ {
+  "id": "ir-clear-2732",
+  "sourceId": "clear-2732",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "Can an Internet Program Help Mothers Lose Weight After Pregnancy?",
+  "passage": "Gaining weight in pregnancy is important for the health of the mother and child. However, after having a baby, if a mother keeps the extra weight she gained during pregnancy, this can be harmful to her long-term health. This study tested whether an Internet weight-loss program could help mothers to lose weight after having a baby. We worked with WIC, which is a program that gives low-income families food and support. Half of the women in the study received regular WIC and half received WIC plus an Internet weight-loss program. We found that the Internet program helped mothers lose five more pounds than regular WIC, and it also helped more mothers get back to the weight that they were before pregnancy. WIC serves half of all US mothers; the Internet weight-loss program in WIC could help many women get closer to the weight they were before pregnancy and avoid weight-related diseases later in life.",
+  "sentencesPartEndsAfter": "We worked with WIC, which is a program that gives low-income families food and support.",
+  "blanks": [
+   {
+    "answer": "important",
+    "distractors": [
+     "importance",
+     "importantly",
+     "impatient",
+     "impolite"
+    ],
+    "why": "An adjective is needed after 'is', and 'important for the health' makes sense here."
+   },
+   {
+    "answer": "However",
+    "distractors": [
+     "Therefore",
+     "Although",
+     "Because",
+     "Unless"
+    ],
+    "why": "'However' shows a contrast: gaining weight is good during pregnancy, but keeping it afterwards can be harmful."
+   },
+   {
+    "answer": "keeps",
+    "distractors": [
+     "keep",
+     "keeping",
+     "sells",
+     "paints"
+    ],
+    "why": "The singular subject 'a mother' needs 'keeps', and a mother 'keeps' (does not lose) the extra weight."
+   },
+   {
+    "answer": "harmful",
+    "distractors": [
+     "harm",
+     "harmed",
+     "harmony",
+     "hungry"
+    ],
+    "why": "'However' signals a problem, so keeping the weight 'can be harmful to her health'; after 'be' we need an adjective, and 'harm' is a noun or verb."
+   },
+   {
+    "answer": "whether",
+    "distractors": [
+     "weather",
+     "either",
+     "neither",
+     "what"
+    ],
+    "why": "'Tested whether' introduces a yes/no question; 'weather' sounds the same but means rain and sun."
+   },
+   {
+    "answer": "lose",
+    "distractors": [
+     "loose",
+     "lost",
+     "loss",
+     "miss"
+    ],
+    "why": "After 'to' a base verb is needed: 'lose weight'; 'loose' is an adjective and 'loss' is a noun."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "what",
+     "where",
+     "whom"
+    ],
+    "why": "'Which' adds information about WIC, a program (a thing), not a person."
+   },
+   {
+    "answer": "gives",
+    "distractors": [
+     "give",
+     "giving",
+     "takes",
+     "wants"
+    ],
+    "why": "The singular 'a program that' needs 'gives', and WIC gives families food and support."
+   }
+  ],
+  "missingSentence": "Half of the women in the study received regular WIC and half received WIC plus an Internet weight-loss program.",
+  "missingDistractors": [
+   "Birth mothers who do not receive regular prenatal care are at higher risk of having a baby with low birth weight.",
+   "For example, folate is a B vitamin particularly important to fetal development and readily available in leafy green vegetables.",
+   "Researchers have investigated the relationship between premature labor and socioeconomic status, food insecurity, and stress."
+  ],
+  "missingWhy": "The next sentence compares the Internet program with 'regular WIC', so the missing sentence must explain that the women were split into these two groups.",
+  "highlights": [
+   {
+    "question": "How much more weight did mothers in the Internet program lose than mothers with regular WIC?",
+    "answer": "five more pounds"
+   },
+   {
+    "question": "What illnesses could the program help women avoid, and when?",
+    "answer": "weight-related diseases later in life"
+   }
+  ],
+  "idea": {
+   "answer": "An Internet weight-loss program helped new mothers lose more weight than regular WIC alone.",
+   "distractors": [
+    "Women should try not to gain any weight at all while they are pregnant.",
+    "Mothers who do not get regular prenatal care often have babies with low birth weight.",
+    "Most mothers in the study lost all of their pregnancy weight within one month."
+   ],
+   "why": "The study found that the Internet program helped mothers lose five more pounds than regular WIC."
+  },
+  "titleDistractors": [
+   "Behaviors for a Healthy Pregnancy",
+   "Premature Birth",
+   "Care of Infants with Low Birth Weight"
+  ],
+  "titleWhy": "The whole passage describes a study that tested whether an Internet program helps mothers lose weight after having a baby; the other titles are about pregnancy and babies."
+ },
+ {
+  "id": "ir-clear-2342",
+  "sourceId": "clear-2342",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "easy",
+  "title": "Rainforest",
+  "passage": "The canopy is like a huge green roof over the forest. The trees grow up thin and straight, like pillars seeking the sun. They do not put out branches until they are very tall. Then, they spread out like an umbrella in the sunlight. The trees are so close together that very little light penetrates through to the lower layers. Many kinds of monkeys, birds, and insects live in the layer. The animals that call this layer home often never touch the ground throughout their entire lives. They find everything they need existing within the canopy. Water can be accessed from the boles of trees, if not, the leaves and epiphytes that grow in the canopy can supply that need. The animals eat the leaves and fruit of the trees, insects, or other animals. The tall canopy trees must be able to reach the sunlight high in the air and still get nutrients from the thin soil on the forest floor. Their roots do not go deep into the soil because there is nothing there for the plants to reach.",
+  "sentencesPartEndsAfter": "The animals that call this layer home often never touch the ground throughout their entire lives.",
+  "blanks": [
+   {
+    "answer": "roof",
+    "distractors": [
+     "roofs",
+     "floor",
+     "root",
+     "basement"
+    ],
+    "why": "The canopy is high 'over the forest', like a roof; a floor or basement is at the bottom."
+   },
+   {
+    "answer": "until",
+    "distractors": [
+     "during",
+     "between",
+     "despite",
+     "toward"
+    ],
+    "why": "'Not ... until' means the branches only come when the trees are very tall."
+   },
+   {
+    "answer": "spread",
+    "distractors": [
+     "spreads",
+     "spreading",
+     "sit",
+     "sleep"
+    ],
+    "why": "The plural 'they' needs the base verb, and branches 'spread out' like an open umbrella."
+   },
+   {
+    "answer": "so",
+    "distractors": [
+     "such",
+     "too",
+     "very",
+     "as"
+    ],
+    "why": "'So + adjective + that' shows a result: the trees are so close that little light gets through."
+   },
+   {
+    "answer": "little",
+    "distractors": [
+     "few",
+     "less",
+     "many",
+     "small"
+    ],
+    "why": "'Light' is uncountable, so we say 'very little light', not 'very few light'."
+   },
+   {
+    "answer": "kinds",
+    "distractors": [
+     "kind",
+     "kindness",
+     "kings",
+     "minds"
+    ],
+    "why": "After 'Many' a plural noun is needed: 'many kinds of' means many types of."
+   },
+   {
+    "answer": "live",
+    "distractors": [
+     "lives",
+     "living",
+     "leave",
+     "life"
+    ],
+    "why": "The plural subject 'monkeys, birds, and insects' needs the verb 'live'."
+   },
+   {
+    "answer": "home",
+    "distractors": [
+     "house",
+     "housing",
+     "hole",
+     "hotel"
+    ],
+    "why": "'Call a place home' is a fixed phrase meaning to live there."
+   }
+  ],
+  "missingSentence": "They find everything they need existing within the canopy.",
+  "missingDistractors": [
+   "Here there is very little space between trees, resulting in thick layers of leaf covering that prevent much sunlight from reaching the forest floor.",
+   "Centered on the Congo River Basin, the rainforest is densest in the present-day central state of the Democratic Republic of Congo.",
+   "Elephants swim in rivers when they are hot."
+  ],
+  "missingWhy": "The animals never touch the ground, so they must find everything they need in the canopy; the next sentence then explains how they meet 'that need' for water.",
+  "highlights": [
+   {
+    "question": "What do the animals living in the canopy eat?",
+    "answer": "the leaves and fruit of the trees, insects, or other animals"
+   },
+   {
+    "question": "Why do the roots of the tall canopy trees stay close to the surface?",
+    "answer": "because there is nothing there for the plants to reach"
+   }
+  ],
+  "idea": {
+   "answer": "Many animals that live in the canopy never touch the ground in their whole lives.",
+   "distractors": [
+    "Canopy trees have long roots that reach deep into rich soil.",
+    "So much sunlight reaches the forest floor that many plants grow there.",
+    "The thickest rainforest in Africa is found around the Congo River."
+   ],
+   "why": "The passage says the animals that call the canopy home often never touch the ground throughout their entire lives."
+  },
+  "titleDistractors": [
+   "Roots: Support for the Plant",
+   "Geographic Diversity on the African Continent",
+   "Sanderlings: Traveling Birds"
+  ],
+  "titleWhy": "The passage describes the rainforest canopy, its tall trees and the animals living in it; roots are only mentioned at the end, and Africa and sanderlings are not discussed."
+ },
+ {
+  "id": "ir-clear-3400",
+  "sourceId": "clear-3400",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "advanced",
+  "title": "How Olokwango Hill Lost Its Springs",
+  "titleWritten": true,
+  "passage": "Olokwango hill stood smiling at the middle of Kwere Plains. From its side, came springs which joined downhill to form River Temu. Its waters were a gift to the sheep and goats of the area as well as the deer that dwelt in the plains.\n\nThings were all well until Matata became headman. He ordered a path to be cleared from the top of the hill to the foot so that he could climb uphill easily and roll gently down to the foot. Olokwango hill was angry with the damage to his beard, but he was patient.\n\nDuring the weekend, Matata's children and their friends would climb uphill to play. They would run all over the place, breaking twigs and branches, lighting fires for their games, which they would later leave burning.\n\nOver time, Olokwango lost patience. The dimples became smaller and smaller as his face turned into ugly wrinkles. At last the springs were no more. The deer in the plains migrated because there was no more tall green grass to play in. The sheep and goats grew thinner and thinner. Everyone felt the sadness of Olokwango hill.",
+  "sentencesPartEndsAfter": "Olokwango hill was angry with the damage to his beard, but he was patient.",
+  "blanks": [
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "what",
+     "whom",
+     "whose"
+    ],
+    "why": "'Which' introduces a clause about the springs, which are things, not people."
+   },
+   {
+    "answer": "form",
+    "distractors": [
+     "from",
+     "forms",
+     "formal",
+     "farm"
+    ],
+    "why": "After 'to' a base verb is needed: the springs joined 'to form' (make) a river."
+   },
+   {
+    "answer": "gift",
+    "distractors": [
+     "gifts",
+     "gifted",
+     "guilt",
+     "gate"
+    ],
+    "why": "After 'a' a singular noun is needed; the water was a gift (something good) for the animals."
+   },
+   {
+    "answer": "until",
+    "distractors": [
+     "during",
+     "despite",
+     "between",
+     "through"
+    ],
+    "why": "'All well until' means things were good up to the moment Matata became headman."
+   },
+   {
+    "answer": "path",
+    "distractors": [
+     "bath",
+     "paths",
+     "past",
+     "plate"
+    ],
+    "why": "Something cleared from the top of a hill to the foot so he can climb is a path."
+   },
+   {
+    "answer": "easily",
+    "distractors": [
+     "easy",
+     "ease",
+     "eastern",
+     "easing"
+    ],
+    "why": "An adverb is needed to describe how he would climb: 'climb uphill easily'."
+   },
+   {
+    "answer": "angry",
+    "distractors": [
+     "anger",
+     "angrily",
+     "hungry",
+     "empty"
+    ],
+    "why": "After 'was' an adjective is needed, and 'angry with the damage' fits the hill's feeling."
+   },
+   {
+    "answer": "but",
+    "distractors": [
+     "so",
+     "because",
+     "or",
+     "unless"
+    ],
+    "why": "'But' shows contrast: the hill was angry, yet he stayed patient."
+   }
+  ],
+  "missingSentence": "During the weekend, Matata's children and their friends would climb uphill to play.",
+  "missingDistractors": [
+   "She had been sleeping outside for over a week.",
+   "If he couldn't find a wife, perhaps he could make one?",
+   "They were going home after spending the whole day in the fields."
+  ],
+  "missingWhy": "The next sentence says 'They would run all over the place', so the missing sentence must introduce the children who climbed up the hill to play.",
+  "highlights": [
+   {
+    "question": "Why did Matata want a path cleared from the top of the hill to the bottom?",
+    "answer": "so that he could climb uphill easily and roll gently down to the foot"
+   },
+   {
+    "question": "Why did the deer leave the plains?",
+    "answer": "because there was no more tall green grass to play in"
+   }
+  ],
+  "idea": {
+   "answer": "After people damaged the hill, its springs dried up and the animals of the plains suffered.",
+   "distractors": [
+    "Matata planted new trees on the hill to make Olokwango happy again.",
+    "The children always put out their fires before they went home.",
+    "The sheep and goats grew fat because the river gave them plenty of water."
+   ],
+   "why": "The passage shows how the path and the children's fires damaged the hill until the springs dried up, the deer left and the sheep and goats grew thin."
+  },
+  "titleDistractors": [
+   "Searching for the spirit of Spring",
+   "The tree wife",
+   "How Ant saved Dove"
+  ],
+  "titleWhy": "The whole passage tells how Olokwango hill was damaged until its springs disappeared; nobody searches for spring, makes a wife or saves a dove."
+ },
+ {
+  "id": "ir-clear-3417",
+  "sourceId": "clear-3417",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "The baboons that went this way and that",
+  "passage": "Other families noticed how well the hill family lived. \"It is a good life up in the hills,\" said the husband. \"You should come there too.\" Soon the other families left the flat land and went up to the hills. Each family found a cave to live in, and felt warm and secure. Soon the children became very quick at climbing rocks, and finding fruit in the trees. They could swing in the branches almost as well as any monkey. Slowly, things began to change. The children talked less, and grunted more. Then the adults noticed that their noses were getting bigger and that they were growing more hair. Every time they looked at one another they saw that their teeth were longer. They started to walk on four legs. They became a new creature that no-one had seen before in that place. This was the creature which people now call the baboon.",
+  "sentencesPartEndsAfter": "They could swing in the branches almost as well as any monkey.",
+  "blanks": [
+   {
+    "answer": "well",
+    "distractors": [
+     "good",
+     "nice",
+     "better",
+     "goodness"
+    ],
+    "why": "An adverb is needed to describe how they 'lived': 'how well', not 'how good'."
+   },
+   {
+    "answer": "said",
+    "distractors": [
+     "say",
+     "told",
+     "talked",
+     "telling"
+    ],
+    "why": "After a quotation, 'said the husband' tells us who spoke; 'told' and 'talked' are not used this way."
+   },
+   {
+    "answer": "too",
+    "distractors": [
+     "to",
+     "two",
+     "either",
+     "neither"
+    ],
+    "why": "'Too' means 'also' at the end of a sentence; 'to' and 'two' only sound the same."
+   },
+   {
+    "answer": "left",
+    "distractors": [
+     "leave",
+     "leaves",
+     "lifted",
+     "leaving"
+    ],
+    "why": "The story is in the past, like 'went', so 'left the flat land' is needed."
+   },
+   {
+    "answer": "Each",
+    "distractors": [
+     "All",
+     "Both",
+     "Many",
+     "Several"
+    ],
+    "why": "'Family' is singular, so only 'Each' fits; 'All', 'Both', 'Many' and 'Several' need plural nouns."
+   },
+   {
+    "answer": "warm",
+    "distractors": [
+     "warmth",
+     "warmly",
+     "worm",
+     "warn"
+    ],
+    "why": "After 'felt' an adjective is needed, and 'warm and secure' describes life in the cave."
+   },
+   {
+    "answer": "quick",
+    "distractors": [
+     "quickly",
+     "quickness",
+     "quiet",
+     "quite"
+    ],
+    "why": "After 'became very' an adjective is needed: 'quick at climbing' means good and fast at it."
+   },
+   {
+    "answer": "swing",
+    "distractors": [
+     "swings",
+     "swinging",
+     "swim",
+     "sink"
+    ],
+    "why": "After 'could' a base verb is needed, and monkeys 'swing' in branches."
+   }
+  ],
+  "missingSentence": "They became a new creature that no-one had seen before in that place.",
+  "missingDistractors": [
+   "Eventually, curiosity got the better of the boys.",
+   "But there were several huge baboons in the troop.",
+   "When the tyrant jumped the others jumped, when he sat down the others sat down."
+  ],
+  "missingWhy": "The last sentence says 'This was the creature', so the missing sentence must first say that they became a new creature.",
+  "highlights": [
+   {
+    "question": "What did each family find after moving to the hills?",
+    "answer": "a cave to live in"
+   },
+   {
+    "question": "How did the children's way of speaking begin to change?",
+    "answer": "talked less, and grunted more"
+   }
+  ],
+  "idea": {
+   "answer": "The families who moved to the hills slowly changed into the animal now called the baboon.",
+   "distractors": [
+    "A cruel baboon leader made all the other baboons copy everything he did.",
+    "The families went back to the flat land because life in the caves was too hard.",
+    "The children taught the monkeys how to climb rocks and find fruit."
+   ],
+   "why": "The passage describes how the families' bodies and habits changed until they became the creature people now call the baboon."
+  },
+  "titleDistractors": [
+   "Baboon tyrant",
+   "Monkey and the shoes",
+   "How Zebra got his stripes"
+  ],
+  "titleWhy": "The whole passage tells how the families who moved to the hills became baboons; it is not about a baboon leader, a monkey or a zebra."
+ },
+ {
+  "id": "ir-clear-3362",
+  "sourceId": "clear-3362",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Queen of Soweto: The Story of Basetsana Kumalo",
+  "passage": "When she was a child, Bassie was very shy. She liked to sing and dance in her room on her own. One day at school netball practice, the coach told two girls to pick teams. Bassie stood on the edge of the field hoping someone would say, \"Come play with us!\" But nobody wanted her on their team. Little did they know, Bassie would become one of the most popular girls in the country.\n\nOn weekends, she and her brother and sisters helped their teacher mom and bus driver dad to pay the bills. They made sandwiches to sell at local soccer matches. They tried to sell everything as fast as they could so they had time to play with the other children when the game was over.\n\nBy the time Bassie turned 16, she was a beautiful young woman. She was so beautiful that she won two beauty competitions in one year: Miss Soweto and Miss Black South Africa. But Bassie was not only beautiful on the outside. She was also beautiful on the inside. Even though she was a beauty queen, she still cared about the community where she grew up.",
+  "sentencesPartEndsAfter": "Little did they know, Bassie would become one of the most popular girls in the country.",
+  "blanks": [
+   {
+    "answer": "shy",
+    "distractors": [
+     "shyly",
+     "shyness",
+     "sky",
+     "shoe"
+    ],
+    "why": "After 'was very' an adjective is needed, and 'shy' fits a girl who sang and danced alone."
+   },
+   {
+    "answer": "own",
+    "distractors": [
+     "alone",
+     "self",
+     "only",
+     "lonely"
+    ],
+    "why": "'On her own' is a fixed phrase meaning alone."
+   },
+   {
+    "answer": "told",
+    "distractors": [
+     "said",
+     "talked",
+     "spoke",
+     "tell"
+    ],
+    "why": "'Told someone to do something' is the right pattern; 'said' and 'talked' cannot be followed by 'two girls to'."
+   },
+   {
+    "answer": "hoping",
+    "distractors": [
+     "hope",
+     "hoped",
+     "hopping",
+     "helping"
+    ],
+    "why": "'Stood ... hoping' describes what she was wishing while she stood there."
+   },
+   {
+    "answer": "But",
+    "distractors": [
+     "Because",
+     "Although",
+     "Unless",
+     "Or"
+    ],
+    "why": "'But' shows contrast: she hoped to be picked, yet nobody wanted her."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they",
+     "them",
+     "theirs"
+    ],
+    "why": "'Their team' needs the possessive 'their'; 'there' and 'they' only sound similar."
+   },
+   {
+    "answer": "become",
+    "distractors": [
+     "became",
+     "becomes",
+     "becoming",
+     "welcome"
+    ],
+    "why": "After 'would' a base verb is needed: 'would become'."
+   },
+   {
+    "answer": "most",
+    "distractors": [
+     "mostly",
+     "much",
+     "many",
+     "best"
+    ],
+    "why": "'One of the most popular' is the superlative pattern; 'mostly' is an adverb and cannot come before 'popular' here."
+   }
+  ],
+  "missingSentence": "They made sandwiches to sell at local soccer matches.",
+  "missingDistractors": [
+   "The boys told her to go and play netball.",
+   "The coach was worried because his best player was sick and could not play.",
+   "We went home really tired, but the practice was good."
+  ],
+  "missingWhy": "The next sentence says they tried to 'sell everything' before 'the game was over', so the missing sentence must say what they sold and where.",
+  "highlights": [
+   {
+    "question": "Whom did Bassie and her brother and sisters help on weekends?",
+    "answer": "their teacher mom and bus driver dad"
+   },
+   {
+    "question": "Which two beauty competitions did Bassie win in the same year?",
+    "answer": "Miss Soweto and Miss Black South Africa"
+   }
+  ],
+  "idea": {
+   "answer": "Bassie was a shy child who grew up to become a beauty queen and still cared about her community.",
+   "distractors": [
+    "Bassie was picked first for the netball team because everyone wanted to play with her.",
+    "Both of Bassie's parents worked as teachers at her school.",
+    "Bassie stopped caring about her community after she became a beauty queen."
+   ],
+   "why": "The passage says Bassie was very shy as a child, later won two beauty competitions, and still cared about the community where she grew up."
+  },
+  "titleDistractors": [
+   "Andiswa soccer star",
+   "Chiefs Versus Aces",
+   "The tree wife"
+  ],
+  "titleWhy": "The whole passage tells the life story of Basetsana (Bassie) Kumalo from shy child to beauty queen; soccer is only a small detail."
+ },
+ {
+  "id": "ir-ostx-astronomy-2e-m59760-0",
+  "sourceId": "ostx-astronomy-2e-m59760-0",
+  "genre": "expository",
+  "topic": "astronomy",
+  "difficulty": "advanced",
+  "title": "The Universe of the Very Small",
+  "passage": "The foregoing discussion has likely impressed on you that the universe is extraordinarily large and extraordinarily empty. On average, it is 10,000 times more empty than our Galaxy. Yet, as we have seen, even the Galaxy is mostly empty space. The air we breathe has about 1019 atoms in each cubic centimeter—and we usually think of air as empty space. In the interstellar gas of the Galaxy, there is about one atom in every cubic centimeter. Intergalactic space is filled so sparsely that to find one atom, on average, we must search through a cubic meter of space. Most of the universe is fantastically empty; places that are dense, such as the human body, are tremendously rare.\n\nEven our most familiar solids are mostly space. If we could take apart such a solid, piece by piece, we would eventually reach the tiny molecules from which it is formed. Molecules are the smallest particles into which any matter can be divided while still retaining its chemical properties. A molecule of water, for example, consists of two hydrogen atoms and one oxygen atom bonded together.",
+  "sentencesPartEndsAfter": "Intergalactic space is filled so sparsely that to find one atom, on average, we must search through a cubic meter of space.",
+  "blanks": [
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "which",
+     "where",
+     "whom"
+    ],
+    "why": "'Impressed on you that ...' introduces the idea you have learned, so 'that' is needed."
+   },
+   {
+    "answer": "times",
+    "distractors": [
+     "time",
+     "timed",
+     "timely",
+     "tides"
+    ],
+    "why": "'10,000 times more' compares amounts; after a number we need the plural 'times'."
+   },
+   {
+    "answer": "than",
+    "distractors": [
+     "then",
+     "that",
+     "as",
+     "from"
+    ],
+    "why": "A comparison with 'more empty' needs 'than'; 'then' is about time."
+   },
+   {
+    "answer": "breathe",
+    "distractors": [
+     "breath",
+     "breathes",
+     "breed",
+     "bread"
+    ],
+    "why": "'We breathe' needs the verb; 'breath' is the noun."
+   },
+   {
+    "answer": "think",
+    "distractors": [
+     "thank",
+     "thinks",
+     "thing",
+     "thick"
+    ],
+    "why": "'Think of X as Y' is a fixed pattern meaning to consider X to be Y."
+   },
+   {
+    "answer": "every",
+    "distractors": [
+     "all",
+     "many",
+     "both",
+     "few"
+    ],
+    "why": "'Every' goes with a singular noun ('cubic centimeter'); 'all', 'many', 'both' and 'few' need plurals."
+   },
+   {
+    "answer": "sparsely",
+    "distractors": [
+     "sparse",
+     "spare",
+     "densely",
+     "sparkly"
+    ],
+    "why": "An adverb is needed after 'filled so', and 'sparsely' (thinly) matches having to search a whole cubic meter to find one atom."
+   },
+   {
+    "answer": "search",
+    "distractors": [
+     "searched",
+     "searching",
+     "research",
+     "rest"
+    ],
+    "why": "After 'must' a base verb is needed, and we 'search through' space to find an atom."
+   }
+  ],
+  "missingSentence": "If we could take apart such a solid, piece by piece, we would eventually reach the tiny molecules from which it is formed.",
+  "missingDistractors": [
+   "Moving around this proton is a single electron.",
+   "Helium, for example, is the second-most abundant element in the Sun.",
+   "Making an ion from an atom or molecule is called ionization."
+  ],
+  "missingWhy": "'Such a solid' refers back to the familiar solids in the sentence before, and the 'molecules' it mentions are explained in the next sentence.",
+  "highlights": [
+   {
+    "question": "How much matter is there in the gas between the stars of our Galaxy?",
+    "answer": "about one atom in every cubic centimeter"
+   },
+   {
+    "question": "What is a water molecule made of?",
+    "answer": "two hydrogen atoms and one oxygen atom"
+   }
+  ],
+  "idea": {
+   "answer": "Most of the universe is almost completely empty, and dense places like the human body are very rare.",
+   "distractors": [
+    "Solid objects are packed so tightly that they contain almost no empty space.",
+    "Our Galaxy is about 10,000 times emptier than the universe as a whole.",
+    "There are more atoms in each cubic centimeter of intergalactic space than in the air we breathe."
+   ],
+   "why": "The passage says most of the universe is fantastically empty and that dense places, such as the human body, are tremendously rare."
+  },
+  "titleDistractors": [
+   "The Atomic Nucleus",
+   "Ion",
+   "Carbon Bonding"
+  ],
+  "titleWhy": "The passage moves from the emptiness of the universe down to the tiny molecules that matter is made of; atomic nuclei, ions and carbon bonds are not discussed."
+ },
+ {
+  "id": "ir-ostx-introduction-anthropology-m00014-3",
+  "sourceId": "ostx-introduction-anthropology-m00014-3",
+  "genre": "expository",
+  "topic": "anthropology",
+  "difficulty": "advanced",
+  "title": "Modeling",
+  "passage": "Many anthropologists create models to help others visualize and understand their research findings. Models help people understand the relationships between various points of data and can include qualitative elements as well. One very familiar model is a map. Maps are constructed from many thousands of data points projected onto a flat surface to help people understand distances and relationships. Maps are typically two-dimensional, but we are of course all familiar with the three-dimensional version of a world map known as a globe. Maps and globes are built on data points, but they also include qualitative information, such as the colors used to represent various features and the human-assigned names of various geographical features. Other familiar types of models include graphs, calendars, timelines, and charts. GPS is also a significant modeling tool today.\n\nGPS, or the Global Position System, is increasingly used in archaeology. A model of a research site can be created using computer programs and a series of GPS coordinates. Any artifacts found or important features identified within the site can mapped to their exact locations within this model.",
+  "sentencesPartEndsAfter": "Maps are typically two-dimensional, but we are of course all familiar with the three-dimensional version of a world map known as a globe.",
+  "blanks": [
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they",
+     "them",
+     "theirs"
+    ],
+    "why": "'Their research findings' needs the possessive 'their' (the anthropologists' findings)."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "beneath",
+     "behind",
+     "beside",
+     "during"
+    ],
+    "why": "'Relationships between' things is the usual collocation."
+   },
+   {
+    "answer": "include",
+    "distractors": [
+     "includes",
+     "inclusion",
+     "including",
+     "conclude"
+    ],
+    "why": "After 'can' a base verb is needed: 'can include' means can contain."
+   },
+   {
+    "answer": "familiar",
+    "distractors": [
+     "family",
+     "familiarly",
+     "familiarity",
+     "famine"
+    ],
+    "why": "An adjective is needed before 'model': a map is a very familiar (well-known) model."
+   },
+   {
+    "answer": "constructed",
+    "distractors": [
+     "construction",
+     "constructive",
+     "constructing",
+     "conducted"
+    ],
+    "why": "'Are constructed from' is a passive verb meaning are built from."
+   },
+   {
+    "answer": "flat",
+    "distractors": [
+     "flatly",
+     "flatten",
+     "float",
+     "flight"
+    ],
+    "why": "An adjective is needed before 'surface', and maps are drawn on a flat (two-dimensional) surface."
+   },
+   {
+    "answer": "but",
+    "distractors": [
+     "so",
+     "because",
+     "or",
+     "unless"
+    ],
+    "why": "'But' shows contrast between two-dimensional maps and the three-dimensional globe."
+   },
+   {
+    "answer": "known",
+    "distractors": [
+     "knew",
+     "know",
+     "knows",
+     "knowledge"
+    ],
+    "why": "'Known as' is a fixed phrase meaning 'called'."
+   }
+  ],
+  "missingSentence": "A model of a research site can be created using computer programs and a series of GPS coordinates.",
+  "missingDistractors": [
+   "Features such as trails, roads, and house pits are documented and included in a full set of field notes.",
+   "A genetic map is an illustration that lists genes and their location on a chromosome.",
+   "Statistics created from quantitative data help researchers understand trends and changes over time."
+  ],
+  "missingWhy": "The last sentence refers to 'the site' and 'this model', so the missing sentence must explain how a model of a research site is made with GPS.",
+  "highlights": [
+   {
+    "question": "What kinds of qualitative information do maps and globes include?",
+    "answer": "the colors used to represent various features and the human-assigned names of various geographical features"
+   },
+   {
+    "question": "What can researchers place at their exact locations in a GPS model of a site?",
+    "answer": "Any artifacts found or important features identified within the site"
+   }
+  ],
+  "idea": {
+   "answer": "Anthropologists use models such as maps, globes and GPS to help people understand their research.",
+   "distractors": [
+    "Maps are built only from numbers and contain no qualitative information.",
+    "Archaeologists have stopped using GPS because it cannot show exact locations.",
+    "Most anthropologists avoid models because they make research findings harder to understand."
+   ],
+   "why": "The passage explains that anthropologists create models, such as maps, globes and GPS models, to help others understand their findings."
+  },
+  "titleDistractors": [
+   "Archaeological Dating Methods",
+   "Mapping Genomes",
+   "Differences between Quantitative and Qualitative Information"
+  ],
+  "titleWhy": "The whole passage is about the models anthropologists use, such as maps, globes and GPS models; it does not discuss dating, genomes or the difference between kinds of data."
+ },
+ {
+  "id": "ir-ostx-lifespan-development-m00039-10",
+  "sourceId": "ostx-lifespan-development-m00039-10",
+  "genre": "expository",
+  "topic": "psychology",
+  "difficulty": "advanced",
+  "title": "Asthma in Middle Childhood",
+  "titleWritten": true,
+  "passage": "Although middle childhood is generally a healthy period for many children, there are some common health issues that are often seen during middle childhood, such as asthma and diabetes.\n\nAsthma is a life-long, chronic lung disease that causes inflammation in the airways, making it difficult to breathe. Asthma is a serious public health problem globally. It affects about 8 percent of children in the United States. Although there is no known single cause of asthma, a child is more likely to have asthma if other family members have asthma, if they have other allergic conditions, if they live in urban areas or areas with high air pollution, and if they have obesity. Avoiding common triggers of asthma, including air pollution and allergies, can reduce the symptoms of asthma such as shortness of breath and tightness in the chest. Although it can typically be medically managed, uncontrolled asthma is one of the leading causes of school absences among children and can also interfere with sleep and physical activity.",
+  "sentencesPartEndsAfter": "It affects about 8 percent of children in the United States.",
+  "blanks": [
+   {
+    "answer": "healthy",
+    "distractors": [
+     "health",
+     "healthily",
+     "heal",
+     "wealthy"
+    ],
+    "why": "An adjective is needed before 'period': middle childhood is generally a healthy time."
+   },
+   {
+    "answer": "there",
+    "distractors": [
+     "their",
+     "they",
+     "them",
+     "then"
+    ],
+    "why": "'There are' introduces something that exists; 'their' and 'they' cannot start this clause."
+   },
+   {
+    "answer": "during",
+    "distractors": [
+     "while",
+     "among",
+     "between",
+     "along"
+    ],
+    "why": "'During' + a period of time ('middle childhood'); 'while' needs a clause with a verb."
+   },
+   {
+    "answer": "such",
+    "distractors": [
+     "so",
+     "much",
+     "like",
+     "each"
+    ],
+    "why": "'Such as' introduces examples: asthma and diabetes."
+   },
+   {
+    "answer": "causes",
+    "distractors": [
+     "cause",
+     "causing",
+     "because",
+     "causal"
+    ],
+    "why": "The singular 'a ... disease that' needs the verb 'causes'; 'because' and 'causal' are not verbs."
+   },
+   {
+    "answer": "difficult",
+    "distractors": [
+     "difficulty",
+     "different",
+     "easy",
+     "differently"
+    ],
+    "why": "'Making it difficult to breathe' is the pattern 'make it + adjective + to'; inflamed airways make breathing hard."
+   },
+   {
+    "answer": "serious",
+    "distractors": [
+     "seriously",
+     "seriousness",
+     "series",
+     "furious"
+    ],
+    "why": "An adjective is needed before 'public health problem': asthma is a serious problem."
+   },
+   {
+    "answer": "affects",
+    "distractors": [
+     "effects",
+     "affect",
+     "affection",
+     "effective"
+    ],
+    "why": "'Affects' is the verb (has an effect on); 'effects' is usually a noun, and 'It' needs the -s form."
+   }
+  ],
+  "missingSentence": "Avoiding common triggers of asthma, including air pollution and allergies, can reduce the symptoms of asthma such as shortness of breath and tightness in the chest.",
+  "missingDistractors": [
+   "In the short term, poor nutrition is related to excess weight gain and constipation.",
+   "After we eat sugar, our bodies release a hormone called insulin, which helps muscle and fat cells to take up and store sugar.",
+   "As long as the fat tissue can store extra energy, everything is fine."
+  ],
+  "missingWhy": "The sentence before lists causes such as air pollution and allergies; the missing sentence says avoiding these triggers reduces symptoms, and the next sentence goes on to how asthma is managed.",
+  "highlights": [
+   {
+    "question": "Where in the body does asthma cause inflammation?",
+    "answer": "in the airways"
+   },
+   {
+    "question": "Apart from school attendance, what can poorly controlled asthma disrupt?",
+    "answer": "sleep and physical activity"
+   }
+  ],
+  "idea": {
+   "answer": "Asthma is a common lung disease in middle childhood, but it can usually be managed with medical care.",
+   "distractors": [
+    "Asthma is caused by a single gene that children get from their parents.",
+    "Most children in middle childhood have diabetes because they eat too much sugar.",
+    "Children with asthma should stop all physical activity to avoid breathing problems."
+   ],
+   "why": "The passage says asthma is a common health issue in middle childhood and that it can typically be medically managed."
+  },
+  "titleDistractors": [
+   "Nutrition",
+   "Mental Health Risks and Disorders",
+   "From Mice to Humans: The Study of Obesity"
+  ],
+  "titleWhy": "The passage is mainly about asthma in middle childhood: its causes, its symptoms and its effects on school, sleep and activity; it does not discuss nutrition, mental health or obesity research."
+ },
+ {
+  "id": "ir-ostx-astronomy-2e-m59765-4",
+  "sourceId": "ostx-astronomy-2e-m59765-4",
+  "genre": "expository",
+  "topic": "astronomy",
+  "difficulty": "advanced",
+  "title": "Galileo and the Beginning of Modern Science",
+  "passage": "Many of the modern scientific concepts of observation, experimentation, and the testing of hypotheses through careful quantitative measurements were pioneered by a man who lived nearly a century after Copernicus. Galileo Galilei, a contemporary of Shakespeare, was born in Pisa. Like Copernicus, he began training for a medical career, but he had little interest in the subject and later switched to mathematics. He held faculty positions at the University of Pisa and the University of Padua, and eventually became mathematician to the Grand Duke of Tuscany in Florence.\n\nGalileo’s greatest contributions were in the field of mechanics, the study of motion and the actions of forces on bodies. It was familiar to all persons then, as it is to us now, that if something is at rest, it tends to remain at rest and requires some outside influence to start it in motion. Rest was thus generally regarded as the natural state of matter. Galileo showed, however, that rest is no more natural than motion.",
+  "sentencesPartEndsAfter": "He held faculty positions at the University of Pisa and the University of Padua, and eventually became mathematician to the Grand Duke of Tuscany in Florence.",
+  "blanks": [
+   {
+    "answer": "careful",
+    "distractors": [
+     "carefully",
+     "careless",
+     "caring",
+     "cared"
+    ],
+    "why": "An adjective is needed before 'measurements', and science needs careful (exact) measurements."
+   },
+   {
+    "answer": "were",
+    "distractors": [
+     "was",
+     "is",
+     "has",
+     "be"
+    ],
+    "why": "The plural subject 'Many of the ... concepts' needs the past plural 'were'."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whom",
+     "whose",
+     "what"
+    ],
+    "why": "'Who' is the subject of 'lived' and refers to a man, a person."
+   },
+   {
+    "answer": "century",
+    "distractors": [
+     "centuries",
+     "central",
+     "centimeter",
+     "cent"
+    ],
+    "why": "After 'a' a singular time noun is needed: 'nearly a century after' means almost 100 years later."
+   },
+   {
+    "answer": "born",
+    "distractors": [
+     "bear",
+     "birth",
+     "burn",
+     "bore"
+    ],
+    "why": "'Was born in' tells where a person's life began."
+   },
+   {
+    "answer": "medical",
+    "distractors": [
+     "medicine",
+     "medically",
+     "medal",
+     "metal"
+    ],
+    "why": "An adjective is needed before 'career': a medical career is a career as a doctor."
+   },
+   {
+    "answer": "little",
+    "distractors": [
+     "few",
+     "many",
+     "lot",
+     "fewer"
+    ],
+    "why": "'Interest' is uncountable here, so 'little interest' (not much) is correct; 'few' and 'many' need plural nouns."
+   },
+   {
+    "answer": "held",
+    "distractors": [
+     "hold",
+     "holds",
+     "helped",
+     "hid"
+    ],
+    "why": "The past-tense story needs 'held'; to 'hold a position' means to have a job."
+   }
+  ],
+  "missingSentence": "Rest was thus generally regarded as the natural state of matter.",
+  "missingDistractors": [
+   "Although he did not invent the telescope, he used it when he looked into the night sky.",
+   "Scientists use the term velocity to describe the speed and direction of motion.",
+   "In Newton’s time, gravity was something associated with Earth alone."
+  ],
+  "missingWhy": "The missing sentence concludes that people saw rest as the natural state of matter, which the next sentence then contradicts with 'however'.",
+  "highlights": [
+   {
+    "question": "Where did Galileo hold faculty positions?",
+    "answer": "the University of Pisa and the University of Padua"
+   },
+   {
+    "question": "According to common belief, what does a resting object need in order to begin moving?",
+    "answer": "some outside influence"
+   }
+  ],
+  "idea": {
+   "answer": "Galileo showed that being at rest is not more natural for objects than being in motion.",
+   "distractors": [
+    "Galileo was the first person to invent the telescope.",
+    "Galileo trained as a doctor and worked in medicine for most of his life.",
+    "Galileo agreed with the common belief that rest is the natural state of matter."
+   ],
+   "why": "The last sentence says Galileo showed that rest is no more natural than motion."
+  },
+  "titleDistractors": [
+   "Copernicus",
+   "Friction",
+   "Newton’s Universal Law of Gravitation"
+  ],
+  "titleWhy": "The passage introduces Galileo's life and his new ideas about motion, which helped begin modern science; Copernicus, friction and Newton's gravity are not its subject."
+ },
+ {
+  "id": "ir-ose-wnl-shocking-adv",
+  "sourceId": "ose-wnl-shocking-adv",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "advanced",
+  "title": "Shocking",
+  "passage": "It was not so much how hard people found the challenge but how far they would go to avoid it that left researchers gobsmacked. The task? To sit in a chair and do nothing but think.\n\nSo unbearable did some find it that they took up the safe but alarming opportunity to give themselves mild electric shocks in an attempt to break the tedium.\n\nTwo-thirds of men pressed a button to deliver a painful jolt during a 15-minute spell of solitude.\n\nUnder the same conditions, a quarter of women pressed the shock button. The difference, scientists suspect, is that men tend to be more sensation-seeking than women.\n\nThe report from psychologists at Virginia and Harvard Universities is one of a surprising few to tackle the question of why most of us find it so hard to do nothing.\n\nIn more than 11 separate studies, the researchers showed that people hated being left to think, regardless of their age, education, income or the amount of time they spent using smartphones or social media.",
+  "sentencesPartEndsAfter": "Two-thirds of men pressed a button to deliver a painful jolt during a 15-minute spell of solitude.",
+  "blanks": [
+   {
+    "answer": "hard",
+    "distractors": [
+     "hardly",
+     "hardness",
+     "harden",
+     "heard"
+    ],
+    "why": "'How hard people found the challenge' means how difficult it was; 'hardly' means almost not."
+   },
+   {
+    "answer": "avoid",
+    "distractors": [
+     "avoids",
+     "avoided",
+     "avoidance",
+     "void"
+    ],
+    "why": "After 'go to' a base verb is needed: 'how far they would go to avoid it'."
+   },
+   {
+    "answer": "sit",
+    "distractors": [
+     "sat",
+     "seat",
+     "set",
+     "sits"
+    ],
+    "why": "After 'To' a base verb is needed, and we 'sit in a chair'."
+   },
+   {
+    "answer": "nothing",
+    "distractors": [
+     "none",
+     "nobody",
+     "nowhere",
+     "never"
+    ],
+    "why": "'Do nothing but think' means the only thing to do was think."
+   },
+   {
+    "answer": "unbearable",
+    "distractors": [
+     "unbearably",
+     "bearable",
+     "comfortable",
+     "enjoyable"
+    ],
+    "why": "People gave themselves shocks 'to break the tedium', so sitting still felt unbearable (too hard to stand)."
+   },
+   {
+    "answer": "themselves",
+    "distractors": [
+     "itself",
+     "himself",
+     "ourselves",
+     "yourself"
+    ],
+    "why": "The subject is 'they', so the reflexive pronoun must be 'themselves'."
+   },
+   {
+    "answer": "break",
+    "distractors": [
+     "broke",
+     "broken",
+     "brake",
+     "bake"
+    ],
+    "why": "After 'to' a base verb is needed, and 'break the tedium' means end the boredom."
+   },
+   {
+    "answer": "during",
+    "distractors": [
+     "while",
+     "among",
+     "between",
+     "beside"
+    ],
+    "why": "'During' + a period of time ('a 15-minute spell'); 'while' needs a clause with a verb."
+   }
+  ],
+  "missingSentence": "Under the same conditions, a quarter of women pressed the shock button.",
+  "missingDistractors": [
+   "They feel less responsible because of the presence of other bystanders.",
+   "The devices let the animals work together on simple tasks to earn rewards, such as a drink of water.",
+   "It also tries to find out how happy they feel about using them."
+  ],
+  "missingWhy": "The next sentence explains 'the difference' between men and women, so the missing sentence must give the result for women to compare with the two-thirds of men.",
+  "highlights": [
+   {
+    "question": "According to scientists, why might more men than women have pressed the button?",
+    "answer": "men tend to be more sensation-seeking than women"
+   },
+   {
+    "question": "Which personal details made no difference to how much people disliked being left alone to think?",
+    "answer": "their age, education, income or the amount of time they spent using smartphones or social media"
+   }
+  ],
+  "idea": {
+   "answer": "Many people dislike sitting alone with their thoughts so much that some would rather give themselves electric shocks.",
+   "distractors": [
+    "Women were more likely than men to press the shock button.",
+    "People who use smartphones a lot found it much harder to sit and think than other people.",
+    "Most people enjoyed having fifteen quiet minutes to relax and think."
+   ],
+   "why": "The passage reports that people hated being left to think and that some gave themselves mild electric shocks to break the boredom."
+  },
+  "titleDistractors": [
+   "False memory",
+   "Rats",
+   "The Bystander Effect and Diffusion of Responsibility"
+  ],
+  "titleWhy": "'Shocking' fits the whole passage, which reports a study where people gave themselves electric shocks rather than sit and think; the other titles are about other studies."
+ }
+]

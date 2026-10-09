@@ -463,8 +463,8 @@
   "missingWhy": "It introduces the fire-fighting commander as another example, and the next sentence describes the commander's many decisions.",
   "highlights": [
    {
-    "question": "What everyday choice is given as an example of a static decision?",
-    "answer": "whether I buy a KitKat or a Snickers bar"
+    "question": "Which two snacks are used in the example of a static decision?",
+    "answer": "a KitKat or a Snickers bar"
    },
    {
     "question": "What can make a wildfire burn faster or slower?",
@@ -582,7 +582,7 @@
    },
    {
     "question": "Where did John live with his grandparents?",
-    "answer": "a village called Daveyton Village"
+    "answer": "a village called Daveyton Village in Free State"
    }
   ],
   "idea": {
@@ -607,7 +607,7 @@
   "genre": "narrative",
   "topic": "story",
   "difficulty": "easy",
-  "title": "Hare and Hyenas Fight",
+  "title": "Hare and Hyena Make a Deal",
   "passage": "Hare used to sit all day doing nothing and when Hyena came home after work, Hare would always ask him for nuts from his farm. But Hyena didn't like this very much. Hyena believes in working hard and not getting things for free. So, one day Hyena thought to himself, \"Its so hard to work all day by myself. Maybe Hare could help me and in return he can get some nuts that he has actually worked for.\" Hare agreed to his terms and they shook hands on it because he thought it was a good deal. They also agreed that more work could be done and they will also get enough food for their families. The two worked so good together. They would work and laugh together. Hare would dig and plant and Hyena would help and sing along as they went. Hyena was very happy because he was able to plant a lot more than before. Hare was a really hard worker and worked all day long with no rest. He would work fast and faster. But he felt like he was working too much and wanted a raise because what Hyena was paying too little.",
   "sentencesPartEndsAfter": "Hare agreed to his terms and they shook hands on it because he thought it was a good deal.",
   "blanks": [
@@ -723,7 +723,8 @@
    "Why hyenas limp",
    "The Animals Dig a Well"
   ],
-  "titleWhy": "The story is about Hare and Hyena's work deal and ends with Hare unhappy with Hyena, the start of their quarrel."
+  "titleWhy": "The passage tells how Hyena offers Hare work and how the two agree on what Hare will be paid.",
+  "titleWritten": true
  },
  {
   "id": "ir-clear-3468",
@@ -830,7 +831,7 @@
    },
    {
     "question": "Why did the villagers no longer go into the forest to feed the bird?",
-    "answer": "too busy trying to find money to buy food"
+    "answer": "too busy trying to find money to buy food in the neighboring town"
    }
   ],
   "idea": {
@@ -954,7 +955,7 @@
    },
    {
     "question": "What did the baker call the old woman?",
-    "answer": "nothing but a smell thief"
+    "answer": "a smell thief"
    }
   ],
   "idea": {
@@ -1074,7 +1075,7 @@
   "highlights": [
    {
     "question": "What material did all three planets apparently begin with?",
-    "answer": "the same chemical mix of silicates and metals"
+    "answer": "silicates and metals"
    },
    {
     "question": "What might push Earth onto the same path as Venus or Mars?",
@@ -1326,7 +1327,7 @@
     "answer": "high levels of warmth and nurturing"
    },
    {
-    "question": "What feature of young children does the preschool curriculum make use of?",
+    "question": "What does the preschool curriculum take advantage of?",
     "answer": "the playful mindset of the preoperational child"
    }
   ],

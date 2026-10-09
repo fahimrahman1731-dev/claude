@@ -121,7 +121,7 @@ The full report is in [`data/generated/import-report.md`](data/generated/import-
 | Practice words in total | 5,836 |
 | Practice sentences: real / WordNet / written for the app | 20,569 / 47 / 432 |
 | Read and Complete texts (CLEAR 161, OneStopEnglish 106, OpenStax 53) | 320, with 8–16 gaps each |
-| Interactive Reading passages (CLEAR, OneStopEnglish, OpenStax and the official research sample) | 81 |
+| Interactive Reading passages (CLEAR, OneStopEnglish, OpenStax and the official research sample). The 92 written for this app were each solved blind by a second reviewer, and every answer they could argue with was fixed | 93 |
 
 **Why words were deleted.** Official DET answer words are always kept, however rare (*jots*, *solstices*), and so are spelling traps your guide teaches (*minuscule*). A word is deleted only if one of these applies:
 - It is British-only: *kerb*, *pram*.

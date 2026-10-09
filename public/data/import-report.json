@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T12:44:29.692Z",
+ "generatedAt": "2026-10-09T13:06:27.564Z",
  "sources": [
   {
    "id": "guide",
@@ -614,7 +614,7 @@
    "ostx": 53
   },
   "paragraphCandidates": 3462,
-  "interactiveSets": 81,
+  "interactiveSets": 93,
   "interactiveIssues": [],
   "texts": 3228,
   "licences": {
@@ -628,5 +628,5 @@
    "CC BY-NC 4.0": 1
   }
  },
- "version": "b342cab09f92"
+ "version": "b2a614497351"
 }

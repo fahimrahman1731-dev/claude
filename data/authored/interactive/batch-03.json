@@ -104,7 +104,7 @@
     "answer": "children, adults, and elderly people"
    },
    {
-    "question": "What do the three types of stem cells eventually produce?",
+    "question": "How many types of cells do the three types of stem cells go on to form?",
     "answer": "200 different types of cells"
    }
   ],
@@ -477,8 +477,8 @@
     "answer": "the movement of matter in your ears"
    },
    {
-    "question": "What is a diamond made of?",
-    "answer": "just one element, Carbon"
+    "question": "What do scientists say matter has?",
+    "answer": "volume and mass"
    }
   ],
   "idea": {
@@ -602,8 +602,8 @@
     "answer": "how much food an organism will need, and how it is able to get that food"
    },
    {
-    "question": "What does anabolism use energy to build?",
-    "answer": "molecules such as proteins and nucleic acids"
+    "question": "Which molecules does the passage give as examples of what anabolism builds?",
+    "answer": "proteins and nucleic acids"
    }
   ],
   "idea": {
@@ -1219,8 +1219,8 @@
   "missingWhy": "It introduces sympatric speciation, and the next sentence gives 'a good example' of it: fish isolated without a physical barrier.",
   "highlights": [
    {
-    "question": "What kinds of things separate populations during allopatric speciation?",
-    "answer": "geographic barriers such as mountains, rivers, or oceans"
+    "question": "Which three geographic barriers does the passage name?",
+    "answer": "mountains, rivers, or oceans"
    },
    {
     "question": "Why do the cichlid fish become reproductively isolated?",

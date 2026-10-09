@@ -5,7 +5,7 @@
   "genre": "expository",
   "topic": "general",
   "difficulty": "easy",
-  "title": "The Process of Becoming a “Spider-Man”",
+  "title": "How to Tell a Spider-Man from a Spider-Woman",
   "passage": "You probably know of many animals in which the males and females look very different. Male lions, for example, have beautiful manes, while lioness do not. In birds, males tend to be beautifully colored, while the females are not—just think of ducks, chicken, or peacocks. But do you know how to distinguish spider-men and -women? Usually, female spiders are bigger, but only if they are well-fed. Females can also be a different color than the males of their species, but this is not true for all species. You can use another really safe trick to identify a male spider. In front of their four walking legs, both spider males and females have another pair of appendages, the pedipalps. The pedipalps are used for many of the spider skills explained above, like feeding, sensing, catching prey, and mating. And exactly on the tip of these pedipalps only adult male spiders have a specialized organ, which looks like boxing gloves.",
   "sentencesPartEndsAfter": "Females can also be a different color than the males of their species, but this is not true for all species.",
   "blanks": [
@@ -92,7 +92,7 @@
   ],
   "missingSentence": "In front of their four walking legs, both spider males and females have another pair of appendages, the pedipalps.",
   "missingDistractors": [
-   "Its abdomen is shaped like a sphere and has an hourglass mark on the bottom.",
+   "Stripes, spots, and speckles are more common than solid.",
    "Males usually have wings, but females are most likely wingless.",
    "Females are usually about 1-1/2 inches long including their leg span."
   ],
@@ -104,7 +104,7 @@
    },
    {
     "question": "What does the special organ of adult male spiders look like?",
-    "answer": "looks like boxing gloves"
+    "answer": "like boxing gloves"
    }
   ],
   "idea": {
@@ -117,11 +117,12 @@
    "why": "The last sentence says only adult male spiders have a specialized organ on the tip of their pedipalps, which is the 'really safe trick'."
   },
   "titleDistractors": [
-   "Itsy Bitsy Spider? It Depends…",
+   "How Spiders Spin Their Webs",
    "Diversity of Tropical Spiders",
    "Bugs/Black Widow"
   ],
-  "titleWhy": "The whole passage is about how to tell male spiders ('spider-men') apart from female spiders."
+  "titleWhy": "The passage explains the differences between male and female spiders: size, colour and the pedipalps.",
+  "titleWritten": true
  },
  {
   "id": "ir-clear-1926",
@@ -207,7 +208,7 @@
     "answer": "between",
     "distractors": [
      "during",
-     "without",
+     "except",
      "since",
      "beneath"
     ],
@@ -223,7 +224,7 @@
   "missingWhy": "'That will make you tired' in the next sentence refers to fighting or swimming against the current.",
   "highlights": [
    {
-    "question": "Why do the lifeguards place red and yellow flags on the beach?",
+    "question": "According to the first paragraph, why do the lifeguards on duty put red and yellow flags on the beach?",
     "answer": "to show you where it is safe to swim"
    },
    {
@@ -395,9 +396,9 @@
     "answer": "sources",
     "distractors": [
      "source",
-     "schools",
      "colors",
-     "roads"
+     "roads",
+     "storms"
     ],
     "why": "'Secondary sources' are writings by other people; the plural matches the verb 'provide'."
    },
@@ -445,10 +446,10 @@
    {
     "answer": "for",
     "distractors": [
-     "to",
      "by",
      "of",
-     "with"
+     "at",
+     "from"
     ],
     "why": "'As for' is a fixed phrase meaning 'when it comes to'."
    },
@@ -466,13 +467,13 @@
   "missingSentence": "Historians, therefore, face the challenge of reconciling the various evidence from the extant texts in order to attempt an accurate and consistent account of Socrates's life and work.",
   "missingDistractors": [
    "Many thought Socrates was one of the sophists.",
-   "He wanted to base values on reason instead of on unchallenged traditional beliefs.",
+   "If a historian is looking at Ancient Egypt, a statue of a pharaoh is a primary source for that time period, as are hieroglyphs that tell of the pharaoh’s reign.",
    "Primary sources, when we have them, are considered more valuable than other sources because they are as close in time as we can get to the events being studied."
   ],
   "missingWhy": "'Therefore' draws a conclusion from the problems with the sources, and 'such an effort' in the last sentence refers to this attempt to build an accurate account.",
   "highlights": [
    {
-    "question": "What is the conflicting nature of the sources about Socrates called?",
+    "question": "What two names are given to the sometimes contradictory nature of the sources about Socrates?",
     "answer": "the Socratic problem, or the Socratic question"
    },
    {
@@ -492,7 +493,7 @@
   "titleDistractors": [
    "Primary Sources",
    "The Classical “Golden Age”",
-   "Hidden in History"
+   "The Life of Plato"
   ],
   "titleWhy": "Every sentence is about Socrates and the problem of learning about his life from other people's writings."
  },
@@ -665,9 +666,9 @@
     "answer": "well",
     "distractors": [
      "good",
-     "much",
      "soon",
-     "far"
+     "far",
+     "long"
     ],
     "why": "'As well as' is a fixed phrase meaning 'and also'."
    },
@@ -725,8 +726,8 @@
     "answer": "Now sit quietly and watch TV"
    },
    {
-    "question": "What do the children and mother do as they walk home from the shop?",
-    "answer": "we talk about our day"
+    "question": "What do the children and mother talk about on their way home from the shop?",
+    "answer": "talk about our day"
    }
   ],
   "idea": {
@@ -739,7 +740,7 @@
    "why": "The child says mother works so hard, yet she makes sure they do homework, eat well and are cared for when sick."
   },
   "titleDistractors": [
-   "Busy Mother Hen",
+   "A Day at the Zoo",
    "Baby Mosquito",
    "The talking bag"
   ],
@@ -856,7 +857,7 @@
   "idea": {
    "answer": "A change in a gene can change a protein's structure and, as a result, the way it works.",
    "distractors": [
-    "Proteins are broken down into amino acids when the body digests them.",
+    "Every protein has the same shape, so its shape does not affect how it works.",
     "Sickle-cell anemia is caught from other people and is not passed down in families.",
     "A hemoglobin molecule contains only about 150 amino acids in total."
    ],
@@ -913,7 +914,7 @@
     "answer": "rooted",
     "distractors": [
      "root",
-     "rooting",
+     "roots",
      "boiled",
      "painted"
     ],
@@ -953,7 +954,7 @@
     "answer": "such",
     "distractors": [
      "so",
-     "much",
+     "more",
      "very",
      "too"
     ],
@@ -1046,18 +1047,18 @@
    {
     "answer": "remains",
     "distractors": [
-     "remain",
+     "remainder",
      "remaining",
      "reminds",
      "refuses"
     ],
-    "why": "'Remains unknown' means 'is still not known'; the subject is one idea, so it takes the -s form."
+    "why": "'Remains unknown' means 'is still not known'; a verb with the -s form is needed for the subject 'Why and how this decline occurred'."
    },
    {
     "answer": "related",
     "distractors": [
      "relation",
-     "relating",
+     "relatives",
      "borrowed",
      "painted"
     ],
@@ -1097,8 +1098,8 @@
     "answer": "regional climate change"
    },
    {
-    "question": "Why would the cities have lost people?",
-    "answer": "Without a secure source of water for drinking and irrigation"
+    "question": "What would the cities have lacked that caused their populations to fall?",
+    "answer": "a secure source of water for drinking and irrigation"
    }
   ],
   "idea": {
@@ -1106,7 +1107,7 @@
    "distractors": [
     "The Indus valley cities grew much larger after their trade with Mesopotamia ended.",
     "The Indus valley civilization ended suddenly because of one great flood.",
-    "The people of the Indus valley were in contact with Egypt and Sumer by about 5000 BCE."
+    "Historians have proved that a change in the monsoon was the only cause of the decline."
    ],
    "why": "The passage says why and how the decline happened remains unknown, and then lists several possible explanations."
   },
@@ -1153,7 +1154,7 @@
      "than",
      "them",
      "they",
-     "there"
+     "these"
     ],
     "why": "'And then' shows what happens next, after the wrong base is replaced."
    },
@@ -1222,7 +1223,7 @@
    },
    {
     "question": "What mainly causes thymine dimers?",
-    "answer": "primarily caused by ultraviolet light"
+    "answer": "by ultraviolet light"
    }
   ],
   "idea": {
@@ -1268,7 +1269,7 @@
      "then",
      "that",
      "as",
-     "so"
+     "from"
     ],
     "why": "'More than' compares two amounts: the real rise and what people think."
    },
@@ -1364,6 +1365,6 @@
    "Climate Change on Mars",
    "Removing Harmful Greenhouse Gases from the Air Using Energy from Plants"
   ],
-  "titleWhy": "The passage reports a study showing that fewer clouds form as the planet warms, which could make global warming worse; the original title 'Planet' is too vague."
+  "titleWhy": "The passage reports a study showing that fewer clouds form as the planet warms, which could make global warming worse."
  }
 ]

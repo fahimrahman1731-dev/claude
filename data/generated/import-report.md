@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `b342cab09f92`, generated 2026-10-09T12:44:29.692Z.
+Data version `b2a614497351`, generated 2026-10-09T13:06:27.564Z.
 
 ## Totals
 
@@ -81,7 +81,7 @@ Sentences, Read and Complete texts and Interactive Reading passages come from re
 | Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | 3246 |
 | Words deleted as unrealistic DET words | 11 |
 | Read and Complete texts | clear 161, ose 106, ostx 53 (from 3462 candidates) |
-| Interactive Reading sets | 81 |
+| Interactive Reading sets | 93 |
 | Definitions: study materials / WordNet / app | 347 / 3246 / 2243 |
 | Bengali: app / Apertium dictionary / none | 2590 / 1483 / 1763 |
 | Source texts used | 3228 |

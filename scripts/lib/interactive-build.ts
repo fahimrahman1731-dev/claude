@@ -124,7 +124,8 @@ export function validateInteractive(a: AuthoredInteractive, sourceText: string |
     const at = text.indexOf(ans);
     if (at < 0) p.push(`highlight answer is not in the passage: “${ans}”`);
     else if (text.indexOf(ans, at + 1) >= 0) p.push(`highlight answer appears twice in the passage: “${ans}”`);
-    if (words(ans).length < 3) p.push(`highlight answer is shorter than 3 words: “${ans}”`);
+    // Counted as a reader sees them: "weight-related" is one word.
+    if (ans.split(/\s+/).length < 3) p.push(`highlight answer is shorter than 3 words: “${ans}”`);
     if (at >= 0) highlights.push({ question: q, start: at, end: at + ans.length });
   }
   // Identify the Idea and Title the Passage

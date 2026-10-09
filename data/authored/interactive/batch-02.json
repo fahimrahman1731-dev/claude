@@ -1,1492 +1,1495 @@
 [
-  {
-    "id": "ir-clear-2367",
-    "sourceId": "clear-2367",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "easy",
-    "title": "How to help someone in water",
-    "passage": "If someone is in water, you can use a stick to pull the person to safety. Never get into the water to try and rescue someone. If you get into the water, you could also drown. If the person who needs help is too far away from you to reach with a stick, you can throw something that floats. Throw something they can hold on to and use to stay above the water. You could throw a soccer ball or an empty five-litre plastic container. If someone needs rescuing from water, ask a lifeguard or adult for help. Never go into the water to try and rescue someone yourself. You can also call the free national emergency number, 112, from a cell phone or a landline. If someone is rescued from the water and they are not breathing, you should call 112 for help. You can then start Hands-on CPR by pushing hard and fast in the centre of their chest. Do not practice this on a friend! You can find out more from the National Sea Rescue Institute.",
-    "sentencesPartEndsAfter": "You could throw a soccer ball or an empty five-litre plastic container.",
-    "blanks": [
-      {
-        "answer": "safety",
-        "distractors": [
-          "safe",
-          "danger",
-          "security",
-          "comfort"
-        ],
-        "why": "“Pull someone to safety” is a fixed phrase; after “to” here we need a noun, not the adjective “safe”."
-      },
-      {
-        "answer": "into",
-        "distractors": [
-          "onto",
-          "off",
-          "from",
-          "along"
-        ],
-        "why": "“Get into the water” means to enter the water."
-      },
-      {
-        "answer": "who",
-        "distractors": [
-          "which",
-          "whose",
-          "whom",
-          "what"
-        ],
-        "why": "“Who” is the relative pronoun for a person, and here it is the subject of “needs”."
-      },
-      {
-        "answer": "far",
-        "distractors": [
-          "long",
-          "near",
-          "distant",
-          "deep"
-        ],
-        "why": "“Too far away” is the natural phrase for distance."
-      },
-      {
-        "answer": "floats",
-        "distractors": [
-          "sinks",
-          "floating",
-          "flows",
-          "melts"
-        ],
-        "why": "The object must stay on top of the water so the person can hold it; “something that” needs the verb “floats”."
-      },
-      {
-        "answer": "hold",
-        "distractors": [
-          "keep",
-          "take",
-          "carry",
-          "make"
-        ],
-        "why": "“Hold on to” means to grip something and not let go."
-      },
-      {
-        "answer": "above",
-        "distractors": [
-          "under",
-          "below",
-          "inside",
-          "behind"
-        ],
-        "why": "To stay safe, the person must stay above the water, not under it."
-      },
-      {
-        "answer": "ball",
-        "distractors": [
-          "game",
-          "team",
-          "field",
-          "match"
-        ],
-        "why": "A “soccer ball” is an object you can throw, and it floats."
-      }
+ {
+  "id": "ir-clear-2367",
+  "sourceId": "clear-2367",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "How to help someone in water",
+  "passage": "If someone is in water, you can use a stick to pull the person to safety. Never get into the water to try and rescue someone. If you get into the water, you could also drown. If the person who needs help is too far away from you to reach with a stick, you can throw something that floats. Throw something they can hold on to and use to stay above the water. You could throw a soccer ball or an empty five-litre plastic container. If someone needs rescuing from water, ask a lifeguard or adult for help. Never go into the water to try and rescue someone yourself. You can also call the free national emergency number, 112, from a cell phone or a landline. If someone is rescued from the water and they are not breathing, you should call 112 for help. You can then start Hands-on CPR by pushing hard and fast in the centre of their chest. Do not practice this on a friend! You can find out more from the National Sea Rescue Institute.",
+  "sentencesPartEndsAfter": "You could throw a soccer ball or an empty five-litre plastic container.",
+  "blanks": [
+   {
+    "answer": "safety",
+    "distractors": [
+     "safe",
+     "danger",
+     "security",
+     "comfort"
     ],
-    "missingSentence": "You can then start Hands-on CPR by pushing hard and fast in the centre of their chest.",
-    "missingDistractors": [
-      "The lifeguards on duty will put red and yellow flags on the beach to show you where it is safe to swim.",
-      "Many people find it hard to see a rip current in the sea.",
-      "This is why it is better to swim between the lifeguard flags."
+    "why": "“Pull someone to safety” is a fixed phrase; after “to” here we need a noun, not the adjective “safe”."
+   },
+   {
+    "answer": "into",
+    "distractors": [
+     "onto",
+     "off",
+     "from",
+     "along"
     ],
-    "missingWhy": "“Then” follows the advice to call 112, and the next sentence, “Do not practice this on a friend!”, needs “this” to mean Hands-on CPR.",
-    "highlights": [
-      {
-        "question": "Which floating objects does the passage suggest you could throw?",
-        "answer": "a soccer ball or an empty five-litre plastic container"
-      },
-      {
-        "question": "Who should you ask for help when a person needs to be rescued from water?",
-        "answer": "a lifeguard or adult"
-      }
+    "why": "“Get into the water” means to enter the water."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whose",
+     "whom",
+     "what"
     ],
-    "idea": {
-      "answer": "You should help a person in the water from a safe place instead of going into the water yourself.",
-      "distractors": [
-        "It is safest to swim only at beaches where lifeguards are watching.",
-        "Strong swimmers should go into the water to help a person in trouble.",
-        "You should practise CPR on a friend so that you are ready for an emergency."
-      ],
-      "why": "The passage twice says never to go into the water and suggests using a stick or throwing something that floats."
-    },
-    "titleDistractors": [
-      "Stay safe at the beach!",
-      "The Bystander Effect and Diffusion of Responsibility",
-      "Heart rate monitor"
+    "why": "“Who” is the relative pronoun for a person, and here it is the subject of “needs”."
+   },
+   {
+    "answer": "far",
+    "distractors": [
+     "long",
+     "near",
+     "distant",
+     "deep"
     ],
-    "titleWhy": "The whole passage gives steps for helping someone who is in trouble in the water."
+    "why": "“Too far away” is the natural phrase for distance."
+   },
+   {
+    "answer": "floats",
+    "distractors": [
+     "sinks",
+     "floating",
+     "flows",
+     "melts"
+    ],
+    "why": "The object must stay on top of the water so the person can hold it; “something that” needs the verb “floats”."
+   },
+   {
+    "answer": "hold",
+    "distractors": [
+     "keep",
+     "take",
+     "carry",
+     "make"
+    ],
+    "why": "“Hold on to” means to grip something and not let go."
+   },
+   {
+    "answer": "above",
+    "distractors": [
+     "under",
+     "below",
+     "inside",
+     "behind"
+    ],
+    "why": "To stay safe, the person must stay above the water, not under it."
+   },
+   {
+    "answer": "ball",
+    "distractors": [
+     "game",
+     "team",
+     "field",
+     "match"
+    ],
+    "why": "A “soccer ball” is an object you can throw, and it floats."
+   }
+  ],
+  "missingSentence": "You can then start Hands-on CPR by pushing hard and fast in the centre of their chest.",
+  "missingDistractors": [
+   "The lifeguards on duty will put red and yellow flags on the beach to show you where it is safe to swim.",
+   "Many people find it hard to see a rip current in the sea.",
+   "This is why it is better to swim between the lifeguard flags."
+  ],
+  "missingWhy": "“Then” follows the advice to call 112, and the next sentence, “Do not practice this on a friend!”, needs “this” to mean Hands-on CPR.",
+  "highlights": [
+   {
+    "question": "Which floating objects does the passage suggest you could throw?",
+    "answer": "a soccer ball or an empty five-litre plastic container"
+   },
+   {
+    "question": "Who should you ask for help when a person needs to be rescued from water?",
+    "answer": "a lifeguard or adult"
+   }
+  ],
+  "idea": {
+   "answer": "You should help a person in the water from a safe place instead of going into the water yourself.",
+   "distractors": [
+    "It is safest to swim only at beaches where lifeguards are watching.",
+    "Strong swimmers should go into the water to help a person in trouble.",
+    "You should practise CPR on a friend so that you are ready for an emergency."
+   ],
+   "why": "The passage twice says never to go into the water and suggests using a stick or throwing something that floats."
   },
-  {
-    "id": "ir-clear-2160",
-    "sourceId": "clear-2160",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "advanced",
-    "title": "Agrobacterium: Soil Microbe, Plant Pathogen, and Natural Genetic Engineer",
-    "passage": "Despite the many benefits of using Agrobacterium to improve crop plants, some groups seek to prevent the use of genetic engineering, and even try to misinform the public about the approach. One of the most common misunderstandings about genetic engineering is the belief that changing the DNA of an organism is unnatural and therefore wrong. However, Agrobacterium has been modifying the DNA of plants long before humans learned how to do it. This shows us that changing DNA sequences is a natural process and part of the world around us. By using Agrobacterium to modify plant DNA, we are harnessing a natural process to develop crop plants that need fewer pesticides, are more nutritious, and that yield more food using less land. Using less land is a really important consideration because, if we want to avoid the destruction of natural ecosystems, we need to make sure that our farms are as productive as possible. Genetically engineered crop plants can definitely help us to grow more food from less land, meaning that more ecosystems will be protected.",
-    "sentencesPartEndsAfter": "However, Agrobacterium has been modifying the DNA of plants long before humans learned how to do it.",
-    "blanks": [
-      {
-        "answer": "benefits",
-        "distractors": [
-          "beneficial",
-          "problems",
-          "dangers",
-          "costs"
-        ],
-        "why": "“Despite” needs a contrast: some groups oppose the method even though it has many benefits."
-      },
-      {
-        "answer": "prevent",
-        "distractors": [
-          "promote",
-          "prevention",
-          "explain",
-          "support"
-        ],
-        "why": "These groups oppose the method and even misinform people, so they want to stop (prevent) it; “seek to” needs a verb."
-      },
-      {
-        "answer": "about",
-        "distractors": [
-          "with",
-          "from",
-          "into",
-          "at"
-        ],
-        "why": "You inform or misinform people “about” a topic."
-      },
-      {
-        "answer": "belief",
-        "distractors": [
-          "believe",
-          "believing",
-          "fact",
-          "proof"
-        ],
-        "why": "After “the” we need a noun, and a misunderstanding is a wrong belief, not a fact."
-      },
-      {
-        "answer": "unnatural",
-        "distractors": [
-          "natural",
-          "unnaturally",
-          "nature",
-          "normal"
-        ],
-        "why": "People think changing DNA is not natural, and that is why they call it “therefore wrong”."
-      },
-      {
-        "answer": "has",
-        "distractors": [
-          "have",
-          "is",
-          "was",
-          "does"
-        ],
-        "why": "“Has been modifying” is the present perfect continuous, and “Agrobacterium” is singular."
-      },
-      {
-        "answer": "before",
-        "distractors": [
-          "after",
-          "ago",
-          "until",
-          "during"
-        ],
-        "why": "The point is that bacteria did this in nature first, long before humans could."
-      }
+  "titleDistractors": [
+   "Stay safe at the beach!",
+   "The Bystander Effect and Diffusion of Responsibility",
+   "Heart rate monitor"
+  ],
+  "titleWhy": "The whole passage gives steps for helping someone who is in trouble in the water."
+ },
+ {
+  "id": "ir-clear-2160",
+  "sourceId": "clear-2160",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "advanced",
+  "title": "Agrobacterium: Nature's Genetic Engineer",
+  "passage": "Despite the many benefits of using Agrobacterium to improve crop plants, some groups seek to prevent the use of genetic engineering, and even try to misinform the public about the approach. One of the most common misunderstandings about genetic engineering is the belief that changing the DNA of an organism is unnatural and therefore wrong. However, Agrobacterium has been modifying the DNA of plants long before humans learned how to do it. This shows us that changing DNA sequences is a natural process and part of the world around us. By using Agrobacterium to modify plant DNA, we are harnessing a natural process to develop crop plants that need fewer pesticides, are more nutritious, and that yield more food using less land. Using less land is a really important consideration because, if we want to avoid the destruction of natural ecosystems, we need to make sure that our farms are as productive as possible. Genetically engineered crop plants can definitely help us to grow more food from less land, meaning that more ecosystems will be protected.",
+  "sentencesPartEndsAfter": "However, Agrobacterium has been modifying the DNA of plants long before humans learned how to do it.",
+  "blanks": [
+   {
+    "answer": "benefits",
+    "distractors": [
+     "beneficial",
+     "problems",
+     "dangers",
+     "costs"
     ],
-    "missingSentence": "This shows us that changing DNA sequences is a natural process and part of the world around us.",
-    "missingDistractors": [
-      "Transgenic plants have received DNA from other species.",
-      "An organism that receives the recombinant DNA is called a genetically modified organism.",
-      "Scientists are discovering how genomics can improve the quality and quantity of agricultural production."
+    "why": "“Despite” needs a contrast: some groups oppose the method even though it has many benefits."
+   },
+   {
+    "answer": "prevent",
+    "distractors": [
+     "promote",
+     "prevention",
+     "explain",
+     "support"
     ],
-    "missingWhy": "“This shows us” draws a conclusion from the sentence before, and its idea of a “natural process” is picked up in the next sentence.",
-    "highlights": [
-      {
-        "question": "What mistaken belief do many people have about genetic engineering?",
-        "answer": "that changing the DNA of an organism is unnatural and therefore wrong"
-      },
-      {
-        "question": "Which three improvements in crop plants does the writer mention?",
-        "answer": "need fewer pesticides, are more nutritious, and that yield more food using less land"
-      }
+    "why": "These groups oppose the method and even misinform people, so they want to stop (prevent) it; “seek to” needs a verb."
+   },
+   {
+    "answer": "about",
+    "distractors": [
+     "with",
+     "from",
+     "into",
+     "at"
     ],
-    "idea": {
-      "answer": "Using Agrobacterium to change crop DNA makes use of a natural process and can help protect natural ecosystems.",
-      "distractors": [
-        "Thick plant cell walls make it harder to add DNA to plant cells than to animal cells.",
-        "Agrobacterium was first created by scientists working in a laboratory.",
-        "Genetically engineered crops need more land because they produce less food."
-      ],
-      "why": "The writer says Agrobacterium changes plant DNA naturally and that such crops grow more food on less land, so more ecosystems are protected."
-    },
-    "titleDistractors": [
-      "Biotechnology in Medicine and Agriculture",
-      "Genomics in Agriculture",
-      "Transgenic Plants"
+    "why": "You inform or misinform people “about” a topic."
+   },
+   {
+    "answer": "belief",
+    "distractors": [
+     "believe",
+     "believing",
+     "fact",
+     "proof"
     ],
-    "titleWhy": "The passage is about Agrobacterium as a natural genetic engineer and why using it on crops is not unnatural."
+    "why": "After “the” we need a noun, and a misunderstanding is a wrong belief, not a fact."
+   },
+   {
+    "answer": "unnatural",
+    "distractors": [
+     "natural",
+     "unnaturally",
+     "nature",
+     "normal"
+    ],
+    "why": "People think changing DNA is not natural, and that is why they call it “therefore wrong”."
+   },
+   {
+    "answer": "has",
+    "distractors": [
+     "have",
+     "is",
+     "was",
+     "does"
+    ],
+    "why": "“Has been modifying” is the present perfect continuous, and “Agrobacterium” is singular."
+   },
+   {
+    "answer": "before",
+    "distractors": [
+     "after",
+     "ago",
+     "until",
+     "during"
+    ],
+    "why": "The point is that bacteria did this in nature first, long before humans could."
+   }
+  ],
+  "missingSentence": "This shows us that changing DNA sequences is a natural process and part of the world around us.",
+  "missingDistractors": [
+   "Transgenic plants have received DNA from other species.",
+   "An organism that receives the recombinant DNA is called a genetically modified organism.",
+   "Scientists are discovering how genomics can improve the quality and quantity of agricultural production."
+  ],
+  "missingWhy": "“This shows us” draws a conclusion from the sentence before, and its idea of a “natural process” is picked up in the next sentence.",
+  "highlights": [
+   {
+    "question": "What mistaken belief do many people have about genetic engineering?",
+    "answer": "that changing the DNA of an organism is unnatural and therefore wrong"
+   },
+   {
+    "question": "Which three improvements in crop plants does the writer mention?",
+    "answer": "need fewer pesticides, are more nutritious, and that yield more food using less land"
+   }
+  ],
+  "idea": {
+   "answer": "Using Agrobacterium to change crop DNA makes use of a natural process and can help protect natural ecosystems.",
+   "distractors": [
+    "Thick plant cell walls make it harder to add DNA to plant cells than to animal cells.",
+    "Agrobacterium was first created by scientists working in a laboratory.",
+    "Genetically engineered crops need more land because they produce less food."
+   ],
+   "why": "The writer says Agrobacterium changes plant DNA naturally and that such crops grow more food on less land, so more ecosystems are protected."
   },
-  {
-    "id": "ir-clear-3465",
-    "sourceId": "clear-3465",
-    "genre": "expository",
-    "topic": "technology",
-    "difficulty": "intermediate",
-    "title": "Gene knockout",
-    "passage": "A gene knockout is a genetic technique in which one of an organism's genes is switched off or replaced by one which does not work.\n\nThe organisms, such as knockout mice, are used to learn about a gene that has been sequenced, but whose function is unknown or incompletely known. Researchers draw inferences from the difference between the knockout organism and normal individuals. Knockout is often abbreviated as KO.\n\nGene knock-in is the opposite term. There a gene is switched on, or a working gene inserted.\n\nKnockout is accomplished through a combination of techniques. It starts in the test tube with a plasmid, or other DNA construct, and proceeding to cell culture.\n\nIndividual cells are genetically transformed with the DNA construct. Often the goal is to create an animal that has the altered gene.\n\nIf so, embryonic stem cells are genetically transformed and inserted into early embryos. Resulting animals with the genetic change in their germline cells can then often pass the gene knockout to future generations.",
-    "sentencesPartEndsAfter": "There a gene is switched on, or a working gene inserted.",
-    "blanks": [
-      {
-        "answer": "which",
-        "distractors": [
-          "what",
-          "who",
-          "whom",
-          "where"
-        ],
-        "why": "“In which” starts a relative clause about a thing (a technique)."
-      },
-      {
-        "answer": "off",
-        "distractors": [
-          "on",
-          "up",
-          "down",
-          "into"
-        ],
-        "why": "A knockout stops a gene from working, so the gene is switched off."
-      },
-      {
-        "answer": "work",
-        "distractors": [
-          "works",
-          "working",
-          "worked",
-          "stop"
-        ],
-        "why": "After “does not” we use the base verb, and a broken gene “does not work”."
-      },
-      {
-        "answer": "such",
-        "distractors": [
-          "so",
-          "like",
-          "same",
-          "much"
-        ],
-        "why": "“Such as” introduces an example (knockout mice)."
-      },
-      {
-        "answer": "learn",
-        "distractors": [
-          "learned",
-          "learner",
-          "lesson",
-          "forget"
-        ],
-        "why": "“Are used to + base verb” gives the purpose: the organisms are used to learn about genes."
-      },
-      {
-        "answer": "unknown",
-        "distractors": [
-          "known",
-          "unknowing",
-          "knowledge",
-          "famous"
-        ],
-        "why": "“But” and “or incompletely known” show that the gene’s function is not yet known."
-      },
-      {
-        "answer": "difference",
-        "distractors": [
-          "different",
-          "differ",
-          "distance",
-          "middle"
-        ],
-        "why": "After “the” we need a noun: researchers study the difference between the two groups."
-      },
-      {
-        "answer": "opposite",
-        "distractors": [
-          "same",
-          "opposed",
-          "oppose",
-          "opposition"
-        ],
-        "why": "Knock-in switches a gene on, the reverse of a knockout, so it is the opposite term."
-      }
+  "titleDistractors": [
+   "Biotechnology in Medicine and Agriculture",
+   "Genomics in Agriculture",
+   "Bacteria That Cause Human Disease"
+  ],
+  "titleWhy": "The passage explains how Agrobacterium moves its own genes into plants, which scientists now copy to engineer crops.",
+  "titleWritten": true
+ },
+ {
+  "id": "ir-clear-3465",
+  "sourceId": "clear-3465",
+  "genre": "expository",
+  "topic": "technology",
+  "difficulty": "intermediate",
+  "title": "Gene knockout",
+  "passage": "A gene knockout is a genetic technique in which one of an organism's genes is switched off or replaced by one which does not work.\n\nThe organisms, such as knockout mice, are used to learn about a gene that has been sequenced, but whose function is unknown or incompletely known. Researchers draw inferences from the difference between the knockout organism and normal individuals. Knockout is often abbreviated as KO.\n\nGene knock-in is the opposite term. There a gene is switched on, or a working gene inserted.\n\nKnockout is accomplished through a combination of techniques. It starts in the test tube with a plasmid, or other DNA construct, and proceeding to cell culture.\n\nIndividual cells are genetically transformed with the DNA construct. Often the goal is to create an animal that has the altered gene.\n\nIf so, embryonic stem cells are genetically transformed and inserted into early embryos. Resulting animals with the genetic change in their germline cells can then often pass the gene knockout to future generations.",
+  "sentencesPartEndsAfter": "There a gene is switched on, or a working gene inserted.",
+  "blanks": [
+   {
+    "answer": "which",
+    "distractors": [
+     "what",
+     "who",
+     "whom",
+     "where"
     ],
-    "missingSentence": "Often the goal is to create an animal that has the altered gene.",
-    "missingDistractors": [
-      "The treatment by the product Glybera uses a virus to infect muscle cells with a working copy of the gene.",
-      "An organism that receives the recombinant DNA is called a genetically modified organism.",
-      "The total of all the genes in an organism is called the genome."
+    "why": "“In which” starts a relative clause about a thing (a technique)."
+   },
+   {
+    "answer": "off",
+    "distractors": [
+     "on",
+     "up",
+     "down",
+     "into"
     ],
-    "missingWhy": "It states the goal of transforming the cells, and the next sentence begins “If so”, which refers back to this goal of creating an animal.",
-    "highlights": [
-      {
-        "question": "What do researchers compare in order to draw conclusions about a gene?",
-        "answer": "the knockout organism and normal individuals"
-      },
-      {
-        "question": "What type of cells is put into early embryos?",
-        "answer": "embryonic stem cells"
-      }
+    "why": "A knockout stops a gene from working, so the gene is switched off."
+   },
+   {
+    "answer": "work",
+    "distractors": [
+     "works",
+     "working",
+     "worked",
+     "stop"
     ],
-    "idea": {
-      "answer": "Scientists switch off a gene in an organism to find out what that gene does.",
-      "distractors": [
-        "Gene knockout is used to give a working gene to people who have a damaged gene.",
-        "Animals with a gene knockout cannot pass the change on to their young.",
-        "Gene knock-in and gene knockout mean exactly the same thing."
-      ],
-      "why": "The passage says knockout organisms are used to learn about genes whose function is unknown by comparing them with normal individuals."
-    },
-    "titleDistractors": [
-      "Gene therapy",
-      "How Genes Are Regulated",
-      "The Use of Stem Cells for Treatment of Diseases"
+    "why": "After “does not” we use the base verb, and a broken gene “does not work”."
+   },
+   {
+    "answer": "such",
+    "distractors": [
+     "so",
+     "like",
+     "same",
+     "much"
     ],
-    "titleWhy": "The whole passage explains what a gene knockout is, why it is used and how it is done."
+    "why": "“Such as” introduces an example (knockout mice)."
+   },
+   {
+    "answer": "learn",
+    "distractors": [
+     "learned",
+     "learner",
+     "lesson",
+     "forget"
+    ],
+    "why": "“Are used to + base verb” gives the purpose: the organisms are used to learn about genes."
+   },
+   {
+    "answer": "unknown",
+    "distractors": [
+     "known",
+     "unknowing",
+     "knowledge",
+     "famous"
+    ],
+    "why": "“But” and “or incompletely known” show that the gene’s function is not yet known."
+   },
+   {
+    "answer": "difference",
+    "distractors": [
+     "different",
+     "differ",
+     "distance",
+     "middle"
+    ],
+    "why": "After “the” we need a noun: researchers study the difference between the two groups."
+   },
+   {
+    "answer": "opposite",
+    "distractors": [
+     "same",
+     "opposed",
+     "oppose",
+     "opposition"
+    ],
+    "why": "Knock-in switches a gene on, the reverse of a knockout, so it is the opposite term."
+   }
+  ],
+  "missingSentence": "Often the goal is to create an animal that has the altered gene.",
+  "missingDistractors": [
+   "The treatment by the product Glybera uses a virus to infect muscle cells with a working copy of the gene.",
+   "An organism that receives the recombinant DNA is called a genetically modified organism.",
+   "The total of all the genes in an organism is called the genome."
+  ],
+  "missingWhy": "It states the goal of transforming the cells, and the next sentence begins “If so”, which refers back to this goal of creating an animal.",
+  "highlights": [
+   {
+    "question": "Which two kinds of organisms do researchers compare to learn about a gene?",
+    "answer": "the knockout organism and normal individuals"
+   },
+   {
+    "question": "What type of cells is put into early embryos?",
+    "answer": "embryonic stem cells"
+   }
+  ],
+  "idea": {
+   "answer": "Scientists switch off a gene in an organism to find out what that gene does.",
+   "distractors": [
+    "Gene knockout is used to give a working gene to people who have a damaged gene.",
+    "Animals with a gene knockout cannot pass the change on to their young.",
+    "Gene knock-in and gene knockout mean exactly the same thing."
+   ],
+   "why": "The passage says knockout organisms are used to learn about genes whose function is unknown by comparing them with normal individuals."
   },
-  {
-    "id": "ir-clear-3213",
-    "sourceId": "clear-3213",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "easy",
-    "title": "The Dance of the Flamingo",
-    "passage": "When you think of flamingos, you always remember their beautiful pink color. Amazingly, the birds get this color from the food they eat! Flamingos eat organisms such as plankton, shrimps, crabs and tiny water plants. All of these have special coloring agents which cause a flamingo to turn pink when it eats them.\n\nIf you take a flamingo away from its natural habitat and don't feed it these kinds of food, their color will turn whiter and whiter as days pass by. Flamingos are water birds – they live and feed near the sea coast and lakes as the food they eat is found in water. They are quite tall – some of them can grow up to a height of 1.5 meters. That is almost as tall as a human!\n\nThese birds have very long legs so they can walk far into the water. Although most photos will show you pictures of flamingos wading in the shallow water, these birds can also swim! Like other water birds such as ducks, flamingos have webbed feet. Webbed feet help birds push water back and swim across a water body.",
-    "sentencesPartEndsAfter": "If you take a flamingo away from its natural habitat and don't feed it these kinds of food, their color will turn whiter and whiter as days pass by.",
-    "blanks": [
-      {
-        "answer": "of",
-        "distractors": [
-          "at",
-          "in",
-          "for",
-          "with"
-        ],
-        "why": "We say “think of” something when it comes into our mind."
-      },
-      {
-        "answer": "remember",
-        "distractors": [
-          "remind",
-          "remembers",
-          "forget",
-          "memory"
-        ],
-        "why": "After “you always” we need a base verb, and a beautiful color is something you remember."
-      },
-      {
-        "answer": "they",
-        "distractors": [
-          "them",
-          "their",
-          "it",
-          "its"
-        ],
-        "why": "“The food they eat”: “they” (the birds) is the subject of “eat”."
-      },
-      {
-        "answer": "plants",
-        "distractors": [
-          "plans",
-          "planets",
-          "planting",
-          "trees"
-        ],
-        "why": "Flamingos eat tiny living things found in water, including tiny water plants."
-      },
-      {
-        "answer": "cause",
-        "distractors": [
-          "causes",
-          "because",
-          "make",
-          "let"
-        ],
-        "why": "“Cause something to do” is the right pattern, and the subject “agents” is plural."
-      },
-      {
-        "answer": "from",
-        "occurrence": 2,
-        "distractors": [
-          "of",
-          "off",
-          "out",
-          "by"
-        ],
-        "why": "“Take something away from” a place is the fixed pattern."
-      },
-      {
-        "answer": "habitat",
-        "distractors": [
-          "habit",
-          "inhabit",
-          "habitual",
-          "hobby"
-        ],
-        "why": "A natural habitat is the place where an animal lives; a “habit” is something you do often."
-      },
-      {
-        "answer": "whiter",
-        "distractors": [
-          "white",
-          "whitest",
-          "pinker",
-          "darker"
-        ],
-        "why": "“Whiter and whiter” repeats the comparative to show a color slowly changing."
-      }
+  "titleDistractors": [
+   "Gene therapy",
+   "How Genes Are Regulated",
+   "The Use of Stem Cells for Treatment of Diseases"
+  ],
+  "titleWhy": "The whole passage explains what a gene knockout is, why it is used and how it is done."
+ },
+ {
+  "id": "ir-clear-3213",
+  "sourceId": "clear-3213",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "All About Flamingos",
+  "passage": "When you think of flamingos, you always remember their beautiful pink color. Amazingly, the birds get this color from the food they eat! Flamingos eat organisms such as plankton, shrimps, crabs and tiny water plants. All of these have special coloring agents which cause a flamingo to turn pink when it eats them.\n\nIf you take a flamingo away from its natural habitat and don't feed it these kinds of food, their color will turn whiter and whiter as days pass by. Flamingos are water birds – they live and feed near the sea coast and lakes as the food they eat is found in water. They are quite tall – some of them can grow up to a height of 1.5 meters. That is almost as tall as a human!\n\nThese birds have very long legs so they can walk far into the water. Although most photos will show you pictures of flamingos wading in the shallow water, these birds can also swim! Like other water birds such as ducks, flamingos have webbed feet. Webbed feet help birds push water back and swim across a water body.",
+  "sentencesPartEndsAfter": "If you take a flamingo away from its natural habitat and don't feed it these kinds of food, their color will turn whiter and whiter as days pass by.",
+  "blanks": [
+   {
+    "answer": "of",
+    "distractors": [
+     "at",
+     "in",
+     "for",
+     "with"
     ],
-    "missingSentence": "Like other water birds such as ducks, flamingos have webbed feet.",
-    "missingDistractors": [
-      "They eat small crabs that live in the sand.",
-      "Elephants swim in rivers when they are hot.",
-      "They migrate, or travel from one place to live in another."
+    "why": "We say “think of” something when it comes into our mind."
+   },
+   {
+    "answer": "remember",
+    "distractors": [
+     "remind",
+     "remembers",
+     "forget",
+     "memory"
     ],
-    "missingWhy": "It introduces webbed feet right after saying flamingos can swim, and the next sentence explains what webbed feet do.",
-    "highlights": [
-      {
-        "question": "What in their food turns flamingos pink?",
-        "answer": "special coloring agents"
-      },
-      {
-        "question": "Why do flamingos stay close to the sea and to lakes?",
-        "answer": "the food they eat is found in water"
-      }
+    "why": "After “you always” we need a base verb, and a beautiful color is something you remember."
+   },
+   {
+    "answer": "they",
+    "distractors": [
+     "them",
+     "their",
+     "it",
+     "its"
     ],
-    "idea": {
-      "answer": "Flamingos are pink because of special colors in the food they eat.",
-      "distractors": [
-        "Flamingos are born pink and keep the same color all their lives.",
-        "Flamingos cannot swim, so they only walk in shallow water.",
-        "Flamingos spend part of the year on warm beaches and part on the cold tundra."
-      ],
-      "why": "The passage explains that coloring agents in plankton, shrimps, crabs and water plants turn flamingos pink."
-    },
-    "titleDistractors": [
-      "Sanderlings: Traveling Birds",
-      "Plankton",
-      "Why Didn’t the Bird Cross the Road?"
+    "why": "“The food they eat”: “they” (the birds) is the subject of “eat”."
+   },
+   {
+    "answer": "plants",
+    "distractors": [
+     "plans",
+     "planets",
+     "planting",
+     "trees"
     ],
-    "titleWhy": "It is the only title about flamingos, and the passage describes their color, size, legs and feet."
+    "why": "Flamingos eat tiny living things found in water, including tiny water plants."
+   },
+   {
+    "answer": "cause",
+    "distractors": [
+     "causes",
+     "because",
+     "make",
+     "let"
+    ],
+    "why": "“Cause something to do” is the right pattern, and the subject “agents” is plural."
+   },
+   {
+    "answer": "from",
+    "occurrence": 2,
+    "distractors": [
+     "of",
+     "off",
+     "out",
+     "by"
+    ],
+    "why": "“Take something away from” a place is the fixed pattern."
+   },
+   {
+    "answer": "habitat",
+    "distractors": [
+     "habit",
+     "inhabit",
+     "habitual",
+     "hobby"
+    ],
+    "why": "A natural habitat is the place where an animal lives; a “habit” is something you do often."
+   },
+   {
+    "answer": "whiter",
+    "distractors": [
+     "white",
+     "whitest",
+     "pinker",
+     "darker"
+    ],
+    "why": "“Whiter and whiter” repeats the comparative to show a color slowly changing."
+   }
+  ],
+  "missingSentence": "Like other water birds such as ducks, flamingos have webbed feet.",
+  "missingDistractors": [
+   "They eat small crabs that live in the sand.",
+   "Elephants swim in rivers when they are hot.",
+   "They migrate, or travel from one place to live in another."
+  ],
+  "missingWhy": "It introduces webbed feet right after saying flamingos can swim, and the next sentence explains what webbed feet do.",
+  "highlights": [
+   {
+    "question": "What in their food turns flamingos pink?",
+    "answer": "special coloring agents"
+   },
+   {
+    "question": "Why do flamingos stay close to the sea and to lakes?",
+    "answer": "the food they eat is found in water"
+   }
+  ],
+  "idea": {
+   "answer": "Flamingos are pink because of special colors in the food they eat.",
+   "distractors": [
+    "Flamingos are born pink and keep the same color all their lives.",
+    "Flamingos cannot swim, so they only walk in shallow water.",
+    "Flamingos spend part of the year on warm beaches and part on the cold tundra."
+   ],
+   "why": "The passage explains that coloring agents in plankton, shrimps, crabs and water plants turn flamingos pink."
   },
-  {
-    "id": "ir-clear-3271",
-    "sourceId": "clear-3271",
-    "genre": "narrative",
-    "topic": "story",
-    "difficulty": "intermediate",
-    "title": "Searching for the spirit of Spring",
-    "passage": "Nkanyezi walked all day. She hiked up a hill, and down into a valley. She sailed across the great river, and climbed between sharp rocks. She marched across the plains until she reached the shadow of the red mountains. As night was closing in, Nkanyezi arrived at a village of patterns and colors as she had never seen before. She told the village elders about her journey to bring back the spirit of celebration to her people. The mother of this tribe gave Nkanyezi a gift. She told the girl, \"With love we give to you this paint to restore color to your village.\" Nkanyezi thanked the elders and put the paint in her bag. Early the next morning she went on her way. Nkanyezi walked all day, through a vast forest of giant trees. As the sky became too dark for her to see, she heard the sound of beating drums. She hurried towards the drumming, feeling the spirit of dance coming to her tired feet.",
-    "sentencesPartEndsAfter": "The mother of this tribe gave Nkanyezi a gift.",
-    "blanks": [
-      {
-        "answer": "hill",
-        "distractors": [
-          "hills",
-          "hall",
-          "sea",
-          "lake"
-        ],
-        "why": "You hike up “a hill”; after “a” the noun must be singular."
-      },
-      {
-        "answer": "across",
-        "distractors": [
-          "among",
-          "between",
-          "above",
-          "beneath"
-        ],
-        "why": "You sail across a river from one side to the other."
-      },
-      {
-        "answer": "until",
-        "distractors": [
-          "while",
-          "because",
-          "unless",
-          "since"
-        ],
-        "why": "“Until” shows she kept marching up to the moment she reached the mountains."
-      },
-      {
-        "answer": "arrived",
-        "distractors": [
-          "reached",
-          "arrival",
-          "arrive",
-          "entered"
-        ],
-        "why": "We say “arrive at” a place; “reached” and “entered” take no “at”."
-      },
-      {
-        "answer": "never",
-        "distractors": [
-          "ever",
-          "yet",
-          "no",
-          "none"
-        ],
-        "why": "“As she had never seen before” means the village was new to her."
-      },
-      {
-        "answer": "told",
-        "distractors": [
-          "said",
-          "spoke",
-          "talked",
-          "tell"
-        ],
-        "why": "We “tell someone about something”; “said”, “spoke” and “talked” cannot take “the village elders” as an object."
-      },
-      {
-        "answer": "celebration",
-        "distractors": [
-          "celebrate",
-          "celebrity",
-          "celebrated",
-          "sadness"
-        ],
-        "why": "After “the spirit of” we need a noun, and she wants to bring joy back, not sadness."
-      },
-      {
-        "answer": "this",
-        "distractors": [
-          "these",
-          "those",
-          "they",
-          "them"
-        ],
-        "why": "“Tribe” is singular, so it needs “this”."
-      }
+  "titleDistractors": [
+   "Sanderlings: Traveling Birds",
+   "Plankton",
+   "Why Didn’t the Bird Cross the Road?"
+  ],
+  "titleWhy": "Every sentence describes flamingos: their colour, food, home, size, legs and feet.",
+  "titleWritten": true
+ },
+ {
+  "id": "ir-clear-3271",
+  "sourceId": "clear-3271",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "intermediate",
+  "title": "Searching for the Spirit of Celebration",
+  "passage": "Nkanyezi walked all day. She hiked up a hill, and down into a valley. She sailed across the great river, and climbed between sharp rocks. She marched across the plains until she reached the shadow of the red mountains. As night was closing in, Nkanyezi arrived at a village of patterns and colors as she had never seen before. She told the village elders about her journey to bring back the spirit of celebration to her people. The mother of this tribe gave Nkanyezi a gift. She told the girl, \"With love we give to you this paint to restore color to your village.\" Nkanyezi thanked the elders and put the paint in her bag. Early the next morning she went on her way. Nkanyezi walked all day, through a vast forest of giant trees. As the sky became too dark for her to see, she heard the sound of beating drums. She hurried towards the drumming, feeling the spirit of dance coming to her tired feet.",
+  "sentencesPartEndsAfter": "The mother of this tribe gave Nkanyezi a gift.",
+  "blanks": [
+   {
+    "answer": "hill",
+    "distractors": [
+     "hills",
+     "hall",
+     "sea",
+     "lake"
     ],
-    "missingSentence": "As the sky became too dark for her to see, she heard the sound of beating drums.",
-    "missingDistractors": [
-      "Drums enrich songs and make people want to dance.",
-      "One Wednesday afternoon, the ten boys went to the forest to search for snails.",
-      "The giant asked the girl loved by both parents to help her carry firewood."
+    "why": "You hike up “a hill”; after “a” the noun must be singular."
+   },
+   {
+    "answer": "across",
+    "distractors": [
+     "among",
+     "between",
+     "above",
+     "beneath"
     ],
-    "missingWhy": "The next sentence says she hurried “towards the drumming”, so the drums must be heard just before it.",
-    "highlights": [
-      {
-        "question": "What was the purpose of Nkanyezi’s journey?",
-        "answer": "to bring back the spirit of celebration to her people"
-      },
-      {
-        "question": "What was the paint meant to do?",
-        "answer": "to restore color to your village"
-      }
+    "why": "You sail across a river from one side to the other."
+   },
+   {
+    "answer": "until",
+    "distractors": [
+     "while",
+     "because",
+     "unless",
+     "since"
     ],
-    "idea": {
-      "answer": "On her journey, Nkanyezi was given paint to bring color back to her village.",
-      "distractors": [
-        "Nkanyezi stayed in the colorful village for many weeks.",
-        "The village elders refused to help Nkanyezi on her journey.",
-        "Nkanyezi went into the forest with ten boys to look for snails."
-      ],
-      "why": "The mother of the tribe gives Nkanyezi paint “to restore color to your village”."
-    },
-    "titleDistractors": [
-      "Drum",
-      "The girl who got rich",
-      "Ten lost boys"
+    "why": "“Until” shows she kept marching up to the moment she reached the mountains."
+   },
+   {
+    "answer": "arrived",
+    "distractors": [
+     "reached",
+     "arrival",
+     "arrive",
+     "entered"
     ],
-    "titleWhy": "The whole story follows Nkanyezi as she travels to bring the spirit of celebration back to her people."
+    "why": "We say “arrive at” a place; “reached” and “entered” take no “at”."
+   },
+   {
+    "answer": "never",
+    "distractors": [
+     "ever",
+     "yet",
+     "no",
+     "none"
+    ],
+    "why": "“As she had never seen before” means the village was new to her."
+   },
+   {
+    "answer": "told",
+    "distractors": [
+     "said",
+     "spoke",
+     "talked",
+     "tell"
+    ],
+    "why": "We “tell someone about something”; “said”, “spoke” and “talked” cannot take “the village elders” as an object."
+   },
+   {
+    "answer": "celebration",
+    "distractors": [
+     "celebrate",
+     "celebrity",
+     "celebrated",
+     "sadness"
+    ],
+    "why": "After “the spirit of” we need a noun, and she wants to bring joy back, not sadness."
+   },
+   {
+    "answer": "this",
+    "distractors": [
+     "these",
+     "those",
+     "they",
+     "them"
+    ],
+    "why": "“Tribe” is singular, so it needs “this”."
+   }
+  ],
+  "missingSentence": "As the sky became too dark for her to see, she heard the sound of beating drums.",
+  "missingDistractors": [
+   "Drums enrich songs and make people want to dance.",
+   "One Wednesday afternoon, the ten boys went to the forest to search for snails.",
+   "The giant asked the girl loved by both parents to help her carry firewood."
+  ],
+  "missingWhy": "The next sentence says she hurried “towards the drumming”, so the drums must be heard just before it.",
+  "highlights": [
+   {
+    "question": "What was the purpose of Nkanyezi’s journey?",
+    "answer": "to bring back the spirit of celebration to her people"
+   },
+   {
+    "question": "What was the paint meant to do?",
+    "answer": "to restore color to your village"
+   }
+  ],
+  "idea": {
+   "answer": "On her journey, Nkanyezi was given paint to bring color back to her village.",
+   "distractors": [
+    "Nkanyezi stayed in the colorful village for many weeks.",
+    "The village elders refused to help Nkanyezi on her journey.",
+    "Nkanyezi went into the forest with ten boys to look for snails."
+   ],
+   "why": "The mother of the tribe gives Nkanyezi paint “to restore color to your village”."
   },
-  {
-    "id": "ir-clear-3347",
-    "sourceId": "clear-3347",
-    "genre": "narrative",
-    "topic": "story",
-    "difficulty": "easy",
-    "title": "Lion gets sick",
-    "passage": "One day, all the wild animals got together to choose a king.\n\nThey saw that it would be good to choose Lion to be the king of the animals.\n\nAt that meeting, they crowned Lion the king of the animals. As part of the ceremony, they had a big party that lasted a week.\n\nAll of the animals attended the ceremony until the end. They ate, they drank, they sang and they danced.\n\nWhen the ceremony was over, they all dispersed. They were returning to their homes.\n\nIt was the custom for every animal to go and greet Lion because he was their king.\n\nOne visitor who came to greet King Lion was Hyena. When Hyena arrived at Lion's house, he found the king in bed.\n\nLion told him, \"I'm sick with an incurable illness.\"\n\nHyena responded, \"O, Great King, don't be sad because of your illness. Hare knows the cure for this illness.\"",
-    "sentencesPartEndsAfter": "When the ceremony was over, they all dispersed.",
-    "blanks": [
-      {
-        "answer": "together",
-        "distractors": [
-          "gather",
-          "toward",
-          "forward",
-          "between"
-        ],
-        "why": "“Get together” means to meet as a group."
-      },
-      {
-        "answer": "would",
-        "distractors": [
-          "has",
-          "does",
-          "did",
-          "is"
-        ],
-        "why": "Before “be” we need a modal verb: “it would be good”."
-      },
-      {
-        "answer": "meeting",
-        "distractors": [
-          "meat",
-          "met",
-          "meetings",
-          "meant"
-        ],
-        "why": "“At that meeting” refers back to the animals getting together; “that” needs a singular noun."
-      },
-      {
-        "answer": "part",
-        "distractors": [
-          "party",
-          "parts",
-          "piece",
-          "apart"
-        ],
-        "why": "“As part of” is a fixed phrase meaning “included in”."
-      },
-      {
-        "answer": "lasted",
-        "distractors": [
-          "last",
-          "latest",
-          "lost",
-          "stayed"
-        ],
-        "why": "The party went on for a week, so it “lasted” a week (past tense)."
-      },
-      {
-        "answer": "attended",
-        "distractors": [
-          "attend",
-          "attention",
-          "went",
-          "arrived"
-        ],
-        "why": "“Attend a ceremony” means to be there; “went” and “arrived” would need “to” or “at”."
-      },
-      {
-        "answer": "until",
-        "distractors": [
-          "unless",
-          "while",
-          "since",
-          "among"
-        ],
-        "why": "“Until the end” means they stayed up to the last moment."
-      },
-      {
-        "answer": "over",
-        "distractors": [
-          "above",
-          "across",
-          "under",
-          "upon"
-        ],
-        "why": "“Was over” means had finished."
-      }
+  "titleDistractors": [
+   "Drum",
+   "The girl who got rich",
+   "Ten lost boys"
+  ],
+  "titleWhy": "The story follows Nkanyezi's journey to bring back the spirit of celebration.",
+  "titleWritten": true
+ },
+ {
+  "id": "ir-clear-3347",
+  "sourceId": "clear-3347",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Lion gets sick",
+  "passage": "One day, all the wild animals got together to choose a king.\n\nThey saw that it would be good to choose Lion to be the king of the animals.\n\nAt that meeting, they crowned Lion the king of the animals. As part of the ceremony, they had a big party that lasted a week.\n\nAll of the animals attended the ceremony until the end. They ate, they drank, they sang and they danced.\n\nWhen the ceremony was over, they all dispersed. They were returning to their homes.\n\nIt was the custom for every animal to go and greet Lion because he was their king.\n\nOne visitor who came to greet King Lion was Hyena. When Hyena arrived at Lion's house, he found the king in bed.\n\nLion told him, \"I'm sick with an incurable illness.\"\n\nHyena responded, \"O, Great King, don't be sad because of your illness. Hare knows the cure for this illness.\"",
+  "sentencesPartEndsAfter": "When the ceremony was over, they all dispersed.",
+  "blanks": [
+   {
+    "answer": "together",
+    "distractors": [
+     "gather",
+     "toward",
+     "forward",
+     "between"
     ],
-    "missingSentence": "When Hyena arrived at Lion's house, he found the king in bed.",
-    "missingDistractors": [
-      "Hyena complained that he had been given more work.",
-      "Hyena suggested that it was good to plant maize.",
-      "Hyena believes in working hard and not getting things for free."
+    "why": "“Get together” means to meet as a group."
+   },
+   {
+    "answer": "would",
+    "distractors": [
+     "has",
+     "does",
+     "did",
+     "is"
     ],
-    "missingWhy": "Hyena arrives and finds Lion in bed, which explains why Lion then tells “him” that he is sick.",
-    "highlights": [
-      {
-        "question": "According to the custom, why did every animal go to greet Lion?",
-        "answer": "because he was their king"
-      },
-      {
-        "question": "What good news does Hyena give Lion?",
-        "answer": "Hare knows the cure for this illness"
-      }
+    "why": "Before “be” we need a modal verb: “it would be good”."
+   },
+   {
+    "answer": "meeting",
+    "distractors": [
+     "meat",
+     "met",
+     "meetings",
+     "meant"
     ],
-    "idea": {
-      "answer": "When Hyena visited King Lion, he found that Lion was ill.",
-      "distractors": [
-        "The animals chose Hyena to be their king.",
-        "Hare and Hyena were great friends who did many things together.",
-        "Only a few animals stayed at the ceremony until it ended."
-      ],
-      "why": "Hyena comes to greet King Lion and finds him in bed, sick with an illness."
-    },
-    "titleDistractors": [
-      "Hare and Hyena",
-      "Giant Elephant",
-      "Sheep who got tired of city life"
+    "why": "“At that meeting” refers back to the animals getting together; “that” needs a singular noun."
+   },
+   {
+    "answer": "part",
+    "distractors": [
+     "party",
+     "parts",
+     "piece",
+     "apart"
     ],
-    "titleWhy": "The story leads up to the new king, Lion, falling ill."
+    "why": "“As part of” is a fixed phrase meaning “included in”."
+   },
+   {
+    "answer": "lasted",
+    "distractors": [
+     "last",
+     "latest",
+     "lost",
+     "stayed"
+    ],
+    "why": "The party went on for a week, so it “lasted” a week (past tense)."
+   },
+   {
+    "answer": "attended",
+    "distractors": [
+     "attend",
+     "attention",
+     "went",
+     "arrived"
+    ],
+    "why": "“Attend a ceremony” means to be there; “went” and “arrived” would need “to” or “at”."
+   },
+   {
+    "answer": "until",
+    "distractors": [
+     "unless",
+     "while",
+     "since",
+     "among"
+    ],
+    "why": "“Until the end” means they stayed up to the last moment."
+   },
+   {
+    "answer": "over",
+    "distractors": [
+     "above",
+     "across",
+     "under",
+     "upon"
+    ],
+    "why": "“Was over” means had finished."
+   }
+  ],
+  "missingSentence": "When Hyena arrived at Lion's house, he found the king in bed.",
+  "missingDistractors": [
+   "Hyena complained that he had been given more work.",
+   "Hyena suggested that it was good to plant maize.",
+   "Hyena believes in working hard and not getting things for free."
+  ],
+  "missingWhy": "Hyena arrives and finds Lion in bed, which explains why Lion then tells “him” that he is sick.",
+  "highlights": [
+   {
+    "question": "According to the custom, why did every animal go to greet Lion?",
+    "answer": "because he was their king"
+   },
+   {
+    "question": "What good news does Hyena give Lion?",
+    "answer": "Hare knows the cure for this illness"
+   }
+  ],
+  "idea": {
+   "answer": "When Hyena visited King Lion, he found that Lion was ill.",
+   "distractors": [
+    "The animals chose Hyena to be their king.",
+    "Hare and Hyena were great friends who did many things together.",
+    "Only a few animals stayed at the ceremony until it ended."
+   ],
+   "why": "Hyena comes to greet King Lion and finds him in bed, sick with an illness."
   },
-  {
-    "id": "ir-clear-3441",
-    "sourceId": "clear-3441",
-    "genre": "narrative",
-    "topic": "story",
-    "difficulty": "easy",
-    "title": "Anansi and wisdom",
-    "passage": "One day, Nyame decided that he would give the pot of wisdom to Anansi. Every time Anansi looked in the clay pot, he learned something new. It was so exciting! Greedy Anansi thought, \"I'll keep the pot safe at the top of a tall tree. Then I can have it all to myself!\" He spun a long thread, wound it round the clay pot, and tied it to his stomach. He began to climb the tree. But it was hard climbing the tree with the pot bumping him in the knees all the time. All the time Anansi's young son had been standing at the bottom of the tree watching. He said, \"Wouldn't it be easier to climb if you tied the pot to your back instead?\" Anansi tried tying the clay pot full of wisdom to his back, and it really was a lot easier. In no time he reached the top of the tree. But then he stopped and thought, \"I'm supposed to be the one with all the wisdom, and here my son was cleverer than me!\" Anansi was so angry about this that he threw the clay pot down out of the tree.",
-    "sentencesPartEndsAfter": "But it was hard climbing the tree with the pot bumping him in the knees all the time.",
-    "blanks": [
-      {
-        "answer": "learned",
-        "distractors": [
-          "learning",
-          "learn",
-          "forgot",
-          "lesson"
-        ],
-        "why": "Looking into the pot of wisdom taught him things, so he “learned” something new (past tense)."
-      },
-      {
-        "answer": "exciting",
-        "distractors": [
-          "excited",
-          "excitement",
-          "excite",
-          "boring"
-        ],
-        "why": "Use “exciting” for the thing that causes the feeling; “excited” describes how a person feels."
-      },
-      {
-        "answer": "myself",
-        "distractors": [
-          "me",
-          "mine",
-          "my",
-          "himself"
-        ],
-        "why": "Anansi is speaking about himself, so the phrase is “have it all to myself”."
-      },
-      {
-        "answer": "thread",
-        "distractors": [
-          "threat",
-          "threads",
-          "throat",
-          "bread"
-        ],
-        "why": "Spiders spin a thread, and “a” needs a singular noun."
-      },
-      {
-        "answer": "his",
-        "distractors": [
-          "he",
-          "him",
-          "its",
-          "her"
-        ],
-        "why": "The pot is tied to Anansi’s own stomach, so the possessive “his” is needed."
-      },
-      {
-        "answer": "began",
-        "distractors": [
-          "begun",
-          "begin",
-          "beginning",
-          "finished"
-        ],
-        "why": "“Began” is the past tense of “begin”; “begun” needs “has” or “had”."
-      },
-      {
-        "answer": "hard",
-        "distractors": [
-          "hardly",
-          "hardness",
-          "heard",
-          "easy"
-        ],
-        "why": "“But” and the pot hitting his knees show the climb was difficult; “hardly” means “almost not”."
-      },
-      {
-        "answer": "with",
-        "distractors": [
-          "by",
-          "from",
-          "for",
-          "of"
-        ],
-        "why": "“With the pot bumping him” describes what was happening during the climb."
-      }
+  "titleDistractors": [
+   "Hare and Hyena",
+   "Giant Elephant",
+   "Sheep who got tired of city life"
+  ],
+  "titleWhy": "The story leads up to the new king, Lion, falling ill."
+ },
+ {
+  "id": "ir-clear-3441",
+  "sourceId": "clear-3441",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Anansi and wisdom",
+  "passage": "One day, Nyame decided that he would give the pot of wisdom to Anansi. Every time Anansi looked in the clay pot, he learned something new. It was so exciting! Greedy Anansi thought, \"I'll keep the pot safe at the top of a tall tree. Then I can have it all to myself!\" He spun a long thread, wound it round the clay pot, and tied it to his stomach. He began to climb the tree. But it was hard climbing the tree with the pot bumping him in the knees all the time. All the time Anansi's young son had been standing at the bottom of the tree watching. He said, \"Wouldn't it be easier to climb if you tied the pot to your back instead?\" Anansi tried tying the clay pot full of wisdom to his back, and it really was a lot easier. In no time he reached the top of the tree. But then he stopped and thought, \"I'm supposed to be the one with all the wisdom, and here my son was cleverer than me!\" Anansi was so angry about this that he threw the clay pot down out of the tree.",
+  "sentencesPartEndsAfter": "But it was hard climbing the tree with the pot bumping him in the knees all the time.",
+  "blanks": [
+   {
+    "answer": "learned",
+    "distractors": [
+     "learning",
+     "learn",
+     "forgot",
+     "lesson"
     ],
-    "missingSentence": "He said, \"Wouldn't it be easier to climb if you tied the pot to your back instead?\"",
-    "missingDistractors": [
-      "Let me tie one end of this web around my leg and one end to your pot.",
-      "Then, Anansi felt a pull on one of his legs.",
-      "Quietly, Fati started to climb the mango tree."
+    "why": "Looking into the pot of wisdom taught him things, so he “learned” something new (past tense)."
+   },
+   {
+    "answer": "exciting",
+    "distractors": [
+     "excited",
+     "excitement",
+     "excite",
+     "boring"
     ],
-    "missingWhy": "The son speaks after watching, and Anansi’s next action, tying the pot to his back, follows the son’s idea.",
-    "highlights": [
-      {
-        "question": "Where did Anansi plan to keep the pot safe?",
-        "answer": "at the top of a tall tree"
-      },
-      {
-        "question": "Where was Anansi’s son while his father was climbing?",
-        "answer": "at the bottom of the tree"
-      }
+    "why": "Use “exciting” for the thing that causes the feeling; “excited” describes how a person feels."
+   },
+   {
+    "answer": "myself",
+    "distractors": [
+     "me",
+     "mine",
+     "my",
+     "himself"
     ],
-    "idea": {
-      "answer": "Anansi’s son showed him an easier way to carry the pot up the tree.",
-      "distractors": [
-        "Anansi shared the pot of wisdom with everyone in his village.",
-        "Anansi’s son climbed the tree and took the pot for himself.",
-        "Nyame kept all the stories locked in a wooden box high in the sky."
-      ],
-      "why": "The son suggests tying the pot to his back, and Anansi finds that it really is easier."
-    },
-    "titleDistractors": [
-      "Anansi gives people stories",
-      "Lazy Anansi",
-      "Fati and the Honey Tree"
+    "why": "Anansi is speaking about himself, so the phrase is “have it all to myself”."
+   },
+   {
+    "answer": "thread",
+    "distractors": [
+     "threat",
+     "threads",
+     "throat",
+     "bread"
     ],
-    "titleWhy": "The whole story is about Anansi and the pot of wisdom, and how his son proves wiser than him."
+    "why": "Spiders spin a thread, and “a” needs a singular noun."
+   },
+   {
+    "answer": "his",
+    "distractors": [
+     "he",
+     "him",
+     "its",
+     "her"
+    ],
+    "why": "The pot is tied to Anansi’s own stomach, so the possessive “his” is needed."
+   },
+   {
+    "answer": "began",
+    "distractors": [
+     "begun",
+     "begin",
+     "beginning",
+     "finished"
+    ],
+    "why": "“Began” is the past tense of “begin”; “begun” needs “has” or “had”."
+   },
+   {
+    "answer": "hard",
+    "distractors": [
+     "hardly",
+     "hardness",
+     "heard",
+     "easy"
+    ],
+    "why": "“But” and the pot hitting his knees show the climb was difficult; “hardly” means “almost not”."
+   },
+   {
+    "answer": "with",
+    "distractors": [
+     "by",
+     "from",
+     "for",
+     "of"
+    ],
+    "why": "“With the pot bumping him” describes what was happening during the climb."
+   }
+  ],
+  "missingSentence": "He said, \"Wouldn't it be easier to climb if you tied the pot to your back instead?\"",
+  "missingDistractors": [
+   "Let me tie one end of this web around my leg and one end to your pot.",
+   "Then, Anansi felt a pull on one of his legs.",
+   "Quietly, Fati started to climb the mango tree."
+  ],
+  "missingWhy": "The son speaks after watching, and Anansi’s next action, tying the pot to his back, follows the son’s idea.",
+  "highlights": [
+   {
+    "question": "Where did Anansi plan to keep the pot safe?",
+    "answer": "at the top of a tall tree"
+   },
+   {
+    "question": "Where was Anansi’s son while his father was climbing?",
+    "answer": "at the bottom of the tree"
+   }
+  ],
+  "idea": {
+   "answer": "Anansi’s son showed him an easier way to carry the pot up the tree.",
+   "distractors": [
+    "Anansi shared the pot of wisdom with everyone in his village.",
+    "Anansi’s son climbed the tree and took the pot for himself.",
+    "Nyame kept all the stories locked in a wooden box high in the sky."
+   ],
+   "why": "The son suggests tying the pot to his back, and Anansi finds that it really is easier."
   },
-  {
-    "id": "ir-ostx-introduction-sociology-3e-m90166-4",
-    "sourceId": "ostx-introduction-sociology-3e-m90166-4",
-    "genre": "expository",
-    "topic": "sociology",
-    "difficulty": "advanced",
-    "title": "The Bystander Effect and Diffusion of Responsibility",
-    "passage": "Social psychologists have recognized that other people’s presence influences our behavior, whether we are aware of it or not. One example is the bystander effect, a situation in which people are less likely to interfere during an emergency or when a social norm is being violated if there are others around. They feel less responsible because of the presence of other bystanders. This is known as diffusion of responsibility.\n\nMost of the time people report that they don’t want to get involved and that’s why they don’t respond when they see something wrong. They assume someone else will step up and help. Researchers have found that people are less likely to help if they don’t know the victim.\n\nThink about it this way, you’re walking to class and there are several students around. Someone falls on the ground having a seizure. What would you do? The bystander effect suggests that unless you know the person who has fallen, you are more likely to walk away than help. However, social psychologists believe that you are much more likely to help, or at least stop and check, if you are the only one around.",
-    "sentencesPartEndsAfter": "They assume someone else will step up and help.",
-    "blanks": [
-      {
-        "answer": "influences",
-        "distractors": [
-          "influential",
-          "influence",
-          "influencing",
-          "ignores"
-        ],
-        "why": "The subject “presence” is singular, so the verb is “influences”."
-      },
-      {
-        "answer": "whether",
-        "distractors": [
-          "unless",
-          "although",
-          "because",
-          "either"
-        ],
-        "why": "“Whether … or not” means “in either case”."
-      },
-      {
-        "answer": "example",
-        "distractors": [
-          "examples",
-          "exam",
-          "sample",
-          "exercise"
-        ],
-        "why": "“One example is” introduces a case of the general idea."
-      },
-      {
-        "answer": "likely",
-        "distractors": [
-          "like",
-          "likeness",
-          "probably",
-          "possible"
-        ],
-        "why": "“Less likely to do something” means less probable to do it."
-      },
-      {
-        "answer": "others",
-        "distractors": [
-          "other",
-          "another",
-          "otherwise",
-          "else"
-        ],
-        "why": "“Others” is a pronoun meaning other people; “other” needs a noun after it."
-      },
-      {
-        "answer": "known",
-        "distractors": [
-          "knew",
-          "knowing",
-          "called",
-          "knows"
-        ],
-        "why": "“Is known as” gives the name of something; we say “is called diffusion…” without “as”."
-      },
-      {
-        "answer": "involved",
-        "distractors": [
-          "involve",
-          "involving",
-          "involvement",
-          "evolved"
-        ],
-        "why": "“Get involved” means to take part in a situation."
-      },
-      {
-        "answer": "else",
-        "distractors": [
-          "other",
-          "another",
-          "others",
-          "more"
-        ],
-        "why": "“Someone else” means a different person."
-      }
+  "titleDistractors": [
+   "Anansi gives people stories",
+   "Lazy Anansi",
+   "Fati and the Honey Tree"
+  ],
+  "titleWhy": "The whole story is about Anansi and the pot of wisdom, and how his son proves wiser than him."
+ },
+ {
+  "id": "ir-ostx-introduction-sociology-3e-m90166-4",
+  "sourceId": "ostx-introduction-sociology-3e-m90166-4",
+  "genre": "expository",
+  "topic": "sociology",
+  "difficulty": "advanced",
+  "title": "The Bystander Effect and Diffusion of Responsibility",
+  "passage": "Social psychologists have recognized that other people’s presence influences our behavior, whether we are aware of it or not. One example is the bystander effect, a situation in which people are less likely to interfere during an emergency or when a social norm is being violated if there are others around. They feel less responsible because of the presence of other bystanders. This is known as diffusion of responsibility.\n\nMost of the time people report that they don’t want to get involved and that’s why they don’t respond when they see something wrong. They assume someone else will step up and help. Researchers have found that people are less likely to help if they don’t know the victim.\n\nThink about it this way, you’re walking to class and there are several students around. Someone falls on the ground having a seizure. What would you do? The bystander effect suggests that unless you know the person who has fallen, you are more likely to walk away than help. However, social psychologists believe that you are much more likely to help, or at least stop and check, if you are the only one around.",
+  "sentencesPartEndsAfter": "They assume someone else will step up and help.",
+  "blanks": [
+   {
+    "answer": "influences",
+    "distractors": [
+     "influential",
+     "influence",
+     "influencing",
+     "ignores"
     ],
-    "missingSentence": "The bystander effect suggests that unless you know the person who has fallen, you are more likely to walk away than help.",
-    "missingDistractors": [
-      "Researchers have used scenarios such as this to understand social cognition in children.",
-      "Situationism is the view that our behavior and actions are determined by our immediate environment and surroundings.",
-      "Children with a negative bias, or hostile attributional error, are more likely to interpret the friend’s behavior as an aggressive or purposefully unkind act."
+    "why": "The subject “presence” is singular, so the verb is “influences”."
+   },
+   {
+    "answer": "whether",
+    "distractors": [
+     "unless",
+     "although",
+     "because",
+     "either"
     ],
-    "missingWhy": "It answers “What would you do?”, and the next sentence’s “However” contrasts with walking away instead of helping.",
-    "highlights": [
-      {
-        "question": "What makes people feel less responsible in an emergency?",
-        "answer": "the presence of other bystanders"
-      },
-      {
-        "question": "When are you likely to help even a stranger, according to social psychologists?",
-        "answer": "if you are the only one around"
-      }
+    "why": "“Whether … or not” means “in either case”."
+   },
+   {
+    "answer": "example",
+    "distractors": [
+     "examples",
+     "exam",
+     "sample",
+     "exercise"
     ],
-    "idea": {
-      "answer": "People are less likely to help in an emergency when other people are present.",
-      "distractors": [
-        "Children often see a friend’s unfriendly behavior as an aggressive act.",
-        "People are more likely to help a stranger than someone they know.",
-        "Our behavior is decided only by our personality, not by the situation."
-      ],
-      "why": "The passage explains the bystander effect: people step in less often when others are around."
-    },
-    "titleDistractors": [
-      "What Is Social Psychology?",
-      "Interpreting and Responding to Social Situations",
-      "What Is Epilepsy and How Can You Help Someone With It?"
+    "why": "“One example is” introduces a case of the general idea."
+   },
+   {
+    "answer": "likely",
+    "distractors": [
+     "like",
+     "likeness",
+     "probably",
+     "possible"
     ],
-    "titleWhy": "The whole passage explains the bystander effect and why people feel less responsible when others are present."
+    "why": "“Less likely to do something” means less probable to do it."
+   },
+   {
+    "answer": "others",
+    "distractors": [
+     "other",
+     "another",
+     "otherwise",
+     "else"
+    ],
+    "why": "“Others” is a pronoun meaning other people; “other” needs a noun after it."
+   },
+   {
+    "answer": "known",
+    "distractors": [
+     "knew",
+     "knowing",
+     "called",
+     "knows"
+    ],
+    "why": "“Is known as” gives the name of something; we say “is called diffusion…” without “as”."
+   },
+   {
+    "answer": "involved",
+    "distractors": [
+     "involve",
+     "involving",
+     "involvement",
+     "evolved"
+    ],
+    "why": "“Get involved” means to take part in a situation."
+   },
+   {
+    "answer": "else",
+    "distractors": [
+     "other",
+     "another",
+     "others",
+     "more"
+    ],
+    "why": "“Someone else” means a different person."
+   }
+  ],
+  "missingSentence": "The bystander effect suggests that unless you know the person who has fallen, you are more likely to walk away than help.",
+  "missingDistractors": [
+   "Researchers have used scenarios such as this to understand social cognition in children.",
+   "Situationism is the view that our behavior and actions are determined by our immediate environment and surroundings.",
+   "Children with a negative bias, or hostile attributional error, are more likely to interpret the friend’s behavior as an aggressive or purposefully unkind act."
+  ],
+  "missingWhy": "It answers “What would you do?”, and the next sentence’s “However” contrasts with walking away instead of helping.",
+  "highlights": [
+   {
+    "question": "What makes people feel less responsible in an emergency?",
+    "answer": "the presence of other bystanders"
+   },
+   {
+    "question": "When are you likely to help even a stranger, according to social psychologists?",
+    "answer": "if you are the only one around"
+   }
+  ],
+  "idea": {
+   "answer": "People are less likely to help in an emergency when other people are present.",
+   "distractors": [
+    "Children often see a friend’s unfriendly behavior as an aggressive act.",
+    "People are more likely to help a stranger than someone they know.",
+    "Our behavior is decided only by our personality, not by the situation."
+   ],
+   "why": "The passage explains the bystander effect: people step in less often when others are around."
   },
-  {
-    "id": "ir-ostx-world-history-volume-1-m00114-7",
-    "sourceId": "ostx-world-history-volume-1-m00114-7",
-    "genre": "expository",
-    "topic": "history",
-    "difficulty": "advanced",
-    "title": "Peopling Mesoamerica",
-    "passage": "To the south and west of the Eastern Woodlands, the climate is much more arid and less green. This desert scrubland extends down the center of Mexico to the tip of the Central Mexican Plateau. South of there, in the region often described as Mesoamerica, the environment is warmer, greener, and wetter. The formerly large-game-hunting peoples settled there after around 8000 BCE as the game disappeared and the bison followed the retreating grassland north. Evidence of Archaic peoples in this area has been found in several coastal sites along the Gulf of Mexico and the Pacific Ocean, as well as in the Tehuacán Valley south of modern Mexico City. They lived largely in small groups and hunted and gathered over large areas. During the dry season, they relied mostly on wild game like lizards, snakes, and insects, and edible plants like the agave. During the rainy season, they ate avocados, nuts, various types of fruit, and small game, like rabbits.",
-    "sentencesPartEndsAfter": "The formerly large-game-hunting peoples settled there after around 8000 BCE as the game disappeared and the bison followed the retreating grassland north.",
-    "blanks": [
-      {
-        "answer": "much",
-        "distractors": [
-          "many",
-          "very",
-          "most",
-          "such"
-        ],
-        "why": "“Much” makes a comparative stronger: “much more arid”."
-      },
-      {
-        "answer": "less",
-        "distractors": [
-          "fewer",
-          "least",
-          "lesser",
-          "little"
-        ],
-        "why": "“Less” goes with adjectives (“less green”); “fewer” goes with plural nouns."
-      },
-      {
-        "answer": "extends",
-        "distractors": [
-          "extent",
-          "extension",
-          "extend",
-          "extensive"
-        ],
-        "why": "The singular subject “scrubland” needs the present-tense verb “extends”."
-      },
-      {
-        "answer": "described",
-        "distractors": [
-          "describe",
-          "description",
-          "descriptive",
-          "called"
-        ],
-        "why": "We say “described as”; “called” is used without “as”."
-      },
-      {
-        "answer": "warmer",
-        "distractors": [
-          "warmest",
-          "warmly",
-          "warmth",
-          "drier"
-        ],
-        "why": "It matches the other comparatives, “greener, and wetter”, which contrast with the dry land to the north."
-      },
-      {
-        "answer": "there",
-        "occurrence": 2,
-        "distractors": [
-          "their",
-          "they’re",
-          "these",
-          "where"
-        ],
-        "why": "“Settled there” means settled in that place (Mesoamerica)."
-      },
-      {
-        "answer": "disappeared",
-        "distractors": [
-          "disappear",
-          "disappearance",
-          "disappointed",
-          "appeared"
-        ],
-        "why": "The peoples were only “formerly” big-game hunters because the large animals disappeared."
-      },
-      {
-        "answer": "followed",
-        "distractors": [
-          "follow",
-          "following",
-          "fellow",
-          "allowed"
-        ],
-        "why": "The bison moved north after the grassland, so they “followed” it (past tense)."
-      }
+  "titleDistractors": [
+   "What Is Social Psychology?",
+   "Interpreting and Responding to Social Situations",
+   "What Is Epilepsy and How Can You Help Someone With It?"
+  ],
+  "titleWhy": "The whole passage explains the bystander effect and why people feel less responsible when others are present."
+ },
+ {
+  "id": "ir-ostx-world-history-volume-1-m00114-7",
+  "sourceId": "ostx-world-history-volume-1-m00114-7",
+  "genre": "expository",
+  "topic": "history",
+  "difficulty": "advanced",
+  "title": "Peopling Mesoamerica",
+  "passage": "To the south and west of the Eastern Woodlands, the climate is much more arid and less green. This desert scrubland extends down the center of Mexico to the tip of the Central Mexican Plateau. South of there, in the region often described as Mesoamerica, the environment is warmer, greener, and wetter. The formerly large-game-hunting peoples settled there after around 8000 BCE as the game disappeared and the bison followed the retreating grassland north. Evidence of Archaic peoples in this area has been found in several coastal sites along the Gulf of Mexico and the Pacific Ocean, as well as in the Tehuacán Valley south of modern Mexico City. They lived largely in small groups and hunted and gathered over large areas. During the dry season, they relied mostly on wild game like lizards, snakes, and insects, and edible plants like the agave. During the rainy season, they ate avocados, nuts, various types of fruit, and small game, like rabbits.",
+  "sentencesPartEndsAfter": "The formerly large-game-hunting peoples settled there after around 8000 BCE as the game disappeared and the bison followed the retreating grassland north.",
+  "blanks": [
+   {
+    "answer": "much",
+    "distractors": [
+     "many",
+     "very",
+     "most",
+     "such"
     ],
-    "missingSentence": "During the dry season, they relied mostly on wild game like lizards, snakes, and insects, and edible plants like the agave.",
-    "missingDistractors": [
-      "Hunting bison was dangerous and required keeping a distance in order to not startle the animals or allow them to grow reflexively fearful of human presence.",
-      "In addition to bison, the plains peoples also hunted antelope, deer, and small animals like rabbits and birds.",
-      "In Mesoamerica it was squash and later maize, or corn, and in China millet and rice."
+    "why": "“Much” makes a comparative stronger: “much more arid”."
+   },
+   {
+    "answer": "less",
+    "distractors": [
+     "fewer",
+     "least",
+     "lesser",
+     "little"
     ],
-    "missingWhy": "It gives the foods of the dry season, which pairs with the next sentence about the rainy season.",
-    "highlights": [
-      {
-        "question": "Why did the large-game hunters settle in Mesoamerica?",
-        "answer": "as the game disappeared and the bison followed the retreating grassland north"
-      },
-      {
-        "question": "What did the Archaic peoples eat in the wet part of the year?",
-        "answer": "avocados, nuts, various types of fruit, and small game, like rabbits"
-      }
+    "why": "“Less” goes with adjectives (“less green”); “fewer” goes with plural nouns."
+   },
+   {
+    "answer": "extends",
+    "distractors": [
+     "extent",
+     "extension",
+     "extend",
+     "extensive"
     ],
-    "idea": {
-      "answer": "The Archaic peoples of Mesoamerica ate different foods in the dry season and the rainy season.",
-      "distractors": [
-        "The Archaic peoples of Mesoamerica lived in large cities and grew maize.",
-        "Mesoamerica is drier and less green than the land to its north.",
-        "The bison adapted to the warmer climate and stayed in Mesoamerica."
-      ],
-      "why": "The passage lists lizards, snakes, insects and agave for the dry season, and avocados, nuts and fruit for the rainy season."
-    },
-    "titleDistractors": [
-      "Peopling the Eastern Woodlands",
-      "Peopling the Great Plains",
-      "The Development of Agriculture"
+    "why": "The singular subject “scrubland” needs the present-tense verb “extends”."
+   },
+   {
+    "answer": "described",
+    "distractors": [
+     "describe",
+     "description",
+     "descriptive",
+     "called"
     ],
-    "titleWhy": "The passage describes the land of Mesoamerica and the first peoples who settled and lived there."
+    "why": "We say “described as”; “called” is used without “as”."
+   },
+   {
+    "answer": "warmer",
+    "distractors": [
+     "warmest",
+     "warmly",
+     "warmth",
+     "drier"
+    ],
+    "why": "It matches the other comparatives, “greener, and wetter”, which contrast with the dry land to the north."
+   },
+   {
+    "answer": "there",
+    "occurrence": 2,
+    "distractors": [
+     "their",
+     "they’re",
+     "these",
+     "where"
+    ],
+    "why": "“Settled there” means settled in that place (Mesoamerica)."
+   },
+   {
+    "answer": "disappeared",
+    "distractors": [
+     "disappear",
+     "disappearance",
+     "disappointed",
+     "appeared"
+    ],
+    "why": "The peoples were only “formerly” big-game hunters because the large animals disappeared."
+   },
+   {
+    "answer": "followed",
+    "distractors": [
+     "follow",
+     "following",
+     "fellow",
+     "allowed"
+    ],
+    "why": "The bison moved north after the grassland, so they “followed” it (past tense)."
+   }
+  ],
+  "missingSentence": "During the dry season, they relied mostly on wild game like lizards, snakes, and insects, and edible plants like the agave.",
+  "missingDistractors": [
+   "Hunting bison was dangerous and required keeping a distance in order to not startle the animals or allow them to grow reflexively fearful of human presence.",
+   "In addition to bison, the plains peoples also hunted antelope, deer, and small animals like rabbits and birds.",
+   "In Mesoamerica it was squash and later maize, or corn, and in China millet and rice."
+  ],
+  "missingWhy": "It gives the foods of the dry season, which pairs with the next sentence about the rainy season.",
+  "highlights": [
+   {
+    "question": "What was happening to the large game and the bison when the hunters settled in Mesoamerica?",
+    "answer": "as the game disappeared and the bison followed the retreating grassland north"
+   },
+   {
+    "question": "What did the Archaic peoples eat in the wet part of the year?",
+    "answer": "avocados, nuts, various types of fruit, and small game, like rabbits"
+   }
+  ],
+  "idea": {
+   "answer": "The Archaic peoples of Mesoamerica ate different foods in the dry season and the rainy season.",
+   "distractors": [
+    "The Archaic peoples of Mesoamerica lived in large cities and grew maize.",
+    "Mesoamerica is drier and less green than the land to its north.",
+    "The bison adapted to the warmer climate and stayed in Mesoamerica."
+   ],
+   "why": "The passage lists lizards, snakes, insects and agave for the dry season, and avocados, nuts and fruit for the rainy season."
   },
-  {
-    "id": "ir-ostx-concepts-biology-m45493-1",
-    "sourceId": "ostx-concepts-biology-m45493-1",
-    "genre": "expository",
-    "topic": "biology",
-    "difficulty": "advanced",
-    "title": "Speciation through Geographic Separation",
-    "passage": "A geographically continuous population has a gene pool that is relatively homogeneous. Gene flow, the movement of alleles across the range of the species, is relatively free because individuals can move and then mate with individuals in their new location. Thus, the frequency of an allele at one end of a distribution will be similar to the frequency of the allele at the other end. When populations become geographically discontinuous that free-flow of alleles is prevented. When that separation lasts for a period of time, the two populations are able to evolve along different trajectories. Thus, their allele frequencies at numerous genetic loci gradually become more and more different as new alleles independently arise by mutation in each population. Typically, environmental conditions, such as climate, resources, predators, and competitors, for the two populations will differ causing natural selection to favor divergent adaptations in each group. Different histories of genetic drift, enhanced because the populations are smaller than the parent population, will also lead to divergence.",
-    "sentencesPartEndsAfter": "When populations become geographically discontinuous that free-flow of alleles is prevented.",
-    "blanks": [
-      {
-        "answer": "has",
-        "distractors": [
-          "have",
-          "having",
-          "does",
-          "been"
-        ],
-        "why": "A singular subject (“population”) takes “has”."
-      },
-      {
-        "answer": "pool",
-        "distractors": [
-          "poll",
-          "pools",
-          "pole",
-          "lake"
-        ],
-        "why": "“Gene pool” is the fixed term for all the genes in a population."
-      },
-      {
-        "answer": "movement",
-        "distractors": [
-          "moved",
-          "moment",
-          "motive",
-          "movable"
-        ],
-        "why": "After “the” we need a noun: gene flow is the movement of alleles."
-      },
-      {
-        "answer": "free",
-        "distractors": [
-          "freely",
-          "freedom",
-          "freeze",
-          "blocked"
-        ],
-        "why": "Gene flow is easy (“free”) because individuals can move; an adjective follows “is relatively”."
-      },
-      {
-        "answer": "their",
-        "distractors": [
-          "there",
-          "they",
-          "them",
-          "they’re"
-        ],
-        "why": "“Their” is the possessive for “individuals”."
-      },
-      {
-        "answer": "similar",
-        "distractors": [
-          "similarly",
-          "similarity",
-          "same",
-          "different"
-        ],
-        "why": "“Similar to” is the right pattern, and free gene flow keeps the two ends alike."
-      },
-      {
-        "answer": "other",
-        "distractors": [
-          "another",
-          "others",
-          "otherwise",
-          "else"
-        ],
-        "why": "“At one end … at the other end” is a fixed pair."
-      },
-      {
-        "answer": "prevented",
-        "distractors": [
-          "prevention",
-          "prevent",
-          "prevents",
-          "allowed"
-        ],
-        "why": "When populations are separated, gene flow is stopped: “is prevented” (passive)."
-      }
+  "titleDistractors": [
+   "Peopling the Eastern Woodlands",
+   "Peopling the Great Plains",
+   "The Development of Agriculture"
+  ],
+  "titleWhy": "The passage describes the land of Mesoamerica and the first peoples who settled and lived there."
+ },
+ {
+  "id": "ir-ostx-concepts-biology-m45493-1",
+  "sourceId": "ostx-concepts-biology-m45493-1",
+  "genre": "expository",
+  "topic": "biology",
+  "difficulty": "advanced",
+  "title": "Speciation through Geographic Separation",
+  "passage": "A geographically continuous population has a gene pool that is relatively homogeneous. Gene flow, the movement of alleles across the range of the species, is relatively free because individuals can move and then mate with individuals in their new location. Thus, the frequency of an allele at one end of a distribution will be similar to the frequency of the allele at the other end. When populations become geographically discontinuous that free-flow of alleles is prevented. When that separation lasts for a period of time, the two populations are able to evolve along different trajectories. Thus, their allele frequencies at numerous genetic loci gradually become more and more different as new alleles independently arise by mutation in each population. Typically, environmental conditions, such as climate, resources, predators, and competitors, for the two populations will differ causing natural selection to favor divergent adaptations in each group. Different histories of genetic drift, enhanced because the populations are smaller than the parent population, will also lead to divergence.",
+  "sentencesPartEndsAfter": "When populations become geographically discontinuous that free-flow of alleles is prevented.",
+  "blanks": [
+   {
+    "answer": "has",
+    "distractors": [
+     "have",
+     "having",
+     "does",
+     "been"
     ],
-    "missingSentence": "When that separation lasts for a period of time, the two populations are able to evolve along different trajectories.",
-    "missingDistractors": [
-      "A mutation can change one allele into another, but the net effect is a change in frequency.",
-      "In population genetic terms, evolution is defined as a change in the frequency of an allele in a population.",
-      "Gorillas, for example, cannot successfully breed with Pan paniscus, the bonobo."
+    "why": "A singular subject (“population”) takes “has”."
+   },
+   {
+    "answer": "pool",
+    "distractors": [
+     "poll",
+     "pools",
+     "pole",
+     "lake"
     ],
-    "missingWhy": "“That separation” refers back to the populations becoming separated, and “the two populations” is what “their” refers to in the next sentence.",
-    "highlights": [
-      {
-        "question": "How does the passage define gene flow?",
-        "answer": "the movement of alleles across the range of the species"
-      },
-      {
-        "question": "Which environmental conditions may differ for the two populations?",
-        "answer": "climate, resources, predators, and competitors"
-      }
+    "why": "“Gene pool” is the fixed term for all the genes in a population."
+   },
+   {
+    "answer": "movement",
+    "distractors": [
+     "moved",
+     "moment",
+     "motive",
+     "movable"
     ],
-    "idea": {
-      "answer": "When two populations are separated for a long time, their genes slowly become more and more different.",
-      "distractors": [
-        "Genetic drift has the strongest effect in very large populations.",
-        "Separated populations keep the same allele frequencies because new mutations stop appearing.",
-        "In a continuous population, an allele is usually far more common at one end of the range than at the other."
-      ],
-      "why": "The passage explains that separation stops gene flow, so the two populations evolve along different paths."
-    },
-    "titleDistractors": [
-      "Genetic Drift",
-      "Mutation",
-      "Biological Species"
+    "why": "After “the” we need a noun: gene flow is the movement of alleles."
+   },
+   {
+    "answer": "free",
+    "distractors": [
+     "freely",
+     "freedom",
+     "freeze",
+     "blocked"
     ],
-    "titleWhy": "The whole passage explains how geographic separation makes two populations grow genetically different."
+    "why": "Gene flow is easy (“free”) because individuals can move; an adjective follows “is relatively”."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they",
+     "them",
+     "they’re"
+    ],
+    "why": "“Their” is the possessive for “individuals”."
+   },
+   {
+    "answer": "similar",
+    "distractors": [
+     "similarly",
+     "similarity",
+     "same",
+     "different"
+    ],
+    "why": "“Similar to” is the right pattern, and free gene flow keeps the two ends alike."
+   },
+   {
+    "answer": "other",
+    "distractors": [
+     "another",
+     "others",
+     "otherwise",
+     "else"
+    ],
+    "why": "“At one end … at the other end” is a fixed pair."
+   },
+   {
+    "answer": "prevented",
+    "distractors": [
+     "prevention",
+     "prevent",
+     "prevents",
+     "allowed"
+    ],
+    "why": "When populations are separated, gene flow is stopped: “is prevented” (passive)."
+   }
+  ],
+  "missingSentence": "When that separation lasts for a period of time, the two populations are able to evolve along different trajectories.",
+  "missingDistractors": [
+   "A mutation can change one allele into another, but the net effect is a change in frequency.",
+   "In population genetic terms, evolution is defined as a change in the frequency of an allele in a population.",
+   "Gorillas, for example, cannot successfully breed with Pan paniscus, the bonobo."
+  ],
+  "missingWhy": "“That separation” refers back to the populations becoming separated, and “the two populations” is what “their” refers to in the next sentence.",
+  "highlights": [
+   {
+    "question": "How does the passage define gene flow?",
+    "answer": "the movement of alleles across the range of the species"
+   },
+   {
+    "question": "Which environmental conditions may differ for the two populations?",
+    "answer": "climate, resources, predators, and competitors"
+   }
+  ],
+  "idea": {
+   "answer": "When two populations are separated for a long time, their genes slowly become more and more different.",
+   "distractors": [
+    "Genetic drift has the strongest effect in very large populations.",
+    "Separated populations keep the same allele frequencies because new mutations stop appearing.",
+    "In a continuous population, an allele is usually far more common at one end of the range than at the other."
+   ],
+   "why": "The passage explains that separation stops gene flow, so the two populations evolve along different paths."
   },
-  {
-    "id": "ir-ostx-introduction-sociology-3e-m90156-7",
-    "sourceId": "ostx-introduction-sociology-3e-m90156-7",
-    "genre": "expository",
-    "topic": "sociology",
-    "difficulty": "advanced",
-    "title": "Industrial Society",
-    "passage": "In the eighteenth century, Europe experienced a dramatic rise in technological invention, ushering in an era known as the Industrial Revolution. What made this period remarkable was the number of new inventions that influenced people’s daily lives. Within a generation, tasks that had until this point required months of labor became achievable in a matter of days. Before the Industrial Revolution, work was largely person- or animal-based, and relied on human workers or horses to power mills and drive pumps. In 1782, James Watt and Matthew Boulton created a steam engine that could do the work of twelve horses by itself.\n\nSteam power began appearing everywhere. Instead of paying artisans to painstakingly spin wool and weave it into cloth, people turned to textile mills that produced fabric quickly at a better price and often with better quality. Rather than planting and harvesting fields by hand, farmers were able to purchase mechanical seeders and threshing machines that caused agricultural productivity to soar. Products such as paper and glass became available to the average person, and the quality and accessibility of education and health care soared. Gas lights allowed increased visibility in the dark, and towns and cities developed a nightlife.",
-    "sentencesPartEndsAfter": "In 1782, James Watt and Matthew Boulton created a steam engine that could do the work of twelve horses by itself.",
-    "blanks": [
-      {
-        "answer": "rise",
-        "distractors": [
-          "raise",
-          "rising",
-          "risen",
-          "fall"
-        ],
-        "why": "“A rise in” something means an increase, and the Industrial Revolution came from more invention, not less."
-      },
-      {
-        "answer": "remarkable",
-        "distractors": [
-          "remark",
-          "remarkably",
-          "remarked",
-          "ordinary"
-        ],
-        "why": "“Made this period” needs an adjective, and so many inventions made it special."
-      },
-      {
-        "answer": "number",
-        "distractors": [
-          "numeral",
-          "numerous",
-          "amount",
-          "much"
-        ],
-        "why": "Use “number” with countable nouns like “inventions”; “amount” is for uncountable nouns."
-      },
-      {
-        "answer": "Within",
-        "distractors": [
-          "Among",
-          "Between",
-          "Beside",
-          "Upon"
-        ],
-        "why": "“Within a generation” means in less time than one generation."
-      },
-      {
-        "answer": "months",
-        "distractors": [
-          "month",
-          "monthly",
-          "minutes",
-          "seconds"
-        ],
-        "why": "Tasks that took months became possible in days, which shows a great speed-up."
-      },
-      {
-        "answer": "matter",
-        "distractors": [
-          "matters",
-          "material",
-          "question",
-          "subject"
-        ],
-        "why": "“In a matter of days” is a fixed phrase meaning in only a few days."
-      },
-      {
-        "answer": "on",
-        "distractors": [
-          "in",
-          "at",
-          "to",
-          "with"
-        ],
-        "why": "The verb “rely” is always followed by “on”."
-      },
-      {
-        "answer": "horses",
-        "distractors": [
-          "horse",
-          "houses",
-          "hoarse",
-          "cars"
-        ],
-        "why": "Before steam, people and horses powered the mills; the plural noun is needed after “or”."
-      },
-      {
-        "answer": "itself",
-        "distractors": [
-          "himself",
-          "themselves",
-          "its",
-          "it"
-        ],
-        "why": "“By itself” means alone, without help; “engine” is singular and not a person."
-      }
+  "titleDistractors": [
+   "Genetic Drift",
+   "Mutation",
+   "Biological Species"
+  ],
+  "titleWhy": "The whole passage explains how geographic separation makes two populations grow genetically different."
+ },
+ {
+  "id": "ir-ostx-introduction-sociology-3e-m90156-7",
+  "sourceId": "ostx-introduction-sociology-3e-m90156-7",
+  "genre": "expository",
+  "topic": "sociology",
+  "difficulty": "advanced",
+  "title": "Industrial Society",
+  "passage": "In the eighteenth century, Europe experienced a dramatic rise in technological invention, ushering in an era known as the Industrial Revolution. What made this period remarkable was the number of new inventions that influenced people’s daily lives. Within a generation, tasks that had until this point required months of labor became achievable in a matter of days. Before the Industrial Revolution, work was largely person- or animal-based, and relied on human workers or horses to power mills and drive pumps. In 1782, James Watt and Matthew Boulton created a steam engine that could do the work of twelve horses by itself.\n\nSteam power began appearing everywhere. Instead of paying artisans to painstakingly spin wool and weave it into cloth, people turned to textile mills that produced fabric quickly at a better price and often with better quality. Rather than planting and harvesting fields by hand, farmers were able to purchase mechanical seeders and threshing machines that caused agricultural productivity to soar. Products such as paper and glass became available to the average person, and the quality and accessibility of education and health care soared. Gas lights allowed increased visibility in the dark, and towns and cities developed a nightlife.",
+  "sentencesPartEndsAfter": "In 1782, James Watt and Matthew Boulton created a steam engine that could do the work of twelve horses by itself.",
+  "blanks": [
+   {
+    "answer": "rise",
+    "distractors": [
+     "raise",
+     "rising",
+     "risen",
+     "fall"
     ],
-    "missingSentence": "Rather than planting and harvesting fields by hand, farmers were able to purchase mechanical seeders and threshing machines that caused agricultural productivity to soar.",
-    "missingDistractors": [
-      "This could move a pump directly or work a crank to turn a wheel and work a machine.",
-      "It had also begun to enter a new phase of development.",
-      "By the late 1800s, the Industrial Revolution had spread beyond Great Britain."
+    "why": "“A rise in” something means an increase, and the Industrial Revolution came from more invention, not less."
+   },
+   {
+    "answer": "remarkable",
+    "distractors": [
+     "remark",
+     "remarkably",
+     "remarked",
+     "ordinary"
     ],
-    "missingWhy": "Like the sentence before it (“Instead of paying artisans…”), it shows work once done by hand being done by machines, this time on farms.",
-    "highlights": [
-      {
-        "question": "How much work could Watt and Boulton’s steam engine do on its own?",
-        "answer": "the work of twelve horses"
-      },
-      {
-        "question": "Which products could the average person now get?",
-        "answer": "paper and glass"
-      }
+    "why": "“Made this period” needs an adjective, and so many inventions made it special."
+   },
+   {
+    "answer": "number",
+    "distractors": [
+     "numeral",
+     "numerous",
+     "amount",
+     "much"
     ],
-    "idea": {
-      "answer": "New machines in the Industrial Revolution made many everyday tasks much faster.",
-      "distractors": [
-        "The Industrial Revolution began in Great Britain and later spread to the United States.",
-        "Most people still paid artisans to spin wool and weave cloth by hand.",
-        "Machines made goods faster, but the goods were of lower quality than before."
-      ],
-      "why": "The passage says tasks that took months could be done in days, and it lists machines that changed daily life."
-    },
-    "titleDistractors": [
-      "Steam engine",
-      "Early Industrialization in the Northeast",
-      "The History of Sociology"
+    "why": "Use “number” with countable nouns like “inventions”; “amount” is for uncountable nouns."
+   },
+   {
+    "answer": "Within",
+    "distractors": [
+     "Among",
+     "Between",
+     "Beside",
+     "Upon"
     ],
-    "titleWhy": "The passage describes how new machines changed work and daily life as society became industrial."
+    "why": "“Within a generation” means in less time than one generation."
+   },
+   {
+    "answer": "months",
+    "distractors": [
+     "month",
+     "monthly",
+     "minutes",
+     "seconds"
+    ],
+    "why": "Tasks that took months became possible in days, which shows a great speed-up."
+   },
+   {
+    "answer": "matter",
+    "distractors": [
+     "matters",
+     "material",
+     "question",
+     "subject"
+    ],
+    "why": "“In a matter of days” is a fixed phrase meaning in only a few days."
+   },
+   {
+    "answer": "on",
+    "distractors": [
+     "in",
+     "at",
+     "to",
+     "with"
+    ],
+    "why": "The verb “rely” is always followed by “on”."
+   },
+   {
+    "answer": "horses",
+    "distractors": [
+     "horse",
+     "houses",
+     "hoarse",
+     "cars"
+    ],
+    "why": "Before steam, people and horses powered the mills; the plural noun is needed after “or”."
+   },
+   {
+    "answer": "itself",
+    "distractors": [
+     "himself",
+     "themselves",
+     "its",
+     "it"
+    ],
+    "why": "“By itself” means alone, without help; “engine” is singular and not a person."
+   }
+  ],
+  "missingSentence": "Rather than planting and harvesting fields by hand, farmers were able to purchase mechanical seeders and threshing machines that caused agricultural productivity to soar.",
+  "missingDistractors": [
+   "This could move a pump directly or work a crank to turn a wheel and work a machine.",
+   "It had also begun to enter a new phase of development.",
+   "By the late 1800s, the Industrial Revolution had spread beyond Great Britain."
+  ],
+  "missingWhy": "Like the sentence before it (“Instead of paying artisans…”), it shows work once done by hand being done by machines, this time on farms.",
+  "highlights": [
+   {
+    "question": "How much work could Watt and Boulton’s steam engine do on its own?",
+    "answer": "the work of twelve horses"
+   },
+   {
+    "question": "Which products could the average person now get?",
+    "answer": "paper and glass"
+   }
+  ],
+  "idea": {
+   "answer": "New machines in the Industrial Revolution made many everyday tasks much faster.",
+   "distractors": [
+    "The Industrial Revolution began in Great Britain and later spread to the United States.",
+    "Most people still paid artisans to spin wool and weave cloth by hand.",
+    "Machines made goods faster, but the goods were of lower quality than before."
+   ],
+   "why": "The passage says tasks that took months could be done in days, and it lists machines that changed daily life."
   },
-  {
-    "id": "ir-ose-fitness-ele",
-    "sourceId": "ose-fitness-ele",
-    "genre": "expository",
-    "topic": "news",
-    "difficulty": "easy",
-    "title": "Fitness",
-    "passage": "Not many exercise classes have a tea break in the middle. But Margaret Allen’s class has one. After a gentle warm-up and a few quick exercises, the 93-year-old great-grandmother lets her group sit down and relax with a cup of tea. Some of the eight people in the class look like they need a break, but Allen is not even sweating.\n\nThe general rule is that eating just before doing sport is not a good idea and especially not halfway through the class. But, on the afternoon I visit Allen’s class in Saltburn-by-the-Sea, they eat fruitcake during the break. The cake was made for Allen’s recent birthday by her 89-year-old sister, Joan.\n\nThe ladies have just finished their cake when Allen gets up again. She plays a lively Scottish song and there is lots of toe pointing and leg kicking. Forty-five minutes later, the class is finally over.",
-    "sentencesPartEndsAfter": "The general rule is that eating just before doing sport is not a good idea and especially not halfway through the class.",
-    "blanks": [
-      {
-        "answer": "many",
-        "distractors": [
-          "much",
-          "lot",
-          "most",
-          "every"
-        ],
-        "why": "“Many” goes with plural countable nouns like “classes”."
-      },
-      {
-        "answer": "break",
-        "distractors": [
-          "brake",
-          "broke",
-          "breaks",
-          "rest"
-        ],
-        "why": "A “tea break” is a short rest for a cup of tea; a “brake” stops a car."
-      },
-      {
-        "answer": "few",
-        "distractors": [
-          "little",
-          "lot",
-          "many",
-          "much"
-        ],
-        "why": "“A few” is used with plural countable nouns like “exercises”."
-      },
-      {
-        "answer": "lets",
-        "distractors": [
-          "allows",
-          "letting",
-          "leaves",
-          "permits"
-        ],
-        "why": "“Let someone do something” takes a base verb with no “to”."
-      },
-      {
-        "answer": "relax",
-        "distractors": [
-          "relaxed",
-          "relaxing",
-          "relaxes",
-          "relation"
-        ],
-        "why": "After “lets her group sit down and” we need a base verb, like “sit”."
-      },
-      {
-        "answer": "sweating",
-        "distractors": [
-          "sweat",
-          "sweats",
-          "sweater",
-          "sweeping"
-        ],
-        "why": "“Is not even sweating” is the present continuous, and it contrasts with the people who need a break."
-      },
-      {
-        "answer": "doing",
-        "distractors": [
-          "do",
-          "done",
-          "making",
-          "taking"
-        ],
-        "why": "We say “do sport”, and after “before” we use the -ing form."
-      },
-      {
-        "answer": "through",
-        "distractors": [
-          "though",
-          "thought",
-          "throw",
-          "thorough"
-        ],
-        "why": "“Halfway through” means in the middle of an activity."
-      }
+  "titleDistractors": [
+   "Steam engine",
+   "Early Industrialization in the Northeast",
+   "The History of Sociology"
+  ],
+  "titleWhy": "The passage describes how new machines changed work and daily life as society became industrial."
+ },
+ {
+  "id": "ir-ose-fitness-ele",
+  "sourceId": "ose-fitness-ele",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "easy",
+  "title": "Fitness",
+  "passage": "Not many exercise classes have a tea break in the middle. But Margaret Allen’s class has one. After a gentle warm-up and a few quick exercises, the 93-year-old great-grandmother lets her group sit down and relax with a cup of tea. Some of the eight people in the class look like they need a break, but Allen is not even sweating.\n\nThe general rule is that eating just before doing sport is not a good idea and especially not halfway through the class. But, on the afternoon I visit Allen’s class in Saltburn-by-the-Sea, they eat fruitcake during the break. The cake was made for Allen’s recent birthday by her 89-year-old sister, Joan.\n\nThe ladies have just finished their cake when Allen gets up again. She plays a lively Scottish song and there is lots of toe pointing and leg kicking. Forty-five minutes later, the class is finally over.",
+  "sentencesPartEndsAfter": "The general rule is that eating just before doing sport is not a good idea and especially not halfway through the class.",
+  "blanks": [
+   {
+    "answer": "many",
+    "distractors": [
+     "much",
+     "lot",
+     "most",
+     "every"
     ],
-    "missingSentence": "But, on the afternoon I visit Allen’s class in Saltburn-by-the-Sea, they eat fruitcake during the break.",
-    "missingDistractors": [
-      "But after six weeks they saw the results and were surprised.",
-      "He saw that short bursts of very hard exercise were as effective as hours of normal exercise.",
-      "Performances at school sports days in the weeks ahead may bear out the findings."
+    "why": "“Many” goes with plural countable nouns like “classes”."
+   },
+   {
+    "answer": "break",
+    "distractors": [
+     "brake",
+     "broke",
+     "breaks",
+     "rest"
     ],
-    "missingWhy": "“But” contrasts with the rule against eating, and “fruitcake” prepares for “The cake was made…” in the next sentence.",
-    "highlights": [
-      {
-        "question": "What drink does Allen’s group have during the break?",
-        "answer": "a cup of tea"
-      },
-      {
-        "question": "Who baked the fruitcake for Allen’s birthday?",
-        "answer": "her 89-year-old sister, Joan"
-      }
+    "why": "A “tea break” is a short rest for a cup of tea; a “brake” stops a car."
+   },
+   {
+    "answer": "few",
+    "distractors": [
+     "little",
+     "lot",
+     "many",
+     "much"
     ],
-    "idea": {
-      "answer": "At the age of 93, Margaret Allen still leads a lively exercise class.",
-      "distractors": [
-        "Allen’s students are not allowed to eat anything during the class.",
-        "Short bursts of very hard exercise work as well as hours of normal exercise.",
-        "Allen gets tired quickly and needs the tea break more than her students."
-      ],
-      "why": "The writer describes the 93-year-old leading warm-ups, exercises and a lively dance without even sweating."
-    },
-    "titleDistractors": [
-      "School Sports",
-      "Fit in Four Minutes",
-      "Exercise for Children"
+    "why": "“A few” is used with plural countable nouns like “exercises”."
+   },
+   {
+    "answer": "lets",
+    "distractors": [
+     "allows",
+     "letting",
+     "leaves",
+     "permits"
     ],
-    "titleWhy": "The passage is about staying fit through an exercise class, even at 93."
-  }
+    "why": "“Let someone do something” takes a base verb with no “to”."
+   },
+   {
+    "answer": "relax",
+    "distractors": [
+     "relaxed",
+     "relaxing",
+     "relaxes",
+     "relation"
+    ],
+    "why": "After “lets her group sit down and” we need a base verb, like “sit”."
+   },
+   {
+    "answer": "sweating",
+    "distractors": [
+     "sweat",
+     "sweats",
+     "sweater",
+     "sweeping"
+    ],
+    "why": "“Is not even sweating” is the present continuous, and it contrasts with the people who need a break."
+   },
+   {
+    "answer": "doing",
+    "distractors": [
+     "do",
+     "done",
+     "making",
+     "taking"
+    ],
+    "why": "We say “do sport”, and after “before” we use the -ing form."
+   },
+   {
+    "answer": "through",
+    "distractors": [
+     "though",
+     "thought",
+     "throw",
+     "thorough"
+    ],
+    "why": "“Halfway through” means in the middle of an activity."
+   }
+  ],
+  "missingSentence": "But, on the afternoon I visit Allen’s class in Saltburn-by-the-Sea, they eat fruitcake during the break.",
+  "missingDistractors": [
+   "But after six weeks they saw the results and were surprised.",
+   "He saw that short bursts of very hard exercise were as effective as hours of normal exercise.",
+   "Performances at school sports days in the weeks ahead may bear out the findings."
+  ],
+  "missingWhy": "“But” contrasts with the rule against eating, and “fruitcake” prepares for “The cake was made…” in the next sentence.",
+  "highlights": [
+   {
+    "question": "What drink does Allen’s group have during the break?",
+    "answer": "a cup of tea"
+   },
+   {
+    "question": "Who baked the fruitcake for Allen’s birthday?",
+    "answer": "her 89-year-old sister, Joan"
+   }
+  ],
+  "idea": {
+   "answer": "At the age of 93, Margaret Allen still leads a lively exercise class.",
+   "distractors": [
+    "Allen’s students are not allowed to eat anything during the class.",
+    "Short bursts of very hard exercise work as well as hours of normal exercise.",
+    "Allen gets tired quickly and needs the tea break more than her students."
+   ],
+   "why": "The writer describes the 93-year-old leading warm-ups, exercises and a lively dance without even sweating."
+  },
+  "titleDistractors": [
+   "School Sports",
+   "Fit in Four Minutes",
+   "Exercise for Children"
+  ],
+  "titleWhy": "The passage is about staying fit through an exercise class, even at 93."
+ }
 ]

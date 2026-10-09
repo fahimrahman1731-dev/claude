@@ -1,1490 +1,1490 @@
 [
-  {
-    "id": "ir-clear-1912",
-    "sourceId": "clear-1912",
-    "genre": "expository",
-    "topic": "science",
-    "difficulty": "intermediate",
-    "title": "Black hole",
-    "passage": "A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—including particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although crossing the event horizon has enormous effect on the fate of the object crossing it, it appears to have no locally detectable features. In many ways a black hole acts like an ideal black body, as it reflects no light. Moreover, quantum field theory in curved spacetime predicts that event horizons emit Hawking radiation, with the same spectrum as a black body of a temperature inversely proportional to its mass. This temperature is on the order of billionths of a kelvin for black holes of stellar mass, making it essentially impossible to observe.",
-    "sentencesPartEndsAfter": "Although crossing the event horizon has enormous effect on the fate of the object crossing it, it appears to have no locally detectable features.",
-    "blanks": [
-      {
-        "answer": "strong",
-        "distractors": [
-          "strongly",
-          "tall",
-          "sweet",
-          "polite"
-        ],
-        "why": "'Strong' describes powerful effects such as gravity; 'strongly' is an adverb and cannot describe a noun."
-      },
-      {
-        "answer": "escape",
-        "distractors": [
-          "escaping",
-          "enter",
-          "borrow",
-          "invite"
-        ],
-        "why": "After 'can' we need a base verb, and 'escape from inside' means to get out."
-      },
-      {
-        "answer": "theory",
-        "distractors": [
-          "theorize",
-          "habit",
-          "price",
-          "kitchen"
-        ],
-        "why": "General relativity is a scientific theory, and 'The ... of general relativity predicts' needs a noun."
-      },
-      {
-        "answer": "that",
-        "occurrence": 2,
-        "distractors": [
-          "what",
-          "whose",
-          "than",
-          "who"
-        ],
-        "why": "'Predicts that' introduces the full clause saying what the theory predicts."
-      },
-      {
-        "answer": "is",
-        "occurrence": 3,
-        "distractors": [
-          "are",
-          "be",
-          "being",
-          "were"
-        ],
-        "why": "The subject 'The boundary' is singular, so it needs 'is called'."
-      },
-      {
-        "answer": "Although",
-        "distractors": [
-          "Because",
-          "Therefore",
-          "However",
-          "Whether"
-        ],
-        "why": "'Although' shows the contrast between an enormous effect and having no detectable features."
-      },
-      {
-        "answer": "effect",
-        "distractors": [
-          "affect",
-          "effective",
-          "noise",
-          "taste"
-        ],
-        "why": "'Have an effect on' uses the noun 'effect'; 'affect' is a verb."
-      },
-      {
-        "answer": "appears",
-        "distractors": [
-          "appearance",
-          "refuses",
-          "forgets",
-          "pretends"
-        ],
-        "why": "'It appears to have' means 'it seems to have'; an object cannot refuse, forget or pretend."
-      }
+ {
+  "id": "ir-clear-1912",
+  "sourceId": "clear-1912",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "intermediate",
+  "title": "Black hole",
+  "passage": "A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—including particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of the region from which no escape is possible is called the event horizon. Although crossing the event horizon has enormous effect on the fate of the object crossing it, it appears to have no locally detectable features. In many ways a black hole acts like an ideal black body, as it reflects no light. Moreover, quantum field theory in curved spacetime predicts that event horizons emit Hawking radiation, with the same spectrum as a black body of a temperature inversely proportional to its mass. This temperature is on the order of billionths of a kelvin for black holes of stellar mass, making it essentially impossible to observe.",
+  "sentencesPartEndsAfter": "Although crossing the event horizon has enormous effect on the fate of the object crossing it, it appears to have no locally detectable features.",
+  "blanks": [
+   {
+    "answer": "strong",
+    "distractors": [
+     "strongly",
+     "tall",
+     "sweet",
+     "polite"
     ],
-    "missingSentence": "In many ways a black hole acts like an ideal black body, as it reflects no light.",
-    "missingDistractors": [
-      "The Milky Way's central black hole, known as Sagittarius A*, has a mass four million times greater than the Sun.",
-      "Dark matter is transparent to electromagnetic radiation and/or is so dense and small that it fails to absorb or emit enough radiation to be detectable with current imaging technology.",
-      "It is the speed of all massless particles such as photons, and associated fields—including electromagnetic radiation such as light—in a vacuum."
+    "why": "'Strong' describes powerful effects such as gravity; 'strongly' is an adverb and cannot describe a noun."
+   },
+   {
+    "answer": "escape",
+    "distractors": [
+     "escaping",
+     "enter",
+     "borrow",
+     "invite"
     ],
-    "missingWhy": "It introduces the idea of a 'black body', which the next sentence continues with 'Moreover' and 'the same spectrum as a black body'.",
-    "highlights": [
-      {
-        "question": "What does the theory of general relativity say a dense enough mass can do?",
-        "answer": "deform spacetime to form a black hole"
-      },
-      {
-        "question": "How low is the temperature of a black hole with the mass of a star?",
-        "answer": "on the order of billionths of a kelvin"
-      }
+    "why": "After 'can' we need a base verb, and 'escape from inside' means to get out."
+   },
+   {
+    "answer": "theory",
+    "distractors": [
+     "theorize",
+     "habit",
+     "price",
+     "kitchen"
     ],
-    "idea": {
-      "answer": "A black hole's gravity is so strong that nothing, not even light, can get out of it.",
-      "distractors": [
-        "Most of the mass in the universe is made of an invisible kind of matter.",
-        "The center of our galaxy holds a black hole millions of times heavier than the Sun.",
-        "The radiation from a black hole is hot enough to be observed easily from Earth."
-      ],
-      "why": "The first sentence says that nothing, including light, can escape because the gravitational effects are so strong."
-    },
-    "titleDistractors": [
-      "Dark matter",
-      "Galaxy",
-      "Electromagnetic radiation"
+    "why": "General relativity is a scientific theory, and 'The ... of general relativity predicts' needs a noun."
+   },
+   {
+    "answer": "that",
+    "occurrence": 2,
+    "distractors": [
+     "what",
+     "whose",
+     "than",
+     "who"
     ],
-    "titleWhy": "Every sentence is about black holes: how they form, their event horizon and their radiation."
+    "why": "'Predicts that' introduces the full clause saying what the theory predicts."
+   },
+   {
+    "answer": "is",
+    "occurrence": 3,
+    "distractors": [
+     "are",
+     "be",
+     "being",
+     "were"
+    ],
+    "why": "The subject 'The boundary' is singular, so it needs 'is called'."
+   },
+   {
+    "answer": "Although",
+    "distractors": [
+     "Because",
+     "Therefore",
+     "However",
+     "Whether"
+    ],
+    "why": "'Although' shows the contrast between an enormous effect and having no detectable features."
+   },
+   {
+    "answer": "effect",
+    "distractors": [
+     "affect",
+     "effective",
+     "noise",
+     "taste"
+    ],
+    "why": "'Have an effect on' uses the noun 'effect'; 'affect' is a verb."
+   },
+   {
+    "answer": "appears",
+    "distractors": [
+     "appearance",
+     "refuses",
+     "forgets",
+     "pretends"
+    ],
+    "why": "'It appears to have' means 'it seems to have'; an object cannot refuse, forget or pretend."
+   }
+  ],
+  "missingSentence": "In many ways a black hole acts like an ideal black body, as it reflects no light.",
+  "missingDistractors": [
+   "The Milky Way's central black hole, known as Sagittarius A*, has a mass four million times greater than the Sun.",
+   "Dark matter is transparent to electromagnetic radiation and/or is so dense and small that it fails to absorb or emit enough radiation to be detectable with current imaging technology.",
+   "It is the speed of all massless particles such as photons, and associated fields—including electromagnetic radiation such as light—in a vacuum."
+  ],
+  "missingWhy": "It introduces the idea of a 'black body', which the next sentence continues with 'Moreover' and 'the same spectrum as a black body'.",
+  "highlights": [
+   {
+    "question": "What does the theory of general relativity say a dense enough mass can do?",
+    "answer": "deform spacetime to form a black hole"
+   },
+   {
+    "question": "How low is the temperature of a black hole with the mass of a star?",
+    "answer": "on the order of billionths of a kelvin"
+   }
+  ],
+  "idea": {
+   "answer": "A black hole's gravity is so strong that nothing, not even light, can get out of it.",
+   "distractors": [
+    "Most of the mass in the universe is made of an invisible kind of matter.",
+    "The center of our galaxy holds a black hole millions of times heavier than the Sun.",
+    "The radiation from a black hole is hot enough to be observed easily from Earth."
+   ],
+   "why": "The first sentence says that nothing, including light, can escape because the gravitational effects are so strong."
   },
-  {
-    "id": "ir-clear-2829",
-    "sourceId": "clear-2829",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "easy",
-    "title": "What Is the Key to Success? And How Do We Get There?",
-    "passage": "Better at spelling! In one study, 12-year-old kids who were competing in a national spelling bee were given a series of questionnaires to fill out—including a grit questionnaire. Interestingly, it was not the kids who read books for fun or those who were quizzed on spelling words by their parents who ended up doing better in the spelling bee. Instead, it was the kids who scored high on grit who made it to the final round of the national spelling bee. What's more, gritty high school students are more likely to graduate, and university students get higher grades. In adulthood, gritty employees are more likely to be keeping their jobs and their marriages! What about the brains of these highly successful, gritty people—what do their brains look like? And furthermore, are the brains of gritty people different from those of not-so-gritty, less successful individuals?",
-    "sentencesPartEndsAfter": "Instead, it was the kids who scored high on grit who made it to the final round of the national spelling bee.",
-    "blanks": [
-      {
-        "answer": "study",
-        "distractors": [
-          "studied",
-          "student",
-          "kitchen",
-          "habit"
-        ],
-        "why": "'In one study' introduces the piece of research the passage describes."
-      },
-      {
-        "answer": "competing",
-        "distractors": [
-          "competition",
-          "competed",
-          "sleeping",
-          "borrowing"
-        ],
-        "why": "'Were competing in' needs the -ing verb; people compete in a contest such as a spelling bee."
-      },
-      {
-        "answer": "fun",
-        "distractors": [
-          "funny",
-          "joke",
-          "rain",
-          "hungry"
-        ],
-        "why": "'Read books for fun' is a fixed expression meaning for enjoyment."
-      },
-      {
-        "answer": "who",
-        "occurrence": 3,
-        "distractors": [
-          "whose",
-          "whom",
-          "what",
-          "where"
-        ],
-        "why": "'Those who' refers to people and is the subject of 'were quizzed'."
-      },
-      {
-        "answer": "their",
-        "distractors": [
-          "they",
-          "them",
-          "there",
-          "theirs"
-        ],
-        "why": "A possessive word is needed before the noun 'parents'."
-      },
-      {
-        "answer": "Instead",
-        "distractors": [
-          "Because",
-          "Although",
-          "Unless",
-          "Despite"
-        ],
-        "why": "'Instead' gives the opposite of the sentence before: not those kids, but the gritty ones."
-      },
-      {
-        "answer": "scored",
-        "distractors": [
-          "scoring",
-          "scores",
-          "jumped",
-          "walked"
-        ],
-        "why": "You 'score high' on a questionnaire, and the past tense matches the rest of the story."
-      },
-      {
-        "answer": "final",
-        "distractors": [
-          "finally",
-          "finish",
-          "empty",
-          "angry"
-        ],
-        "why": "'The final round' is the last stage of a competition; an adjective is needed before 'round'."
-      }
+  "titleDistractors": [
+   "Dark matter",
+   "Galaxy",
+   "Electromagnetic radiation"
+  ],
+  "titleWhy": "Every sentence is about black holes: how they form, their event horizon and their radiation."
+ },
+ {
+  "id": "ir-clear-2829",
+  "sourceId": "clear-2829",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "What Is the Key to Success? And How Do We Get There?",
+  "passage": "Better at spelling! In one study, 12-year-old kids who were competing in a national spelling bee were given a series of questionnaires to fill out—including a grit questionnaire. Interestingly, it was not the kids who read books for fun or those who were quizzed on spelling words by their parents who ended up doing better in the spelling bee. Instead, it was the kids who scored high on grit who made it to the final round of the national spelling bee. What's more, gritty high school students are more likely to graduate, and university students get higher grades. In adulthood, gritty employees are more likely to be keeping their jobs and their marriages! What about the brains of these highly successful, gritty people—what do their brains look like? And furthermore, are the brains of gritty people different from those of not-so-gritty, less successful individuals?",
+  "sentencesPartEndsAfter": "Instead, it was the kids who scored high on grit who made it to the final round of the national spelling bee.",
+  "blanks": [
+   {
+    "answer": "study",
+    "distractors": [
+     "studied",
+     "student",
+     "kitchen",
+     "habit"
     ],
-    "missingSentence": "What's more, gritty high school students are more likely to graduate, and university students get higher grades.",
-    "missingDistractors": [
-      "This number has increased consistently since it was first tracked at the national level in 2011.",
-      "Males and females achieved at roughly similar levels.",
-      "Peer groups are important to adolescents in a new way, as they begin to develop an identity separate from their parents and exert independence."
+    "why": "'In one study' introduces the piece of research the passage describes."
+   },
+   {
+    "answer": "competing",
+    "distractors": [
+     "competition",
+     "competed",
+     "sleeping",
+     "borrowing"
     ],
-    "missingWhy": "'What's more' adds a new benefit of grit at school and university, and the next sentence moves on to adulthood.",
-    "highlights": [
-      {
-        "question": "Which children reached the last round of the national spelling bee?",
-        "answer": "the kids who scored high on grit"
-      },
-      {
-        "question": "As adults, what are gritty employees more likely to keep?",
-        "answer": "their jobs and their marriages"
-      }
+    "why": "'Were competing in' needs the -ing verb; people compete in a contest such as a spelling bee."
+   },
+   {
+    "answer": "fun",
+    "distractors": [
+     "funny",
+     "joke",
+     "rain",
+     "hungry"
     ],
-    "idea": {
-      "answer": "People with a lot of grit tend to be more successful at school and at work.",
-      "distractors": [
-        "The kids whose parents quizzed them on spelling words did best in the contest.",
-        "Scientists have proved that gritty people have larger brains than other people.",
-        "After making a mistake, people usually respond more slowly the next time."
-      ],
-      "why": "The passage says gritty students graduate more often and get higher grades, and gritty employees keep their jobs."
-    },
-    "titleDistractors": [
-      "Learning From Mistakes: How Does the Brain Handle Errors?",
-      "Peer Groups",
-      "What Wild Animals Do Kids Care About Most and Why Does It Matter?"
+    "why": "'Read books for fun' is a fixed expression meaning for enjoyment."
+   },
+   {
+    "answer": "who",
+    "occurrence": 3,
+    "distractors": [
+     "whose",
+     "whom",
+     "what",
+     "where"
     ],
-    "titleWhy": "The passage shows how grit leads to success and asks how gritty people get there."
+    "why": "'Those who' refers to people and is the subject of 'were quizzed'."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "they",
+     "them",
+     "there",
+     "theirs"
+    ],
+    "why": "A possessive word is needed before the noun 'parents'."
+   },
+   {
+    "answer": "Instead",
+    "distractors": [
+     "Because",
+     "Although",
+     "Unless",
+     "Despite"
+    ],
+    "why": "'Instead' gives the opposite of the sentence before: not those kids, but the gritty ones."
+   },
+   {
+    "answer": "scored",
+    "distractors": [
+     "scoring",
+     "scores",
+     "jumped",
+     "walked"
+    ],
+    "why": "You 'score high' on a questionnaire, and the past tense matches the rest of the story."
+   },
+   {
+    "answer": "final",
+    "distractors": [
+     "finally",
+     "finish",
+     "empty",
+     "angry"
+    ],
+    "why": "'The final round' is the last stage of a competition; an adjective is needed before 'round'."
+   }
+  ],
+  "missingSentence": "What's more, gritty high school students are more likely to graduate, and university students get higher grades.",
+  "missingDistractors": [
+   "This number has increased consistently since it was first tracked at the national level in 2011.",
+   "Males and females achieved at roughly similar levels.",
+   "Peer groups are important to adolescents in a new way, as they begin to develop an identity separate from their parents and exert independence."
+  ],
+  "missingWhy": "'What's more' adds a new benefit of grit at school and university, and the next sentence moves on to adulthood.",
+  "highlights": [
+   {
+    "question": "Which children reached the last round of the national spelling bee?",
+    "answer": "the kids who scored high on grit"
+   },
+   {
+    "question": "As adults, what are gritty employees more likely to keep?",
+    "answer": "their jobs and their marriages"
+   }
+  ],
+  "idea": {
+   "answer": "People with a lot of grit tend to be more successful at school and at work.",
+   "distractors": [
+    "The kids whose parents quizzed them on spelling words did best in the contest.",
+    "Scientists have proved that gritty people have larger brains than other people.",
+    "After making a mistake, people usually respond more slowly the next time."
+   ],
+   "why": "The passage says gritty students graduate more often and get higher grades, and gritty employees keep their jobs."
   },
-  {
-    "id": "ir-clear-3244",
-    "sourceId": "clear-3244",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "intermediate",
-    "title": "Twenty Tips for High-School Students Engaging in Research with Scientists",
-    "passage": "For our first research experience, we wanted to ask a question that could contribute to the improvement of education for future generations. If school architects understood the current research about the influences of color on the brain and learning, it could benefit their designs. Our question focused on our own environment, in hopes that our work could have an impact. These questions may leave you wondering whether our school looks like a painting by Miro – but while gray on the outside, the interior is actually quite colorful. Our personal interactions with color in our environment inspired us to ask more.\n\nLook for background information by exploring the field of research you will be working in and by reading available publications. Ask for guidance from scientists, in particular, about accessing the relevant scientific literature. Indeed, our lack of expertise in the field made it easy to get lost digging into issues of little relevance. Consider reading a few research articles to start. Though it may not be easy, the concepts are much more accessible if you read them step by step.",
-    "sentencesPartEndsAfter": "Our personal interactions with color in our environment inspired us to ask more.",
-    "blanks": [
-      {
-        "answer": "ask",
-        "distractors": [
-          "asking",
-          "asked",
-          "borrow",
-          "cook"
-        ],
-        "why": "'Wanted to' is followed by a base verb, and we say 'ask a question'."
-      },
-      {
-        "answer": "contribute",
-        "distractors": [
-          "contribution",
-          "belong",
-          "listen",
-          "apologize"
-        ],
-        "why": "'Contribute to' means to help bring about something, here the improvement of education."
-      },
-      {
-        "answer": "If",
-        "distractors": [
-          "Unless",
-          "Whether",
-          "Although",
-          "Then"
-        ],
-        "why": "'If ... it could' makes a conditional sentence about a possible benefit."
-      },
-      {
-        "answer": "benefit",
-        "distractors": [
-          "beneficial",
-          "forget",
-          "swallow",
-          "apologize"
-        ],
-        "why": "After 'could' we need a verb; the research 'could benefit' (help) their designs."
-      },
-      {
-        "answer": "that",
-        "occurrence": 2,
-        "distractors": [
-          "what",
-          "which",
-          "who",
-          "than"
-        ],
-        "why": "'In hopes that' is followed by a full clause."
-      },
-      {
-        "answer": "whether",
-        "distractors": [
-          "weather",
-          "which",
-          "whose",
-          "where"
-        ],
-        "why": "'Wondering whether' introduces a yes/no question; 'weather' means rain, sun and wind."
-      },
-      {
-        "answer": "outside",
-        "distractors": [
-          "inside",
-          "outer",
-          "outdoors",
-          "kitchen"
-        ],
-        "why": "'On the outside' contrasts with 'the interior' later in the sentence."
-      },
-      {
-        "answer": "inspired",
-        "distractors": [
-          "inspiration",
-          "inspiring",
-          "prevented",
-          "forgot"
-        ],
-        "why": "'Inspired us to ask' means it gave us the wish to ask; a past-tense verb fits."
-      }
+  "titleDistractors": [
+   "Learning From Mistakes: How Does the Brain Handle Errors?",
+   "Peer Groups",
+   "What Wild Animals Do Kids Care About Most and Why Does It Matter?"
+  ],
+  "titleWhy": "The passage shows how grit leads to success and asks how gritty people get there."
+ },
+ {
+  "id": "ir-clear-3244",
+  "sourceId": "clear-3244",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "intermediate",
+  "title": "Twenty Tips for High-School Students Engaging in Research with Scientists",
+  "passage": "For our first research experience, we wanted to ask a question that could contribute to the improvement of education for future generations. If school architects understood the current research about the influences of color on the brain and learning, it could benefit their designs. Our question focused on our own environment, in hopes that our work could have an impact. These questions may leave you wondering whether our school looks like a painting by Miro – but while gray on the outside, the interior is actually quite colorful. Our personal interactions with color in our environment inspired us to ask more.\n\nLook for background information by exploring the field of research you will be working in and by reading available publications. Ask for guidance from scientists, in particular, about accessing the relevant scientific literature. Indeed, our lack of expertise in the field made it easy to get lost digging into issues of little relevance. Consider reading a few research articles to start. Though it may not be easy, the concepts are much more accessible if you read them step by step.",
+  "sentencesPartEndsAfter": "Our personal interactions with color in our environment inspired us to ask more.",
+  "blanks": [
+   {
+    "answer": "ask",
+    "distractors": [
+     "asking",
+     "asked",
+     "borrow",
+     "cook"
     ],
-    "missingSentence": "Ask for guidance from scientists, in particular, about accessing the relevant scientific literature.",
-    "missingDistractors": [
-      "The question should also be broad enough to have universal merit.",
-      "Field research refers to gathering primary data from a natural environment.",
-      "This question is extremely important to brain researchers all over the world."
+    "why": "'Wanted to' is followed by a base verb, and we say 'ask a question'."
+   },
+   {
+    "answer": "contribute",
+    "distractors": [
+     "contribution",
+     "belong",
+     "listen",
+     "apologize"
     ],
-    "missingWhy": "The next sentence ('Indeed, our lack of expertise...') explains why students need guidance from scientists.",
-    "highlights": [
-      {
-        "question": "What topic of research did the students think could help school architects?",
-        "answer": "the influences of color on the brain and learning"
-      },
-      {
-        "question": "Why did the students sometimes waste time on issues that did not matter much?",
-        "answer": "our lack of expertise in the field"
-      }
+    "why": "'Contribute to' means to help bring about something, here the improvement of education."
+   },
+   {
+    "answer": "If",
+    "distractors": [
+     "Unless",
+     "Whether",
+     "Although",
+     "Then"
     ],
-    "idea": {
-      "answer": "The students' research question was about how color in their surroundings affects learning.",
-      "distractors": [
-        "The students' school is brightly colored outside but plain gray inside.",
-        "Watching a movie affects the brain in the same way as reading a book.",
-        "A research question should be narrow enough to study in one place and time."
-      ],
-      "why": "The students say their question focused on their own environment and on how color influences the brain and learning."
-    },
-    "titleDistractors": [
-      "Step 1: Ask a Question or Find a Research Topic",
-      "Field Research",
-      "Reading vs. Playing on a Tablet: Do They have Different Effects on the Brain?"
+    "why": "'If ... it could' makes a conditional sentence about a possible benefit."
+   },
+   {
+    "answer": "benefit",
+    "distractors": [
+     "beneficial",
+     "forget",
+     "swallow",
+     "apologize"
     ],
-    "titleWhy": "The passage shares the students' own research experience and gives advice to other high-school researchers."
+    "why": "After 'could' we need a verb; the research 'could benefit' (help) their designs."
+   },
+   {
+    "answer": "that",
+    "occurrence": 2,
+    "distractors": [
+     "what",
+     "which",
+     "who",
+     "than"
+    ],
+    "why": "'In hopes that' is followed by a full clause."
+   },
+   {
+    "answer": "whether",
+    "distractors": [
+     "weather",
+     "which",
+     "whose",
+     "where"
+    ],
+    "why": "'Wondering whether' introduces a yes/no question; 'weather' means rain, sun and wind."
+   },
+   {
+    "answer": "outside",
+    "distractors": [
+     "inside",
+     "outer",
+     "outdoors",
+     "kitchen"
+    ],
+    "why": "'On the outside' contrasts with 'the interior' later in the sentence."
+   },
+   {
+    "answer": "inspired",
+    "distractors": [
+     "inspiration",
+     "inspiring",
+     "prevented",
+     "forgot"
+    ],
+    "why": "'Inspired us to ask' means it gave us the wish to ask; a past-tense verb fits."
+   }
+  ],
+  "missingSentence": "Ask for guidance from scientists, in particular, about accessing the relevant scientific literature.",
+  "missingDistractors": [
+   "The question should also be broad enough to have universal merit.",
+   "Field research refers to gathering primary data from a natural environment.",
+   "This question is extremely important to brain researchers all over the world."
+  ],
+  "missingWhy": "The next sentence ('Indeed, our lack of expertise...') explains why students need guidance from scientists.",
+  "highlights": [
+   {
+    "question": "What topic of research did the students think could help school architects?",
+    "answer": "the influences of color on the brain and learning"
+   },
+   {
+    "question": "Why did the students sometimes waste time on issues that did not matter much?",
+    "answer": "our lack of expertise in the field"
+   }
+  ],
+  "idea": {
+   "answer": "The students' research question was about how color in their surroundings affects learning.",
+   "distractors": [
+    "The students' school is brightly colored outside but plain gray inside.",
+    "Watching a movie affects the brain in the same way as reading a book.",
+    "A research question should be narrow enough to study in one place and time."
+   ],
+   "why": "The students say their question focused on their own environment and on how color influences the brain and learning."
   },
-  {
-    "id": "ir-clear-2381",
-    "sourceId": "clear-2381",
-    "genre": "expository",
-    "topic": "science",
-    "difficulty": "advanced",
-    "title": "Smelting",
-    "passage": "Iron is smelted from iron ore in large reactors called blast furnaces. A blast furnace is a tall vertical structure which is fed with coke, iron ore and limestone. When hot air is blown in the blast furnace, the coke will burn and reduce the oxygen off the ore, producing bare iron and carbon dioxide. The limestone will bind off any remaining bedrock. The iron melts in the hot temperature and is tapped off in liquid phase at the bottom. It is then worked into steel. The limestone and bedrock form a compound called slag. It can be used for making bricks, concrete or road topping. Earlier methods include Bloomery.\n\nAluminum is smelted in electric ovens called electric arc furnaces. The aluminum ore is poured on the bottom of the furnace and electric current is led through the ore. The temperature rises so high that the oxygen separates, leaving metallic aluminum.",
-    "sentencesPartEndsAfter": "The iron melts in the hot temperature and is tapped off in liquid phase at the bottom.",
-    "blanks": [
-      {
-        "answer": "from",
-        "distractors": [
-          "until",
-          "during",
-          "since",
-          "above"
-        ],
-        "why": "A metal is smelted 'from' its ore, the rock it comes out of."
-      },
-      {
-        "answer": "called",
-        "distractors": [
-          "calling",
-          "calls",
-          "spoken",
-          "shouted"
-        ],
-        "why": "'Called' (named) introduces the name of the reactors."
-      },
-      {
-        "answer": "which",
-        "distractors": [
-          "who",
-          "whose",
-          "what",
-          "whom"
-        ],
-        "why": "'Which' begins a relative clause about a thing, the structure."
-      },
-      {
-        "answer": "blown",
-        "distractors": [
-          "blew",
-          "blowing",
-          "eaten",
-          "sung"
-        ],
-        "why": "The passive 'is blown' needs the past participle; air is blown into the furnace."
-      },
-      {
-        "answer": "producing",
-        "distractors": [
-          "produce",
-          "product",
-          "production",
-          "forgetting"
-        ],
-        "why": "The -ing form adds the result of the burning: producing iron and carbon dioxide."
-      },
-      {
-        "answer": "will",
-        "occurrence": 2,
-        "distractors": [
-          "is",
-          "has",
-          "are",
-          "being"
-        ],
-        "why": "Before the base verb 'bind' we need a modal verb such as 'will'."
-      },
-      {
-        "answer": "melts",
-        "distractors": [
-          "melting",
-          "melt",
-          "freezes",
-          "sings"
-        ],
-        "why": "Iron becomes liquid at a high temperature, and the singular subject needs 'melts'."
-      },
-      {
-        "answer": "bottom",
-        "distractors": [
-          "bottle",
-          "button",
-          "below",
-          "beneath"
-        ],
-        "why": "'At the bottom' is the fixed phrase for the lowest part of the furnace."
-      }
+  "titleDistractors": [
+   "How Do Bees Find Their Way Home?",
+   "Field Research",
+   "Reading vs. Playing on a Tablet: Do They have Different Effects on the Brain?"
+  ],
+  "titleWhy": "The passage shares the students' own research experience and gives advice to other high-school researchers."
+ },
+ {
+  "id": "ir-clear-2381",
+  "sourceId": "clear-2381",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "advanced",
+  "title": "Smelting",
+  "passage": "Iron is smelted from iron ore in large reactors called blast furnaces. A blast furnace is a tall vertical structure which is fed with coke, iron ore and limestone. When hot air is blown in the blast furnace, the coke will burn and reduce the oxygen off the ore, producing bare iron and carbon dioxide. The limestone will bind off any remaining bedrock. The iron melts in the hot temperature and is tapped off in liquid phase at the bottom. It is then worked into steel. The limestone and bedrock form a compound called slag. It can be used for making bricks, concrete or road topping. Earlier methods include Bloomery.\n\nAluminum is smelted in electric ovens called electric arc furnaces. The aluminum ore is poured on the bottom of the furnace and electric current is led through the ore. The temperature rises so high that the oxygen separates, leaving metallic aluminum.",
+  "sentencesPartEndsAfter": "The iron melts in the hot temperature and is tapped off in liquid phase at the bottom.",
+  "blanks": [
+   {
+    "answer": "from",
+    "distractors": [
+     "until",
+     "during",
+     "since",
+     "above"
     ],
-    "missingSentence": "The limestone and bedrock form a compound called slag.",
-    "missingDistractors": [
-      "Some processes in modern technology, such as iron smelting, still produce carbon monoxide as a byproduct.",
-      "Steelmaking has existed for millennia, but it was not commercialized until the 19th century.",
-      "The ancient craft process of steelmaking was the crucible process."
+    "why": "A metal is smelted 'from' its ore, the rock it comes out of."
+   },
+   {
+    "answer": "called",
+    "distractors": [
+     "calling",
+     "calls",
+     "spoken",
+     "shouted"
     ],
-    "missingWhy": "The next sentence says 'It can be used for making bricks', and 'it' must be slag, which only this sentence introduces.",
-    "highlights": [
-      {
-        "question": "What three materials are put into a blast furnace?",
-        "answer": "coke, iron ore and limestone"
-      },
-      {
-        "question": "Where does the smelting of aluminum take place?",
-        "answer": "in electric ovens called electric arc furnaces"
-      }
+    "why": "'Called' (named) introduces the name of the reactors."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "whose",
+     "what",
+     "whom"
     ],
-    "idea": {
-      "answer": "Iron and aluminum are both smelted from ore, but in different kinds of furnaces.",
-      "distractors": [
-        "Steel is made by adding metals such as nickel and chromium to iron.",
-        "Slag is a waste product that cannot be used for anything.",
-        "Aluminum is smelted in blast furnaces that burn coke and limestone."
-      ],
-      "why": "Iron is smelted in blast furnaces, while aluminum is smelted in electric arc furnaces."
-    },
-    "titleDistractors": [
-      "Steelmaking",
-      "Copper",
-      "Carbon monoxide"
+    "why": "'Which' begins a relative clause about a thing, the structure."
+   },
+   {
+    "answer": "blown",
+    "distractors": [
+     "blew",
+     "blowing",
+     "eaten",
+     "sung"
     ],
-    "titleWhy": "The passage explains how iron and aluminum are smelted from their ores."
+    "why": "The passive 'is blown' needs the past participle; air is blown into the furnace."
+   },
+   {
+    "answer": "producing",
+    "distractors": [
+     "produce",
+     "product",
+     "production",
+     "forgetting"
+    ],
+    "why": "The -ing form adds the result of the burning: producing iron and carbon dioxide."
+   },
+   {
+    "answer": "will",
+    "occurrence": 2,
+    "distractors": [
+     "is",
+     "has",
+     "are",
+     "being"
+    ],
+    "why": "Before the base verb 'bind' we need a modal verb such as 'will'."
+   },
+   {
+    "answer": "melts",
+    "distractors": [
+     "melting",
+     "melt",
+     "freezes",
+     "sings"
+    ],
+    "why": "Iron becomes liquid at a high temperature, and the singular subject needs 'melts'."
+   },
+   {
+    "answer": "bottom",
+    "distractors": [
+     "bottle",
+     "button",
+     "below",
+     "beneath"
+    ],
+    "why": "'At the bottom' is the fixed phrase for the lowest part of the furnace."
+   }
+  ],
+  "missingSentence": "The limestone and bedrock form a compound called slag.",
+  "missingDistractors": [
+   "Some processes in modern technology, such as iron smelting, still produce carbon monoxide as a byproduct.",
+   "Steelmaking has existed for millennia, but it was not commercialized until the 19th century.",
+   "The ancient craft process of steelmaking was the crucible process."
+  ],
+  "missingWhy": "The next sentence says 'It can be used for making bricks', and 'it' must be slag, which only this sentence introduces.",
+  "highlights": [
+   {
+    "question": "What three materials are put into a blast furnace?",
+    "answer": "coke, iron ore and limestone"
+   },
+   {
+    "question": "Where does the smelting of aluminum take place?",
+    "answer": "in electric ovens called electric arc furnaces"
+   }
+  ],
+  "idea": {
+   "answer": "Iron and aluminum are both smelted from ore, but in different kinds of furnaces.",
+   "distractors": [
+    "Steel is made by adding metals such as nickel and chromium to iron.",
+    "Slag is a waste product that cannot be used for anything.",
+    "Aluminum is smelted in blast furnaces that burn coke and limestone."
+   ],
+   "why": "Iron is smelted in blast furnaces, while aluminum is smelted in electric arc furnaces."
   },
-  {
-    "id": "ir-clear-2855",
-    "sourceId": "clear-2855",
-    "genre": "expository",
-    "topic": "general",
-    "difficulty": "easy",
-    "title": "How Do Birds Cope with Losing Members of Their Group?",
-    "passage": "Have you ever wondered how animals might respond to losing a member of their group? Many human activities, like hunting or changing the environment animals live in, can cause the loss of individual animals. However, how this loss affects the remaining animals in a group is still widely unknown. We wanted to investigate this question, so we tracked wild birds known as great tits. These birds form small groups within their population, called flocks. By removing individual birds from the wild, we were able to monitor how birds responded to losing a flockmate. Interestingly, the birds that lost their flockmates responded by making new flockmates and also by spending more time with their previous flockmates. These findings show us that losing animals from a population can affect how the remaining animals behave. This research could help improve people's understanding of the effects of losing animals.",
-    "sentencesPartEndsAfter": "These birds form small groups within their population, called flocks.",
-    "blanks": [
-      {
-        "answer": "wondered",
-        "distractors": [
-          "wonderful",
-          "wandered",
-          "wonders",
-          "slept"
-        ],
-        "why": "'Have you ever ...' needs a past participle, and 'wondered' means asked yourself."
-      },
-      {
-        "answer": "member",
-        "distractors": [
-          "remember",
-          "mention",
-          "meaning",
-          "message"
-        ],
-        "why": "'A member of their group' is one animal that belongs to the group."
-      },
-      {
-        "answer": "like",
-        "distractors": [
-          "likely",
-          "alike",
-          "liked",
-          "liking"
-        ],
-        "why": "'Like' here means 'such as' and introduces examples of human activities."
-      },
-      {
-        "answer": "cause",
-        "distractors": [
-          "because",
-          "caused",
-          "prevent",
-          "forgive"
-        ],
-        "why": "After 'can' we need a base verb; hunting can cause the loss of animals."
-      },
-      {
-        "answer": "affects",
-        "distractors": [
-          "effects",
-          "affection",
-          "afford",
-          "arrives"
-        ],
-        "why": "'Affects' is the verb meaning 'has an influence on'; 'effects' is usually a noun."
-      },
-      {
-        "answer": "investigate",
-        "distractors": [
-          "investigation",
-          "invest",
-          "invent",
-          "insist"
-        ],
-        "why": "'Wanted to' needs a base verb, and scientists investigate (study) a question."
-      },
-      {
-        "answer": "so",
-        "distractors": [
-          "because",
-          "although",
-          "unless",
-          "than"
-        ],
-        "why": "'So' shows the result: they wanted to study the question, so they tracked birds."
-      },
-      {
-        "answer": "within",
-        "distractors": [
-          "without",
-          "upon",
-          "beneath",
-          "towards"
-        ],
-        "why": "The small groups are inside, or within, the larger population."
-      }
+  "titleDistractors": [
+   "Steelmaking",
+   "Copper",
+   "Carbon monoxide"
+  ],
+  "titleWhy": "The passage explains how iron and aluminum are smelted from their ores."
+ },
+ {
+  "id": "ir-clear-2855",
+  "sourceId": "clear-2855",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "How Do Birds Cope with Losing Members of Their Group?",
+  "passage": "Have you ever wondered how animals might respond to losing a member of their group? Many human activities, like hunting or changing the environment animals live in, can cause the loss of individual animals. However, how this loss affects the remaining animals in a group is still widely unknown. We wanted to investigate this question, so we tracked wild birds known as great tits. These birds form small groups within their population, called flocks. By removing individual birds from the wild, we were able to monitor how birds responded to losing a flockmate. Interestingly, the birds that lost their flockmates responded by making new flockmates and also by spending more time with their previous flockmates. These findings show us that losing animals from a population can affect how the remaining animals behave. This research could help improve people's understanding of the effects of losing animals.",
+  "sentencesPartEndsAfter": "These birds form small groups within their population, called flocks.",
+  "blanks": [
+   {
+    "answer": "wondered",
+    "distractors": [
+     "wonderful",
+     "wandered",
+     "wonders",
+     "slept"
     ],
-    "missingSentence": "Interestingly, the birds that lost their flockmates responded by making new flockmates and also by spending more time with their previous flockmates.",
-    "missingDistractors": [
-      "Paired birds often stay close to each other during the day no matter what they are doing, for example feeding or resting.",
-      "Furthermore, graylag geese have strong family bonds and goslings stay close to their parents until the next breeding season.",
-      "Spending time with friends has been shown to cause more activity in the parts of the brain that makes us feel good – the reward circuits."
+    "why": "'Have you ever ...' needs a past participle, and 'wondered' means asked yourself."
+   },
+   {
+    "answer": "member",
+    "distractors": [
+     "remember",
+     "mention",
+     "meaning",
+     "message"
     ],
-    "missingWhy": "It reports how the birds responded, which the next sentence calls 'these findings'.",
-    "highlights": [
-      {
-        "question": "What are two human activities that can lead to the loss of animals?",
-        "answer": "hunting or changing the environment animals live in"
-      },
-      {
-        "question": "What do the findings show that the loss of animals can change?",
-        "answer": "how the remaining animals behave"
-      }
+    "why": "'A member of their group' is one animal that belongs to the group."
+   },
+   {
+    "answer": "like",
+    "distractors": [
+     "likely",
+     "alike",
+     "liked",
+     "liking"
     ],
-    "idea": {
-      "answer": "Birds that lost flockmates made new ones and spent more time with their old ones.",
-      "distractors": [
-        "Birds that lost flockmates stayed alone and avoided the rest of the flock.",
-        "Great tits live alone and do not form groups with other birds.",
-        "Many birds help people by spreading the seeds of important plants."
-      ],
-      "why": "The passage says the birds responded by making new flockmates and spending more time with previous flockmates."
-    },
-    "titleDistractors": [
-      "How Having a Partner and a Family Changes the Stress Levels of Graylag Geese",
-      "Why Didn’t the Bird Cross the Road?",
-      "Sanderlings: Traveling Birds"
+    "why": "'Like' here means 'such as' and introduces examples of human activities."
+   },
+   {
+    "answer": "cause",
+    "distractors": [
+     "because",
+     "caused",
+     "prevent",
+     "forgive"
     ],
-    "titleWhy": "The whole passage is about a study of how birds respond when members of their group are lost."
+    "why": "After 'can' we need a base verb; hunting can cause the loss of animals."
+   },
+   {
+    "answer": "affects",
+    "distractors": [
+     "effects",
+     "affection",
+     "afford",
+     "arrives"
+    ],
+    "why": "'Affects' is the verb meaning 'has an influence on'; 'effects' is usually a noun."
+   },
+   {
+    "answer": "investigate",
+    "distractors": [
+     "investigation",
+     "invest",
+     "invent",
+     "insist"
+    ],
+    "why": "'Wanted to' needs a base verb, and scientists investigate (study) a question."
+   },
+   {
+    "answer": "so",
+    "distractors": [
+     "because",
+     "although",
+     "unless",
+     "than"
+    ],
+    "why": "'So' shows the result: they wanted to study the question, so they tracked birds."
+   },
+   {
+    "answer": "within",
+    "distractors": [
+     "without",
+     "upon",
+     "beneath",
+     "towards"
+    ],
+    "why": "The small groups are inside, or within, the larger population."
+   }
+  ],
+  "missingSentence": "Interestingly, the birds that lost their flockmates responded by making new flockmates and also by spending more time with their previous flockmates.",
+  "missingDistractors": [
+   "Paired birds often stay close to each other during the day no matter what they are doing, for example feeding or resting.",
+   "Furthermore, graylag geese have strong family bonds and goslings stay close to their parents until the next breeding season.",
+   "Spending time with friends has been shown to cause more activity in the parts of the brain that makes us feel good – the reward circuits."
+  ],
+  "missingWhy": "It reports how the birds responded, which the next sentence calls 'these findings'.",
+  "highlights": [
+   {
+    "question": "What are two human activities that can lead to the loss of animals?",
+    "answer": "hunting or changing the environment animals live in"
+   },
+   {
+    "question": "What do the findings show that the loss of animals can change?",
+    "answer": "how the remaining animals behave"
+   }
+  ],
+  "idea": {
+   "answer": "Birds that lost flockmates made new ones and spent more time with their old ones.",
+   "distractors": [
+    "Birds that lost flockmates stayed alone and avoided the rest of the flock.",
+    "Great tits live alone and do not form groups with other birds.",
+    "Many birds help people by spreading the seeds of important plants."
+   ],
+   "why": "The passage says the birds responded by making new flockmates and spending more time with previous flockmates."
   },
-  {
-    "id": "ir-clear-3306",
-    "sourceId": "clear-3306",
-    "genre": "narrative",
-    "topic": "story",
-    "difficulty": "easy",
-    "title": "Holidays With Grandmother",
-    "passage": "Odongo and Apiyo were excited because it was time to visit their grandmother again. They packed their bags and got ready for their long journey the next day. They could not sleep and talked about the holiday the whole night. Early the next morning, they left for the village in their father's car. They drove past mountains, wild animals, and tea plantations. They counted cars and sang songs. After a while, the children were tired and fell asleep. Father woke up Odongo and Apiyo as they arrived in the village. They found Nyar-Kanyada, their grandmother, resting on a mat under a tree. In their language, Nyar-Kanyada means \"daughter of the people of Kanyada.\" She was a strong and beautiful woman. Nyar-Kanyada welcomed them into the house. She danced around the room singing with joy. Her grandchildren were excited to give her the presents they brought from the city.",
-    "sentencesPartEndsAfter": "After a while, the children were tired and fell asleep.",
-    "blanks": [
-      {
-        "answer": "excited",
-        "distractors": [
-          "exciting",
-          "excitement",
-          "expensive",
-          "empty"
-        ],
-        "why": "People feel 'excited' (-ed adjective) about something good, like a visit."
-      },
-      {
-        "answer": "visit",
-        "distractors": [
-          "visitor",
-          "visited",
-          "visiting",
-          "borrow"
-        ],
-        "why": "'Time to' is followed by a base verb, and you visit a relative."
-      },
-      {
-        "answer": "packed",
-        "distractors": [
-          "packing",
-          "parked",
-          "baked",
-          "pack"
-        ],
-        "why": "You 'pack your bags' before a trip, and the story is in the past tense."
-      },
-      {
-        "answer": "about",
-        "distractors": [
-          "above",
-          "across",
-          "under",
-          "into"
-        ],
-        "why": "We 'talk about' a topic."
-      },
-      {
-        "answer": "for",
-        "occurrence": 2,
-        "distractors": [
-          "of",
-          "with",
-          "about",
-          "under"
-        ],
-        "why": "'Leave for' a place means to start a journey to it."
-      },
-      {
-        "answer": "past",
-        "distractors": [
-          "passed",
-          "pasta",
-          "post",
-          "fast"
-        ],
-        "why": "'Drove past' uses the preposition 'past'; 'passed' is a verb."
-      },
-      {
-        "answer": "sang",
-        "distractors": [
-          "sung",
-          "sing",
-          "sign",
-          "sank"
-        ],
-        "why": "'Sang' is the simple past of 'sing', like 'counted'."
-      },
-      {
-        "answer": "fell",
-        "distractors": [
-          "felt",
-          "fall",
-          "fallen",
-          "feel"
-        ],
-        "why": "'Fell asleep' is the past tense of 'fall asleep'."
-      }
+  "titleDistractors": [
+   "How Having a Partner and a Family Changes the Stress Levels of Graylag Geese",
+   "Why Didn’t the Bird Cross the Road?",
+   "Sanderlings: Traveling Birds"
+  ],
+  "titleWhy": "The whole passage is about a study of how birds respond when members of their group are lost."
+ },
+ {
+  "id": "ir-clear-3306",
+  "sourceId": "clear-3306",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Holidays With Grandmother",
+  "passage": "Odongo and Apiyo were excited because it was time to visit their grandmother again. They packed their bags and got ready for their long journey the next day. They could not sleep and talked about the holiday the whole night. Early the next morning, they left for the village in their father's car. They drove past mountains, wild animals, and tea plantations. They counted cars and sang songs. After a while, the children were tired and fell asleep. Father woke up Odongo and Apiyo as they arrived in the village. They found Nyar-Kanyada, their grandmother, resting on a mat under a tree. In their language, Nyar-Kanyada means \"daughter of the people of Kanyada.\" She was a strong and beautiful woman. Nyar-Kanyada welcomed them into the house. She danced around the room singing with joy. Her grandchildren were excited to give her the presents they brought from the city.",
+  "sentencesPartEndsAfter": "After a while, the children were tired and fell asleep.",
+  "blanks": [
+   {
+    "answer": "excited",
+    "distractors": [
+     "exciting",
+     "excitement",
+     "expensive",
+     "empty"
     ],
-    "missingSentence": "Father woke up Odongo and Apiyo as they arrived in the village.",
-    "missingDistractors": [
-      "She left to go to her grandmother's manyatta, but she got lost in the hills.",
-      "One day, three sisters, Apiyo, Ajoh and Atieno went to the forest to fetch firewood.",
-      "While they were standing in the garden, Thabo arrived."
+    "why": "People feel 'excited' (-ed adjective) about something good, like a visit."
+   },
+   {
+    "answer": "visit",
+    "distractors": [
+     "visitor",
+     "visited",
+     "visiting",
+     "borrow"
     ],
-    "missingWhy": "The children had fallen asleep, so they had to be woken up when they arrived, before 'they found' their grandmother.",
-    "highlights": [
-      {
-        "question": "What did the children see on the way to the village?",
-        "answer": "mountains, wild animals, and tea plantations"
-      },
-      {
-        "question": "What was the grandmother doing when the children found her?",
-        "answer": "resting on a mat under a tree"
-      }
+    "why": "'Time to' is followed by a base verb, and you visit a relative."
+   },
+   {
+    "answer": "packed",
+    "distractors": [
+     "packing",
+     "parked",
+     "baked",
+     "pack"
     ],
-    "idea": {
-      "answer": "The children were very happy to travel to the village to see their grandmother.",
-      "distractors": [
-        "The children traveled to the village by bus with their mother.",
-        "Grandmother was too tired to welcome the children into her house.",
-        "Grandmother told the children stories about the snakes in the forest."
-      ],
-      "why": "They were excited to visit, could not sleep the night before, and brought her presents."
-    },
-    "titleDistractors": [
-      "Abike's day",
-      "My first day at the market",
-      "Forest of snakes"
+    "why": "You 'pack your bags' before a trip, and the story is in the past tense."
+   },
+   {
+    "answer": "about",
+    "distractors": [
+     "above",
+     "across",
+     "under",
+     "into"
     ],
-    "titleWhy": "The story is about the children's holiday trip to visit their grandmother."
+    "why": "We 'talk about' a topic."
+   },
+   {
+    "answer": "for",
+    "occurrence": 2,
+    "distractors": [
+     "of",
+     "with",
+     "about",
+     "under"
+    ],
+    "why": "'Leave for' a place means to start a journey to it."
+   },
+   {
+    "answer": "past",
+    "distractors": [
+     "passed",
+     "pasta",
+     "post",
+     "fast"
+    ],
+    "why": "'Drove past' uses the preposition 'past'; 'passed' is a verb."
+   },
+   {
+    "answer": "sang",
+    "distractors": [
+     "sung",
+     "sing",
+     "sign",
+     "sank"
+    ],
+    "why": "'Sang' is the simple past of 'sing', like 'counted'."
+   },
+   {
+    "answer": "fell",
+    "distractors": [
+     "felt",
+     "fall",
+     "fallen",
+     "feel"
+    ],
+    "why": "'Fell asleep' is the past tense of 'fall asleep'."
+   }
+  ],
+  "missingSentence": "Father woke up Odongo and Apiyo as they arrived in the village.",
+  "missingDistractors": [
+   "She left to go to her grandmother's manyatta, but she got lost in the hills.",
+   "One day, three sisters, Apiyo, Ajoh and Atieno went to the forest to fetch firewood.",
+   "While they were standing in the garden, Thabo arrived."
+  ],
+  "missingWhy": "The children had fallen asleep, so they had to be woken up when they arrived, before 'they found' their grandmother.",
+  "highlights": [
+   {
+    "question": "What did the children see on the way to the village?",
+    "answer": "mountains, wild animals, and tea plantations"
+   },
+   {
+    "question": "What was the grandmother doing when the children found her?",
+    "answer": "resting on a mat under a tree"
+   }
+  ],
+  "idea": {
+   "answer": "The children were very happy to travel to the village to see their grandmother.",
+   "distractors": [
+    "The children traveled to the village by bus with their mother.",
+    "Grandmother was too tired to welcome the children into her house.",
+    "Grandmother told the children stories about the snakes in the forest."
+   ],
+   "why": "They were excited to visit, could not sleep the night before, and brought her presents."
   },
-  {
-    "id": "ir-clear-3072",
-    "sourceId": "clear-3072",
-    "genre": "narrative",
-    "topic": "story",
-    "difficulty": "easy",
-    "title": "Hyena, Hare and their basins",
-    "passage": "Long time ago, Hyena and Hare were great friends. They were both poor but Hare owned a donkey. He also had a very small basin, which he used to feed the donkey.\n\nOne hot afternoon, Hare decided to give water to his donkey.\n\nHowever, Hare could not fetch water from the well with his small basin. So he decided to borrow a bigger basin from Hyena. Hyena gave Hare his basin because of their friendship.\n\nAfter getting water and giving it to the donkey, Hare went home with Hyena's basin.\n\nTwo weeks later, Hyena wanted to wash clothes but Hare still had his basin. Hyena left the clothes and went to Hare's house for his basin.\n\nHare gave Hyena his large basin. He also gave Hyena a small basin.\n\nHare said, \"Your basin gave birth to a young one and since we are friends, I am giving you the two of them.\" Hyena was happy and accepted the two basins.",
-    "sentencesPartEndsAfter": "After getting water and giving it to the donkey, Hare went home with Hyena's basin.",
-    "blanks": [
-      {
-        "answer": "friends",
-        "distractors": [
-          "friendly",
-          "friendship",
-          "fruits",
-          "kitchens"
-        ],
-        "why": "'Were great friends' needs a plural noun for the two animals."
-      },
-      {
-        "answer": "but",
-        "distractors": [
-          "because",
-          "so",
-          "unless",
-          "than"
-        ],
-        "why": "'But' shows a contrast: both were poor, yet Hare owned a donkey."
-      },
-      {
-        "answer": "feed",
-        "distractors": [
-          "food",
-          "fed",
-          "feet",
-          "feeding"
-        ],
-        "why": "'Used to' (for the purpose of) is followed by a base verb, and you feed an animal."
-      },
-      {
-        "answer": "decided",
-        "distractors": [
-          "decision",
-          "decide",
-          "divided",
-          "denied"
-        ],
-        "why": "'Decided to give' is the past tense of 'decide to', matching the story."
-      },
-      {
-        "answer": "fetch",
-        "distractors": [
-          "fetched",
-          "fresh",
-          "fetching",
-          "fence"
-        ],
-        "why": "'Could not' needs a base verb, and you 'fetch water' from a well."
-      },
-      {
-        "answer": "borrow",
-        "distractors": [
-          "lend",
-          "borrowed",
-          "sorrow",
-          "burrow"
-        ],
-        "why": "You 'borrow' something 'from' someone; you 'lend' something 'to' someone."
-      },
-      {
-        "answer": "because",
-        "distractors": [
-          "instead",
-          "although",
-          "unless",
-          "despite"
-        ],
-        "why": "'Because of' gives the reason: their friendship."
-      },
-      {
-        "answer": "with",
-        "occurrence": 2,
-        "distractors": [
-          "upon",
-          "until",
-          "among",
-          "beyond"
-        ],
-        "why": "'Went home with' something means taking it along."
-      }
+  "titleDistractors": [
+   "Abike's day",
+   "My first day at the market",
+   "Forest of snakes"
+  ],
+  "titleWhy": "The story is about the children's holiday trip to visit their grandmother."
+ },
+ {
+  "id": "ir-clear-3072",
+  "sourceId": "clear-3072",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Hyena, Hare and their basins",
+  "passage": "Long time ago, Hyena and Hare were great friends. They were both poor but Hare owned a donkey. He also had a very small basin, which he used to feed the donkey.\n\nOne hot afternoon, Hare decided to give water to his donkey.\n\nHowever, Hare could not fetch water from the well with his small basin. So he decided to borrow a bigger basin from Hyena. Hyena gave Hare his basin because of their friendship.\n\nAfter getting water and giving it to the donkey, Hare went home with Hyena's basin.\n\nTwo weeks later, Hyena wanted to wash clothes but Hare still had his basin. Hyena left the clothes and went to Hare's house for his basin.\n\nHare gave Hyena his large basin. He also gave Hyena a small basin.\n\nHare said, \"Your basin gave birth to a young one and since we are friends, I am giving you the two of them.\" Hyena was happy and accepted the two basins.",
+  "sentencesPartEndsAfter": "After getting water and giving it to the donkey, Hare went home with Hyena's basin.",
+  "blanks": [
+   {
+    "answer": "friends",
+    "distractors": [
+     "friendly",
+     "friendship",
+     "fruits",
+     "kitchens"
     ],
-    "missingSentence": "Hyena left the clothes and went to Hare's house for his basin.",
-    "missingDistractors": [
-      "Hyena complained that he had been given more work.",
-      "One day they went to a river to drink water.",
-      "Hare agreed to his terms and they shook hands on it because he thought it was a good deal."
+    "why": "'Were great friends' needs a plural noun for the two animals."
+   },
+   {
+    "answer": "but",
+    "distractors": [
+     "because",
+     "so",
+     "unless",
+     "than"
     ],
-    "missingWhy": "Hyena needed his basin to wash clothes, so he went to Hare's house, and in the next sentence Hare gives the basin back.",
-    "highlights": [
-      {
-        "question": "Why did Hyena agree to lend his basin to Hare?",
-        "answer": "because of their friendship"
-      },
-      {
-        "question": "What reason did Hare give for returning two basins instead of one?",
-        "answer": "Your basin gave birth to a young one"
-      }
+    "why": "'But' shows a contrast: both were poor, yet Hare owned a donkey."
+   },
+   {
+    "answer": "feed",
+    "distractors": [
+     "food",
+     "fed",
+     "feet",
+     "feeding"
     ],
-    "idea": {
-      "answer": "Hare returned Hyena's basin together with a small basin, saying it was the basin's baby.",
-      "distractors": [
-        "Hyena refused to lend his basin because Hare never returned things.",
-        "Hare and Hyena stopped being friends after an argument about a basin.",
-        "Hare used Hyena's large basin to wash his own clothes at the river."
-      ],
-      "why": "Hare gave back the large basin and a small one, saying that Hyena's basin 'gave birth to a young one'."
-    },
-    "titleDistractors": [
-      "Friendship between a donkey and a hyena",
-      "The Animals Dig a Well",
-      "Lion gets sick"
+    "why": "'Used to' (for the purpose of) is followed by a base verb, and you feed an animal."
+   },
+   {
+    "answer": "decided",
+    "distractors": [
+     "decision",
+     "decide",
+     "divided",
+     "denied"
     ],
-    "titleWhy": "The story is about Hyena and Hare and what happened to their basins."
+    "why": "'Decided to give' is the past tense of 'decide to', matching the story."
+   },
+   {
+    "answer": "fetch",
+    "distractors": [
+     "fetched",
+     "fresh",
+     "fetching",
+     "fence"
+    ],
+    "why": "'Could not' needs a base verb, and you 'fetch water' from a well."
+   },
+   {
+    "answer": "borrow",
+    "distractors": [
+     "lend",
+     "borrowed",
+     "sorrow",
+     "burrow"
+    ],
+    "why": "You 'borrow' something 'from' someone; you 'lend' something 'to' someone."
+   },
+   {
+    "answer": "because",
+    "distractors": [
+     "instead",
+     "although",
+     "unless",
+     "despite"
+    ],
+    "why": "'Because of' gives the reason: their friendship."
+   },
+   {
+    "answer": "with",
+    "occurrence": 2,
+    "distractors": [
+     "upon",
+     "until",
+     "among",
+     "beyond"
+    ],
+    "why": "'Went home with' something means taking it along."
+   }
+  ],
+  "missingSentence": "Hyena left the clothes and went to Hare's house for his basin.",
+  "missingDistractors": [
+   "Hyena complained that he had been given more work.",
+   "One day they went to a river to drink water.",
+   "Hare agreed to his terms and they shook hands on it because he thought it was a good deal."
+  ],
+  "missingWhy": "Hyena needed his basin to wash clothes, so he went to Hare's house, and in the next sentence Hare gives the basin back.",
+  "highlights": [
+   {
+    "question": "Why did Hyena agree to lend his basin to Hare?",
+    "answer": "because of their friendship"
+   },
+   {
+    "question": "What did Hare claim had happened to Hyena's basin?",
+    "answer": "Your basin gave birth to a young one"
+   }
+  ],
+  "idea": {
+   "answer": "Hare returned Hyena's basin together with a small basin, saying it was the basin's baby.",
+   "distractors": [
+    "Hyena refused to lend his basin because Hare never returned things.",
+    "Hare and Hyena stopped being friends after an argument about a basin.",
+    "Hare used Hyena's large basin to wash his own clothes at the river."
+   ],
+   "why": "Hare gave back the large basin and a small one, saying that Hyena's basin 'gave birth to a young one'."
   },
-  {
-    "id": "ir-ostx-introduction-anthropology-m00022-2",
-    "sourceId": "ostx-introduction-anthropology-m00022-2",
-    "genre": "expository",
-    "topic": "anthropology",
-    "difficulty": "advanced",
-    "title": "Paradox 1: Culture Is Continuous, but It Changes",
-    "passage": "Cultural materials, practices, and ideas are handed down from older to younger members of a culture, giving some degree of continuity to culture over time. However, many factors can intervene in this process of cultural reproduction to subtly alter or dramatically change the elements and aggregates of culture. In some contexts, younger people either fail to precisely learn the culture of their elders or deliberately reject those cultural lessons. Through travel and trade, people learn about other ways of doing things, and they take these ideas back to their own cultures, trying them out to see how they might improve their own ways of life. Accidents and deliberate experimentation introduce new possibilities. People may simply get tired of doing things one way over and over and thrill at some refreshing style or craze.\n\nWe can identify four main mechanisms of cultural change. These four mechanisms overlap and interact as the history of a culture unfolds over time. Diffusion is the movement of an element of culture from one society to another, often through migration or trade. Friction occurs when two or more elements of culture come into conflict, resulting in alteration or replacement of those elements.",
-    "sentencesPartEndsAfter": "Through travel and trade, people learn about other ways of doing things, and they take these ideas back to their own cultures, trying them out to see how they might improve their own ways of life.",
-    "blanks": [
-      {
-        "answer": "handed",
-        "distractors": [
-          "handled",
-          "handy",
-          "handing",
-          "landed"
-        ],
-        "why": "'Handed down' means passed from older people to younger people."
-      },
-      {
-        "answer": "However",
-        "distractors": [
-          "Therefore",
-          "Because",
-          "Although",
-          "Unless"
-        ],
-        "why": "'However' introduces a contrast with the continuity described before."
-      },
-      {
-        "answer": "process",
-        "distractors": [
-          "proceed",
-          "procession",
-          "promise",
-          "profess"
-        ],
-        "why": "'This process' refers back to handing culture down, which happens step by step."
-      },
-      {
-        "answer": "either",
-        "distractors": [
-          "neither",
-          "both",
-          "whether",
-          "each"
-        ],
-        "why": "'Either ... or' joins the two possibilities: fail to learn or reject."
-      },
-      {
-        "answer": "elders",
-        "distractors": [
-          "elbows",
-          "orders",
-          "ladders",
-          "older"
-        ],
-        "why": "'Elders' are older people, in contrast with 'younger people'."
-      },
-      {
-        "answer": "travel",
-        "distractors": [
-          "traveled",
-          "traveler",
-          "gravel",
-          "trivial"
-        ],
-        "why": "'Through travel and trade' needs nouns for ways people meet other cultures."
-      },
-      {
-        "answer": "about",
-        "distractors": [
-          "above",
-          "across",
-          "beneath",
-          "toward"
-        ],
-        "why": "We 'learn about' a topic, here other ways of doing things."
-      },
-      {
-        "answer": "improve",
-        "distractors": [
-          "improvement",
-          "improved",
-          "improper",
-          "impolite"
-        ],
-        "why": "After 'might' we need a base verb; people try new ideas to improve their lives."
-      }
+  "titleDistractors": [
+   "Friendship between a donkey and a hyena",
+   "The Animals Dig a Well",
+   "Lion gets sick"
+  ],
+  "titleWhy": "The story is about Hyena and Hare and what happened to their basins."
+ },
+ {
+  "id": "ir-ostx-introduction-anthropology-m00022-2",
+  "sourceId": "ostx-introduction-anthropology-m00022-2",
+  "genre": "expository",
+  "topic": "anthropology",
+  "difficulty": "advanced",
+  "title": "Paradox 1: Culture Is Continuous, but It Changes",
+  "passage": "Cultural materials, practices, and ideas are handed down from older to younger members of a culture, giving some degree of continuity to culture over time. However, many factors can intervene in this process of cultural reproduction to subtly alter or dramatically change the elements and aggregates of culture. In some contexts, younger people either fail to precisely learn the culture of their elders or deliberately reject those cultural lessons. Through travel and trade, people learn about other ways of doing things, and they take these ideas back to their own cultures, trying them out to see how they might improve their own ways of life. Accidents and deliberate experimentation introduce new possibilities. People may simply get tired of doing things one way over and over and thrill at some refreshing style or craze.\n\nWe can identify four main mechanisms of cultural change. These four mechanisms overlap and interact as the history of a culture unfolds over time. Diffusion is the movement of an element of culture from one society to another, often through migration or trade. Friction occurs when two or more elements of culture come into conflict, resulting in alteration or replacement of those elements.",
+  "sentencesPartEndsAfter": "Through travel and trade, people learn about other ways of doing things, and they take these ideas back to their own cultures, trying them out to see how they might improve their own ways of life.",
+  "blanks": [
+   {
+    "answer": "handed",
+    "distractors": [
+     "handled",
+     "handy",
+     "handing",
+     "landed"
     ],
-    "missingSentence": "We can identify four main mechanisms of cultural change.",
-    "missingDistractors": [
-      "Cultural change can happen through invention or discovery.",
-      "New ideas, such as flash mobs or crowdfunding, enter a culture.",
-      "While it is an incredibly useful tool for understanding human social life, the concept of culture is riddled with paradox."
+    "why": "'Handed down' means passed from older people to younger people."
+   },
+   {
+    "answer": "However",
+    "distractors": [
+     "Therefore",
+     "Because",
+     "Although",
+     "Unless"
     ],
-    "missingWhy": "The next sentence begins 'These four mechanisms', so the missing sentence must introduce the four mechanisms.",
-    "highlights": [
-      {
-        "question": "Why might people suddenly become excited about a new style or craze?",
-        "answer": "get tired of doing things one way over and over"
-      },
-      {
-        "question": "How does the passage define diffusion?",
-        "answer": "the movement of an element of culture from one society to another"
-      }
+    "why": "'However' introduces a contrast with the continuity described before."
+   },
+   {
+    "answer": "process",
+    "distractors": [
+     "proceed",
+     "procession",
+     "promise",
+     "profess"
     ],
-    "idea": {
-      "answer": "Although culture is passed down through generations, many things can cause it to change.",
-      "distractors": [
-        "Culture never changes because young people always copy their elders exactly.",
-        "New technology such as smartphones is the main cause of cultural change.",
-        "Friction happens when two cultures agree to share their best ideas."
-      ],
-      "why": "The passage says culture is handed down, but many factors can alter or change it, and it names mechanisms of change."
-    },
-    "titleDistractors": [
-      "Paradox 4: Culture Is Shared, but It Varies",
-      "Innovation: Discovery and Invention",
-      "Diaspora, Transnationalism, and Cultural Hybridity"
+    "why": "'This process' refers back to handing culture down, which happens step by step."
+   },
+   {
+    "answer": "either",
+    "distractors": [
+     "neither",
+     "both",
+     "whether",
+     "each"
     ],
-    "titleWhy": "The passage explains that culture continues over time but also keeps changing."
+    "why": "'Either ... or' joins the two possibilities: fail to learn or reject."
+   },
+   {
+    "answer": "elders",
+    "distractors": [
+     "elbows",
+     "orders",
+     "ladders",
+     "older"
+    ],
+    "why": "'Elders' are older people, in contrast with 'younger people'."
+   },
+   {
+    "answer": "travel",
+    "distractors": [
+     "traveled",
+     "traveler",
+     "gravel",
+     "trivial"
+    ],
+    "why": "'Through travel and trade' needs nouns for ways people meet other cultures."
+   },
+   {
+    "answer": "about",
+    "distractors": [
+     "above",
+     "across",
+     "beneath",
+     "toward"
+    ],
+    "why": "We 'learn about' a topic, here other ways of doing things."
+   },
+   {
+    "answer": "improve",
+    "distractors": [
+     "improvement",
+     "improved",
+     "improper",
+     "impolite"
+    ],
+    "why": "After 'might' we need a base verb; people try new ideas to improve their lives."
+   }
+  ],
+  "missingSentence": "We can identify four main mechanisms of cultural change.",
+  "missingDistractors": [
+   "Cultural change can happen through invention or discovery.",
+   "New ideas, such as flash mobs or crowdfunding, enter a culture.",
+   "While it is an incredibly useful tool for understanding human social life, the concept of culture is riddled with paradox."
+  ],
+  "missingWhy": "The next sentence begins 'These four mechanisms', so the missing sentence must introduce the four mechanisms.",
+  "highlights": [
+   {
+    "question": "Why might people suddenly become excited about a new style or craze?",
+    "answer": "get tired of doing things one way over and over"
+   },
+   {
+    "question": "How does the passage define diffusion?",
+    "answer": "the movement of an element of culture from one society to another"
+   }
+  ],
+  "idea": {
+   "answer": "Although culture is passed down through generations, many things can cause it to change.",
+   "distractors": [
+    "Culture never changes because young people always copy their elders exactly.",
+    "New technology such as smartphones is the main cause of cultural change.",
+    "Friction happens when two cultures agree to share their best ideas."
+   ],
+   "why": "The passage says culture is handed down, but many factors can alter or change it, and it names mechanisms of change."
   },
-  {
-    "id": "ir-ostx-lifespan-development-m00026-10",
-    "sourceId": "ostx-lifespan-development-m00026-10",
-    "genre": "expository",
-    "topic": "psychology",
-    "difficulty": "advanced",
-    "title": "Birth Locations",
-    "passage": "Many factors come in to play in the decision of where to give birth, including health insurance coverage, economic resources, the availability of nearby options, and existing health conditions or other considerations that may require special care. The question for the birth mother or future parents is, what is most important to them about the birth process.\n\nAbout 98 percent of births in the United States occur in a hospital. In some parts of Europe and elsewhere around the world, birth more frequently occurs in a birthing center. One of the advantages of delivering in a hospital or birthing center is the ability to have vital signs like the heart rate and blood pressure continuously monitored. Changes in these can indicate distress or potential complications during the labor process, and medical interventions can be started quickly to ensure a safe delivery. More powerful medications are also available to assist with any discomfort during labor. Another benefit of institutional delivery is the series of automatic health screenings performed on newborns in hospitals and other medical settings.",
-    "sentencesPartEndsAfter": "In some parts of Europe and elsewhere around the world, birth more frequently occurs in a birthing center.",
-    "blanks": [
-      {
-        "answer": "decision",
-        "distractors": [
-          "decide",
-          "decisive",
-          "division",
-          "precision"
-        ],
-        "why": "'The decision of where to ...' needs a noun after 'the'."
-      },
-      {
-        "answer": "of",
-        "occurrence": 2,
-        "distractors": [
-          "at",
-          "with",
-          "by",
-          "on"
-        ],
-        "why": "'The availability of' something is the usual pattern."
-      },
-      {
-        "answer": "special",
-        "distractors": [
-          "specially",
-          "especially",
-          "spatial",
-          "species"
-        ],
-        "why": "'Special care' is a common phrase; an adjective is needed before the noun 'care'."
-      },
-      {
-        "answer": "future",
-        "distractors": [
-          "further",
-          "feature",
-          "fortune",
-          "furniture"
-        ],
-        "why": "'Future parents' are people who will soon become parents."
-      },
-      {
-        "answer": "them",
-        "distractors": [
-          "they",
-          "their",
-          "there",
-          "theirs"
-        ],
-        "why": "After the preposition 'to' we need the object pronoun 'them'."
-      },
-      {
-        "answer": "percent",
-        "distractors": [
-          "percentage",
-          "perfect",
-          "person",
-          "present"
-        ],
-        "why": "After a number we use 'percent': 98 percent of births."
-      },
-      {
-        "answer": "around",
-        "distractors": [
-          "among",
-          "above",
-          "beneath",
-          "toward"
-        ],
-        "why": "'Around the world' is a fixed phrase meaning in many places."
-      },
-      {
-        "answer": "frequently",
-        "distractors": [
-          "frequent",
-          "frequency",
-          "fluently",
-          "freshly"
-        ],
-        "why": "An adverb is needed to say how often birth occurs there."
-      }
+  "titleDistractors": [
+   "Paradox 4: Culture Is Shared, but It Varies",
+   "Innovation: Discovery and Invention",
+   "Diaspora, Transnationalism, and Cultural Hybridity"
+  ],
+  "titleWhy": "The passage explains that culture continues over time but also keeps changing."
+ },
+ {
+  "id": "ir-ostx-lifespan-development-m00026-10",
+  "sourceId": "ostx-lifespan-development-m00026-10",
+  "genre": "expository",
+  "topic": "psychology",
+  "difficulty": "advanced",
+  "title": "Birth Locations",
+  "passage": "Many factors come in to play in the decision of where to give birth, including health insurance coverage, economic resources, the availability of nearby options, and existing health conditions or other considerations that may require special care. The question for the birth mother or future parents is, what is most important to them about the birth process.\n\nAbout 98 percent of births in the United States occur in a hospital. In some parts of Europe and elsewhere around the world, birth more frequently occurs in a birthing center. One of the advantages of delivering in a hospital or birthing center is the ability to have vital signs like the heart rate and blood pressure continuously monitored. Changes in these can indicate distress or potential complications during the labor process, and medical interventions can be started quickly to ensure a safe delivery. More powerful medications are also available to assist with any discomfort during labor. Another benefit of institutional delivery is the series of automatic health screenings performed on newborns in hospitals and other medical settings.",
+  "sentencesPartEndsAfter": "In some parts of Europe and elsewhere around the world, birth more frequently occurs in a birthing center.",
+  "blanks": [
+   {
+    "answer": "decision",
+    "distractors": [
+     "decide",
+     "decisive",
+     "division",
+     "precision"
     ],
-    "missingSentence": "Changes in these can indicate distress or potential complications during the labor process, and medical interventions can be started quickly to ensure a safe delivery.",
-    "missingDistractors": [
-      "This type of delivery can occur in multiple settings, including in a hospital, a birthing center, or at home, and depending on the location, in water.",
-      "Omar, on the other hand, expresses anxiety about this option and would feel safer with a hospital birth.",
-      "Low birth weight does not automatically result in developmental problems."
+    "why": "'The decision of where to ...' needs a noun after 'the'."
+   },
+   {
+    "answer": "of",
+    "occurrence": 2,
+    "distractors": [
+     "at",
+     "with",
+     "by",
+     "on"
     ],
-    "missingWhy": "'Changes in these' refers to the vital signs in the sentence before and explains why watching them is an advantage.",
-    "highlights": [
-      {
-        "question": "What can be watched all the time during a delivery in a hospital or birthing center?",
-        "answer": "vital signs like the heart rate and blood pressure"
-      },
-      {
-        "question": "What is done for newborns in hospitals that is another advantage of delivering there?",
-        "answer": "the series of automatic health screenings"
-      }
+    "why": "'The availability of' something is the usual pattern."
+   },
+   {
+    "answer": "special",
+    "distractors": [
+     "specially",
+     "especially",
+     "spatial",
+     "species"
     ],
-    "idea": {
-      "answer": "Almost all babies in the United States are born in hospitals.",
-      "distractors": [
-        "In most of Europe, nearly all babies are born at home without help.",
-        "Babies born in hospitals usually weigh more than babies born at home.",
-        "Health insurance does not affect where people choose to give birth."
-      ],
-      "why": "The passage says that about 98 percent of births in the United States occur in a hospital."
-    },
-    "titleDistractors": [
-      "Premature Birth",
-      "Care of Infants with Low Birth Weight",
-      "Professional Assistance"
+    "why": "'Special care' is a common phrase; an adjective is needed before the noun 'care'."
+   },
+   {
+    "answer": "future",
+    "distractors": [
+     "further",
+     "feature",
+     "fortune",
+     "furniture"
     ],
-    "titleWhy": "The passage discusses where people give birth and the benefits of hospitals and birthing centers."
+    "why": "'Future parents' are people who will soon become parents."
+   },
+   {
+    "answer": "them",
+    "distractors": [
+     "they",
+     "their",
+     "there",
+     "theirs"
+    ],
+    "why": "After the preposition 'to' we need the object pronoun 'them'."
+   },
+   {
+    "answer": "percent",
+    "distractors": [
+     "percentage",
+     "perfect",
+     "person",
+     "present"
+    ],
+    "why": "After a number we use 'percent': 98 percent of births."
+   },
+   {
+    "answer": "around",
+    "distractors": [
+     "among",
+     "above",
+     "beneath",
+     "toward"
+    ],
+    "why": "'Around the world' is a fixed phrase meaning in many places."
+   },
+   {
+    "answer": "frequently",
+    "distractors": [
+     "frequent",
+     "frequency",
+     "fluently",
+     "freshly"
+    ],
+    "why": "An adverb is needed to say how often birth occurs there."
+   }
+  ],
+  "missingSentence": "Changes in these can indicate distress or potential complications during the labor process, and medical interventions can be started quickly to ensure a safe delivery.",
+  "missingDistractors": [
+   "This type of delivery can occur in multiple settings, including in a hospital, a birthing center, or at home, and depending on the location, in water.",
+   "Omar, on the other hand, expresses anxiety about this option and would feel safer with a hospital birth.",
+   "Low birth weight does not automatically result in developmental problems."
+  ],
+  "missingWhy": "'Changes in these' refers to the vital signs in the sentence before and explains why watching them is an advantage.",
+  "highlights": [
+   {
+    "question": "What can be watched all the time during a delivery in a hospital or birthing center?",
+    "answer": "vital signs like the heart rate and blood pressure"
+   },
+   {
+    "question": "What is done for newborns in hospitals that is another advantage of delivering there?",
+    "answer": "the series of automatic health screenings"
+   }
+  ],
+  "idea": {
+   "answer": "Almost all babies in the United States are born in hospitals.",
+   "distractors": [
+    "In most of Europe, nearly all babies are born at home without help.",
+    "Babies born in hospitals usually weigh more than babies born at home.",
+    "Health insurance does not affect where people choose to give birth."
+   ],
+   "why": "The passage says that about 98 percent of births in the United States occur in a hospital."
   },
-  {
-    "id": "ir-ostx-astronomy-2e-m59835-6",
-    "sourceId": "ostx-astronomy-2e-m59835-6",
-    "genre": "expository",
-    "topic": "astronomy",
-    "difficulty": "advanced",
-    "title": "The Origin of Mercury",
-    "passage": "The problem with understanding how Mercury formed is the reverse of the problem posed by the composition of the Moon. We have seen that, unlike the Moon, Mercury is composed mostly of metal. However, astronomers think that Mercury should have formed with roughly the same ratio of metal to silicate as that found on Earth or Venus. How did it lose so much of its rocky material?\n\nThe most probable explanation for Mercury’s silicate loss may be similar to the explanation for the Moon’s lack of a metal core. Mercury is likely to have experienced several giant impacts very early in its youth, and one or more of these may have torn away a fraction of its mantle and crust, leaving a body dominated by its iron core. A recent alternative explanation suggests that, early on, heat from the young Sun evaporated much of the lighter, more volatile, silicates in the material that formed Mercury, leaving the planet with a majority of metals.",
-    "sentencesPartEndsAfter": "How did it lose so much of its rocky material?",
-    "blanks": [
-      {
-        "answer": "formed",
-        "distractors": [
-          "formal",
-          "former",
-          "farmed",
-          "forming"
-        ],
-        "why": "'How Mercury formed' needs a past-tense verb about how the planet came to exist."
-      },
-      {
-        "answer": "reverse",
-        "distractors": [
-          "reversed",
-          "universe",
-          "reserve",
-          "review"
-        ],
-        "why": "'The reverse of' means the opposite of; a noun is needed after 'the'."
-      },
-      {
-        "answer": "unlike",
-        "distractors": [
-          "unlikely",
-          "dislike",
-          "likely",
-          "alike"
-        ],
-        "why": "'Unlike the Moon' shows a difference between the two bodies."
-      },
-      {
-        "answer": "metal",
-        "distractors": [
-          "medal",
-          "meddle",
-          "mental",
-          "metallic"
-        ],
-        "why": "'Composed mostly of' needs a noun naming a material; the passage then compares metal and silicate."
-      },
-      {
-        "answer": "think",
-        "distractors": [
-          "thinking",
-          "thank",
-          "thick",
-          "thin"
-        ],
-        "why": "'Astronomers think that' means they believe something; a present-tense verb is needed."
-      },
-      {
-        "answer": "as",
-        "distractors": [
-          "than",
-          "like",
-          "so",
-          "then"
-        ],
-        "why": "'The same ... as' is the fixed pattern for saying two things are equal."
-      },
-      {
-        "answer": "lose",
-        "distractors": [
-          "loose",
-          "lost",
-          "loss",
-          "lots"
-        ],
-        "why": "'Did it' is followed by the base verb 'lose'; 'loose' is an adjective."
-      }
+  "titleDistractors": [
+   "Premature Birth",
+   "Care of Infants with Low Birth Weight",
+   "Professional Assistance"
+  ],
+  "titleWhy": "The passage discusses where people give birth and the benefits of hospitals and birthing centers."
+ },
+ {
+  "id": "ir-ostx-astronomy-2e-m59835-6",
+  "sourceId": "ostx-astronomy-2e-m59835-6",
+  "genre": "expository",
+  "topic": "astronomy",
+  "difficulty": "advanced",
+  "title": "The Origin of Mercury",
+  "passage": "The problem with understanding how Mercury formed is the reverse of the problem posed by the composition of the Moon. We have seen that, unlike the Moon, Mercury is composed mostly of metal. However, astronomers think that Mercury should have formed with roughly the same ratio of metal to silicate as that found on Earth or Venus. How did it lose so much of its rocky material?\n\nThe most probable explanation for Mercury’s silicate loss may be similar to the explanation for the Moon’s lack of a metal core. Mercury is likely to have experienced several giant impacts very early in its youth, and one or more of these may have torn away a fraction of its mantle and crust, leaving a body dominated by its iron core. A recent alternative explanation suggests that, early on, heat from the young Sun evaporated much of the lighter, more volatile, silicates in the material that formed Mercury, leaving the planet with a majority of metals.",
+  "sentencesPartEndsAfter": "How did it lose so much of its rocky material?",
+  "blanks": [
+   {
+    "answer": "formed",
+    "distractors": [
+     "formal",
+     "former",
+     "farmed",
+     "forming"
     ],
-    "missingSentence": "The most probable explanation for Mercury’s silicate loss may be similar to the explanation for the Moon’s lack of a metal core.",
-    "missingDistractors": [
-      "It is the only planet known to have life on it.",
-      "This is very nearly the largest impact Earth could experience without being shattered.",
-      "Such an impact would disrupt much of Earth and eject a vast amount of material into space, releasing almost enough energy to break the planet apart."
+    "why": "'How Mercury formed' needs a past-tense verb about how the planet came to exist."
+   },
+   {
+    "answer": "reverse",
+    "distractors": [
+     "reversed",
+     "universe",
+     "reserve",
+     "review"
     ],
-    "missingWhy": "It begins to answer the question 'How did it lose so much of its rocky material?' and leads into the giant-impact explanation.",
-    "highlights": [
-      {
-        "question": "What might have removed part of Mercury's mantle and crust?",
-        "answer": "several giant impacts very early in its youth"
-      },
-      {
-        "question": "In the newer explanation, what caused much of Mercury's lighter silicates to evaporate?",
-        "answer": "heat from the young Sun"
-      }
+    "why": "'The reverse of' means the opposite of; a noun is needed after 'the'."
+   },
+   {
+    "answer": "unlike",
+    "distractors": [
+     "unlikely",
+     "dislike",
+     "likely",
+     "alike"
     ],
-    "idea": {
-      "answer": "Scientists have more than one possible explanation for why Mercury is mostly metal.",
-      "distractors": [
-        "Mercury is made mostly of rock, just like Earth and Venus.",
-        "Mercury was formed from material thrown into space when a large object hit Earth.",
-        "Mercury's metal core grew larger because of heat from a nearby planet."
-      ],
-      "why": "The passage gives two explanations: giant impacts and heat from the young Sun."
-    },
-    "titleDistractors": [
-      "The Surface of Mercury",
-      "The Giant Impact Hypothesis",
-      "The Terrestrial Planets"
+    "why": "'Unlike the Moon' shows a difference between the two bodies."
+   },
+   {
+    "answer": "metal",
+    "distractors": [
+     "medal",
+     "meddle",
+     "mental",
+     "metallic"
     ],
-    "titleWhy": "The whole passage is about how Mercury formed and why it is mostly metal."
+    "why": "'Composed mostly of' needs a noun naming a material; the passage then compares metal and silicate."
+   },
+   {
+    "answer": "think",
+    "distractors": [
+     "thinking",
+     "thank",
+     "thick",
+     "thin"
+    ],
+    "why": "'Astronomers think that' means they believe something; a present-tense verb is needed."
+   },
+   {
+    "answer": "as",
+    "distractors": [
+     "than",
+     "like",
+     "so",
+     "then"
+    ],
+    "why": "'The same ... as' is the fixed pattern for saying two things are equal."
+   },
+   {
+    "answer": "lose",
+    "distractors": [
+     "loose",
+     "lost",
+     "loss",
+     "lots"
+    ],
+    "why": "'Did it' is followed by the base verb 'lose'; 'loose' is an adjective."
+   }
+  ],
+  "missingSentence": "The most probable explanation for Mercury’s silicate loss may be similar to the explanation for the Moon’s lack of a metal core.",
+  "missingDistractors": [
+   "It is the only planet known to have life on it.",
+   "This is very nearly the largest impact Earth could experience without being shattered.",
+   "Such an impact would disrupt much of Earth and eject a vast amount of material into space, releasing almost enough energy to break the planet apart."
+  ],
+  "missingWhy": "It begins to answer the question 'How did it lose so much of its rocky material?' and leads into the giant-impact explanation.",
+  "highlights": [
+   {
+    "question": "What might have removed part of Mercury's mantle and crust?",
+    "answer": "several giant impacts very early in its youth"
+   },
+   {
+    "question": "In the newer explanation, what caused much of Mercury's lighter silicates to evaporate?",
+    "answer": "heat from the young Sun"
+   }
+  ],
+  "idea": {
+   "answer": "Scientists have more than one possible explanation for why Mercury is mostly metal.",
+   "distractors": [
+    "Mercury is made mostly of rock, just like Earth and Venus.",
+    "Mercury was formed from material thrown into space when a large object hit Earth.",
+    "Mercury's metal core grew larger because of heat from a nearby planet."
+   ],
+   "why": "The passage gives two explanations: giant impacts and heat from the young Sun."
   },
-  {
-    "id": "ir-ostx-introduction-anthropology-m00030-11",
-    "sourceId": "ostx-introduction-anthropology-m00030-11",
-    "genre": "expository",
-    "topic": "anthropology",
-    "difficulty": "advanced",
-    "title": "Pliocene Hominins",
-    "passage": "Thirteen years after Raymond Dart’s discovery, South African paleontologist and medical doctor Robert Broom discovered Paranthropus robustus at a site called Kromdraai in South Africa. The most obvious difference between Dart’s and Broom’s respective fossils, A. africanus and P. robustus, is that the morphology of Broom’s fossil is much larger. Its features include a sagittal crest and a flared zygomatic arch for the attachment of a large temporalis muscle for chewing a diet reliant on hard nuts and seeds. This interpretation was further supported by scanning electron microscopy, which was used to evaluate the markings etched into the teeth. As the teeth increased in size the incisors and canines shrank, giving Paranthropus a flatter face with less projection of the jaw. There are some who argue that depending on the environment and locale, some Paranthropus may have been omnivores, with varied diets similar to those of H. ergaster..",
-    "sentencesPartEndsAfter": "Its features include a sagittal crest and a flared zygomatic arch for the attachment of a large temporalis muscle for chewing a diet reliant on hard nuts and seeds.",
-    "blanks": [
-      {
-        "answer": "after",
-        "distractors": [
-          "ago",
-          "until",
-          "during",
-          "among"
-        ],
-        "why": "'Thirteen years after' an event places the second discovery later in time."
-      },
-      {
-        "answer": "medical",
-        "distractors": [
-          "medicine",
-          "medically",
-          "magical",
-          "metal"
-        ],
-        "why": "'Medical doctor' needs an adjective before 'doctor'."
-      },
-      {
-        "answer": "site",
-        "distractors": [
-          "sight",
-          "side",
-          "seat",
-          "sit"
-        ],
-        "why": "A 'site' is a place where fossils are found; 'sight' means the ability to see."
-      },
-      {
-        "answer": "between",
-        "distractors": [
-          "among",
-          "across",
-          "beside",
-          "within"
-        ],
-        "why": "'The difference between A and B' is used when comparing two things."
-      },
-      {
-        "answer": "that",
-        "distractors": [
-          "what",
-          "which",
-          "who",
-          "whose"
-        ],
-        "why": "'Is that' introduces the clause that describes the difference."
-      },
-      {
-        "answer": "larger",
-        "distractors": [
-          "largest",
-          "large",
-          "largely",
-          "enlarge"
-        ],
-        "why": "'Much' is followed by a comparative such as 'larger' when two fossils are compared."
-      },
-      {
-        "answer": "include",
-        "distractors": [
-          "includes",
-          "including",
-          "inclusion",
-          "conclude"
-        ],
-        "why": "The plural subject 'features' needs the plural verb 'include'."
-      },
-      {
-        "answer": "hard",
-        "distractors": [
-          "hardly",
-          "heard",
-          "hurt",
-          "harm"
-        ],
-        "why": "An adjective is needed before 'nuts and seeds', and big chewing muscles suit hard food."
-      }
+  "titleDistractors": [
+   "The Surface of Mercury",
+   "The Giant Impact Hypothesis",
+   "The Terrestrial Planets"
+  ],
+  "titleWhy": "The whole passage is about how Mercury formed and why it is mostly metal."
+ },
+ {
+  "id": "ir-ostx-introduction-anthropology-m00030-11",
+  "sourceId": "ostx-introduction-anthropology-m00030-11",
+  "genre": "expository",
+  "topic": "anthropology",
+  "difficulty": "advanced",
+  "title": "Pliocene Hominins",
+  "passage": "Thirteen years after Raymond Dart’s discovery, South African paleontologist and medical doctor Robert Broom discovered Paranthropus robustus at a site called Kromdraai in South Africa. The most obvious difference between Dart’s and Broom’s respective fossils, A. africanus and P. robustus, is that the morphology of Broom’s fossil is much larger. Its features include a sagittal crest and a flared zygomatic arch for the attachment of a large temporalis muscle for chewing a diet reliant on hard nuts and seeds. This interpretation was further supported by scanning electron microscopy, which was used to evaluate the markings etched into the teeth. As the teeth increased in size the incisors and canines shrank, giving Paranthropus a flatter face with less projection of the jaw. There are some who argue that depending on the environment and locale, some Paranthropus may have been omnivores, with varied diets similar to those of H. ergaster..",
+  "sentencesPartEndsAfter": "Its features include a sagittal crest and a flared zygomatic arch for the attachment of a large temporalis muscle for chewing a diet reliant on hard nuts and seeds.",
+  "blanks": [
+   {
+    "answer": "after",
+    "distractors": [
+     "ago",
+     "until",
+     "during",
+     "among"
     ],
-    "missingSentence": "This interpretation was further supported by scanning electron microscopy, which was used to evaluate the markings etched into the teeth.",
-    "missingDistractors": [
-      "The gracile species emerged around 4 MYA and disappeared 2 MYA, while robust species continued to exist for another million years.",
-      "Under most conditions, teeth and bones and impressions eventually deteriorate, too.",
-      "Sivapithecus fossils are very common throughout Asia, with a particularly large number having been found in Turkey."
+    "why": "'Thirteen years after' an event places the second discovery later in time."
+   },
+   {
+    "answer": "medical",
+    "distractors": [
+     "medicine",
+     "medically",
+     "magical",
+     "metal"
     ],
-    "missingWhy": "'This interpretation' refers to the diet of hard nuts and seeds just described, and its mention of teeth leads into the next sentence.",
-    "highlights": [
-      {
-        "question": "Where did Robert Broom find Paranthropus robustus?",
-        "answer": "at a site called Kromdraai in South Africa"
-      },
-      {
-        "question": "What happened to the front teeth as the other teeth became bigger?",
-        "answer": "the incisors and canines shrank"
-      }
+    "why": "'Medical doctor' needs an adjective before 'doctor'."
+   },
+   {
+    "answer": "site",
+    "distractors": [
+     "sight",
+     "side",
+     "seat",
+     "sit"
     ],
-    "idea": {
-      "answer": "Paranthropus robustus had strong chewing muscles suited to a diet of hard foods.",
-      "distractors": [
-        "Paranthropus robustus had small teeth and ate mostly soft fruit.",
-        "Robert Broom found the first Paranthropus robustus fossil in Turkey.",
-        "Paranthropus robustus disappeared about four million years ago."
-      ],
-      "why": "The passage says its skull had places to attach a large chewing muscle for a diet of hard nuts and seeds."
-    },
-    "titleDistractors": [
-      "Miocene Apes",
-      "Primates of the Oligocene Epoch",
-      "Tools and Brains: Homo habilis, Homo ergaster, and Homo erectus"
+    "why": "A 'site' is a place where fossils are found; 'sight' means the ability to see."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "among",
+     "across",
+     "beside",
+     "within"
     ],
-    "titleWhy": "The passage describes Paranthropus robustus, an early human relative (a hominin), not apes, monkeys or Homo species."
+    "why": "'The difference between A and B' is used when comparing two things."
+   },
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "which",
+     "who",
+     "whose"
+    ],
+    "why": "'Is that' introduces the clause that describes the difference."
+   },
+   {
+    "answer": "larger",
+    "distractors": [
+     "largest",
+     "large",
+     "largely",
+     "enlarge"
+    ],
+    "why": "'Much' is followed by a comparative such as 'larger' when two fossils are compared."
+   },
+   {
+    "answer": "include",
+    "distractors": [
+     "includes",
+     "including",
+     "inclusion",
+     "conclude"
+    ],
+    "why": "The plural subject 'features' needs the plural verb 'include'."
+   },
+   {
+    "answer": "hard",
+    "distractors": [
+     "hardly",
+     "heard",
+     "hurt",
+     "harm"
+    ],
+    "why": "An adjective is needed before 'nuts and seeds', and big chewing muscles suit hard food."
+   }
+  ],
+  "missingSentence": "This interpretation was further supported by scanning electron microscopy, which was used to evaluate the markings etched into the teeth.",
+  "missingDistractors": [
+   "The gracile species emerged around 4 MYA and disappeared 2 MYA, while robust species continued to exist for another million years.",
+   "Under most conditions, teeth and bones and impressions eventually deteriorate, too.",
+   "Sivapithecus fossils are very common throughout Asia, with a particularly large number having been found in Turkey."
+  ],
+  "missingWhy": "'This interpretation' refers to the diet of hard nuts and seeds just described, and its mention of teeth leads into the next sentence.",
+  "highlights": [
+   {
+    "question": "Where did Robert Broom find Paranthropus robustus?",
+    "answer": "at a site called Kromdraai in South Africa"
+   },
+   {
+    "question": "What happened to the front teeth as the other teeth became bigger?",
+    "answer": "the incisors and canines shrank"
+   }
+  ],
+  "idea": {
+   "answer": "Paranthropus robustus had strong chewing muscles suited to a diet of hard foods.",
+   "distractors": [
+    "Paranthropus robustus had small teeth and ate mostly soft fruit.",
+    "Robert Broom found the first Paranthropus robustus fossil in Turkey.",
+    "Paranthropus robustus disappeared about four million years ago."
+   ],
+   "why": "The passage says its skull had places to attach a large chewing muscle for a diet of hard nuts and seeds."
   },
-  {
-    "id": "ir-ose-wnl-nigerian-low-tech-adv",
-    "sourceId": "ose-wnl-nigerian-low-tech-adv",
-    "genre": "expository",
-    "topic": "news",
-    "difficulty": "advanced",
-    "title": "Focusing on Climate Change Solutions",
-    "titleWritten": true,
-    "passage": "When it comes to climate change, we have the bad habit of focusing on the first part of the story, the part about the problem, and forgetting the second part about the many available solutions. These solutions are speeding up recycling, slowing down emissions and providing sustainable alternatives to plastic, air conditioning, smartphones and fast fashion.\n\nThe Intergovernmental Panel on Climate Change recently gathered in Copenhagen to present its latest report on the impacts and pace of climate change. Climate change is now measured on all continents and our efforts to lower emissions must be intensified to avoid it escalating out of control. Along with outlining the risks and challenges, Copenhagen also embraced and focused on the solutions.\n\nIn the spirit of focusing on what can be done, Sustainia Award, chaired by Arnold Schwarzenegger, celebrated ten leading sustainability solutions deployed in 84 countries. From food to fashion, energy to transportation, education to health, the awards showcased an alternative to the grim-future scenarios we are so often presented with and made sustainability tangible to the innovators, investors, consumers and policy makers across sectors and regions.",
-    "sentencesPartEndsAfter": "Climate change is now measured on all continents and our efforts to lower emissions must be intensified to avoid it escalating out of control.",
-    "blanks": [
-      {
-        "answer": "comes",
-        "distractors": [
-          "came",
-          "coming",
-          "goes",
-          "becomes"
-        ],
-        "why": "'When it comes to' is a fixed phrase meaning 'when we talk about'."
-      },
-      {
-        "answer": "habit",
-        "distractors": [
-          "habitat",
-          "rabbit",
-          "inhabit",
-          "orbit"
-        ],
-        "why": "'The bad habit of doing something' means something we often do wrongly."
-      },
-      {
-        "answer": "forgetting",
-        "distractors": [
-          "forget",
-          "forgot",
-          "forgiving",
-          "forgotten"
-        ],
-        "why": "'Focusing ... and forgetting' are parallel -ing forms after 'habit of'."
-      },
-      {
-        "answer": "speeding",
-        "distractors": [
-          "speed",
-          "spending",
-          "spreading",
-          "sped"
-        ],
-        "why": "'Speeding up' recycling contrasts with 'slowing down' emissions; both are -ing forms."
-      },
-      {
-        "answer": "to",
-        "occurrence": 2,
-        "distractors": [
-          "at",
-          "by",
-          "with",
-          "of"
-        ],
-        "why": "'Alternatives to' something is the usual pattern."
-      },
-      {
-        "answer": "its",
-        "distractors": [
-          "it's",
-          "it",
-          "itself",
-          "his"
-        ],
-        "why": "The possessive 'its' refers to the Panel's report; 'it's' means 'it is'."
-      },
-      {
-        "answer": "now",
-        "distractors": [
-          "know",
-          "new",
-          "nor",
-          "snow"
-        ],
-        "why": "'Is now measured' means at the present time."
-      },
-      {
-        "answer": "control",
-        "distractors": [
-          "controlled",
-          "contrast",
-          "contract",
-          "concert"
-        ],
-        "why": "'Out of control' is a fixed phrase meaning impossible to manage."
-      }
+  "titleDistractors": [
+   "The Spread of Early Farming",
+   "How Primates Communicate",
+   "Tools and Brains: Homo habilis, Homo ergaster, and Homo erectus"
+  ],
+  "titleWhy": "The passage describes Paranthropus robustus, an early human relative (a hominin), not apes, monkeys or Homo species."
+ },
+ {
+  "id": "ir-ose-wnl-nigerian-low-tech-adv",
+  "sourceId": "ose-wnl-nigerian-low-tech-adv",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "advanced",
+  "title": "Focusing on Climate Change Solutions",
+  "titleWritten": true,
+  "passage": "When it comes to climate change, we have the bad habit of focusing on the first part of the story, the part about the problem, and forgetting the second part about the many available solutions. These solutions are speeding up recycling, slowing down emissions and providing sustainable alternatives to plastic, air conditioning, smartphones and fast fashion.\n\nThe Intergovernmental Panel on Climate Change recently gathered in Copenhagen to present its latest report on the impacts and pace of climate change. Climate change is now measured on all continents and our efforts to lower emissions must be intensified to avoid it escalating out of control. Along with outlining the risks and challenges, Copenhagen also embraced and focused on the solutions.\n\nIn the spirit of focusing on what can be done, Sustainia Award, chaired by Arnold Schwarzenegger, celebrated ten leading sustainability solutions deployed in 84 countries. From food to fashion, energy to transportation, education to health, the awards showcased an alternative to the grim-future scenarios we are so often presented with and made sustainability tangible to the innovators, investors, consumers and policy makers across sectors and regions.",
+  "sentencesPartEndsAfter": "Climate change is now measured on all continents and our efforts to lower emissions must be intensified to avoid it escalating out of control.",
+  "blanks": [
+   {
+    "answer": "comes",
+    "distractors": [
+     "came",
+     "coming",
+     "goes",
+     "becomes"
     ],
-    "missingSentence": "Along with outlining the risks and challenges, Copenhagen also embraced and focused on the solutions.",
-    "missingDistractors": [
-      "The increase in temperature causes climate change, which is a change in average worldwide or regional weather patterns.",
-      "This increase in greenhouse gases heats the earth.",
-      "Here are three of the key trends that experts predict will shape the transportation industry over the coming years."
+    "why": "'When it comes to' is a fixed phrase meaning 'when we talk about'."
+   },
+   {
+    "answer": "habit",
+    "distractors": [
+     "habitat",
+     "rabbit",
+     "inhabit",
+     "orbit"
     ],
-    "missingWhy": "It moves from risks to solutions, which the next sentence continues with 'In the spirit of focusing on what can be done'.",
-    "highlights": [
-      {
-        "question": "Why did the climate change panel meet in Copenhagen?",
-        "answer": "to present its latest report on the impacts and pace of climate change"
-      },
-      {
-        "question": "What did the Sustainia Award celebrate?",
-        "answer": "ten leading sustainability solutions deployed in 84 countries"
-      }
+    "why": "'The bad habit of doing something' means something we often do wrongly."
+   },
+   {
+    "answer": "forgetting",
+    "distractors": [
+     "forgets",
+     "forgot",
+     "forgiving",
+     "forgotten"
     ],
-    "idea": {
-      "answer": "People often talk about the problems of climate change but forget its many solutions.",
-      "distractors": [
-        "Coal will soon replace oil as the world's biggest source of energy.",
-        "Reducing food waste is the most important way to stop climate change.",
-        "Climate change has so far been measured on only a few continents."
-      ],
-      "why": "The first sentence says we focus on the problem and forget the many available solutions."
-    },
-    "titleDistractors": [
-      "Coal to challenge oil",
-      "Removing Harmful Greenhouse Gases from the Air Using Energy from Plants",
-      "Still no flying cars"
+    "why": "'Focusing ... and forgetting' are parallel -ing forms after 'habit of'."
+   },
+   {
+    "answer": "speeding",
+    "distractors": [
+     "speed",
+     "spending",
+     "spreading",
+     "sped"
     ],
-    "titleWhy": "The passage is about paying attention to solutions to climate change, not only to its problems."
-  }
+    "why": "'Speeding up' recycling contrasts with 'slowing down' emissions; both are -ing forms."
+   },
+   {
+    "answer": "to",
+    "occurrence": 2,
+    "distractors": [
+     "at",
+     "by",
+     "with",
+     "of"
+    ],
+    "why": "'Alternatives to' something is the usual pattern."
+   },
+   {
+    "answer": "its",
+    "distractors": [
+     "it's",
+     "it",
+     "itself",
+     "his"
+    ],
+    "why": "The possessive 'its' refers to the Panel's report; 'it's' means 'it is'."
+   },
+   {
+    "answer": "now",
+    "distractors": [
+     "know",
+     "new",
+     "nor",
+     "snow"
+    ],
+    "why": "'Is now measured' means at the present time."
+   },
+   {
+    "answer": "control",
+    "distractors": [
+     "controlled",
+     "contrast",
+     "contract",
+     "concert"
+    ],
+    "why": "'Out of control' is a fixed phrase meaning impossible to manage."
+   }
+  ],
+  "missingSentence": "Along with outlining the risks and challenges, Copenhagen also embraced and focused on the solutions.",
+  "missingDistractors": [
+   "The increase in temperature causes climate change, which is a change in average worldwide or regional weather patterns.",
+   "This increase in greenhouse gases heats the earth.",
+   "Here are three of the key trends that experts predict will shape the transportation industry over the coming years."
+  ],
+  "missingWhy": "It moves from risks to solutions, which the next sentence continues with 'In the spirit of focusing on what can be done'.",
+  "highlights": [
+   {
+    "question": "Why did the climate change panel meet in Copenhagen?",
+    "answer": "to present its latest report on the impacts and pace of climate change"
+   },
+   {
+    "question": "What did the Sustainia Award celebrate?",
+    "answer": "ten leading sustainability solutions deployed in 84 countries"
+   }
+  ],
+  "idea": {
+   "answer": "People often talk about the problems of climate change but forget its many solutions.",
+   "distractors": [
+    "Coal will soon replace oil as the world's biggest source of energy.",
+    "Reducing food waste is the most important way to stop climate change.",
+    "Climate change has so far been measured on only a few continents."
+   ],
+   "why": "The first sentence says we focus on the problem and forget the many available solutions."
+  },
+  "titleDistractors": [
+   "Coal to challenge oil",
+   "Removing Harmful Greenhouse Gases from the Air Using Energy from Plants",
+   "Still no flying cars"
+  ],
+  "titleWhy": "The passage is about paying attention to solutions to climate change, not only to its problems."
+ }
 ]
