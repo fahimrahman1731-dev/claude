@@ -1,0 +1,1369 @@
+[
+ {
+  "id": "ir-clear-2047",
+  "sourceId": "clear-2047",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "The Process of Becoming a “Spider-Man”",
+  "passage": "You probably know of many animals in which the males and females look very different. Male lions, for example, have beautiful manes, while lioness do not. In birds, males tend to be beautifully colored, while the females are not—just think of ducks, chicken, or peacocks. But do you know how to distinguish spider-men and -women? Usually, female spiders are bigger, but only if they are well-fed. Females can also be a different color than the males of their species, but this is not true for all species. You can use another really safe trick to identify a male spider. In front of their four walking legs, both spider males and females have another pair of appendages, the pedipalps. The pedipalps are used for many of the spider skills explained above, like feeding, sensing, catching prey, and mating. And exactly on the tip of these pedipalps only adult male spiders have a specialized organ, which looks like boxing gloves.",
+  "sentencesPartEndsAfter": "Females can also be a different color than the males of their species, but this is not true for all species.",
+  "blanks": [
+   {
+    "answer": "animals",
+    "distractors": [
+     "animal",
+     "rocks",
+     "tools",
+     "numbers"
+    ],
+    "why": "'Many' needs a plural noun, and lions, birds and spiders are the animals the passage goes on to describe."
+   },
+   {
+    "answer": "for",
+    "distractors": [
+     "to",
+     "by",
+     "at",
+     "of"
+    ],
+    "why": "'For example' is a fixed phrase that introduces an example."
+   },
+   {
+    "answer": "tend",
+    "distractors": [
+     "tends",
+     "tender",
+     "forget",
+     "refuse"
+    ],
+    "why": "'Tend to be' means 'are usually', and the plural subject 'males' takes 'tend', not 'tends'."
+   },
+   {
+    "answer": "are",
+    "distractors": [
+     "is",
+     "be",
+     "was",
+     "being"
+    ],
+    "why": "The plural subject 'the females' needs 'are' ('the females are not beautifully colored')."
+   },
+   {
+    "answer": "how",
+    "distractors": [
+     "why",
+     "what",
+     "whose",
+     "who"
+    ],
+    "why": "'Know how to' + verb means to know the way to do something."
+   },
+   {
+    "answer": "bigger",
+    "distractors": [
+     "louder",
+     "kinder",
+     "richer",
+     "wiser"
+    ],
+    "why": "The sentence compares body size: a spider gets bigger only if it eats well."
+   },
+   {
+    "answer": "color",
+    "distractors": [
+     "colors",
+     "price",
+     "holiday",
+     "colorful"
+    ],
+    "why": "'A different color' needs a singular noun and continues the idea of colorful males and plain females."
+   },
+   {
+    "answer": "true",
+    "distractors": [
+     "truth",
+     "truly",
+     "ready",
+     "hungry"
+    ],
+    "why": "'This is not true for all species' means the statement does not apply to every species."
+   }
+  ],
+  "missingSentence": "In front of their four walking legs, both spider males and females have another pair of appendages, the pedipalps.",
+  "missingDistractors": [
+   "Its abdomen is shaped like a sphere and has an hourglass mark on the bottom.",
+   "Males usually have wings, but females are most likely wingless.",
+   "Females are usually about 1-1/2 inches long including their leg span."
+  ],
+  "missingWhy": "It introduces 'the pedipalps', which the next sentence goes on to describe, as part of the 'safe trick' for spotting a male spider.",
+  "highlights": [
+   {
+    "question": "Under what condition are female spiders usually larger than the males?",
+    "answer": "only if they are well-fed"
+   },
+   {
+    "question": "What does the special organ of adult male spiders look like?",
+    "answer": "looks like boxing gloves"
+   }
+  ],
+  "idea": {
+   "answer": "Adult male spiders can be recognized by a special organ at the tips of their pedipalps.",
+   "distractors": [
+    "People who are afraid of spiders usually imagine them to be bigger than they really are.",
+    "Female spiders are always a different color from the males of their species.",
+    "Male spiders use their pedipalps only for walking, never for catching prey."
+   ],
+   "why": "The last sentence says only adult male spiders have a specialized organ on the tip of their pedipalps, which is the 'really safe trick'."
+  },
+  "titleDistractors": [
+   "Itsy Bitsy Spider? It Depends…",
+   "Diversity of Tropical Spiders",
+   "Bugs/Black Widow"
+  ],
+  "titleWhy": "The whole passage is about how to tell male spiders ('spider-men') apart from female spiders."
+ },
+ {
+  "id": "ir-clear-1926",
+  "sourceId": "clear-1926",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "Stay safe at the beach!",
+  "passage": "When going to the beach, find out which ones have lifeguards. Always try to visit beaches that have lifeguards watching the swimmers. The lifeguards on duty will put red and yellow flags on the beach to show you where it is safe to swim.\n\nMany people find it hard to see a rip current in the sea. Rip currents are like fast-flowing rivers that can pull even strong swimmers away from the beach.\n\nThis is why it is better to swim between the lifeguard flags.\n\nIf you get pulled out by a rip current, try not to panic. Try to swim to the left or to the right of the current's flow. Don't try to fight the current or to swim against the current. That will make you tired and more scared.\n\nTo be safe when you visit the beach, you should always listen to the lifeguards. And make sure that you stay between the red and yellow flags on the beach. The flags show you where the currents are safe.",
+  "sentencesPartEndsAfter": "This is why it is better to swim between the lifeguard flags.",
+  "blanks": [
+   {
+    "answer": "which",
+    "distractors": [
+     "whose",
+     "who",
+     "whom",
+     "where"
+    ],
+    "why": "'Find out which ones' asks you to choose among the beaches; 'which' is used for things."
+   },
+   {
+    "answer": "visit",
+    "distractors": [
+     "visitor",
+     "visited",
+     "build",
+     "forget"
+    ],
+    "why": "After 'try to' we need a base verb, and people visit beaches."
+   },
+   {
+    "answer": "flags",
+    "distractors": [
+     "songs",
+     "clouds",
+     "prices",
+     "ideas"
+    ],
+    "why": "Lifeguards put red and yellow flags on the beach; the passage later talks about swimming 'between the lifeguard flags'."
+   },
+   {
+    "answer": "hard",
+    "distractors": [
+     "hardly",
+     "tall",
+     "hungry",
+     "early"
+    ],
+    "why": "'Find it hard to' + verb means it is difficult to do; 'hardly' is an adverb and does not fit here."
+   },
+   {
+    "answer": "rivers",
+    "distractors": [
+     "river",
+     "mountains",
+     "stones",
+     "bridges"
+    ],
+    "why": "Rivers flow, so 'fast-flowing rivers' is a natural comparison, and the plural matches 'currents'."
+   },
+   {
+    "answer": "pull",
+    "distractors": [
+     "pulls",
+     "pulled",
+     "feed",
+     "teach"
+    ],
+    "why": "After 'can' we need a base verb, and a strong current can pull a swimmer away."
+   },
+   {
+    "answer": "why",
+    "distractors": [
+     "who",
+     "whose",
+     "which",
+     "whom"
+    ],
+    "why": "'This is why' introduces the result of the danger described before."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "during",
+     "without",
+     "since",
+     "beneath"
+    ],
+    "why": "You swim between two flags; the passage later says 'stay between the red and yellow flags'."
+   }
+  ],
+  "missingSentence": "Don't try to fight the current or to swim against the current.",
+  "missingDistractors": [
+   "Throw something they can hold on to and use to stay above the water.",
+   "If the person who needs help is too far away from you to reach with a stick, you can throw something that floats.",
+   "The camper vans bring windsurfers and kitesurfers who are attracted by strong winds in the area."
+  ],
+  "missingWhy": "'That will make you tired' in the next sentence refers to fighting or swimming against the current.",
+  "highlights": [
+   {
+    "question": "Why do the lifeguards place red and yellow flags on the beach?",
+    "answer": "to show you where it is safe to swim"
+   },
+   {
+    "question": "In which direction should you swim to get out of a rip current?",
+    "answer": "to the left or to the right of the current's flow"
+   }
+  ],
+  "idea": {
+   "answer": "Swimming between the lifeguards' red and yellow flags is the safest way to avoid rip currents.",
+   "distractors": [
+    "If someone is in trouble in the water, you should jump in and pull them out.",
+    "Rip currents are easy to see because the water in them is a different color.",
+    "Strong swimmers do not need to worry about rip currents at the beach."
+   ],
+   "why": "The passage says it is better to swim between the lifeguard flags because the flags show where the currents are safe."
+  },
+  "titleDistractors": [
+   "How to help someone in water",
+   "Spain",
+   "Electric current"
+  ],
+  "titleWhy": "The passage gives advice on staying safe while swimming at the beach: choose beaches with lifeguards, swim between the flags and know how to escape a rip current."
+ },
+ {
+  "id": "ir-clear-2231",
+  "sourceId": "clear-2231",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "advanced",
+  "title": "Detecting Ghostlike Neutrinos: Tiny Messengers From the Universe",
+  "passage": "Neutrinos are very light particles with no electric charge. They are emitted when unstable atomic nuclei decay. Such radioactive decay happens all around us. Minerals in rocks and even potassium in bananas decay to produce neutrinos. But far more neutrinos come from the nuclear reactions in the sun than from any other source.\n\nNo matter what their source, neutrinos are completely harmless because they do not stick together or interact with much of anything. They stream from the sun and outer space and pass right through ordinary matter—even our own bodies and Earth itself—without us ever knowing. In that way, they seem a bit like ghosts—there, and yet invisible. But because neutrinos carry information about what is happening inside the hearts of stars and galaxies, scientists want to know a lot more about them. Neutrinos may even help us understand what was going on when our universe first formed nearly 14 billion years ago!",
+  "sentencesPartEndsAfter": "No matter what their source, neutrinos are completely harmless because they do not stick together or interact with much of anything.",
+  "blanks": [
+   {
+    "answer": "light",
+    "distractors": [
+     "lightly",
+     "lighten",
+     "polite",
+     "hungry"
+    ],
+    "why": "An adjective is needed before 'particles', and 'very light' describes how little they weigh."
+   },
+   {
+    "answer": "when",
+    "distractors": [
+     "what",
+     "who",
+     "whose",
+     "than"
+    ],
+    "why": "'When' tells us at what moment neutrinos are given off: when nuclei decay."
+   },
+   {
+    "answer": "decay",
+    "distractors": [
+     "decays",
+     "decaying",
+     "laugh",
+     "sleep"
+    ],
+    "why": "The plural subject 'nuclei' needs 'decay', and the next sentence repeats the idea with 'Such radioactive decay'."
+   },
+   {
+    "answer": "around",
+    "distractors": [
+     "between",
+     "into",
+     "beside",
+     "until"
+    ],
+    "why": "'All around us' means everywhere near us."
+   },
+   {
+    "answer": "produce",
+    "distractors": [
+     "product",
+     "production",
+     "forget",
+     "borrow"
+    ],
+    "why": "After 'to' we need a base verb, and decay produces (makes) neutrinos."
+   },
+   {
+    "answer": "than",
+    "distractors": [
+     "then",
+     "that",
+     "as",
+     "so"
+    ],
+    "why": "'Far more ... than' compares the sun with all other sources."
+   },
+   {
+    "answer": "matter",
+    "distractors": [
+     "problem",
+     "question",
+     "material",
+     "issue"
+    ],
+    "why": "'No matter what' is a fixed phrase meaning 'whatever'."
+   },
+   {
+    "answer": "harmless",
+    "distractors": [
+     "harm",
+     "harmlessly",
+     "hungry",
+     "famous"
+    ],
+    "why": "An adjective is needed after 'completely', and the reason given (they do not interact with anything) shows they cause no harm."
+   }
+  ],
+  "missingSentence": "They stream from the sun and outer space and pass right through ordinary matter—even our own bodies and Earth itself—without us ever knowing.",
+  "missingDistractors": [
+   "The process of radioactive decay involves the emission of particles such as electrons, or of radiation in the form of gamma rays.",
+   "Every atom has in its center a very small nucleus.",
+   "For any one radioactive nucleus, it is not possible to predict when the decay process will happen."
+  ],
+  "missingWhy": "It says neutrinos pass through everything without us knowing, which the next sentence compares to ghosts with 'In that way'.",
+  "highlights": [
+   {
+    "question": "Where do most neutrinos come from?",
+    "answer": "the nuclear reactions in the sun"
+   },
+   {
+    "question": "Why do scientists want to learn more about neutrinos?",
+    "answer": "neutrinos carry information about what is happening inside the hearts of stars and galaxies"
+   }
+  ],
+  "idea": {
+   "answer": "Neutrinos pass through ordinary matter, including our bodies, without causing any harm.",
+   "distractors": [
+    "Neutrinos have a strong electric charge, so scientists can see them easily.",
+    "Most of the neutrinos around us come from bananas and other foods.",
+    "An invisible kind of matter makes up about a quarter of the universe."
+   ],
+   "why": "The passage says neutrinos are completely harmless and pass right through our bodies and Earth without us knowing."
+  },
+  "titleDistractors": [
+   "Dark matter",
+   "Radioactive Rocks",
+   "Nuclear energy"
+  ],
+  "titleWhy": "The whole passage is about neutrinos: where they come from, why they are like ghosts and why scientists want to study them."
+ },
+ {
+  "id": "ir-clear-2386",
+  "sourceId": "clear-2386",
+  "genre": "expository",
+  "topic": "history",
+  "difficulty": "advanced",
+  "title": "Socrates",
+  "passage": "As Socrates did not write down any of his teachings, secondary sources provide the only information on his life and thought. The sometimes contradictory nature of these sources is known as the Socratic problem, or the Socratic question.\n\nPlato and Xenophon's dialogues provide the main source of information on Socrates's life and thought. These writings are the Sokratikoi logoi, or Socratic dialogues, which consist of reports of conversations apparently involving Socrates.\n\nAs for discovering the real-life Socrates, the difficulty is that ancient sources are mostly philosophical or dramatic texts, apart from Xenophon. There are no straightforward histories, contemporary with Socrates, that dealt with his own time and place. A corollary of this is that sources that do mention Socrates do not necessarily claim to be historically accurate, and are often partisan. For instance, those who prosecuted and convicted Socrates have left no testament. Historians, therefore, face the challenge of reconciling the various evidence from the extant texts in order to attempt an accurate and consistent account of Socrates's life and work. The result of such an effort is not necessarily realistic, even if consistent.",
+  "sentencesPartEndsAfter": "As for discovering the real-life Socrates, the difficulty is that ancient sources are mostly philosophical or dramatic texts, apart from Xenophon.",
+  "blanks": [
+   {
+    "answer": "write",
+    "distractors": [
+     "wrote",
+     "written",
+     "sit",
+     "fall"
+    ],
+    "why": "After 'did not' we need a base verb, and 'write down his teachings' means put them on paper."
+   },
+   {
+    "answer": "sources",
+    "distractors": [
+     "source",
+     "schools",
+     "colors",
+     "roads"
+    ],
+    "why": "'Secondary sources' are writings by other people; the plural matches the verb 'provide'."
+   },
+   {
+    "answer": "these",
+    "distractors": [
+     "this",
+     "that",
+     "a",
+     "an"
+    ],
+    "why": "'Sources' is plural, so it needs 'these', which points back to the sources just mentioned."
+   },
+   {
+    "answer": "known",
+    "distractors": [
+     "knew",
+     "knowing",
+     "born",
+     "sold"
+    ],
+    "why": "'Is known as' gives the name of something, here 'the Socratic problem'."
+   },
+   {
+    "answer": "information",
+    "occurrence": 2,
+    "distractors": [
+     "inform",
+     "informative",
+     "furniture",
+     "weather"
+    ],
+    "why": "'A source of information' is a common phrase, and a noun is needed after 'of'."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "whose",
+     "what",
+     "whom"
+    ],
+    "why": "'Which' starts a clause about things (the dialogues); 'who' is only for people."
+   },
+   {
+    "answer": "for",
+    "distractors": [
+     "to",
+     "by",
+     "of",
+     "with"
+    ],
+    "why": "'As for' is a fixed phrase meaning 'when it comes to'."
+   },
+   {
+    "answer": "difficulty",
+    "distractors": [
+     "difficult",
+     "difficulties",
+     "kitchen",
+     "holiday"
+    ],
+    "why": "A singular noun is needed after 'the' and before 'is'; the sentence explains what makes finding the real Socrates hard."
+   }
+  ],
+  "missingSentence": "Historians, therefore, face the challenge of reconciling the various evidence from the extant texts in order to attempt an accurate and consistent account of Socrates's life and work.",
+  "missingDistractors": [
+   "Many thought Socrates was one of the sophists.",
+   "He wanted to base values on reason instead of on unchallenged traditional beliefs.",
+   "Primary sources, when we have them, are considered more valuable than other sources because they are as close in time as we can get to the events being studied."
+  ],
+  "missingWhy": "'Therefore' draws a conclusion from the problems with the sources, and 'such an effort' in the last sentence refers to this attempt to build an accurate account.",
+  "highlights": [
+   {
+    "question": "What is the conflicting nature of the sources about Socrates called?",
+    "answer": "the Socratic problem, or the Socratic question"
+   },
+   {
+    "question": "What kind of writing about Socrates's own time and place does not exist?",
+    "answer": "straightforward histories, contemporary with Socrates"
+   }
+  ],
+  "idea": {
+   "answer": "Because Socrates wrote nothing himself, we can learn about him only through other people's writings.",
+   "distractors": [
+    "Socrates wrote many books about his life that historians still read today.",
+    "Primary sources are more useful than other sources because they come from the time being studied.",
+    "Historians agree that the ancient sources give an accurate picture of Socrates's life."
+   ],
+   "why": "The first sentence says Socrates did not write down his teachings, so secondary sources provide the only information on his life."
+  },
+  "titleDistractors": [
+   "Primary Sources",
+   "The Classical “Golden Age”",
+   "Hidden in History"
+  ],
+  "titleWhy": "Every sentence is about Socrates and the problem of learning about his life from other people's writings."
+ },
+ {
+  "id": "ir-clear-3085",
+  "sourceId": "clear-3085",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "The boy and the jackal",
+  "passage": "One day Jackal felt sick. He tried drinking water, but that made his stomach swollen. He tried eating grass but still his stomach hurt. Jackal decided that only the medicine of man would help him so he dragged himself off to the clinic in the town. \"Auwwwh\" said the nurse when she saw the bedraggled jackal, \"this place is for sick people, not animals. Go away!\" Now Jackal was a clever animal, so sick as he was, he made a plan. He asked a boy called Ernst who was sitting outside the clinic, to help him by fetching the medicine from the nurse. \"If you do this for me, I will give you a fat, fresh bird for you cooking pot, everyday.\" Ernst was hungry and anyway, he felt sorry for the sick jackal, with his drooping whiskers and his tail hanging like a rag, so he went in and got the medicine and gave it to the jackal. Jackal licked up all the medicine at once and immediately his ears stood up and his tail lifted.",
+  "sentencesPartEndsAfter": "Now Jackal was a clever animal, so sick as he was, he made a plan.",
+  "blanks": [
+   {
+    "answer": "felt",
+    "distractors": [
+     "feel",
+     "feeling",
+     "ate",
+     "sang"
+    ],
+    "why": "The story is in the past tense, and 'felt sick' describes how Jackal's body felt."
+   },
+   {
+    "answer": "but",
+    "distractors": [
+     "or",
+     "if",
+     "than",
+     "unless"
+    ],
+    "why": "'But' shows that drinking water did not help as he hoped."
+   },
+   {
+    "answer": "hurt",
+    "distractors": [
+     "hurts",
+     "hurting",
+     "smiled",
+     "danced"
+    ],
+    "why": "The story is in the past, and a sick stomach hurts ('hurt' is also the past form)."
+   },
+   {
+    "answer": "medicine",
+    "distractors": [
+     "medical",
+     "furniture",
+     "weather",
+     "shadow"
+    ],
+    "why": "A sick animal needs medicine, and a noun is needed after 'the'; he goes to a clinic to get it."
+   },
+   {
+    "answer": "so",
+    "distractors": [
+     "although",
+     "unless",
+     "than",
+     "whether"
+    ],
+    "why": "'So' shows the result: because only man's medicine could help, he went to the clinic."
+   },
+   {
+    "answer": "himself",
+    "distractors": [
+     "herself",
+     "itself",
+     "themselves",
+     "myself"
+    ],
+    "why": "The subject is 'he', so the reflexive pronoun is 'himself'."
+   },
+   {
+    "answer": "people",
+    "distractors": [
+     "chairs",
+     "rivers",
+     "colors",
+     "roads"
+    ],
+    "why": "A clinic is for sick people, and the contrast 'not animals' shows the missing word is about humans."
+   },
+   {
+    "answer": "made",
+    "occurrence": 2,
+    "distractors": [
+     "did",
+     "make",
+     "took",
+     "drank"
+    ],
+    "why": "We say 'make a plan' (not 'do a plan'), and the story needs the past form 'made'."
+   }
+  ],
+  "missingSentence": "He asked a boy called Ernst who was sitting outside the clinic, to help him by fetching the medicine from the nurse.",
+  "missingDistractors": [
+   "He spotted a bunch of juicy ripe grapes hanging from a high branch.",
+   "He jumped up and went searching for food.",
+   "He went closer and closer to the rock."
+  ],
+  "missingWhy": "It explains Jackal's plan, and 'this' in the next sentence ('If you do this for me') refers to fetching the medicine.",
+  "highlights": [
+   {
+    "question": "Why did the nurse tell Jackal to go away?",
+    "answer": "this place is for sick people, not animals"
+   },
+   {
+    "question": "How did Jackal's body change after he licked up the medicine?",
+    "answer": "his ears stood up and his tail lifted"
+   }
+  ],
+  "idea": {
+   "answer": "After the nurse refused to help him, Jackal got a boy to fetch the medicine for him.",
+   "distractors": [
+    "Jackal jumped as high as he could to reach a bunch of ripe grapes.",
+    "The nurse gave Jackal the medicine because she felt sorry for him.",
+    "Ernst refused to help Jackal because he was afraid of wild animals."
+   ],
+   "why": "The nurse sends Jackal away, so he asks Ernst to fetch the medicine, and Ernst brings it to him."
+  },
+  "titleDistractors": [
+   "Hungry Jackal and the sour grapes",
+   "Sly Jackal tricks the silly Donkey",
+   "Jackal and the sun"
+  ],
+  "titleWhy": "The story is about Jackal and the boy, Ernst, who helps him get medicine from the clinic."
+ },
+ {
+  "id": "ir-clear-2649",
+  "sourceId": "clear-2649",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Super Mummy and Super Super!",
+  "passage": "We have fun with children who come to the shop with their parents. Sometimes, mother has to serve as referee as well as help customers. I think that she has superpowers! When we become too noisy, mother says, \"Now sit quietly and watch TV.\" She always adds, \"But only for 30 minutes, while we take a break!\" If we don't have schoolwork, sometimes mother asks me or my older sister to help her. I am not always ready to help. But I do it because I know she works so hard. As we walk home from the shop with the sun setting, we talk about our day. We have to hurry to keep up with her, but we love walking and talking with mother. She makes sure that we do homework and have time to play. She makes sure that we eat vegetables and fruits, and drink water. When we are sick, she cares for us.",
+  "sentencesPartEndsAfter": "If we don't have schoolwork, sometimes mother asks me or my older sister to help her.",
+  "blanks": [
+   {
+    "answer": "fun",
+    "distractors": [
+     "funny",
+     "joyful",
+     "rain",
+     "dust"
+    ],
+    "why": "'Have fun' is a fixed phrase meaning to enjoy yourself; 'funny' is an adjective."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whose",
+     "whom",
+     "what"
+    ],
+    "why": "'Who' starts a clause about people (the children) and is the subject of 'come'."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they",
+     "them",
+     "its"
+    ],
+    "why": "A possessive word is needed before 'parents', and 'children' is plural, so 'their'."
+   },
+   {
+    "answer": "well",
+    "distractors": [
+     "good",
+     "much",
+     "soon",
+     "far"
+    ],
+    "why": "'As well as' is a fixed phrase meaning 'and also'."
+   },
+   {
+    "answer": "customers",
+    "distractors": [
+     "customs",
+     "costumes",
+     "clouds",
+     "rivers"
+    ],
+    "why": "In a shop, mother helps customers, the people who buy things."
+   },
+   {
+    "answer": "watch",
+    "distractors": [
+     "look",
+     "watches",
+     "watching",
+     "cook"
+    ],
+    "why": "We say 'watch TV', and after 'sit quietly and' we need another base verb."
+   },
+   {
+    "answer": "break",
+    "distractors": [
+     "broken",
+     "breaking",
+     "bridge",
+     "ladder"
+    ],
+    "why": "'Take a break' means to stop working and rest for a short time."
+   },
+   {
+    "answer": "asks",
+    "distractors": [
+     "ask",
+     "asking",
+     "lets",
+     "hopes"
+    ],
+    "why": "'Ask someone to do something' is the right pattern, and 'mother' needs the -s form."
+   }
+  ],
+  "missingSentence": "But I do it because I know she works so hard.",
+  "missingDistractors": [
+   "Mother Hen is happy with her lovely chicks.",
+   "She will take her chicks to the fair.",
+   "She was worried and was going to search for Baby Mosquito."
+  ],
+  "missingWhy": "'But I do it' answers the sentence before: the child is not always ready to help, but helps because mother works so hard.",
+  "highlights": [
+   {
+    "question": "What does mother tell the children to do when they are too loud?",
+    "answer": "Now sit quietly and watch TV"
+   },
+   {
+    "question": "What do the children and mother do as they walk home from the shop?",
+    "answer": "we talk about our day"
+   }
+  ],
+  "idea": {
+   "answer": "Even though mother works hard at the shop, she makes sure her children are well looked after.",
+   "distractors": [
+    "Mother leaves the children at home alone when she goes to work at the shop.",
+    "The children are allowed to watch TV for as long as they like.",
+    "Mother takes her children to the fair every evening after the shop closes."
+   ],
+   "why": "The child says mother works so hard, yet she makes sure they do homework, eat well and are cared for when sick."
+  },
+  "titleDistractors": [
+   "Busy Mother Hen",
+   "Baby Mosquito",
+   "The talking bag"
+  ],
+  "titleWhy": "The child describes mother as a 'super' mum who runs the shop and still looks after the children."
+ },
+ {
+  "id": "ir-ostx-concepts-biology-m45426-7",
+  "sourceId": "ostx-concepts-biology-m45426-7",
+  "genre": "expository",
+  "topic": "biology",
+  "difficulty": "advanced",
+  "title": "Protein Structure",
+  "passage": "As discussed earlier, the shape of a protein is critical to its function. To understand how the protein gets its final shape or conformation, we need to understand the four levels of protein structure: primary, secondary, tertiary, and quaternary.\n\nThe unique sequence and number of amino acids in a polypeptide chain is its primary structure. The unique sequence for every protein is ultimately determined by the gene that encodes the protein. Any change in the gene sequence may lead to a different amino acid being added to the polypeptide chain, causing a change in protein structure and function. William Warrick Cardozo showed that sickle-cell anemia is caused by a change in protein strucure as a result of gene encoding, meaning that it is an inherited disorder. In sickle cell anemia, the hemoglobin β chain has a single amino acid substitution, causing a change in both the structure and function of the protein. What is most remarkable to consider is that a hemoglobin molecule is made up of two alpha chains and two beta chains that each consist of about 150 amino acids. The molecule, therefore, has about 600 amino acids.",
+  "sentencesPartEndsAfter": "Any change in the gene sequence may lead to a different amino acid being added to the polypeptide chain, causing a change in protein structure and function.",
+  "blanks": [
+   {
+    "answer": "shape",
+    "distractors": [
+     "shapes",
+     "shaped",
+     "price",
+     "weather"
+    ],
+    "why": "A singular noun is needed before 'of a protein is', and the next sentence talks about the protein's 'final shape'."
+   },
+   {
+    "answer": "its",
+    "distractors": [
+     "their",
+     "his",
+     "her",
+     "whose"
+    ],
+    "why": "'A protein' is a singular thing, so the possessive is 'its'."
+   },
+   {
+    "answer": "how",
+    "distractors": [
+     "what",
+     "who",
+     "whose",
+     "whom"
+    ],
+    "why": "'Understand how' asks about the way the protein gets its shape."
+   },
+   {
+    "answer": "chain",
+    "distractors": [
+     "chains",
+     "chained",
+     "garden",
+     "river"
+    ],
+    "why": "After 'a' we need a singular noun, and amino acids are joined in a 'polypeptide chain'."
+   },
+   {
+    "answer": "every",
+    "distractors": [
+     "many",
+     "both",
+     "few",
+     "several"
+    ],
+    "why": "'Every' is followed by a singular noun ('every protein'); the other words need a plural."
+   },
+   {
+    "answer": "determined",
+    "distractors": [
+     "determine",
+     "determination",
+     "forgotten",
+     "painted"
+    ],
+    "why": "'Is determined by' is a passive verb meaning 'is decided by'; the gene decides the sequence."
+   },
+   {
+    "answer": "lead",
+    "distractors": [
+     "leads",
+     "led",
+     "bring",
+     "cause"
+    ],
+    "why": "After 'may' we need a base verb, and 'lead to' means 'cause' (we cannot say 'cause to' or 'bring to' here)."
+   },
+   {
+    "answer": "added",
+    "distractors": [
+     "adding",
+     "addition",
+     "sold",
+     "borrowed"
+    ],
+    "why": "'Being added to the chain' is passive: the amino acid is put into the chain."
+   }
+  ],
+  "missingSentence": "In sickle cell anemia, the hemoglobin β chain has a single amino acid substitution, causing a change in both the structure and function of the protein.",
+  "missingDistractors": [
+   "When protein is digested, it is broken down into amino acids.",
+   "For example, proteins can function as enzymes or hormones.",
+   "Translation requires the input of an mRNA template, ribosomes, tRNAs, and various enzymatic factors."
+  ],
+  "missingWhy": "It gives details of the sickle-cell anemia named just before, and it introduces hemoglobin, which the next sentence describes.",
+  "highlights": [
+   {
+    "question": "What are the four levels of protein structure?",
+    "answer": "primary, secondary, tertiary, and quaternary"
+   },
+   {
+    "question": "What is a hemoglobin molecule made up of?",
+    "answer": "two alpha chains and two beta chains"
+   }
+  ],
+  "idea": {
+   "answer": "A change in a gene can change a protein's structure and, as a result, the way it works.",
+   "distractors": [
+    "Proteins are broken down into amino acids when the body digests them.",
+    "Sickle-cell anemia is caught from other people and is not passed down in families.",
+    "A hemoglobin molecule contains only about 150 amino acids in total."
+   ],
+   "why": "The passage says any change in the gene sequence may change the amino acids and so cause a change in protein structure and function."
+  },
+  "titleDistractors": [
+   "Human Genetics",
+   "Translation",
+   "The Protein Synthesis Machinery"
+  ],
+  "titleWhy": "The passage explains the levels of protein structure and how a change in a gene can change a protein's structure."
+ },
+ {
+  "id": "ir-ostx-introduction-sociology-3e-m90156-8",
+  "sourceId": "ostx-introduction-sociology-3e-m90156-8",
+  "genre": "expository",
+  "topic": "sociology",
+  "difficulty": "advanced",
+  "title": "Postindustrial Society",
+  "passage": "Information societies, sometimes known as postindustrial or digital societies, are a recent development. Unlike industrial societies that are rooted in the production of material goods, information societies are based on the production of information and services.\n\nDigital technology is the steam engine of information societies, and computer moguls such as Steve Jobs and Bill Gates are its John D. Rockefellers and Cornelius Vanderbilts. Since the economy of information societies is driven by knowledge and not material goods, power lies with those in charge of storing and distributing information. Members of a postindustrial society are likely to be employed as sellers of services—software programmers or business consultants, for example—instead of producers of goods. Social classes are divided by access to education, since without technical skills, people in an information society lack the means for success.",
+  "sentencesPartEndsAfter": "Digital technology is the steam engine of information societies, and computer moguls such as Steve Jobs and Bill Gates are its John D. Rockefellers and Cornelius Vanderbilts.",
+  "blanks": [
+   {
+    "answer": "known",
+    "distractors": [
+     "knew",
+     "knowing",
+     "born",
+     "sold"
+    ],
+    "why": "'Sometimes known as' gives other names for information societies."
+   },
+   {
+    "answer": "are",
+    "distractors": [
+     "is",
+     "be",
+     "being",
+     "was"
+    ],
+    "why": "The subject 'Information societies' is plural, so it needs 'are'."
+   },
+   {
+    "answer": "Unlike",
+    "distractors": [
+     "Although",
+     "Because",
+     "Since",
+     "Whether"
+    ],
+    "why": "'Unlike' + noun shows a contrast between industrial and information societies; the other words need a full clause."
+   },
+   {
+    "answer": "rooted",
+    "distractors": [
+     "root",
+     "rooting",
+     "boiled",
+     "painted"
+    ],
+    "why": "'Rooted in' means 'based on'; after 'are' we need the past participle."
+   },
+   {
+    "answer": "goods",
+    "distractors": [
+     "goodness",
+     "clouds",
+     "songs",
+     "dreams"
+    ],
+    "why": "'Material goods' are physical things that are made and sold."
+   },
+   {
+    "answer": "based",
+    "distractors": [
+     "base",
+     "basing",
+     "eaten",
+     "sung"
+    ],
+    "why": "'Are based on' is a fixed passive phrase meaning 'have as their main part'."
+   },
+   {
+    "answer": "engine",
+    "distractors": [
+     "engines",
+     "bath",
+     "iron",
+     "room"
+    ],
+    "why": "The steam engine powered industrial societies, so digital technology is compared to it; 'the' + singular noun matches 'is'."
+   },
+   {
+    "answer": "such",
+    "distractors": [
+     "so",
+     "much",
+     "very",
+     "too"
+    ],
+    "why": "'Such as' is a fixed phrase that introduces examples."
+   }
+  ],
+  "missingSentence": "Since the economy of information societies is driven by knowledge and not material goods, power lies with those in charge of storing and distributing information.",
+  "missingDistractors": [
+   "In 1782, James Watt and Matthew Boulton created a steam engine that could do the work of twelve horses by itself.",
+   "Gathering-hunting societies such as the Hadza are highly mobile and egalitarian.",
+   "Cities and craft specialization are developed from the surplus generated by intensive agriculture."
+  ],
+  "missingWhy": "It explains who has power in an economy driven by knowledge, and it leads into the next sentence about people who sell services instead of producing goods.",
+  "highlights": [
+   {
+    "question": "Unlike industrial societies, what are information societies based on?",
+    "answer": "the production of information and services"
+   },
+   {
+    "question": "What divides social classes in an information society?",
+    "answer": "access to education"
+   }
+  ],
+  "idea": {
+   "answer": "In an information society, people without technical skills find it hard to succeed.",
+   "distractors": [
+    "Information societies are based mainly on factories that produce material goods.",
+    "Most workers in a postindustrial society are employed as producers of goods.",
+    "Societies are classified by how many people live in their cities."
+   ],
+   "why": "The last sentence says that without technical skills, people in an information society lack the means for success."
+  },
+  "titleDistractors": [
+   "Industrial Society",
+   "Types of Societies",
+   "Technology Today"
+  ],
+  "titleWhy": "The whole passage describes postindustrial (information) societies: what they produce, who has power and how people work."
+ },
+ {
+  "id": "ir-ostx-world-history-volume-1-m00107-4",
+  "sourceId": "ostx-world-history-volume-1-m00107-4",
+  "genre": "expository",
+  "topic": "history",
+  "difficulty": "advanced",
+  "title": "The Era of Decline",
+  "passage": "Beginning around 1800 BCE, the centuries of trade between the Indus valley and Mesopotamia came to an end. Over the next four centuries, the cities of the Indus River valley were slowly depopulated, and the civilization declined, likely in stages. Why and how this decline occurred remains unknown. One common view is that it was related to regional climate change. Around 2000 BCE, the floodplain of the Indus River shifted dramatically, creating dry river beds where cities had been and water once flowed. Changes in the pattern of seasonal wind and rainfall, known as the monsoon in South Asia, may have caused these environmental effects. Without a secure source of water for drinking and irrigation, the cities would have suffered declines in population. Another theory suggests that centuries of environmental degradation caused by urbanization and large population growth made the land unsuitable to human populations. Still other views point to the possibility of tectonic activity that changed the course of the rivers, or even epidemic disease that decimated the population.",
+  "sentencesPartEndsAfter": "Around 2000 BCE, the floodplain of the Indus River shifted dramatically, creating dry river beds where cities had been and water once flowed.",
+  "blanks": [
+   {
+    "answer": "between",
+    "distractors": [
+     "since",
+     "during",
+     "beneath",
+     "until"
+    ],
+    "why": "'Trade between X and Y' describes buying and selling from one place to another."
+   },
+   {
+    "answer": "came",
+    "distractors": [
+     "went",
+     "made",
+     "took",
+     "gave"
+    ],
+    "why": "'Came to an end' is a fixed phrase meaning 'stopped'."
+   },
+   {
+    "answer": "were",
+    "distractors": [
+     "was",
+     "is",
+     "be",
+     "has"
+    ],
+    "why": "The plural subject 'the cities' needs 'were' in this past passive verb."
+   },
+   {
+    "answer": "declined",
+    "distractors": [
+     "decline",
+     "declining",
+     "sang",
+     "melted"
+    ],
+    "why": "The sentence is in the past, and a civilization that loses its people declines (becomes weaker)."
+   },
+   {
+    "answer": "remains",
+    "distractors": [
+     "remain",
+     "remaining",
+     "reminds",
+     "refuses"
+    ],
+    "why": "'Remains unknown' means 'is still not known'; the subject is one idea, so it takes the -s form."
+   },
+   {
+    "answer": "related",
+    "distractors": [
+     "relation",
+     "relating",
+     "borrowed",
+     "painted"
+    ],
+    "why": "'Was related to' means 'was connected with'."
+   },
+   {
+    "answer": "dramatically",
+    "distractors": [
+     "dramatic",
+     "drama",
+     "politely",
+     "happily"
+    ],
+    "why": "An adverb is needed to describe how the floodplain 'shifted': very greatly."
+   },
+   {
+    "answer": "where",
+    "distractors": [
+     "which",
+     "who",
+     "whose",
+     "what"
+    ],
+    "why": "'Where' refers to a place: the river beds were in the places where cities had been."
+   }
+  ],
+  "missingSentence": "Another theory suggests that centuries of environmental degradation caused by urbanization and large population growth made the land unsuitable to human populations.",
+  "missingDistractors": [
+   "The farmers of the Indus valley cultivated wheat and barley as well as raised cattle and sheep, as did the farmers of Mesopotamia and western Asia.",
+   "Instead, a common culture grew that was defined by urban planning, complete with advanced drainage systems, orderly streets, and distinctive bricks made in ovens.",
+   "Although the writing has not yet been deciphered, the evidence suggests they belonged to the same language system."
+  ],
+  "missingWhy": "'Another theory' adds a second explanation after the climate-change view, and the next sentence continues the list with 'Still other views'.",
+  "highlights": [
+   {
+    "question": "According to one common view, what was the decline connected to?",
+    "answer": "regional climate change"
+   },
+   {
+    "question": "Why would the cities have lost people?",
+    "answer": "Without a secure source of water for drinking and irrigation"
+   }
+  ],
+  "idea": {
+   "answer": "No one knows for sure why the Indus valley civilization declined, but there are several possible explanations.",
+   "distractors": [
+    "The Indus valley cities grew much larger after their trade with Mesopotamia ended.",
+    "The Indus valley civilization ended suddenly because of one great flood.",
+    "The people of the Indus valley were in contact with Egypt and Sumer by about 5000 BCE."
+   ],
+   "why": "The passage says why and how the decline happened remains unknown, and then lists several possible explanations."
+  },
+  "titleDistractors": [
+   "The Origins of the Indus Valley Civilization",
+   "Harappa and Mohenjo-Daro",
+   "Vedic India to the Fall of the Maurya Empire"
+  ],
+  "titleWhy": "The whole passage is about the period when the Indus valley civilization declined and the possible reasons for it."
+ },
+ {
+  "id": "ir-ostx-concepts-biology-m45475-4",
+  "sourceId": "ostx-concepts-biology-m45475-4",
+  "genre": "expository",
+  "topic": "biology",
+  "difficulty": "advanced",
+  "title": "DNA Repair",
+  "passage": "DNA polymerase can make mistakes while adding nucleotides. It edits the DNA by proofreading every newly added base. Incorrect bases are removed and replaced by the correct base, and then polymerization continues. Most mistakes are corrected during replication, although when this does not happen, the mismatch repair mechanism is employed. Mismatch repair enzymes recognize the wrongly incorporated base and excise it from the DNA, replacing it with the correct base. In yet another type of repair, nucleotide excision repair, the DNA double strand is unwound and separated, the incorrect bases are removed along with a few bases on the 5' and 3' end, and these are replaced by copying the template with the help of DNA polymerase. Nucleotide excision repair is particularly important in correcting thymine dimers, which are primarily caused by ultraviolet light. In a thymine dimer, two thymine nucleotides adjacent to each other on one strand are covalently bonded to each other rather than their complementary bases. If the dimer is not removed and repaired it will lead to a mutation. Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life.",
+  "sentencesPartEndsAfter": "In yet another type of repair, nucleotide excision repair, the DNA double strand is unwound and separated, the incorrect bases are removed along with a few bases on the 5' and 3' end, and these are replaced by copying the template with the help of DNA polymerase.",
+  "blanks": [
+   {
+    "answer": "make",
+    "distractors": [
+     "do",
+     "makes",
+     "made",
+     "take"
+    ],
+    "why": "We say 'make mistakes' (not 'do mistakes'), and after 'can' we need a base verb."
+   },
+   {
+    "answer": "edits",
+    "distractors": [
+     "edit",
+     "editor",
+     "eats",
+     "paints"
+    ],
+    "why": "The singular subject 'It' needs 'edits', and editing means checking and correcting."
+   },
+   {
+    "answer": "then",
+    "distractors": [
+     "than",
+     "them",
+     "they",
+     "there"
+    ],
+    "why": "'And then' shows what happens next, after the wrong base is replaced."
+   },
+   {
+    "answer": "during",
+    "distractors": [
+     "while",
+     "among",
+     "between",
+     "whether"
+    ],
+    "why": "'During' + noun ('during replication') means 'in the time of'."
+   },
+   {
+    "answer": "recognize",
+    "distractors": [
+     "recognizes",
+     "recognition",
+     "admire",
+     "borrow"
+    ],
+    "why": "The plural subject 'enzymes' needs 'recognize': the enzymes find the wrong base before removing it."
+   },
+   {
+    "answer": "type",
+    "distractors": [
+     "types",
+     "typed",
+     "taste",
+     "price"
+    ],
+    "why": "'Another type of' means 'another kind of', and 'another' needs a singular noun."
+   },
+   {
+    "answer": "along",
+    "distractors": [
+     "alone",
+     "across",
+     "above",
+     "until"
+    ],
+    "why": "'Along with' is a fixed phrase meaning 'together with'."
+   },
+   {
+    "answer": "help",
+    "distractors": [
+     "helpful",
+     "helping",
+     "noise",
+     "silence"
+    ],
+    "why": "'With the help of' is a fixed phrase meaning 'using' or 'helped by'."
+   }
+  ],
+  "missingSentence": "In a thymine dimer, two thymine nucleotides adjacent to each other on one strand are covalently bonded to each other rather than their complementary bases.",
+  "missingDistractors": [
+   "The replication of DNA occurs during the synthesis phase, or S phase, of the cell cycle, before the cell enters mitosis or meiosis.",
+   "Each new double strand consists of one parental strand and one new daughter strand.",
+   "Sunscreen should be reapplied every 2 h or after swimming, sweating, bathing, or using a towel."
+  ],
+  "missingWhy": "It explains what a thymine dimer is, right after thymine dimers are first named and before 'the dimer' in the next sentence.",
+  "highlights": [
+   {
+    "question": "How does DNA polymerase check the DNA for errors?",
+    "answer": "by proofreading every newly added base"
+   },
+   {
+    "question": "What mainly causes thymine dimers?",
+    "answer": "primarily caused by ultraviolet light"
+   }
+  ],
+  "idea": {
+   "answer": "Cells have several different ways to find and fix mistakes that are made when DNA is copied.",
+   "distractors": [
+    "DNA polymerase never makes mistakes when it adds new nucleotides.",
+    "Thymine dimers are harmless and never lead to mutations.",
+    "Mismatch repair enzymes add extra bases to the DNA instead of removing wrong ones."
+   ],
+   "why": "The passage describes proofreading, mismatch repair and nucleotide excision repair, which are all ways of fixing DNA mistakes."
+  },
+  "titleDistractors": [
+   "DNA Replication",
+   "Elongation",
+   "DNA Double-Helical Structure"
+  ],
+  "titleWhy": "The passage explains the different ways that mistakes in DNA are found and corrected, which is DNA repair."
+ },
+ {
+  "id": "ir-ose-wnl-planet-ele",
+  "sourceId": "ose-wnl-planet-ele",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "easy",
+  "title": "Clouds and Global Warming",
+  "titleWritten": true,
+  "passage": "A new scientiﬁc study says that global warming might make temperatures rise more than people think. The scientist who led the research said that, if emissions of greenhouse gases are not reduced, the planet will be at least 4C warmer by 2100. This is twice the level the world’s governments consider to be dangerous. The research shows that fewer clouds form as the planet warms. This means that less sunlight reﬂects back into space and this makes temperatures even higher. The way clouds affect global warming has been the biggest mystery in the study of future climate change.\n\nProfessor Steven Sherwood, at the University of New South Wales in Australia, who led the research, said that their work was new in two ways. First, it found what controls the cloud changes and, second, it did not accept the lowest estimates of future global warming; it believed the higher, more damaging estimates.",
+  "sentencesPartEndsAfter": "This means that less sunlight reﬂects back into space and this makes temperatures even higher.",
+  "blanks": [
+   {
+    "answer": "says",
+    "distractors": [
+     "say",
+     "saying",
+     "speaks",
+     "tells"
+    ],
+    "why": "'A study says that' reports what the study found; 'study' is singular, so 'says'."
+   },
+   {
+    "answer": "than",
+    "distractors": [
+     "then",
+     "that",
+     "as",
+     "so"
+    ],
+    "why": "'More than' compares two amounts: the real rise and what people think."
+   },
+   {
+    "answer": "if",
+    "distractors": [
+     "unless",
+     "whether",
+     "though",
+     "what"
+    ],
+    "why": "'If' gives the condition: the planet gets warmer if emissions are not reduced."
+   },
+   {
+    "answer": "reduced",
+    "distractors": [
+     "reduce",
+     "reduction",
+     "painted",
+     "invited"
+    ],
+    "why": "'Are not reduced' is passive, so it needs the past participle; reducing emissions means making them smaller."
+   },
+   {
+    "answer": "least",
+    "distractors": [
+     "less",
+     "little",
+     "lesser",
+     "fewest"
+    ],
+    "why": "'At least' is a fixed phrase meaning 'not less than'."
+   },
+   {
+    "answer": "dangerous",
+    "distractors": [
+     "danger",
+     "dangerously",
+     "delicious",
+     "polite"
+    ],
+    "why": "An adjective is needed after 'consider to be', and a temperature rise can be dangerous."
+   },
+   {
+    "answer": "clouds",
+    "distractors": [
+     "cloud",
+     "cloudy",
+     "chairs",
+     "songs"
+    ],
+    "why": "'Fewer' needs a plural noun, and clouds form in the sky and reflect sunlight."
+   },
+   {
+    "answer": "higher",
+    "distractors": [
+     "high",
+     "highly",
+     "taller",
+     "louder"
+    ],
+    "why": "Temperatures become 'higher' (we do not say 'taller'); 'even' before it needs a comparative."
+   }
+  ],
+  "missingSentence": "Professor Steven Sherwood, at the University of New South Wales in Australia, who led the research, said that their work was new in two ways.",
+  "missingDistractors": [
+   "Many scientists say that in the next 100–200 years, temperatures might be up to 6 degrees Celsius higher than they were before the effects of global warming were discovered.",
+   "When people use fossil fuels like coal and oil, this adds carbon dioxide to the air.",
+   "Evaporation is when water changes from liquid to gas."
+  ],
+  "missingWhy": "It says the work was new in two ways, which the last sentence then lists with 'First' and 'second'.",
+  "highlights": [
+   {
+    "question": "How much warmer could the planet be by 2100 if greenhouse gas emissions are not cut?",
+    "answer": "at least 4C warmer"
+   },
+   {
+    "question": "Which estimates of future global warming did the research believe?",
+    "answer": "the higher, more damaging estimates"
+   }
+  ],
+  "idea": {
+   "answer": "Because fewer clouds form as the Earth warms, global warming may be worse than many people expect.",
+   "distractors": [
+    "More clouds form as the planet warms, and this helps to cool the Earth down.",
+    "The new study accepted the lowest estimates of future global warming.",
+    "The world's governments believe a rise of 4C would be completely safe."
+   ],
+   "why": "The passage says fewer clouds form as the planet warms, so less sunlight is reflected and temperatures may rise more than people think."
+  },
+  "titleDistractors": [
+   "Greenhouse effect",
+   "Climate Change on Mars",
+   "Removing Harmful Greenhouse Gases from the Air Using Energy from Plants"
+  ],
+  "titleWhy": "The passage reports a study showing that fewer clouds form as the planet warms, which could make global warming worse; the original title 'Planet' is too vague."
+ }
+]

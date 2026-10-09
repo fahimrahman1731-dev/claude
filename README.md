@@ -63,7 +63,7 @@ The format follows Duolingo's own documents:
 Interactive Reading questions, in order:
 1. **Complete the Sentences.** "Select the best option for each missing word." Only the first half of the passage is shown, with 3–10 numbered blanks. Each blank has a dropdown of 5 options.
 2. **Complete the Passage.** "Select the best sentence to complete the passage." The first half comes back with the correct words filled in, then a gap, then the rest of the text. There are 4 sentence options.
-3. **Highlight the Answer**, asked twice. "Highlight text in the passage to answer the question below." Drag across the words, or on a phone tap the first word and then the last. Scored from 0 to 1 by how close the highlight is to the answer.
+3. **Highlight the Answer**, asked twice. "Highlight text in the passage to answer the question below." Drag across the words, or on a phone tap the first word and then the last (scrolling never changes the highlight). Scored from 0 to 1 by how close the highlight is to the answer. In the tallies, a highlight counts as right when each end is at most one word off and at least half of the answer is highlighted.
 4. **Identify the Idea.** "Select the idea that is expressed in the passage."
 5. **Title the Passage.** "Select the best title for the passage."
 
@@ -72,8 +72,9 @@ One timer covers all six questions. You cannot go back, and CONTINUE stays disab
 **Letter boxes.**
 - Each missing letter has its own box.
 - Typing fills a box and moves on, to the next word after the last box.
-- Backspace clears and moves back, and from the first box goes to the previous word.
-- ← → move between boxes and words, and clicking a box selects it.
+- Backspace clears and moves back, and from the first box goes to the previous word, where the next Backspace removes its last letter.
+- ← → move between boxes and words, and clicking a box (or the given letters) selects it.
+- Holding Enter down submits once; it never skips the feedback.
 - It works with phone keyboards and paste.
 - There are no hints on the question screen.
 
@@ -100,9 +101,9 @@ One timer covers all six questions. You cannot go back, and CONTINUE stays disab
 | **Apertium** English–Bengali dictionary | GPL-2.0 | Bengali meanings for added words |
 
 Filters keep the material DET-like:
-- **Sentences:** 8–22 words, stand-alone (no "This…", "However…"), no quotes, brackets, lists or acronyms.
+- **Sentences:** one sentence of 8–22 words, stand-alone (no "This…", "However…"), plain English letters, no quotes, brackets, lists or acronyms. Headings and list items are never joined to a sentence, and textbook sentences that point to a missing figure, table or formula ("shown in ___") are left out.
 - **Read and Complete texts:** 50–100 words of plain prose with no British spellings.
-- **Topics:** anything the DET's fairness review avoids is left out: violence, war, crime, drugs and alcohol, death, religion and politics.
+- **Topics:** anything the DET's fairness review avoids is left out: violence, war, crime, weapons, drugs and alcohol, sex and the body, death and serious illness, religion, race and politics.
 
 Each sentence and text keeps its source and licence, and the app shows them.
 
@@ -116,11 +117,11 @@ The full report is in [`data/generated/import-report.md`](data/generated/import-
 | --- | --- |
 | Words from the two study documents (2 of 2 sources, every section OK) | 2,590 |
 | Words deleted as unrealistic DET words, each with its reason | 11 |
-| Words added from trusted lists (NGSL, NAWL, CEFR-J A1–B2, Octanove C1) that have real sentences | 3,257 |
-| Practice words in total | 5,847 |
-| Practice sentences: real / WordNet / written for the app | 20,505 / 131 / 367 |
+| Words added from trusted lists (NGSL, NAWL, CEFR-J A1–B2, Octanove C1) that have real sentences | 3,246 |
+| Practice words in total | 5,836 |
+| Practice sentences: real / WordNet / written for the app | 20,569 / 47 / 432 |
 | Read and Complete texts (CLEAR 161, OneStopEnglish 106, OpenStax 53) | 320, with 8–16 gaps each |
-| Interactive Reading passages | see the report |
+| Interactive Reading passages (CLEAR, OneStopEnglish, OpenStax and the official research sample) | 81 |
 
 **Why words were deleted.** Official DET answer words are always kept, however rare (*jots*, *solstices*), and so are spelling traps your guide teaches (*minuscule*). A word is deleted only if one of these applies:
 - It is British-only: *kerb*, *pram*.
@@ -177,14 +178,14 @@ There are no accounts. Everything is saved in the browser's IndexedDB on the dev
 - the open session, including how far into an Interactive Reading passage you are;
 - settings and custom words.
 
-Each answer is saved in one transaction before the feedback appears, so a refresh, a closed tab or a restart loses nothing.
+Each answer is saved in one transaction before the feedback appears, and Interactive Reading choices are saved as you make them, so a refresh, a closed tab or a restart loses nothing.
 
 Limits:
 - Data stays on that device and browser.
 - Clearing site data or private browsing deletes it.
 - It holds one person per browser profile.
 
-**Settings → Your data** downloads a full JSON backup and restores it. Backups from the previous version still restore.
+**Settings → Your data** downloads a full JSON backup (format version 2) and restores it. Backups from the previous version still restore.
 
 ## Deployment
 
@@ -216,22 +217,24 @@ See the comments at the top of `server/ai-proxy.mjs`.
 
 **Functional tests** (`tests/functional/`), run on the real practice service and data:
 - the 12 required tests: mistakes and their schedule, mastery in two different sentences, persistence through a reload, timeouts, untimed mode, Practice My Mistakes, library search, 100% completion, and failed sources reported;
-- a full Interactive Reading set: shared timer, saving after each part, resuming after a refresh, scoring all six questions, partial highlight credit, the time-out case, the Mistake Bank, and "choosing never masters".
+- a full Interactive Reading set: shared timer, saving after each part, resuming after a refresh, scoring all six questions, partial highlight credit, the time-out case, the Mistake Bank (with the exact missed word), "choosing never masters", and skipping a passage that an update removed.
 
 **Unit tests** cover:
 - the clue rule (1–3 letters, or half the word);
 - the DET C-test alternation;
 - the official Interactive Reading order and wording, and its scoring;
 - the set validator;
-- the real-text filters, the sentence splitter and the deletion rules;
+- the real-text filters (topics, one sentence, headings, accented names), the sentence splitter and the deletion rules;
+- the Read and Complete gap rule around abbreviations and prices;
 - British-spelling detection;
 - how many sentences are real;
 - answer checking, backups and word-list import.
 
 **Browser tests** check:
 - the DET-style screens: one box per letter, at most 3 letters given, no hints;
-- typing, auto-advance and Backspace across words;
-- a complete Interactive Reading passage;
+- typing, auto-advance and Backspace across words, including retyping from a clicked box;
+- holding Enter submits only once;
+- a complete Interactive Reading passage, with choices kept through a refresh;
 - persistence after a refresh;
 - the countdown;
 - the phone layout.

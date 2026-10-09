@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T12:36:44.592Z",
+ "generatedAt": "2026-10-09T12:44:29.692Z",
  "sources": [
   {
    "id": "guide",
@@ -614,19 +614,19 @@
    "ostx": 53
   },
   "paragraphCandidates": 3462,
-  "interactiveSets": 70,
+  "interactiveSets": 81,
   "interactiveIssues": [],
-  "texts": 3226,
+  "texts": 3228,
   "licences": {
    "CC BY-SA 3.0 and GFDL": 202,
    "CC BY-SA 3.0": 189,
    "CC BY 4.0": 512,
    "CC BY 3.0": 12,
    "CC BY-SA": 1,
-   "CC BY-SA 4.0": 264,
-   "CC BY-NC-SA 4.0": 2045,
+   "CC BY-SA 4.0": 265,
+   "CC BY-NC-SA 4.0": 2046,
    "CC BY-NC 4.0": 1
   }
  },
- "version": "15cb1f2a3c1b"
+ "version": "b342cab09f92"
 }
