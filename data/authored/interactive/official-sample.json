@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ir-attali-2022-producers",
+    "sourceId": "attali-2022-appendix",
+    "source": {
+      "title": "Producers in an Ecosystem (example passage)",
+      "author": "Attali, Runge, LaFlair, Yancey, Goodwin, Park & von Davier",
+      "url": "https://doi.org/10.3389/frai.2022.903077",
+      "license": "CC BY 4.0",
+      "credit": "Example passage, main ideas, titles and comprehension questions from the appendix of Attali et al. (2022), “The interactive reading task: Transformer-based automatic item generation”, Frontiers in Artificial Intelligence 5:903077 (Duolingo research), CC BY 4.0. The word options were added for this app."
+    },
+    "genre": "expository",
+    "topic": "biology",
+    "difficulty": "intermediate",
+    "title": "Producers in an Ecosystem",
+    "passage": "From the largest animals to the tiniest, an ecosystem can be organized by energy into a pyramid called the energy pyramid. At the bottom of the pyramid are producers, which are organisms that make their own food, such as plants. Plants produce food by taking in carbon dioxide from the air and water from the soil. Plants use sunlight to create sugars from the carbon dioxide molecules and water molecules. The plant moves sugars through its body and assembles these sugars into long chains of molecules called polysaccharides. The polysaccharides may be used immediately, or stored for later use by the plant. A plant may store several million calories of energy in this manner, enough to live for several weeks or more without sun. Most of this energy is glucose, a sugar that animals also need to survive. The rest of the organisms in the pyramid rely on the energy that comes from producers.",
+    "sentencesPartEndsAfter": "Plants use sunlight to create sugars from the carbon dioxide molecules and water molecules.",
+    "blanks": [
+      { "answer": "organized", "distractors": ["decorated", "invited", "repaired", "promised"], "why": "An ecosystem can be organized (arranged) into a pyramid; the other verbs do not describe arranging living things by energy." },
+      { "answer": "bottom", "distractors": ["shape", "speed", "price", "noise"], "why": "“At the bottom of the pyramid” names a position in the pyramid; the other nouns are not places." },
+      { "answer": "which", "distractors": ["whose", "what", "when", "where"], "why": "“which are organisms…” adds information about “producers”; only “which” can start this clause." },
+      { "answer": "own", "distractors": ["high", "late", "true", "even"], "why": "“make their own food” is a fixed phrase: producers make food themselves." },
+      { "answer": "taking", "distractors": ["giving", "turning", "putting", "making"], "why": "Plants take in (absorb) carbon dioxide; “take in” is the phrasal verb that matches “from the air”." },
+      { "answer": "soil", "distractors": ["sky", "glass", "smoke", "paper"], "why": "Plants take water from the soil through their roots." },
+      { "answer": "sunlight", "distractors": ["money", "music", "darkness", "plastic"], "why": "Plants use sunlight (light energy) to make sugars." }
+    ],
+    "missingSentence": "The polysaccharides may be used immediately, or stored for later use by the plant.",
+    "missingDistractors": [
+      "The energy then flows from the plants to the animals that eat them.",
+      "When animals eat plants, they only use a small amount of the energy that the plants have stored.",
+      "The rest of the energy is lost as heat."
+    ],
+    "missingWhy": "The sentence before introduces polysaccharides, and the next sentence says the plant stores energy “in this manner”, which refers to storing them for later use.",
+    "highlights": [
+      { "question": "What do plants use to create energy?", "answer": "use sunlight to create sugars from the carbon dioxide molecules and water molecules" },
+      { "question": "How can a plant survive for weeks without sunlight?", "answer": "A plant may store several million calories of energy in this manner" }
+    ],
+    "idea": {
+      "answer": "Producers are at the bottom of the energy pyramid and are the source of food and energy for the other organisms in the ecosystem.",
+      "distractors": [
+        "The energy pyramid is a model that shows how energy flows from the sun to plants to animals, with most of the energy being lost as heat at each level.",
+        "The energy pyramid is a graphical representation of how energy is passed along from one organism to another in an ecosystem.",
+        "Animals at the top of the pyramid make their own food from sunlight and water."
+      ],
+      "why": "The passage explains what producers are, how they make and store food, and that the rest of the pyramid depends on them."
+    },
+    "titleDistractors": ["Energy Pyramids in Ecosystems", "Energy and the Food Chain", "How Animals Find Food"],
+    "titleWhy": "The whole passage is about producers: what they are, how they make and store energy, and why other organisms need them."
+  }
+]

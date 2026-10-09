@@ -21,6 +21,21 @@ export interface ImportReportJson {
   authoredNotInSources: string[];
   paragraphIssues: string[];
   notes: string[];
+  /** Present when the data was built with the collected real material. */
+  collected?: {
+    deleted: { word: string; reason: string }[];
+    added: { count: number; byLevel: Record<string, number>; sample: string[] };
+    contextOrigins: { collected: number; dictionary: number; authored: number };
+    wordsWithOnlyCollected: number;
+    definitionOrigins: Record<string, number>;
+    bengaliOrigins: Record<string, number>;
+    paragraphsByCorpus: Record<string, number>;
+    paragraphCandidates: number;
+    interactiveSets: number;
+    interactiveIssues: string[];
+    texts: number;
+    licences: Record<string, number>;
+  };
 }
 
 export interface Toast {

@@ -54,22 +54,35 @@ describe('extraction from the study documents', () => {
 });
 
 describe('Read and Complete gaps', () => {
-  it('never puts two gaps side by side and keeps the first and last sentences whole', () => {
+  it('follows the DET C-test rule: first and last sentences whole, alternate words damaged, never two side by side', () => {
     const byWord = new Map(vocab.words.map((w) => [w.word, w]));
+    expect(vocab.paragraphs.length).toBeGreaterThanOrEqual(200);
     for (const p of vocab.paragraphs) {
-      const firstEnd = p.text.indexOf('. ') + 1;
-      const lastStart = p.text.lastIndexOf('. ') + 1;
+      const sentences = [...p.text.matchAll(/[^.!?]+[.!?]+["”’)]?\s*/g)].map((m) => ({ start: m.index ?? 0, end: (m.index ?? 0) + m[0].length }));
+      const firstEnd = sentences[0].end;
+      const lastStart = sentences[sentences.length - 1].start;
       expect(p.gaps.length).toBeGreaterThanOrEqual(8);
-      expect(p.gaps.length).toBeLessThanOrEqual(20);
+      expect(p.gaps.length).toBeLessThanOrEqual(16);
+      expect(p.text.split(/\s+/).length).toBeLessThanOrEqual(110);
       p.gaps.forEach((g, i) => {
         expect(g.start).toBeGreaterThanOrEqual(firstEnd);
         expect(g.end).toBeLessThanOrEqual(lastStart);
         expect(p.text.slice(g.start, g.end).toLowerCase()).toBe(byWord.get(p.text.slice(g.start, g.end).toLowerCase())!.word);
-        if (i > 0) expect(/[A-Za-z]/.test(p.text.slice(p.gaps[i - 1].end, g.start))).toBe(true);
+        if (i > 0) expect(/[A-Za-z0-9]+[^A-Za-z0-9]+$/.test(p.text.slice(p.gaps[i - 1].end, g.start).trim() + ' ')).toBe(true);
       });
     }
     const again = selectGaps(vocab.paragraphs[0].text, byWord);
     expect(again.map((g) => g.start)).toEqual(vocab.paragraphs[0].gaps.map((g) => g.start));
+  });
+  it('damages the 2nd, 4th, 6th … word of the middle sentences and skips names and numbers', () => {
+    const byWord = new Map(vocab.words.map((w) => [w.word, w]));
+    const text = 'The museum opened early today. People from many towns came by bus in 1995 to see the new rooms. Maria walked with her friends through the large hall. Everyone enjoyed the visit.';
+    const gaps = selectGaps(text, byWord).map((g) => text.slice(g.start, g.end));
+    // second sentence: People(1) from(2)* many(3) towns(4)* came(5) by(6)* bus(7) in(8)* 1995(9) to(10)* …
+    expect(gaps.slice(0, 5)).toEqual(['from', 'towns', 'by', 'in', 'to']);
+    expect(gaps).not.toContain('1995');
+    expect(gaps).not.toContain('Maria');
+    expect(gaps.every((g) => !text.slice(0, text.indexOf('.') + 1).includes(` ${g} `))).toBe(true);
   });
 });
 

@@ -3,12 +3,13 @@ import { checkGap } from '../engine/answer';
 import { contextClues } from '../engine/clues';
 import { DEFAULT_SETTINGS, MODE_INFO, questionSeconds, type Settings } from '../engine/config';
 import { applyResult, mistakes, newProgress, reopen } from '../engine/progress';
+import { chooseInteractive, emptyInteractiveAnswers, interactiveQuestion, interactiveSeconds, scoreInteractive } from '../engine/interactive';
 import { inModePool, paragraphQuestion, sentenceQuestion } from '../engine/questions';
 import { chooseContext, chooseParagraph, selectNext } from '../engine/selection';
 import { spellingRules } from '../engine/spelling';
-import type { AttemptRecord, Gap, MistakeRecord, Mode, Question, ResultKind, VocabWord, WordProgress } from '../engine/types';
+import type { AttemptRecord, Gap, InteractiveAnswers, InteractiveQuestion, MistakeRecord, Mode, Question, ResultKind, SentenceMode, VocabWord, WordProgress } from '../engine/types';
 import type { VocabStore } from '../data/vocabStore';
-import { META_KEY, SETTINGS_KEY, type AppDB, type GapOutcome, type Meta, type QuestionOutcome, type SessionFocus, type SessionRecord } from '../db/db';
+import { META_KEY, SETTINGS_KEY, type AppDB, type GapOutcome, type IrPartOutcome, type Meta, type QuestionOutcome, type SessionFocus, type SessionRecord } from '../db/db';
 
 export interface ServiceDeps {
   db: AppDB;
@@ -23,6 +24,8 @@ export interface SubmitInput {
   answers: string[];
   kind: 'submit' | 'timeout' | 'skip';
   hintUsed?: boolean;
+  /** Interactive Reading: everything the student chose. */
+  interactive?: InteractiveAnswers;
 }
 
 export interface SubmitResult {
@@ -109,20 +112,21 @@ export class PracticeService {
     const settings = await this.getSettings();
     const now = this.now();
     const focus = opts.focus ?? 'normal';
-    const mode: Mode = focus !== 'normal' && opts.mode === 'read-complete' ? 'spelling' : opts.mode;
+    const mode: Mode = focus !== 'normal' && (opts.mode === 'read-complete' || opts.mode === 'interactive-reading') ? 'spelling' : opts.mode;
     const session: SessionRecord = {
       id: newId('s'),
       mode,
       focus,
       status: 'active',
       startedAt: now,
-      target: opts.target ?? (mode === 'read-complete' ? settings.paragraphsPerSession : settings.questionsPerSession),
+      target: opts.target ?? (mode === 'read-complete' ? settings.paragraphsPerSession : mode === 'interactive-reading' ? settings.interactivePerSession : settings.questionsPerSession),
       newQuota: settings.newWordsPerSession,
       reviewQuota: settings.reviewsPerSession,
       index: 0,
       newIntroduced: 0,
       reviewsServed: 0,
       paragraphIds: [],
+      interactiveIds: [],
       tally: EMPTY_TALLY(),
       streak: 0,
       bestStreak: 0,
@@ -157,11 +161,21 @@ export class PracticeService {
         if (s.mode === 'read-complete') {
           const p = chooseParagraph(this.store.paragraphs, meta.paragraphServed, progress, level, this.rng, s.paragraphIds);
           if (!p) return this.finish(s, now, 'No more paragraphs are available.');
-          const q = paragraphQuestion(p, this.store.byId);
+          const q = paragraphQuestion(p, this.store.byId, settings.clueRule);
           meta.paragraphServed[p.id] = (meta.paragraphServed[p.id] ?? 0) + 1;
           s.paragraphIds.push(p.id);
           const secs = questionSeconds(settings, 'read-complete', p.difficulty);
           s.current = { question: q, reason: 'new', startedAt: now, limitMs: secs === null ? null : secs * 1000 };
+        } else if (s.mode === 'interactive-reading') {
+          const served = (meta.interactiveServed ??= {});
+          const set = chooseInteractive(this.store.interactive, served, level, this.rng, s.interactiveIds ?? []);
+          if (!set) return this.finish(s, now, 'No more Interactive Reading passages are available.');
+          const q = interactiveQuestion(set, this.rng);
+          served[set.id] = (served[set.id] ?? 0) + 1;
+          s.interactiveIds = [...(s.interactiveIds ?? []), set.id];
+          // Timed mode uses the DET timing (7 or 8 minutes); custom and untimed follow the settings.
+          const secs = settings.timerMode === 'timed' ? interactiveSeconds(set) : questionSeconds(settings, 'interactive-reading', set.difficulty);
+          s.current = { question: q, reason: 'new', startedAt: now, limitMs: secs === null ? null : secs * 1000, interactive: emptyInteractiveAnswers(q) };
         } else {
           const pool =
             s.focus === 'words'
@@ -197,9 +211,9 @@ export class PracticeService {
             );
           }
           const ctx = chooseContext(sel.word, progress.get(sel.word.id), this.rng);
-          const displayMode =
-            s.focus !== 'normal' && s.mode === 'spelling' ? (sel.word.isSmallWord ? 'small-words' : 'spelling') : (s.mode as Exclude<Mode, 'read-complete'>);
-          const q = sentenceQuestion(sel.word, ctx, displayMode);
+          const displayMode: SentenceMode =
+            s.focus !== 'normal' && s.mode === 'spelling' ? (sel.word.isSmallWord ? 'small-words' : 'spelling') : (s.mode as SentenceMode);
+          const q = sentenceQuestion(sel.word, ctx, displayMode, settings.clueRule);
           if (sel.bucket === 'new') s.newIntroduced++;
           if (sel.bucket === 'review') s.reviewsServed++;
           const secs = questionSeconds(settings, displayMode, sel.word.difficulty);
@@ -214,6 +228,16 @@ export class PracticeService {
       if (e instanceof SaveError) throw e;
       throw new SaveError('The next question could not be prepared or saved.', e);
     }
+  }
+
+  /** Saves Interactive Reading answers given so far, so a refresh resumes at the same part. */
+  async saveInteractiveStep(sessionId: string, questionId: string, answers: InteractiveAnswers): Promise<void> {
+    await this.db.transaction('rw', this.db.sessions, async () => {
+      const s = await this.db.sessions.get(sessionId);
+      if (!s?.current || s.current.question.id !== questionId) return;
+      s.current.interactive = answers;
+      await this.db.sessions.put(s);
+    });
   }
 
   private async finish(s: SessionRecord, now: number, reason: string): Promise<SessionRecord> {
@@ -242,7 +266,7 @@ export class PracticeService {
     const settings = await this.getSettings();
     const now = this.now();
     try {
-      return await this.db.transaction('rw', [this.db.sessions, this.db.progress, this.db.attempts, this.db.mistakes, this.db.kv], async () => {
+      return await this.db.transaction('rw', [this.db.sessions, this.db.progress, this.db.attempts, this.db.mistakes, this.db.kv, this.db.irResults], async () => {
         const s = await this.db.sessions.get(sessionId);
         if (!s) throw new Error('Session not found.');
         if (!s.current || s.current.question.id !== input.questionId) {
@@ -256,6 +280,7 @@ export class PracticeService {
         const meta = await this.getMeta();
         meta.seq += 1;
         const seq = meta.seq;
+        if (q.kind === 'interactive') return await this.submitInteractive(s, q, input, { now, seq, responseMs, meta, settings });
         const gaps: Gap[] = q.kind === 'sentence' ? [q.gap] : q.gaps;
         const perGapMs = Math.round(responseMs / Math.max(1, gaps.length));
         const outcomes: GapOutcome[] = [];
@@ -378,6 +403,134 @@ export class PracticeService {
     }
   }
 
+  /** Scores and saves one Interactive Reading set (runs inside submit's transaction). */
+  private async submitInteractive(
+    s: SessionRecord,
+    q: InteractiveQuestion,
+    input: SubmitInput,
+    ctx: { now: number; seq: number; responseMs: number; meta: Meta; settings: Settings },
+  ): Promise<SubmitResult> {
+    const { now, seq, responseMs, meta, settings } = ctx;
+    const set = this.store.interactive.find((x) => x.id === q.setId);
+    if (!set) throw new Error('This passage is no longer in the library.');
+    const answers = input.interactive ?? s.current?.interactive ?? emptyInteractiveAnswers(q);
+    const score = scoreInteractive(set, q, answers);
+    const timedOut = input.kind === 'timeout';
+    const resultOf = (correct: boolean, answered: boolean): ResultKind =>
+      input.kind === 'skip' ? 'skipped' : correct ? 'correct' : timedOut && !answered ? 'timeout' : !answered ? 'unanswered' : 'incorrect';
+    const perItemMs = Math.round(responseMs / Math.max(1, score.total));
+    const outcomes: GapOutcome[] = [];
+    const blankChoices: (string | null)[] = [];
+
+    for (let i = 0; i < set.blanks.length; i++) {
+      const b = set.blanks[i];
+      const chosenIdx = answers.blanks[i] ?? null;
+      const chosen = chosenIdx === null ? null : (q.blanks[i].options[chosenIdx] ?? null);
+      blankChoices.push(chosen);
+      const result = resultOf(score.blanks[i], chosen !== null);
+      s.tally[result]++;
+      if (result === 'correct') {
+        s.streak++;
+        s.bestStreak = Math.max(s.bestStreak, s.streak);
+      } else if (result !== 'skipped') s.streak = 0;
+      const word = b.wordId ? this.store.byId.get(b.wordId) : undefined;
+      const contextId = `ir:${set.id}:${i}`;
+      const attemptId = `${s.id}:${s.index}:${i}`;
+      if (!word) {
+        outcomes.push({ wordId: '', word: b.answer, contextId, typed: chosen ?? '', full: chosen ?? '', correctAnswer: b.answer, result, errorTypes: [], becameMastered: false, lostMastery: false, schedule: '', usedUkVariant: false, previousMistakes: 0 });
+        continue;
+      }
+      if (await this.db.attempts.get(attemptId)) throw new Error('duplicate');
+      const prev = (await this.db.progress.get(word.id)) ?? newProgress(word.id);
+      const applied = applyResult(prev, { result, contextId, responseMs: perItemMs, at: now, seq, sessionId: s.id }, { reviewFrequency: settings.reviewFrequency, rng: this.rng, recognitionOnly: true });
+      await this.db.progress.put(applied.progress);
+      await this.db.attempts.add({
+        id: attemptId,
+        sessionId: s.id,
+        questionId: q.id,
+        mode: 'interactive-reading',
+        wordId: word.id,
+        contextId,
+        result,
+        answer: chosen ?? '',
+        correctAnswer: b.answer,
+        responseMs: perItemMs,
+        at: now,
+        seq,
+        errorTypes: result === 'incorrect' ? ['different-word'] : [],
+        hintUsed: false,
+        difficulty: word.difficulty,
+      });
+      if (result === 'incorrect' || result === 'timeout' || result === 'unanswered') {
+        const sentence = sentenceAround(set.text, b.start, b.end);
+        await this.db.mistakes.put({
+          id: attemptId,
+          attemptId,
+          wordId: word.id,
+          word: word.word,
+          answer: chosen ?? '',
+          correctAnswer: b.answer,
+          sentence,
+          contextId,
+          mode: 'interactive-reading',
+          result,
+          at: now,
+          responseMs: perItemMs,
+          previousMistakes: mistakes(prev),
+          errorTypes: result === 'incorrect' ? ['different-word'] : ['empty'],
+          rule: b.why ?? '',
+          clue: '',
+        });
+      }
+      outcomes.push({
+        wordId: word.id,
+        word: word.word,
+        contextId,
+        typed: chosen ?? '',
+        full: chosen ?? '',
+        correctAnswer: b.answer,
+        result,
+        errorTypes: result === 'incorrect' ? ['different-word'] : [],
+        becameMastered: false,
+        lostMastery: applied.lostMastery,
+        schedule: applied.explanation,
+        usedUkVariant: false,
+        previousMistakes: mistakes(prev),
+      });
+    }
+
+    const parts: IrPartOutcome[] = [];
+    for (const [k, p] of score.parts.entries()) {
+      const result = resultOf(p.correct, p.answered);
+      s.tally[result]++;
+      if (result === 'correct') {
+        s.streak++;
+        s.bestStreak = Math.max(s.bestStreak, s.streak);
+      } else if (result !== 'skipped') s.streak = 0;
+      parts.push({ part: p.part, n: p.n, correct: p.correct, score: p.score, chosen: p.chosen, expected: p.expected });
+      await this.db.irResults.put({ id: `${s.id}:${s.index}:${p.part}:${p.n}:${k}`, sessionId: s.id, setId: set.id, part: p.part, correct: p.correct, score: p.score, answered: p.answered, at: now });
+    }
+    if (input.kind !== 'skip') meta.adaptive = updateAdaptive(meta.adaptive, score.correct / Math.max(1, score.total) >= 0.8).state;
+
+    const outcome: QuestionOutcome = {
+      questionId: q.id,
+      index: s.index,
+      gaps: outcomes,
+      parts,
+      blankChoices,
+      responseMs,
+      timedOut,
+      skipped: input.kind === 'skip',
+      savedAt: now,
+    };
+    s.index++;
+    s.current = undefined;
+    s.lastOutcome = outcome;
+    await this.db.sessions.put(s);
+    await this.db.kv.put({ key: META_KEY, value: meta });
+    return { session: s, outcome, duplicate: false };
+  }
+
   // ---------------------------------------------------------------- word management
   async reopenWord(wordId: string): Promise<void> {
     await this.db.transaction('rw', this.db.progress, async () => {
@@ -395,6 +548,7 @@ export class PracticeService {
 /** The sentence (and neighboring text) around one gap, for the Mistake Bank and clue explanations. */
 function surroundings(q: Question, gapIndex: number): { before: string; after: string; sentence: string } {
   if (q.kind === 'sentence') return { before: q.before, after: q.after, sentence: q.sentence };
+  if (q.kind === 'interactive') return { before: '', after: '', sentence: '' };
   const before = q.segments[gapIndex];
   const after = q.segments[gapIndex + 1];
   const full = q.segments.map((seg, k) => seg + (k < q.gaps.length ? q.gaps[k].answer : '')).join('');
@@ -406,4 +560,13 @@ function surroundings(q: Question, gapIndex: number): { before: string; after: s
   const endMatch = /[.!?]["”’)]?(\s|$)/.exec(full.slice(offset));
   const end = endMatch ? offset + (endMatch.index ?? 0) + endMatch[0].trimEnd().length : full.length;
   return { before, after, sentence: full.slice(start, end).trim() };
+}
+
+/** The sentence of `text` that contains the span [start, end). */
+export function sentenceAround(text: string, start: number, end: number): string {
+  let from = 0;
+  for (const m of text.slice(0, start).matchAll(/[.!?]["”’)]?\s+/g)) from = (m.index ?? 0) + m[0].length;
+  const tail = /[.!?]["”’)]?(\s|$)/.exec(text.slice(end));
+  const to = tail ? end + (tail.index ?? 0) + tail[0].trimEnd().length : text.length;
+  return text.slice(from, to).trim();
 }

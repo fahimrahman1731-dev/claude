@@ -2,6 +2,7 @@ import { stripFootnotes } from './markdown';
 
 export type Evidence =
   | 'official' // answer words from Duolingo's own practice books
+  | 'trusted-list' // not in the study materials; added from NGSL / NAWL / CEFR-J / Octanove C1
   | 'recurring' // listed as recurring across independent sources
   | 'author-selection' // chosen by the guide's author (not seen in a test item)
   | 'third-party' // prep-site answer words (lower trust)

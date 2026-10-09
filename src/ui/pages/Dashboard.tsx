@@ -21,6 +21,8 @@ export function DashboardPage() {
   const isNew = stats.graded === 0 && stats.counts.skipped === 0;
   const goalPct = Math.min(1, stats.todayGraded / Math.max(1, settings.dailyGoal));
   const custom = store.words.length - store.importedCount;
+  const fromLists = store.words.filter((w) => w.evidence.includes('trusted-list')).length;
+  const fromMaterials = store.importedCount - fromLists;
 
   return (
     <div className="stack">
@@ -28,7 +30,8 @@ export function DashboardPage() {
         <div>
           <h1>Dashboard</h1>
           <p className="muted">
-            {store.importedCount.toLocaleString()} words imported from your study materials{custom > 0 ? ` + ${custom} of your own` : ''}.
+            {fromMaterials.toLocaleString()} words from your study materials + {fromLists.toLocaleString()} from trusted DET-level word lists
+            {custom > 0 ? ` + ${custom} of your own` : ''} · {store.paragraphs.length} Read and Complete texts · {store.interactive.length} Interactive Reading passages.
           </p>
         </div>
         <div className="row">

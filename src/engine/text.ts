@@ -57,6 +57,21 @@ export function halfSplit(word: string): { visible: string; hiddenLength: number
   return { visible: word.slice(0, visibleLength), hiddenLength: word.length - visibleLength };
 }
 
+/**
+ * How many letters are given as the clue.
+ * - "max3" (default): half the word, but never more than 3 letters (1–3), so long
+ *   words like "confusing" show "con", not "conf".
+ * - "half": the DET Read and Complete rule, the first half rounded down.
+ * At least one letter is always given and at least one is always hidden.
+ */
+export type ClueRule = 'max3' | 'half';
+
+export function clueSplit(word: string, rule: ClueRule = 'max3'): { visible: string; hiddenLength: number } {
+  const half = Math.floor(word.length / 2);
+  const n = Math.max(1, Math.min(rule === 'max3' ? Math.min(half, 3) : half, word.length - 1));
+  return { visible: word.slice(0, n), hiddenLength: word.length - n };
+}
+
 /** Small, stable FNV-1a hash used for context ids. */
 export function hash(s: string): string {
   let h = 0x811c9dc5;

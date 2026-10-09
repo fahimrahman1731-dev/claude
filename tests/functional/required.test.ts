@@ -325,9 +325,14 @@ describe('TEST 11 — completing every imported word', () => {
   it('reports 100% mastery over exactly the imported words, with nothing invented', async () => {
     const extraction = extractAll(manifest, (f) => readFileSync(join(srcDir, f), 'utf8'));
     const extractedSet = new Set(extraction.words.map((w) => w.word));
-    // Every word in the app's database comes from the study materials, and every usable word was imported.
-    expect(vocab.words.length).toBe(extraction.words.length);
-    expect(vocab.words.every((w) => extractedSet.has(w.word))).toBe(true);
+    const report = JSON.parse(readFileSync(join(root, 'public/data/import-report.json'), 'utf8'));
+    const deleted = new Map<string, string>(report.collected.deleted.map((d: { word: string; reason: string }) => [d.word, d.reason]));
+    const inApp = new Set(vocab.words.map((w) => w.word));
+    // Every word comes from the study materials or (labelled) from the trusted word lists — nothing invented.
+    expect(vocab.words.every((w) => extractedSet.has(w.word) || (w.evidence.includes('trusted-list') && w.sources.includes('lists')))).toBe(true);
+    // Every word from the study materials is in the app, or was deleted with a stated reason.
+    for (const w of extraction.words) expect(inApp.has(w.word) || !!deleted.get(w.word)).toBe(true);
+    expect(deleted.size).toBeLessThan(50);
 
     const { db, store } = makeEnv();
     const progress: WordProgress[] = [];
@@ -341,7 +346,7 @@ describe('TEST 11 — completing every imported word', () => {
     }
     await db.progress.bulkPut(progress);
     const stats = computeStats(store.words, await db.progress.toArray(), [], { now: Date.now(), retentionReviews: false });
-    expect(stats.totalWords).toBe(extraction.words.length);
+    expect(stats.totalWords).toBe(vocab.words.length);
     expect(stats.masteredWords).toBe(stats.totalWords);
     expect(stats.masteryPct).toBe(100);
     expect(stats.remainingWords).toBe(0);

@@ -8,7 +8,7 @@ import { sentenceQuestion, validateQuestion } from '../../src/engine/questions';
 import { chooseContext, selectNext, type SelectionState } from '../../src/engine/selection';
 import { analyzeError } from '../../src/engine/spelling';
 import { computeStats, streaks, dateKey } from '../../src/engine/stats';
-import { halfSplit, locateTarget } from '../../src/engine/text';
+import { clueSplit, halfSplit, locateTarget } from '../../src/engine/text';
 import { checkContext, checkContextSet } from '../../src/engine/validate';
 import type { WordProgress } from '../../src/engine/types';
 import { makeWord, seqRng } from '../helpers';
@@ -24,6 +24,13 @@ describe('text and splitting', () => {
     expect(halfSplit('the')).toEqual({ visible: 't', hiddenLength: 2 });
     expect(halfSplit('that')).toEqual({ visible: 'th', hiddenLength: 2 });
     expect(halfSplit('significant')).toEqual({ visible: 'signi', hiddenLength: 6 });
+    // The app's default clue: half the word, but never more than 3 letters (1 to 3).
+    expect(clueSplit('is')).toEqual({ visible: 'i', hiddenLength: 1 });
+    expect(clueSplit('the')).toEqual({ visible: 't', hiddenLength: 2 });
+    expect(clueSplit('city')).toEqual({ visible: 'ci', hiddenLength: 2 });
+    expect(clueSplit('strange')).toEqual({ visible: 'str', hiddenLength: 4 });
+    expect(clueSplit('confusing')).toEqual({ visible: 'con', hiddenLength: 6 });
+    expect(clueSplit('confusing', 'half')).toEqual({ visible: 'conf', hiddenLength: 5 });
   });
   it('requires an unambiguous target', () => {
     expect(locateTarget('She put the cup on the table.', 'the')).toHaveProperty('error');
@@ -35,14 +42,18 @@ describe('text and splitting', () => {
 
 describe('answer checking', () => {
   const q = sentenceQuestion(sig, sig.contexts[0], 'fill-blanks');
-  it('builds a valid question', () => {
+  it('builds a valid question with at most 3 letters given (or half the word on request)', () => {
     expect(validateQuestion(q, sig)).toBeUndefined();
-    expect(q.gap.visible).toBe('signi');
+    expect(q.gap.visible).toBe('sig');
+    expect(q.gap.hiddenLength).toBe(8);
+    const half = sentenceQuestion(sig, sig.contexts[0], 'spelling', 'half');
+    expect(half.gap.visible).toBe('signi');
+    expect(validateQuestion(half, sig)).toBeUndefined();
   });
   it('accepts the missing letters or the whole word, exact spelling only', () => {
-    expect(checkGap(q.gap, 'ficant', { acceptUk: false }).correct).toBe(true);
+    expect(checkGap(q.gap, 'nificant', { acceptUk: false }).correct).toBe(true);
     expect(checkGap(q.gap, 'Significant', { acceptUk: false }).correct).toBe(true);
-    expect(checkGap(q.gap, 'ficent', { acceptUk: false }).correct).toBe(false);
+    expect(checkGap(q.gap, 'nificent', { acceptUk: false }).correct).toBe(false);
     expect(checkGap(q.gap, '', { acceptUk: false }).empty).toBe(true);
   });
   it('accepts UK spelling only when the mode allows it', () => {

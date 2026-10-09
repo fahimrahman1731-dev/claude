@@ -3,7 +3,7 @@ import type { AppDB } from '../db/db';
 export const BACKUP_FORMAT = 'det-vocab-backup';
 export const BACKUP_VERSION = 1;
 
-const TABLES = ['progress', 'attempts', 'mistakes', 'sessions', 'kv', 'customWords', 'aiContexts', 'imports'] as const;
+const TABLES = ['progress', 'attempts', 'mistakes', 'sessions', 'kv', 'customWords', 'aiContexts', 'imports', 'irResults'] as const;
 type TableName = (typeof TABLES)[number];
 
 export interface Backup {
@@ -27,6 +27,7 @@ export async function restoreBackup(db: AppDB, data: unknown): Promise<{ counts:
   const b = data as Backup;
   if (!b || b.format !== BACKUP_FORMAT || typeof b.tables !== 'object') throw new Error('This file is not a DET Vocab Trainer backup.');
   if (b.version > BACKUP_VERSION) throw new Error('This backup was made by a newer version of the app.');
+  // Backups made before Interactive Reading existed have no irResults table; that is fine.
   for (const t of TABLES) if (!Array.isArray(b.tables[t] ?? [])) throw new Error(`Backup table "${t}" is damaged.`);
   const counts: Record<string, number> = {};
   await db.transaction('rw', TABLES.map((t) => db.table(t)), async () => {

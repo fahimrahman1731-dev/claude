@@ -12,7 +12,20 @@ import { date, dateTime, pct, relative, secs } from '../format';
 import { Link, navigate, wordPath } from '../router';
 
 const RESULT_TEXT: Record<string, string> = { correct: '✓ correct', incorrect: '✕ wrong', timeout: '⏱ timed out', unanswered: '— empty', skipped: '↷ skipped' };
-const ORIGIN_TEXT: Record<string, string> = { authored: 'app sentence', custom: 'your sentence', ai: 'AI sentence (validated)', paragraph: 'paragraph' };
+const ORIGIN_TEXT: Record<string, string> = {
+  authored: 'sentence written for this app',
+  collected: 'real sentence',
+  custom: 'your sentence',
+  ai: 'AI sentence (validated)',
+  paragraph: 'paragraph',
+  interactive: 'Interactive Reading passage',
+};
+const DEF_ORIGIN: Record<string, string> = {
+  source: 'from your study materials',
+  dictionary: 'from Princeton WordNet (dictionary meaning; the word can have other meanings)',
+  custom: 'yours',
+  app: 'written for this app',
+};
 
 export function WordDetailPage({ id }: { id: string }) {
   const { db, store, service, report, notify, reloadStore } = useApp();
@@ -110,8 +123,8 @@ export function WordDetailPage({ id }: { id: string }) {
         <dl className="kv" style={{ marginTop: 14 }}>
           <dt>Meaning</dt>
           <dd>
-            {w.definition || <span className="muted">No definition</span>}{' '}
-            <span className="muted tiny">({w.definitionOrigin === 'source' ? 'from your study materials' : w.definitionOrigin === 'custom' ? 'yours' : 'written for this app'})</span>
+            {w.definition || <span className="muted">No definition</span>} <span className="muted tiny">({DEF_ORIGIN[w.definitionOrigin] ?? w.definitionOrigin})</span>
+            {w.dictionaryDefinition && <div className="small muted">Dictionary (WordNet): {w.dictionaryDefinition}</div>}
             {w.notes
               .filter((n) => n.startsWith('App definition: '))
               .map((n) => (
@@ -124,7 +137,15 @@ export function WordDetailPage({ id }: { id: string }) {
             <>
               <dt>বাংলা</dt>
               <dd className="bn">
-                {w.bengali ?? <span className="muted">—</span>} {w.bengali && <span className="muted tiny">({w.bengaliOrigin === 'custom' ? 'yours' : 'app gloss, not from the materials'})</span>}
+                {w.bengali ?? <span className="muted">No Bengali meaning available</span>}{' '}
+                {w.bengali && (
+                  <span className="muted tiny">
+                    ({w.bengaliOrigin === 'custom' ? 'yours' : w.bengaliOrigin === 'dictionary' ? 'from the Apertium English–Bengali dictionary' : 'written for this app'})
+                  </span>
+                )}
+                {w.bengaliDictionary && w.bengaliOrigin !== 'dictionary' && (
+                  <div className="small muted">Dictionary (Apertium): {w.bengaliDictionary.join(', ')}</div>
+                )}
               </dd>
             </>
           )}
@@ -161,10 +182,20 @@ export function WordDetailPage({ id }: { id: string }) {
               </dd>
             </>
           )}
+          {(w.cefr || w.lists?.length || w.zipf !== undefined) && (
+            <>
+              <dt>Level</dt>
+              <dd className="small">
+                {w.cefr && <>CEFR {w.cefr} (CEFR-J / Octanove) · </>}
+                {w.lists?.length ? <>{w.lists.map((l) => l.toUpperCase()).join(', ')} · </> : null}
+                {w.zipf !== undefined && <>frequency {w.zipf.toFixed(1)} on the Zipf scale (wordfreq; 3 ≈ once per million words)</>}
+              </dd>
+            </>
+          )}
           <dt>Source</dt>
           <dd className="small">
             {w.sections.map((s) => (
-              <div key={s}>{sectionLabel.get(s) ?? s}</div>
+              <div key={s}>{s === 'trusted-lists' ? 'Trusted word lists (NGSL, NAWL, CEFR-J, Octanove) — not in your study materials' : (sectionLabel.get(s) ?? s)}</div>
             ))}
             <span className="muted">
               Evidence: {w.evidence.join(', ')} · evidence score {w.evidenceScore} → live score {livePriorityScore(w, p)}
@@ -268,7 +299,22 @@ export function WordDetailPage({ id }: { id: string }) {
             <li key={c.id}>
               <MarkedSentence sentence={c.sentence} start={c.start} end={c.end} />{' '}
               <span className="muted tiny">
-                {ORIGIN_TEXT[c.origin]}
+                {ORIGIN_TEXT[c.origin] ?? c.origin}
+                {c.src && (() => {
+                  const cr = store.credit(c.src);
+                  return cr ? (
+                    <>
+                      {' · '}
+                      {cr.url ? (
+                        <a href={cr.url} target="_blank" rel="noreferrer">
+                          {cr.label}
+                        </a>
+                      ) : (
+                        cr.label
+                      )}
+                    </>
+                  ) : null;
+                })()}
                 {p?.correctContextIds.includes(c.id) ? ' · answered correctly' : p?.seenContextIds.includes(c.id) ? ' · seen' : ''}
               </span>
             </li>

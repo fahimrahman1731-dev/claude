@@ -2,9 +2,11 @@ import { endingSplit, IRREGULAR, isFunctionWord } from '../../src/engine/morphol
 import { levelFor } from '../../src/engine/priority';
 import { sentenceQuestion, validateQuestion } from '../../src/engine/questions';
 import { findOccurrences } from '../../src/engine/text';
-import type { Context, Difficulty, Paragraph, ParagraphGap, VocabData, VocabWord } from '../../src/engine/types';
+import type { Context, Difficulty, InteractiveSet, Paragraph, ParagraphGap, TextSource, VocabData, VocabWord } from '../../src/engine/types';
 import { checkContext, checkContextSet } from '../../src/engine/validate';
 import type { AuthoredParagraph, AuthoredWord } from './authored';
+import type { CollectedText } from './collected';
+import { chooseParagraphs, deletionReason, inTrustedLists, isBritishSpelling, listInfo, paragraphCandidates, pickContexts, senseForContexts, sentenceIndex, type Lexicon, type SingleSentence } from './enrich';
 import type { ExtractionResult, MergedWord } from './extract-lib';
 
 /** American → British spellings, applied to words that are in the dataset (accepted in Fill in the Blanks only). */
@@ -65,7 +67,34 @@ export interface BuildReport {
   authoringErrors: string[];
   paragraphIssues: string[];
   notes: string[];
+  /** Present when the build used the collected real material. */
+  collected?: CollectedSummary;
 }
+
+export interface CollectedSummary {
+  deleted: { word: string; reason: string }[];
+  added: { count: number; byLevel: Record<string, number>; sample: string[] };
+  contextOrigins: { collected: number; dictionary: number; authored: number };
+  wordsWithOnlyCollected: number;
+  definitionOrigins: Record<string, number>;
+  bengaliOrigins: Record<string, number>;
+  paragraphsByCorpus: Record<string, number>;
+  paragraphCandidates: number;
+  interactiveSets: number;
+  interactiveIssues: string[];
+  texts: number;
+  licences: Record<string, number>;
+}
+
+export interface CollectedInput {
+  texts: CollectedText[];
+  lexicon: Lexicon;
+  /** Single sentences without surrounding text (ASSET, CEFR-SP). */
+  sentences?: SingleSentence[];
+}
+
+/** How many collected Read and Complete texts to keep. */
+export const PARAGRAPH_LIMIT = 320;
 
 /**
  * Evidence score from the study materials (configurable weights):
@@ -84,6 +113,10 @@ export const EVIDENCE_WEIGHTS = {
   spellingTarget: 2,
   authorSelection: 1.5,
   thirdParty: 1,
+  /** In NGSL / NAWL / CEFR-J / Octanove C1 but not in the study materials. */
+  trustedList: 1,
+  /** Extra for core everyday words (NGSL or CEFR A1–B1). */
+  coreList: 1,
   weak: 0.5,
 };
 
@@ -99,6 +132,7 @@ export function evidenceScore(m: MergedWord): number {
   if (!ev.has('official')) {
     if (ev.has('author-selection')) s += W.authorSelection;
     else if (ev.has('third-party')) s += W.thirdParty;
+    else if (ev.has('trusted-list')) s += W.trustedList + (m.tags.includes('core-list') ? W.coreList : 0);
     else s += W.weak; // best-estimate, strategy example or distractor only
   }
   s += W.perExtraSection * Math.min(W.extraSectionCap, m.sections.length - 1);
@@ -123,6 +157,9 @@ export function buildVocab(
   authored: AuthoredWord[],
   authoredParagraphs: AuthoredParagraph[],
   authoringErrors: string[],
+  collected?: CollectedInput,
+  interactive: InteractiveSet[] = [],
+  interactiveIssues: string[] = [],
 ): { data: VocabData; report: BuildReport } {
   const authoredMap = new Map<string, AuthoredWord>();
   const authoredDuplicates: string[] = [];
@@ -140,34 +177,111 @@ export function buildVocab(
   let writtenForApp = 0;
   let bengali = 0;
 
-  const words: VocabWord[] = extraction.words.map((m) => {
+  const lex = collected?.lexicon ?? {};
+  const index = collected ? sentenceIndex(collected.texts, collected.sentences ?? []) : undefined;
+  const deleted: { word: string; reason: string }[] = [];
+  let merged: MergedWord[] = extraction.words;
+  const added: MergedWord[] = [];
+  if (collected && index) {
+    merged = extraction.words.filter((m) => {
+      const reason = deletionReason(m, lex, BRITISH_WORDS);
+      if (reason) deleted.push({ word: m.word, reason });
+      return !reason;
+    });
+    // Trusted-list words the study materials do not have: content words of
+    // everyday or academic frequency that have at least two real sentences.
+    const have = new Set(extraction.words.map((m) => m.word));
+    for (const [w, e] of Object.entries(lex)) {
+      if (have.has(w) || w.length < 3 || isFunctionWord(w) || !/^[a-z]+$/.test(w)) continue;
+      if (!inTrustedLists(lex, w)) continue;
+      if ((e.z ?? 0) < 3 || !e.pos?.some((p) => ['n', 'v', 'adj', 'adv'].includes(p))) continue;
+      if (isBritishSpelling(w, lex, US_UK)) continue;
+      if ((index.byWord.get(w)?.length ?? 0) < 2) continue;
+      // Only words that really get two real (or dictionary) sentences are added.
+      const trial = pickContexts(w, `w:${w}`, index, lex, []);
+      if (trial.contexts.length < 2) continue;
+      const info = listInfo(lex, w);
+      const core = info.lists.includes('ngsl') || ['A1', 'A2', 'B1'].includes(info.cefr ?? '');
+      added.push({
+        word: w,
+        occurrences: 0,
+        sources: ['lists'],
+        sections: ['trusted-lists'],
+        evidence: ['trusted-list'],
+        definitions: [],
+        collocations: [],
+        ukVariants: [],
+        notes: [],
+        levels: [],
+        tags: core ? ['core-list'] : [],
+      } as unknown as MergedWord);
+    }
+  }
+  const contextOrigins = { collected: 0, dictionary: 0, authored: 0 };
+  let wordsWithOnlyCollected = 0;
+  const definitionOrigins: Record<string, number> = { source: 0, dictionary: 0, app: 0, missing: 0 };
+  const bengaliOrigins: Record<string, number> = { app: 0, dictionary: 0, none: 0 };
+  const LEVEL_OF: Record<string, Difficulty> = { A1: 'easy', A2: 'easy', B1: 'intermediate', B2: 'advanced', C1: 'advanced', C2: 'advanced' };
+
+  const words: VocabWord[] = [...merged, ...added].map((m) => {
     const a = authoredMap.get(m.word);
     const id = `w:${m.word}`;
     const base = a?.base ?? IRREGULAR[m.word];
     const contexts: Context[] = [];
-    for (const s of a?.sentences ?? []) {
-      const c = checkContext(s, m.word, id, 'authored');
-      const giveaway = c.warnings.find((x) => x.startsWith('giveaway'));
-      if (c.context && !giveaway) contexts.push(c.context);
-      else invalidSentences.push({ word: m.word, problem: `${giveaway ?? c.errors.join('; ')} — “${s}”` });
+    let set: { kept: Context[]; rejected: { sentence: string; reason: string }[] };
+    let senseEvidence: string[] = [];
+    if (index) {
+      const pick = pickContexts(m.word, id, index, lex, a?.sentences ?? []);
+      contextOrigins.collected += pick.collected;
+      contextOrigins.dictionary += pick.dictionary;
+      contextOrigins.authored += pick.authored;
+      if (pick.authored === 0 && pick.contexts.length >= 2) wordsWithOnlyCollected++;
+      set = { kept: pick.contexts, rejected: [] };
+      senseEvidence = pick.evidence;
+    } else {
+      for (const s of a?.sentences ?? []) {
+        const c = checkContext(s, m.word, id, 'authored');
+        const giveaway = c.warnings.find((x) => x.startsWith('giveaway'));
+        if (c.context && !giveaway) contexts.push(c.context);
+        else invalidSentences.push({ word: m.word, problem: `${giveaway ?? c.errors.join('; ')} — “${s}”` });
+      }
+      set = checkContextSet(contexts, m.word);
+      for (const r of set.rejected) invalidSentences.push({ word: m.word, problem: `${r.reason} — “${r.sentence}”` });
     }
-    const set = checkContextSet(contexts, m.word);
-    for (const r of set.rejected) invalidSentences.push({ word: m.word, problem: `${r.reason} — “${r.sentence}”` });
     const sourceDefs = m.definitions.map((d) => d.text);
+    const e = lex[m.word];
+    const pos = a?.pos?.length ? a.pos : isFunctionWord(m.word) ? ['func'] : (e?.pos?.filter((p) => ['n', 'v', 'adj', 'adv'].includes(p)) ?? ['n']);
+    const wnDef = senseForContexts(e, pos, [...set.kept.map((c) => c.sentence), ...senseEvidence], m.word);
     let definition = '';
     let definitionOrigin: VocabWord['definitionOrigin'] = 'app';
     if (sourceDefs.length) {
       definition = sourceDefs[0];
       definitionOrigin = 'source';
       fromSources++;
+    } else if (collected && wnDef && !isFunctionWord(m.word) && !a?.definition) {
+      // Words added from the trusted lists have no definition of their own: use WordNet's.
+      definition = wnDef;
+      definitionOrigin = 'dictionary';
     } else if (a?.definition) {
       definition = a.definition;
       writtenForApp++;
     } else missingDefinitions.push(m.word);
-    if (a?.bengali) bengali++;
+    definitionOrigins[definition ? definitionOrigin : 'missing']++;
+    const dictBn = e?.bn ? (pos.map((p) => e.bn![p]).find(Boolean) ?? Object.values(e.bn)[0]) : undefined;
+    let bengaliText = a?.bengali;
+    let bengaliOrigin: VocabWord['bengaliOrigin'] = a?.bengali ? 'app' : undefined;
+    if (!bengaliText && dictBn?.length) {
+      bengaliText = dictBn.slice(0, 2).join(', ');
+      bengaliOrigin = 'dictionary';
+    }
+    if (bengaliText) bengali++;
+    bengaliOrigins[bengaliOrigin ?? 'none']++;
     const sourceLevels = m.levels.slice().sort((x, y) => ORDER.indexOf(y) - ORDER.indexOf(x));
     const small = isFunctionWord(m.word);
-    const difficulty: Difficulty = small ? 'easy' : sourceLevels[0] ?? a?.level ?? heuristicLevel(m.word);
+    const info = collected ? listInfo(lex, m.word) : { lists: [], cefr: undefined };
+    const zipf = e?.z;
+    const fromLists: Difficulty | undefined = info.cefr ? LEVEL_OF[info.cefr] : zipf !== undefined ? (zipf >= 4.5 ? 'easy' : zipf >= 3.8 ? 'intermediate' : 'advanced') : undefined;
+    const difficulty: Difficulty = small ? 'easy' : (sourceLevels[0] ?? a?.level ?? (m.evidence.includes('trusted-list') ? fromLists : undefined) ?? heuristicLevel(m.word));
     const ukVariants = [...new Set([...m.ukVariants, ...(US_UK[m.word] ? [US_UK[m.word]] : [])])];
     const tags = [...m.tags];
     const notes = [...m.notes];
@@ -180,12 +294,17 @@ export function buildVocab(
     const w: VocabWord = {
       id,
       word: m.word,
-      pos: a?.pos?.length ? a.pos : small ? ['func'] : ['n'],
+      pos,
       definition,
       definitionOrigin,
       sourceDefinitions: sourceDefs,
-      bengali: a?.bengali,
-      bengaliOrigin: a?.bengali ? 'app' : undefined,
+      bengali: bengaliText,
+      bengaliOrigin,
+      ...(dictBn?.length ? { bengaliDictionary: dictBn.slice(0, 4) } : {}),
+      ...(wnDef && definitionOrigin !== 'dictionary' && !small ? { dictionaryDefinition: wnDef } : {}),
+      ...(info.cefr ? { cefr: info.cefr } : {}),
+      ...(info.lists.length ? { lists: info.lists } : {}),
+      ...(zipf !== undefined ? { zipf } : {}),
       base,
       family: m.word,
       ending,
@@ -205,7 +324,7 @@ export function buildVocab(
       contexts: set.kept,
     };
     if (definition && a?.definition && definitionOrigin === 'source') {
-      // keep the app's fuller definition available for feedback
+      // keep the app's sense-specific definition available for feedback
       w.notes.push(`App definition: ${a.definition}`);
     }
     for (const c of set.kept) {
@@ -248,13 +367,37 @@ export function buildVocab(
     } else w.family = root;
   }
 
-  // Paragraphs for Read and Complete.
+  // Paragraphs for Read and Complete: collected real texts when available.
   const paragraphIssues: string[] = [];
-  const paragraphs: Paragraph[] = authoredParagraphs.map((p) => {
-    const gaps = selectGaps(p.text, byWord);
-    if (gaps.length < 8) paragraphIssues.push(`${p.id} “${p.title}” has only ${gaps.length} gaps`);
-    return { id: p.id, title: p.title, topic: p.topic, difficulty: p.level, text: p.text, gaps: gaps.map((g, i) => ({ ...g, contextId: `p:${p.id}:${i}` })) };
-  });
+  let paragraphs: Paragraph[];
+  let candidateCount = 0;
+  if (collected) {
+    const cands = paragraphCandidates(collected.texts);
+    candidateCount = cands.length;
+    const usable = cands
+      .map((c, k) => {
+        const id = `rc-${c.source.id}-${k}`;
+        const gaps = selectGaps(c.text, byWord);
+        return {
+          id,
+          title: c.source.title.length > 70 ? c.source.title.slice(0, 67).replace(/\s+\S*$/, '') + '…' : c.source.title,
+          topic: c.source.topic,
+          difficulty: c.source.difficulty,
+          text: c.text,
+          gaps: gaps.map((g, i) => ({ ...g, contextId: `p:${id}:${i}` })),
+          src: c.source.id,
+          corpus: c.source.corpus,
+        };
+      })
+      .filter((p) => p.gaps.length >= 8);
+    paragraphs = chooseParagraphs(usable, PARAGRAPH_LIMIT);
+  } else {
+    paragraphs = authoredParagraphs.map((p) => {
+      const gaps = selectGaps(p.text, byWord);
+      if (gaps.length < 8) paragraphIssues.push(`${p.id} “${p.title}” has only ${gaps.length} gaps`);
+      return { id: p.id, title: p.title, topic: p.topic, difficulty: p.level, text: p.text, gaps: gaps.map((g, i) => ({ ...g, contextId: `p:${p.id}:${i}` })) };
+    });
+  }
   const seenIds = new Set<string>();
   for (const p of paragraphs) {
     if (seenIds.has(p.id)) paragraphIssues.push(`duplicate paragraph id ${p.id}`);
@@ -269,13 +412,43 @@ export function buildVocab(
     byPriority[w.basePriority]++;
     byDifficulty[w.difficulty]++;
   }
+  // Interactive Reading: link each missing word to its library word.
+  for (const set of interactive) for (const b of set.blanks) b.wordId = byWord.get(b.answer.toLowerCase())?.id;
+  const usedTexts = new Set<string>();
+  for (const w of words) for (const c of w.contexts) if (c.src && c.src !== 'wordnet') usedTexts.add(c.src);
+  for (const p of paragraphs) if (p.src) usedTexts.add(p.src);
+  for (const set of interactive) usedTexts.add(set.source.id);
+  for (const w of words) for (const c of w.contexts) if (c.src === 'asset' || c.src?.startsWith('cefrsp')) usedTexts.add(c.src);
+  const texts: TextSource[] = (collected?.texts ?? [])
+    .filter((t) => usedTexts.has(t.id))
+    .map((t) => ({ id: t.id, title: t.title, credit: t.credit, ...(t.url ? { url: t.url } : {}), license: t.license }));
+  const extraSources = collected
+    ? [
+        { id: 'lists', title: 'Trusted word lists: NGSL 1.2 and NAWL 1.2 (CC BY-SA 4.0), CEFR-J 1.5, Octanove C1/C2 (CC BY-SA 4.0)' },
+        { id: 'texts', title: 'Real texts: CommonLit CLEAR corpus (CC BY / CC BY-SA excerpts), OneStopEnglish (CC BY-SA 4.0), OpenStax textbooks (CC BY-NC-SA 4.0), ASSET (CC BY-NC 4.0), CEFR-SP (CC BY-SA 3.0 / CC BY-NC-SA 4.0)' },
+      ]
+    : [];
   const data: VocabData = {
     version: '',
     generatedAt: new Date().toISOString(),
-    sources: extraction.sources.map((s) => ({ id: s.id, title: s.title })),
+    sources: [...extraction.sources.map((s) => ({ id: s.id, title: s.title })), ...extraSources],
     words,
     paragraphs,
+    interactive,
+    ...(collected ? { texts } : {}),
   };
+  const licences: Record<string, number> = {};
+  for (const t of texts) licences[t.license] = (licences[t.license] ?? 0) + 1;
+  const paragraphsByCorpus: Record<string, number> = {};
+  for (const p of paragraphs) {
+    const corpus = p.src?.split('-')[0] ?? 'authored';
+    paragraphsByCorpus[corpus] = (paragraphsByCorpus[corpus] ?? 0) + 1;
+  }
+  const addedByLevel: Record<string, number> = {};
+  for (const m of added) {
+    const k = listInfo(lex, m.word).cefr ?? 'list only';
+    addedByLevel[k] = (addedByLevel[k] ?? 0) + 1;
+  }
   const report: BuildReport = {
     generatedAt: data.generatedAt,
     sources: extraction.sources,
@@ -310,43 +483,57 @@ export function buildVocab(
     authoringErrors,
     paragraphIssues,
     notes: extraction.sources.flatMap((s) => s.notes),
+    ...(collected
+      ? {
+          collected: {
+            deleted,
+            added: { count: added.length, byLevel: addedByLevel, sample: added.slice(0, 40).map((m) => m.word) },
+            contextOrigins,
+            wordsWithOnlyCollected,
+            definitionOrigins,
+            bengaliOrigins,
+            paragraphsByCorpus,
+            paragraphCandidates: candidateCount,
+            interactiveSets: interactive.length,
+            interactiveIssues,
+            texts: texts.length,
+            licences,
+          },
+        }
+      : {}),
   };
   return { data, report };
 }
 
 /**
- * DET-style gap selection: the first and last sentences stay complete; in
- * between, every other eligible word loses its second half. Eligible words
- * are dataset words of two or more letters that are not names, contractions
- * or hyphenated words, and gaps are never next to each other.
+ * DET C-test gap selection (Technical Manual 2026): the title, first and last
+ * sentences stay complete; from the second word of the second sentence,
+ * alternating words lose their second half, across sentence boundaries. Numbers,
+ * names, one-letter words, contractions and hyphenated words are never damaged
+ * but still take their turn, so damaged words are never next to each other.
+ * Words that are not in the library are also left whole (their progress could
+ * not be tracked).
  */
-export const MAX_GAPS = 20;
+export const MAX_GAPS = 16;
 
 export function selectGaps(text: string, byWord: Map<string, VocabWord>, maxGaps = MAX_GAPS): Omit<ParagraphGap, 'contextId'>[] {
   const sentences = [...text.matchAll(/[^.!?]+[.!?]+["”’)]?\s*/g)].map((m) => ({ start: m.index ?? 0, end: (m.index ?? 0) + m[0].length }));
   if (sentences.length < 3) return [];
   const regionStart = sentences[0].end;
   const regionEnd = sentences[sentences.length - 1].start;
-  const tokens = [...text.slice(regionStart, regionEnd).matchAll(/[A-Za-z]+(?:['’-][A-Za-z]+)*/g)].map((m) => ({
+  const tokens = [...text.slice(regionStart, regionEnd).matchAll(/[A-Za-z]+(?:['’-][A-Za-z]+)*|\d+(?:[.,]\d+)*/g)].map((m) => ({
     text: m[0],
     start: regionStart + (m.index ?? 0),
   }));
   const gaps: Omit<ParagraphGap, 'contextId'>[] = [];
-  let lastGapToken = -2;
-  let want = false; // first word of the region stays visible, then alternate
   tokens.forEach((t, i) => {
+    if (i % 2 === 0 || gaps.length >= maxGaps) return; // 1st, 3rd, 5th … word stay whole
     const lower = t.text.toLowerCase();
     const w = byWord.get(lower);
     const prevChar = text.slice(0, t.start).trimEnd().slice(-1);
     const sentenceStart = !prevChar || /[.!?]/.test(prevChar);
-    const eligible =
-      !!w && w.contexts.length >= 0 && lower.length >= 2 && !/['’-]/.test(t.text) && (t.text === lower || sentenceStart) && !w.tags.includes('british-word');
-    if (gaps.length >= maxGaps) return;
-    if (want && eligible && i - lastGapToken > 1) {
-      gaps.push({ wordId: w!.id, start: t.start, end: t.start + t.text.length });
-      lastGapToken = i;
-      want = false;
-    } else if (!want) want = true;
+    const eligible = !!w && lower.length >= 2 && /^[A-Za-z]+$/.test(t.text) && (t.text === lower || sentenceStart) && !w.tags.includes('british-word');
+    if (eligible) gaps.push({ wordId: w!.id, start: t.start, end: t.start + t.text.length });
   });
   // sanity: each gap text must be the word
   return gaps.filter((g) => findOccurrences(text.slice(g.start, g.end), text.slice(g.start, g.end)).length === 1);

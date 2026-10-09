@@ -1,18 +1,19 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { checkGap } from '../../engine/answer';
 import { contextClues } from '../../engine/clues';
-import { MODE_INFO } from '../../engine/config';
 import { REASON_TEXT } from '../../engine/selection';
 import { spellingRules, type Explanation } from '../../engine/spelling';
-import type { Gap, ParagraphQuestion, SentenceQuestion, VocabWord } from '../../engine/types';
+import type { InteractiveAnswers, ParagraphQuestion, SentenceQuestion, VocabWord } from '../../engine/types';
 import type { GapOutcome, QuestionOutcome, SessionRecord } from '../../db/db';
 import { SaveError } from '../../services/practice';
 import { useApp, useSettings } from '../app-context';
-import { DifficultyBadge, ProgressBar } from '../components';
 import { pct, secs } from '../format';
 import { Link, navigate, wordPath } from '../router';
 import { playTone } from '../sound';
+import { LetterBoxes } from '../LetterBoxes';
+import { InteractiveFeedback, InteractiveView } from './Interactive';
+import { DetFrame, Timer, useCountdown, type FrameProps } from '../det';
 
 type Kind = 'submit' | 'timeout' | 'skip';
 
@@ -43,13 +44,13 @@ export function SessionPage() {
   }, [load]);
 
   const submit = useCallback(
-    async (answers: string[], kind: Kind, hintUsed: boolean) => {
+    async (answers: string[], kind: Kind, hintUsed: boolean, interactive?: InteractiveAnswers) => {
       if (!session?.current || lock.current) return;
       lock.current = true;
       setBusy(true);
       setSaveError(null);
       try {
-        const r = await service.submit(session.id, { questionId: session.current.question.id, answers, kind, hintUsed });
+        const r = await service.submit(session.id, { questionId: session.current.question.id, answers, kind, hintUsed, interactive });
         setSession({ ...r.session });
         const settings = await service.getSettings();
         if (settings.sound && kind !== 'skip') playTone(r.outcome.gaps.every((g) => g.result === 'correct') ? 'good' : 'bad');
@@ -114,32 +115,11 @@ export function SessionPage() {
     );
   }
 
-  const done = session.index;
-  return (
-    <div className="focus-shell">
-      <div className="focus-top">
-        <button className="btn small" onClick={() => void end()}>
-          {session.status === 'active' ? '✕ End' : '← Back'}
-        </button>
-        <span className="small muted" style={{ whiteSpace: 'nowrap' }}>
-          {MODE_INFO[session.mode].title}
-          {session.focus === 'mistakes' ? ' · My mistakes' : session.focus === 'mastered' ? ' · Review mastered' : session.focus === 'words' ? ' · Chosen words' : ''}
-        </span>
-        <ProgressBar value={done} max={session.target} label="Session progress" />
-        <span className="small" style={{ whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
-          {done}/{session.target}
-        </span>
-      </div>
-      <main className="focus-main">
-        {saveError && (
-          <div className="alert error" role="alert" style={{ marginBottom: 14 }}>
-            <strong>Progress not saved.</strong> {saveError}{' '}
-            <button className="btn small" onClick={() => void load()}>
-              Reload session
-            </button>
-          </div>
-        )}
-        {session.status !== 'active' ? (
+  if (session.status !== 'active') {
+    return (
+      <div className="det-shell">
+        <main className="det-page">
+          {saveError && <SaveErrorBox message={saveError} onReload={() => void load()} />}
           <Summary
             session={session}
             onRestart={async () => {
@@ -150,275 +130,177 @@ export function SessionPage() {
               }
             }}
           />
-        ) : session.current ? (
+        </main>
+      </div>
+    );
+  }
+  const frame = { session, onEnd: () => void end() };
+  return (
+    <div className="det-shell">
+      <main className="det-page">
+        {saveError && <SaveErrorBox message={saveError} onReload={() => void load()} />}
+        {session.current ? (
           session.current.question.kind === 'sentence' ? (
-            <SentenceView key={session.current.question.id + session.index} session={session} q={session.current.question} busy={busy} onSubmit={submit} />
+            <SentenceView key={session.current.question.id + session.index} frame={frame} q={session.current.question} busy={busy} onSubmit={submit} />
+          ) : session.current.question.kind === 'paragraph' ? (
+            <ParagraphView key={session.current.question.id + session.index} frame={frame} q={session.current.question} busy={busy} onSubmit={submit} />
           ) : (
-            <ParagraphView key={session.current.question.id + session.index} session={session} q={session.current.question} busy={busy} onSubmit={submit} />
+            <InteractiveView
+              key={session.current.question.id + session.index}
+              frame={frame}
+              q={session.current.question}
+              current={session.current}
+              busy={busy}
+              onStep={(partial) => void service.saveInteractiveStep(session.id, session.current!.question.id, partial).catch(() => undefined)}
+              onSubmit={(ir, kind) => submit([], kind, false, ir)}
+            />
           )
         ) : session.lastOutcome ? (
-          <Feedback session={session} outcome={session.lastOutcome} busy={busy} onNext={next} />
+          <Feedback frame={frame} outcome={session.lastOutcome} busy={busy} onNext={next} />
         ) : (
-          <div className="card empty">
+          <DetFrame frame={frame} title="Ready">
             <button className="btn primary" onClick={() => void next()}>
               Continue
             </button>
-          </div>
+          </DetFrame>
         )}
       </main>
     </div>
   );
 }
 
-// ---------------------------------------------------------------- timer
-
-function useCountdown(startedAt: number, limitMs: number | null, onExpire: () => void) {
-  const [now, setNow] = useState(Date.now());
-  const fired = useRef(false);
-  const cb = useRef(onExpire);
-  cb.current = onExpire;
-  useEffect(() => {
-    if (limitMs === null) return;
-    const id = window.setInterval(() => setNow(Date.now()), 200);
-    return () => window.clearInterval(id);
-  }, [limitMs]);
-  const remaining = limitMs === null ? null : Math.max(0, limitMs - (now - startedAt));
-  useEffect(() => {
-    if (remaining !== null && remaining <= 0 && !fired.current) {
-      fired.current = true;
-      cb.current();
-    }
-  }, [remaining]);
-  return remaining;
-}
-
-function Timer({ remaining, limitMs }: { remaining: number | null; limitMs: number | null }) {
-  if (remaining === null || limitMs === null) return <span className="timer muted" title="Untimed mode">Untimed</span>;
-  const s = Math.ceil(remaining / 1000);
-  const frac = remaining / limitMs;
-  const r = 14;
-  const c = 2 * Math.PI * r;
-  const low = remaining <= Math.min(5000, limitMs * 0.25);
-  const label = s >= 60 ? `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` : `${s}s`;
+function SaveErrorBox({ message, onReload }: { message: string; onReload: () => void }) {
   return (
-    <span className={`timer${low ? ' low' : ''}`} role="timer" aria-live={low ? 'polite' : 'off'} aria-label={`${s} seconds left`}>
-      <svg className="timer-ring" viewBox="0 0 34 34" aria-hidden>
-        <circle cx="17" cy="17" r={r} fill="none" stroke="var(--surface-3)" strokeWidth="4" />
-        <circle cx="17" cy="17" r={r} fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray={c} strokeDashoffset={c * (1 - frac)} strokeLinecap="round" transform="rotate(-90 17 17)" />
-      </svg>
-      {label}
-    </span>
+    <div className="alert error" role="alert" style={{ marginBottom: 14 }}>
+      <strong>Progress not saved.</strong> {message}{' '}
+      <button className="btn small" onClick={onReload}>
+        Reload session
+      </button>
+    </div>
   );
 }
 
 // ---------------------------------------------------------------- sentence question
 
-const INSTRUCTIONS: Record<string, string> = {
-  'fill-blanks': 'Type the missing letters to complete the word in the sentence.',
-  spelling: 'Complete the word. Use the sentence, the letter count and the grammar.',
-  'small-words': 'Complete the small grammar word.',
-  endings: 'The stem is shown. Type the ending that fits the sentence.',
+const TITLES: Record<SentenceQuestion['mode'], string> = {
+  'fill-blanks': 'Complete the sentence with the correct word',
+  spelling: 'Type the missing letters to complete the word',
+  'small-words': 'Complete the sentence with the correct word',
+  endings: 'Type the missing ending of the word',
 };
 
-function GapInput({
-  gap,
-  value,
-  onChange,
-  onKeyDown,
-  autoFocus,
-  inputRef,
-  label,
-  disabled,
-}: {
-  gap: Gap;
-  value: string;
-  onChange: (v: string) => void;
-  onKeyDown?: (e: ReactKeyboardEvent<HTMLInputElement>) => void;
-  autoFocus?: boolean;
-  inputRef?: (el: HTMLInputElement | null) => void;
-  label: string;
-  disabled?: boolean;
-}) {
-  const width = `${Math.max(gap.hiddenLength, value.length, 2) + 0.8}ch`;
-  return (
-    <span className="gap">
-      <span className="vis">{gap.visible}</span>
-      <input
-        ref={inputRef}
-        type="text"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        onKeyDown={onKeyDown}
-        autoFocus={autoFocus}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck={false}
-        aria-label={label}
-        placeholder={'_'.repeat(gap.hiddenLength)}
-        maxLength={gap.answer.length + 2}
-        style={{ width }}
-        disabled={disabled}
-      />
-    </span>
-  );
-}
-
-function SentenceView({ session, q, busy, onSubmit }: { session: SessionRecord; q: SentenceQuestion; busy: boolean; onSubmit: (a: string[], k: Kind, hint: boolean) => void }) {
+function SentenceView({ frame, q, busy, onSubmit }: { frame: FrameProps; q: SentenceQuestion; busy: boolean; onSubmit: (a: string[], k: Kind, hint: boolean) => void }) {
   const { store } = useApp();
   const settings = useSettings();
   const word = store.byId.get(q.wordId);
   const [value, setValue] = useState('');
-  const [hint, setHint] = useState<'none' | 'en' | 'bn'>('none');
   const valueRef = useRef('');
   valueRef.current = value;
-  const cur = session.current!;
-  const remaining = useCountdown(cur.startedAt, cur.limitMs, () => onSubmit([valueRef.current], 'timeout', hint !== 'none'));
-  const bnOn = settings.language === 'en-bn';
+  const cur = frame.session.current!;
+  const remaining = useCountdown(cur.startedAt, cur.limitMs, () => onSubmit([valueRef.current], 'timeout', false));
+  const bnBefore = settings.language === 'en-bn' && settings.bengaliBeforeAnswer && !!word?.bengali;
   const submit = () => {
-    if (!busy) onSubmit([value], 'submit', hint !== 'none');
+    if (!busy) onSubmit([value], 'submit', false);
   };
   return (
-    <>
-      <div className="q-meta">
-        <span>
-          Question <strong>{session.index + 1}</strong> of {session.target}
-        </span>
-        {word && <DifficultyBadge d={word.difficulty} />}
-        <span>{REASON_TEXT[cur.reason]}</span>
-        <span title="Correct answers in a row">🔥 Streak {session.streak}</span>
-        <Timer remaining={remaining} limitMs={cur.limitMs} />
-      </div>
-      <div className="q-card">
-        <p className="q-instruction">{INSTRUCTIONS[q.mode]}</p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            submit();
-          }}
-        >
-          <p className="q-sentence">
-            {q.before}
-            <GapInput gap={q.gap} value={value} onChange={setValue} autoFocus label={`Missing letters, ${q.gap.hiddenLength} letters after “${q.gap.visible}”`} disabled={busy} />
-            {q.after}
-          </p>
-          <p className="letters">
-            {q.gap.visible.length + q.gap.hiddenLength} letters · {q.gap.hiddenLength} missing
-            {q.mode === 'endings' && word?.ending && <> · ending to type: {q.gap.hiddenLength} letters</>}
-            {q.baseHint && (
-              <>
-                {' '}
-                · base verb: <strong>{q.baseHint}</strong> (irregular)
-              </>
-            )}
-          </p>
-          {(hint !== 'none' || (bnOn && settings.bengaliBeforeAnswer)) && word && (
-            <div className="hint-box">
-              {(hint === 'en' || hint === 'bn') && word.definition && (
-                <div>
-                  <strong>Meaning:</strong> {word.definition}
-                </div>
-              )}
-              {bnOn && word.bengali && (hint === 'bn' || settings.bengaliBeforeAnswer) && (
-                <div className="bn">
-                  <strong>বাংলা:</strong> {word.bengali}
-                </div>
-              )}
-            </div>
-          )}
-          <div className="q-actions">
-            <button type="submit" className="btn primary big" disabled={busy}>
-              Submit <kbd>Enter</kbd>
+    <DetFrame
+      frame={frame}
+      timer={<Timer remaining={remaining} limitMs={cur.limitMs} />}
+      title={TITLES[q.mode]}
+      footer={
+        <>
+          {settings.showSkip && (
+            <button type="button" className="btn ghost" disabled={busy} onClick={() => onSubmit([value], 'skip', false)}>
+              Skip
             </button>
-            {settings.showSkip && (
-              <button type="button" className="btn" disabled={busy} onClick={() => onSubmit([value], 'skip', hint !== 'none')}>
-                Skip
-              </button>
-            )}
-            <span className="spacer" />
-            {word?.definition && hint === 'none' && (
-              <button type="button" className="btn small ghost" onClick={() => setHint('en')}>
-                💡 Hint: meaning
-              </button>
-            )}
-            {bnOn && word?.bengali && hint !== 'bn' && !settings.bengaliBeforeAnswer && (
-              <button type="button" className="btn small ghost bn" onClick={() => setHint('bn')}>
-                বাংলা hint
-              </button>
-            )}
-          </div>
-        </form>
-      </div>
-      <p className="tiny muted" style={{ marginTop: 12 }}>
-        Type only the missing letters (or the whole word). Spelling must be exact. Practice question, not an official DET item.
+          )}
+          <span className="det-foot-note">{REASON_TEXT[cur.reason]}</span>
+          <button type="button" className={`det-submit${value ? ' ready' : ''}`} disabled={busy} onClick={submit}>
+            Submit
+          </button>
+        </>
+      }
+    >
+      <p className="det-sentence">
+        {q.before}
+        <LetterBoxes
+          given={q.gap.visible}
+          length={q.gap.hiddenLength}
+          value={value}
+          onChange={setValue}
+          onEnter={submit}
+          autoFocus
+          disabled={busy}
+          label={`Missing letters: ${q.gap.hiddenLength} letters after “${q.gap.visible}”`}
+        />
+        {q.after}
       </p>
-    </>
+      {q.baseHint && (
+        <p className="det-note">
+          Base verb: <strong>{q.baseHint}</strong> (irregular)
+        </p>
+      )}
+      {bnBefore && <p className="det-note bn">বাংলা: {word!.bengali}</p>}
+    </DetFrame>
   );
 }
 
 // ---------------------------------------------------------------- paragraph question
 
-function ParagraphView({ session, q, busy, onSubmit }: { session: SessionRecord; q: ParagraphQuestion; busy: boolean; onSubmit: (a: string[], k: Kind, hint: boolean) => void }) {
+function ParagraphView({ frame, q, busy, onSubmit }: { frame: FrameProps; q: ParagraphQuestion; busy: boolean; onSubmit: (a: string[], k: Kind, hint: boolean) => void }) {
   const [values, setValues] = useState<string[]>(() => q.gaps.map(() => ''));
   const valuesRef = useRef(values);
   valuesRef.current = values;
   const inputs = useRef<(HTMLInputElement | null)[]>([]);
-  const cur = session.current!;
+  const cur = frame.session.current!;
   const remaining = useCountdown(cur.startedAt, cur.limitMs, () => onSubmit(valuesRef.current, 'timeout', false));
   const filled = values.filter((v) => v.trim()).length;
-  const onKey = (i: number) => (e: ReactKeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      if (i < q.gaps.length - 1) inputs.current[i + 1]?.focus();
-      else if (!busy) onSubmit(values, 'submit', false);
-    }
+  const submit = () => {
+    if (!busy) onSubmit(valuesRef.current, 'submit', false);
   };
+  const focusGap = (i: number) => inputs.current[i]?.focus();
   return (
-    <>
-      <div className="q-meta">
-        <span>
-          Paragraph <strong>{session.index + 1}</strong> of {session.target}
-        </span>
-        <DifficultyBadge d={q.difficulty} />
-        <span>
-          {filled}/{q.gaps.length} gaps filled
-        </span>
-        <Timer remaining={remaining} limitMs={cur.limitMs} />
-      </div>
-      <div className="q-card">
-        <h2>{q.title}</h2>
-        <p className="q-instruction">
-          Type the missing letters in each word. Start with the small words, then the content words. <kbd>Enter</kbd> or <kbd>Tab</kbd> moves to the next gap; <kbd>Enter</kbd> in the last gap submits. American spelling only.
-        </p>
-        <p className="q-sentence paragraph">
-          {q.segments.map((seg, i) => (
-            <span key={i}>
-              {seg}
-              {i < q.gaps.length && (
-                <GapInput
-                  gap={q.gaps[i]}
-                  value={values[i]}
-                  onChange={(v) => setValues((vs) => vs.map((x, k) => (k === i ? v : x)))}
-                  onKeyDown={onKey(i)}
-                  autoFocus={i === 0}
-                  inputRef={(el) => {
-                    inputs.current[i] = el;
-                  }}
-                  label={`Gap ${i + 1} of ${q.gaps.length}: ${q.gaps[i].hiddenLength} missing letters after “${q.gaps[i].visible}”`}
-                  disabled={busy}
-                />
-              )}
-            </span>
-          ))}
-        </p>
-        <div className="q-actions">
-          <button className="btn primary big" disabled={busy} onClick={() => onSubmit(values, 'submit', false)}>
-            Submit paragraph
+    <DetFrame
+      frame={frame}
+      timer={<Timer remaining={remaining} limitMs={cur.limitMs} />}
+      title="Complete the text with the correct words"
+      footer={
+        <>
+          <span className="det-foot-note">
+            {filled}/{q.gaps.length} words typed
+          </span>
+          <button type="button" className={`det-submit${filled ? ' ready' : ''}`} disabled={busy} onClick={submit}>
+            Submit
           </button>
-          <span className="muted small">Empty gaps score zero, so type a guess in every gap.</span>
-        </div>
-      </div>
-    </>
+        </>
+      }
+    >
+      <h2 className="det-passage-title">{q.title}</h2>
+      <p className="det-paragraph">
+        {q.segments.map((seg, i) => (
+          <span key={i}>
+            {seg}
+            {i < q.gaps.length && (
+              <LetterBoxes
+                given={q.gaps[i].visible}
+                length={q.gaps[i].hiddenLength}
+                value={values[i]}
+                onChange={(v) => setValues((vs) => vs.map((x, k) => (k === i ? v : x)))}
+                onFilled={() => focusGap(i + 1)}
+                onBackspaceEmpty={i > 0 ? () => focusGap(i - 1) : undefined}
+                onEnter={() => (i < q.gaps.length - 1 ? focusGap(i + 1) : submit())}
+                autoFocus={i === 0}
+                inputRef={(el) => {
+                  inputs.current[i] = el;
+                }}
+                label={`Word ${i + 1} of ${q.gaps.length}: ${q.gaps[i].hiddenLength} missing letters after “${q.gaps[i].visible}”`}
+                disabled={busy}
+              />
+            )}
+          </span>
+        ))}
+      </p>
+    </DetFrame>
   );
 }
 
@@ -526,7 +408,7 @@ function GapDetails({ g, word, before, after, mode, bn }: { g: GapOutcome; word:
   );
 }
 
-function Feedback({ session, outcome, busy, onNext }: { session: SessionRecord; outcome: QuestionOutcome; busy: boolean; onNext: () => void }) {
+function Feedback({ frame, outcome, busy, onNext }: { frame: FrameProps; outcome: QuestionOutcome; busy: boolean; onNext: () => void }) {
   const { store } = useApp();
   const settings = useSettings();
   const bn = settings.language === 'en-bn';
@@ -536,38 +418,49 @@ function Feedback({ session, outcome, busy, onNext }: { session: SessionRecord; 
     if (!busy) nextRef.current?.focus();
   }, [busy]);
   useNextKey(onNext, !busy);
+  const { session } = frame;
   const last = session.index >= session.target;
-  const paragraph = outcome.questionId.startsWith('read-complete|');
+  const kind = outcome.questionId.split('|')[0];
   const nextBtn = (
-    <button ref={nextRef} className="btn primary big" onClick={onNext} disabled={busy}>
-      {last ? 'Finish session' : paragraph ? 'Next paragraph' : 'Next question'} <kbd>Enter</kbd>
+    <button ref={nextRef} className="det-submit ready" onClick={onNext} disabled={busy}>
+      {last ? 'Finish session' : kind === 'read-complete' ? 'Next paragraph' : kind === 'interactive-reading' ? 'Next passage' : 'Next question'} <kbd>Enter</kbd>
     </button>
   );
-  if (paragraph) {
-    return <ParagraphFeedback session={session} outcome={outcome} nextBtn={nextBtn} bn={bn} />;
+  if (kind === 'read-complete') {
+    return (
+      <DetFrame frame={frame} title="Your answers" footer={nextBtn}>
+        <ParagraphFeedback outcome={outcome} bn={bn} />
+      </DetFrame>
+    );
+  }
+  if (kind === 'interactive-reading') {
+    return (
+      <DetFrame frame={frame} title="Your answers" footer={nextBtn} wide>
+        <InteractiveFeedback outcome={outcome} bn={bn} />
+      </DetFrame>
+    );
   }
   const g = outcome.gaps[0];
   const word = g ? store.byId.get(g.wordId) : undefined;
-  if (!g || !word) return <div className="card">{nextBtn}</div>;
+  if (!g || !word) return <DetFrame frame={frame} footer={nextBtn}>{null}</DetFrame>;
   const t = resultTitle(g, outcome.timedOut);
   const ctx = word.contexts.find((c) => c.id === g.contextId);
   return (
-    <>
-      <div className="q-card">
-        <p className="q-sentence">
-          {ctx ? (
-            <>
-              {ctx.sentence.slice(0, ctx.start)}
-              <span className={`gap ${g.result === 'correct' ? 'ok' : 'no'}`}>
-                <span className="filled">{ctx.sentence.slice(ctx.start, ctx.end)}</span>
-              </span>
-              {ctx.sentence.slice(ctx.end)}
-            </>
-          ) : (
-            g.correctAnswer
-          )}
-        </p>
-      </div>
+    <DetFrame frame={frame} footer={nextBtn}>
+      <p className="det-sentence">
+        {ctx ? (
+          <>
+            {ctx.sentence.slice(0, ctx.start)}
+            <span className={`gap ${g.result === 'correct' ? 'ok' : 'no'}`}>
+              <span className="filled">{ctx.sentence.slice(ctx.start, ctx.end)}</span>
+            </span>
+            {ctx.sentence.slice(ctx.end)}
+          </>
+        ) : (
+          g.correctAnswer
+        )}
+      </p>
+      {ctx?.src && <SourceLine src={ctx.src} />}
       <section className="feedback" aria-live="polite">
         <div className={`feedback-head ${t.cls}`}>
           {t.text}
@@ -575,18 +468,17 @@ function Feedback({ session, outcome, busy, onNext }: { session: SessionRecord; 
             {secs(outcome.responseMs)}
           </span>
         </div>
-        <GapDetails g={g} word={word} before={ctx ? ctx.sentence.slice(0, ctx.start) : ''} after={ctx ? ctx.sentence.slice(ctx.end) : ''} mode={outcome.questionId.split('|')[0]} bn={bn} />
+        <GapDetails g={g} word={word} before={ctx ? ctx.sentence.slice(0, ctx.start) : ''} after={ctx ? ctx.sentence.slice(ctx.end) : ''} mode={kind} bn={bn} />
       </section>
-      <div className="q-actions">{nextBtn}</div>
-    </>
+    </DetFrame>
   );
 }
 
-function ParagraphFeedback({ session, outcome, nextBtn, bn }: { session: SessionRecord; outcome: QuestionOutcome; nextBtn: JSX.Element; bn: boolean }) {
+function ParagraphFeedback({ outcome, bn }: { outcome: QuestionOutcome; bn: boolean }) {
   const { store } = useApp();
   const p = store.paragraphs.find((x) => outcome.questionId === `read-complete|${x.id}`);
   const [open, setOpen] = useState<number | null>(null);
-  if (!p) return <div className="card">{nextBtn}</div>;
+  if (!p) return <p className="muted">This paragraph is no longer in the library.</p>;
   const gaps = outcome.gaps;
   const correct = gaps.filter((g) => g.result === 'correct').length;
   const small = gaps.filter((g) => store.byId.get(g.wordId)?.isSmallWord);
@@ -624,10 +516,12 @@ function ParagraphFeedback({ session, outcome, nextBtn, bn }: { session: Session
             Small grammar words: <strong>{smallCorrect}/{small.length}</strong> · Content words: <strong>{contentCorrect}/{content}</strong>
             {small.length > smallCorrect && <span className="muted"> — small words are the quickest points; fill them first.</span>}
           </div>
-          <p className="q-sentence paragraph" style={{ margin: 0 }}>
+          <h2 className="det-passage-title">{p.title}</h2>
+          <p className="det-paragraph" style={{ margin: 0 }}>
             {parts}
           </p>
           <p className="tiny muted">Green = correct, red = missed. Select any word to see the explanation.</p>
+          {p.src && <SourceLine src={p.src} />}
           {wrong.length > 0 && (
             <div className="explain">
               <h4>Your mistakes</h4>
@@ -655,9 +549,26 @@ function ParagraphFeedback({ session, outcome, nextBtn, bn }: { session: Session
           <GapDetails g={sel} word={selWord} before={p.text.slice(0, selGap.start)} after={p.text.slice(selGap.end)} mode="read-complete" bn={bn} />
         </section>
       )}
-      <div className="q-actions">{nextBtn}</div>
-      <p className="tiny muted">Session paragraph {session.index} of {session.target}.</p>
     </>
+  );
+}
+
+/** Where a real sentence or text comes from (title, author, licence). */
+function SourceLine({ src }: { src: string }) {
+  const { store } = useApp();
+  const cr = store.credit(src);
+  if (!cr) return null;
+  return (
+    <p className="tiny muted" style={{ textAlign: 'center' }}>
+      Source:{' '}
+      {cr.url ? (
+        <a href={cr.url} target="_blank" rel="noreferrer">
+          {cr.label}
+        </a>
+      ) : (
+        cr.label
+      )}
+    </p>
   );
 }
 

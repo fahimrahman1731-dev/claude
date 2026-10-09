@@ -2,7 +2,7 @@ import Dexie, { type Table } from 'dexie';
 import type { AdaptiveState } from '../engine/adaptive';
 import type { Settings } from '../engine/config';
 import type { SelectionReason } from '../engine/selection';
-import type { AttemptRecord, Context, Mode, MistakeRecord, Question, ResultKind, VocabWord, WordProgress } from '../engine/types';
+import type { AttemptRecord, Context, InteractiveAnswers, IrPart, Mode, MistakeRecord, Question, ResultKind, VocabWord, WordProgress } from '../engine/types';
 
 export interface GapOutcome {
   wordId: string;
@@ -20,10 +20,27 @@ export interface GapOutcome {
   previousMistakes: number;
 }
 
+/** Result of one comprehension part of an Interactive Reading set. */
+export interface IrPartOutcome {
+  part: IrPart;
+  /** 0 for single parts; 0 or 1 for the two Highlight the Answer questions. */
+  n: number;
+  correct: boolean;
+  /** 0 to 1 (Highlight the Answer gives partial credit; the others are 0 or 1). */
+  score: number;
+  /** Option chosen (choice parts) or text highlighted (highlight parts); '' = no answer. */
+  chosen: string;
+  expected: string;
+}
+
 export interface QuestionOutcome {
   questionId: string;
   index: number;
   gaps: GapOutcome[];
+  /** Interactive Reading only: the comprehension parts (the missing words are in `gaps`). */
+  parts?: IrPartOutcome[];
+  /** Interactive Reading only: the option the student picked for each missing word. */
+  blankChoices?: (string | null)[];
   responseMs: number;
   timedOut: boolean;
   skipped: boolean;
@@ -36,6 +53,8 @@ export interface CurrentQuestion {
   startedAt: number;
   /** null = untimed. */
   limitMs: number | null;
+  /** Interactive Reading: answers given so far, saved after each part so a refresh resumes there. */
+  interactive?: InteractiveAnswers;
 }
 
 export interface SessionRecord {
@@ -57,6 +76,8 @@ export interface SessionRecord {
   lastOutcome?: QuestionOutcome;
   lastWordId?: string;
   paragraphIds: string[];
+  /** Interactive Reading sets served in this session (optional: older sessions have none). */
+  interactiveIds?: string[];
   tally: Record<ResultKind, number>;
   /** Consecutive correct answers in this session, and the best run. */
   streak: number;
@@ -74,7 +95,22 @@ export interface Meta {
   seq: number;
   adaptive: AdaptiveState;
   paragraphServed: Record<string, number>;
+  /** Interactive Reading sets served (optional: older saved data has none). */
+  interactiveServed?: Record<string, number>;
   createdAt: number;
+}
+
+/** One answered comprehension part of an Interactive Reading set (for statistics). */
+export interface IrResultRecord {
+  /** session : question number : part : n, so a repeated submit cannot be stored twice. */
+  id: string;
+  sessionId: string;
+  setId: string;
+  part: IrPart;
+  correct: boolean;
+  score: number;
+  answered: boolean;
+  at: number;
 }
 
 export interface ImportRecord {
@@ -107,6 +143,7 @@ export class AppDB extends Dexie {
   customWords!: Table<VocabWord, string>;
   aiContexts!: Table<StoredContext, string>;
   imports!: Table<ImportRecord, string>;
+  irResults!: Table<IrResultRecord, string>;
 
   constructor(name = 'det-vocab-trainer') {
     super(name);
@@ -119,6 +156,10 @@ export class AppDB extends Dexie {
       customWords: 'id, word',
       aiContexts: 'id, wordId',
       imports: 'id, at',
+    });
+    // Version 2 adds Interactive Reading results. Existing data is kept as it is.
+    this.version(2).stores({
+      irResults: 'id, sessionId, setId, part, at',
     });
   }
 }

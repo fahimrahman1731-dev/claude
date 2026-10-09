@@ -112,7 +112,8 @@ export function SettingsPage() {
           ]}
         />
         <p className="small muted" style={{ margin: 0 }}>
-          Presets: quick spelling 10 s, standard sentence 20 s, difficult vocabulary 30 s, paragraph 3 min. These are practice settings, not official DET timings.
+          Timed presets: Fill in the Blanks and spelling 20 s (30 s for advanced words), small words 10 s, Read and Complete 3 min per text, Interactive Reading 8 min per
+          passage with its 6 questions.
         </p>
         {s.timerMode === 'timed' && (
           <label className="check">
@@ -138,12 +139,30 @@ export function SettingsPage() {
       </div>
 
       <div className="card stack">
+        <h2>Letters given as the clue</h2>
+        <Segmented
+          label="Letters given"
+          value={s.clueRule}
+          onChange={(v) => set({ clueRule: v })}
+          options={[
+            { value: 'max3', label: '1 to 3 letters' },
+            { value: 'half', label: 'Half the word (DET Read and Complete rule)' },
+          ]}
+        />
+        <p className="small muted" style={{ margin: 0 }}>
+          1 to 3 letters (default): short words show 1 or 2 letters and long words at most 3, e.g. <code>con_____</code> for “confusing”. Half the word: the official Read and
+          Complete rule, e.g. <code>conf_____</code>. Word Endings always shows the stem, because the ending is what it practises.
+        </p>
+      </div>
+
+      <div className="card stack">
         <h2>Sessions and reviews</h2>
         <div className="grid grid-3">
           <Num label="Questions per session" value={s.questionsPerSession} min={1} max={200} onChange={(n) => set({ questionsPerSession: n })} />
           <Num label="New words per session" value={s.newWordsPerSession} min={0} max={200} onChange={(n) => set({ newWordsPerSession: n })} />
           <Num label="Review questions per session" value={s.reviewsPerSession} min={0} max={200} onChange={(n) => set({ reviewsPerSession: n })} hint="Mistake follow-ups inside a session are always added on top." />
-          <Num label="Paragraphs per Read and Complete session" value={s.paragraphsPerSession} min={1} max={20} onChange={(n) => set({ paragraphsPerSession: n })} />
+          <Num label="Texts per Read and Complete session" value={s.paragraphsPerSession} min={1} max={50} onChange={(n) => set({ paragraphsPerSession: n })} />
+          <Num label="Passages per Interactive Reading session" value={s.interactivePerSession} min={1} max={20} onChange={(n) => set({ interactivePerSession: n })} />
           <Num label="Daily goal (questions)" value={s.dailyGoal} min={1} max={1000} onChange={(n) => set({ dailyGoal: n })} />
         </div>
         <div className="stack" style={{ gap: 6 }}>
@@ -193,7 +212,7 @@ export function SettingsPage() {
             <span>
               Show the Bengali meaning before I answer
               <br />
-              <span className="small muted">Off = exam-like: Bengali appears only when you ask for a hint, and in the feedback.</span>
+              <span className="small muted">Off = exam-like: Bengali appears only in the feedback after you answer.</span>
             </span>
           </label>
         )}

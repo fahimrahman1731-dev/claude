@@ -1,4 +1,4 @@
-import type { Context, Paragraph, VocabData, VocabWord } from '../engine/types';
+import type { Context, InteractiveSet, Paragraph, TextSource, VocabData, VocabWord } from '../engine/types';
 
 /**
  * In-memory view of the vocabulary: the imported dataset (read-only, shipped
@@ -11,6 +11,9 @@ export class VocabStore {
   readonly byWord: Map<string, VocabWord>;
   readonly families: Map<string, VocabWord[]>;
   readonly paragraphs: Paragraph[];
+  readonly interactive: InteractiveSet[];
+  /** Real texts used for sentences and passages, with attribution. */
+  readonly texts: Map<string, TextSource>;
   readonly importedCount: number;
 
   constructor(
@@ -37,6 +40,16 @@ export class VocabStore {
       this.families.set(w.family, list);
     }
     this.paragraphs = data.paragraphs;
+    this.interactive = data.interactive ?? [];
+    this.texts = new Map((data.texts ?? []).map((t) => [t.id, t]));
+  }
+
+  /** Attribution for a sentence's source id ('wordnet' or a text id). */
+  credit(src: string | undefined): { label: string; url?: string } | undefined {
+    if (!src) return undefined;
+    if (src === 'wordnet') return { label: 'Example sentence from Princeton WordNet 3.0', url: 'https://wordnet.princeton.edu/' };
+    const t = this.texts.get(src);
+    return t ? { label: t.credit, url: t.url } : { label: src };
   }
 
   familyOf(w: VocabWord): VocabWord[] {

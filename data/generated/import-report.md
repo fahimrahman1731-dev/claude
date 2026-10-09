@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `c21a0dc0eafa`, generated 2026-10-08T14:28:58.418Z.
+Data version `bb55f09818f8`, generated 2026-10-09T07:39:24.794Z.
 
 ## Totals
 
@@ -9,22 +9,21 @@ Data version `c21a0dc0eafa`, generated 2026-10-08T14:28:58.418Z.
 | Source entries detected (with repeats) | 4086 |
 | Entries accepted | 4052 |
 | Entries rejected (with reasons below) | 34 |
-| Unique spelling targets imported | 2601 |
+| Unique spelling targets imported | 5847 |
 | Duplicate entries merged | 1451 |
-| Definitions taken from the study materials | 349 |
-| Definitions written for the app (source had none) | 2252 |
+| Definitions taken from the study materials | 347 |
 | Entries with missing definitions | 0 |
-| Bengali glosses (written for the app; sources have none) | 2601 |
+| Words with a Bengali meaning | 4103 |
 | Entries needing example sentences (fewer than 2 valid) | 0 |
-| Practice-ready words (2+ distinct valid sentences) | 2601 |
-| Sentence contexts | 5202 |
-| Read and Complete paragraphs | 45 |
-| Paragraph gaps | 900 |
-| Total practice contexts | 6102 |
+| Practice-ready words (2+ distinct valid sentences) | 5847 |
+| Sentence contexts | 21003 |
+| Read and Complete paragraphs | 320 |
+| Paragraph gaps | 3874 |
+| Total practice contexts | 24877 |
 | Failed sources | 0 |
 | Failed sections | 0 |
 
-Priority: high 349, medium 1201, low 1051. Difficulty: easy 946, intermediate 671, advanced 984. Small grammar words: 173.
+Priority: high 349, medium 1196, low 4302. Difficulty: easy 1941, intermediate 1727, advanced 2179. Small grammar words: 173.
 
 ## Sources and sections
 
@@ -68,6 +67,53 @@ Priority: high 349, medium 1201, low 1051. Difficulty: easy 946, intermediate 67
 ## Notes
 
 - Bank 1 says 37 more small words filled one gap each, but does not list them. They cannot be imported.
+
+## Real collected material
+
+Sentences, Read and Complete texts and Interactive Reading passages come from real, openly licensed texts (see data/collected and scripts/collect/collect.py). Nothing is copied from live DET tests.
+
+| Measure | Count |
+| --- | --- |
+| Sentences: real (collected) | 20505 |
+| Sentences: WordNet examples | 131 |
+| Sentences: written for the app (only where too few real ones exist) | 367 |
+| Words practised only with real sentences | 5605 |
+| Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | 3257 |
+| Words deleted as unrealistic DET words | 11 |
+| Read and Complete texts | clear 161, ose 106, ostx 53 (from 3795 candidates) |
+| Interactive Reading sets | 1 |
+| Definitions: study materials / WordNet / app | 347 / 3257 / 2243 |
+| Bengali: app / Apertium dictionary / none | 2590 / 1513 / 1744 |
+| Source texts used | 3271 |
+
+Words added by level: A1 463, A2 527, B1 922, B2 803, C1 242, C2 29, list only 271.
+
+### Deleted words
+
+| Word | Reason |
+| --- | --- |
+| corroborates | Rare word (frequency 2.4) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| exacerbation | Not an official DET word, in no trusted word list, and very rare (frequency 2.3). |
+| exemplifies | Rare word (frequency 2.9) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| fluctuate | Not an official DET word and only in the C2 list (frequency 3.0): too rare for the DET’s mostly B1–B2 vocabulary. |
+| hokum | Rare word (frequency 2.0) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| hullabaloo | Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| kerb | British-only word (US: curb). The DET asks for American spelling wherever you type. |
+| miasma | Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| pram | British-only word (US: stroller (baby carriage)). The DET asks for American spelling wherever you type. |
+| profuse | Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+| wavered | Rare word (frequency 2.7) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer. |
+
+### Licences of the texts used
+
+- CC BY-SA 3.0 and GFDL: 199 texts
+- CC BY-SA 3.0: 196 texts
+- CC BY 4.0: 511 texts
+- CC BY 3.0: 11 texts
+- CC BY-SA: 1 texts
+- CC BY-SA 4.0: 266 texts
+- CC BY-NC-SA 4.0: 2086 texts
+- CC BY-NC 4.0: 1 texts
 
 ## Rejected entries
 

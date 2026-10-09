@@ -1,8 +1,14 @@
 export type Difficulty = 'easy' | 'intermediate' | 'advanced';
 export type Priority = 'high' | 'medium' | 'low';
 
-/** The five practice modes. They stay separate because the DET tasks follow different rules. */
-export type Mode = 'read-complete' | 'fill-blanks' | 'spelling' | 'small-words' | 'endings';
+/**
+ * Practice modes. The first three are the DET reading tasks; the other three are
+ * extra vocabulary drills. They stay separate because each follows its own rules.
+ */
+export type Mode = 'fill-blanks' | 'read-complete' | 'interactive-reading' | 'spelling' | 'small-words' | 'endings';
+
+/** Modes that ask one sentence with one word to complete. */
+export type SentenceMode = 'fill-blanks' | 'spelling' | 'small-words' | 'endings';
 
 /**
  * How one question ended.
@@ -15,7 +21,7 @@ export type ResultKind = 'correct' | 'incorrect' | 'timeout' | 'unanswered' | 's
 
 export type MasteryStatus = 'new' | 'learning' | 'mastered';
 
-export type ContextOrigin = 'authored' | 'custom' | 'ai' | 'paragraph';
+export type ContextOrigin = 'authored' | 'collected' | 'custom' | 'ai' | 'paragraph' | 'interactive';
 
 export interface Context {
   id: string;
@@ -26,6 +32,18 @@ export interface Context {
   start: number;
   end: number;
   origin: ContextOrigin;
+  /** Where a collected sentence comes from: a text id (see VocabData.texts) or 'wordnet'. */
+  src?: string;
+}
+
+/** A real text that sentences, Read and Complete texts or Interactive Reading passages were taken from. */
+export interface TextSource {
+  id: string;
+  title: string;
+  /** Attribution line: title, author, site, licence. */
+  credit: string;
+  url?: string;
+  license: string;
 }
 
 export interface SourceRef {
@@ -38,11 +56,25 @@ export interface VocabWord {
   word: string;
   pos: string[];
   definition: string;
-  /** "source" = taken from the study materials; "app" = written for this app; "custom" = typed by the student. */
-  definitionOrigin: 'source' | 'app' | 'custom';
+  /**
+   * "source" = taken from the study materials; "dictionary" = Princeton WordNet;
+   * "app" = written for this app; "custom" = typed by the student.
+   */
+  definitionOrigin: 'source' | 'dictionary' | 'app' | 'custom';
   sourceDefinitions: string[];
+  /** Princeton WordNet definition (most common sense for the word's part of speech), when it is not already the main definition. */
+  dictionaryDefinition?: string;
   bengali?: string;
-  bengaliOrigin?: 'app' | 'custom';
+  /** "dictionary" = Apertium English–Bengali dictionary; "app" = written for this app; "custom" = typed by the student. */
+  bengaliOrigin?: 'dictionary' | 'app' | 'custom';
+  /** Bengali equivalents listed in the Apertium English–Bengali dictionary (collected, may be less specific). */
+  bengaliDictionary?: string[];
+  /** CEFR level from CEFR-J (A1–B2) or Octanove (C1–C2), for the word or its base form. */
+  cefr?: string;
+  /** Trusted word lists that contain the word or its base form (NGSL, NAWL). */
+  lists?: string[];
+  /** wordfreq Zipf frequency (about 3 = once per million words). */
+  zipf?: number;
   /** Base word this form comes from (walked → walk), if any. */
   base?: string;
   /** Family key shared by related forms (develop, developed, development …). */
@@ -80,6 +112,8 @@ export interface Paragraph {
   difficulty: Difficulty;
   text: string;
   gaps: ParagraphGap[];
+  /** Source text id (see VocabData.texts) for collected texts. */
+  src?: string;
 }
 
 export interface VocabData {
@@ -88,6 +122,9 @@ export interface VocabData {
   sources: SourceRef[];
   words: VocabWord[];
   paragraphs: Paragraph[];
+  interactive: InteractiveSet[];
+  /** Real texts used for sentences, Read and Complete and Interactive Reading, with their attribution. */
+  texts?: TextSource[];
 }
 
 /** One gap the student has to complete. */
@@ -103,7 +140,7 @@ export interface Gap {
 export interface SentenceQuestion {
   kind: 'sentence';
   id: string;
-  mode: Exclude<Mode, 'read-complete'>;
+  mode: SentenceMode;
   wordId: string;
   contextId: string;
   sentence: string;
@@ -130,7 +167,89 @@ export interface ParagraphQuestion {
   origin: 'paragraph';
 }
 
-export type Question = SentenceQuestion | ParagraphQuestion;
+export type Question = SentenceQuestion | ParagraphQuestion | InteractiveQuestion;
+
+// ---------------------------------------------------------------- Interactive Reading
+
+/** The parts of one Interactive Reading set, in the order the DET asks them. */
+export type IrPart = 'complete-sentences' | 'complete-passage' | 'highlight' | 'main-idea' | 'title';
+
+/** A missing word in "Complete the Sentences": the answer plus the wrong options (traps). */
+export interface IrBlank {
+  /** Offsets of the answer word in the passage text. */
+  start: number;
+  end: number;
+  answer: string;
+  distractors: string[];
+  /** Library word for the answer, when there is one (its progress is updated). */
+  wordId?: string;
+  /** Why the answer fits and the traps do not (shown after answering). */
+  why?: string;
+}
+
+/** A multiple-choice part: the correct option and the wrong ones. */
+export interface IrChoice {
+  answer: string;
+  distractors: string[];
+  why?: string;
+}
+
+/** "Highlight the Answer": a question whose answer is a span of the passage. */
+export interface IrHighlight {
+  question: string;
+  /** Offsets of the expected answer in the passage text. */
+  start: number;
+  end: number;
+}
+
+export interface InteractiveSet {
+  id: string;
+  title: string;
+  topic: string;
+  genre: 'narrative' | 'expository';
+  difficulty: Difficulty;
+  /** Full passage; paragraphs are separated by a blank line. */
+  text: string;
+  /** End offset of the part of the passage shown during "Complete the Sentences". */
+  sentencesPartEnd: number;
+  blanks: IrBlank[];
+  /** The sentence removed in "Complete the Passage" (offsets in `text`) and the wrong sentences offered with it. */
+  missing: { start: number; end: number; distractors: string[]; why?: string };
+  highlights: IrHighlight[];
+  idea: IrChoice;
+  titles: IrChoice;
+  source: { id: string; title: string; author?: string; url?: string; license: string; note?: string };
+}
+
+/** One option list as served: shuffled, with the index of the right option. */
+export interface IrServedChoice {
+  options: string[];
+  answer: number;
+}
+
+export interface InteractiveQuestion {
+  kind: 'interactive';
+  id: string;
+  mode: 'interactive-reading';
+  setId: string;
+  difficulty: Difficulty;
+  origin: 'interactive';
+  blanks: IrServedChoice[];
+  missing: IrServedChoice;
+  idea: IrServedChoice;
+  titles: IrServedChoice;
+}
+
+/** What the student chose. null = not answered (time ran out). */
+export interface InteractiveAnswers {
+  /** Index of the part the student is on (saved so a refresh resumes there). */
+  step: number;
+  blanks: (number | null)[];
+  missing: number | null;
+  highlights: ({ start: number; end: number } | null)[];
+  idea: number | null;
+  title: number | null;
+}
 
 export type ErrorType =
   | 'empty'

@@ -12,7 +12,8 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseAuthoredParagraphs, parseAuthoredWords, type AuthoredParagraph, type AuthoredWord } from './lib/authored';
-import { buildVocab, type BuildReport } from './lib/build-lib';
+import { buildVocab, type BuildReport, type CollectedInput } from './lib/build-lib';
+import { loadInteractive } from './lib/interactive-build';
 import { extractAll, type SourceManifestEntry } from './lib/extract-lib';
 
 const root = join(import.meta.dirname, '..');
@@ -41,7 +42,19 @@ if (existsSync(parDir)) {
   }
 }
 
-const { data, report } = buildVocab(extraction, authored, paragraphs, errors);
+// Collected real material (made by scripts/collect/collect.py and committed).
+const collectedDir = join(root, 'data/collected');
+let collected: CollectedInput | undefined;
+if (existsSync(join(collectedDir, 'texts.json')) && existsSync(join(collectedDir, 'lexicon.json'))) {
+  collected = {
+    texts: JSON.parse(readFileSync(join(collectedDir, 'texts.json'), 'utf8')),
+    lexicon: JSON.parse(readFileSync(join(collectedDir, 'lexicon.json'), 'utf8')),
+    sentences: existsSync(join(collectedDir, 'sentences.json')) ? JSON.parse(readFileSync(join(collectedDir, 'sentences.json'), 'utf8')) : [],
+  };
+} else console.warn('data/collected is missing: building from the study materials and authored data only.');
+const ir = collected ? loadInteractive(join(root, 'data/authored/interactive'), collected.texts) : { sets: [], issues: [] };
+
+const { data, report } = buildVocab(extraction, authored, paragraphs, errors, collected, ir.sets, ir.issues);
 // The version is a hash of the content only, so an unchanged rebuild keeps the
 // previous timestamp and writes identical files.
 const body = JSON.stringify([{ ...data, version: '', generatedAt: '' }, { ...report, generatedAt: '' }]);
@@ -59,6 +72,13 @@ mkdirSync(join(root, 'data/generated'), { recursive: true });
 writeFileSync(join(root, 'data/generated/import-report.md'), toMarkdown(report, data.version));
 
 const t = report.totals;
+const cs = report.collected;
+if (cs) {
+  console.log(`Deleted as unrealistic DET words: ${cs.deleted.length}; added from trusted lists: ${cs.added.count}`);
+  console.log(`Sentences: ${cs.contextOrigins.collected} real, ${cs.contextOrigins.dictionary} WordNet, ${cs.contextOrigins.authored} written for the app`);
+  console.log(`Read and Complete texts: ${JSON.stringify(cs.paragraphsByCorpus)} (from ${cs.paragraphCandidates} candidates); Interactive Reading sets: ${cs.interactiveSets}`);
+  if (cs.interactiveIssues.length) console.log(`Interactive Reading issues:\n  ${cs.interactiveIssues.join('\n  ')}`);
+}
 console.log(`Sources: ${report.sources.map((s) => `${s.title} [${s.status}]`).join('; ')}`);
 console.log(`Entries detected ${t.sourceEntriesDetected}, accepted ${t.sourceEntriesAccepted}, rejected ${t.rejectedEntries}`);
 console.log(`Unique spelling targets ${t.uniqueSpellingTargets} (duplicates merged ${t.duplicatesMerged})`);
@@ -72,7 +92,7 @@ if (errors.length) console.log(`Authoring errors:\n  ${errors.join('\n  ')}`);
 if (report.paragraphIssues.length) console.log(`Paragraph issues:\n  ${report.paragraphIssues.join('\n  ')}`);
 const failed = t.failedSources + t.failedSections;
 if (failed) console.error(`WARNING: ${t.failedSources} source(s) and ${t.failedSections} section(s) failed to import. See the report.`);
-if (strict && (failed || t.needingSentences || t.missingDefinitions || report.invalidSentences.length || errors.length)) {
+if (strict && (failed || t.needingSentences || t.missingDefinitions || report.invalidSentences.length || errors.length || cs?.interactiveIssues.length)) {
   console.error('Strict mode: the import is incomplete.');
   process.exit(1);
 }
@@ -89,9 +109,8 @@ function toMarkdown(r: BuildReport, version: string): string {
     ['Unique spelling targets imported', t.uniqueSpellingTargets],
     ['Duplicate entries merged', t.duplicatesMerged],
     ['Definitions taken from the study materials', t.definitionsFromSources],
-    ['Definitions written for the app (source had none)', t.definitionsWrittenForApp],
     ['Entries with missing definitions', t.missingDefinitions],
-    ['Bengali glosses (written for the app; sources have none)', t.bengaliGlosses],
+    ['Words with a Bengali meaning', t.bengaliGlosses],
     ['Entries needing example sentences (fewer than 2 valid)', t.needingSentences],
     ['Practice-ready words (2+ distinct valid sentences)', t.practiceReady],
     ['Sentence contexts', t.sentenceContexts],
@@ -112,6 +131,31 @@ function toMarkdown(r: BuildReport, version: string): string {
     lines.push('');
   }
   if (r.notes.length) lines.push('## Notes', '', ...r.notes.map((n) => `- ${n}`), '');
+  if (r.collected) {
+    const c = r.collected;
+    const o = c.contextOrigins;
+    lines.push('## Real collected material', '');
+    lines.push('Sentences, Read and Complete texts and Interactive Reading passages come from real, openly licensed texts (see data/collected and scripts/collect/collect.py). Nothing is copied from live DET tests.', '');
+    lines.push('| Measure | Count |', '| --- | --- |');
+    lines.push(`| Sentences: real (collected) | ${o.collected} |`);
+    lines.push(`| Sentences: WordNet examples | ${o.dictionary} |`);
+    lines.push(`| Sentences: written for the app (only where too few real ones exist) | ${o.authored} |`);
+    lines.push(`| Words practised only with real sentences | ${c.wordsWithOnlyCollected} |`);
+    lines.push(`| Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | ${c.added.count} |`);
+    lines.push(`| Words deleted as unrealistic DET words | ${c.deleted.length} |`);
+    lines.push(`| Read and Complete texts | ${Object.entries(c.paragraphsByCorpus).map(([k, v]) => `${k} ${v}`).join(', ')} (from ${c.paragraphCandidates} candidates) |`);
+    lines.push(`| Interactive Reading sets | ${c.interactiveSets} |`);
+    lines.push(`| Definitions: study materials / WordNet / app | ${c.definitionOrigins.source ?? 0} / ${c.definitionOrigins.dictionary ?? 0} / ${c.definitionOrigins.app ?? 0} |`);
+    lines.push(`| Bengali: app / Apertium dictionary / none | ${c.bengaliOrigins.app ?? 0} / ${c.bengaliOrigins.dictionary ?? 0} / ${c.bengaliOrigins.none ?? 0} |`);
+    lines.push(`| Source texts used | ${c.texts} |`, '');
+    lines.push(`Words added by level: ${Object.entries(c.added.byLevel).sort().map(([k, v]) => `${k} ${v}`).join(', ')}.`, '');
+    lines.push('### Deleted words', '', '| Word | Reason |', '| --- | --- |');
+    for (const x of c.deleted) lines.push(`| ${x.word} | ${x.reason} |`);
+    lines.push('', '### Licences of the texts used', '');
+    for (const [k, v] of Object.entries(c.licences)) lines.push(`- ${k}: ${v} texts`);
+    lines.push('');
+    if (c.interactiveIssues.length) lines.push('### Interactive Reading sets left out', '', ...c.interactiveIssues.map((x) => `- ${x}`), '');
+  }
   lines.push('## Rejected entries', '', '| Entry | Section | Reason |', '| --- | --- | --- |');
   for (const x of r.rejected) lines.push(`| ${x.raw.replace(/\|/g, '/')} | ${x.sectionId} | ${x.reason} |`);
   lines.push('');

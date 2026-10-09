@@ -1,3 +1,4 @@
+import type { ClueRule } from './text';
 import type { Difficulty, Mode } from './types';
 
 /**
@@ -73,11 +74,14 @@ export const TIMER_PRESETS = {
   standard: 20,
   difficult: 30,
   paragraph: 180,
+  /** One Interactive Reading passage with its 6 questions. */
+  interactive: 480,
 };
 
 /** Default seconds per question for each mode in Timed Mode. */
 export const MODE_TIMERS: Record<Mode, number> = {
   'read-complete': TIMER_PRESETS.paragraph,
+  'interactive-reading': TIMER_PRESETS.interactive,
   'fill-blanks': TIMER_PRESETS.standard,
   spelling: TIMER_PRESETS.standard,
   'small-words': TIMER_PRESETS.quick,
@@ -108,6 +112,9 @@ export interface Settings {
   retentionReviews: boolean;
   showSkip: boolean;
   paragraphsPerSession: number;
+  interactivePerSession: number;
+  /** How many letters are given as the clue: "max3" = 1 to 3 letters (default), "half" = DET Read and Complete rule. */
+  clueRule: ClueRule;
   /** Optional URL of a server that generates extra practice sentences (see server/ai-proxy.mjs). Empty = off. */
   aiEndpoint: string;
 }
@@ -121,7 +128,7 @@ export const DEFAULT_SETTINGS: Settings = {
   difficulty: 'easy',
   adaptive: true,
   timerMode: 'timed',
-  customTimers: { ...MODE_TIMERS, 'fill-blanks': 30, spelling: 30, 'small-words': 15, endings: 30, 'read-complete': 240 },
+  customTimers: { ...MODE_TIMERS, 'fill-blanks': 30, spelling: 30, 'small-words': 15, endings: 30, 'read-complete': 240, 'interactive-reading': 600 },
   longerTimerForAdvanced: true,
   questionsPerSession: 20,
   newWordsPerSession: 8,
@@ -135,6 +142,8 @@ export const DEFAULT_SETTINGS: Settings = {
   retentionReviews: true,
   showSkip: true,
   paragraphsPerSession: 3,
+  interactivePerSession: 2,
+  clueRule: 'max3',
   aiEndpoint: '',
 };
 
@@ -143,39 +152,47 @@ export function questionSeconds(settings: Settings, mode: Mode, difficulty: Diff
   if (settings.timerMode === 'untimed') return null;
   if (settings.timerMode === 'custom') return Math.max(1, settings.customTimers[mode] ?? MODE_TIMERS[mode]);
   const base = MODE_TIMERS[mode];
-  if (mode !== 'read-complete' && settings.longerTimerForAdvanced && difficulty === 'advanced') return Math.max(base, TIMER_PRESETS.difficult);
+  if (mode !== 'read-complete' && mode !== 'interactive-reading' && settings.longerTimerForAdvanced && difficulty === 'advanced') return Math.max(base, TIMER_PRESETS.difficult);
   return base;
 }
 
+/** The three DET reading tasks, in the order the DET practice page lists them. */
+export const READING_MODES = ['fill-blanks', 'read-complete', 'interactive-reading'] as const;
+/** Extra drills that are not DET question types. */
+export const DRILL_MODES = ['spelling', 'small-words', 'endings'] as const;
+
 export const MODE_INFO: Record<Mode, { title: string; short: string; description: string }> = {
-  'read-complete': {
-    title: 'Read and Complete',
-    short: 'A',
-    description:
-      'A paragraph with many half-written words. Type the missing letters of each one. Small grammar words and content words are scored separately. American spelling only.',
-  },
   'fill-blanks': {
     title: 'Fill in the Blanks',
-    short: 'B',
+    short: 'FB',
     description:
-      'One sentence, one partly visible noun, verb, adjective or adverb. Use the clue word and the grammar to finish it. Small words like "the" and "of" never appear here.',
+      'One sentence with one missing word. The first 1 to 3 letters are given; type the rest, one letter per box. Nouns, verbs, adjectives and adverbs only.',
+  },
+  'read-complete': {
+    title: 'Read and Complete',
+    short: 'RC',
+    description:
+      'A short text with many unfinished words. Type the missing letters of each one. Small grammar words and content words are scored separately. American spelling only.',
+  },
+  'interactive-reading': {
+    title: 'Interactive Reading',
+    short: 'IR',
+    description:
+      'One passage, six questions: choose missing words, choose the missing sentence, highlight two answers, pick the main idea and the best title.',
   },
   spelling: {
-    title: 'Word Spelling Practice',
-    short: 'C',
-    description:
-      'Spell one word from its first half, with the letter count shown. Leans on spelling traps, endings and words you have missed before.',
+    title: 'Word Spelling',
+    short: 'S',
+    description: 'Spell one word from its first letters. Leans on spelling traps, endings and words you have missed before.',
   },
   'small-words': {
     title: 'Small Grammar Words',
     short: 'D',
-    description:
-      'The, and, to, of, in … About 4 in 10 Read and Complete gaps in the guide’s sample were small words. Quick, short drills.',
+    description: 'The, and, to, of, in … About 4 in 10 Read and Complete gaps in the guide’s sample were small words. Quick drills.',
   },
   endings: {
     title: 'Word Endings and Families',
     short: 'E',
-    description:
-      'The stem is shown; type the ending (-tion, -ment, -ness, -ed, -ing …). Irregular forms show the base verb as a hint.',
+    description: 'The stem is shown; type the ending (-tion, -ment, -ness, -ed, -ing …). Irregular forms show the base verb as a hint.',
   },
 };

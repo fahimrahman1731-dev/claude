@@ -1,6 +1,6 @@
 import { IRREGULAR } from './morphology';
-import { halfSplit } from './text';
-import type { Context, Gap, Mode, Paragraph, ParagraphQuestion, SentenceQuestion, VocabWord } from './types';
+import { clueSplit, type ClueRule } from './text';
+import type { Context, Gap, Mode, Paragraph, ParagraphQuestion, SentenceMode, SentenceQuestion, VocabWord } from './types';
 
 /** Which words each mode practices. Kept separate so DET task rules are never mixed. */
 export function inModePool(w: VocabWord, mode: Mode): boolean {
@@ -16,7 +16,8 @@ export function inModePool(w: VocabWord, mode: Mode): boolean {
     case 'endings':
       return !!w.ending || isIrregular(w);
     case 'read-complete':
-      return false; // paragraphs are chosen separately
+    case 'interactive-reading':
+      return false; // paragraphs and passages are chosen separately
   }
 }
 
@@ -24,10 +25,11 @@ export function isIrregular(w: VocabWord): boolean {
   return !!IRREGULAR[w.word] && !w.isSmallWord;
 }
 
-function gapFor(w: VocabWord, occurrence: string, mode: Mode): Gap {
+function gapFor(w: VocabWord, occurrence: string, mode: Mode, rule: ClueRule): Gap {
   let visibleLength: number;
+  // Word Endings shows the whole stem on purpose: the ending is what is practised.
   if (mode === 'endings' && w.ending) visibleLength = w.ending.visible.length;
-  else visibleLength = halfSplit(w.word).visible.length;
+  else visibleLength = clueSplit(occurrence, rule).visible.length;
   return {
     wordId: w.id,
     contextId: '',
@@ -38,9 +40,9 @@ function gapFor(w: VocabWord, occurrence: string, mode: Mode): Gap {
   };
 }
 
-export function sentenceQuestion(w: VocabWord, ctx: Context, mode: Exclude<Mode, 'read-complete'>): SentenceQuestion {
+export function sentenceQuestion(w: VocabWord, ctx: Context, mode: SentenceMode, rule: ClueRule = 'max3'): SentenceQuestion {
   const occurrence = ctx.sentence.slice(ctx.start, ctx.end);
-  const gap = { ...gapFor(w, occurrence, mode), contextId: ctx.id };
+  const gap = { ...gapFor(w, occurrence, mode, rule), contextId: ctx.id };
   const q: SentenceQuestion = {
     kind: 'sentence',
     id: `${mode}|${ctx.id}`,
@@ -58,7 +60,7 @@ export function sentenceQuestion(w: VocabWord, ctx: Context, mode: Exclude<Mode,
   return q;
 }
 
-export function paragraphQuestion(p: Paragraph, byId: Map<string, VocabWord>): ParagraphQuestion {
+export function paragraphQuestion(p: Paragraph, byId: Map<string, VocabWord>, rule: ClueRule = 'max3'): ParagraphQuestion {
   const segments: string[] = [];
   const gaps: Gap[] = [];
   let pos = 0;
@@ -67,7 +69,7 @@ export function paragraphQuestion(p: Paragraph, byId: Map<string, VocabWord>): P
     if (!w) continue;
     segments.push(p.text.slice(pos, g.start));
     const occurrence = p.text.slice(g.start, g.end);
-    const { visible } = halfSplit(occurrence);
+    const { visible } = clueSplit(occurrence, rule);
     gaps.push({
       wordId: g.wordId,
       contextId: g.contextId,

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T14:28:58.418Z",
+ "generatedAt": "2026-10-09T07:39:24.794Z",
  "sources": [
   {
    "id": "guide",
@@ -248,30 +248,30 @@
   "sourceEntriesDetected": 4086,
   "sourceEntriesAccepted": 4052,
   "rejectedEntries": 34,
-  "uniqueSpellingTargets": 2601,
+  "uniqueSpellingTargets": 5847,
   "duplicatesMerged": 1451,
   "missingDefinitions": 0,
   "needingSentences": 0,
-  "practiceReady": 2601,
-  "sentenceContexts": 5202,
-  "paragraphs": 45,
-  "paragraphGaps": 900,
-  "totalPracticeContexts": 6102,
-  "definitionsFromSources": 349,
-  "definitionsWrittenForApp": 2252,
-  "bengaliGlosses": 2601,
+  "practiceReady": 5847,
+  "sentenceContexts": 21003,
+  "paragraphs": 320,
+  "paragraphGaps": 3874,
+  "totalPracticeContexts": 24877,
+  "definitionsFromSources": 347,
+  "definitionsWrittenForApp": 2243,
+  "bengaliGlosses": 4103,
   "failedSources": 0,
   "failedSections": 0
  },
  "byPriority": {
   "high": 349,
-  "medium": 1201,
-  "low": 1051
+  "medium": 1196,
+  "low": 4302
  },
  "byDifficulty": {
-  "easy": 946,
-  "intermediate": 671,
-  "advanced": 984
+  "easy": 1941,
+  "intermediate": 1727,
+  "advanced": 2179
  },
  "smallWords": 173,
  "rejected": [
@@ -490,5 +490,143 @@
  "notes": [
   "Bank 1 says 37 more small words filled one gap each, but does not list them. They cannot be imported."
  ],
- "version": "c21a0dc0eafa"
+ "collected": {
+  "deleted": [
+   {
+    "word": "corroborates",
+    "reason": "Rare word (frequency 2.4) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "exacerbation",
+    "reason": "Not an official DET word, in no trusted word list, and very rare (frequency 2.3)."
+   },
+   {
+    "word": "exemplifies",
+    "reason": "Rare word (frequency 2.9) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "fluctuate",
+    "reason": "Not an official DET word and only in the C2 list (frequency 3.0): too rare for the DET’s mostly B1–B2 vocabulary."
+   },
+   {
+    "word": "hokum",
+    "reason": "Rare word (frequency 2.0) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "hullabaloo",
+    "reason": "Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "kerb",
+    "reason": "British-only word (US: curb). The DET asks for American spelling wherever you type."
+   },
+   {
+    "word": "miasma",
+    "reason": "Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "pram",
+    "reason": "British-only word (US: stroller (baby carriage)). The DET asks for American spelling wherever you type."
+   },
+   {
+    "word": "profuse",
+    "reason": "Rare word (frequency 2.3) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   },
+   {
+    "word": "wavered",
+    "reason": "Rare word (frequency 2.7) that appeared in official material only as a wrong option. In the official sets the rare “impressive” option was never the answer."
+   }
+  ],
+  "added": {
+   "count": 3257,
+   "byLevel": {
+    "B1": 922,
+    "B2": 803,
+    "C1": 242,
+    "list only": 271,
+    "A2": 527,
+    "A1": 463,
+    "C2": 29
+   },
+   "sample": [
+    "abandoned",
+    "abnormal",
+    "abnormally",
+    "aboard",
+    "abortion",
+    "abruptly",
+    "absence",
+    "absent",
+    "absolute",
+    "absolutely",
+    "absorption",
+    "abstract",
+    "accelerate",
+    "acceleration",
+    "acceptable",
+    "acceptance",
+    "accessible",
+    "accident",
+    "accompany",
+    "accomplish",
+    "accordingly",
+    "account",
+    "accumulation",
+    "accuracy",
+    "accustomed",
+    "achievable",
+    "acid",
+    "acidic",
+    "acknowledgement",
+    "acoustic",
+    "acquaintance",
+    "acquisition",
+    "act",
+    "action",
+    "activate",
+    "actively",
+    "actual",
+    "actually",
+    "acute",
+    "adaptable"
+   ]
+  },
+  "contextOrigins": {
+   "collected": 20505,
+   "dictionary": 131,
+   "authored": 367
+  },
+  "wordsWithOnlyCollected": 5605,
+  "definitionOrigins": {
+   "source": 347,
+   "dictionary": 3257,
+   "app": 2243,
+   "missing": 0
+  },
+  "bengaliOrigins": {
+   "app": 2590,
+   "dictionary": 1513,
+   "none": 1744
+  },
+  "paragraphsByCorpus": {
+   "clear": 161,
+   "ose": 106,
+   "ostx": 53
+  },
+  "paragraphCandidates": 3795,
+  "interactiveSets": 1,
+  "interactiveIssues": [],
+  "texts": 3271,
+  "licences": {
+   "CC BY-SA 3.0 and GFDL": 199,
+   "CC BY-SA 3.0": 196,
+   "CC BY 4.0": 511,
+   "CC BY 3.0": 11,
+   "CC BY-SA": 1,
+   "CC BY-SA 4.0": 266,
+   "CC BY-NC-SA 4.0": 2086,
+   "CC BY-NC 4.0": 1
+  }
+ },
+ "version": "bb55f09818f8"
 }

@@ -26,9 +26,7 @@ export function ReportPage() {
     ['Unique spelling targets imported', t.uniqueSpellingTargets],
     ['Duplicate entries merged', t.duplicatesMerged, 'Same spelling listed in more than one place. Different forms (develop, developed) stay separate.'],
     ['Definitions from your study materials', t.definitionsFromSources],
-    ['Definitions written for the app', t.definitionsWrittenForApp, 'Your materials give meanings for only some words.'],
     ['Entries with missing definitions', t.missingDefinitions],
-    ['Bengali meanings (written for the app)', t.bengaliGlosses, 'Your materials contain no Bengali.'],
     ['Entries needing example sentences', t.needingSentences, 'Words with fewer than two valid, different sentences cannot be mastered yet.'],
     ['Practice-ready words', t.practiceReady],
     ['Sentence contexts', t.sentenceContexts],
@@ -72,6 +70,7 @@ export function ReportPage() {
           </tbody>
         </table>
       </div>
+      {report.collected && <CollectedSection c={report.collected} />}
       <p className="small muted">
         Priority from the materials: high {report.byPriority.high}, medium {report.byPriority.medium}, lower {report.byPriority.low}. Difficulty: easy {report.byDifficulty.easy}, intermediate{' '}
         {report.byDifficulty.intermediate}, advanced {report.byDifficulty.advanced}. Small grammar words: {report.smallWords}.
@@ -172,6 +171,115 @@ export function ReportPage() {
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+const CORPUS_NAME: Record<string, string> = { clear: 'CommonLit CLEAR corpus', ose: 'OneStopEnglish corpus', ostx: 'OpenStax textbooks', authored: 'written for this app' };
+
+function CollectedSection({ c }: { c: NonNullable<ReturnType<typeof useApp>['report']>['collected'] & object }) {
+  const o = c.contextOrigins;
+  const total = o.collected + o.dictionary + o.authored;
+  const d = c.definitionOrigins;
+  const b = c.bengaliOrigins;
+  return (
+    <div className="card stack">
+      <h2>Real collected material</h2>
+      <p className="small" style={{ margin: 0 }}>
+        Sentences, Read and Complete texts and Interactive Reading passages come from real, openly licensed texts. Nothing is copied from live DET tests (their
+        questions are confidential and change constantly).
+      </p>
+      <div className="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <td>Practice sentences: real (collected) / WordNet examples / written for the app</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {o.collected.toLocaleString()} / {o.dictionary.toLocaleString()} / {o.authored.toLocaleString()}
+              </td>
+            </tr>
+            <tr>
+              <td>Share of sentences that are real</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {total ? Math.round(((o.collected + o.dictionary) / total) * 100) : 0}%
+              </td>
+            </tr>
+            <tr>
+              <td>Words added from trusted word lists (NGSL, NAWL, CEFR-J, Octanove C1)</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {c.added.count.toLocaleString()}
+              </td>
+            </tr>
+            <tr>
+              <td>Words deleted as unrealistic DET words</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {c.deleted.length}
+              </td>
+            </tr>
+            <tr>
+              <td>Read and Complete texts</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {Object.entries(c.paragraphsByCorpus)
+                  .map(([k, v]) => `${v} ${CORPUS_NAME[k] ?? k}`)
+                  .join(' · ')}
+              </td>
+            </tr>
+            <tr>
+              <td>Interactive Reading sets</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {c.interactiveSets}
+              </td>
+            </tr>
+            <tr>
+              <td>Definitions: study materials / WordNet / written for the app</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {d.source ?? 0} / {d.dictionary ?? 0} / {d.app ?? 0}
+              </td>
+            </tr>
+            <tr>
+              <td>Bengali: written for the app / Apertium dictionary / none yet</td>
+              <td className="num" style={{ fontWeight: 700 }}>
+                {b.app ?? 0} / {b.dictionary ?? 0} / {b.none ?? 0}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <details>
+        <summary>
+          <strong>Deleted words and why ({c.deleted.length})</strong>
+        </summary>
+        <ul className="small">
+          {c.deleted.map((x) => (
+            <li key={x.word}>
+              <strong>{x.word}</strong>: {x.reason}
+            </li>
+          ))}
+        </ul>
+      </details>
+      <details>
+        <summary>
+          <strong>Licences of the texts used ({c.texts} texts)</strong>
+        </summary>
+        <ul className="small">
+          {Object.entries(c.licences).map(([k, v]) => (
+            <li key={k}>
+              {k}: {v}
+            </li>
+          ))}
+        </ul>
+        <p className="tiny muted">Every sentence and passage shows its own source and licence in the app. See About for the full credits.</p>
+      </details>
+      {c.interactiveIssues.length > 0 && (
+        <div className="alert warn small">
+          {c.interactiveIssues.length} Interactive Reading set(s) failed validation and were left out:
+          <ul>
+            {c.interactiveIssues.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

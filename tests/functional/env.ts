@@ -27,6 +27,7 @@ export function makeEnv(opts: { dbName?: string; custom?: VocabWord[]; start?: n
 
 /** Answers that are right (the missing letters) or wrong for every gap of a question. */
 export function answersFor(q: Question, correct: boolean): string[] {
+  if (q.kind === 'interactive') return [];
   const gaps = q.kind === 'sentence' ? [q.gap] : q.gaps;
   return gaps.map((g) => (correct ? g.answer.slice(g.visible.length) : 'qqq'));
 }

@@ -41,6 +41,12 @@ export interface ApplyOptions {
   mastery?: MasteryPolicy;
   reviewFrequency?: ReviewFrequency;
   rng?: () => number;
+  /**
+   * The answer was chosen from options (Interactive Reading), not spelled.
+   * A right choice is recorded but never counts toward mastery; a wrong one is a
+   * normal mistake and brings the word back for spelling practice.
+   */
+  recognitionOnly?: boolean;
 }
 
 export interface ApplyOutcome {
@@ -111,6 +117,20 @@ export function applyResult(prev: WordProgress, ev: ResultEvent, opts: ApplyOpti
   }
 
   p.attempts++;
+  if (ev.result === 'correct' && opts.recognitionOnly) {
+    p.correct++;
+    p.consecutiveCorrect++;
+    p.consecutiveIncorrect = 0;
+    p.totalResponseMs += ev.responseMs;
+    p.answeredCount++;
+    if (!p.correctContextIds.includes(ev.contextId)) p.correctContextIds.push(ev.contextId);
+    return {
+      progress: p,
+      becameMastered: false,
+      lostMastery: false,
+      explanation: 'Chosen correctly. Choosing from options does not count toward mastery: the word is mastered by spelling it in two different sentences.',
+    };
+  }
   if (ev.result === 'correct') {
     p.correct++;
     p.consecutiveCorrect++;
