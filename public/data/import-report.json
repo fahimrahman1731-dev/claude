@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T07:39:24.794Z",
+ "generatedAt": "2026-10-09T07:48:30.603Z",
  "sources": [
   {
    "id": "guide",
@@ -255,8 +255,8 @@
   "practiceReady": 5847,
   "sentenceContexts": 21003,
   "paragraphs": 320,
-  "paragraphGaps": 3874,
-  "totalPracticeContexts": 24877,
+  "paragraphGaps": 3885,
+  "totalPracticeContexts": 24888,
   "definitionsFromSources": 347,
   "definitionsWrittenForApp": 2243,
   "bengaliGlosses": 4103,
@@ -613,20 +613,20 @@
    "ose": 106,
    "ostx": 53
   },
-  "paragraphCandidates": 3795,
-  "interactiveSets": 1,
+  "paragraphCandidates": 3653,
+  "interactiveSets": 25,
   "interactiveIssues": [],
-  "texts": 3271,
+  "texts": 3272,
   "licences": {
-   "CC BY-SA 3.0 and GFDL": 199,
+   "CC BY-SA 3.0 and GFDL": 200,
    "CC BY-SA 3.0": 196,
-   "CC BY 4.0": 511,
+   "CC BY 4.0": 512,
    "CC BY 3.0": 11,
    "CC BY-SA": 1,
-   "CC BY-SA 4.0": 266,
+   "CC BY-SA 4.0": 265,
    "CC BY-NC-SA 4.0": 2086,
    "CC BY-NC 4.0": 1
   }
  },
- "version": "bb55f09818f8"
+ "version": "2fb6957577c0"
 }

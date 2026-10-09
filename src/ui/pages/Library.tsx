@@ -23,7 +23,8 @@ export function LibraryPage() {
 
   const sources = useMemo(() => {
     const s = new Map<string, string>();
-    for (const src of store.data.sources) s.set(src.id, src.title);
+    const used = new Set(store.words.flatMap((w) => w.sources));
+    for (const src of store.data.sources) if (used.has(src.id)) s.set(src.id, src.id === 'lists' ? 'Trusted word lists (NGSL, NAWL, CEFR-J, Octanove)' : src.title);
     for (const w of store.words) for (const id of w.sources) if (!s.has(id)) s.set(id, id.startsWith('import:') ? `Imported: ${id.slice(7)}` : id === 'custom' ? 'My custom words' : id);
     return s;
   }, [store]);

@@ -27,6 +27,17 @@ export function StatsPage() {
   const progress = useLiveQuery(() => db.progress.toArray(), [db]);
   const attempts = useLiveQuery(() => db.attempts.toArray(), [db]);
   const sessions = useLiveQuery(() => db.sessions.orderBy('startedAt').reverse().limit(15).toArray(), [db]);
+  const irResults = useLiveQuery(() => db.irResults.toArray(), [db]);
+  const irByPart = useMemo(() => {
+    const m = new Map<string, { n: number; score: number }>();
+    for (const r of irResults ?? []) {
+      const x = m.get(r.part) ?? { n: 0, score: 0 };
+      x.n++;
+      x.score += r.score ?? (r.correct ? 1 : 0);
+      m.set(r.part, x);
+    }
+    return m;
+  }, [irResults]);
   const stats = useMemo(
     () => (progress && attempts ? computeStats(store.words, progress, attempts, { now: Date.now(), retentionReviews: settings.retentionReviews }) : undefined),
     [progress, attempts, store, settings.retentionReviews],
@@ -89,6 +100,26 @@ export function StatsPage() {
         </div>
       ) : (
         <>
+          {irByPart.size > 0 && (
+            <div className="card">
+              <h2>Interactive Reading by question type</h2>
+              <HBars
+                format={(v) => pct(v)}
+                rows={[
+                  ['complete-passage', 'Complete the Passage'],
+                  ['highlight', 'Highlight the Answer (average score)'],
+                  ['main-idea', 'Identify the Idea'],
+                  ['title', 'Title the Passage'],
+                ].map(([k, label]) => {
+                  const x = irByPart.get(k);
+                  return { label, value: x ? x.score / x.n : undefined, max: 1, note: x ? `(${x.n})` : '' };
+                })}
+              />
+              <p className="tiny muted" style={{ marginTop: 8 }}>
+                Complete the Sentences is counted per word under “Accuracy by mode” (Interactive Reading).
+              </p>
+            </div>
+          )}
           <div className="grid grid-2">
             <div className="card">
               <h2>Results</h2>

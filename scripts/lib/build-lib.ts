@@ -372,7 +372,12 @@ export function buildVocab(
   let paragraphs: Paragraph[];
   let candidateCount = 0;
   if (collected) {
-    const cands = paragraphCandidates(collected.texts);
+    const ukCache = new Map<string, boolean>();
+    const isUk = (w: string) => {
+      if (!ukCache.has(w)) ukCache.set(w, w.length > 3 && isBritishSpelling(w, lex, US_UK));
+      return ukCache.get(w)!;
+    };
+    const cands = paragraphCandidates(collected.texts, 2, isUk);
     candidateCount = cands.length;
     const usable = cands
       .map((c, k) => {

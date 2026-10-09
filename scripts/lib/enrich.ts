@@ -218,7 +218,7 @@ export interface ParagraphCandidate {
 }
 
 /** Read and Complete windows from the collected texts (DET-safe, 50–100 words, 4–7 whole sentences, like the official 57-word example). */
-export function paragraphCandidates(texts: CollectedText[], perText = 2): ParagraphCandidate[] {
+export function paragraphCandidates(texts: CollectedText[], perText = 2, isBritish: (w: string) => boolean = () => false): ParagraphCandidate[] {
   const out: ParagraphCandidate[] = [];
   for (const t of texts) {
     let n = 0;
@@ -228,6 +228,8 @@ export function paragraphCandidates(texts: CollectedText[], perText = 2): Paragr
       if (isSensitive(text) || /["“”]/.test(text) || /[()[\]/%&+=@#]/.test(text)) continue;
       // Read and Complete texts are plain prose: few numbers, no units or symbols.
       if ((text.match(/\d+(?:[.,]\d+)*/g) ?? []).length > 2) continue;
+      // The DET asks for American spelling in Read and Complete, so texts with British spellings are left out.
+      if ((text.toLowerCase().match(/[a-z]+/g) ?? []).some(isBritish)) continue;
       const first = text.slice(0, splitSentences(text)[0]?.end ?? 0);
       if (/^(?:this|these|those|that|such|also|but|and|so|then|however|therefore|it|they|he|she)\b/i.test(first)) continue;
       out.push({ text, source: t });
@@ -260,7 +262,8 @@ export function chooseParagraphs(items: (Paragraph & { corpus: string })[], limi
 
 /** True for British spellings that have an American form in the lexicon (never added as targets). */
 export function isBritishSpelling(word: string, lex: Lexicon, usUk: Record<string, string>): boolean {
-  if (Object.values(usUk).includes(word)) return true;
+  const uk = new Set(Object.values(usUk));
+  if (uk.has(word) || (word.endsWith('s') && uk.has(word.slice(0, -1)))) return true;
   const swaps: [RegExp, string][] = [
     [/our(s|ed|ing|ful|ite|ites|able|er)?$/, 'or$1'],
     [/is(e|es|ed|ing|ation|ations)$/, 'iz$1'],
