@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { BRITISH_WORDS, US_UK } from '../../scripts/lib/build-lib';
+import { BRITISH_WORDS, selectGaps, US_UK } from '../../scripts/lib/build-lib';
 import { checkFibSentence, isSensitive, paragraphWindows, splitSentences } from '../../scripts/lib/collected';
+import { sentenceAt } from '../../src/engine/sentences';
+import { findOccurrences } from '../../src/engine/text';
+import type { VocabWord } from '../../src/engine/types';
 import { deletionReason, isBritishSpelling, pickContexts, sentenceIndex, type Lexicon } from '../../scripts/lib/enrich';
 import { vocab } from '../functional/env';
 
@@ -10,7 +13,31 @@ describe('real-text sentences', () => {
     const s = splitSentences(t).map((x) => t.slice(x.start, x.end));
     expect(s).toEqual(['Dr. Lee measured 3.5 litres of water.', 'It was enough!', 'Was it, e.g. for the test?', 'Yes.']);
   });
+  it('never joins a heading or list item to the next sentence', () => {
+    const t = 'Five jobs\n\n4. Eel ecologist\n\nThe job is to help eels survive. It is hard work.';
+    const s = splitSentences(t).map((x) => ({ text: t.slice(x.start, x.end), open: !!x.open }));
+    expect(s).toEqual([
+      { text: 'Five jobs', open: true },
+      { text: '4.', open: false },
+      { text: 'Eel ecologist', open: true },
+      { text: 'The job is to help eels survive.', open: false },
+      { text: 'It is hard work.', open: false },
+    ]);
+  });
+  it('finds the whole sentence around a word, even with initials, and where the word is', () => {
+    const t = 'The most obvious difference between the fossils, A. africanus and P. robustus, is that one is larger. It was found later.';
+    const at = t.indexOf('that');
+    const r = sentenceAt(t, at, at + 4);
+    expect(r.sentence).toBe('The most obvious difference between the fossils, A. africanus and P. robustus, is that one is larger.');
+    expect(r.sentence.slice(r.at, r.at + 4)).toBe('that');
+  });
+  it('does not find a short word inside an accented name', () => {
+    expect(findOccurrences('Émile walked a mile.', 'mile')).toEqual([{ start: 15, end: 19 }]);
+  });
   it('keeps only complete, stand-alone, DET-like sentences', () => {
+    expect(checkFibSentence('The chess played is speed chess. Each competitor has twelve minutes to finish.').reason).toBe('more than one sentence');
+    expect(checkFibSentence('An energy-level diagram of the atomic transitions is shown in ⟦REF⟧ below.').ok).toBe(false);
+    expect(checkFibSentence('As a functionalist, Émile Durkheim stressed how the parts of society work together.').reason).toBe('unusual characters');
     expect(checkFibSentence('Scientists measured how quickly the ice melted during the warm summer months.').ok).toBe(true);
     expect(checkFibSentence('She had a beautiful necklace around her neck at the party.').ok).toBe(true);
     expect(checkFibSentence('Too short to use.').reason).toBe('too short');
@@ -23,6 +50,9 @@ describe('real-text sentences', () => {
     expect(isSensitive('The police arrested a criminal.')).toBe(true);
     expect(isSensitive('The election results were announced.')).toBe(true);
     expect(isSensitive('Bees carry pollen from flower to flower.')).toBe(false);
+    for (const t of ['The consul was held hostage at gunpoint.', 'Jesus preached on the mountain.', 'They stood up against racism.', 'She began to pray.'])
+      expect(isSensitive(t), t).toBe(true);
+    expect(isSensitive('The results demonstrate that the shell is hard.')).toBe(false);
   });
   it('cuts Read and Complete texts at sentence boundaries', () => {
     const text = Array.from({ length: 12 }, (_, i) => `This is sentence number ${i + 1} about plants and how they grow in spring.`).join(' ');
@@ -30,6 +60,22 @@ describe('real-text sentences', () => {
       const piece = text.slice(w.start, w.end);
       expect(piece.endsWith('.')).toBe(true);
       expect(piece.split(/\s+/).length).toBeLessThanOrEqual(100);
+    }
+  });
+});
+
+describe('Read and Complete gaps', () => {
+  const word = (w: string): VocabWord => ({ id: `w:${w}`, word: w, tags: [] }) as unknown as VocabWord;
+  const byWord = new Map(['on', 'in', 'society', 'people', 'music', 'the', 'and', 'more', 'than'].map((w) => [w, word(w)]));
+  it('keeps the first and last sentences whole even with abbreviations and prices', () => {
+    const text = 'People in the U.S. spent just $39.52 on music in 2014 and more on society. The people in the city and the people in the town like music more than ever. Then the society changed again in the U.S. and in society.';
+    const gaps = selectGaps(text, byWord);
+    const first = text.indexOf('. The people') + 1;
+    const last = text.indexOf('Then the society');
+    expect(gaps.length).toBeGreaterThan(0);
+    for (const g of gaps) {
+      expect(g.start).toBeGreaterThan(first);
+      expect(g.end).toBeLessThanOrEqual(last);
     }
   });
 });
@@ -63,6 +109,7 @@ describe('which words stay', () => {
     expect(isBritishSpelling('centre', l, US_UK)).toBe(true);
     expect(isBritishSpelling('aeroplane', l, US_UK)).toBe(true);
     expect(isBritishSpelling('planet', l, US_UK)).toBe(false);
+    for (const w of ['learnt', 'maths', 'savour', 'tonnes', 'acknowledgement', 'whilst']) expect(isBritishSpelling(w, l, US_UK), w).toBe(true);
   });
 });
 

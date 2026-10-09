@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T07:48:30.603Z",
+ "generatedAt": "2026-10-09T12:36:44.592Z",
  "sources": [
   {
    "id": "guide",
@@ -248,30 +248,30 @@
   "sourceEntriesDetected": 4086,
   "sourceEntriesAccepted": 4052,
   "rejectedEntries": 34,
-  "uniqueSpellingTargets": 5847,
+  "uniqueSpellingTargets": 5836,
   "duplicatesMerged": 1451,
   "missingDefinitions": 0,
   "needingSentences": 0,
-  "practiceReady": 5847,
-  "sentenceContexts": 21003,
+  "practiceReady": 5836,
+  "sentenceContexts": 21048,
   "paragraphs": 320,
-  "paragraphGaps": 3885,
-  "totalPracticeContexts": 24888,
+  "paragraphGaps": 3878,
+  "totalPracticeContexts": 24926,
   "definitionsFromSources": 347,
   "definitionsWrittenForApp": 2243,
-  "bengaliGlosses": 4103,
+  "bengaliGlosses": 4073,
   "failedSources": 0,
   "failedSections": 0
  },
  "byPriority": {
   "high": 349,
   "medium": 1196,
-  "low": 4302
+  "low": 4291
  },
  "byDifficulty": {
-  "easy": 1941,
-  "intermediate": 1727,
-  "advanced": 2179
+  "easy": 1940,
+  "intermediate": 1732,
+  "advanced": 2164
  },
  "smallWords": 173,
  "rejected": [
@@ -538,14 +538,14 @@
    }
   ],
   "added": {
-   "count": 3257,
+   "count": 3246,
    "byLevel": {
-    "B1": 922,
-    "B2": 803,
-    "C1": 242,
-    "list only": 271,
-    "A2": 527,
-    "A1": 463,
+    "B1": 927,
+    "B2": 794,
+    "C1": 239,
+    "list only": 268,
+    "A2": 528,
+    "A1": 461,
     "C2": 29
    },
    "sample": [
@@ -553,7 +553,6 @@
     "abnormal",
     "abnormally",
     "aboard",
-    "abortion",
     "abruptly",
     "absence",
     "absent",
@@ -577,7 +576,6 @@
     "achievable",
     "acid",
     "acidic",
-    "acknowledgement",
     "acoustic",
     "acquaintance",
     "acquisition",
@@ -588,45 +586,47 @@
     "actual",
     "actually",
     "acute",
-    "adaptable"
+    "adaptable",
+    "adaptation",
+    "adaptive"
    ]
   },
   "contextOrigins": {
-   "collected": 20505,
-   "dictionary": 131,
-   "authored": 367
+   "collected": 20569,
+   "dictionary": 47,
+   "authored": 432
   },
-  "wordsWithOnlyCollected": 5605,
+  "wordsWithOnlyCollected": 5556,
   "definitionOrigins": {
    "source": 347,
-   "dictionary": 3257,
+   "dictionary": 3246,
    "app": 2243,
    "missing": 0
   },
   "bengaliOrigins": {
    "app": 2590,
-   "dictionary": 1513,
-   "none": 1744
+   "dictionary": 1483,
+   "none": 1763
   },
   "paragraphsByCorpus": {
    "clear": 161,
    "ose": 106,
    "ostx": 53
   },
-  "paragraphCandidates": 3653,
-  "interactiveSets": 25,
+  "paragraphCandidates": 3462,
+  "interactiveSets": 70,
   "interactiveIssues": [],
-  "texts": 3272,
+  "texts": 3226,
   "licences": {
-   "CC BY-SA 3.0 and GFDL": 200,
-   "CC BY-SA 3.0": 196,
+   "CC BY-SA 3.0 and GFDL": 202,
+   "CC BY-SA 3.0": 189,
    "CC BY 4.0": 512,
-   "CC BY 3.0": 11,
+   "CC BY 3.0": 12,
    "CC BY-SA": 1,
-   "CC BY-SA 4.0": 265,
-   "CC BY-NC-SA 4.0": 2086,
+   "CC BY-SA 4.0": 264,
+   "CC BY-NC-SA 4.0": 2045,
    "CC BY-NC 4.0": 1
   }
  },
- "version": "2fb6957577c0"
+ "version": "15cb1f2a3c1b"
 }

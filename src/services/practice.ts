@@ -6,6 +6,7 @@ import { applyResult, mistakes, newProgress, reopen } from '../engine/progress';
 import { chooseInteractive, emptyInteractiveAnswers, interactiveQuestion, interactiveSeconds, scoreInteractive } from '../engine/interactive';
 import { inModePool, paragraphQuestion, sentenceQuestion } from '../engine/questions';
 import { chooseContext, chooseParagraph, selectNext } from '../engine/selection';
+import { sentenceAt } from '../engine/sentences';
 import { spellingRules } from '../engine/spelling';
 import type { AttemptRecord, Gap, InteractiveAnswers, InteractiveQuestion, MistakeRecord, Mode, Question, ResultKind, SentenceMode, VocabWord, WordProgress } from '../engine/types';
 import type { VocabStore } from '../data/vocabStore';
@@ -329,7 +330,7 @@ export class PracticeService {
           };
           await this.db.attempts.add(attempt);
           if (result === 'incorrect' || result === 'timeout' || result === 'unanswered') {
-            const { before, after, sentence } = surroundings(q, i);
+            const { before, after, sentence, at } = surroundings(q, i);
             const mistake: MistakeRecord = {
               id: attemptId,
               attemptId,
@@ -338,6 +339,7 @@ export class PracticeService {
               answer: check?.full ?? '',
               correctAnswer: gap.answer,
               sentence,
+              answerStart: at,
               contextId: gap.contextId,
               mode: q.mode,
               result,
@@ -412,7 +414,16 @@ export class PracticeService {
   ): Promise<SubmitResult> {
     const { now, seq, responseMs, meta, settings } = ctx;
     const set = this.store.interactive.find((x) => x.id === q.setId);
-    if (!set) throw new Error('This passage is no longer in the library.');
+    if (!set || set.blanks.length !== q.blanks.length) {
+      // The passage was removed or changed by an update: close it without scoring anything.
+      const outcome: QuestionOutcome = { questionId: q.id, index: s.index, gaps: [], parts: [], responseMs, timedOut: false, skipped: true, savedAt: now };
+      s.index++;
+      s.current = undefined;
+      s.lastOutcome = outcome;
+      await this.db.sessions.put(s);
+      await this.db.kv.put({ key: META_KEY, value: meta });
+      return { session: s, outcome, duplicate: false };
+    }
     const answers = input.interactive ?? s.current?.interactive ?? emptyInteractiveAnswers(q);
     const score = scoreInteractive(set, q, answers);
     const timedOut = input.kind === 'timeout';
@@ -428,6 +439,8 @@ export class PracticeService {
       const chosen = chosenIdx === null ? null : (q.blanks[i].options[chosenIdx] ?? null);
       blankChoices.push(chosen);
       const result = resultOf(score.blanks[i], chosen !== null);
+      // Every blank is kept for the statistics, including words that are not in the library.
+      await this.db.irResults.put({ id: `${s.id}:${s.index}:complete-sentences:${i}`, sessionId: s.id, setId: set.id, part: 'complete-sentences', correct: score.blanks[i], score: score.blanks[i] ? 1 : 0, answered: chosen !== null, at: now });
       s.tally[result]++;
       if (result === 'correct') {
         s.streak++;
@@ -462,7 +475,7 @@ export class PracticeService {
         difficulty: word.difficulty,
       });
       if (result === 'incorrect' || result === 'timeout' || result === 'unanswered') {
-        const sentence = sentenceAround(set.text, b.start, b.end);
+        const { sentence, at } = sentenceAt(set.text, b.start, b.end);
         await this.db.mistakes.put({
           id: attemptId,
           attemptId,
@@ -471,6 +484,7 @@ export class PracticeService {
           answer: chosen ?? '',
           correctAnswer: b.answer,
           sentence,
+          answerStart: at,
           contextId,
           mode: 'interactive-reading',
           result,
@@ -546,27 +560,14 @@ export class PracticeService {
 }
 
 /** The sentence (and neighboring text) around one gap, for the Mistake Bank and clue explanations. */
-function surroundings(q: Question, gapIndex: number): { before: string; after: string; sentence: string } {
-  if (q.kind === 'sentence') return { before: q.before, after: q.after, sentence: q.sentence };
-  if (q.kind === 'interactive') return { before: '', after: '', sentence: '' };
+function surroundings(q: Question, gapIndex: number): { before: string; after: string; sentence: string; at: number } {
+  if (q.kind === 'sentence') return { before: q.before, after: q.after, sentence: q.sentence, at: q.before.length };
+  if (q.kind === 'interactive') return { before: '', after: '', sentence: '', at: 0 };
   const before = q.segments[gapIndex];
   const after = q.segments[gapIndex + 1];
   const full = q.segments.map((seg, k) => seg + (k < q.gaps.length ? q.gaps[k].answer : '')).join('');
   let offset = 0;
   for (let k = 0; k < gapIndex; k++) offset += q.segments[k].length + q.gaps[k].answer.length;
   offset += q.segments[gapIndex].length;
-  let start = 0;
-  for (const m of full.slice(0, offset).matchAll(/[.!?]["”’)]?\s+/g)) start = (m.index ?? 0) + m[0].length;
-  const endMatch = /[.!?]["”’)]?(\s|$)/.exec(full.slice(offset));
-  const end = endMatch ? offset + (endMatch.index ?? 0) + endMatch[0].trimEnd().length : full.length;
-  return { before, after, sentence: full.slice(start, end).trim() };
-}
-
-/** The sentence of `text` that contains the span [start, end). */
-export function sentenceAround(text: string, start: number, end: number): string {
-  let from = 0;
-  for (const m of text.slice(0, start).matchAll(/[.!?]["”’)]?\s+/g)) from = (m.index ?? 0) + m[0].length;
-  const tail = /[.!?]["”’)]?(\s|$)/.exec(text.slice(end));
-  const to = tail ? end + (tail.index ?? 0) + tail[0].trimEnd().length : text.length;
-  return text.slice(from, to).trim();
+  return { before, after, ...sentenceAt(full, offset, offset + q.gaps[gapIndex].answer.length) };
 }

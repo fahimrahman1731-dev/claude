@@ -53,13 +53,20 @@ export function InteractiveView({
   );
   const aRef = useRef(a);
   aRef.current = a;
+  // Answers are saved as they change (not only on Continue), so a refresh keeps them.
+  const onStepRef = useRef(onStep);
+  onStepRef.current = onStep;
+  useEffect(() => {
+    const t = window.setTimeout(() => onStepRef.current(a), 400);
+    return () => window.clearTimeout(t);
+  }, [a]);
   const remaining = useCountdown(current.startedAt, current.limitMs, () => onSubmit(aRef.current, 'timeout'));
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => headingRef.current?.focus(), [a.step]);
-  if (!set) {
+  if (!set || set.blanks.length !== q.blanks.length) {
     return (
       <DetFrame frame={frame} title="Passage not found">
-        <p className="muted">This passage is no longer in the library.</p>
+        <p className="muted">This passage was removed or changed in an update. Skipping it records nothing.</p>
         <button className="btn" onClick={() => onSubmit(a, 'skip')}>
           Skip it
         </button>
@@ -182,8 +189,12 @@ function PassagePane({ set, q, a, setA }: { set: InteractiveSet; q: InteractiveQ
 function Highlighter({ text, value, onChange }: { text: string; value: { start: number; end: number } | null; onChange: (v: { start: number; end: number } | null) => void }) {
   const tokens = useMemo(() => tokenize(text), [text]);
   const paras = useMemo(() => paragraphs(text, 0, text.length), [text]);
-  const drag = useRef<{ anchor: number; pointer: string } | null>(null);
+  const drag = useRef<{ anchor: number; pointer: string; x: number; y: number } | null>(null);
   const [pendingTap, setPendingTap] = useState<number | null>(null);
+  // "Clear highlight" also forgets a first tap that was waiting for the second one.
+  useEffect(() => {
+    if (!value) setPendingTap(null);
+  }, [value]);
   const range = useMemo(() => {
     if (!value) return null;
     const a = tokens.findIndex((t) => t.end > value.start);
@@ -205,31 +216,47 @@ function Highlighter({ text, value, onChange }: { text: string; value: { start: 
     return i === null || i === undefined ? -1 : Number(i);
   };
   const down = (i: number) => (e: React.PointerEvent) => {
-    e.preventDefault();
-    if (e.pointerType !== 'mouse' && pendingTap !== null) {
-      setRange(pendingTap, i);
-      setPendingTap(null);
+    if (e.pointerType === 'mouse') {
+      e.preventDefault();
+      if (e.shiftKey && range) {
+        setRange(range[0], i);
+        return;
+      }
+      drag.current = { anchor: i, pointer: 'mouse', x: e.clientX, y: e.clientY };
+      setRange(i, i);
       return;
     }
-    if (e.pointerType === 'mouse' && e.shiftKey && range) {
-      setRange(range[0], i);
-      return;
-    }
-    drag.current = { anchor: i, pointer: e.pointerType };
-    setRange(i, i);
+    // Touch and pen: nothing changes until the finger is lifted, because this may be the start of a scroll.
+    drag.current = { anchor: i, pointer: e.pointerType, x: e.clientX, y: e.clientY };
   };
   const move = (e: React.PointerEvent) => {
     if (!drag.current || drag.current.pointer !== 'mouse' || !(e.buttons & 1)) return;
     const i = indexAt(e);
     if (i >= 0) setRange(drag.current.anchor, i);
   };
-  const up = () => {
-    if (drag.current && drag.current.pointer !== 'mouse') setPendingTap(drag.current.anchor);
-    drag.current = null;
-  };
   useEffect(() => {
+    const up = (e: PointerEvent) => {
+      const d = drag.current;
+      drag.current = null;
+      if (!d || d.pointer === 'mouse') return;
+      if (Math.hypot(e.clientX - d.x, e.clientY - d.y) > 10) return; // a scroll, not a tap
+      if (pendingTap !== null) {
+        setRange(pendingTap, d.anchor);
+        setPendingTap(null);
+      } else {
+        setRange(d.anchor, d.anchor);
+        setPendingTap(d.anchor);
+      }
+    };
+    const cancel = () => {
+      drag.current = null;
+    };
     window.addEventListener('pointerup', up);
-    return () => window.removeEventListener('pointerup', up);
+    window.addEventListener('pointercancel', cancel);
+    return () => {
+      window.removeEventListener('pointerup', up);
+      window.removeEventListener('pointercancel', cancel);
+    };
   });
   let k = 0;
   return (
@@ -338,7 +365,7 @@ export function InteractiveFeedback({ outcome, bn }: { outcome: QuestionOutcome;
   const { store } = useApp();
   const setId = outcome.questionId.split('|')[1];
   const set = store.interactive.find((s) => s.id === setId);
-  if (!set) return <p className="muted">This passage is no longer in the library.</p>;
+  if (!set || (!outcome.gaps.length && !outcome.parts?.length)) return <p className="muted">This passage was removed or changed in an update, so nothing was recorded.</p>;
   const blanks = outcome.gaps;
   const parts = outcome.parts ?? [];
   const correct = blanks.filter((g) => g.result === 'correct').length + parts.filter((p) => p.correct).length;
@@ -355,25 +382,28 @@ export function InteractiveFeedback({ outcome, bn }: { outcome: QuestionOutcome;
           <div className="ir-passage-text">
             {paragraphs(set.text, 0, set.text.length).map((para, pi) => {
               const marks = [
-                ...set.blanks.map((b, i) => ({ start: b.start, end: b.end, cls: blanks[i]?.result === 'correct' ? 'ok' : 'no', label: String(i + 1) })),
-                ...set.highlights.slice(0, 2).map((h, n) => ({ start: h.start, end: h.end, cls: 'key', label: `H${n + 1}` })),
-                { start: set.missing.start, end: set.missing.end, cls: 'sent', label: 'S' },
-              ]
-                .filter((m) => m.start >= para.start && m.end <= para.end)
-                .sort((x, y) => x.start - y.start);
+                ...set.blanks.map((b, i) => ({ start: b.start, end: b.end, cls: blanks[i]?.result === 'correct' ? 'ok' : 'no', label: `Missing word ${i + 1}` })),
+                ...set.highlights.slice(0, 2).map((h, n) => ({ start: h.start, end: h.end, cls: 'key', label: `Highlight answer ${n + 1}` })),
+                { start: set.missing.start, end: set.missing.end, cls: 'sent', label: 'Missing sentence' },
+              ].filter((m) => m.start < para.end && m.end > para.start);
+              // Marks can overlap (a highlight answer often contains a missing word), so the
+              // paragraph is cut at every mark edge and each piece gets all the marks over it.
+              const cuts = [...new Set([para.start, para.end, ...marks.flatMap((m) => [m.start, m.end])])]
+                .filter((c) => c >= para.start && c <= para.end)
+                .sort((x, y) => x - y);
               const out: React.ReactNode[] = [];
-              let pos = para.start;
-              for (const m of marks) {
-                if (m.start < pos) continue;
-                out.push(set.text.slice(pos, m.start));
-                out.push(
-                  <mark key={`${m.label}-${m.start}`} className={`ir-mark ${m.cls}`} title={m.label}>
-                    {set.text.slice(m.start, m.end)}
-                  </mark>,
-                );
-                pos = m.end;
+              for (let c = 0; c < cuts.length - 1; c++) {
+                const [from, to] = [cuts[c], cuts[c + 1]];
+                const on = marks.filter((m) => m.start <= from && m.end >= to);
+                const piece = set.text.slice(from, to);
+                if (!on.length) out.push(piece);
+                else
+                  out.push(
+                    <mark key={from} className={`ir-mark ${[...new Set(on.map((m) => m.cls))].join(' ')}`} title={on.map((m) => m.label).join(', ')}>
+                      {piece}
+                    </mark>,
+                  );
               }
-              out.push(set.text.slice(pos, para.end));
               return <p key={pi}>{out}</p>;
             })}
           </div>

@@ -70,7 +70,16 @@ export function emptyInteractiveAnswers(q: InteractiveQuestion): InteractiveAnsw
  * max(0, 1 − distance / max(4, answer length)).
  */
 export function highlightScore(text: string, chosen: { start: number; end: number } | null, key: { start: number; end: number }): number {
-  if (!chosen || chosen.end <= chosen.start) return 0;
+  const m = highlightMatch(text, chosen, key);
+  if (!m) return 0;
+  const d = Math.hypot(m.startOff, m.endOff);
+  if (d === 0) return 1;
+  return Math.max(0, Math.round((1 - d / Math.max(4, m.keyWords)) * 100) / 100);
+}
+
+/** How far (in words) the chosen start and end are from the expected ones, and how much of the answer is covered. */
+function highlightMatch(text: string, chosen: { start: number; end: number } | null, key: { start: number; end: number }) {
+  if (!chosen || chosen.end <= chosen.start) return undefined;
   const tokens = tokenize(text);
   const first = (pos: number) => {
     const i = tokens.findIndex((t) => t.end > pos);
@@ -80,15 +89,18 @@ export function highlightScore(text: string, chosen: { start: number; end: numbe
     for (let i = tokens.length - 1; i >= 0; i--) if (tokens[i].start < pos) return i;
     return 0;
   };
-  const ks = first(key.start);
-  const ke = last(key.end);
-  const d = Math.hypot(first(chosen.start) - ks, last(chosen.end) - ke);
-  if (d === 0) return 1;
-  return Math.max(0, Math.round((1 - d / Math.max(4, ke - ks + 1)) * 100) / 100);
+  const [ks, ke, cs, ce] = [first(key.start), last(key.end), first(chosen.start), last(chosen.end)];
+  return { startOff: cs - ks, endOff: ce - ke, keyWords: ke - ks + 1, covered: Math.max(0, Math.min(ce, ke) - Math.max(cs, ks) + 1) };
 }
 
-/** A highlight counts as right in the tallies when it scores at least 0.8 (at most about one word off at each end). */
-export const HIGHLIGHT_PASS = 0.8;
+/**
+ * A highlight counts as right in the tallies when each end is at most one word
+ * away from the expected end and at least half of the expected words are highlighted.
+ */
+export function highlightCorrect(text: string, chosen: { start: number; end: number } | null, key: { start: number; end: number }): boolean {
+  const m = highlightMatch(text, chosen, key);
+  return !!m && Math.abs(m.startOff) <= 1 && Math.abs(m.endOff) <= 1 && m.covered * 2 >= m.keyWords;
+}
 
 export interface InteractiveScore {
   blanks: boolean[];
@@ -116,7 +128,7 @@ export function scoreInteractive(set: InteractiveSet, q: InteractiveQuestion, a:
       return {
         part: 'highlight' as const,
         n,
-        correct: score >= HIGHLIGHT_PASS,
+        correct: highlightCorrect(set.text, chosen, h),
         score,
         answered: !!chosen,
         chosen: chosen ? set.text.slice(chosen.start, chosen.end) : '',

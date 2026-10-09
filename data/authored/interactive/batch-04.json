@@ -1,0 +1,1247 @@
+[
+  {
+    "id": "ir-clear-7489",
+    "sourceId": "clear-7489",
+    "genre": "expository",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "title": "Astrophysics",
+    "passage": "Astrophysics is the study of how stars and planets work, and how we can learn about them. Astrophysicists use physics to explain what astronomers find and see.\n\nAstrophysics is also the study of how the Universe started and how it is changing with time. This part of astrophysics is called cosmology. For a long time bodies in the sky seemed to be unchanging spheres moving in a circle. But on Earth growth and decay happened, and natural motion was in a straight line. Therefore, people thought the celestial region was made of a fundamentally different kind of matter from that found on Earth.\n\nDuring the 16th and 17th century, natural philosophers such as Nicolaus Copernicus, Johannes Kepler, Galileo, Descartes, and Newton, began to maintain that the celestial and terrestrial regions were made of similar kinds of material and were subject to the same natural laws.",
+    "sentencesPartEndsAfter": "For a long time bodies in the sky seemed to be unchanging spheres moving in a circle.",
+    "blanks": [
+      {
+        "answer": "study",
+        "distractors": [
+          "studied",
+          "student",
+          "habit",
+          "price"
+        ],
+        "why": "'The study of' a subject is a set phrase; 'studied' is a verb and 'student' is a person."
+      },
+      {
+        "answer": "learn",
+        "distractors": [
+          "learning",
+          "forget",
+          "complain",
+          "borrow"
+        ],
+        "why": "After 'can' we need a base verb, and we 'learn about' the things we study."
+      },
+      {
+        "answer": "explain",
+        "distractors": [
+          "explanation",
+          "hide",
+          "ignore",
+          "sell"
+        ],
+        "why": "Scientists use physics 'to explain' what they see; 'explanation' is a noun and cannot follow 'to'."
+      },
+      {
+        "answer": "is",
+        "occurrence": 3,
+        "distractors": [
+          "are",
+          "be",
+          "were",
+          "am"
+        ],
+        "why": "The subject 'it' (the Universe) is singular, so the verb is 'is changing'."
+      },
+      {
+        "answer": "This",
+        "distractors": [
+          "These",
+          "Those",
+          "Many",
+          "Both"
+        ],
+        "why": "'Part' is a singular noun, so it needs the singular word 'This'."
+      },
+      {
+        "answer": "called",
+        "distractors": [
+          "calling",
+          "calls",
+          "told",
+          "asked"
+        ],
+        "why": "'Is called' gives the name of something: this part is called cosmology."
+      },
+      {
+        "answer": "in",
+        "distractors": [
+          "on",
+          "at",
+          "by",
+          "into"
+        ],
+        "why": "Objects such as stars and planets are 'in the sky'; we do not say 'on' or 'at' the sky."
+      },
+      {
+        "answer": "seemed",
+        "distractors": [
+          "seeming",
+          "refused",
+          "promised",
+          "forgot"
+        ],
+        "why": "'Seemed to be' means 'looked as if they were', which describes how people saw the sky."
+      }
+    ],
+    "missingSentence": "But on Earth growth and decay happened, and natural motion was in a straight line.",
+    "missingDistractors": [
+      "Galileo was the father of both modern experimental physics and telescopic astronomy.",
+      "The word astronomy comes from the Greek words astron which means star and nomos which means law.",
+      "Isaac Newton used Galileo's ideas to create his three laws of motion and his law of universal gravitation."
+    ],
+    "missingWhy": "It describes things on Earth ('But on Earth ...'), which the next sentence needs for 'Therefore ... from that found on Earth'.",
+    "highlights": [
+      {
+        "question": "Why do astrophysicists need physics?",
+        "answer": "to explain what astronomers find and see"
+      },
+      {
+        "question": "Which thinkers began to argue that the sky and the Earth follow the same natural laws?",
+        "answer": "Nicolaus Copernicus, Johannes Kepler, Galileo, Descartes, and Newton"
+      }
+    ],
+    "idea": {
+      "answer": "In the past, people believed that objects in the sky were made of different matter from things on Earth.",
+      "distractors": [
+        "Galileo used a telescope to study the night sky and the planets.",
+        "Newton explained why the planets move in ellipses instead of circles.",
+        "Copernicus and Newton proved that the sky is made of a special matter not found on Earth."
+      ],
+      "why": "The passage says people thought the celestial region was made of a different kind of matter from that found on Earth."
+    },
+    "titleDistractors": [
+      "Astronomy",
+      "The Laws of Planetary Motion",
+      "Copernicus"
+    ],
+    "titleWhy": "The passage explains what astrophysics studies and how ideas about the sky changed; astronomy, Copernicus and planetary laws are only parts of that story."
+  },
+  {
+    "id": "ir-clear-3144",
+    "sourceId": "clear-3144",
+    "genre": "expository",
+    "topic": "general",
+    "difficulty": "easy",
+    "title": "Dive!",
+    "passage": "Corals are both plants and animals. Thousands of little algae live inside corals, and give them energy to grow. They have hard outer skeletons and grow into many different shapes. Plankton is the main source of food for many sea creatures. They are a mix of algae, bacteria, tiny animals, and the eggs and larvae of larger animals that float about with the ocean currents. Feather stars may look like plants, but they're really animals. They use their feather-like ‘arms' to catch and eat bits of floating plankton.\n\nParrotfish have strong teeth that form a parrot-like beak, which they use to scrape algae off hard coral. Some species don't mind eating bits of coral as well, and they later poop out a fine sand that washes up on land to form beautiful white beaches. Clownfish and sea anemones live together and help each other. The clownfish help the anemones by cleaning their tentacles and luring other fish for the anemone to eat. The anemones, in turn, allow the clownfish to hide among their poisonous tentacles without stinging them.",
+    "sentencesPartEndsAfter": "They use their feather-like ‘arms' to catch and eat bits of floating plankton.",
+    "blanks": [
+      {
+        "answer": "both",
+        "distractors": [
+          "either",
+          "neither",
+          "each",
+          "every"
+        ],
+        "why": "'Both ... and' joins two things: corals are plants and animals at the same time."
+      },
+      {
+        "answer": "energy",
+        "distractors": [
+          "energetic",
+          "money",
+          "homework",
+          "music"
+        ],
+        "why": "Living things need 'energy to grow'; a noun is needed after 'give them'."
+      },
+      {
+        "answer": "shapes",
+        "distractors": [
+          "shaped",
+          "voices",
+          "ideas",
+          "prices"
+        ],
+        "why": "Corals 'grow into many different shapes'; after 'many different' we need a plural noun."
+      },
+      {
+        "answer": "source",
+        "distractors": [
+          "sources",
+          "reason",
+          "result",
+          "member"
+        ],
+        "why": "'The main source of food' means where most of the food comes from."
+      },
+      {
+        "answer": "mix",
+        "distractors": [
+          "mixed",
+          "lack",
+          "smell",
+          "noise"
+        ],
+        "why": "'A mix of' means several things together, which matches the list that follows."
+      },
+      {
+        "answer": "that",
+        "distractors": [
+          "whose",
+          "what",
+          "where",
+          "when"
+        ],
+        "why": "'That' starts a clause describing the animals that float with the currents."
+      },
+      {
+        "answer": "but",
+        "distractors": [
+          "so",
+          "because",
+          "or",
+          "since"
+        ],
+        "why": "'But' shows a contrast: feather stars look like plants, yet they are animals."
+      },
+      {
+        "answer": "catch",
+        "distractors": [
+          "caught",
+          "throw",
+          "sell",
+          "paint"
+        ],
+        "why": "Animals 'catch and eat' their food; 'to' needs a base verb."
+      }
+    ],
+    "missingSentence": "Clownfish and sea anemones live together and help each other.",
+    "missingDistractors": [
+      "Most reefs grow best in warm, shallow, clear, sunny and agitated waters.",
+      "They are not strong enough to swim against ocean currents.",
+      "Creatures like tiny crabs, octopuses, worms, snails, starfish, and fishes exist there."
+    ],
+    "missingWhy": "It introduces clownfish and sea anemones, which the next sentence explains with 'The clownfish help the anemones'.",
+    "highlights": [
+      {
+        "question": "What do parrotfish use their beak-like teeth for?",
+        "answer": "to scrape algae off hard coral"
+      },
+      {
+        "question": "In what way do clownfish help sea anemones?",
+        "answer": "by cleaning their tentacles and luring other fish for the anemone to eat"
+      }
+    ],
+    "idea": {
+      "answer": "Clownfish and sea anemones help each other in useful ways.",
+      "distractors": [
+        "Most coral reefs grow best in warm, shallow and clear water.",
+        "Parrotfish catch plankton with their feather-like arms.",
+        "Plankton is made only of tiny plants that live on the sea floor."
+      ],
+      "why": "The passage says clownfish clean the anemones and bring them food, while the anemones give the clownfish a safe place to hide."
+    },
+    "titleDistractors": [
+      "Plankton",
+      "How Scientists Reveal The Secret Migrations of Fish",
+      "Protists as Food Sources"
+    ],
+    "titleWhy": "The passage takes the reader under the sea to meet many reef creatures, not only plankton or one kind of fish."
+  },
+  {
+    "id": "ir-clear-2271",
+    "sourceId": "clear-2271",
+    "genre": "expository",
+    "topic": "technology",
+    "difficulty": "advanced",
+    "title": "Nuclear power plant",
+    "passage": "The conversion to electrical energy takes place indirectly, as in conventional thermal power stations. The fission in a nuclear reactor heats the reactor coolant. The coolant may be water or gas, or even liquid metal, depending on the type of reactor. The reactor coolant then goes to a steam generator and heats water to produce steam. The pressurized steam is then usually fed to a multi-stage steam turbine. After the steam turbine has expanded and partially condensed the steam, the remaining vapor is condensed in a condenser. The condenser is a heat exchanger which is connected to a secondary side such as a river or a cooling tower. The water is then pumped back into the steam generator and the cycle begins again. The water-steam cycle corresponds to the Rankine cycle.\n\nThe nuclear reactor is the heart of the station. In its central part, the reactor's core produces heat due to nuclear fission. With this heat, a coolant is heated as it is pumped through the reactor and thereby removes the energy from the reactor. Heat from nuclear fission is used to raise steam, which runs through turbines, which in turn power the electrical generators.",
+    "sentencesPartEndsAfter": "After the steam turbine has expanded and partially condensed the steam, the remaining vapor is condensed in a condenser.",
+    "blanks": [
+      {
+        "answer": "takes",
+        "distractors": [
+          "taking",
+          "makes",
+          "puts",
+          "brings"
+        ],
+        "why": "'Take place' is a fixed phrase meaning 'happen'."
+      },
+      {
+        "answer": "heats",
+        "distractors": [
+          "heat",
+          "heating",
+          "freezes",
+          "washes"
+        ],
+        "why": "The subject 'The fission' is singular, so it takes 'heats'; fission makes the coolant hot."
+      },
+      {
+        "answer": "or",
+        "distractors": [
+          "nor",
+          "but",
+          "so",
+          "than"
+        ],
+        "why": "'Water or gas, or even liquid metal' gives a choice, so 'or' is needed."
+      },
+      {
+        "answer": "depending",
+        "distractors": [
+          "depends",
+          "depended",
+          "insisting",
+          "sitting"
+        ],
+        "why": "'Depending on' means that the coolant changes with the type of reactor."
+      },
+      {
+        "answer": "then",
+        "distractors": [
+          "than",
+          "when",
+          "them",
+          "these"
+        ],
+        "why": "'Then' shows the next step in the process; 'than' is only used in comparisons."
+      },
+      {
+        "answer": "produce",
+        "distractors": [
+          "product",
+          "producing",
+          "freeze",
+          "drink"
+        ],
+        "why": "Water is heated 'to produce steam'; 'to' needs a base verb."
+      },
+      {
+        "answer": "has",
+        "distractors": [
+          "have",
+          "is",
+          "being",
+          "be"
+        ],
+        "why": "'The steam turbine' is singular, so the present perfect is 'has expanded'."
+      },
+      {
+        "answer": "remaining",
+        "distractors": [
+          "remain",
+          "remains",
+          "missing",
+          "sleeping"
+        ],
+        "why": "'The remaining vapor' is the steam that is left after the turbine."
+      }
+    ],
+    "missingSentence": "In its central part, the reactor's core produces heat due to nuclear fission.",
+    "missingDistractors": [
+      "Every atom has in its center a very small nucleus.",
+      "Steam engines can power many kinds of machines including vehicles and electric generators.",
+      "The wind turbine's blades are turned by the wind."
+    ],
+    "missingWhy": "It says the core produces heat, which the next sentence refers to with 'With this heat'.",
+    "highlights": [
+      {
+        "question": "What substances can be used as the reactor coolant?",
+        "answer": "water or gas, or even liquid metal"
+      },
+      {
+        "question": "What is the condenser linked to?",
+        "answer": "a secondary side such as a river or a cooling tower"
+      }
+    ],
+    "idea": {
+      "answer": "In a nuclear power plant, heat from fission makes steam that turns turbines to produce electricity.",
+      "distractors": [
+        "Nuclear power plants turn fission straight into electricity without using any steam.",
+        "The water in the plant is thrown away after it passes through the turbine.",
+        "Nuclear power stations harm the environment less than plants that burn oil or coal."
+      ],
+      "why": "The last sentence says heat from fission raises steam, which runs the turbines that power the generators."
+    },
+    "titleDistractors": [
+      "Steam engine",
+      "Hydroelectricity",
+      "Wind turbine"
+    ],
+    "titleWhy": "The whole passage describes how a nuclear power plant turns heat from its reactor into electricity."
+  },
+  {
+    "id": "ir-clear-2092",
+    "sourceId": "clear-2092",
+    "genre": "expository",
+    "topic": "science",
+    "difficulty": "intermediate",
+    "title": "Habitat",
+    "passage": "A habitat is an ecological or environmental area that is inhabited by a particular species of animal, plant, or other type of organism. The term typically refers to the zone in which the organism lives and where it can find food, shelter, protection and mates for reproduction. It is the natural environment in which an organism lives, or the physical environment that surrounds a species population.\n\nA habitat is made up of physical factors such as soil, moisture, range of temperature, and light intensity as well as biotic factors such as the availability of food and the presence or absence of predators. Every organism has certain habitat needs for the conditions in which it will thrive, but some are tolerant of wide variations while others are very specific in their requirements. A habitat is not necessarily a geographical area, it can be the interior of a stem, a rotten log, a rock or a clump of moss, and for a parasitic organism it is the body of its host, part of the host's body such as the digestive tract, or a single cell within the host's body.",
+    "sentencesPartEndsAfter": "A habitat is made up of physical factors such as soil, moisture, range of temperature, and light intensity as well as biotic factors such as the availability of food and the presence or absence of predators.",
+    "blanks": [
+      {
+        "answer": "inhabited",
+        "distractors": [
+          "inhabit",
+          "inhabitant",
+          "invited",
+          "borrowed"
+        ],
+        "why": "'Is inhabited by' means 'is lived in by', which describes a habitat."
+      },
+      {
+        "answer": "which",
+        "distractors": [
+          "what",
+          "who",
+          "whose",
+          "where"
+        ],
+        "why": "'In which' is used after a place (the zone) to say what happens there."
+      },
+      {
+        "answer": "find",
+        "distractors": [
+          "found",
+          "finding",
+          "lose",
+          "sell"
+        ],
+        "why": "After 'can' we need a base verb, and animals 'find food and shelter' in their habitat."
+      },
+      {
+        "answer": "natural",
+        "distractors": [
+          "nature",
+          "naturally",
+          "nervous",
+          "honest"
+        ],
+        "why": "'The natural environment' is the usual phrase; an adjective is needed before 'environment'."
+      },
+      {
+        "answer": "that",
+        "occurrence": 2,
+        "distractors": [
+          "who",
+          "whom",
+          "whose",
+          "what"
+        ],
+        "why": "'That' starts a clause describing the environment around the population."
+      },
+      {
+        "answer": "made",
+        "distractors": [
+          "make",
+          "making",
+          "taken",
+          "given"
+        ],
+        "why": "'Made up of' means 'consisting of'."
+      },
+      {
+        "answer": "such",
+        "distractors": [
+          "so",
+          "much",
+          "very",
+          "same"
+        ],
+        "why": "'Such as' introduces examples (soil, moisture, temperature, light)."
+      },
+      {
+        "answer": "availability",
+        "distractors": [
+          "available",
+          "ability",
+          "silence",
+          "kitchen"
+        ],
+        "why": "'The availability of food' means how much food can be found; a noun is needed after 'the'."
+      }
+    ],
+    "missingSentence": "Every organism has certain habitat needs for the conditions in which it will thrive, but some are tolerant of wide variations while others are very specific in their requirements.",
+    "missingDistractors": [
+      "Grass is their usual food; it wears the teeth down, but horses' teeth continue to grow during life.",
+      "An example is the adaptation of horses' teeth to grinding grass.",
+      "Touch could indicate to a plant that insects are landing on its leaves and trying to eat them."
+    ],
+    "missingWhy": "It follows the list of physical and biotic factors by explaining that each organism needs certain conditions, some more strictly than others.",
+    "highlights": [
+      {
+        "question": "What can an organism get from its habitat?",
+        "answer": "food, shelter, protection and mates for reproduction"
+      },
+      {
+        "question": "Apart from a geographical area, what small places can be a habitat?",
+        "answer": "the interior of a stem, a rotten log, a rock or a clump of moss"
+      }
+    ],
+    "idea": {
+      "answer": "A habitat is the place where a living thing lives and finds what it needs to survive.",
+      "distractors": [
+        "Living things slowly change over many generations to suit their habitat better.",
+        "Any organism can live in any habitat as long as there is enough food.",
+        "A habitat is made only of non-living things such as soil, rocks and light."
+      ],
+      "why": "The passage defines a habitat as the area where an organism lives and finds food, shelter, protection and mates."
+    },
+    "titleDistractors": [
+      "Organism",
+      "Adaptation",
+      "Reproduction"
+    ],
+    "titleWhy": "Every sentence explains what a habitat is and what it can include."
+  },
+  {
+    "id": "ir-clear-3474",
+    "sourceId": "clear-3474",
+    "genre": "expository",
+    "topic": "general",
+    "difficulty": "easy",
+    "title": "Be Wise with Money",
+    "passage": "People work and earn money to take care of their needs as well as their wants. What is the difference between need and want? You need a bicycle to get to school and back if there are no good bus facilities in your town. You dream about a new cricket bat – this is a want, not a need. We need healthy food to stay alive. We want food that is not only healthy, but also tasty, rich, juicy, hot, and served in nice restaurants.\n\nFamilies spend money depending on the needs of each person in the family. Basic food, education, housing, safety, and saving for the future are all needs. If there is enough money left after spending on the needs, families then think about spending on wants. Ask your mother if this is the reason why she did not let you buy something you wanted? Ask her what she did with the money instead.",
+    "sentencesPartEndsAfter": "We want food that is not only healthy, but also tasty, rich, juicy, hot, and served in nice restaurants.",
+    "blanks": [
+      {
+        "answer": "earn",
+        "distractors": [
+          "earning",
+          "learn",
+          "laugh",
+          "sleep"
+        ],
+        "why": "People work to 'earn money'; after 'work and' we need a base verb that goes with 'money'."
+      },
+      {
+        "answer": "care",
+        "distractors": [
+          "careful",
+          "cares",
+          "place",
+          "turns"
+        ],
+        "why": "'Take care of' is a fixed phrase meaning 'look after'."
+      },
+      {
+        "answer": "between",
+        "distractors": [
+          "under",
+          "across",
+          "behind",
+          "above"
+        ],
+        "why": "'The difference between A and B' is the usual phrase."
+      },
+      {
+        "answer": "if",
+        "distractors": [
+          "than",
+          "what",
+          "whose",
+          "although"
+        ],
+        "why": "'If' gives the condition: you need a bicycle when there are no good buses."
+      },
+      {
+        "answer": "want",
+        "occurrence": 2,
+        "distractors": [
+          "wants",
+          "wanted",
+          "wanting",
+          "warning"
+        ],
+        "why": "The sentence contrasts 'a want' with 'a need', and 'a' needs a singular noun."
+      },
+      {
+        "answer": "healthy",
+        "distractors": [
+          "healthily",
+          "heal",
+          "noisy",
+          "lazy"
+        ],
+        "why": "An adjective is needed before 'food', and healthy food keeps us alive."
+      },
+      {
+        "answer": "only",
+        "distractors": [
+          "lonely",
+          "once",
+          "ever",
+          "even"
+        ],
+        "why": "'Not only ... but also' is a fixed pair."
+      },
+      {
+        "answer": "served",
+        "distractors": [
+          "serving",
+          "serves",
+          "parked",
+          "printed"
+        ],
+        "why": "Food is 'served in restaurants'; the passive needs the past participle 'served'."
+      }
+    ],
+    "missingSentence": "If there is enough money left after spending on the needs, families then think about spending on wants.",
+    "missingDistractors": [
+      "If someone has money that can be invested, that money is capital too.",
+      "The government said that it wants customers to know that tips are voluntary.",
+      "For example, lands, factories, shops, tools and machines are capital."
+    ],
+    "missingWhy": "It explains that families spend on wants only when money is left, which the next sentence calls 'the reason' your mother said no.",
+    "highlights": [
+      {
+        "question": "When do you need a bicycle to travel to school?",
+        "answer": "if there are no good bus facilities in your town"
+      },
+      {
+        "question": "What things does the passage list as needs for a family?",
+        "answer": "Basic food, education, housing, safety, and saving for the future"
+      }
+    ],
+    "idea": {
+      "answer": "Families pay for their needs first and think about wants only if money is left.",
+      "distractors": [
+        "Families should save all their money instead of spending it on anything.",
+        "Children should spend their pocket money on whatever they want.",
+        "A new cricket bat is a need for every child who goes to school."
+      ],
+      "why": "The passage says families think about spending on wants only if there is enough money left after the needs."
+    },
+    "titleDistractors": [
+      "Capitalism",
+      "Types of Poverty",
+      "The Middle Class"
+    ],
+    "titleWhy": "The passage teaches how to use money wisely by putting needs before wants."
+  },
+  {
+    "id": "ir-clear-3064",
+    "sourceId": "clear-3064",
+    "genre": "narrative",
+    "topic": "story",
+    "difficulty": "easy",
+    "title": "How Do Aeroplanes Fly?",
+    "passage": "Sarla learned that human beings can fly too, but not like birds. We can fly to any city in the world in an aeroplane, one of mankind's greatest inventions.\n\nWith the help of this great machine, we can also experience the joy of being airborne. Birds are aerial creatures that do not need an external machine to fly. Usually, a bird's wings are bigger than the rest of its body. The wings are very light, making it possible for birds to fly. Aeroplanes are huge and very heavy. Just like birds, aeroplanes have wings on both their sides which help them to fly. The wings of the plane are shaped just like those of birds - curved on the top and flat on the bottom which helps them to fly high up in the sky. Birds flap their wings to fly, but of course we have never seen an aeroplane flapping its wings! Birds flap their wings as they use the wind to push their body upwards.",
+    "sentencesPartEndsAfter": "The wings are very light, making it possible for birds to fly.",
+    "blanks": [
+      {
+        "answer": "city",
+        "distractors": [
+          "citizen",
+          "pocket",
+          "kitchen",
+          "minute"
+        ],
+        "why": "We fly to a place, and 'any city in the world' needs a singular noun for a place."
+      },
+      {
+        "answer": "an",
+        "distractors": [
+          "a",
+          "these",
+          "many",
+          "few"
+        ],
+        "why": "'Aeroplane' starts with a vowel sound, so it needs 'an'."
+      },
+      {
+        "answer": "inventions",
+        "distractors": [
+          "invention",
+          "inventors",
+          "invented",
+          "holidays"
+        ],
+        "why": "'One of ... inventions' needs a plural noun, and an aeroplane is something people invented."
+      },
+      {
+        "answer": "help",
+        "distractors": [
+          "helpful",
+          "helps",
+          "harm",
+          "price"
+        ],
+        "why": "'With the help of' is a fixed phrase."
+      },
+      {
+        "answer": "joy",
+        "distractors": [
+          "joyful",
+          "enjoy",
+          "joke",
+          "jacket"
+        ],
+        "why": "'The joy of being airborne' is the happy feeling of flying; a noun is needed after 'the'."
+      },
+      {
+        "answer": "that",
+        "occurrence": 2,
+        "distractors": [
+          "what",
+          "whose",
+          "where",
+          "when"
+        ],
+        "why": "'That' starts a clause that describes the creatures."
+      },
+      {
+        "answer": "than",
+        "distractors": [
+          "then",
+          "that",
+          "as",
+          "of"
+        ],
+        "why": "'Bigger than' is the pattern for comparing two things."
+      },
+      {
+        "answer": "possible",
+        "distractors": [
+          "possibly",
+          "possibility",
+          "impossible",
+          "careful"
+        ],
+        "why": "Light wings 'make it possible' for birds to fly."
+      }
+    ],
+    "missingSentence": "Just like birds, aeroplanes have wings on both their sides which help them to fly.",
+    "missingDistractors": [
+      "Flap, flap, flap, she would flap her wings but she couldn't lift off the ground.",
+      "Goose flew for one day, straight over the highest mountains in the world.",
+      "Bounthy sits and listens to the birds sing with joy."
+    ],
+    "missingWhy": "It introduces the wings of aeroplanes, which the next sentence describes as 'The wings of the plane'.",
+    "highlights": [
+      {
+        "question": "How do a bird's wings compare in size with its body?",
+        "answer": "bigger than the rest of its body"
+      },
+      {
+        "question": "What shape are an aeroplane's wings?",
+        "answer": "curved on the top and flat on the bottom"
+      }
+    ],
+    "idea": {
+      "answer": "Aeroplane wings are shaped like birds' wings, but aeroplanes do not flap them.",
+      "distractors": [
+        "Aeroplanes are lighter than birds, so they can fly higher.",
+        "Birds need an outside machine to help them fly long distances.",
+        "An aeroplane's wings are flat on the top and curved on the bottom."
+      ],
+      "why": "The passage says plane wings are shaped like birds' wings, but we never see an aeroplane flapping its wings."
+    },
+    "titleDistractors": [
+      "Amazing Daisy",
+      "King of the birds",
+      "Bounthy's Singing Birds"
+    ],
+    "titleWhy": "The passage compares birds and aeroplanes to explain how aeroplanes fly."
+  },
+  {
+    "id": "ir-clear-2833",
+    "sourceId": "clear-2833",
+    "genre": "narrative",
+    "topic": "story",
+    "difficulty": "easy",
+    "title": "Why hyenas limp",
+    "passage": "The oldest hyena said, \"Let the strongest hyena stand on the ground and then let the rest of us stand on each other's backs. We will climb on one another's backs until we reach the clouds.\" They agreed and started climbing up on one another's backs. Soon, there were no more hyenas left remaining on the ground except the strongest one. After the last hyena climbed up, the hyena on the ground thought that the others had started eating. He asked, \"Why don't you give me some of the food you're eating?\" However, the hyenas did not reach the clouds. They didn't find any food and so they had nothing to give to the strongest hyena standing on the ground. The strongest hyena became impatient and moved to the left side. All the others came falling down to the right side. As a result, even today all hyenas limp on their right side.",
+    "sentencesPartEndsAfter": "After the last hyena climbed up, the hyena on the ground thought that the others had started eating.",
+    "blanks": [
+      {
+        "answer": "rest",
+        "distractors": [
+          "rests",
+          "resting",
+          "price",
+          "test"
+        ],
+        "why": "'The rest of us' means all the others."
+      },
+      {
+        "answer": "each",
+        "distractors": [
+          "every",
+          "all",
+          "both",
+          "any"
+        ],
+        "why": "'Each other's' is a fixed phrase meaning 'one another's'."
+      },
+      {
+        "answer": "until",
+        "distractors": [
+          "during",
+          "despite",
+          "since",
+          "between"
+        ],
+        "why": "'Until' shows when the climbing will stop: when they reach the clouds."
+      },
+      {
+        "answer": "agreed",
+        "distractors": [
+          "agreement",
+          "agreeable",
+          "refused",
+          "forgot"
+        ],
+        "why": "They said yes to the plan, so 'agreed' fits and matches the past tense 'started'."
+      },
+      {
+        "answer": "were",
+        "distractors": [
+          "is",
+          "be",
+          "being",
+          "been"
+        ],
+        "why": "'There were' is used with the plural noun 'hyenas' in the past."
+      },
+      {
+        "answer": "except",
+        "distractors": [
+          "expect",
+          "accept",
+          "excite",
+          "against"
+        ],
+        "why": "'Except' means 'but not': only the strongest hyena stayed on the ground."
+      },
+      {
+        "answer": "last",
+        "distractors": [
+          "lastly",
+          "least",
+          "lasting",
+          "past"
+        ],
+        "why": "'The last hyena' is the final one to climb up."
+      },
+      {
+        "answer": "thought",
+        "distractors": [
+          "think",
+          "thinking",
+          "taught",
+          "bought"
+        ],
+        "why": "'Thought' is the past of 'think'; 'taught' and 'bought' only look similar."
+      }
+    ],
+    "missingSentence": "All the others came falling down to the right side.",
+    "missingDistractors": [
+      "Hyena ran after Goat and soon caught up with him.",
+      "Hyena complained that he had been given more work.",
+      "Goat took advantage of this and ran, back towards his village."
+    ],
+    "missingWhy": "It says the other hyenas fell to the right, which is why, 'as a result', hyenas limp on their right side.",
+    "highlights": [
+      {
+        "question": "What did the hyena on the ground believe the others were doing?",
+        "answer": "the others had started eating"
+      },
+      {
+        "question": "What did the strongest hyena do when he lost patience?",
+        "answer": "moved to the left side"
+      }
+    ],
+    "idea": {
+      "answer": "The hyenas fell down because the hyena at the bottom became impatient and moved.",
+      "distractors": [
+        "The hyenas reached the clouds and shared the food they found there.",
+        "The smallest hyena was chosen to stand at the bottom of the tower.",
+        "Hyenas limp on their left side because they fell to the left."
+      ],
+      "why": "The strongest hyena moved to the left, so all the others fell down to the right side."
+    },
+    "titleDistractors": [
+      "Hare and Hyena",
+      "Three truths of Hyena",
+      "Friendship between a donkey and a hyena"
+    ],
+    "titleWhy": "The story explains why all hyenas limp on their right side."
+  },
+  {
+    "id": "ir-ostx-world-history-volume-1-m00128-1",
+    "sourceId": "ostx-world-history-volume-1-m00128-1",
+    "genre": "expository",
+    "topic": "history",
+    "difficulty": "advanced",
+    "title": "The Steppes",
+    "passage": "The Eurasian Steppe is a vast stretch of grassland running from Eastern Europe over the top of central Asia and China into Mongolia. For much of human history, the area was home to traveling bands of nomadic pastoralists who grazed herds and collided with settled agricultural societies in Persia, Russia, and China. Geographers divide the Eurasian Steppe into two zones: One is in the west near Ukraine, Russia, and Kazakhstan, and the other is in the east, close to China and Mongolia. In both areas, the vastness of the land supported large herds of goat, cattle, and sheep. The prevalence of horses enabled powerful warriors of many cultures to rule from the saddle but also gave their people the freedom to roam, migrate, and resist absorption into a large unified state. While much of their history is still debated, these various tribes of the steppes provided the origins for a great number of Turkic, Iranian, Mongolic, Uralic, Tibeto-Burman, and multiethnic peoples today.",
+    "sentencesPartEndsAfter": "Geographers divide the Eurasian Steppe into two zones: One is in the west near Ukraine, Russia, and Kazakhstan, and the other is in the east, close to China and Mongolia.",
+    "blanks": [
+      {
+        "answer": "vast",
+        "distractors": [
+          "vastly",
+          "vastness",
+          "tiny",
+          "shy"
+        ],
+        "why": "Grassland reaching from Europe to Mongolia is 'vast' (very large); an adjective is needed before 'stretch'."
+      },
+      {
+        "answer": "running",
+        "distractors": [
+          "run",
+          "ran",
+          "runner",
+          "sleeping"
+        ],
+        "why": "'Running from ... into ...' describes how far the grassland stretches."
+      },
+      {
+        "answer": "much",
+        "distractors": [
+          "many",
+          "lot",
+          "few",
+          "every"
+        ],
+        "why": "'For much of' is used with an uncountable noun like 'history'."
+      },
+      {
+        "answer": "home",
+        "distractors": [
+          "house",
+          "homes",
+          "homely",
+          "address"
+        ],
+        "why": "'Be home to' means 'be the place where someone lives'."
+      },
+      {
+        "answer": "who",
+        "distractors": [
+          "whose",
+          "whom",
+          "what",
+          "where"
+        ],
+        "why": "'Who' starts a clause about people (the pastoralists) and is the subject of 'grazed'."
+      },
+      {
+        "answer": "divide",
+        "distractors": [
+          "division",
+          "divides",
+          "decide",
+          "borrow"
+        ],
+        "why": "Geographers 'divide' something 'into' parts; the plural subject needs 'divide'."
+      },
+      {
+        "answer": "other",
+        "distractors": [
+          "another",
+          "others",
+          "else",
+          "otherwise"
+        ],
+        "why": "'One ... and the other' is used when there are two things."
+      },
+      {
+        "answer": "close",
+        "distractors": [
+          "closed",
+          "closely",
+          "closing",
+          "clever"
+        ],
+        "why": "'Close to' means 'near'."
+      }
+    ],
+    "missingSentence": "In both areas, the vastness of the land supported large herds of goat, cattle, and sheep.",
+    "missingDistractors": [
+      "Thus, the ruling lineages formed an aristocracy of sorts.",
+      "Each clan had a ruling lineage from which leaders were selected and that intermarried with other lineages to avoid in-breeding.",
+      "They spoke languages unrelated to Chinese, such as Turkic or Mongolic, but a few such as the Jie may have even spoken Indo-European tongues."
+    ],
+    "missingWhy": "'In both areas' refers to the two zones described in the sentence before it.",
+    "highlights": [
+      {
+        "question": "Where does the Eurasian Steppe stretch?",
+        "answer": "from Eastern Europe over the top of central Asia and China into Mongolia"
+      },
+      {
+        "question": "Besides helping warriors rule, what did horses give the people of the steppes?",
+        "answer": "the freedom to roam, migrate, and resist absorption into a large unified state"
+      }
+    ],
+    "idea": {
+      "answer": "Horses allowed the steppe peoples to travel freely and stay outside large states.",
+      "distractors": [
+        "A colder, drier climate forced the steppe peoples to give up farming.",
+        "The steppe peoples lived in fixed cities with written languages and regular taxes.",
+        "Historians now agree on every detail of the history of the steppe tribes."
+      ],
+      "why": "The passage says horses gave the people the freedom to roam, migrate and resist absorption into a large unified state."
+    },
+    "titleDistractors": [
+      "Contemporary Challenges to Pastoralism",
+      "The Inner Asian Steppe and Chinese Dynastic Struggles",
+      "East-West Interactions in the Early Middle Ages"
+    ],
+    "titleWhy": "The passage describes the Eurasian Steppe as a whole: its land, its two zones and its peoples."
+  },
+  {
+    "id": "ir-ostx-concepts-biology-m45513-1",
+    "sourceId": "ostx-concepts-biology-m45513-1",
+    "genre": "expository",
+    "topic": "biology",
+    "difficulty": "advanced",
+    "title": "Endosymbiosis",
+    "passage": "The origin of eukaryotic cells was largely a mystery until a revolutionary hypothesis was comprehensively examined in the 1960s by Lynn Margulis. The endosymbiotic theory states that eukaryotes are a product of one prokaryotic cell engulfing another, one living within another, and evolving together over time until the separate cells were no longer recognizable as such. This once-revolutionary hypothesis had immediate persuasiveness and is now widely accepted, with work progressing on uncovering the steps involved in this evolutionary process as well as the key players. It has become clear that many nuclear eukaryotic genes and the molecular machinery responsible for replicating and expressing those genes appear closely related to the Archaea. On the other hand, the metabolic organelles and the genes responsible for many energy-harvesting processes had their origins in bacteria. Much remains to be clarified about how this relationship occurred; this continues to be an exciting field of discovery in biology. Several endosymbiotic events likely contributed to the origin of the eukaryotic cell.",
+    "sentencesPartEndsAfter": "This once-revolutionary hypothesis had immediate persuasiveness and is now widely accepted, with work progressing on uncovering the steps involved in this evolutionary process as well as the key players.",
+    "blanks": [
+      {
+        "answer": "mystery",
+        "distractors": [
+          "mysterious",
+          "mysteries",
+          "history",
+          "holiday"
+        ],
+        "why": "Something nobody could explain was 'a mystery' until the new idea appeared."
+      },
+      {
+        "answer": "by",
+        "distractors": [
+          "of",
+          "at",
+          "to",
+          "on"
+        ],
+        "why": "The passive 'was examined by' names the person who did the examining."
+      },
+      {
+        "answer": "states",
+        "distractors": [
+          "state",
+          "statement",
+          "stays",
+          "stares"
+        ],
+        "why": "A theory 'states that' something is true; the singular subject needs 'states'."
+      },
+      {
+        "answer": "product",
+        "distractors": [
+          "productive",
+          "produced",
+          "producing",
+          "pocket"
+        ],
+        "why": "'A product of' means 'a result of'."
+      },
+      {
+        "answer": "over",
+        "distractors": [
+          "at",
+          "under",
+          "above",
+          "beside"
+        ],
+        "why": "'Over time' means 'as time passes'."
+      },
+      {
+        "answer": "longer",
+        "distractors": [
+          "long",
+          "longest",
+          "length",
+          "lower"
+        ],
+        "why": "'No longer' means 'not any more'."
+      },
+      {
+        "answer": "had",
+        "distractors": [
+          "have",
+          "having",
+          "be",
+          "were"
+        ],
+        "why": "The past-tense verb 'had' matches the singular subject and the past time of the 1960s."
+      },
+      {
+        "answer": "widely",
+        "distractors": [
+          "wide",
+          "width",
+          "widen",
+          "wider"
+        ],
+        "why": "'Widely accepted' means accepted by many people; an adverb is needed before 'accepted'."
+      }
+    ],
+    "missingSentence": "On the other hand, the metabolic organelles and the genes responsible for many energy-harvesting processes had their origins in bacteria.",
+    "missingDistractors": [
+      "Normally, the DNA forms a long string within the nucleus.",
+      "The somatic cells make up the structural components of a body, such as the tissues, muscles, and organs.",
+      "Animal cells, plant cells, fungal cells, and protist cells are classified as eukaryotic, whereas bacteria and archaea cells are classified as prokaryotic."
+    ],
+    "missingWhy": "'On the other hand' contrasts the Archaea in the sentence before with bacteria, and 'this relationship' in the next sentence refers to both.",
+    "highlights": [
+      {
+        "question": "According to the endosymbiotic theory, how did eukaryotes come about?",
+        "answer": "one prokaryotic cell engulfing another, one living within another, and evolving together over time"
+      },
+      {
+        "question": "What does the passage say appears closely related to the Archaea?",
+        "answer": "many nuclear eukaryotic genes and the molecular machinery responsible for replicating and expressing those genes"
+      }
+    ],
+    "idea": {
+      "answer": "Eukaryotic cells probably began when one simple cell started living inside another.",
+      "distractors": [
+        "Plastids such as chloroplasts are found in every kind of eukaryotic cell.",
+        "Scientists refused to accept Margulis's idea for many years.",
+        "All the genes of eukaryotic cells came from bacteria."
+      ],
+      "why": "The endosymbiotic theory says eukaryotes came from one prokaryotic cell engulfing another and the two evolving together."
+    },
+    "titleDistractors": [
+      "Chloroplasts",
+      "How Cells Are Studied",
+      "Comparing Prokaryotic and Eukaryotic Cells"
+    ],
+    "titleWhy": "The passage explains endosymbiosis: the theory that eukaryotic cells came from one cell living inside another."
+  },
+  {
+    "id": "ir-ose-wnl-the-lightweight-adv",
+    "sourceId": "ose-wnl-the-lightweight-adv",
+    "genre": "expository",
+    "topic": "news",
+    "difficulty": "advanced",
+    "title": "The lightweight",
+    "passage": "As colourful fish were swimming past him off the Greek coast, Cathal Redmond was convinced he had taken some great photos with his first underwater camera. But, when he looked at the results on dry land, the images were brown and murky. Having taken the pictures while holding his breath underwater, he blamed the limited time he had to set up the shots. All he needed, the industrial designer thought, was a little more time to properly capture the fish in their natural environment.\n\nHe vowed to make the little extra time needed a reality and the result is his invention of the Express Dive – a refillable air storage device, held in the mouth, that lets users swim underwater for two minutes. It is aimed at bridging the gap between snorkelling, with its limited scope, and scuba diving, which gives divers the freedom to breathe underwater but at the cost of using cumbersome and expensive gear. The prototype of the invention – which is still in the initial stages of testing individual parts – looks like a cross between a scuba mouthpiece and a water bottle.",
+    "sentencesPartEndsAfter": "Having taken the pictures while holding his breath underwater, he blamed the limited time he had to set up the shots.",
+    "blanks": [
+      {
+        "answer": "past",
+        "distractors": [
+          "passed",
+          "pass",
+          "paste",
+          "post"
+        ],
+        "why": "'Swim past someone' means to go by them; 'passed' is a verb and cannot follow 'swimming'."
+      },
+      {
+        "answer": "taken",
+        "distractors": [
+          "took",
+          "taking",
+          "take",
+          "eaten"
+        ],
+        "why": "After 'had' we need the past participle, and we 'take' photos."
+      },
+      {
+        "answer": "looked",
+        "distractors": [
+          "looking",
+          "watched",
+          "saw",
+          "seen"
+        ],
+        "why": "'Look at' is the phrase for directing your eyes; only 'looked' is followed by 'at' here."
+      },
+      {
+        "answer": "were",
+        "occurrence": 2,
+        "distractors": [
+          "was",
+          "is",
+          "be",
+          "been"
+        ],
+        "why": "The plural subject 'the images' needs 'were' in the past."
+      },
+      {
+        "answer": "while",
+        "distractors": [
+          "during",
+          "among",
+          "between",
+          "beside"
+        ],
+        "why": "'While holding' means 'at the same time as holding'."
+      },
+      {
+        "answer": "breath",
+        "distractors": [
+          "breathe",
+          "breathes",
+          "bread",
+          "branch"
+        ],
+        "why": "'Hold your breath' uses the noun 'breath'; 'breathe' is the verb."
+      },
+      {
+        "answer": "blamed",
+        "distractors": [
+          "blame",
+          "blaming",
+          "praised",
+          "obeyed"
+        ],
+        "why": "He thought the short time caused the bad photos, so he 'blamed' it."
+      },
+      {
+        "answer": "set",
+        "distractors": [
+          "sit",
+          "sat",
+          "settle",
+          "setting"
+        ],
+        "why": "'Set up' means 'prepare'; after 'to' we need the base verb."
+      }
+    ],
+    "missingSentence": "All he needed, the industrial designer thought, was a little more time to properly capture the fish in their natural environment.",
+    "missingDistractors": [
+      "It takes videos of life deep inside the ocean.",
+      "When we run, we breathe in and out much faster.",
+      "But if you look even closer at life in the reef, you can find equally astounding creatures the size of your fingernail and even smaller."
+    ],
+    "missingWhy": "It says he needed 'a little more time', which the next sentence calls 'the little extra time needed'.",
+    "highlights": [
+      {
+        "question": "What was wrong with the photos when he looked at them on land?",
+        "answer": "the images were brown and murky"
+      },
+      {
+        "question": "What does the prototype of the Express Dive look like?",
+        "answer": "a cross between a scuba mouthpiece and a water bottle"
+      }
+    ],
+    "idea": {
+      "answer": "Redmond invented a small air device so that swimmers can stay underwater longer.",
+      "distractors": [
+        "Redmond's first underwater photos were bright and clear.",
+        "The Express Dive is already finished and sold in shops.",
+        "Scuba diving equipment is cheap and easy to carry."
+      ],
+      "why": "The passage says he created the Express Dive, which lets users swim underwater for two minutes."
+    },
+    "titleDistractors": [
+      "Ships noise",
+      "Treasure Reef: Revealing the Hidden Creatures of Coral Reefs",
+      "What Is the Best Way to Take Care of Buildings?"
+    ],
+    "titleWhy": "The passage is about Redmond's small, light breathing device, which avoids the cumbersome gear of scuba diving."
+  }
+]

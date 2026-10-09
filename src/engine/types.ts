@@ -325,6 +325,8 @@ export interface MistakeRecord {
   answer: string;
   correctAnswer: string;
   sentence: string;
+  /** Where the missed word starts in `sentence` (records saved before this was added have none). */
+  answerStart?: number;
   contextId: string;
   mode: Mode;
   result: ResultKind;

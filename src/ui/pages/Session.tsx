@@ -258,7 +258,12 @@ function ParagraphView({ frame, q, busy, onSubmit }: { frame: FrameProps; q: Par
   const submit = () => {
     if (!busy) onSubmit(valuesRef.current, 'submit', false);
   };
-  const focusGap = (i: number) => inputs.current[i]?.focus();
+  const focusGap = (i: number, enter: 'start' | 'end') => {
+    const el = inputs.current[i];
+    if (!el) return;
+    el.dataset.enter = enter;
+    el.focus();
+  };
   return (
     <DetFrame
       frame={frame}
@@ -286,9 +291,9 @@ function ParagraphView({ frame, q, busy, onSubmit }: { frame: FrameProps; q: Par
                 length={q.gaps[i].hiddenLength}
                 value={values[i]}
                 onChange={(v) => setValues((vs) => vs.map((x, k) => (k === i ? v : x)))}
-                onFilled={() => focusGap(i + 1)}
-                onBackspaceEmpty={i > 0 ? () => focusGap(i - 1) : undefined}
-                onEnter={() => (i < q.gaps.length - 1 ? focusGap(i + 1) : submit())}
+                onFilled={() => focusGap(i + 1, 'start')}
+                onBackspaceEmpty={i > 0 ? () => focusGap(i - 1, 'end') : undefined}
+                onEnter={() => (i < q.gaps.length - 1 ? focusGap(i + 1, 'start') : submit())}
                 autoFocus={i === 0}
                 inputRef={(el) => {
                   inputs.current[i] = el;
@@ -327,7 +332,7 @@ function useNextKey(onNext: () => void, enabled: boolean) {
   useEffect(() => {
     if (!enabled) return;
     const h = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && !(e.target instanceof HTMLInputElement) && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement)) {
+      if (e.key === 'Enter' && !e.repeat && !(e.target instanceof HTMLInputElement) && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement)) {
         e.preventDefault();
         onNext();
       }
@@ -422,7 +427,14 @@ function Feedback({ frame, outcome, busy, onNext }: { frame: FrameProps; outcome
   const last = session.index >= session.target;
   const kind = outcome.questionId.split('|')[0];
   const nextBtn = (
-    <button ref={nextRef} className="det-submit ready" onClick={onNext} disabled={busy}>
+    <button
+      ref={nextRef}
+      className="det-submit ready"
+      onClick={onNext}
+      // A held-down Enter from the question would otherwise press this button too.
+      onKeyDown={(e) => e.key === 'Enter' && e.repeat && e.preventDefault()}
+      disabled={busy}
+    >
       {last ? 'Finish session' : kind === 'read-complete' ? 'Next paragraph' : kind === 'interactive-reading' ? 'Next passage' : 'Next question'} <kbd>Enter</kbd>
     </button>
   );

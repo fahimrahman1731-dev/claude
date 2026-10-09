@@ -122,7 +122,8 @@ export function sentenceIndex(texts: CollectedText[], singles: SingleSentence[] 
   const seen = new Set<string>();
   const all: { s: string; textId: string; corpus: string }[] = [];
   for (const t of texts) for (const sp of splitSentences(t.text)) all.push({ s: t.text.slice(sp.start, sp.end).replace(/\s+/g, ' ').trim(), textId: t.id, corpus: t.corpus });
-  for (const x of singles) all.push({ s: x.s, textId: x.src, corpus: x.src });
+  // Simplified sentences sometimes come as two sentences; each one is checked on its own.
+  for (const x of singles) for (const sp of splitSentences(x.s)) all.push({ s: x.s.slice(sp.start, sp.end).trim(), textId: x.src, corpus: x.src });
   for (const { s, textId, corpus } of all) {
     {
       if (seen.has(s) || !checkFibSentence(s).ok) continue;
@@ -144,6 +145,8 @@ export function sentenceIndex(texts: CollectedText[], singles: SingleSentence[] 
   for (const list of byWord.values()) list.sort((a, b) => sentences[b].score - sentences[a].score);
   return { sentences, byWord };
 }
+
+const SENTENCE_START = /^(?:the|a|an|he|she|they|we|i|you|it|his|her|their|our|my|your|its|there|some|many|most|every|no|one|two|people|children)\s/i;
 
 export interface ContextPick {
   contexts: Context[];
@@ -188,9 +191,12 @@ export function pickContexts(
     for (const raw of lex[word]?.ex ?? []) {
       if (out.length >= 2) break;
       let s = raw.trim();
+      // WordNet examples are often phrases ("the crowded canvas of history", "felt ashamed of
+      // my torn coat"): keep only ones that start like a sentence and pass the same checks as real text.
+      if (!/^[A-Z]/.test(s) && !SENTENCE_START.test(s)) continue;
       s = s[0].toUpperCase() + s.slice(1);
       if (!/[.!?]$/.test(s)) s += '.';
-      if (wordsOf(s).length < 5 || isSensitive(s)) continue;
+      if (!checkFibSentence(s).ok) continue;
       const c = checkContext(s, word, id, 'collected');
       if (!c.context || c.warnings.some((w) => w.startsWith('giveaway')) || !fits(c.context)) continue;
       out.push({ ...c.context, src: 'wordnet' });
@@ -226,6 +232,8 @@ export function paragraphCandidates(texts: CollectedText[], perText = 2, isBriti
       if (n >= perText) break;
       const text = flatten(t.text.slice(w.start, w.end));
       if (isSensitive(text) || /["“”]/.test(text) || /[()[\]/%&+=@#]/.test(text)) continue;
+      // Plain English letters only (no "résumé", ligatures or a ⟦REF⟧ left by a missing figure link).
+      if (/(?![’‘—–])[^\x00-\x7F]/.test(text)) continue;
       // Read and Complete texts are plain prose: few numbers, no units or symbols.
       if ((text.match(/\d+(?:[.,]\d+)*/g) ?? []).length > 2) continue;
       // The DET asks for American spelling in Read and Complete, so texts with British spellings are left out.
@@ -274,14 +282,27 @@ export function isBritishSpelling(word: string, lex: Lexicon, usUk: Record<strin
     [/lled$/, 'led'],
     [/lling$/, 'ling'],
     [/ller(s)?$/, 'ler$1'],
+    [/ement(s)?$/, 'ment$1'],
+    [/(?<=.)ae(?=.)/, 'e'],
+    [/(?<=.)oe(?=..)/, 'e'],
   ];
   for (const [re, rep] of swaps) {
-    if (!re.test(word)) continue;
+    if (!re.test(word) || ((rep === 'e' || rep === 'ment$1') && word.length < 6)) continue;
     const us = word.replace(re, rep);
     if (us !== word && lex[us] && (lex[us].z ?? 0) >= (lex[word]?.z ?? 0) - 0.3) return true;
   }
-  return ['aeroplane', 'programme', 'programmes', 'cheque', 'cheques', 'tyre', 'tyres', 'pyjamas', 'aluminium', 'mum', 'mums', 'grey', 'kerb', 'pram', 'jewellery', 'practise', 'licence', 'storey', 'plough', 'mould', 'moustache', 'manoeuvre', 'cosy', 'sceptical'].includes(word);
+  return BRITISH_ONLY.has(word) || (word.endsWith('s') && BRITISH_ONLY.has(word.slice(0, -1)));
 }
+
+/** British spellings that the rules above cannot find from the lexicon. */
+const BRITISH_ONLY = new Set(
+  (
+    'aeroplane programme cheque tyre pyjamas aluminium mum grey kerb pram jewellery practise practised practising licence storey plough mould moustache manoeuvre cosy sceptical ' +
+    'learnt spelt dreamt leapt spoilt maths tonne savour savoury savoured savouring flavour flavoured acknowledgement judgement ageing whilst amongst draught gaol ' +
+    'enrol enrolment fulfil fulfilment instalment skilful wilful sulphur foetus oestrogen paediatric anaemia haemoglobin leukaemia encyclopaedia mediaeval orthopaedic ' +
+    'speciality colour neighbour behaviour favourite honour humour labour rumour harbour vapour vigour odour tumour armour endeavour centre metre litre theatre fibre calibre'
+  ).split(' '),
+);
 
 export { isFunctionWord };
 export type { VocabWord };

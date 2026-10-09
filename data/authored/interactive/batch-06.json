@@ -1,0 +1,1363 @@
+[
+ {
+  "id": "ir-clear-2053",
+  "sourceId": "clear-2053",
+  "genre": "expository",
+  "topic": "technology",
+  "difficulty": "advanced",
+  "title": "Firewall (computing)",
+  "passage": "In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. A firewall typically establishes a barrier between a trusted internal network and untrusted external network, such as the Internet. Firewalls are often categorized as either network firewalls or host-based firewalls. Network firewalls filter traffic between two or more networks and run on network hardware. Host-based firewalls run on host computers and control network traffic in and out of those machines.\n\nThe term firewall originally referred to a wall intended to confine a fire within a line of adjacent buildings. Later uses refer to similar structures, such as the metal sheet separating the engine compartment of a vehicle or aircraft from the passenger compartment. The term was applied in the late 1980s to network technology that emerged when the Internet was fairly new in terms of its global use and connectivity. The predecessors to firewalls for network security were the routers used in the late 1980s, because they separated networks from one another, thus halting the spread of problems from one network to another.",
+  "sentencesPartEndsAfter": "Host-based firewalls run on host computers and control network traffic in and out of those machines.",
+  "blanks": [
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "who",
+     "whose",
+     "where"
+    ],
+    "why": "'That' starts a clause describing the system; 'who' is only for people."
+   },
+   {
+    "answer": "incoming",
+    "distractors": [
+     "income",
+     "upcoming",
+     "ongoing",
+     "welcome"
+    ],
+    "why": "'Incoming and outgoing' is a fixed pair for traffic that comes in and goes out."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "among",
+     "beneath",
+     "during",
+     "toward"
+    ],
+    "why": "'Between ... and ...' is used for a barrier separating two things."
+   },
+   {
+    "answer": "external",
+    "distractors": [
+     "outdoor",
+     "extreme",
+     "eternal",
+     "internal"
+    ],
+    "why": "'External' contrasts with 'internal' earlier in the sentence and describes the Internet."
+   },
+   {
+    "answer": "either",
+    "distractors": [
+     "neither",
+     "both",
+     "whether",
+     "rather"
+    ],
+    "why": "'Either ... or' presents two choices; 'neither' needs 'nor' and 'both' needs 'and'."
+   },
+   {
+    "answer": "filter",
+    "distractors": [
+     "filters",
+     "filtering",
+     "borrow",
+     "paint"
+    ],
+    "why": "Firewalls 'filter' traffic; the plural subject 'Network firewalls' needs 'filter', not 'filters'."
+   },
+   {
+    "answer": "control",
+    "distractors": [
+     "controls",
+     "complain",
+     "swallow",
+     "forgive"
+    ],
+    "why": "Parallel with 'run', the plural subject needs the base verb 'control' (to manage traffic)."
+   }
+  ],
+  "missingSentence": "The term firewall originally referred to a wall intended to confine a fire within a line of adjacent buildings.",
+  "missingDistractors": [
+   "The origins of the Internet date back to research commissioned by the United States federal government in the 1960s to build robust, fault-tolerant communication via computer networks.",
+   "Network cards enable a computer to exchange data with the network.",
+   "Some network cards do not use a cable to connect to the network, but an antenna."
+  ],
+  "missingWhy": "The next sentence says 'Later uses refer to similar structures', so the sentence before must describe the original structure: a wall that stops a fire.",
+  "highlights": [
+   {
+    "question": "What did the word \"firewall\" mean before it was used for computer networks?",
+    "answer": "a wall intended to confine a fire within a line of adjacent buildings"
+   },
+   {
+    "question": "Why did the routers of the late 1980s stop problems from spreading between networks?",
+    "answer": "because they separated networks from one another"
+   }
+  ],
+  "idea": {
+   "answer": "A firewall controls the network traffic that comes in and goes out by following security rules.",
+   "distractors": [
+    "A firewall connects a computer to a local network through a cable or an antenna.",
+    "Firewalls were first built by the US government in the 1960s to make networks stronger.",
+    "Host-based firewalls are faster and safer than firewalls that run on network hardware."
+   ],
+   "why": "The first sentence says a firewall monitors and controls incoming and outgoing traffic based on security rules; the other ideas are never stated."
+  },
+  "titleDistractors": [
+   "Router",
+   "Network card",
+   "Cloud computing"
+  ],
+  "titleWhy": "The whole passage explains what a firewall is, its types and where its name came from; routers, network cards and cloud computing are not the main topic."
+ },
+ {
+  "id": "ir-clear-8023",
+  "sourceId": "clear-8023",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "easy",
+  "title": "Dinosaurs in the Dark",
+  "passage": "When you think of dinosaurs and where they lived, what do you picture? Do you see hot, steamy swamps, thick jungles, or sunny plains? Dinosaurs lived in those places, yes. But did you know that some dinosaurs lived in the cold and the darkness near the North and South Poles?\n\nThis surprised scientists, too. Paleontologists used to believe that dinosaurs lived only in the warmest parts of the world. They thought that dinosaurs could only have lived in places where turtles, crocodiles, and snakes live today. Later, these dinosaur scientists began finding bones in surprising places.\n\nOne of those surprising fossil beds is a place called Dinosaur Cove, Australia. One hundred million years ago, Australia was connected to Antarctica. Both continents were located near the South Pole. Today, paleontologists dig dinosaur fossils out of the ground. They think about what those ancient bones must mean.",
+  "sentencesPartEndsAfter": "They thought that dinosaurs could only have lived in places where turtles, crocodiles, and snakes live today.",
+  "blanks": [
+   {
+    "answer": "where",
+    "distractors": [
+     "who",
+     "whose",
+     "which",
+     "what"
+    ],
+    "why": "'Where they lived' asks about places, and the next sentence lists places."
+   },
+   {
+    "answer": "thick",
+    "distractors": [
+     "thickly",
+     "fat",
+     "loud",
+     "polite"
+    ],
+    "why": "'Thick jungles' is a common collocation; 'thickly' is an adverb and cannot describe a noun."
+   },
+   {
+    "answer": "those",
+    "distractors": [
+     "that",
+     "this",
+     "them",
+     "there"
+    ],
+    "why": "'Those places' points back to the plural places just listed."
+   },
+   {
+    "answer": "darkness",
+    "distractors": [
+     "darken",
+     "darkly",
+     "brightness",
+     "heat"
+    ],
+    "why": "'The cold and the darkness' needs a noun that matches the cold, dark poles in the title."
+   },
+   {
+    "answer": "to",
+    "distractors": [
+     "for",
+     "by",
+     "at",
+     "with"
+    ],
+    "why": "'Used to believe' is a fixed form for something people believed in the past."
+   },
+   {
+    "answer": "warmest",
+    "distractors": [
+     "warmly",
+     "warmth",
+     "coldest",
+     "darkest"
+    ],
+    "why": "Scientists believed dinosaurs lived only in hot places, so 'the warmest parts' is right."
+   },
+   {
+    "answer": "live",
+    "distractors": [
+     "lives",
+     "living",
+     "lived",
+     "alive"
+    ],
+    "why": "With 'today' and the plural subject, the present-tense verb 'live' is needed."
+   }
+  ],
+  "missingSentence": "Later, these dinosaur scientists began finding bones in surprising places.",
+  "missingDistractors": [
+   "Paleontologists and archaeologists are scientists who dig up the ground to find fossils.",
+   "The North Pole is over an ice-covered ocean.",
+   "A fossil is any kind of life that is more than ten thousand years old and preserved in any form that we can study today."
+  ],
+  "missingWhy": "The next sentence talks about 'those surprising fossil beds', which only makes sense after 'bones in surprising places'.",
+  "highlights": [
+   {
+    "question": "What did paleontologists once think about where dinosaurs lived?",
+    "answer": "dinosaurs lived only in the warmest parts of the world"
+   },
+   {
+    "question": "Where were Australia and Antarctica one hundred million years ago?",
+    "answer": "near the South Pole"
+   }
+  ],
+  "idea": {
+   "answer": "Some dinosaurs lived in cold, dark places near the poles, which surprised scientists.",
+   "distractors": [
+    "Summer at the South Pole is now colder than winter at the North Pole.",
+    "Dinosaurs lived only in hot swamps, thick jungles and sunny plains.",
+    "Paleontologists found many ammonite fossils while digging in the Himalayas."
+   ],
+   "why": "The passage says some dinosaurs lived in the cold and darkness near the poles and that this surprised scientists."
+  },
+  "titleDistractors": [
+   "Antarctica: King of Cold",
+   "Paleontology",
+   "The Mighty Tethys Sea"
+  ],
+  "titleWhy": "The whole passage is about dinosaurs that lived in the cold and dark near the poles, which the title describes."
+ },
+ {
+  "id": "ir-clear-2029",
+  "sourceId": "clear-2029",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "easy",
+  "title": "How Sleep Changes as the Brain Grows",
+  "titleWritten": true,
+  "passage": "As a newborn, you spent more time asleep than awake. But the older you get, the less you sleep. It is not just the amount of sleep that changes during development but, importantly, the balance between different sleep stages also changes. Generally, as you grow older, you get less and less slow-wave sleep, while the proportion of light non-REM sleep increases. Scientists believe that these changes in sleep may tell us about the brain's potential to reconstruct itself.\n\nFrom infancy to adolescence, your brain undergoes major reorganization and optimization to deal with your daily needs and experiences. New connections between brain cells are built, connections you do not need are removed, and the communication of information along important neuron tracks speeds up. Crucially, when a specific part of the brain is under reconstruction, the neurons in that region show more slow rhythmic activity during slow-wave sleep.",
+  "sentencesPartEndsAfter": "Generally, as you grow older, you get less and less slow-wave sleep, while the proportion of light non-REM sleep increases.",
+  "blanks": [
+   {
+    "answer": "awake",
+    "distractors": [
+     "awaken",
+     "awoke",
+     "alive",
+     "asleep"
+    ],
+    "why": "'Asleep than awake' compares two states; 'awake' is the opposite of 'asleep'."
+   },
+   {
+    "answer": "less",
+    "distractors": [
+     "least",
+     "fewer",
+     "lesser",
+     "little"
+    ],
+    "why": "'The older ..., the less ...' is a fixed comparative pattern; 'fewer' is only for countable nouns."
+   },
+   {
+    "answer": "amount",
+    "distractors": [
+     "number",
+     "mount",
+     "account",
+     "weight"
+    ],
+    "why": "Sleep is uncountable, so we say 'the amount of sleep', not 'the number of sleep'."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "beside",
+     "until",
+     "except",
+     "onto"
+    ],
+    "why": "'The balance between' different things is the natural phrase."
+   },
+   {
+    "answer": "grow",
+    "distractors": [
+     "grew",
+     "grows",
+     "growth",
+     "glow"
+    ],
+    "why": "'As you grow older' needs the base verb after 'you' in the present tense."
+   },
+   {
+    "answer": "while",
+    "distractors": [
+     "during",
+     "despite",
+     "whether",
+     "instead"
+    ],
+    "why": "'While' joins two clauses to show a contrast; 'during' and 'despite' cannot be followed by a full clause."
+   }
+  ],
+  "missingSentence": "Scientists believe that these changes in sleep may tell us about the brain's potential to reconstruct itself.",
+  "missingDistractors": [
+   "While awake, our brain wave activity is dominated by beta waves.",
+   "The frequency of a brain wave is how many brain waves occur in a second, and frequency is measured in Hertz.",
+   "Stage 1 sleep is a transitional phase that occurs between wakefulness and sleep, the period during which we drift off to sleep."
+  ],
+  "missingWhy": "'These changes in sleep' refers back to the changes just described, and the idea of the brain reconstructing itself leads into the next paragraph about brain reorganization.",
+  "highlights": [
+   {
+    "question": "Which kind of sleep makes up a bigger share of our sleep as we get older?",
+    "answer": "light non-REM sleep"
+   },
+   {
+    "question": "What do neurons in a part of the brain that is being rebuilt show during deep sleep?",
+    "answer": "more slow rhythmic activity during slow-wave sleep"
+   }
+  ],
+  "idea": {
+   "answer": "The way the brain is rebuilt while we grow up appears to be linked to slow-wave sleep.",
+   "distractors": [
+    "Young children dream most clearly during REM sleep because their eyes move quickly.",
+    "The brain builds most of its new connections while a person is awake.",
+    "Older people need more sleep than newborns because their brains work harder."
+   ],
+   "why": "The passage says changes in sleep may show the brain's ability to rebuild itself, and that regions being rebuilt show more slow activity in slow-wave sleep."
+  },
+  "titleDistractors": [
+   "Stages of Sleep",
+   "Healthy Sleep",
+   "Scientific Significance of Sleep Talking"
+  ],
+  "titleWhy": "The passage explains how sleep changes from birth to adolescence and how this is linked to the growing brain; it does not describe sleep stages, healthy habits or sleep talking."
+ },
+ {
+  "id": "ir-clear-2696",
+  "sourceId": "clear-2696",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "intermediate",
+  "title": "Seismology",
+  "passage": "Seismology is the study of what is under the surface of the Earth by measuring vibrations on the Earth's surface. A person who does this is called a seismologist.\n\nIt is part of the science of geophysics, which studies the physics of the processes that formed the Earth and other planets.\n\nSeismology is done by seismologists and geophysicists using devices to pick up the vibrations called geophones, hydrophones or seismometers.\n\nSeismology can either be passive, just listening to vibrations caused by earthquakes and volcanic activity, or active, using small explosive charges to send vibrations into the ground.\n\nSeismic detectors come in two types, one which measures up and down vibrations, and one which measures side to side vibrations. Both types use and arrangement of a magnet and a coil of wire which will convert the vibrations into an electrical signal which can be stored in a computer for analysis.\n\nSeismologists can find the location of earthquakes by plotting received vibrations on a map. They can also pick up underground nuclear tests, and this is what many of the seismic recording stations were set up for.",
+  "sentencesPartEndsAfter": "Seismology can either be passive, just listening to vibrations caused by earthquakes and volcanic activity, or active, using small explosive charges to send vibrations into the ground.",
+  "blanks": [
+   {
+    "answer": "measuring",
+    "distractors": [
+     "measure",
+     "measured",
+     "measurement",
+     "forgetting"
+    ],
+    "why": "After the preposition 'by' we need the -ing form 'measuring'."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whose",
+     "whom",
+     "what"
+    ],
+    "why": "'Who' is used for a person doing an action: 'A person who does this'."
+   },
+   {
+    "answer": "planets",
+    "distractors": [
+     "plants",
+     "planes",
+     "plans",
+     "pianos"
+    ],
+    "why": "'The Earth and other planets' – the Earth is a planet, so the other members must be planets."
+   },
+   {
+    "answer": "by",
+    "occurrence": 2,
+    "distractors": [
+     "from",
+     "of",
+     "at",
+     "until"
+    ],
+    "why": "In the passive 'is done by', 'by' introduces the people who do the action."
+   },
+   {
+    "answer": "pick",
+    "distractors": [
+     "pack",
+     "pull",
+     "put",
+     "pay"
+    ],
+    "why": "'Pick up' means to detect, which is what these devices do with vibrations."
+   },
+   {
+    "answer": "caused",
+    "distractors": [
+     "causing",
+     "cause",
+     "because",
+     "closed"
+    ],
+    "why": "'Vibrations caused by earthquakes' is a passive phrase, so the past participle 'caused' is needed."
+   },
+   {
+    "answer": "or",
+    "occurrence": 2,
+    "distractors": [
+     "nor",
+     "and",
+     "but",
+     "so"
+    ],
+    "why": "'Either ... or' joins the two choices, passive or active."
+   }
+  ],
+  "missingSentence": "Seismic detectors come in two types, one which measures up and down vibrations, and one which measures side to side vibrations.",
+  "missingDistractors": [
+   "Seismic data uses sound waves to create an image of the sediments beneath the ground.",
+   "P-waves may be transmitted through gases, liquids, or solids.",
+   "The seismicity or seismic activity of an area refers to the frequency, type and size of earthquakes experienced over a period of time."
+  ],
+  "missingWhy": "The next sentence begins 'Both types use ...', so the missing sentence must introduce two types of detectors.",
+  "highlights": [
+   {
+    "question": "How do seismologists work out where an earthquake happened?",
+    "answer": "by plotting received vibrations on a map"
+   },
+   {
+    "question": "What causes the vibrations that passive seismology listens to?",
+    "answer": "earthquakes and volcanic activity"
+   }
+  ],
+  "idea": {
+   "answer": "Seismologists learn what is under the Earth's surface by recording vibrations with special devices.",
+   "distractors": [
+    "P-waves are the fastest seismic waves and reach a seismograph first.",
+    "Seismologists can predict exactly when the next earthquake will happen.",
+    "Seismic detectors do not need electricity, so they work far from any computer."
+   ],
+   "why": "The passage defines seismology as studying what is under the surface by measuring vibrations, using devices such as seismometers."
+  },
+  "titleDistractors": [
+   "Earthquake",
+   "P-wave",
+   "Fiery Ice—Gas Hydrates"
+  ],
+  "titleWhy": "The whole passage describes the science of seismology: what it studies, its tools and its uses, not one kind of wave or earthquakes alone."
+ },
+ {
+  "id": "ir-clear-3270",
+  "sourceId": "clear-3270",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "intermediate",
+  "title": "Ekai and the Domestic Animals",
+  "passage": "Ekai keeps all sorts of animals in his father's homestead. His mother Mrs. Anok has always supported Ekai in the purchasing of the animals. Goats, chicken, chicks, cattle, rabbits and a dog are Ekai's favorite animals. During holidays Ekai with the help of his sister will take the goats out to graze in the nearby river banks, have fun and make sure all their livestock are satisfied. At the grazing banks Ekai would hold one of the goats after it has taken water confirming how the goats are growing fat each and every day. Ekai has a dog pet called Bony. Every time Ekai is around he would give Bony food and a hot shower with a shampoo, that makes Bony a happy and healthy dog. In the morning Ekai and his sister will give the birds food and water before he takes breakfast. Besides him Bony the dog would play and let no other wild birds to disturb their birds.",
+  "sentencesPartEndsAfter": "During holidays Ekai with the help of his sister will take the goats out to graze in the nearby river banks, have fun and make sure all their livestock are satisfied.",
+  "blanks": [
+   {
+    "answer": "of",
+    "distractors": [
+     "by",
+     "on",
+     "at",
+     "for"
+    ],
+    "why": "'All sorts of' is a fixed phrase meaning 'many kinds of'."
+   },
+   {
+    "answer": "homestead",
+    "distractors": [
+     "homework",
+     "housework",
+     "headache",
+     "handbag"
+    ],
+    "why": "Animals are kept on a family's land and home, the 'homestead'; the other nouns are not places."
+   },
+   {
+    "answer": "supported",
+    "distractors": [
+     "support",
+     "supports",
+     "supporting",
+     "supporter"
+    ],
+    "why": "After 'has always' we need the past participle 'supported' (present perfect)."
+   },
+   {
+    "answer": "are",
+    "distractors": [
+     "is",
+     "be",
+     "was",
+     "being"
+    ],
+    "why": "The subject is a list of several animals, so the plural verb 'are' is needed."
+   },
+   {
+    "answer": "with",
+    "distractors": [
+     "by",
+     "at",
+     "from",
+     "into"
+    ],
+    "why": "'With the help of' is the fixed phrase for getting help from someone."
+   },
+   {
+    "answer": "graze",
+    "distractors": [
+     "grass",
+     "grazed",
+     "grace",
+     "greet"
+    ],
+    "why": "After 'to' we need a base verb; goats are taken out to 'graze' (eat grass)."
+   },
+   {
+    "answer": "satisfied",
+    "distractors": [
+     "satisfy",
+     "satisfying",
+     "satisfaction",
+     "hungry"
+    ],
+    "why": "After 'are', the -ed adjective 'satisfied' describes how the animals feel after grazing."
+   }
+  ],
+  "missingSentence": "In the morning Ekai and his sister will give the birds food and water before he takes breakfast.",
+  "missingDistractors": [
+   "So, Jackal jumped up and took the goats out to graze.",
+   "Bounthy sits and listens to the birds sing with joy.",
+   "Ekai's mother brought him new school uniform and a pair of black shoes with grey pair of socks."
+  ],
+  "missingWhy": "The last sentence talks about 'their birds' and 'him', so the sentence before must show Ekai caring for the birds.",
+  "highlights": [
+   {
+    "question": "How does Ekai keep his dog clean?",
+    "answer": "a hot shower with a shampoo"
+   },
+   {
+    "question": "What does Ekai check when he holds one of the goats?",
+    "answer": "how the goats are growing fat each and every day"
+   }
+  ],
+  "idea": {
+   "answer": "Ekai takes good care of his animals with help from his sister and his mother.",
+   "distractors": [
+    "Ekai's father takes one bird to the forest every day to catch other birds.",
+    "Ekai sells his goats at the market during the holidays.",
+    "Bony the dog chases Ekai's birds away from the homestead."
+   ],
+   "why": "The passage shows Ekai feeding, grazing and washing his animals, with his sister helping and his mother supporting him."
+  },
+  "titleDistractors": [
+   "Ekai's First Day In School",
+   "Bounthy's Singing Birds",
+   "Goat, the false king"
+  ],
+  "titleWhy": "The whole story is about Ekai and the animals he keeps at home."
+ },
+ {
+  "id": "ir-clear-2730",
+  "sourceId": "clear-2730",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "A father's lesson",
+  "passage": "Abula stole his mother's money to buy sweets. Even when she hid her money, he found it and took it. After eating all his sweets, Abula would play with his friends. After a while, Abula stopped going to school. He stayed out playing the whole day, only returning home in the evening. Abula's mother noticed this and became worried. \"Our son is not behaving well. I do not think he is attending school. He is also stealing money from me,\" said Abula's mother. He said to his wife, \"Next time, hide the money within the pages of a book. He never even opens a book, so the money will be safe there.\" The next day, Abula looked for his mother's money. He searched everywhere but he did not find anything. He decided to go to the nearest market to find some money.",
+  "sentencesPartEndsAfter": "Abula's mother noticed this and became worried.",
+  "blanks": [
+   {
+    "answer": "buy",
+    "distractors": [
+     "bought",
+     "buying",
+     "pay",
+     "spend"
+    ],
+    "why": "After 'to' we need the base verb; you 'buy' sweets (you 'pay for' them)."
+   },
+   {
+    "answer": "when",
+    "distractors": [
+     "what",
+     "which",
+     "who",
+     "whose"
+    ],
+    "why": "'Even when' introduces a time clause: at the times she hid her money."
+   },
+   {
+    "answer": "with",
+    "distractors": [
+     "by",
+     "at",
+     "to",
+     "from"
+    ],
+    "why": "We 'play with' friends."
+   },
+   {
+    "answer": "going",
+    "distractors": [
+     "go",
+     "went",
+     "gone",
+     "goes"
+    ],
+    "why": "'Stop' is followed by the -ing form: 'stopped going to school'."
+   },
+   {
+    "answer": "whole",
+    "distractors": [
+     "hole",
+     "wholly",
+     "total",
+     "healthy"
+    ],
+    "why": "'The whole day' means all day long; 'hole' only sounds the same."
+   },
+   {
+    "answer": "this",
+    "distractors": [
+     "these",
+     "those",
+     "whose",
+     "which"
+    ],
+    "why": "'Noticed this' refers to one situation – Abula staying away from school."
+   },
+   {
+    "answer": "worried",
+    "distractors": [
+     "worry",
+     "worries",
+     "worrying",
+     "happy"
+    ],
+    "why": "After 'became' we need an adjective; a mother whose son skips school becomes 'worried'."
+   }
+  ],
+  "missingSentence": "He searched everywhere but he did not find anything.",
+  "missingDistractors": [
+   "But her mother could not afford the necklace.",
+   "The children were quiet and ate their food.",
+   "But with the gem's power, he won every single match he played with his friends."
+  ],
+  "missingWhy": "After Abula looks for the money, this sentence says he could not find it, which explains why he then goes to the market to find money.",
+  "highlights": [
+   {
+    "question": "Where did the father tell his wife to hide the money?",
+    "answer": "within the pages of a book"
+   },
+   {
+    "question": "Where did Abula decide to go when he could not find any money at home?",
+    "answer": "the nearest market"
+   }
+  ],
+  "idea": {
+   "answer": "Abula's father thought the money would be safe in a book because his son never read.",
+   "distractors": [
+    "Abula's mother put all her money in a piggy bank under her bed.",
+    "Abula used the money he took to buy new books for school.",
+    "Abula's teacher told his mother that he had stopped coming to school."
+   ],
+   "why": "The father says Abula never even opens a book, so the money will be safe there."
+  },
+  "titleDistractors": [
+   "Zethu's necklace",
+   "Soccer star",
+   "Emeka and the old man"
+  ],
+  "titleWhy": "The story turns on the father's clever advice to hide the money in a book, a lesson about Abula not studying."
+ },
+ {
+  "id": "ir-clear-2300",
+  "sourceId": "clear-2300",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "First Day At School.",
+  "passage": "One day, as Kunle and his father were going to the market, his father thought, \" Shouldn't I take Kunle to school? \" As his father was thinking about going to school, he saw a school and asked Kunle if he would like to go to school. \"Yes!\" Kunle answered. Afterwards, Kunle and his father went to buy the school uniforms. After buying the school uniforms, Kunle and his father went back home to prepare his school materials for the next day. The next day he got prepared, ate his food and packed his bag. When Kunle got to school, he liked the teachings and he learnt things like: reading, sports, mathematics, science, civic education and verbal reasoning. At break time, Kunle played football with his new friends. As they continued playing ball, Kunle scored for the first time which made it 1- 0. After playing for some time, they rang the bell to go inside the class. After school ended, Kunle told his father all that had happened and his father was proud at his performance. Kunle also told his father that his teacher liked him and she was proud of him.",
+  "sentencesPartEndsAfter": "The next day he got prepared, ate his food and packed his bag.",
+  "blanks": [
+   {
+    "answer": "were",
+    "distractors": [
+     "was",
+     "is",
+     "be",
+     "been"
+    ],
+    "why": "The subject 'Kunle and his father' is plural and the story is in the past, so 'were going' is right."
+   },
+   {
+    "answer": "about",
+    "distractors": [
+     "at",
+     "for",
+     "with",
+     "by"
+    ],
+    "why": "We say 'thinking about' something."
+   },
+   {
+    "answer": "if",
+    "distractors": [
+     "that",
+     "what",
+     "unless",
+     "than"
+    ],
+    "why": "'Asked ... if' introduces a yes/no question in reported speech."
+   },
+   {
+    "answer": "like",
+    "distractors": [
+     "liked",
+     "likes",
+     "liking",
+     "lake"
+    ],
+    "why": "After 'would' we need the base verb: 'would like to go'."
+   },
+   {
+    "answer": "buy",
+    "distractors": [
+     "bought",
+     "buying",
+     "sell",
+     "pay"
+    ],
+    "why": "After 'went to' we need a base verb, and the next sentence says 'After buying the school uniforms'."
+   },
+   {
+    "answer": "prepare",
+    "distractors": [
+     "prepared",
+     "preparing",
+     "preparation",
+     "prepares"
+    ],
+    "why": "After 'to' we need the base verb 'prepare'."
+   },
+   {
+    "answer": "ate",
+    "distractors": [
+     "eat",
+     "eaten",
+     "eating",
+     "eight"
+    ],
+    "why": "The story is in the past and the list 'got ..., ate ... and packed' uses past-tense verbs."
+   }
+  ],
+  "missingSentence": "At break time, Kunle played football with his new friends.",
+  "missingDistractors": [
+   "My friends were not able to score any goals.",
+   "We played until the field was full of sand.",
+   "The goal posts were made of two big stones."
+  ],
+  "missingWhy": "The next sentence says 'As they continued playing ball', so the sentence before must show Kunle starting to play with others.",
+  "highlights": [
+   {
+    "question": "Which subjects did Kunle learn on his first day at school?",
+    "answer": "reading, sports, mathematics, science, civic education and verbal reasoning"
+   },
+   {
+    "question": "How did Kunle's father feel about how Kunle did at school?",
+    "answer": "proud at his performance"
+   }
+  ],
+  "idea": {
+   "answer": "Kunle enjoyed his first day at school and made new friends there.",
+   "distractors": [
+    "Kunle and his father saw friends playing football on their way to the market.",
+    "Kunle's team did not score any goals during break time.",
+    "Kunle's teacher was unhappy because he arrived late on his first day."
+   ],
+   "why": "The passage says Kunle liked the teachings and played football with his new friends."
+  },
+  "titleDistractors": [
+   "Ah! Football!",
+   "Father's advice",
+   "Atieno's friend"
+  ],
+  "titleWhy": "The whole story follows Kunle from deciding to go to school to telling his father about his first day there."
+ },
+ {
+  "id": "ir-clear-2988",
+  "sourceId": "clear-2988",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Hyena and Monkey",
+  "passage": "The hyena and the monkey had an argument. They went to a judge to settle their differences.\n\nAfter the judge listened to their case, he was afraid to pass judgement on their case.\n\nHe thought to himself, \"If I condemn the hyena, it will eat all my cattle. And if I condemn the monkey, he will eat all my corn! So, what am I to do?\"\n\nThe judge thought for a while, and said, \"The case is too difficult for me to judge alone. You should go to the elders of the village.\"\n\nSo, the hyena and monkey went to the elders.\n\nThey told the elders about their disagreement.\n\nAfter the elders listened to their case, they were also afraid to pass judgement.\n\nIf they supported the monkey, the hyena might eat their cattle. If they supported the hyena, the monkey might eat their corn. The elders told Hyena and Monkey that their case was very difficult.",
+  "sentencesPartEndsAfter": "So, what am I to do?\"",
+  "blanks": [
+   {
+    "answer": "argument",
+    "distractors": [
+     "argue",
+     "arguing",
+     "agreement",
+     "answer"
+    ],
+    "why": "They need a judge to settle their differences, so they had an 'argument' (a noun after 'an')."
+   },
+   {
+    "answer": "to",
+    "distractors": [
+     "at",
+     "on",
+     "of",
+     "into"
+    ],
+    "why": "We 'go to' a person or place."
+   },
+   {
+    "answer": "settle",
+    "distractors": [
+     "settled",
+     "settling",
+     "settlement",
+     "sell"
+    ],
+    "why": "After 'to' we need the base verb; people 'settle' their differences to end an argument."
+   },
+   {
+    "answer": "afraid",
+    "distractors": [
+     "fear",
+     "frighten",
+     "frightening",
+     "brave"
+    ],
+    "why": "'Was afraid to' needs an adjective, and the judge's next words show his fear."
+   },
+   {
+    "answer": "himself",
+    "distractors": [
+     "him",
+     "his",
+     "herself",
+     "itself"
+    ],
+    "why": "'Thought to himself' means he thought silently; the reflexive pronoun refers back to 'He'."
+   },
+   {
+    "answer": "eat",
+    "distractors": [
+     "ate",
+     "eaten",
+     "eating",
+     "drink"
+    ],
+    "why": "After 'will' we need the base verb, and a hyena would 'eat' cattle."
+   },
+   {
+    "answer": "what",
+    "distractors": [
+     "who",
+     "whose",
+     "where",
+     "when"
+    ],
+    "why": "'What am I to do?' asks which action to take."
+   }
+  ],
+  "missingSentence": "After the elders listened to their case, they were also afraid to pass judgement.",
+  "missingDistractors": [
+   "Hyena complained that he had been given more work.",
+   "Hare agreed to his terms and they shook hands on it because he thought it was a good deal.",
+   "Hyena suggested that it was good to plant maize."
+  ],
+  "missingWhy": "The next sentences explain the elders' fear ('If they supported the monkey ...'), so the missing sentence must say the elders were also afraid.",
+  "highlights": [
+   {
+    "question": "Where did the judge tell the hyena and the monkey to go?",
+    "answer": "to the elders of the village"
+   },
+   {
+    "question": "What did the elders fear would happen if they supported the hyena?",
+    "answer": "the monkey might eat their corn"
+   }
+  ],
+  "idea": {
+   "answer": "Both the judge and the elders were afraid to decide the case because of what the animals might do.",
+   "distractors": [
+    "The judge decided that the monkey was right and the hyena was wrong.",
+    "The hyena and the monkey agreed to share their cattle and corn.",
+    "Hyena and Hare were great friends who did many things together."
+   ],
+   "why": "The judge and then the elders were afraid to pass judgement because the hyena might eat their cattle or the monkey their corn."
+  },
+  "titleDistractors": [
+   "Hare and Hyena",
+   "The sick hyena",
+   "Monkey and the shoes"
+  ],
+  "titleWhy": "The whole story is about the argument between the hyena and the monkey and the people who are afraid to judge it."
+ },
+ {
+  "id": "ir-ostx-concepts-biology-m45524-1",
+  "sourceId": "ostx-concepts-biology-m45524-1",
+  "genre": "expository",
+  "topic": "biology",
+  "difficulty": "advanced",
+  "title": "Sponges",
+  "passage": "Animals in subkingdom Parazoa represent the simplest animals and include the sponges, or phylum Porifera. All sponges are aquatic and the majority of species are marine. Sponges live in intimate contact with water, which plays a role in their feeding, gas exchange, and excretion. Much of the body structure of the sponge is dedicated to moving water through the body so it can filter out food, absorb dissolved oxygen, and eliminate wastes.\n\nThe body of the simplest sponges takes the shape of a cylinder with a large central cavity, the spongocoel. Water enters the spongocoel from numerous pores in the body wall. Water flows out through a large opening called the osculum. However, sponges exhibit a diversity of body forms, which vary in the size and branching of the spongocoel, the number of osculi, and where the cells that filter food from the water are located.\n\nSponges consist of an outer layer of flattened cells and an inner layer of cells called choanocytes separated by a jelly-like substance called mesohyl. The mesohyl contains embedded amoeboid cells that secrete tiny needles called spicules or protein fibers that help give the sponge its structural strength.",
+  "sentencesPartEndsAfter": "The body of the simplest sponges takes the shape of a cylinder with a large central cavity, the spongocoel.",
+  "blanks": [
+   {
+    "answer": "include",
+    "distractors": [
+     "includes",
+     "including",
+     "inclusion",
+     "exclude"
+    ],
+    "why": "The plural subject 'Animals' needs 'include', parallel with 'represent'; sponges are part of this group."
+   },
+   {
+    "answer": "contact",
+    "distractors": [
+     "contract",
+     "contest",
+     "context",
+     "content"
+    ],
+    "why": "'In contact with water' means touching water; the other words only look similar."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "what",
+     "whose",
+     "whom"
+    ],
+    "why": "'Which' refers back to 'water'; 'who' is only for people."
+   },
+   {
+    "answer": "Much",
+    "distractors": [
+     "Many",
+     "Few",
+     "Several",
+     "Every"
+    ],
+    "why": "'Body structure' is uncountable, so 'Much of' is needed, not 'Many of'."
+   },
+   {
+    "answer": "through",
+    "distractors": [
+     "though",
+     "thought",
+     "throw",
+     "threw"
+    ],
+    "why": "Water moves 'through' the body (from one side to the other); the other words only look similar."
+   },
+   {
+    "answer": "eliminate",
+    "distractors": [
+     "eliminates",
+     "eliminated",
+     "elevate",
+     "illuminate"
+    ],
+    "why": "After 'can' the verbs are in the base form ('filter', 'absorb', 'eliminate'), and wastes are removed."
+   },
+   {
+    "answer": "shape",
+    "distractors": [
+     "shaped",
+     "sharp",
+     "ship",
+     "shade"
+    ],
+    "why": "'Takes the shape of' is a fixed phrase meaning 'has the form of'."
+   }
+  ],
+  "missingSentence": "Water enters the spongocoel from numerous pores in the body wall.",
+  "missingDistractors": [
+   "Between these two layers is a non-living, jelly-like mesoglea.",
+   "The gut may be a simple sac or highly branched.",
+   "Gemmules survive hostile environments and can attach to a substrate and grow into a new sponge."
+  ],
+  "missingWhy": "The next sentence says water 'flows out' through the osculum, so the sentence before must explain how water first enters the spongocoel.",
+  "highlights": [
+   {
+    "question": "What separates the outer layer of cells from the inner layer of choanocytes?",
+    "answer": "a jelly-like substance called mesohyl"
+   },
+   {
+    "question": "What three things can a sponge do by moving water through its body?",
+    "answer": "filter out food, absorb dissolved oxygen, and eliminate wastes"
+   }
+  ],
+  "idea": {
+   "answer": "A sponge's body is built mainly to move water through it so that it can feed and take in oxygen.",
+   "distractors": [
+    "Sponges digest large pieces of food in a simple gut before passing it to their cells.",
+    "Most sponges live in fresh water, and only a few kinds live in the sea.",
+    "Sponges have a simple network of nerve cells spread across the body."
+   ],
+   "why": "The passage says much of the sponge's body is dedicated to moving water through it to filter food, absorb oxygen and remove wastes."
+  },
+  "titleDistractors": [
+   "Physiological Processes of Cnidarians",
+   "Physiological Processes of Flatworms",
+   "Flagella and Cilia"
+  ],
+  "titleWhy": "The whole passage describes sponges: where they live, how water moves through them and how their bodies are built."
+ },
+ {
+  "id": "ir-ostx-introduction-sociology-3e-m90154-0",
+  "sourceId": "ostx-introduction-sociology-3e-m90154-0",
+  "genre": "expository",
+  "topic": "sociology",
+  "difficulty": "advanced",
+  "title": "Theoretical Perspectives on Culture",
+  "passage": "Music, fashion, technology, and values—all are products of culture. But what do they mean? How do sociologists perceive and interpret culture based on these material and nonmaterial items? Let’s finish our analysis of culture by reviewing them in the context of three theoretical perspectives: functionalism, conflict theory, and symbolic interactionism.\n\nFunctionalists view society as a system in which all parts work—or function—together to create society as a whole. They often use the human body as an analogy. Looking at life in this way, societies need culture to exist. Cultural norms function to support the fluid operation of society, and cultural values guide people in making choices. Just as members of a society work together to fulfill a society’s needs, culture exists to meet its members’ social and personal needs.\n\nFunctionalists also study culture in terms of values. For example, education is highly valued in the U.S. The culture of education—including material culture such as classrooms, textbooks, libraries, educational technology, dormitories and non-material culture such as specific teaching approaches—demonstrates how much emphasis is placed on the value of educating a society’s members.",
+  "sentencesPartEndsAfter": "Looking at life in this way, societies need culture to exist.",
+  "blanks": [
+   {
+    "answer": "are",
+    "distractors": [
+     "is",
+     "be",
+     "was",
+     "being"
+    ],
+    "why": "'All' refers to several things here (music, fashion, technology and values), so the plural 'are' is needed."
+   },
+   {
+    "answer": "based",
+    "distractors": [
+     "base",
+     "basing",
+     "bases",
+     "biased"
+    ],
+    "why": "'Based on' is a fixed phrase meaning 'using something as the starting point'."
+   },
+   {
+    "answer": "context",
+    "distractors": [
+     "contact",
+     "content",
+     "contest",
+     "contract"
+    ],
+    "why": "'In the context of' means 'from the point of view of'; the other words only look similar."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "what",
+     "whose",
+     "whom"
+    ],
+    "why": "'In which' refers back to 'a system'; 'who' and 'whom' are only for people."
+   },
+   {
+    "answer": "whole",
+    "distractors": [
+     "hole",
+     "wholly",
+     "total",
+     "wheel"
+    ],
+    "why": "'As a whole' is a fixed phrase meaning 'all together as one unit'."
+   },
+   {
+    "answer": "body",
+    "distractors": [
+     "bodily",
+     "beauty",
+     "bottle",
+     "birthday"
+    ],
+    "why": "A society with parts that work together is compared to the human 'body' and its organs."
+   },
+   {
+    "answer": "this",
+    "distractors": [
+     "these",
+     "those",
+     "whose",
+     "them"
+    ],
+    "why": "'In this way' is a fixed phrase; 'way' is singular, so 'these' and 'those' do not fit."
+   }
+  ],
+  "missingSentence": "Functionalists also study culture in terms of values.",
+  "missingDistractors": [
+   "Cultures evolve via new ideas and new ways of thinking.",
+   "Cultural change can happen through invention or discovery.",
+   "Symbolic interactionists examine stratification from a micro-level perspective."
+  ],
+  "missingWhy": "The next sentence begins 'For example, education is highly valued', which gives an example of functionalists studying culture through values.",
+  "highlights": [
+   {
+    "question": "According to functionalists, how do cultural values help people?",
+    "answer": "guide people in making choices"
+   },
+   {
+    "question": "Which things are given as examples of the material culture of education?",
+    "answer": "classrooms, textbooks, libraries, educational technology, dormitories"
+   }
+  ],
+  "idea": {
+   "answer": "Functionalists believe that culture exists to meet the needs of a society and its members.",
+   "distractors": [
+    "Functionalists argue that culture mainly creates inequality between rich and poor groups.",
+    "Every society shares one main culture and has no smaller cultural groups.",
+    "Cultures change mainly through new inventions and discoveries."
+   ],
+   "why": "The passage says functionalists see culture as existing to meet its members' social and personal needs."
+  },
+  "titleDistractors": [
+   "Theoretical Perspectives on Social Stratification",
+   "High, Low, Pop, Sub, Counter-culture and Cultural Change",
+   "Conflict Theory"
+  ],
+  "titleWhy": "The passage introduces three theories for looking at culture and explains how one of them, functionalism, views culture."
+ },
+ {
+  "id": "ir-ostx-world-history-volume-1-m00106-2",
+  "sourceId": "ostx-world-history-volume-1-m00106-2",
+  "genre": "expository",
+  "topic": "history",
+  "difficulty": "advanced",
+  "title": "The Origins of Ancient Egypt",
+  "passage": "Aside from the Nile, Egypt and the areas around it are today part of the expansive and very arid Sahara. But around 10,000 BCE, as the Neolithic Revolution was getting underway in parts of southwestern Asia, much of North Africa including Egypt was lush, wet, and dotted with lakes. The region was highly hospitable to the many Paleolithic peoples living there and surviving on its abundant resources.\n\nHowever, beginning around 6000 BCE the grasslands and lakes began to give way to sand as the once green environment was transformed into the Sahara we recognize today. As the environment became more difficult for humans to survive in, they retreated to oases and rivers on the fringes. One of these areas was the Nile River valley, a long thin area of fertility running through the deserts of eastern North Africa and made possible by the regular flooding of the Nile. The Nile is the longest river in Africa, and the second-longest in the world after the Amazon. It originates deep in central Africa and flows thousands of miles north through Egypt before it spills into the Mediterranean Sea.",
+  "sentencesPartEndsAfter": "However, beginning around 6000 BCE the grasslands and lakes began to give way to sand as the once green environment was transformed into the Sahara we recognize today.",
+  "blanks": [
+   {
+    "answer": "from",
+    "distractors": [
+     "of",
+     "by",
+     "to",
+     "with"
+    ],
+    "why": "'Aside from' is a fixed phrase meaning 'except for'."
+   },
+   {
+    "answer": "part",
+    "distractors": [
+     "party",
+     "apart",
+     "partly",
+     "port"
+    ],
+    "why": "'Part of' means 'one piece of'; 'apart' is a different word."
+   },
+   {
+    "answer": "much",
+    "distractors": [
+     "many",
+     "few",
+     "several",
+     "each"
+    ],
+    "why": "'North Africa' is one uncountable area, so 'much of' is needed, not 'many of'."
+   },
+   {
+    "answer": "wet",
+    "distractors": [
+     "wetly",
+     "wealth",
+     "dry",
+     "west"
+    ],
+    "why": "Land that is lush and dotted with lakes is 'wet', not dry."
+   },
+   {
+    "answer": "living",
+    "distractors": [
+     "lived",
+     "lives",
+     "alive",
+     "leaving"
+    ],
+    "why": "'Peoples living there and surviving' uses two -ing forms joined by 'and'."
+   },
+   {
+    "answer": "However",
+    "distractors": [
+     "Moreover",
+     "Therefore",
+     "Similarly",
+     "Because"
+    ],
+    "why": "'However' shows the contrast between the green past and the later change to sand."
+   },
+   {
+    "answer": "transformed",
+    "distractors": [
+     "transform",
+     "transforms",
+     "transport",
+     "translated"
+    ],
+    "why": "After 'was' we need the past participle 'transformed' (passive): the land was changed into desert."
+   }
+  ],
+  "missingSentence": "As the environment became more difficult for humans to survive in, they retreated to oases and rivers on the fringes.",
+  "missingDistractors": [
+   "Over thousands of years, these methods spread up the Nile River and across North Africa.",
+   "Here arose another civilization that was quite unique.",
+   "By approximately 1000 BCE, large populations in both north and sub-Saharan Africa supported themselves by working the land."
+  ],
+  "missingWhy": "The next sentence begins 'One of these areas was the Nile River valley', so the sentence before must mention areas such as oases and rivers.",
+  "highlights": [
+   {
+    "question": "What makes the Nile River valley fertile?",
+    "answer": "the regular flooding of the Nile"
+   },
+   {
+    "question": "Into which sea does the Nile finally flow?",
+    "answer": "the Mediterranean Sea"
+   }
+  ],
+  "idea": {
+   "answer": "When North Africa turned into desert, people moved to places with water, such as the Nile valley.",
+   "distractors": [
+    "Farming in Africa began along the Niger River before it spread to Egypt.",
+    "The Nile is the longest river in the world, longer even than the Amazon.",
+    "Around 10,000 BCE, Egypt was already as dry as the Sahara is today."
+   ],
+   "why": "The passage says that as the land became a desert, people retreated to oases and rivers, including the Nile River valley."
+  },
+  "titleDistractors": [
+   "The Emergence of Farming",
+   "The Origins of the Indus Valley Civilization",
+   "Pharaoh"
+  ],
+  "titleWhy": "The passage explains how changes in the land drove people to the Nile valley, where Egyptian civilization later began."
+ },
+ {
+  "id": "ir-ose-wnl-still-no-flying-cars-ele",
+  "sourceId": "ose-wnl-still-no-flying-cars-ele",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "easy",
+  "title": "Still no flying cars",
+  "passage": "We do not yet live in an age of flying cars, as predicted in the 1985 film Back to the Future II, but smartphones and other new technologies are creating exciting possibilities. Experts agree that economic and population changes, new technology, and environmental concerns are having a big effect on transportation.\n\nWith an ageing transport infrastructure, cities in the US have to change and improve their transportation. Experts and scientists now realize that old ways of reducing traffic congestion aren’t enough to solve the problems of population growth and carbon emissions, and transportation is now an environmental problem.\n\nBig US cities like Los Angeles and Chicago are adding more bus lanes and pedestrian walkways, and expanding rail networks. At the same time, they are creating advanced technologies that will allow a vehicle to drive itself and communicate with other vehicles and its environment.\n\nHere are three of the key ideas that experts predict will change transportation in the future.",
+  "sentencesPartEndsAfter": "With an ageing transport infrastructure, cities in the US have to change and improve their transportation.",
+  "blanks": [
+   {
+    "answer": "yet",
+    "distractors": [
+     "already",
+     "since",
+     "soon",
+     "ago"
+    ],
+    "why": "'Not yet' means 'not up to now'; flying cars still do not exist."
+   },
+   {
+    "answer": "predicted",
+    "distractors": [
+     "predict",
+     "predicting",
+     "prediction",
+     "pretended"
+    ],
+    "why": "'As predicted in the film' is a short passive phrase meaning 'as the film said would happen'."
+   },
+   {
+    "answer": "exciting",
+    "distractors": [
+     "excited",
+     "excite",
+     "excitement",
+     "exactly"
+    ],
+    "why": "Things that cause excitement are 'exciting'; people feel 'excited'."
+   },
+   {
+    "answer": "agree",
+    "distractors": [
+     "agrees",
+     "agreement",
+     "agreeable",
+     "angry"
+    ],
+    "why": "The plural subject 'Experts' needs the verb 'agree' before 'that'."
+   },
+   {
+    "answer": "effect",
+    "distractors": [
+     "affect",
+     "effective",
+     "effectively",
+     "effort"
+    ],
+    "why": "'Have an effect on' uses the noun 'effect'; 'affect' is a verb."
+   },
+   {
+    "answer": "have",
+    "distractors": [
+     "has",
+     "having",
+     "must",
+     "should"
+    ],
+    "why": "'Have to' means 'must'; the plural subject 'cities' needs 'have', and 'must' and 'should' are not followed by 'to'."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they're",
+     "them",
+     "theirs"
+    ],
+    "why": "'Their' shows that the transportation belongs to the cities; 'there' and 'they're' only sound the same."
+   }
+  ],
+  "missingSentence": "Big US cities like Los Angeles and Chicago are adding more bus lanes and pedestrian walkways, and expanding rail networks.",
+  "missingDistractors": [
+   "The tests will make sure all cars meet a limit of 80mg of nitrogen oxide per kilometre.",
+   "He says we need better research into systems for navigation.",
+   "The car does not have all the normal car controls, such as foot pedals."
+  ],
+  "missingWhy": "The next sentence says 'At the same time, they are creating advanced technologies', so the sentence before must say what big cities ('they') are already doing.",
+  "highlights": [
+   {
+    "question": "What are big US cities adding to improve how people travel?",
+    "answer": "more bus lanes and pedestrian walkways"
+   },
+   {
+    "question": "What will new technology allow a vehicle to do?",
+    "answer": "drive itself and communicate with other vehicles and its environment"
+   }
+  ],
+  "idea": {
+   "answer": "Experts think that old ways of reducing traffic are no longer enough for US cities.",
+   "distractors": [
+    "Flying cars, like the ones in Back to the Future II, are now common in US cities.",
+    "Europe will be the first place to make car makers use real-world emissions tests.",
+    "Using GPS on our phones is making people worse at finding their way."
+   ],
+   "why": "The passage says experts realize that old ways of reducing traffic congestion are not enough to solve the problems."
+  },
+  "titleDistractors": [
+   "Google car",
+   "Satnav",
+   "EU Pollution"
+  ],
+  "titleWhy": "The passage says flying cars have not arrived yet but explains how transportation in US cities is still changing."
+ }
+]

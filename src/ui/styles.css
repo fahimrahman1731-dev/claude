@@ -1604,8 +1604,16 @@ details summary {
   background: #ffe28a;
   color: #1b1c1e;
 }
-.ir-mark.sent {
+.ir-mark.key.ok {
+  box-shadow: inset 0 -3px 0 var(--good);
+}
+.ir-mark.key.no {
+  box-shadow: inset 0 -3px 0 var(--bad);
+}
+.ir-mark.sent:not(.ok):not(.no):not(.key) {
   background: transparent;
+}
+.ir-mark.sent {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 4px;

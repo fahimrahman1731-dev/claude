@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { validateInteractive, type AuthoredInteractive } from '../../scripts/lib/interactive-build';
-import { chooseInteractive, highlightScore, interactiveQuestion, interactiveSeconds, IR_STEPS, scoreInteractive, serveChoice } from '../../src/engine/interactive';
+import { chooseInteractive, highlightCorrect, highlightScore, interactiveQuestion, interactiveSeconds, IR_STEPS, scoreInteractive, serveChoice } from '../../src/engine/interactive';
 import type { InteractiveAnswers, InteractiveSet } from '../../src/engine/types';
 import { root, vocab } from '../functional/env';
 import { seqRng } from '../helpers';
@@ -57,6 +57,12 @@ describe('Interactive Reading sets', () => {
     expect(problems).toMatch(/shorter than 3 words/);
     expect(problems).toMatch(/1 highlight questions/);
   });
+  it('rejects a missing sentence that is only part of a sentence', () => {
+    const sents = sample.passage.split(/(?<=\.)\s+/);
+    const cut = sents[sents.indexOf(sample.missingSentence)].split(' ').slice(0, -2).join(' ');
+    const problems = validateInteractive({ ...sample, missingSentence: cut }, undefined).problems.join(' | ');
+    expect(problems).toMatch(/whole sentence/);
+  });
   it('requires the passage to be copied unchanged from its source', () => {
     const r = validateInteractive(sample, 'A completely different source text. It has other sentences.');
     expect(r.problems.some((p) => p.startsWith('sentence not found unchanged in the source'))).toBe(true);
@@ -98,6 +104,16 @@ describe('Interactive Reading scoring', () => {
     expect(partial).toBeLessThan(1);
     expect(highlightScore(set.text, { start: 0, end: 20 }, h)).toBe(0);
     expect(highlightScore(set.text, null, h)).toBe(0);
+  });
+  it('counts a highlight as right when each end is at most one word off and most of the answer is covered', () => {
+    const text = 'Plants use energy from the sun to make their own food every day.';
+    const key = { start: text.indexOf('energy'), end: text.indexOf('sun') + 3 }; // "energy from the sun"
+    expect(highlightCorrect(text, key, key)).toBe(true);
+    expect(highlightCorrect(text, { start: text.indexOf('use'), end: key.end }, key)).toBe(true); // one extra word
+    expect(highlightCorrect(text, { start: text.indexOf('use'), end: text.indexOf(' make') }, key)).toBe(true); // one off at each end
+    expect(highlightCorrect(text, { start: text.indexOf('Plants'), end: key.end }, key)).toBe(false); // two extra words
+    expect(highlightCorrect(text, { start: text.indexOf('from'), end: text.indexOf('the sun') + 3 }, key)).toBe(true);
+    expect(highlightCorrect(text, { start: text.indexOf('from'), end: text.indexOf(' the sun') }, key)).toBe(false); // ends two words early
   });
   it('counts unanswered parts as not correct', () => {
     const a = { ...key(), blanks: q.blanks.map(() => null), title: null };

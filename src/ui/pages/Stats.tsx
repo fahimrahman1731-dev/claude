@@ -106,6 +106,7 @@ export function StatsPage() {
               <HBars
                 format={(v) => pct(v)}
                 rows={[
+                  ['complete-sentences', 'Complete the Sentences (each missing word)'],
                   ['complete-passage', 'Complete the Passage'],
                   ['highlight', 'Highlight the Answer (average score)'],
                   ['main-idea', 'Identify the Idea'],
@@ -115,9 +116,6 @@ export function StatsPage() {
                   return { label, value: x ? x.score / x.n : undefined, max: 1, note: x ? `(${x.n})` : '' };
                 })}
               />
-              <p className="tiny muted" style={{ marginTop: 8 }}>
-                Complete the Sentences is counted per word under “Accuracy by mode” (Interactive Reading).
-              </p>
             </div>
           )}
           <div className="grid grid-2">

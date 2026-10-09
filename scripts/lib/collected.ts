@@ -4,6 +4,10 @@
  * the windows used as Read and Complete texts.
  */
 
+import { splitSentences, type Span } from '../../src/engine/sentences';
+
+export { splitSentences, type Span };
+
 export interface CollectedText {
   id: string;
   /** 'clear' (CommonLit CLEAR corpus), 'ose' (OneStopEnglish corpus) or 'attali' (Duolingo research appendix). */
@@ -21,37 +25,8 @@ export interface CollectedText {
   text: string;
 }
 
-export interface Span {
-  start: number;
-  end: number;
-}
-
-const ABBREV = /\b(?:Mr|Mrs|Ms|Dr|Prof|St|Mt|Jr|Sr|vs|etc|e\.g|i\.e|U\.S|U\.K|a\.m|p\.m|No|approx|Inc|Ltd|Co|Fig|al)\.$/i;
-
-/** Sentence spans of `text` (handles common abbreviations, decimals and closing quotes). */
-export function splitSentences(text: string): Span[] {
-  const out: Span[] = [];
-  let start = 0;
-  const re = /[.!?]+["”’)\]]*(?=\s+|$)/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(text))) {
-    const end = m.index + m[0].length;
-    const piece = text.slice(start, end);
-    if (m[0].startsWith('.') && ABBREV.test(piece.trimEnd())) continue;
-    // "3.5" never reaches here (no whitespace after the dot); a lone initial like "J." is not an end either.
-    if (/\b[A-Z]\.$/.test(piece.trimEnd()) && piece.trim().length > 2) continue;
-    const s = text.slice(start, end);
-    const lead = s.length - s.trimStart().length;
-    if (s.trim()) out.push({ start: start + lead, end });
-    start = end;
-  }
-  const rest = text.slice(start);
-  if (rest.trim()) {
-    const lead = rest.length - rest.trimStart().length;
-    out.push({ start: start + lead, end: start + rest.trimEnd().length });
-  }
-  return out;
-}
+/** Left where a textbook had a formula or an empty cross-reference ("shown in ⟦REF⟧"); such text is never used. */
+export const REF = '⟦REF⟧';
 
 export function words(s: string): string[] {
   return s.match(/[A-Za-z]+(?:['’][A-Za-z]+)*/g) ?? [];
@@ -63,10 +38,15 @@ export function words(s: string): string[] {
  * sentence or text containing one of these words is not used.
  */
 const SENSITIVE =
-  /\b(kill(s|ed|ing|er|ers)?|murder\w*|war|wars|warfare|wartime|battles?|battlefield|invad\w*|invasion\w*|troops|enemy|enemies|attack\w*|fought|captured|conquer\w*|convoys?|emperor|weapon\w*|guns?|bomb\w*|terror\w*|shoot\w*|shot|stab\w*|violen\w*|assault\w*|rape\w*|abuse\w*|drugs?|cocaine|heroin|alcohol\w*|beer|wine|drunk\w*|cigarette\w*|tobacco|smok(e|ing|ers?)|sex\w*|naked|suicid\w*|corpse\w*|slaves?|slavery|nazi\w*|genocide|prison\w*|jail\w*|criminal\w*|crimes?|police|army|soldiers?|military|president|presidents|politic\w*|elections?|parliament|religio\w*|church\w*|mosque\w*|temple\w*|god|gods|bible|quran|islam\w*|christian\w*|jew\w*|hindu\w*|muslim\w*|gambl\w*|lotter(y|ies)|casino\w*|mafia|smuggl\w*|traffick\w*|corrupt\w*|brib\w*|scandal\w*|conservatism|liberalism|communis\w*|socialis\w*|fascis\w*|dictator\w*|protest\w*|riot\w*|modi|obama|trump|putin|clinton|merkel|thatcher|cameron|hitler|stalin|cancer|ebola|aids|hiv|dying|died|dead|death|deaths|funeral\w*|blood(y|shed))\b/i;
+  /\b(kill(s|ed|ing|er|ers)?|murder\w*|war|wars|warfare|wartime|battles?|battlefield|invad\w*|invasion\w*|troops|enemy|enemies|attack\w*|fought|captured|conquer\w*|convoys?|emperor|weapon\w*|guns?|bomb\w*|terror\w*|shoot\w*|shot|stab\w*|violen\w*|assault\w*|rape\w*|abuse\w*|drugs?|cocaine|heroin|alcohol\w*|beer|wine|drunk\w*|cigarette\w*|tobacco|smok(e|ing|ers?)|sex\w*|naked|suicid\w*|corpse\w*|slaves?|slavery|nazi\w*|genocide|prison\w*|jail\w*|criminal\w*|crimes?|police|army|soldiers?|military|president|presidents|politic\w*|elections?|parliament|religio\w*|church\w*|mosque\w*|temple\w*|god|gods|bible|quran|islam\w*|christian\w*|jew\w*|hindu\w*|muslim\w*|gambl\w*|lotter(y|ies)|casino\w*|mafia|smuggl\w*|traffick\w*|corrupt\w*|brib\w*|scandal\w*|conservatism|liberalism|communis\w*|socialis\w*|fascis\w*|dictator\w*|protest\w*|riot\w*|modi|obama|trump|putin|clinton|merkel|thatcher|cameron|hitler|stalin|cancer|ebola|aids|hiv|dying|died|dead|death|deaths|funeral\w*|blood(y|shed)|masturbat\w*|sperm\w*|semen|penis\w*|vagin\w*|genital\w*|erotic\w*|porn\w*|prostitut\w*|circumcis\w*|mutilat\w*|orgasm\w*|intercourse|condoms?|contracept\w*|abortion\w*|molest\w*|incest\w*|harass\w*|hostage\w*|kidnap\w*|tortur\w*|lynch\w*|gun\w*|rifles?|pistols?|massacre\w*|slaughter\w*|assassin\w*|homicide\w*|holocaust|pray\w*|worship\w*|priest\w*|prophet\w*|saints?|divine|heaven\w*|hell|satan\w*|demons?|jesus|christ|pope\w*|bishops?|buddh\w*|sikh\w*|sermons?|missionar\w*|allah|rabbis?|racis\w*|racial\w*|apartheid|marijuana|cannabis|opioid\w*|opium|narcotic\w*|overdos\w*|vodka|whiske?y|liquor|tumou?rs?|leuk[a]?emia|covid\w*|coronavirus)\b/i;
 
 export function isSensitive(s: string): boolean {
   return SENSITIVE.test(s);
+}
+
+/** The first word of `s` on the sensitive-topic list, if any. */
+export function sensitiveWord(s: string): string | undefined {
+  return SENSITIVE.exec(s)?.[0];
 }
 
 /**
@@ -89,6 +69,8 @@ export interface SentenceCheck {
 export function checkFibSentence(s: string): SentenceCheck {
   const t = s.trim();
   const n = words(t).length;
+  if (t.includes(REF)) return { ok: false, reason: 'missing figure or formula' };
+  if (splitSentences(t).length !== 1) return { ok: false, reason: 'more than one sentence' };
   if (n < 8) return { ok: false, reason: 'too short' };
   if (n > 22) return { ok: false, reason: 'too long' };
   if (!/^[A-Z]/.test(t)) return { ok: false, reason: 'does not start with a capital letter' };
@@ -100,7 +82,8 @@ export function checkFibSentence(s: string): SentenceCheck {
   if (/[–—-]{2}|\s[–—]\s/.test(t)) return { ok: false, reason: 'dash aside' };
   if (DEPENDENT_START.test(t)) return { ok: false, reason: 'depends on the previous sentence' };
   if (isSensitive(t)) return { ok: false, reason: 'sensitive topic' };
-  if (/[^\x20-\x7E’]/.test(t.replace(/[éèáàíóúñüöäçâêîôûë]/gi, ''))) return { ok: false, reason: 'unusual characters' };
+  // Plain English letters only: an accented name such as "Émile" would otherwise hide a short word ("mile").
+  if (/[^\x20-\x7E’]/.test(t)) return { ok: false, reason: 'unusual characters' };
   const names = words(t)
     .slice(1)
     .filter((w) => /^[A-Z]/.test(w) && w !== 'I').length;
@@ -115,12 +98,21 @@ export function checkFibSentence(s: string): SentenceCheck {
  */
 export function paragraphWindows(text: string, opts = { minWords: 60, maxWords: 120, minSentences: 4, maxSentences: 8 }): Span[] {
   const out: Span[] = [];
-  const sents = splitSentences(text.replace(/\n\s*\n/g, '\n\n'));
+  // A heading or list item (no final punctuation), a bare list number ("4.") or a
+  // sentence with a missing figure reference ends the window.
+  const sents = splitSentences(text).map((sp) => {
+    const t = text.slice(sp.start, sp.end);
+    return { ...sp, stop: !!sp.open || /^\d+\.?$/.test(t.trim()) || t.includes(REF) };
+  });
   let i = 0;
   while (i < sents.length) {
+    if (sents[i].stop) {
+      i++;
+      continue;
+    }
     let j = i;
     let count = 0;
-    while (j < sents.length && j - i < opts.maxSentences) {
+    while (j < sents.length && j - i < opts.maxSentences && !sents[j].stop) {
       count += words(text.slice(sents[j].start, sents[j].end)).length;
       j++;
       if (count >= opts.minWords && j - i >= opts.minSentences) break;

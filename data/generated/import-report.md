@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `2fb6957577c0`, generated 2026-10-09T07:48:30.603Z.
+Data version `15cb1f2a3c1b`, generated 2026-10-09T12:36:44.592Z.
 
 ## Totals
 
@@ -9,21 +9,21 @@ Data version `2fb6957577c0`, generated 2026-10-09T07:48:30.603Z.
 | Source entries detected (with repeats) | 4086 |
 | Entries accepted | 4052 |
 | Entries rejected (with reasons below) | 34 |
-| Unique spelling targets imported | 5847 |
+| Unique spelling targets imported | 5836 |
 | Duplicate entries merged | 1451 |
 | Definitions taken from the study materials | 347 |
 | Entries with missing definitions | 0 |
-| Words with a Bengali meaning | 4103 |
+| Words with a Bengali meaning | 4073 |
 | Entries needing example sentences (fewer than 2 valid) | 0 |
-| Practice-ready words (2+ distinct valid sentences) | 5847 |
-| Sentence contexts | 21003 |
+| Practice-ready words (2+ distinct valid sentences) | 5836 |
+| Sentence contexts | 21048 |
 | Read and Complete paragraphs | 320 |
-| Paragraph gaps | 3885 |
-| Total practice contexts | 24888 |
+| Paragraph gaps | 3878 |
+| Total practice contexts | 24926 |
 | Failed sources | 0 |
 | Failed sections | 0 |
 
-Priority: high 349, medium 1196, low 4302. Difficulty: easy 1941, intermediate 1727, advanced 2179. Small grammar words: 173.
+Priority: high 349, medium 1196, low 4291. Difficulty: easy 1940, intermediate 1732, advanced 2164. Small grammar words: 173.
 
 ## Sources and sections
 
@@ -74,19 +74,19 @@ Sentences, Read and Complete texts and Interactive Reading passages come from re
 
 | Measure | Count |
 | --- | --- |
-| Sentences: real (collected) | 20505 |
-| Sentences: WordNet examples | 131 |
-| Sentences: written for the app (only where too few real ones exist) | 367 |
-| Words practised only with real sentences | 5605 |
-| Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | 3257 |
+| Sentences: real (collected) | 20569 |
+| Sentences: WordNet examples | 47 |
+| Sentences: written for the app (only where too few real ones exist) | 432 |
+| Words practised only with real sentences | 5556 |
+| Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | 3246 |
 | Words deleted as unrealistic DET words | 11 |
-| Read and Complete texts | clear 161, ose 106, ostx 53 (from 3653 candidates) |
-| Interactive Reading sets | 25 |
-| Definitions: study materials / WordNet / app | 347 / 3257 / 2243 |
-| Bengali: app / Apertium dictionary / none | 2590 / 1513 / 1744 |
-| Source texts used | 3272 |
+| Read and Complete texts | clear 161, ose 106, ostx 53 (from 3462 candidates) |
+| Interactive Reading sets | 70 |
+| Definitions: study materials / WordNet / app | 347 / 3246 / 2243 |
+| Bengali: app / Apertium dictionary / none | 2590 / 1483 / 1763 |
+| Source texts used | 3226 |
 
-Words added by level: A1 463, A2 527, B1 922, B2 803, C1 242, C2 29, list only 271.
+Words added by level: A1 461, A2 528, B1 927, B2 794, C1 239, C2 29, list only 268.
 
 ### Deleted words
 
@@ -106,13 +106,13 @@ Words added by level: A1 463, A2 527, B1 922, B2 803, C1 242, C2 29, list only 2
 
 ### Licences of the texts used
 
-- CC BY-SA 3.0 and GFDL: 200 texts
-- CC BY-SA 3.0: 196 texts
+- CC BY-SA 3.0 and GFDL: 202 texts
+- CC BY-SA 3.0: 189 texts
 - CC BY 4.0: 512 texts
-- CC BY 3.0: 11 texts
+- CC BY 3.0: 12 texts
 - CC BY-SA: 1 texts
-- CC BY-SA 4.0: 265 texts
-- CC BY-NC-SA 4.0: 2086 texts
+- CC BY-SA 4.0: 264 texts
+- CC BY-NC-SA 4.0: 2045 texts
 - CC BY-NC 4.0: 1 texts
 
 ## Rejected entries

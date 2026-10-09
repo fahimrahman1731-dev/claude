@@ -17,6 +17,10 @@ const SENTINEL = '​';
  * every edit is read from it and applied to the boxes.
  *
  * `value` holds one character per box, with a space for an empty box.
+ *
+ * When another word moves the focus here, it sets `data-enter` on the field to
+ * "start" (coming forwards) or "end" (coming back), so the active box is where
+ * the student expects it rather than wherever it was last time.
  */
 export function LetterBoxes({
   given,
@@ -51,6 +55,7 @@ export function LetterBoxes({
   const cells = Array.from({ length }, (_, i) => (value[i] && value[i] !== ' ' ? value[i] : ''));
   const firstEmpty = cells.findIndex((c) => !c);
   const [caret, setCaret] = useState(firstEmpty < 0 ? length - 1 : firstEmpty);
+  const clicked = useRef(false);
   useEffect(() => {
     if (autoFocus && !disabled) ref.current?.focus();
   }, [autoFocus, disabled]);
@@ -93,7 +98,8 @@ export function LetterBoxes({
     switch (e.key) {
       case 'Enter':
         e.preventDefault();
-        onEnter?.();
+        // Holding Enter down must not submit and then skip past the feedback.
+        if (!e.repeat) onEnter?.();
         return;
       case 'Backspace':
         e.preventDefault();
@@ -139,11 +145,33 @@ export function LetterBoxes({
       if (letters) typeLetters(letters);
     }
   };
+  const pick = (e: { preventDefault: () => void }, i: number) => {
+    e.preventDefault();
+    if (disabled) return;
+    clicked.current = true;
+    setCaret(i);
+    ref.current?.focus();
+    clicked.current = false;
+  };
+  const onFocus = () => {
+    setFocused(true);
+    const el = ref.current;
+    const enter = el?.dataset.enter;
+    if (el) delete el.dataset.enter;
+    if (clicked.current) return;
+    if (enter === 'end') {
+      // Coming back with Backspace or ←: stand on the last typed letter, so the next Backspace removes it.
+      const last = cells.map((c) => !!c).lastIndexOf(true);
+      setCaret(last < 0 ? 0 : last);
+    }
+    else if (enter === 'start') setCaret(0);
+    else setCaret(firstEmpty < 0 ? length - 1 : firstEmpty);
+  };
   const active = Math.max(0, Math.min(caret, length - 1));
   return (
     <span className={`lb${focused ? ' focused' : ''}${disabled ? ' disabled' : ''}`}>
       {[...given].map((ch, i) => (
-        <span key={`g${i}`} className="lb-cell given" aria-hidden>
+        <span key={`g${i}`} className="lb-cell given" aria-hidden onMouseDown={(e) => pick(e, firstEmpty < 0 ? 0 : firstEmpty)}>
           {ch}
         </span>
       ))}
@@ -152,12 +180,7 @@ export function LetterBoxes({
           key={`h${i}`}
           className={`lb-cell${focused && i === active ? ' active' : ''}${ch ? ' typed' : ''}`}
           aria-hidden
-          onMouseDown={(e) => {
-            e.preventDefault();
-            if (disabled) return;
-            setCaret(i);
-            ref.current?.focus();
-          }}
+          onMouseDown={(e) => pick(e, i)}
         >
           {ch}
         </span>
@@ -173,7 +196,7 @@ export function LetterBoxes({
         value={SENTINEL}
         onChange={(e) => onInput(e.target.value)}
         onKeyDown={keyDown}
-        onFocus={() => setFocused(true)}
+        onFocus={onFocus}
         onBlur={() => setFocused(false)}
         autoComplete="off"
         autoCorrect="off"

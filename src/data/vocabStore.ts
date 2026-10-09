@@ -29,7 +29,9 @@ export class VocabStore {
       const ids = new Set(w.contexts.map((c) => c.id));
       return { ...w, contexts: [...w.contexts, ...more.filter((c) => !ids.has(c.id))] };
     };
-    this.words = [...data.words.map(withExtra), ...custom.map(withExtra)];
+    // A custom word that a later library update also added is shown once, as the library word.
+    const imported = new Set(data.words.map((w) => w.word.toLowerCase()));
+    this.words = [...data.words.map(withExtra), ...custom.filter((w) => !imported.has(w.word.toLowerCase())).map(withExtra)];
     this.importedCount = data.words.length;
     this.byId = new Map(this.words.map((w) => [w.id, w]));
     this.byWord = new Map(this.words.map((w) => [w.word, w]));

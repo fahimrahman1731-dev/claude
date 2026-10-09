@@ -160,6 +160,41 @@ test('Read and Complete: a real text, letter boxes that move to the next word, s
   await expect(page.getByRole('button', { name: /^Next paragraph/ })).toBeFocused();
 });
 
+test('letter boxes: retyping from a clicked box flows into the next word, and Backspace comes back to the last letter', async ({ page }) => {
+  await chooseTimer(page, 'Untimed');
+  await page.getByRole('button', { name: 'Start Read and Complete' }).click();
+  const words = page.locator('.lb');
+  const boxes = (i: number) => words.nth(i).locator('.lb-cell:not(.given)');
+  const typed = async (i: number) => (await boxes(i).allTextContents()).join('');
+  await expect(page.locator('.lb input').first()).toBeFocused();
+  const [n1, n2] = [await boxes(0).count(), await boxes(1).count()];
+  await page.keyboard.type('a'.repeat(n1) + 'b'.repeat(n2));
+  expect([await typed(0), await typed(1)]).toEqual(['a'.repeat(n1), 'b'.repeat(n2)]);
+  // Click the first box of word 1 and type over both words: every letter lands in order.
+  await boxes(0).first().click();
+  await page.keyboard.type('c'.repeat(n1) + 'd'.repeat(n2));
+  expect([await typed(0), await typed(1)]).toEqual(['c'.repeat(n1), 'd'.repeat(n2)]);
+  // Clear word 3 and go back with Backspace: the next Backspace removes the last letter of word 2.
+  await expect(page.locator('.lb input').nth(2)).toBeFocused();
+  await page.keyboard.press('Backspace');
+  await expect(page.locator('.lb input').nth(1)).toBeFocused();
+  await page.keyboard.press('Backspace');
+  expect(await typed(1)).toBe('d'.repeat(n2 - 1));
+});
+
+test('holding Enter submits once and stays on the feedback', async ({ page }) => {
+  await chooseTimer(page, 'Untimed');
+  await page.getByRole('button', { name: 'Start Fill in the Blanks' }).click();
+  await page.locator('.lb input').first().fill('zzz');
+  await page.keyboard.down('Enter');
+  await expect(page.getByRole('button', { name: /^Next question/ })).toBeFocused();
+  // Key repeat while the key stays down
+  for (let i = 0; i < 4; i++) await page.keyboard.down('Enter');
+  await page.keyboard.up('Enter');
+  await expect(page.getByRole('button', { name: /^Next question/ })).toBeVisible();
+  await expect(page.locator('.det-count')).toContainText(/· 1 of /);
+});
+
 test('Interactive Reading: six questions in DET order with one shared timer', async ({ page }) => {
   await chooseTimer(page, 'Timed');
   await page.getByRole('button', { name: 'Start Interactive Reading' }).click();
@@ -169,7 +204,12 @@ test('Interactive Reading: six questions in DET order with one shared timer', as
   const cont = page.getByRole('button', { name: 'Continue' });
   await expect(cont).toBeDisabled();
   const selects = page.locator('.ir-selects select');
-  for (let i = 0; i < (await selects.count()); i++) await selects.nth(i).selectOption({ index: 1 });
+  // Choices made before Continue survive a refresh.
+  await selects.first().selectOption({ index: 2 });
+  await page.waitForTimeout(700);
+  await page.reload();
+  await expect(selects.first()).toHaveValue('1');
+  for (let i = 1; i < (await selects.count()); i++) await selects.nth(i).selectOption({ index: 1 });
   await cont.click();
 
   await expect(page.getByRole('heading', { name: 'Select the best sentence to complete the passage' })).toBeVisible();

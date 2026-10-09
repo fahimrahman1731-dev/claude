@@ -12,7 +12,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Difficulty, InteractiveSet } from '../../src/engine/types';
-import { splitSentences, words, type CollectedText } from './collected';
+import { REF, sensitiveWord, splitSentences, words, type CollectedText } from './collected';
 
 export interface AuthoredInteractive {
   id: string;
@@ -38,7 +38,7 @@ export interface AuthoredInteractive {
 const norm = (s: string) => s.replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, ' ').trim();
 
 function wordAt(text: string, word: string, occurrence: number, from: number, to: number): { start: number; end: number } | undefined {
-  const re = new RegExp(`(?<![A-Za-z'’])${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![A-Za-z'’])`, 'g');
+  const re = new RegExp(`(?<![\\p{L}'’])${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}'’])`, 'gu');
   re.lastIndex = from;
   let n = 0;
   let m: RegExpExecArray | null;
@@ -57,6 +57,9 @@ export function validateInteractive(a: AuthoredInteractive, sourceText: string |
   const n = words(text).length;
   if (n < 90 || n > 230) p.push(`passage has ${n} words (expected about 100–210)`);
   const sents = splitSentences(text);
+  const topic = sensitiveWord(text);
+  if (topic) p.push(`passage touches a topic the DET avoids (“${topic}”)`);
+  if (text.includes(REF)) p.push('passage has a missing figure, formula or cross-reference (⟦REF⟧)');
   if (sents.length < 5) p.push(`passage has only ${sents.length} sentences`);
   if (sourceText !== undefined) {
     const src = norm(sourceText);
@@ -69,6 +72,7 @@ export function validateInteractive(a: AuthoredInteractive, sourceText: string |
   const cutIdx = text.indexOf(a.sentencesPartEndsAfter.trim());
   const csEnd = cutIdx < 0 ? -1 : cutIdx + a.sentencesPartEndsAfter.trim().length;
   if (csEnd < 0) p.push('sentencesPartEndsAfter is not a sentence of the passage');
+  else if (!sents.some((x) => x.end === csEnd)) p.push('sentencesPartEndsAfter must end where a sentence ends');
   const csWords = csEnd > 0 ? words(text.slice(0, csEnd)).length : 0;
   if (csEnd > 0 && (csWords < n * 0.3 || csWords > n * 0.75)) p.push(`the Complete the Sentences part has ${csWords} of ${n} words (expected about half)`);
   if (a.blanks.length < 3 || a.blanks.length > 10) p.push(`${a.blanks.length} blanks (expected 3–10)`);
@@ -97,6 +101,7 @@ export function validateInteractive(a: AuthoredInteractive, sourceText: string |
   const mIdx = sents.findIndex((s) => s.start === mStart);
   if (mStart < 0 || mIdx < 0) p.push('missingSentence is not a whole sentence of the passage');
   else {
+    if (sents[mIdx].end !== mStart + ms.length) p.push('missingSentence must be the whole sentence, not part of it');
     if (mIdx < 2 || mIdx === sents.length - 1) p.push('missingSentence may not be one of the first two sentences or the last one');
     if (csEnd > 0 && mStart < csEnd) p.push('missingSentence must come after the Complete the Sentences part');
   }

@@ -142,13 +142,14 @@ export function computeStats(
 
   const mostImproved: DashboardStats['mostImproved'] = [];
   for (const [wordId, list] of perWord) {
-    if (list.length < 4) continue;
+    // Words removed from the library in an update are not shown.
+    if (list.length < 4 || !byId.has(wordId)) continue;
     list.sort((a, b) => a.at - b.at);
     const half = Math.floor(list.length / 2);
     const acc = (xs: AttemptRecord[]) => xs.filter((x) => x.result === 'correct').length / xs.length;
     const before = acc(list.slice(0, half));
     const after = acc(list.slice(half));
-    if (after > before) mostImproved.push({ wordId, word: byId.get(wordId)?.word ?? wordId, before, after });
+    if (after > before) mostImproved.push({ wordId, word: byId.get(wordId)!.word, before, after });
   }
   mostImproved.sort((a, b) => b.after - b.before - (a.after - a.before));
 

@@ -1,5 +1,8 @@
-/** Letters that join a word: an apostrophe or hyphen next to a match means it is part of a bigger word. */
-const WORD_CHAR = "A-Za-z'’-";
+/**
+ * Characters that join a word: a letter (in any alphabet, so "mile" is not found
+ * inside "Émile"), apostrophe or hyphen next to a match means it is part of a bigger word.
+ */
+const WORD_CHAR = "\\p{L}'’-";
 
 export function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -7,7 +10,7 @@ export function escapeRegExp(s: string): string {
 
 /** All whole-word, case-insensitive occurrences of `word` in `text`. */
 export function findOccurrences(text: string, word: string): { start: number; end: number }[] {
-  const re = new RegExp(`(?<![${WORD_CHAR}])${escapeRegExp(word)}(?![${WORD_CHAR}])`, 'gi');
+  const re = new RegExp(`(?<![${WORD_CHAR}])${escapeRegExp(word)}(?![${WORD_CHAR}])`, 'giu');
   const out: { start: number; end: number }[] = [];
   let m: RegExpExecArray | null;
   while ((m = re.exec(text))) out.push({ start: m.index, end: m.index + m[0].length });

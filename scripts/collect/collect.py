@@ -234,14 +234,19 @@ MD = '{http://cnx.rice.edu/mdml}'
 SKIP_TAGS = {'note', 'exercise', 'figure', 'table', 'list', 'example', 'glossary', 'equation', 'media', 'footnote', 'quote', 'code', 'preformat'}
 
 
+REF = '⟦REF⟧'
+
+
 def cnx_text(el) -> str:
     parts = [el.text or '']
     for child in el:
         tag = child.tag.replace(CNX, '')
-        if tag in ('footnote', 'media', 'math') or child.tag.endswith('math'):
+        if tag in ('footnote', 'media'):
             pass
-        elif tag == 'link' and not (child.text or len(child)):
-            pass
+        elif tag == 'math' or child.tag.endswith('math') or (tag == 'link' and not (child.text or len(child))):
+            # A formula, or an empty cross-reference ("shown in <link/>") that the book's renderer fills in.
+            # Mark it, so that the sentence around it is never used (see REF in scripts/lib/collected.ts).
+            parts.append(REF)
         else:
             parts.append(cnx_text(child))
         parts.append(child.tail or '')
@@ -250,6 +255,7 @@ def cnx_text(el) -> str:
 
 def tidy_para(t: str) -> str:
     t = re.sub(r'\s+', ' ', t).strip()
+    t = re.sub(r'\s*\([^()]*' + REF + r'[^()]*\)', '', t)  # "(see Figure ⟦REF⟧)" can go as a whole
     t = re.sub(r'\s*\((?:[^()]*\d{4}[^()]*|see [^()]*|[^()]{0,3})\)', '', t)  # citations, "(see …)", empty figure links
     t = re.sub(r'\s+([,.;:])', r'\1', t)
     return t.strip()

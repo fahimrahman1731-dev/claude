@@ -1,0 +1,1473 @@
+[
+ {
+  "id": "ir-clear-2392",
+  "sourceId": "clear-2392",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "easy",
+  "title": "Solar System",
+  "passage": "The Solar System is the Sun and all the objects in orbit around it. The Sun is orbited by planets, asteroids, comets and other things.\n\nThe Sun is a star. It contains 99.9 percent of the Solar System's mass. This means that it has strong gravity. The other objects are pulled into orbit around the Sun. The sun is mostly made out of hydrogen and helium.\n\nThere are eight planets in the Solar System. From closest to farthest from the Sun, they are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four planets are called terrestrial planets. They are mostly made of rock and metal, and they are mostly solid. The last four planets are called gas giants. This is because they are large planets that are mostly made of gas. Even though they are made of gas, they have much more mass than the terrestrial planets.",
+  "sentencesPartEndsAfter": "There are eight planets in the Solar System.",
+  "blanks": [
+   {
+    "answer": "objects",
+    "distractors": [
+     "objections",
+     "objective",
+     "feelings",
+     "lessons"
+    ],
+    "why": "'All the objects in orbit' means all the things that move around the Sun; the other words are not things that can orbit."
+   },
+   {
+    "answer": "orbited",
+    "distractors": [
+     "orbiting",
+     "orbits",
+     "cooked",
+     "invited"
+    ],
+    "why": "After 'is' and before 'by', the passive needs the past participle 'orbited'."
+   },
+   {
+    "answer": "other",
+    "distractors": [
+     "another",
+     "others",
+     "each",
+     "every"
+    ],
+    "why": "'Other' goes before a plural noun ('other things'); 'another', 'each' and 'every' need a singular noun."
+   },
+   {
+    "answer": "contains",
+    "distractors": [
+     "container",
+     "contain",
+     "explains",
+     "invites"
+    ],
+    "why": "The singular subject 'It' needs the verb 'contains': the Sun holds 99.9 percent of the mass."
+   },
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "which",
+     "who",
+     "than"
+    ],
+    "why": "'This means that...' introduces the clause that explains the result."
+   },
+   {
+    "answer": "strong",
+    "distractors": [
+     "strongly",
+     "strength",
+     "brave",
+     "tall"
+    ],
+    "why": "An adjective is needed before the noun 'gravity', and 'strong gravity' is the usual collocation."
+   },
+   {
+    "answer": "around",
+    "occurrence": 2,
+    "distractors": [
+     "between",
+     "until",
+     "across",
+     "among"
+    ],
+    "why": "Objects 'orbit around' the Sun, as the first sentence already says ('in orbit around it')."
+   },
+   {
+    "answer": "made",
+    "distractors": [
+     "making",
+     "makes",
+     "spoken",
+     "asked"
+    ],
+    "why": "'Is made out of' tells us what material something consists of."
+   }
+  ],
+  "missingSentence": "The last four planets are called gas giants.",
+  "missingDistractors": [
+   "The bright rings of Saturn are, by far, the easiest to see.",
+   "The largest of the moons are as big as small planets and just as interesting.",
+   "Both asteroids and comets are believed to be small chunks of material left over from the formation process of the solar system."
+  ],
+  "missingWhy": "It gives the last four planets the name 'gas giants', and the next sentence explains that name with 'This is because...'.",
+  "highlights": [
+   {
+    "question": "What are the terrestrial planets mostly made of?",
+    "answer": "rock and metal"
+   },
+   {
+    "question": "Which two elements make up most of the Sun?",
+    "answer": "hydrogen and helium"
+   }
+  ],
+  "idea": {
+   "answer": "The Sun holds almost all of the Solar System's mass, so its gravity keeps the other objects in orbit.",
+   "distractors": [
+    "Jupiter and Saturn are mostly made of hydrogen that has been squeezed into a liquid.",
+    "The gas giants have less mass than the terrestrial planets because gas is light.",
+    "Every planet in the Solar System has at least one moon going around it."
+   ],
+   "why": "The passage says the Sun contains 99.9 percent of the mass, which gives it strong gravity that pulls the other objects into orbit."
+  },
+  "titleDistractors": [
+   "The Giant Planets",
+   "Orbits of Asteroids and Comets",
+   "Smaller Members of the Solar System"
+  ],
+  "titleWhy": "The passage describes the whole Solar System: the Sun and the eight planets that orbit it, not just one group of objects."
+ },
+ {
+  "id": "ir-clear-8014",
+  "sourceId": "clear-8014",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "easy",
+  "title": "What are the parts of the stomach?",
+  "passage": "At the top of the stomach is a tube where food comes in from the esophagus. When you swallow, this tube opens so food can go in the stomach.\n\nThe stomach is made of muscle. These muscles help to break down food by mashing it into smaller pieces. The muscles also make waves pushing the food further down the digestive track. This is called peristalsis and happens from the esophagus all the way to the large intestine.\n\nThe stomach is lined with glands. These special cells make a liquid that is released into the stomach. This liquid is called gastric juice. The gastric juice has acid in it and helps break down or digest food.\n\nThe bottom part of the stomach is called the pyloric area. At the bottom of the stomach is another opening. This leads to the small intestine.",
+  "sentencesPartEndsAfter": "This is called peristalsis and happens from the esophagus all the way to the large intestine.",
+  "blanks": [
+   {
+    "answer": "where",
+    "distractors": [
+     "who",
+     "what",
+     "whom",
+     "why"
+    ],
+    "why": "'Where' introduces a place: the tube is the place where food comes in."
+   },
+   {
+    "answer": "opens",
+    "distractors": [
+     "opening",
+     "open",
+     "closes",
+     "sleeps"
+    ],
+    "why": "The tube must open so that food can go in, and the singular subject 'this tube' needs 'opens'."
+   },
+   {
+    "answer": "muscle",
+    "distractors": [
+     "muscular",
+     "metal",
+     "glass",
+     "paper"
+    ],
+    "why": "The next sentence says 'These muscles', so the stomach is made of muscle."
+   },
+   {
+    "answer": "help",
+    "distractors": [
+     "helpful",
+     "helps",
+     "refuse",
+     "forget"
+    ],
+    "why": "The plural subject 'These muscles' needs 'help', and 'help to break down food' fits the meaning."
+   },
+   {
+    "answer": "into",
+    "distractors": [
+     "onto",
+     "inside",
+     "upon",
+     "among"
+    ],
+    "why": "We mash or break something 'into' smaller pieces."
+   },
+   {
+    "answer": "called",
+    "distractors": [
+     "calling",
+     "calls",
+     "eaten",
+     "opened"
+    ],
+    "why": "'This is called...' is used to give the name of a process."
+   },
+   {
+    "answer": "from",
+    "occurrence": 2,
+    "distractors": [
+     "for",
+     "since",
+     "by",
+     "of"
+    ],
+    "why": "'From ... to' shows where the process starts and ends: from the esophagus to the large intestine."
+   },
+   {
+    "answer": "way",
+    "distractors": [
+     "ways",
+     "road",
+     "time",
+     "day"
+    ],
+    "why": "'All the way to' is a fixed phrase meaning the whole distance to a place."
+   }
+  ],
+  "missingSentence": "These special cells make a liquid that is released into the stomach.",
+  "missingDistractors": [
+   "It is widely used in industry, and it is also made by the stomach to help digest food.",
+   "In high concentrations, hydrochloric acid can make acidic mists.",
+   "Liquids are an in-between state of matter."
+  ],
+  "missingWhy": "'These special cells' refers back to the glands, and the liquid they make is named in the next sentence: 'This liquid is called gastric juice.'",
+  "highlights": [
+   {
+    "question": "Where does the opening at the bottom of the stomach lead?",
+    "answer": "to the small intestine"
+   },
+   {
+    "question": "How do the stomach muscles break down food?",
+    "answer": "by mashing it into smaller pieces"
+   }
+  ],
+  "idea": {
+   "answer": "Glands in the stomach make an acid juice that helps to digest food.",
+   "distractors": [
+    "Hydrochloric acid made by the stomach is also widely used in industry.",
+    "The stomach muscles push food back up into the esophagus.",
+    "The liver can grow back even when only a quarter of it is left."
+   ],
+   "why": "The third paragraph says the glands make gastric juice, which has acid in it and helps digest food."
+  },
+  "titleDistractors": [
+   "Hydrochloric acid",
+   "Liquid Basics",
+   "How Cells Are Studied"
+  ],
+  "titleWhy": "The passage goes through the parts of the stomach in order: the top opening, the muscles, the glands and the bottom part."
+ },
+ {
+  "id": "ir-clear-2315",
+  "sourceId": "clear-2315",
+  "genre": "expository",
+  "topic": "history",
+  "difficulty": "easy",
+  "title": "Plebs",
+  "passage": "Childhood for plebeians was very different compared to their patrician counterparts since they were expected to enter the workforce at a much earlier age. Plebeians typically belonged to a lower socio-economic class than their patrician counterparts, and therefore did not have as many household servants. As a result, plebeian children were responsible for maintaining the household and caring for their aging parents.\n\nEducation was limited to what their parent would teach them, which consisted of only learning the very basics of writing, reading and mathematics. Wealthier Plebeians were able to send their children to schools or hire a private tutor.\n\nPlebeians in ancient Rome lived in buildings called insula, apartment buildings that housed many families. These apartments usually lacked running water and heat. Not all plebeians lived in these run-down conditions, as some wealthier plebs were able to live in single-family homes, called a domus.\n\nPlebeian men wore a tunic with a belt at the waist and women wore a long dress called a stola.",
+  "sentencesPartEndsAfter": "Education was limited to what their parent would teach them, which consisted of only learning the very basics of writing, reading and mathematics.",
+  "blanks": [
+   {
+    "answer": "enter",
+    "distractors": [
+     "entrance",
+     "entering",
+     "borrow",
+     "paint"
+    ],
+    "why": "We 'enter the workforce' when we start working, and 'to' needs the base verb."
+   },
+   {
+    "answer": "earlier",
+    "distractors": [
+     "early",
+     "earliest",
+     "sooner",
+     "quicker"
+    ],
+    "why": "'Much' goes before a comparative adjective, so 'a much earlier age' is correct."
+   },
+   {
+    "answer": "lower",
+    "distractors": [
+     "low",
+     "lowest",
+     "higher",
+     "below"
+    ],
+    "why": "'Than' needs a comparative, and a lower class explains why they had fewer servants."
+   },
+   {
+    "answer": "therefore",
+    "distractors": [
+     "however",
+     "although",
+     "because",
+     "unless"
+    ],
+    "why": "'Therefore' shows a result: because they were poorer, they did not have as many servants."
+   },
+   {
+    "answer": "result",
+    "distractors": [
+     "results",
+     "reason",
+     "matter",
+     "resulting"
+    ],
+    "why": "'As a result' is a fixed phrase that introduces a consequence."
+   },
+   {
+    "answer": "caring",
+    "distractors": [
+     "care",
+     "cared",
+     "careful",
+     "carry"
+    ],
+    "why": "'Caring for' means looking after, and it has the same -ing form as 'maintaining'."
+   },
+   {
+    "answer": "limited",
+    "distractors": [
+     "limit",
+     "limiting",
+     "invited",
+     "bought"
+    ],
+    "why": "'Was limited to' means their education included only what their parents taught them."
+   },
+   {
+    "answer": "which",
+    "distractors": [
+     "who",
+     "what",
+     "where",
+     "whose"
+    ],
+    "why": "'Which' refers back to what their parents taught them."
+   }
+  ],
+  "missingSentence": "These apartments usually lacked running water and heat.",
+  "missingDistractors": [
+   "Some families change to address immediate needs, such as when elderly parents can no longer live on their own independently.",
+   "Heavier clothing was worn in the winter, lighter clothing in the summer.",
+   "It is the smallest family structure and is often found in societies where geographic mobility is valued."
+  ],
+  "missingWhy": "'These apartments' refers to the insula, and 'lacked running water and heat' explains the 'run-down conditions' in the next sentence.",
+  "highlights": [
+   {
+    "question": "What did plebeian parents teach their children?",
+    "answer": "the very basics of writing, reading and mathematics"
+   },
+   {
+    "question": "What did plebeian women wear?",
+    "answer": "a long dress called a stola"
+   }
+  ],
+  "idea": {
+   "answer": "Many plebeian children had to work and look after their homes from an early age.",
+   "distractors": [
+    "Plebeian children usually had household servants to help them at home.",
+    "All plebeians lived in single-family homes with running water and heat.",
+    "Plebeian clothing was made from wool or flax and changed with the seasons."
+   ],
+   "why": "The first paragraph says plebeian children started work early and looked after the household and their aging parents."
+  },
+  "titleDistractors": [
+   "Sumer",
+   "Education around the World",
+   "Variations in Family Life"
+  ],
+  "titleWhy": "Every part of the passage describes the life of the plebeians: their childhood, education, homes and clothes."
+ },
+ {
+  "id": "ir-clear-3219",
+  "sourceId": "clear-3219",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "intermediate",
+  "title": "The Brain and Thinking Across Cultures",
+  "passage": "Not only is perception influenced by culture but also more complex thought processes, such as problem solving and making dynamic decisions. A static decision is whether I buy a KitKat or a Snickers bar in a grocery. Dynamic decisions are those that are made over time in a changing environment, for example, when you think about what profession you might want to choose later in your life. This decision might change depending on who you meet, who you talk to, what you read about certain jobs, what jobs your parents have, or what your friends want to become. Another example of dynamic decision-making is what a fire-fighting commander does. The fire-fighting commander has to make many decisions to fight wild fires depending on, for example, how big or small these fires are, their location near or far from cities, the weather and wind, which can make the fire burn faster or slower, the number of fire-fighting trucks and helicopters, and how fast they can go, and the amount of water they have to extinguish the fire.",
+  "sentencesPartEndsAfter": "Dynamic decisions are those that are made over time in a changing environment, for example, when you think about what profession you might want to choose later in your life.",
+  "blanks": [
+   {
+    "answer": "influenced",
+    "distractors": [
+     "influence",
+     "influential",
+     "influencing",
+     "borrowed"
+    ],
+    "why": "The passive 'is ... influenced by culture' needs the past participle."
+   },
+   {
+    "answer": "also",
+    "distractors": [
+     "too",
+     "either",
+     "neither",
+     "such"
+    ],
+    "why": "'Not only ... but also' is a fixed pair."
+   },
+   {
+    "answer": "whether",
+    "distractors": [
+     "weather",
+     "unless",
+     "although",
+     "because"
+    ],
+    "why": "'Whether' introduces a choice between two options: a KitKat or a Snickers bar."
+   },
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "whose",
+     "where",
+     "when"
+    ],
+    "why": "'Those that are made' uses 'that' to refer back to 'decisions'."
+   },
+   {
+    "answer": "time",
+    "distractors": [
+     "times",
+     "timing",
+     "clock",
+     "weather"
+    ],
+    "why": "'Over time' is a fixed phrase meaning gradually, during a period."
+   },
+   {
+    "answer": "example",
+    "distractors": [
+     "examples",
+     "sample",
+     "exam",
+     "reason"
+    ],
+    "why": "'For example' introduces an example of a dynamic decision."
+   },
+   {
+    "answer": "choose",
+    "distractors": [
+     "choice",
+     "chose",
+     "chosen",
+     "choosing"
+    ],
+    "why": "After 'want to' we need the base verb 'choose'."
+   }
+  ],
+  "missingSentence": "Another example of dynamic decision-making is what a fire-fighting commander does.",
+  "missingDistractors": [
+   "Often, we will choose the most comfortable or familiar option, but then we may never know whether the novel thing or person was a better choice.",
+   "The more power people have, the more choices they may be presented with, and the more they can mold and shape the systems in which they live through their decisions.",
+   "Common heuristics are the familiarity heuristic, affect heuristic, and scarcity heuristic."
+  ],
+  "missingWhy": "It introduces the fire-fighting commander as another example, and the next sentence describes the commander's many decisions.",
+  "highlights": [
+   {
+    "question": "What everyday choice is given as an example of a static decision?",
+    "answer": "whether I buy a KitKat or a Snickers bar"
+   },
+   {
+    "question": "What can make a wildfire burn faster or slower?",
+    "answer": "the weather and wind"
+   }
+  ],
+  "idea": {
+   "answer": "Some decisions, like choosing a career, are made over time and can change as a person's situation changes.",
+   "distractors": [
+    "Mental shortcuts help people make decisions more quickly by making problems simpler.",
+    "A static decision is one that changes depending on the people you meet.",
+    "Fire-fighting commanders usually make only one decision at the start of a fire."
+   ],
+   "why": "The passage says dynamic decisions, such as choosing a profession, are made over time in a changing environment and may change."
+  },
+  "titleDistractors": [
+   "Heuristics",
+   "Moral Reasoning and Prosocial Behavior",
+   "Prehistory"
+  ],
+  "titleWhy": "The passage explains that culture affects complex thinking and uses static and dynamic decisions as examples."
+ },
+ {
+  "id": "ir-clear-2270",
+  "sourceId": "clear-2270",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "A crying unknown baby",
+  "passage": "There was a boy who was named John. He lived with his grandparents in a village called Daveyton Village in Free State. John grew up. He took a walk around the village and he saw a crying baby. He rushed there called for help. The community of the village rushed to him and asked him what happened. John replied \"I was taking a walk and I saw a crying baby.\" The community asked him again and they said \"Do you know this child?\" John replied \"No I don't.\" Then the community leader took a baby to his home. The next day John was called to a community meeting of the unknown baby. John was asked to go to Faith the farmer and the settlers who lived nearby the river where the unknown baby was found. John agreed on that brilliant and clever idea.",
+  "sentencesPartEndsAfter": "John replied \"I was taking a walk and I saw a crying baby.\"",
+  "blanks": [
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whom",
+     "whose",
+     "what"
+    ],
+    "why": "'Who' is used for a person (the boy)."
+   },
+   {
+    "answer": "lived",
+    "distractors": [
+     "living",
+     "life",
+     "lively",
+     "liked"
+    ],
+    "why": "A past-tense verb is needed after 'He', and 'lived with his grandparents' tells us where his home was."
+   },
+   {
+    "answer": "walk",
+    "distractors": [
+     "walked",
+     "walking",
+     "talk",
+     "sleep"
+    ],
+    "why": "'Take a walk' is a common collocation."
+   },
+   {
+    "answer": "saw",
+    "distractors": [
+     "seen",
+     "see",
+     "sea",
+     "said"
+    ],
+    "why": "The past tense 'saw' matches 'took' earlier in the sentence."
+   },
+   {
+    "answer": "community",
+    "distractors": [
+     "communicate",
+     "communal",
+     "commute",
+     "comedy"
+    ],
+    "why": "'The community of the village' means the people who live there, who later hold a meeting."
+   },
+   {
+    "answer": "what",
+    "distractors": [
+     "which",
+     "who",
+     "where",
+     "that"
+    ],
+    "why": "'Asked him what happened' uses 'what' for the event they want to know about."
+   },
+   {
+    "answer": "taking",
+    "distractors": [
+     "took",
+     "taken",
+     "take",
+     "making"
+    ],
+    "why": "'Was taking' is the past continuous, and we 'take a walk'."
+   }
+  ],
+  "missingSentence": "The community asked him again and they said \"Do you know this child?\"",
+  "missingDistractors": [
+   "They tried to get the children to notice that the baby was crying but the children kept on playing.",
+   "A group of cranes flew above the playground and felt sorry for the crying baby.",
+   "She put down her sleeping baby and climbed the tree."
+  ],
+  "missingWhy": "The community asks John whether he knows the child, and the next sentence is his answer: 'No I don't.'",
+  "highlights": [
+   {
+    "question": "Who took the baby home?",
+    "answer": "the community leader"
+   },
+   {
+    "question": "Where did John live with his grandparents?",
+    "answer": "a village called Daveyton Village"
+   }
+  ],
+  "idea": {
+   "answer": "John found a baby he did not know and called the people of the village for help.",
+   "distractors": [
+    "John's grandparents took the baby to their home.",
+    "Cranes flew down and carried the crying baby away.",
+    "John knew the baby because it belonged to Faith the farmer."
+   ],
+   "why": "John saw a crying baby, called for help, and told the community that he did not know the child."
+  },
+  "titleDistractors": [
+   "Baby snatched by cranes",
+   "Child as a peacemaker",
+   "Clever cat and foolish dog"
+  ],
+  "titleWhy": "The whole story is about the baby that John found and that nobody in the village knew."
+ },
+ {
+  "id": "ir-clear-3283",
+  "sourceId": "clear-3283",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Hare and Hyenas Fight",
+  "passage": "Hare used to sit all day doing nothing and when Hyena came home after work, Hare would always ask him for nuts from his farm. But Hyena didn't like this very much. Hyena believes in working hard and not getting things for free. So, one day Hyena thought to himself, \"Its so hard to work all day by myself. Maybe Hare could help me and in return he can get some nuts that he has actually worked for.\" Hare agreed to his terms and they shook hands on it because he thought it was a good deal. They also agreed that more work could be done and they will also get enough food for their families. The two worked so good together. They would work and laugh together. Hare would dig and plant and Hyena would help and sing along as they went. Hyena was very happy because he was able to plant a lot more than before. Hare was a really hard worker and worked all day long with no rest. He would work fast and faster. But he felt like he was working too much and wanted a raise because what Hyena was paying too little.",
+  "sentencesPartEndsAfter": "Hare agreed to his terms and they shook hands on it because he thought it was a good deal.",
+  "blanks": [
+   {
+    "answer": "nothing",
+    "distractors": [
+     "nobody",
+     "anything",
+     "nowhere",
+     "none"
+    ],
+    "why": "'Doing nothing' means being lazy, which fits 'sit all day'."
+   },
+   {
+    "answer": "ask",
+    "distractors": [
+     "asking",
+     "asked",
+     "answer",
+     "tell"
+    ],
+    "why": "After 'would' we need the base verb, and you 'ask someone for' something."
+   },
+   {
+    "answer": "like",
+    "distractors": [
+     "liked",
+     "likes",
+     "likely",
+     "likeness"
+    ],
+    "why": "After 'didn't' we need the base verb 'like'."
+   },
+   {
+    "answer": "free",
+    "distractors": [
+     "freely",
+     "freedom",
+     "frees",
+     "fresh"
+    ],
+    "why": "'For free' is a fixed phrase meaning without paying or working."
+   },
+   {
+    "answer": "thought",
+    "distractors": [
+     "thinking",
+     "think",
+     "thoughtful",
+     "taught"
+    ],
+    "why": "'Thought to himself' means he said it in his mind; the story is in the past."
+   },
+   {
+    "answer": "return",
+    "distractors": [
+     "returned",
+     "returning",
+     "reward",
+     "report"
+    ],
+    "why": "'In return' is a fixed phrase meaning as payment for something."
+   },
+   {
+    "answer": "agreed",
+    "distractors": [
+     "agreement",
+     "agreeing",
+     "argued",
+     "angry"
+    ],
+    "why": "We 'agree to' someone's terms, and the story uses the past tense."
+   },
+   {
+    "answer": "because",
+    "distractors": [
+     "although",
+     "unless",
+     "until",
+     "whether"
+    ],
+    "why": "'Because' gives the reason why Hare shook hands: he thought it was a good deal."
+   }
+  ],
+  "missingSentence": "Hare was a really hard worker and worked all day long with no rest.",
+  "missingDistractors": [
+   "Hyena complained that he had been given more work.",
+   "Hyena thought about this problem for a long time.",
+   "He would light a fire and roast the seeds."
+  ],
+  "missingWhy": "It shows that Hare worked very hard, which leads to 'He would work fast and faster' and to Hare feeling he was working too much.",
+  "highlights": [
+   {
+    "question": "What did Hare ask Hyena for when Hyena came home from work?",
+    "answer": "nuts from his farm"
+   },
+   {
+    "question": "Why was Hyena very happy?",
+    "answer": "he was able to plant a lot more than before"
+   }
+  ],
+  "idea": {
+   "answer": "Hyena asked Hare to work on his farm so that Hare could earn his nuts.",
+   "distractors": [
+    "Hare took Hyena's maize from the field at harvest time without asking.",
+    "Hyena did all the hard work on the farm while Hare rested.",
+    "Hare and Hyena decided to plant maize and share the duties equally."
+   ],
+   "why": "Hyena thought Hare could help him and in return get nuts that he had worked for, and Hare agreed."
+  },
+  "titleDistractors": [
+   "Hyena, Hare and their basins",
+   "Why hyenas limp",
+   "The Animals Dig a Well"
+  ],
+  "titleWhy": "The story is about Hare and Hyena's work deal and ends with Hare unhappy with Hyena, the start of their quarrel."
+ },
+ {
+  "id": "ir-clear-3468",
+  "sourceId": "clear-3468",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "The Rain Bird",
+  "passage": "When they stopped looking after the bird, the rain stopped falling. The crops began to dry up and die, and the animals grew thin and weak. Still, nobody in the village went into the forest to feed the bird that brought the rain. Now they were all too busy trying to find money to buy food in the neighboring town. One scorching day, a young girl called Ketti decided to go into the forest after school. \"At least it will be cool in there,\" she thought. She walked and walked, and after some time, she came to the tall tree in which the rain bird lived. Ketti stared up at the tree. Suddenly, she remembered how her granny had taken her into the forest to feed the bird when she was still a tiny child. Ketti opened her school bag and pulled out a piece of bread left over from her lunch. Carefully she laid the bread at the base of the tree. Then because she had no thumb piano, she sang an old song that she had known all her life",
+  "sentencesPartEndsAfter": "\"At least it will be cool in there,\" she thought.",
+  "blanks": [
+   {
+    "answer": "looking",
+    "distractors": [
+     "look",
+     "looked",
+     "seeing",
+     "caring"
+    ],
+    "why": "'Look after' means take care of, and 'stopped' is followed by an -ing verb."
+   },
+   {
+    "answer": "dry",
+    "distractors": [
+     "dried",
+     "drying",
+     "dryness",
+     "cry"
+    ],
+    "why": "Without rain, crops 'dry up' (lose all their water), and 'began to' needs the base verb."
+   },
+   {
+    "answer": "nobody",
+    "distractors": [
+     "anybody",
+     "nothing",
+     "nowhere",
+     "neither"
+    ],
+    "why": "'Nobody' means no person, which matches 'they were all too busy' in the next sentence."
+   },
+   {
+    "answer": "into",
+    "distractors": [
+     "onto",
+     "upon",
+     "among",
+     "at"
+    ],
+    "why": "We go 'into' a forest when we enter it."
+   },
+   {
+    "answer": "too",
+    "distractors": [
+     "to",
+     "two",
+     "much",
+     "enough"
+    ],
+    "why": "'Too busy' means so busy that they could not do anything else."
+   },
+   {
+    "answer": "buy",
+    "distractors": [
+     "by",
+     "bye",
+     "bought",
+     "pay"
+    ],
+    "why": "People need money to buy food, and 'to' needs the base verb."
+   },
+   {
+    "answer": "decided",
+    "distractors": [
+     "decision",
+     "decide",
+     "decisive",
+     "divided"
+    ],
+    "why": "'Decided to go' means she made a choice; the story is in the past."
+   },
+   {
+    "answer": "cool",
+    "distractors": [
+     "coolly",
+     "cook",
+     "coolness",
+     "hot"
+    ],
+    "why": "On a scorching (very hot) day, the forest would at least be cool."
+   }
+  ],
+  "missingSentence": "Ketti opened her school bag and pulled out a piece of bread left over from her lunch.",
+  "missingDistractors": [
+   "The old man sat under the shade of a tree on the walkway and opened his bag.",
+   "She went to the forest because she did not know where else to go.",
+   "At the top of the tree, Ayanda saw the beautiful sun."
+  ],
+  "missingWhy": "It introduces the piece of bread that she lays at the base of the tree in the next sentence.",
+  "highlights": [
+   {
+    "question": "What did Ketti give the bird to eat?",
+    "answer": "a piece of bread left over from her lunch"
+   },
+   {
+    "question": "Why did the villagers no longer go into the forest to feed the bird?",
+    "answer": "too busy trying to find money to buy food"
+   }
+  ],
+  "idea": {
+   "answer": "After people stopped caring for the rain bird, the rain stopped and the crops dried up.",
+   "distractors": [
+    "Ketti went into the forest with her granny to look for snails.",
+    "The villagers fed the rain bird every day, even when they were busy.",
+    "Ketti played her thumb piano for the bird under the tall tree."
+   ],
+   "why": "The first sentences say the rain stopped when people stopped looking after the bird, and then the crops dried up."
+  },
+  "titleDistractors": [
+   "Sun and Rain",
+   "The peace tree",
+   "Ten lost boys"
+  ],
+  "titleWhy": "The story is about the bird that brings the rain and the girl who goes to feed it again."
+ },
+ {
+  "id": "ir-clear-3364",
+  "sourceId": "clear-3364",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "The smell thief",
+  "passage": "One old woman especially loved the smells that drifted out of the bakery window every morning. This was Ma Shange who slept on a bench in the park every night. A few weeks before, a kind person had given her the money to buy herself a cinnamon bun. She had taken the bun back to the park and ate it very slowly, licking her lips and sharing the last crumbs with the birds. After that, although the old woman didn't have enough money to buy breakfast, she longed for the delicious bun again. So, every morning she walked slowly past Mr Shabangu's bakery, sniffing the air and smiling blissfully at the mouth-watering smell. Ma Shange's new habit made the baker very angry. As each day went by, he grew angrier and angrier with her. Finally, one winter morning when he was in an especially bad mood, he stormed out of his bakery and grabbed the old woman by the arm. \"How dare you steal my smells!\" he shouted. \"You're nothing but a smell thief!\" He wiped his hands on an apron, then pulled it off and threw it back into the bakery.",
+  "sentencesPartEndsAfter": "After that, although the old woman didn't have enough money to buy breakfast, she longed for the delicious bun again.",
+  "blanks": [
+   {
+    "answer": "smells",
+    "distractors": [
+     "smelly",
+     "smelled",
+     "spells",
+     "shelves"
+    ],
+    "why": "A plural noun is needed after 'the', and smells drift out of a bakery window."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whom",
+     "whose",
+     "what"
+    ],
+    "why": "'Who' is used for a person, Ma Shange, and it is the subject of 'slept'."
+   },
+   {
+    "answer": "given",
+    "distractors": [
+     "gave",
+     "give",
+     "giving",
+     "gift"
+    ],
+    "why": "'Had' needs the past participle 'given'."
+   },
+   {
+    "answer": "herself",
+    "distractors": [
+     "himself",
+     "itself",
+     "themselves",
+     "ourselves"
+    ],
+    "why": "'Herself' refers back to the old woman, who buys the bun for her own use."
+   },
+   {
+    "answer": "taken",
+    "distractors": [
+     "took",
+     "take",
+     "taking",
+     "eaten"
+    ],
+    "why": "'Had' needs the past participle, and you 'take' something back to a place."
+   },
+   {
+    "answer": "slowly",
+    "distractors": [
+     "slow",
+     "slower",
+     "slowness",
+     "sleepy"
+    ],
+    "why": "An adverb is needed to describe how she ate; 'very slowly' shows she enjoyed every bite."
+   },
+   {
+    "answer": "although",
+    "distractors": [
+     "despite",
+     "unless",
+     "whether",
+     "however"
+    ],
+    "why": "'Although' shows a contrast: she had no money, but she still wanted the bun; 'despite' cannot start a clause."
+   },
+   {
+    "answer": "longed",
+    "distractors": [
+     "long",
+     "longing",
+     "length",
+     "longer"
+    ],
+    "why": "'Longed for' means wanted something very much; the story is in the past."
+   }
+  ],
+  "missingSentence": "Ma Shange's new habit made the baker very angry.",
+  "missingDistractors": [
+   "Elephant noticed that someone was stealing his bananas.",
+   "He asked himself what the old woman thought he would do with the root.",
+   "But Hare did not steal that day or that night."
+  ],
+  "missingWhy": "It says Ma Shange's habit made the baker angry, and the next sentence says he grew 'angrier and angrier'.",
+  "highlights": [
+   {
+    "question": "Where did Ma Shange sleep at night?",
+    "answer": "on a bench in the park"
+   },
+   {
+    "question": "What did the baker call the old woman?",
+    "answer": "nothing but a smell thief"
+   }
+  ],
+  "idea": {
+   "answer": "An old woman who could not afford breakfast enjoyed smelling the bakery every morning, and this made the baker angry.",
+   "distractors": [
+    "The baker gave the old woman a free cinnamon bun every morning.",
+    "Ma Shange took buns from the bakery without paying for them.",
+    "The old woman ate the whole bun quickly and gave nothing to the birds."
+   ],
+   "why": "Ma Shange walked past the bakery every morning to sniff the smells, and this new habit made the baker very angry."
+  },
+  "titleDistractors": [
+   "Grandmother's stories",
+   "The boy who nobody loved",
+   "The tree wife"
+  ],
+  "titleWhy": "The story is about an old woman who loves the bakery smells and is called a 'smell thief' by the angry baker."
+ },
+ {
+  "id": "ir-ostx-astronomy-2e-m59847-1",
+  "sourceId": "ostx-astronomy-2e-m59847-1",
+  "genre": "expository",
+  "topic": "astronomy",
+  "difficulty": "advanced",
+  "title": "Divergent Planetary Evolution",
+  "passage": "Venus, Mars, and our own planet Earth form a remarkably diverse triad of worlds. Although all three orbit in roughly the same inner zone around the Sun and all apparently started with about the same chemical mix of silicates and metals, their evolutionary paths have diverged. As a result, Venus became hot and dry, Mars became cold and dry, and only Earth ended up with what we consider a hospitable climate.\n\nWe have discussed the runaway greenhouse effect on Venus and the runaway refrigerator effect on Mars, but we do not understand exactly what started these two planets down these separate evolutionary paths. Was Earth ever in danger of a similar fate? Or might it still be diverted onto one of these paths, perhaps due to stress on the atmosphere generated by human pollutants? One of the reasons for studying Venus and Mars is to seek insight into these questions.",
+  "sentencesPartEndsAfter": "As a result, Venus became hot and dry, Mars became cold and dry, and only Earth ended up with what we consider a hospitable climate.",
+  "blanks": [
+   {
+    "answer": "remarkably",
+    "distractors": [
+     "remarkable",
+     "remarked",
+     "remarks",
+     "remarking"
+    ],
+    "why": "An adverb is needed before the adjective 'diverse'."
+   },
+   {
+    "answer": "Although",
+    "distractors": [
+     "Because",
+     "Unless",
+     "Whether",
+     "Therefore"
+    ],
+    "why": "'Although' shows the contrast between the planets' similar start and their different paths."
+   },
+   {
+    "answer": "orbit",
+    "distractors": [
+     "orbital",
+     "orbits",
+     "orbiting",
+     "observe"
+    ],
+    "why": "The plural subject 'all three' needs the plural verb 'orbit'."
+   },
+   {
+    "answer": "around",
+    "distractors": [
+     "between",
+     "among",
+     "along",
+     "across"
+    ],
+    "why": "Planets orbit 'around' the Sun."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they're",
+     "them",
+     "its"
+    ],
+    "why": "'Their' is the possessive form for 'all three' planets."
+   },
+   {
+    "answer": "result",
+    "distractors": [
+     "results",
+     "reason",
+     "matter",
+     "resulting"
+    ],
+    "why": "'As a result' is a fixed phrase that introduces the consequence of the diverging paths."
+   },
+   {
+    "answer": "cold",
+    "distractors": [
+     "coldly",
+     "coldness",
+     "could",
+     "cloud"
+    ],
+    "why": "An adjective is needed after 'became', and cold Mars is contrasted with hot Venus."
+   },
+   {
+    "answer": "hospitable",
+    "distractors": [
+     "hospital",
+     "hospitality",
+     "hostile",
+     "hospitably"
+    ],
+    "why": "'Hospitable' means pleasant to live in, which is true only of Earth, unlike hot Venus and cold Mars."
+   }
+  ],
+  "missingSentence": "Was Earth ever in danger of a similar fate?",
+  "missingDistractors": [
+   "One of the major challenges presented by Venus is to understand why the atmosphere and surface environment of this twin have diverged so sharply from those of our own planet.",
+   "As more and more of the atmosphere escaped into space, the temperature on the surface gradually fell.",
+   "The greenhouse effect works on Venus just as it does on Earth, but since Venus has so much more CO2—almost a million times more—the effect is much stronger."
+  ],
+  "missingWhy": "It asks whether Earth could have suffered the same fate, and the next sentence continues the question about Earth with 'Or might it still...'.",
+  "highlights": [
+   {
+    "question": "What material did all three planets apparently begin with?",
+    "answer": "the same chemical mix of silicates and metals"
+   },
+   {
+    "question": "What might push Earth onto the same path as Venus or Mars?",
+    "answer": "stress on the atmosphere generated by human pollutants"
+   }
+  ],
+  "idea": {
+   "answer": "Although Venus, Mars and Earth began in similar ways, they developed into very different worlds.",
+   "distractors": [
+    "Mars is a smaller planet, so its gases escaped into space more easily than Earth's.",
+    "Scientists fully understand what caused the different climates of Venus and Mars.",
+    "Venus is much closer to the Sun than Earth, which explains its high temperature."
+   ],
+   "why": "The passage says the three planets started with the same mix of materials but their evolutionary paths have diverged."
+  },
+  "titleDistractors": [
+   "Climate Change on Mars",
+   "Surface Temperature on Venus",
+   "The Geology of Mars"
+  ],
+  "titleWhy": "The passage is about how Venus, Mars and Earth started alike but evolved along different paths, not about one planet alone."
+ },
+ {
+  "id": "ir-ostx-introduction-anthropology-m00021-2",
+  "sourceId": "ostx-introduction-anthropology-m00021-2",
+  "genre": "expository",
+  "topic": "anthropology",
+  "difficulty": "advanced",
+  "title": "Cultural Evolutionism",
+  "titleWritten": true,
+  "passage": "Some anthropologists are interested in the origins of human cultural forms and how these forms have changed over long periods of time. Just as Charles Darwin applied the notion of evolution to explain how biological species change over time, many 19th-century anthropologists used evolution to explain how cultures changed over time. This approach is called cultural evolutionism. Like Darwin, these anthropologists believed that simple forms evolved into more complex forms. Comparing different cultures of the world, they assigned the ones they considered more rudimentary to earlier evolutionary stages, while the ones they considered more complex were assigned to the more advanced stages. For example, British anthropologist Edward Tylor argued that human culture evolved from savagery through barbarism to civilization. He identified savagery with people who used gathering and hunting to meet their basic needs. The domestication of animals and plants was associated with barbarism. Civilization resulted from more advanced forms of farming, trade, and manufacturing as well as the development of the alphabet. Not surprisingly, British scholars identified their own culture as highly civilized.",
+  "sentencesPartEndsAfter": "Comparing different cultures of the world, they assigned the ones they considered more rudimentary to earlier evolutionary stages, while the ones they considered more complex were assigned to the more advanced stages.",
+  "blanks": [
+   {
+    "answer": "interested",
+    "distractors": [
+     "interesting",
+     "interest",
+     "curious",
+     "interests"
+    ],
+    "why": "People are 'interested in' something; 'interesting' describes the thing, and 'curious' takes 'about'."
+   },
+   {
+    "answer": "applied",
+    "distractors": [
+     "applying",
+     "application",
+     "apply",
+     "applause"
+    ],
+    "why": "Darwin 'applied' (used) the idea of evolution; the past tense matches 'used' later in the sentence."
+   },
+   {
+    "answer": "many",
+    "distractors": [
+     "much",
+     "every",
+     "each",
+     "little"
+    ],
+    "why": "'Many' is used with plural countable nouns such as 'anthropologists'."
+   },
+   {
+    "answer": "called",
+    "distractors": [
+     "calling",
+     "calls",
+     "told",
+     "caused"
+    ],
+    "why": "'Is called' gives the name of the approach."
+   },
+   {
+    "answer": "Like",
+    "distractors": [
+     "Likely",
+     "Unlike",
+     "Liking",
+     "Alike"
+    ],
+    "why": "'Like Darwin' means in the same way as Darwin, which matches 'Just as Charles Darwin' before."
+   },
+   {
+    "answer": "believed",
+    "distractors": [
+     "belief",
+     "believable",
+     "beliefs",
+     "behaved"
+    ],
+    "why": "A past-tense verb is needed after the subject 'these anthropologists', followed by a 'that' clause."
+   },
+   {
+    "answer": "Comparing",
+    "distractors": [
+     "Compared",
+     "Comparison",
+     "Compare",
+     "Competing"
+    ],
+    "why": "The -ing form 'Comparing' starts a phrase that describes what the anthropologists were doing."
+   },
+   {
+    "answer": "while",
+    "distractors": [
+     "during",
+     "which",
+     "whom",
+     "unless"
+    ],
+    "why": "'While' joins two contrasting clauses; 'during' must be followed by a noun, not a clause."
+   }
+  ],
+  "missingSentence": "He identified savagery with people who used gathering and hunting to meet their basic needs.",
+  "missingDistractors": [
+   "One very prominent scheme was proposed by the British anthropologist Edward Tylor.",
+   "All humans need to satisfy the need for food, clothing, and shelter.",
+   "Although popular among certain social scientists, social Darwinism was not a term often used in anthropology."
+  ],
+  "missingWhy": "'He' refers to Tylor, and the sentence explains the first stage, savagery, before the next sentence explains barbarism.",
+  "highlights": [
+   {
+    "question": "What did these anthropologists believe about how cultural forms develop?",
+    "answer": "simple forms evolved into more complex forms"
+   },
+   {
+    "question": "According to Tylor, what developments led to civilization?",
+    "answer": "more advanced forms of farming, trade, and manufacturing as well as the development of the alphabet"
+   }
+  ],
+  "idea": {
+   "answer": "Many anthropologists in the 1800s borrowed Darwin's idea of evolution to explain how cultures change.",
+   "distractors": [
+    "Functionalism tries to understand each culture by asking how it meets people's needs today.",
+    "Tylor believed that all cultures were equally complex and could not be ranked.",
+    "Early anthropologists collected their information mainly from books written by other people."
+   ],
+   "why": "The passage says 19th-century anthropologists used evolution, as Darwin did for species, to explain how cultures changed over time."
+  },
+  "titleDistractors": [
+   "Functionalism",
+   "The Development of Ethnography and Ethnology",
+   "Evidence of Evolution"
+  ],
+  "titleWhy": "The whole passage describes cultural evolutionism: the idea that cultures develop from simple to complex stages, as in Tylor's scheme."
+ },
+ {
+  "id": "ir-ostx-lifespan-development-m00053-5",
+  "sourceId": "ostx-lifespan-development-m00053-5",
+  "genre": "expository",
+  "topic": "psychology",
+  "difficulty": "advanced",
+  "title": "Contextual Influences on Cognitive Development",
+  "passage": "Both Piaget’s theory and the information processing perspective are fueled by a feedback loop between the individual’s maturing brain and the environmental inputs and supports for the brain’s further growth and development. An example is the U.S. school curricula across grade levels. The preschool curriculum takes advantage of the playful mindset of the preoperational child, while high school curricula leverage adolescents’ newfound abilities and appreciation for complex problem-solving, introducing abstract concepts. This back-and-forth interaction between the individual and the environment is an example of contexts that influence cognitive development in adolescents. These contexts include family and home environment, culture and language, and formal schooling. In cultures that don’t emphasize the development of scientific reasoning, Piaget’s stage of formal operations may not be reached, and the features associated with adolescent thought might not be readily observed.\n\nConsidering family dynamics and the home environment, the authoritative parenting style shows the most benefit for school performance and engagement if the development of formal operations is considered a goal of cognitive development. Authoritative parents set high expectations with high levels of warmth and nurturing.",
+  "sentencesPartEndsAfter": "This back-and-forth interaction between the individual and the environment is an example of contexts that influence cognitive development in adolescents.",
+  "blanks": [
+   {
+    "answer": "theory",
+    "distractors": [
+     "theoretical",
+     "theorize",
+     "theorist",
+     "theater"
+    ],
+    "why": "'Piaget's theory' is a set of ideas, parallel to 'the information processing perspective'."
+   },
+   {
+    "answer": "between",
+    "distractors": [
+     "against",
+     "beneath",
+     "beside",
+     "toward"
+    ],
+    "why": "'Between ... and' is used for a link that connects two things."
+   },
+   {
+    "answer": "example",
+    "distractors": [
+     "examples",
+     "sample",
+     "exam",
+     "excuse"
+    ],
+    "why": "'An example is...' introduces a case that illustrates the idea; 'An' must be followed by a single noun with a vowel sound."
+   },
+   {
+    "answer": "advantage",
+    "distractors": [
+     "advance",
+     "advantageous",
+     "benefit",
+     "adventure"
+    ],
+    "why": "'Take advantage of' is a fixed phrase meaning make good use of."
+   },
+   {
+    "answer": "while",
+    "distractors": [
+     "during",
+     "which",
+     "whom",
+     "whether"
+    ],
+    "why": "'While' joins two contrasting clauses about preschool and high school."
+   },
+   {
+    "answer": "abstract",
+    "distractors": [
+     "abstraction",
+     "abstractly",
+     "absent",
+     "abroad"
+    ],
+    "why": "An adjective is needed before 'concepts', and abstract ideas suit adolescents' new problem-solving abilities."
+   },
+   {
+    "answer": "interaction",
+    "distractors": [
+     "interact",
+     "interactive",
+     "interactively",
+     "introduction"
+    ],
+    "why": "A noun is needed after 'back-and-forth', and 'interaction between' describes a two-way influence."
+   },
+   {
+    "answer": "that",
+    "distractors": [
+     "what",
+     "whom",
+     "whose",
+     "where"
+    ],
+    "why": "'That' begins a clause describing the contexts."
+   }
+  ],
+  "missingSentence": "These contexts include family and home environment, culture and language, and formal schooling.",
+  "missingDistractors": [
+   "It posits that cognitive development is continuous, rather than consisting of discrete stages.",
+   "Also, unlike Piaget’s theory, information processing theory is not the work of one theorist.",
+   "Parents also tend to guide children differently than when the children were younger."
+  ],
+  "missingWhy": "'These contexts' picks up the word 'contexts' from the sentence before, and the following sentences discuss culture and family, two of the contexts it lists.",
+  "highlights": [
+   {
+    "question": "What do authoritative parents combine with high expectations?",
+    "answer": "high levels of warmth and nurturing"
+   },
+   {
+    "question": "What feature of young children does the preschool curriculum make use of?",
+    "answer": "the playful mindset of the preoperational child"
+   }
+  ],
+  "idea": {
+   "answer": "A young person's surroundings, such as family, culture and school, affect how their thinking develops.",
+   "distractors": [
+    "Children from low-income families always score higher on tests of thinking ability.",
+    "Information processing theory says that thinking develops in separate stages, not continuously.",
+    "Every adolescent reaches Piaget's stage of formal operations, whatever their culture."
+   ],
+   "why": "The passage says contexts such as family and home, culture and language, and schooling influence cognitive development in adolescents."
+  },
+  "titleDistractors": [
+   "Socioeconomic Influences",
+   "Information Processing Perspective",
+   "Family Dynamics"
+  ],
+  "titleWhy": "The whole passage is about how surroundings such as school, culture and family influence cognitive development."
+ },
+ {
+  "id": "ir-ose-wnl-bright-future-ele",
+  "sourceId": "ose-wnl-bright-future-ele",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "easy",
+  "title": "Bright Future",
+  "passage": "On the top of a hill, above Northumberland’s beautiful Kielder Water lake, a group of people are waiting in a car park next to a strange wooden building. They are here because of the darkness and this is Kielder Observatory, the centre of Britain’s latest industry – astrotourism. The people who are waiting outside are lucky. Many more people apply for a night of stargazing at the observatory but not everyone can come because numbers are strictly limited.\n\nInside, the observatory’s founder and lead astronomer, Gary Fildes, speaks to his colleagues and volunteers. The team discusses that they might see the northern lights but Fildes doesn’t think they will. Instead, they decide to use their powerful telescopes to look at Jupiter and Venus and, later, to find stars such as Capella and Betelgeuse. An extra attraction is the appearance of the International Space Station.\n\nFildes is a leading figure in the UK’s growing astrotourism industry. The key moment for Northumberland came in 2013 when the entire national park, about 1,500 square kilometres in area, got Dark Sky Park status. It is the only one in England. Dark Sky Parks are rare.",
+  "sentencesPartEndsAfter": "Inside, the observatory’s founder and lead astronomer, Gary Fildes, speaks to his colleagues and volunteers.",
+  "blanks": [
+   {
+    "answer": "hill",
+    "distractors": [
+     "hills",
+     "hilly",
+     "hole",
+     "heel"
+    ],
+    "why": "You stand 'on the top of a hill' above a lake; 'a' needs a singular noun."
+   },
+   {
+    "answer": "waiting",
+    "distractors": [
+     "wait",
+     "waited",
+     "weight",
+     "waiter"
+    ],
+    "why": "'Are waiting' is the present continuous, and the next sentences repeat 'waiting outside'."
+   },
+   {
+    "answer": "because",
+    "distractors": [
+     "since",
+     "due",
+     "although",
+     "despite"
+    ],
+    "why": "'Because of' gives the reason; 'since', 'due', 'although' and 'despite' do not go with 'of' here."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whom",
+     "whose",
+     "what"
+    ],
+    "why": "'Who' is used for people and is the subject of 'are waiting'."
+   },
+   {
+    "answer": "apply",
+    "distractors": [
+     "application",
+     "applies",
+     "reply",
+     "supply"
+    ],
+    "why": "The plural subject 'people' needs 'apply', and you 'apply for' a place."
+   },
+   {
+    "answer": "everyone",
+    "distractors": [
+     "nobody",
+     "everything",
+     "every",
+     "each"
+    ],
+    "why": "'Not everyone can come' means only some of the people can visit."
+   },
+   {
+    "answer": "strictly",
+    "distractors": [
+     "strict",
+     "stricter",
+     "strictness",
+     "loosely"
+    ],
+    "why": "An adverb is needed before 'limited', and strict limits explain why not everyone can come."
+   },
+   {
+    "answer": "speaks",
+    "distractors": [
+     "speak",
+     "speech",
+     "speaking",
+     "speaker"
+    ],
+    "why": "The singular subject 'Gary Fildes' needs 'speaks', and the text is in the present tense."
+   }
+  ],
+  "missingSentence": "The key moment for Northumberland came in 2013 when the entire national park, about 1,500 square kilometres in area, got Dark Sky Park status.",
+  "missingDistractors": [
+   "It is the only planet known to have life on it.",
+   "The resolution of a visible-light or infrared telescope is degraded by turbulence in Earth’s atmosphere.",
+   "The pop-up park is a simple idea."
+  ],
+  "missingWhy": "It introduces Dark Sky Park status, and the next sentence says 'It is the only one in England'.",
+  "highlights": [
+   {
+    "question": "Which planets does the team decide to look at with their telescopes?",
+    "answer": "Jupiter and Venus"
+   },
+   {
+    "question": "Why are some people who apply not able to visit the observatory?",
+    "answer": "numbers are strictly limited"
+   }
+  ],
+  "idea": {
+   "answer": "Kielder Observatory attracts visitors who come to look at the stars in the dark night sky.",
+   "distractors": [
+    "Anyone who wants to visit the observatory can come on any night.",
+    "Kielder is one of many Dark Sky Parks in England.",
+    "The best observatories are built where the weather is clear and the air is dry."
+   ],
+   "why": "The passage says people come to Kielder Observatory because of the darkness, to spend a night stargazing."
+  },
+  "titleDistractors": [
+   "Telescopes Today",
+   "Gorillas and oil",
+   "Ten ideas"
+  ],
+  "titleWhy": "The passage is about astrotourism, a growing new industry in Northumberland with a bright future; telescopes are only one detail."
+ }
+]

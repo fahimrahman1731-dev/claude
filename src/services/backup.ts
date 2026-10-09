@@ -1,7 +1,8 @@
 import type { AppDB } from '../db/db';
 
 export const BACKUP_FORMAT = 'det-vocab-backup';
-export const BACKUP_VERSION = 1;
+// 2: adds the irResults table and the interactive-reading mode (version 1 backups still restore).
+export const BACKUP_VERSION = 2;
 
 const TABLES = ['progress', 'attempts', 'mistakes', 'sessions', 'kv', 'customWords', 'aiContexts', 'imports', 'irResults'] as const;
 type TableName = (typeof TABLES)[number];

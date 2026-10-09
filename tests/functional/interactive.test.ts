@@ -33,7 +33,10 @@ describe('Interactive Reading in a practice session', () => {
     expect(r.outcome.parts?.map((p) => p.part)).toEqual(['complete-passage', 'highlight', 'highlight', 'main-idea', 'title']);
     expect(r.outcome.parts?.every((p) => p.correct && p.score === 1)).toBe(true);
     expect(r.outcome.gaps.every((g) => g.result === 'correct')).toBe(true);
-    expect(await db.irResults.where('sessionId').equals(s.id).count()).toBe(5);
+    // One row per missing word (including words that are not in the word list) and one per other question.
+    const rows = await db.irResults.where('sessionId').equals(s.id).toArray();
+    expect(rows).toHaveLength(q.blanks.length + 5);
+    expect(rows.filter((x) => x.part === 'complete-sentences')).toHaveLength(q.blanks.length);
 
     // Choosing the right word from options never masters a word.
     for (const g of r.outcome.gaps.filter((x) => x.wordId)) {
@@ -65,7 +68,29 @@ describe('Interactive Reading in a practice session', () => {
     if (missedWord) {
       const m = await db.mistakes.where('wordId').equals(missedWord).toArray();
       expect(m[0]?.mode).toBe('interactive-reading');
-      expect(m[0]?.sentence).toContain(r.outcome.gaps[0].correctAnswer);
+      // The Mistake Bank knows exactly which occurrence was missed.
+      const at = m[0].answerStart!;
+      expect(m[0].sentence.slice(at, at + r.outcome.gaps[0].correctAnswer.length)).toBe(r.outcome.gaps[0].correctAnswer);
+    }
+  });
+
+  it('lets the student move on when the open passage was removed or changed by an update', async () => {
+    const env = makeEnv();
+    const { service, store, db } = env;
+    const s = await service.startSession({ mode: 'interactive-reading' });
+    const q = s.current!.question as InteractiveQuestion;
+    // Simulate an update that removed the passage.
+    const i = store.interactive.findIndex((x) => x.id === q.setId);
+    const [removed] = store.interactive.splice(i, 1);
+    try {
+      const r = await service.submit(s.id, { questionId: q.id, answers: [], kind: 'skip' });
+      expect(r.outcome.skipped).toBe(true);
+      expect(r.outcome.gaps).toEqual([]);
+      expect(r.session.index).toBe(s.index + 1);
+      expect(await db.attempts.where('sessionId').equals(s.id).count()).toBe(0);
+      expect(await db.irResults.where('sessionId').equals(s.id).count()).toBe(0);
+    } finally {
+      store.interactive.splice(i, 0, removed);
     }
   });
 });

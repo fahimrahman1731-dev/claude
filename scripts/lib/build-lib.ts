@@ -2,6 +2,7 @@ import { endingSplit, IRREGULAR, isFunctionWord } from '../../src/engine/morphol
 import { levelFor } from '../../src/engine/priority';
 import { sentenceQuestion, validateQuestion } from '../../src/engine/questions';
 import { findOccurrences } from '../../src/engine/text';
+import { splitSentences } from '../../src/engine/sentences';
 import type { Context, Difficulty, InteractiveSet, Paragraph, ParagraphGap, TextSource, VocabData, VocabWord } from '../../src/engine/types';
 import { checkContext, checkContextSet } from '../../src/engine/validate';
 import type { AuthoredParagraph, AuthoredWord } from './authored';
@@ -267,7 +268,8 @@ export function buildVocab(
       writtenForApp++;
     } else missingDefinitions.push(m.word);
     definitionOrigins[definition ? definitionOrigin : 'missing']++;
-    const dictBn = e?.bn ? (pos.map((p) => e.bn![p]).find(Boolean) ?? Object.values(e.bn)[0]) : undefined;
+    // Only a dictionary meaning for the same part of speech: "stuck" must not get the Bengali for a wooden stick.
+    const dictBn = e?.bn ? pos.map((p) => e.bn![p]).find(Boolean) : undefined;
     let bengaliText = a?.bengali;
     let bengaliOrigin: VocabWord['bengaliOrigin'] = a?.bengali ? 'app' : undefined;
     if (!bengaliText && dictBn?.length) {
@@ -522,22 +524,22 @@ export function buildVocab(
 export const MAX_GAPS = 16;
 
 export function selectGaps(text: string, byWord: Map<string, VocabWord>, maxGaps = MAX_GAPS): Omit<ParagraphGap, 'contextId'>[] {
-  const sentences = [...text.matchAll(/[^.!?]+[.!?]+["”’)]?\s*/g)].map((m) => ({ start: m.index ?? 0, end: (m.index ?? 0) + m[0].length }));
+  const sentences = splitSentences(text);
   if (sentences.length < 3) return [];
   const regionStart = sentences[0].end;
   const regionEnd = sentences[sentences.length - 1].start;
-  const tokens = [...text.slice(regionStart, regionEnd).matchAll(/[A-Za-z]+(?:['’-][A-Za-z]+)*|\d+(?:[.,]\d+)*/g)].map((m) => ({
+  // Letters in any alphabet, so a word such as "résumé" is one (ineligible) token, never "sum".
+  const tokens = [...text.slice(regionStart, regionEnd).matchAll(/\p{L}+(?:['’-]\p{L}+)*|\d+(?:[.,]\d+)*/gu)].map((m) => ({
     text: m[0],
     start: regionStart + (m.index ?? 0),
   }));
+  const startsSentence = (pos: number) => sentences.some((sp) => sp.start <= pos && /^[\s"“‘(]*$/.test(text.slice(sp.start, pos)));
   const gaps: Omit<ParagraphGap, 'contextId'>[] = [];
   tokens.forEach((t, i) => {
     if (i % 2 === 0 || gaps.length >= maxGaps) return; // 1st, 3rd, 5th … word stay whole
     const lower = t.text.toLowerCase();
     const w = byWord.get(lower);
-    const prevChar = text.slice(0, t.start).trimEnd().slice(-1);
-    const sentenceStart = !prevChar || /[.!?]/.test(prevChar);
-    const eligible = !!w && lower.length >= 2 && /^[A-Za-z]+$/.test(t.text) && (t.text === lower || sentenceStart) && !w.tags.includes('british-word');
+    const eligible = !!w && lower.length >= 2 && /^[A-Za-z]+$/.test(t.text) && (t.text === lower || startsSentence(t.start)) && !w.tags.includes('british-word');
     if (eligible) gaps.push({ wordId: w!.id, start: t.start, end: t.start + t.text.length });
   });
   // sanity: each gap text must be the word

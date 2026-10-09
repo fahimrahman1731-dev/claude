@@ -22,7 +22,9 @@ const FILTERS: { value: Filter; label: string; test?: (m: MistakeRecord) => bool
 ];
 
 function Sentence({ m }: { m: MistakeRecord }) {
-  const occ = findOccurrences(m.sentence, m.correctAnswer)[0];
+  const at = m.answerStart;
+  const exact = at !== undefined && m.sentence.slice(at, at + m.correctAnswer.length).toLowerCase() === m.correctAnswer.toLowerCase();
+  const occ = exact ? { start: at, end: at + m.correctAnswer.length } : findOccurrences(m.sentence, m.correctAnswer)[0];
   if (!occ) return <>{m.sentence}</>;
   return (
     <>

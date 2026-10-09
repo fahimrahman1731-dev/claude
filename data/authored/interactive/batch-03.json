@@ -1,0 +1,1360 @@
+[
+ {
+  "id": "ir-clear-2949",
+  "sourceId": "clear-2949",
+  "genre": "expository",
+  "topic": "general",
+  "difficulty": "intermediate",
+  "title": "Stem Cells in the Human Body",
+  "titleWritten": true,
+  "passage": "Our bodies are made up of trillions of small units, known as cells. However, at the very early phase of development, we were embryos consisting of only a tiny clump of cells. Cells in an embryo are in a primitive state, and we call them embryonic stem cells. Embryonic stem cells can develop into three types of cells, called ectodermal stem cells, endodermal stem cells, and mesodermal stem cells. These three types of stem cells then go on to form 200 different types of cells. For example, stem cells form the cells of your skin, the red blood cells in your blood, and the cells that produce the color of your eyes. Altogether, stem cells form all the organs and tissues in the body, such as the bones, kidneys, liver, blood, and brain. After birth, embryonic stem cells are no longer present in the body.\n\nHowever, even in the bodies of children, adults, and elderly people, we find several types of stem cells. These stem cells can form some, but not all, of the 200 different cell types.",
+  "sentencesPartEndsAfter": "These three types of stem cells then go on to form 200 different types of cells.",
+  "blanks": [
+   {
+    "answer": "made",
+    "distractors": [
+     "make",
+     "making",
+     "taken",
+     "given"
+    ],
+    "why": "'Be made up of' is a fixed phrase that means 'consist of'."
+   },
+   {
+    "answer": "development",
+    "distractors": [
+     "develop",
+     "developed",
+     "payment",
+     "traffic"
+    ],
+    "why": "After 'phase of' we need a noun, and an embryo is the first stage of a person's development."
+   },
+   {
+    "answer": "consisting",
+    "distractors": [
+     "consisted",
+     "consists",
+     "containing",
+     "including"
+    ],
+    "why": "'Consisting of' means 'made of'; 'containing' and 'including' are not followed by 'of'."
+   },
+   {
+    "answer": "an",
+    "distractors": [
+     "a",
+     "these",
+     "much",
+     "those"
+    ],
+    "why": "'Embryo' is a singular noun that starts with a vowel sound, so it takes 'an'."
+   },
+   {
+    "answer": "call",
+    "distractors": [
+     "tell",
+     "say",
+     "speak",
+     "talk"
+    ],
+    "why": "'We call them X' means 'we give them the name X'; the other verbs cannot be used this way."
+   },
+   {
+    "answer": "into",
+    "distractors": [
+     "onto",
+     "at",
+     "of",
+     "until"
+    ],
+    "why": "'Develop into' means 'grow and change until it becomes'."
+   },
+   {
+    "answer": "These",
+    "distractors": [
+     "This",
+     "That",
+     "There",
+     "Much"
+    ],
+    "why": "'Three types' is plural and points back to the types just named, so it needs 'These'."
+   },
+   {
+    "answer": "form",
+    "distractors": [
+     "formation",
+     "forming",
+     "forget",
+     "borrow"
+    ],
+    "why": "'Go on to' is followed by a base verb, and stem cells form (make) other cells."
+   }
+  ],
+  "missingSentence": "After birth, embryonic stem cells are no longer present in the body.",
+  "missingDistractors": [
+   "Ongoing cell differentiation allows cells to become specialized to do different jobs.",
+   "The empty egg is then injected with DNA from another mature cell, such as a skin or blood cell.",
+   "This cell divides mitotically to produce a multicellular organism."
+  ],
+  "missingWhy": "It says embryonic stem cells disappear after birth, which the next sentence contrasts with 'However, even in the bodies of children, adults...'.",
+  "highlights": [
+   {
+    "question": "Which groups of people still have some types of stem cells in their bodies?",
+    "answer": "children, adults, and elderly people"
+   },
+   {
+    "question": "What do the three types of stem cells eventually produce?",
+    "answer": "200 different types of cells"
+   }
+  ],
+  "idea": {
+   "answer": "Stem cells can turn into the many different kinds of cells that make up the body's organs and tissues.",
+   "distractors": [
+    "Doctors can treat brain injuries by putting new stem cells into the patient's body.",
+    "Embryonic stem cells stay in the body for the whole of a person's life.",
+    "The stem cells found in adults can form every one of the 200 cell types."
+   ],
+   "why": "The passage says stem cells form about 200 types of cells and all the organs and tissues of the body."
+  },
+  "titleDistractors": [
+   "Making Neurons from Human Stem Cells",
+   "Reproductive Cloning",
+   "The Embryonic Period"
+  ],
+  "titleWhy": "The whole passage explains what stem cells are and how they form the cells of the body, from the embryo to old age."
+ },
+ {
+  "id": "ir-clear-2288",
+  "sourceId": "clear-2288",
+  "genre": "expository",
+  "topic": "technology",
+  "difficulty": "advanced",
+  "title": "Overclocking",
+  "passage": "Overclocking is the process of configuring a computer processor or other electronic circuit to run faster than it was designed to. Overclocking allows a computer to be faster and more responsive. Overclocked processors tend to use more electricity and make more heat than those running at their intended speed. It is often necessary to install a better heat sink to avoid overheating the processor. If a processor is overclocked too high, it can damage the processor or make the computer unstable. Increasing the voltage to the processor can allow it to be run at even higher speeds where it would otherwise be unstable, but this carries an especially high risk of damaging the processor. Overclocking is usually done in the computer's BIOS setup utility. Most brand-name computers such as Dell, HP, and others do not allow overclocking in the BIOS setup utility, but custom-built computers usually do. It is also possible to do the opposite, called underclocking, where the processor is run at a lower speed than intended. This may be done to extend battery life and reduce heat output. Underclocking will not usually damage a processor and may in fact make it last longer.",
+  "sentencesPartEndsAfter": "Increasing the voltage to the processor can allow it to be run at even higher speeds where it would otherwise be unstable, but this carries an especially high risk of damaging the processor.",
+  "blanks": [
+   {
+    "answer": "than",
+    "distractors": [
+     "then",
+     "that",
+     "as",
+     "from"
+    ],
+    "why": "A comparative like 'faster' is followed by 'than'."
+   },
+   {
+    "answer": "allows",
+    "distractors": [
+     "allowance",
+     "allowing",
+     "lets",
+     "makes"
+    ],
+    "why": "'Allow something to do' is correct; 'let' and 'make' are followed by a verb without 'to'."
+   },
+   {
+    "answer": "electricity",
+    "distractors": [
+     "electric",
+     "electrical",
+     "electrician",
+     "furniture"
+    ],
+    "why": "After 'use more' we need a noun for the power a processor uses: electricity."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they're",
+     "them",
+     "whose"
+    ],
+    "why": "A possessive word is needed before 'intended speed'; 'their' refers to 'those' processors."
+   },
+   {
+    "answer": "avoid",
+    "distractors": [
+     "avoidance",
+     "avoiding",
+     "enjoy",
+     "finish"
+    ],
+    "why": "After 'to' we need a base verb, and a heat sink is used to avoid (stop) overheating."
+   },
+   {
+    "answer": "too",
+    "distractors": [
+     "to",
+     "two",
+     "much",
+     "such"
+    ],
+    "why": "'Too high' means 'more than is safe', which explains the damage in the rest of the sentence."
+   },
+   {
+    "answer": "unstable",
+    "distractors": [
+     "instability",
+     "unstably",
+     "unhappy",
+     "unknown"
+    ],
+    "why": "'Make something + adjective': a computer that does not work reliably is unstable."
+   },
+   {
+    "answer": "risk",
+    "distractors": [
+     "risky",
+     "risking",
+     "height",
+     "flavor"
+    ],
+    "why": "'A high risk of damaging' is a common phrase for a strong chance of harm."
+   }
+  ],
+  "missingSentence": "Overclocking is usually done in the computer's BIOS setup utility.",
+  "missingDistractors": [
+   "Usually, the contents of RAM are accessible faster than other types of information storage but are lost every time the computer is turned off.",
+   "Intel Core processors are based on Pentium M technology.",
+   "Software is any set of machine-readable instructions that directs a computer's processor to perform specific operations."
+  ],
+  "missingWhy": "It introduces the BIOS setup utility, which the next sentence refers back to when it says brand-name computers do not allow overclocking there.",
+  "highlights": [
+   {
+    "question": "Why might someone choose to run a processor at a lower speed?",
+    "answer": "to extend battery life and reduce heat output"
+   },
+   {
+    "question": "What may need to be fitted to stop an overclocked processor from getting too hot?",
+    "answer": "a better heat sink"
+   }
+  ],
+  "idea": {
+   "answer": "Making a processor run faster than intended can speed up a computer, but it also creates more heat and risk.",
+   "distractors": [
+    "Information in a computer's memory is lost every time the computer is turned off.",
+    "Most brand-name computers make overclocking easy to do in their setup utility.",
+    "Underclocking is risky because it often damages the processor."
+   ],
+   "why": "The passage says overclocking makes a computer faster and more responsive but uses more electricity, makes more heat and can damage the processor."
+  },
+  "titleDistractors": [
+   "Random-access memory",
+   "Computer hardware",
+   "Emulator"
+  ],
+  "titleWhy": "Almost every sentence is about overclocking: what it is, its benefits and risks, where it is done, and its opposite."
+ },
+ {
+  "id": "ir-clear-1968",
+  "sourceId": "clear-1968",
+  "genre": "expository",
+  "topic": "technology",
+  "difficulty": "easy",
+  "title": "Computer program",
+  "passage": "A computer program is a list of instructions that tell a computer what to do. Everything a computer does is done by using a computer program. A computer program is written in a programming language.\n\nSome examples of computer programs:\n\nA web browser like Mozilla Firefox and Apple Safari can be used to view web pages on the Internet.\n\nAn office suite can be used to write documents or spreadsheets.\n\nVideo games are computer programs.\n\nA computer program is stored as a file on the computer's hard drive. When the user runs the program, the file is read by the computer, and the processor reads the data in the file as a list of instructions. Then the computer does what the program tells it to do.\n\nA computer program is written by a programmer. It is very difficult to write in the ones and zeroes of machine code, which is what the computer can read, so computer programmers write in a programming language, such as BASIC, C, or Java. Once it is written, the programmer uses a compiler to turn it into a language that the computer can understand.",
+  "sentencesPartEndsAfter": "A computer program is stored as a file on the computer's hard drive.",
+  "blanks": [
+   {
+    "answer": "tell",
+    "distractors": [
+     "say",
+     "speak",
+     "talk",
+     "telling"
+    ],
+    "why": "'Tell someone what to do' is the usual pattern; 'say', 'speak' and 'talk' cannot take 'a computer' as an object here."
+   },
+   {
+    "answer": "what",
+    "distractors": [
+     "that",
+     "who",
+     "whose",
+     "which"
+    ],
+    "why": "'What to do' means 'the things to do'."
+   },
+   {
+    "answer": "done",
+    "distractors": [
+     "did",
+     "do",
+     "doing",
+     "gone"
+    ],
+    "why": "'Is done' is the passive form: the things a computer does are done by a program."
+   },
+   {
+    "answer": "in",
+    "distractors": [
+     "at",
+     "of",
+     "to",
+     "under"
+    ],
+    "why": "We say something is written in a language."
+   },
+   {
+    "answer": "view",
+    "distractors": [
+     "viewer",
+     "views",
+     "cook",
+     "sweep"
+    ],
+    "why": "'Can be used to' is followed by a base verb, and a browser is used to view (look at) web pages."
+   },
+   {
+    "answer": "write",
+    "distractors": [
+     "writer",
+     "wrote",
+     "written",
+     "swim"
+    ],
+    "why": "'Can be used to' needs a base verb, and an office suite is used to write documents."
+   },
+   {
+    "answer": "are",
+    "distractors": [
+     "is",
+     "be",
+     "being",
+     "am"
+    ],
+    "why": "The subject 'Video games' is plural, so it needs 'are'."
+   },
+   {
+    "answer": "hard",
+    "distractors": [
+     "hardly",
+     "harden",
+     "heavy",
+     "strong"
+    ],
+    "why": "'Hard drive' is the fixed name for the part of a computer that stores files."
+   }
+  ],
+  "missingSentence": "When the user runs the program, the file is read by the computer, and the processor reads the data in the file as a list of instructions.",
+  "missingDistractors": [
+   "Each assembly language is specific to a particular computer architecture and sometimes to an operating system.",
+   "One gigahertz is one billion cycles per second.",
+   "Some types of emulators require newer computers that have the right system requirements."
+  ],
+  "missingWhy": "It continues from the program being stored as a file and gives the step that 'Then the computer does what the program tells it to do' follows.",
+  "highlights": [
+   {
+    "question": "Why do programmers usually not write programs in machine code?",
+    "answer": "It is very difficult to write in the ones and zeroes of machine code"
+   },
+   {
+    "question": "Where is a computer program kept on a computer?",
+    "answer": "on the computer's hard drive"
+   }
+  ],
+  "idea": {
+   "answer": "A program is a set of steps, written by a programmer, that a computer reads and carries out.",
+   "distractors": [
+    "Programmers must write every program directly in the ones and zeroes of machine code.",
+    "The CPU controls the other parts of a computer, much like a brain controls a body.",
+    "Old computer games can run on new computers with the help of special programs."
+   ],
+   "why": "The passage defines a program as a list of instructions that tell a computer what to do and says that programmers write them."
+  },
+  "titleDistractors": [
+   "Central processing unit",
+   "Emulator",
+   "Computer hardware"
+  ],
+  "titleWhy": "The whole passage explains what a computer program is, gives examples, and says how programs are stored, run and written."
+ },
+ {
+  "id": "ir-clear-8024",
+  "sourceId": "clear-8024",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "easy",
+  "title": "Introduction to The Elements",
+  "passage": "The whole universe is built of matter. Right now, you are surrounded by it. The air we breathe is matter, and all the things you see around you are matter. The odors you smell are matter and the sounds you hear are caused by the movement of matter in your ears.\n\nMatter is everything that takes up space and has weight. Scientists say that matter has volume and mass. Matter is made up of tiny building blocks called atoms. The purest type of atom is called an element. The elements are what give matter its different qualities.\n\nToday we can see atoms by using a special instrument called an electron microscope. An electron microscope lets us see things that are millions of times smaller than the things we can see with a powerful optical microscope.\n\nMost of the matter around us has more than one element in it. But some matter is made up of just one element. If you have ever held a diamond, for example, it is made of just one element, Carbon.",
+  "sentencesPartEndsAfter": "The elements are what give matter its different qualities.",
+  "blanks": [
+   {
+    "answer": "surrounded",
+    "distractors": [
+     "surround",
+     "surrounding",
+     "survived",
+     "arrived"
+    ],
+    "why": "'Be surrounded by' means 'have something all around you'."
+   },
+   {
+    "answer": "breathe",
+    "distractors": [
+     "breath",
+     "breathes",
+     "cook",
+     "wash"
+    ],
+    "why": "After 'we' we need a verb: 'breathe' is the verb, and 'breath' is the noun."
+   },
+   {
+    "answer": "are",
+    "occurrence": 2,
+    "distractors": [
+     "is",
+     "be",
+     "been",
+     "was"
+    ],
+    "why": "The subject 'all the things' is plural, so it needs 'are'."
+   },
+   {
+    "answer": "takes",
+    "distractors": [
+     "take",
+     "taken",
+     "goes",
+     "puts"
+    ],
+    "why": "'Take up space' means 'fill space'; the subject 'everything' is singular, so it needs 'takes'."
+   },
+   {
+    "answer": "say",
+    "distractors": [
+     "tell",
+     "speak",
+     "talk",
+     "saying"
+    ],
+    "why": "'Say that...' reports what someone states; 'tell' needs a person after it."
+   },
+   {
+    "answer": "called",
+    "distractors": [
+     "call",
+     "calls",
+     "told",
+     "asked"
+    ],
+    "why": "'Called atoms' means 'named atoms'."
+   },
+   {
+    "answer": "an",
+    "distractors": [
+     "a",
+     "much",
+     "these",
+     "few"
+    ],
+    "why": "'Element' is a singular noun that starts with a vowel sound, so it takes 'an'."
+   },
+   {
+    "answer": "its",
+    "distractors": [
+     "it's",
+     "it",
+     "his",
+     "whose"
+    ],
+    "why": "A possessive word for 'matter' is needed before 'different qualities'; 'it's' means 'it is'."
+   }
+  ],
+  "missingSentence": "But some matter is made up of just one element.",
+  "missingDistractors": [
+   "The chemical elements are organized on the periodic table.",
+   "Helium, for example, is the second-most abundant element in the Sun.",
+   "Moving around this proton is a single electron."
+  ],
+  "missingWhy": "'But some' contrasts with 'Most of the matter', and the next sentence gives a diamond 'for example' of matter made of one element.",
+  "highlights": [
+   {
+    "question": "What causes the sounds that we hear?",
+    "answer": "the movement of matter in your ears"
+   },
+   {
+    "question": "What is a diamond made of?",
+    "answer": "just one element, Carbon"
+   }
+  ],
+  "idea": {
+   "answer": "Everything around us is made of atoms, and an element is the purest type of atom.",
+   "distractors": [
+    "Only 92 of the known elements are found in nature.",
+    "Most of the matter around us is made of only one element.",
+    "Atoms are too small to be seen with any instrument, even today."
+   ],
+   "why": "The passage says matter is made of tiny building blocks called atoms, and the purest type of atom is called an element."
+  },
+  "titleDistractors": [
+   "Carbon",
+   "The Atomic Nucleus",
+   "How Microscopes Were Invented"
+  ],
+  "titleWhy": "The passage introduces matter, atoms and elements, and explains what an element is."
+ },
+ {
+  "id": "ir-clear-2643",
+  "sourceId": "clear-2643",
+  "genre": "expository",
+  "topic": "science",
+  "difficulty": "advanced",
+  "title": "Metabolism",
+  "passage": "Metabolism is the name given to the chemical reactions which keep us alive. It happens in the cells of living organisms.\n\nReactions catalyzed by enzymes allow organisms to grow, reproduce, maintain their structures, and respond to their environments. The word ‘metabolism' can also refer to digestion and the transport of substances into and between different cells.\n\nMetabolism is usually divided into two categories. Catabolism breaks down organic matter and harvests energy by way of cellular respiration. Anabolism uses energy to construct molecules such as proteins and nucleic acids.\n\nThe chemical reactions of metabolism are organized into metabolic pathways, or cycles, like the Krebs cycle. One chemical is transformed through a series of steps into another chemical by a series of enzymes. The metabolic system of an organism decides which substances it finds nutritious and which poisonous. For example, some prokaryotes use hydrogen sulfide as a nutrient, yet this gas is poisonous to animals. The speed of metabolism, the metabolic rate, influences how much food an organism will need, and how it is able to get that food.",
+  "sentencesPartEndsAfter": "Anabolism uses energy to construct molecules such as proteins and nucleic acids.",
+  "blanks": [
+   {
+    "answer": "keep",
+    "distractors": [
+     "keeping",
+     "hold",
+     "stay",
+     "put"
+    ],
+    "why": "'Keep someone alive' is a fixed phrase."
+   },
+   {
+    "answer": "allow",
+    "distractors": [
+     "allows",
+     "allowing",
+     "let",
+     "make"
+    ],
+    "why": "The plural subject 'Reactions' needs 'allow', and 'allow' is followed by 'to'."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they're",
+     "them",
+     "whose"
+    ],
+    "why": "A possessive word for 'organisms' is needed before 'structures'."
+   },
+   {
+    "answer": "refer",
+    "distractors": [
+     "reference",
+     "referring",
+     "mean",
+     "talk"
+    ],
+    "why": "'Refer to' means 'be used for'; after 'can also' we need a base verb that goes with 'to'."
+   },
+   {
+    "answer": "divided",
+    "distractors": [
+     "division",
+     "divides",
+     "decided",
+     "delivered"
+    ],
+    "why": "'Be divided into' means 'be split into' groups."
+   },
+   {
+    "answer": "breaks",
+    "distractors": [
+     "broken",
+     "breaking",
+     "brakes",
+     "sits"
+    ],
+    "why": "'Break down' means 'split into smaller parts', which is what catabolism does."
+   },
+   {
+    "answer": "by",
+    "occurrence": 2,
+    "distractors": [
+     "in",
+     "on",
+     "at",
+     "for"
+    ],
+    "why": "'By way of' is a fixed phrase meaning 'through' or 'by means of'."
+   },
+   {
+    "answer": "such",
+    "distractors": [
+     "much",
+     "so",
+     "same",
+     "each"
+    ],
+    "why": "'Such as' introduces examples."
+   }
+  ],
+  "missingSentence": "For example, some prokaryotes use hydrogen sulfide as a nutrient, yet this gas is poisonous to animals.",
+  "missingDistractors": [
+   "They consume carbon dioxide and produce oxygen as a waste product.",
+   "With the exception of ions, small substances constantly pass through plasma membranes.",
+   "Active transport mechanisms, collectively called pumps or carrier proteins, work against electrochemical gradients."
+  ],
+  "missingWhy": "It gives an example of the sentence before it: one substance can be nutritious to some organisms and poisonous to others.",
+  "highlights": [
+   {
+    "question": "What does the speed of an organism's metabolism affect?",
+    "answer": "how much food an organism will need, and how it is able to get that food"
+   },
+   {
+    "question": "What does anabolism use energy to build?",
+    "answer": "molecules such as proteins and nucleic acids"
+   }
+  ],
+  "idea": {
+   "answer": "Metabolism includes reactions that break substances down for energy and others that use energy to build molecules.",
+   "distractors": [
+    "Plants produce most of the sugars that living things use for energy.",
+    "Hydrogen sulfide is a useful nutrient for animals as well as for some prokaryotes.",
+    "Catabolism uses energy to build large molecules such as proteins."
+   ],
+   "why": "The passage divides metabolism into catabolism, which breaks matter down and harvests energy, and anabolism, which uses energy to build molecules."
+  },
+  "titleDistractors": [
+   "Moving Against a Gradient",
+   "Feedback Inhibition in Metabolic Pathways",
+   "Energy Processing"
+  ],
+  "titleWhy": "The whole passage explains what metabolism is, its two categories, its pathways and its speed."
+ },
+ {
+  "id": "ir-clear-3351",
+  "sourceId": "clear-3351",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Anansi and the Basket of Money",
+  "titleWritten": true,
+  "passage": "Rabbit owned a big farm with lots of vegetables and fruit. Even though Rabbit shared generously with his friend, Anansi was unhappy and jealous.\n\nSo, Anansi thought of a clever plan to take over Rabbit's farm. Soon Rabbit was left poor and homeless. Anansi was the proud owner of all Rabbit's land, vegetables, and fruit.\n\nAnansi went to the market to sell his fruit and vegetables. He made so much money that he filled a big basket with it! With some of the money, he bought maize for his family, and put it on top of the money in the basket.\n\nAnansi happily headed home with his basket on his head, singing. He was thinking about all the things he was going to buy with his money.\n\nOn the way it started to drizzle. Soon the drizzle turned into a heavy downpour. Anansi the Spider left his basket on the side of the road to shelter under a tree. But from there he kept a close watch on his precious basket.",
+  "sentencesPartEndsAfter": "With some of the money, he bought maize for his family, and put it on top of the money in the basket.",
+  "blanks": [
+   {
+    "answer": "with",
+    "distractors": [
+     "within",
+     "at",
+     "to",
+     "onto"
+    ],
+    "why": "'A farm with lots of vegetables' means a farm that has them."
+   },
+   {
+    "answer": "Even",
+    "distractors": [
+     "Ever",
+     "Every",
+     "Only",
+     "Also"
+    ],
+    "why": "'Even though' shows a surprising contrast: Rabbit was generous, but Anansi was still jealous."
+   },
+   {
+    "answer": "thought",
+    "distractors": [
+     "think",
+     "thinking",
+     "taught",
+     "fought"
+    ],
+    "why": "'Think of a plan' means 'have the idea for a plan'; the story is in the past tense."
+   },
+   {
+    "answer": "homeless",
+    "distractors": [
+     "home",
+     "homeland",
+     "homework",
+     "homemade"
+    ],
+    "why": "After losing his farm, Rabbit had no place to live, so he was homeless."
+   },
+   {
+    "answer": "owner",
+    "distractors": [
+     "own",
+     "owned",
+     "owning",
+     "owe"
+    ],
+    "why": "After 'the proud' we need a noun: the owner is the person who owns something."
+   },
+   {
+    "answer": "sell",
+    "distractors": [
+     "sold",
+     "sale",
+     "seller",
+     "cell"
+    ],
+    "why": "After 'to' we need a base verb, and people go to the market to sell things."
+   },
+   {
+    "answer": "so",
+    "distractors": [
+     "too",
+     "very",
+     "such",
+     "as"
+    ],
+    "why": "'So much ... that' shows a result: he had so much money that it filled a basket."
+   },
+   {
+    "answer": "bought",
+    "distractors": [
+     "buy",
+     "buying",
+     "boat",
+     "borrow"
+    ],
+    "why": "The story is in the past tense, and he used the money to buy maize."
+   }
+  ],
+  "missingSentence": "Soon the drizzle turned into a heavy downpour.",
+  "missingDistractors": [
+   "Then, Anansi felt a pull on one of his legs.",
+   "The other rabbits quickly finished their meal and fell asleep.",
+   "In the morning, the farmer brought in food for the rabbits."
+  ],
+  "missingWhy": "It continues 'it started to drizzle' and explains why Anansi then needed to shelter under a tree.",
+  "highlights": [
+   {
+    "question": "Why did Anansi leave his basket at the side of the road?",
+    "answer": "to shelter under a tree"
+   },
+   {
+    "question": "Where did Anansi put the maize after he bought it?",
+    "answer": "on top of the money in the basket"
+   }
+  ],
+  "idea": {
+   "answer": "After taking over Rabbit's farm, Anansi made a lot of money selling its fruit and vegetables.",
+   "distractors": [
+    "Anansi shared the money he made at the market with Rabbit.",
+    "Rabbit gave his farm to Anansi because he wanted to help his friend.",
+    "Anansi carried his basket under the tree so that it would stay dry."
+   ],
+   "why": "The story says Anansi took Rabbit's farm with a clever plan and then made so much money at the market that it filled a basket."
+  },
+  "titleDistractors": [
+   "Lazy Anansi",
+   "Clever Rabbit",
+   "Anansi and wisdom"
+  ],
+  "titleWhy": "The story follows how Anansi got his basket of money from Rabbit's farm and then had to leave it by the road in the rain."
+ },
+ {
+  "id": "ir-clear-3415",
+  "sourceId": "clear-3415",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "The tree wife",
+  "passage": "Once upon a time, there lived a man who had plenty of everything – a large fertile farm, with cattle, sheep, and goats. But, as he grew old, he grew sad, because one thing was missing. He did not have a wife.\n\nStanding under a tree one day, he had a brilliant idea. If he couldn't find a wife, perhaps he could make one?\n\nSo he set to work to shape a beautiful woman from a strong branch of the tree. When he had finished making the statue, he touched her eyes, and they opened. He blew gently on her, and she came alive.\n\nShe was truly the most beautiful woman he had ever seen. He knelt before her, and asked her to be his wife.\n\nHe gave her a colorful apron, beads, and a head ring, the sign of a married woman. And he built her a house with the mud and grass that used to lie at the foot of her trunk. \"Only one thing I beg of you,\" he said to his wife. \"Never tell anyone where you come from.\"",
+  "sentencesPartEndsAfter": "He blew gently on her, and she came alive.",
+  "blanks": [
+   {
+    "answer": "upon",
+    "distractors": [
+     "upper",
+     "open",
+     "onto",
+     "about"
+    ],
+    "why": "'Once upon a time' is the fixed way many stories begin."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whose",
+     "whom",
+     "what"
+    ],
+    "why": "'Who' introduces information about a person and is the subject of 'had'."
+   },
+   {
+    "answer": "grew",
+    "distractors": [
+     "grow",
+     "grown",
+     "growing",
+     "great"
+    ],
+    "why": "'Grow old' means 'become old'; the story is in the past tense."
+   },
+   {
+    "answer": "under",
+    "distractors": [
+     "among",
+     "into",
+     "onto",
+     "until"
+    ],
+    "why": "You stand under a tree, below its branches."
+   },
+   {
+    "answer": "find",
+    "distractors": [
+     "found",
+     "finding",
+     "fine",
+     "fined"
+    ],
+    "why": "After 'couldn't' we need a base verb, and 'find a wife' fits the meaning."
+   },
+   {
+    "answer": "branch",
+    "distractors": [
+     "brunch",
+     "branches",
+     "bench",
+     "bunch"
+    ],
+    "why": "After 'a strong' we need a singular noun, and a branch is the part of a tree he could shape."
+   },
+   {
+    "answer": "touched",
+    "distractors": [
+     "touch",
+     "touching",
+     "taught",
+     "toured"
+    ],
+    "why": "The story is in the past tense, and he touched (put his hand on) her eyes."
+   },
+   {
+    "answer": "alive",
+    "distractors": [
+     "life",
+     "lively",
+     "live",
+     "lives"
+    ],
+    "why": "'Come alive' means 'start to live'."
+   }
+  ],
+  "missingSentence": "He knelt before her, and asked her to be his wife.",
+  "missingDistractors": [
+   "Then he thought about what the old woman had said.",
+   "He let the baby play with his chains.",
+   "In the bush, he saw something shining on a rock."
+  ],
+  "missingWhy": "Asking her to be his wife explains why he then gives her a head ring, 'the sign of a married woman'.",
+  "highlights": [
+   {
+    "question": "What did the man use to shape the woman?",
+    "answer": "a strong branch of the tree"
+   },
+   {
+    "question": "What did the man ask his wife never to do?",
+    "answer": "Never tell anyone where you come from"
+   }
+  ],
+  "idea": {
+   "answer": "A man who had no wife shaped a woman from a tree, brought her to life and married her.",
+   "distractors": [
+    "The man found his wife working on a farm near the forest.",
+    "The woman told everyone in the village that she came from a tree.",
+    "The man built his wife a house out of wood from the tree."
+   ],
+   "why": "The story tells how the man made a woman from a branch, she came alive, and he made her his wife."
+  },
+  "titleDistractors": [
+   "The generous fish",
+   "Wardit, the mule",
+   "Jackal and the sun"
+  ],
+  "titleWhy": "The whole story is about the woman the man made from a tree and married."
+ },
+ {
+  "id": "ir-clear-2946",
+  "sourceId": "clear-2946",
+  "genre": "narrative",
+  "topic": "story",
+  "difficulty": "easy",
+  "title": "Ten lost boys",
+  "passage": "In this community people are not allowed to go to the forest on Wednesdays, because that is their rest day.\n\nMany believed that anybody going to the forest on that day would meet with misfortune.\n\nIn this village lived ten young boys who did not like going to school.\n\nThe months of June and July are a season for snails. During this season, boys from the village normally go in search of snails.\n\nOne Wednesday afternoon, the ten boys went to the forest to search for snails. The next day was a Thursday and the market day.\n\nAfter a few hours in the forest, they collected enough snails, which made them so happy.\n\nThey decided to count the snails each member had. The boys forgot that time was not on their side.\n\nFinally, they set off for the village, happily laughing and chatting.\n\nBut they lost their way. They walked through the forest in the dark. They tried to find their way home but to no avail.",
+  "sentencesPartEndsAfter": "One Wednesday afternoon, the ten boys went to the forest to search for snails.",
+  "blanks": [
+   {
+    "answer": "allowed",
+    "distractors": [
+     "allow",
+     "allowance",
+     "aloud",
+     "agreed"
+    ],
+    "why": "'Be not allowed to do something' means it is not permitted."
+   },
+   {
+    "answer": "their",
+    "distractors": [
+     "there",
+     "they're",
+     "them",
+     "theirs"
+    ],
+    "why": "A possessive word for the people is needed before 'rest day'."
+   },
+   {
+    "answer": "meet",
+    "distractors": [
+     "meat",
+     "met",
+     "meeting",
+     "greet"
+    ],
+    "why": "After 'would' we need a base verb, and 'meet with misfortune' means 'have bad luck'."
+   },
+   {
+    "answer": "who",
+    "distractors": [
+     "which",
+     "whose",
+     "whom",
+     "what"
+    ],
+    "why": "'Who' introduces information about the boys and is the subject of 'did not like'."
+   },
+   {
+    "answer": "months",
+    "distractors": [
+     "mouths",
+     "month",
+     "moths",
+     "monthly"
+    ],
+    "why": "June and July are two months, so the plural noun 'months' is needed."
+   },
+   {
+    "answer": "During",
+    "distractors": [
+     "While",
+     "Among",
+     "Between",
+     "Inside"
+    ],
+    "why": "'During' is followed by a noun for a period of time, such as 'this season'."
+   },
+   {
+    "answer": "search",
+    "distractors": [
+     "searched",
+     "searching",
+     "research",
+     "speech"
+    ],
+    "why": "'Go in search of' means 'go looking for'."
+   },
+   {
+    "answer": "went",
+    "distractors": [
+     "go",
+     "gone",
+     "going",
+     "want"
+    ],
+    "why": "The story is in the past tense, and the boys went (traveled) to the forest."
+   }
+  ],
+  "missingSentence": "The boys forgot that time was not on their side.",
+  "missingDistractors": [
+   "They were all silent and did not know what to do.",
+   "She walked and walked, and after some time, she came to the tall tree in which the rain bird lived.",
+   "The giant Elephant was never scared of any animal in the whole forest."
+  ],
+  "missingWhy": "It shows the boys lost track of time while counting snails, which explains 'Finally' and why they ended up in the dark.",
+  "highlights": [
+   {
+    "question": "According to the passage, what kind of day is Wednesday for this community?",
+    "answer": "their rest day"
+   },
+   {
+    "question": "What were the boys doing as they started back to the village?",
+    "answer": "happily laughing and chatting"
+   }
+  ],
+  "idea": {
+   "answer": "The boys stayed in the forest too long and could not find their way home in the dark.",
+   "distractors": [
+    "The boys went to the forest on a Thursday because it was market day.",
+    "The boys could not find any snails, so they went home sad.",
+    "A young girl went into the forest to feed the bird that brought the rain."
+   ],
+   "why": "The passage says the boys forgot about the time and then lost their way while walking through the forest in the dark."
+  },
+  "titleDistractors": [
+   "The Rain Bird",
+   "Giant Elephant",
+   "The peace tree"
+  ],
+  "titleWhy": "The story is about the ten boys who went into the forest to collect snails and lost their way."
+ },
+ {
+  "id": "ir-ostx-astronomy-2e-m59762-0",
+  "sourceId": "ostx-astronomy-2e-m59762-0",
+  "genre": "expository",
+  "topic": "astronomy",
+  "difficulty": "advanced",
+  "title": "A Conclusion and a Beginning",
+  "passage": "If you are new to astronomy, you have probably reached the end of our brief tour in this chapter with mixed emotions. On the one hand, you may be fascinated by some of the new ideas you’ve read about and you may be eager to learn more. On the other hand, you may be feeling a bit overwhelmed by the number of topics we have covered, and the number of new words and ideas we have introduced. Learning astronomy is a little like learning a new language: at first it seems there are so many new expressions that you’ll never master them all, but with practice, you soon develop facility with them.\n\nAt this point you may also feel a bit small and insignificant, dwarfed by the cosmic scales of distance and time. But, there is another way to look at what you have learned from our first glimpses of the cosmos. Let us consider the history of the universe from the Big Bang to today and compress it, for easy reference, into a single year.",
+  "sentencesPartEndsAfter": "On the other hand, you may be feeling a bit overwhelmed by the number of topics we have covered, and the number of new words and ideas we have introduced.",
+  "blanks": [
+   {
+    "answer": "reached",
+    "distractors": [
+     "reach",
+     "reaching",
+     "reaches",
+     "arrived"
+    ],
+    "why": "After 'have' we need a past participle, and 'reach the end' is the usual phrase ('arrive' needs 'at')."
+   },
+   {
+    "answer": "our",
+    "distractors": [
+     "us",
+     "we",
+     "ours",
+     "ourselves"
+    ],
+    "why": "A possessive word is needed before 'brief tour'."
+   },
+   {
+    "answer": "mixed",
+    "distractors": [
+     "mix",
+     "mixture",
+     "mixer",
+     "missed"
+    ],
+    "why": "'Mixed emotions' means feeling good and bad at the same time."
+   },
+   {
+    "answer": "hand",
+    "distractors": [
+     "hands",
+     "handle",
+     "head",
+     "handy"
+    ],
+    "why": "'On the one hand ... on the other hand' is a fixed phrase for two sides of an idea."
+   },
+   {
+    "answer": "fascinated",
+    "distractors": [
+     "fascinating",
+     "fascinate",
+     "fascination",
+     "fastened"
+    ],
+    "why": "A person is fascinated by something; 'fascinating' describes the thing itself."
+   },
+   {
+    "answer": "other",
+    "distractors": [
+     "another",
+     "others",
+     "otherwise",
+     "either"
+    ],
+    "why": "'On the other hand' completes 'On the one hand' from the sentence before."
+   },
+   {
+    "answer": "overwhelmed",
+    "distractors": [
+     "overwhelming",
+     "overwhelm",
+     "overweight",
+     "overtime"
+    ],
+    "why": "A person feels overwhelmed by too much; 'overwhelming' describes the thing that causes it."
+   },
+   {
+    "answer": "we",
+    "distractors": [
+     "us",
+     "our",
+     "ours",
+     "them"
+    ],
+    "why": "A subject pronoun is needed before 'have covered'; the writers covered the topics."
+   }
+  ],
+  "missingSentence": "At this point you may also feel a bit small and insignificant, dwarfed by the cosmic scales of distance and time.",
+  "missingDistractors": [
+   "The word astronomy comes from the Greek words astron which means star and nomos which means law.",
+   "Ancient people used the positions of the stars to navigate, and to find when was the best time to plant crops.",
+   "Since the 20th century there have been two main types of astronomy, observational and theoretical astronomy."
+  ],
+  "missingWhy": "It adds another feeling ('also feel ... small'), and the next sentence answers it with 'But, there is another way to look at' it.",
+  "highlights": [
+   {
+    "question": "What does the writer say learning astronomy is similar to?",
+    "answer": "learning a new language"
+   },
+   {
+    "question": "What does the writer suggest doing with the history of the universe to make it easier to think about?",
+    "answer": "compress it, for easy reference, into a single year"
+   }
+  ],
+  "idea": {
+   "answer": "Learning astronomy may seem difficult at first, but it becomes easier with practice.",
+   "distractors": [
+    "Most beginners find the new words in astronomy easy to remember right away.",
+    "Light from a distant star shows us the star as it was many years ago.",
+    "The first chapter of the book explains how the Sun and planets formed."
+   ],
+   "why": "The passage compares astronomy to a new language: at first there seem to be too many new expressions, but with practice you master them."
+  },
+  "titleDistractors": [
+   "Consequences of Light Travel Time",
+   "Origin of the Solar System",
+   "The Sky Above"
+  ],
+  "titleWhy": "The passage closes a first tour of astronomy (a conclusion) and opens a new way of looking at the universe (a beginning)."
+ },
+ {
+  "id": "ir-ostx-introduction-anthropology-m00027-10",
+  "sourceId": "ostx-introduction-anthropology-m00027-10",
+  "genre": "expository",
+  "topic": "anthropology",
+  "difficulty": "advanced",
+  "title": "Speciation",
+  "passage": "Speciation is the rise of a new species in response to an environmental change or pressure. Allopatric speciation, mentioned previously, is the most common form of speciation event. During allopatric speciation, a species diverges when two populations become isolated from one another and continue to evolve. This isolation is created by geographic barriers such as mountains, rivers, or oceans. A good example of allopatric speciation is the different species of squirrel found on the two sides of the Grand Canyon. Descended from a common ancestor, the squirrels became reproductively isolated from one another by the Grand Canyon, eventually resulting in different species.\n\nSympatric speciation involves species that are descended from a common ancestor and remain in one location without a geographic barrier. A good example is the East African cichlid fish, which experience reproduction isolation due not to a physical barrier but to females’ selection of mates with certain coloration. The amount of light that reaches different levels and depths of the lake impacts how colors in the males appear to the females. The East African cichlid fish are also a good example of adaptive radiation.",
+  "sentencesPartEndsAfter": "Descended from a common ancestor, the squirrels became reproductively isolated from one another by the Grand Canyon, eventually resulting in different species.",
+  "blanks": [
+   {
+    "answer": "response",
+    "distractors": [
+     "respond",
+     "responsive",
+     "responsible",
+     "responsibly"
+    ],
+    "why": "'In response to' is a fixed phrase meaning 'as a reaction to'."
+   },
+   {
+    "answer": "most",
+    "distractors": [
+     "many",
+     "much",
+     "almost",
+     "mostly"
+    ],
+    "why": "'The most common' is the superlative form of 'common'."
+   },
+   {
+    "answer": "when",
+    "distractors": [
+     "what",
+     "who",
+     "which",
+     "whom"
+    ],
+    "why": "'When' introduces the situation in which a species diverges."
+   },
+   {
+    "answer": "isolated",
+    "distractors": [
+     "isolation",
+     "isolate",
+     "isolating",
+     "invited"
+    ],
+    "why": "After 'become' we need an adjective: populations become isolated (separated)."
+   },
+   {
+    "answer": "This",
+    "distractors": [
+     "These",
+     "Those",
+     "There",
+     "They"
+    ],
+    "why": "'Isolation' is a singular noun, and 'This' points back to the isolation just described."
+   },
+   {
+    "answer": "example",
+    "distractors": [
+     "exam",
+     "examine",
+     "exemplary",
+     "exit"
+    ],
+    "why": "'A good example of' introduces a case that shows the idea."
+   },
+   {
+    "answer": "found",
+    "distractors": [
+     "find",
+     "finding",
+     "fond",
+     "fund"
+    ],
+    "why": "'Found on' is a past participle meaning 'that are found (live) on'."
+   },
+   {
+    "answer": "ancestor",
+    "distractors": [
+     "ancient",
+     "answer",
+     "anchor",
+     "anger"
+    ],
+    "why": "'Descended from a common ancestor' means coming from the same earlier animal."
+   }
+  ],
+  "missingSentence": "Sympatric speciation involves species that are descended from a common ancestor and remain in one location without a geographic barrier.",
+  "missingDistractors": [
+   "When that separation lasts for a period of time, the two populations are able to evolve along different trajectories.",
+   "Polyploidy is a condition in which a cell, or organism, has an extra set, or sets, of chromosomes.",
+   "Gorillas, for example, cannot successfully breed with Pan paniscus, the bonobo."
+  ],
+  "missingWhy": "It introduces sympatric speciation, and the next sentence gives 'a good example' of it: fish isolated without a physical barrier.",
+  "highlights": [
+   {
+    "question": "What kinds of things separate populations during allopatric speciation?",
+    "answer": "geographic barriers such as mountains, rivers, or oceans"
+   },
+   {
+    "question": "Why do the cichlid fish become reproductively isolated?",
+    "answer": "females’ selection of mates with certain coloration"
+   }
+  ],
+  "idea": {
+   "answer": "New species can form when populations are separated by geography or while they still live in the same place.",
+   "distractors": [
+    "An extra set of chromosomes is the most common cause of new species.",
+    "Sympatric speciation is the most common way that new species form.",
+    "The squirrels on the two sides of the Grand Canyon still belong to the same species."
+   ],
+   "why": "The passage describes allopatric speciation, with a geographic barrier, and sympatric speciation, in one location without a barrier."
+  },
+  "titleDistractors": [
+   "Speciation without Geographic Separation",
+   "Speciation through Geographic Separation",
+   "Organisms Evolve on Purpose"
+  ],
+  "titleWhy": "The passage defines speciation and explains both of its forms, with and without geographic separation."
+ },
+ {
+  "id": "ir-ose-arctic-mapping-ele",
+  "sourceId": "ose-arctic-mapping-ele",
+  "genre": "expository",
+  "topic": "news",
+  "difficulty": "easy",
+  "title": "Arctic mapping",
+  "passage": "Google has made maps of the world’s highest mountains, the ocean floor, the Amazon rainforest and even shown us a bit of North Korea. They want to make maps of the whole world, but they have mostly stayed away from the Arctic.\n\nNow, however, Google is starting a very important update to hundreds of years of polar map making – and it hopes that the map will help give a better understanding of life on the permafrost for millions of web users. A small Google team has flown to Iqaluit, the largest town in the Canadian territory of Nunavut. They have taken their warmest winter clothes, many laptop computers and an 18kg telescopic camera that they can fix to their backpacks.\n\nThe team spent four days collecting the images and information that will give the isolated community on Baffin Island something that people across the world who live in cities now take for granted. An Inuit mapping expert helped the Google team and curious locals followed them around.",
+  "sentencesPartEndsAfter": "Now, however, Google is starting a very important update to hundreds of years of polar map making – and it hopes that the map will help give a better understanding of life on the permafrost for millions of web users.",
+  "blanks": [
+   {
+    "answer": "highest",
+    "distractors": [
+     "height",
+     "heights",
+     "highly",
+     "heighten"
+    ],
+    "why": "'The world's highest mountains' uses the superlative to mean 'the tallest'."
+   },
+   {
+    "answer": "floor",
+    "distractors": [
+     "flour",
+     "flower",
+     "floury",
+     "roof"
+    ],
+    "why": "'The ocean floor' is the usual phrase for the bottom of the sea."
+   },
+   {
+    "answer": "us",
+    "distractors": [
+     "we",
+     "our",
+     "ours",
+     "ourselves"
+    ],
+    "why": "An object pronoun is needed after 'shown': Google has shown us something."
+   },
+   {
+    "answer": "but",
+    "distractors": [
+     "so",
+     "or",
+     "nor",
+     "than"
+    ],
+    "why": "'But' shows the contrast between wanting to map the whole world and staying away from the Arctic."
+   },
+   {
+    "answer": "away",
+    "distractors": [
+     "way",
+     "always",
+     "aware",
+     "awake"
+    ],
+    "why": "'Stay away from' means 'not go near'."
+   },
+   {
+    "answer": "however",
+    "distractors": [
+     "whatever",
+     "whenever",
+     "wherever",
+     "whoever"
+    ],
+    "why": "'However' shows a change from the past (staying away) to now."
+   },
+   {
+    "answer": "better",
+    "distractors": [
+     "best",
+     "well",
+     "bitter",
+     "butter"
+    ],
+    "why": "'A better understanding' uses the comparative adjective before a noun."
+   }
+  ],
+  "missingSentence": "A small Google team has flown to Iqaluit, the largest town in the Canadian territory of Nunavut.",
+  "missingDistractors": [
+   "Sea ice covers the central parts of the Arctic Ocean all year-round.",
+   "Google has begun testing the electric car at its headquarters in Mountain View, California.",
+   "The company is building about 100 prototypes for a two-year test."
+  ],
+  "missingWhy": "It introduces the team and the cold place they went to, so the next sentence can say what 'They' took: warm clothes, laptops and a camera.",
+  "highlights": [
+   {
+    "question": "Who assisted the Google team during their visit?",
+    "answer": "An Inuit mapping expert"
+   },
+   {
+    "question": "What does Google hope the map will help web users understand better?",
+    "answer": "life on the permafrost"
+   }
+  ],
+  "idea": {
+   "answer": "Google sent a small team to the Arctic to collect images for a new map of the area.",
+   "distractors": [
+    "Google has already finished detailed maps of every part of the Arctic.",
+    "Google is testing a car that drives itself near its offices in California.",
+    "Sea ice in the Arctic is melting because temperatures on Earth are rising."
+   ],
+   "why": "The passage says Google has mostly stayed away from the Arctic, but a team has now flown to Iqaluit to collect images and information."
+  },
+  "titleDistractors": [
+   "Google car",
+   "The Polar Sea Ice Melts: What Happens to the Fish Under the Ice?",
+   "Android (operating system)"
+  ],
+  "titleWhy": "The whole passage is about Google's project to map the Arctic town of Iqaluit."
+ }
+]
