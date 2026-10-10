@@ -73,16 +73,17 @@ export function StartPracticePage() {
 
   /** done / total for each card's progress bar, and that skill's words waiting in the Mistake Bank. */
   const stats = useMemo(() => {
-    const out = {} as Record<Mode, { done: number; total: number; unit: string; toFix: number }>;
+    // newLeft: words never answered (normal practice asks only these); texts and passages can always be repeated.
+    const out = {} as Record<Mode, { done: number; total: number; unit: string; toFix: number; newLeft: number }>;
     for (const m of [...READING_MODES, ...DRILL_MODES] as Mode[]) {
       if (m === 'read-complete') {
         const served = meta?.paragraphServed ?? {};
-        out[m] = { done: store.paragraphs.filter((p) => served[p.id]).length, total: store.paragraphs.length, unit: 'texts done', toFix: 0 };
+        out[m] = { done: store.paragraphs.filter((p) => served[p.id]).length, total: store.paragraphs.length, unit: 'texts done', toFix: 0, newLeft: Infinity };
         continue;
       }
       if (m === 'interactive-reading') {
         const served = meta?.interactiveServed ?? {};
-        out[m] = { done: store.interactive.filter((x) => served[x.id]).length, total: store.interactive.length, unit: 'passages done', toFix: 0 };
+        out[m] = { done: store.interactive.filter((x) => served[x.id]).length, total: store.interactive.length, unit: 'passages done', toFix: 0, newLeft: Infinity };
         continue;
       }
       const pool = store.words.filter((w) => inModePool(w, m));
@@ -93,7 +94,7 @@ export function StartPracticePage() {
         if (status === 'mastered') mastered++;
         else if (status === 'learning') toFix++;
       }
-      out[m] = { done: mastered, total: pool.length, unit: 'words mastered', toFix };
+      out[m] = { done: mastered, total: pool.length, unit: 'words mastered', toFix, newLeft: pool.length - mastered - toFix };
     }
     return out;
   }, [store, progress, meta]);
@@ -168,8 +169,16 @@ export function StartPracticePage() {
       <div className="skill-grid" role="tabpanel" aria-label={tab === 'reading' ? 'Reading' : 'Vocabulary drills'}>
         {modes.map((m) => {
           const st = stats[m];
+          const finished = st.total > 0 && st.newLeft === 0;
           return (
-            <button key={m} type="button" className="skill-card" disabled={!!starting || st.total === 0} onClick={() => void start(m)} aria-label={`Start ${MODE_INFO[m].title}`}>
+            <button
+              key={m}
+              type="button"
+              className="skill-card"
+              disabled={!!starting || st.total === 0 || finished}
+              onClick={() => void start(m)}
+              aria-label={finished ? `${MODE_INFO[m].title}: no new words left` : `Start ${MODE_INFO[m].title}`}
+            >
               <span className="skill-icon">
                 <SkillIcon mode={m} />
               </span>
@@ -183,6 +192,7 @@ export function StartPracticePage() {
                     {st.done.toLocaleString()}/{st.total.toLocaleString()} {st.unit}
                     {st.toFix > 0 && ` · ${st.toFix} to fix`}
                   </span>
+                  {finished && <span>{st.toFix > 0 ? 'No new words left: fix the rest in Practice My Mistakes' : 'Every word mastered'}</span>}
                   <span>{timerText(m)}</span>
                 </span>
                 <span className="skill-desc">{MODE_INFO[m].description}</span>

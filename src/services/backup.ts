@@ -1,6 +1,6 @@
 import type { AppDB } from '../db/db';
-import { migrateProgress } from '../engine/progress';
-import type { WordProgress } from '../engine/types';
+import { lastMisses, migrateProgress } from '../engine/progress';
+import type { AttemptRecord, WordProgress } from '../engine/types';
 
 export const BACKUP_FORMAT = 'det-vocab-backup';
 // 2: adds the irResults table and the interactive-reading mode.
@@ -38,7 +38,10 @@ export async function restoreBackup(db: AppDB, data: unknown): Promise<{ counts:
     for (const t of TABLES) {
       await db.table(t).clear();
       let rows = b.tables[t] ?? [];
-      if (t === 'progress' && b.version < 3) rows = (rows as WordProgress[]).map(migrateProgress);
+      if (t === 'progress' && b.version < 3) {
+        const misses = lastMisses((b.tables.attempts ?? []) as AttemptRecord[]);
+        rows = (rows as WordProgress[]).map((p) => migrateProgress(p, misses.get(p.wordId)));
+      }
       if (rows.length) await db.table(t).bulkPut(rows);
       counts[t] = rows.length;
     }

@@ -60,13 +60,18 @@ export function sentenceQuestion(w: VocabWord, ctx: Context, mode: SentenceMode,
   return q;
 }
 
-export function paragraphQuestion(p: Paragraph, byId: Map<string, VocabWord>, rule: ClueRule = 'max3'): ParagraphQuestion {
+/**
+ * Builds a Read and Complete question. Gaps whose word is not in the library, or for
+ * which `keepWhole` returns true (words waiting in the Mistake Bank), are shown as
+ * whole words and not asked.
+ */
+export function paragraphQuestion(p: Paragraph, byId: Map<string, VocabWord>, rule: ClueRule = 'max3', keepWhole: (wordId: string) => boolean = () => false): ParagraphQuestion {
   const segments: string[] = [];
   const gaps: Gap[] = [];
   let pos = 0;
   for (const g of p.gaps) {
     const w = byId.get(g.wordId);
-    if (!w) continue;
+    if (!w || keepWhole(g.wordId)) continue;
     segments.push(p.text.slice(pos, g.start));
     const occurrence = p.text.slice(g.start, g.end);
     const { visible } = clueSplit(occurrence, rule);

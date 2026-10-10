@@ -84,6 +84,7 @@ export function validateInteractive(a: AuthoredInteractive, sourceText: string |
       continue;
     }
     if (blanks.some((x) => x.start === at.start)) p.push(`blank “${b.answer}” is used twice`);
+    if (blanks.some((x) => x.answer.toLowerCase() === b.answer.toLowerCase())) p.push(`“${b.answer}” is a blank twice (each word may be a blank only once)`);
     const ds = b.distractors.map((d) => d.trim());
     if (ds.length !== 4) p.push(`blank “${b.answer}” has ${ds.length} wrong options (expected 4)`);
     if (new Set(ds.map((d) => d.toLowerCase())).size !== ds.length) p.push(`blank “${b.answer}” repeats a wrong option`);

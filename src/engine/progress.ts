@@ -175,9 +175,11 @@ export function reopen(prev: WordProgress, at: number): WordProgress {
  * Converts progress saved under the old rules (two sentences for mastery, scheduled
  * reviews) to the current ones: a word whose latest typed answer was correct is
  * mastered, a word with an unfixed mistake is in the Mistake Bank, anything else is new.
+ * `lastMissAt` is the time of the word's latest wrong, timed-out or empty answer (from the
+ * attempts log), used to tell whether a reopened word was missed again afterwards.
  * Used once when the database is upgraded and when an older backup is restored.
  */
-export function migrateProgress(prev: WordProgress): WordProgress {
+export function migrateProgress(prev: WordProgress, lastMissAt?: number): WordProgress {
   const p: WordProgress = { ...prev, streakContextIds: [], dueSeq: undefined, nextReviewAt: undefined, history: [...prev.history] };
   if (prev.status !== 'learning') return p;
   const last = prev.history[prev.history.length - 1];
@@ -187,7 +189,17 @@ export function migrateProgress(prev: WordProgress): WordProgress {
     p.masteredAt = prev.lastPracticedAt ?? prev.firstPracticedAt;
     p.history.push({ at: p.masteredAt ?? 0, event: 'mastered' });
   } else if (prev.consecutiveIncorrect > 0) p.status = 'learning';
-  else if (last?.event === 'reopened') p.status = 'new';
+  else if (last?.event === 'reopened') p.status = lastMissAt !== undefined && lastMissAt > last.at ? 'learning' : 'new';
   else p.status = mistakes(prev) > 0 ? 'learning' : 'new';
   return p;
+}
+
+/** The latest miss (wrong, timed-out or empty answer) per word, from attempt rows. */
+export function lastMisses(attempts: { wordId: string; result: ResultKind; at: number }[]): Map<string, number> {
+  const out = new Map<string, number>();
+  for (const a of attempts) {
+    if (a.result !== 'incorrect' && a.result !== 'timeout' && a.result !== 'unanswered') continue;
+    if (a.at > (out.get(a.wordId) ?? -Infinity)) out.set(a.wordId, a.at);
+  }
+  return out;
 }

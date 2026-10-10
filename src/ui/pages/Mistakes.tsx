@@ -22,7 +22,7 @@ const FILTERS: { value: Filter; label: string; test?: (m: MistakeRecord) => bool
 ];
 
 /** Where a missed word stands now: still in the Mistake Bank, fixed (mastered), or back among the new words. */
-type FixState = 'to-fix' | 'fixed' | 'new';
+type FixState = 'to-fix' | 'fixed' | 'new' | 'removed';
 
 function fixState(p: WordProgress | undefined): FixState {
   return p?.status === 'learning' ? 'to-fix' : p?.status === 'mastered' ? 'fixed' : 'new';
@@ -32,10 +32,12 @@ const FIX_BADGE: Record<FixState, { cls: string; label: string; title: string }>
   'to-fix': { cls: 'learning', label: 'To fix', title: 'Still in your Mistake Bank. One correct answer in Practice My Mistakes masters it.' },
   fixed: { cls: 'mastered', label: '✓ Fixed', title: 'Answered correctly after the mistake: mastered.' },
   new: { cls: 'new', label: 'New again', title: 'Not in your Mistake Bank now. It will come up again as a new word.' },
+  removed: { cls: 'neutral', label: 'Removed', title: 'This word is no longer in the library, so it cannot be practiced.' },
 };
 
-function FixBadge({ p }: { p: WordProgress | undefined }) {
-  const b = FIX_BADGE[fixState(p)];
+function FixBadge({ wordId, p }: { wordId: string; p: WordProgress | undefined }) {
+  const { store } = useApp();
+  const b = FIX_BADGE[store.byId.has(wordId) ? fixState(p) : 'removed'];
   return (
     <span className={`badge ${b.cls}`} title={b.title}>
       {b.label}
@@ -65,7 +67,7 @@ function MistakeItem({ m, fix }: { m: MistakeRecord; fix?: { p: WordProgress | u
         <strong>
           <Link to={wordPath(m.wordId)}>{m.word}</Link>
         </strong>
-        {fix && <FixBadge p={fix.p} />}
+        {fix && <FixBadge wordId={m.wordId} p={fix.p} />}
         <span>
           {m.answer ? <span className="typed-wrong">{m.answer}</span> : <span className="muted">{m.result === 'timeout' ? '(time ran out)' : '(empty)'}</span>} →{' '}
           <strong>{m.correctAnswer}</strong>
@@ -138,7 +140,7 @@ export function MistakesPage() {
         <div>
           <h1>Mistake Bank</h1>
           <p className="muted">
-            {mistakes.length} mistakes on {new Set(mistakes.map((m) => m.wordId)).size} words. Every wrong, timed-out or empty answer is saved here.
+            {mistakes.length} mistakes on {new Set(mistakes.map((m) => m.wordId)).size} words. Every wrong, timed-out or empty answer is saved here (words removed from the library are marked).
           </p>
           <p style={{ marginTop: 6 }}>
             <strong>{toFix}</strong> word{toFix === 1 ? '' : 's'} to fix · <strong>{fixed}</strong> fixed
@@ -196,7 +198,7 @@ export function MistakesPage() {
                             {list.length} mistake{list.length === 1 ? '' : 's'}
                           </span>
                         </h2>
-                        {progress && <FixBadge p={p} />}
+                        {progress && <FixBadge wordId={wordId} p={p} />}
                       </div>
                       <details>
                         <summary className="small">

@@ -225,6 +225,22 @@ export function buildVocab(
   const bengaliOrigins: Record<string, number> = { app: 0, dictionary: 0, none: 0 };
   const LEVEL_OF: Record<string, Difficulty> = { A1: 'easy', A2: 'easy', B1: 'intermediate', B2: 'advanced', C1: 'advanced', C2: 'advanced' };
 
+  // One sentence per word, and as far as possible a sentence no other word uses:
+  // words with the fewest real sentences choose first.
+  const assigned = new Map<string, ReturnType<typeof pickContexts>>();
+  if (index) {
+    const taken = new Set<string>();
+    // Small grammar words go first so they keep simple learner sentences; they are few (about 170)
+    // and every other word still has plenty of sentences of its own to choose from.
+    const count = (w: string) => (isFunctionWord(w) ? -1 : (index.byWord.get(w)?.length ?? 0));
+    const order = [...merged, ...added].sort((x, y) => count(x.word) - count(y.word) || x.word.localeCompare(y.word));
+    for (const m of order) {
+      const pick = pickContexts(m.word, `w:${m.word}`, index, lex, authoredMap.get(m.word)?.sentences ?? [], 1, taken);
+      for (const c of pick.contexts) if (c.origin === 'collected') taken.add(c.sentence);
+      assigned.set(m.word, pick);
+    }
+  }
+
   const words: VocabWord[] = [...merged, ...added].map((m) => {
     const a = authoredMap.get(m.word);
     const id = `w:${m.word}`;
@@ -233,13 +249,14 @@ export function buildVocab(
     let set: { kept: Context[]; rejected: { sentence: string; reason: string }[] };
     let senseEvidence: string[] = [];
     if (index) {
-      const pick = pickContexts(m.word, id, index, lex, a?.sentences ?? []);
+      const pick = assigned.get(m.word)!;
       contextOrigins.collected += pick.collected;
       contextOrigins.dictionary += pick.dictionary;
       contextOrigins.authored += pick.authored;
       if (pick.authored === 0 && pick.contexts.length >= 1) wordsWithOnlyCollected++;
       set = { kept: pick.contexts, rejected: [] };
-      senseEvidence = pick.evidence;
+      // The dictionary sense is still chosen from the word's best few sentences, not only the one shown.
+      senseEvidence = [...pickContexts(m.word, id, index, lex, a?.sentences ?? [], 4).contexts.map((c) => c.sentence), ...pick.evidence];
     } else {
       for (const s of a?.sentences ?? []) {
         const c = checkContext(s, m.word, id, 'authored');

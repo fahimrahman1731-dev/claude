@@ -54,7 +54,11 @@ export function sensitiveWord(s: string): string | undefined {
  * an earlier sentence. (A plain subject pronoun such as "She" or "They" is fine:
  * DET sentences come from stories and personal writing too.)
  */
-const DEPENDENT_START = /^(?:this|these|those|that|such|also|but|and|or|so|then|however|therefore|thus|still|yet|instead|here|both|another|other|others|later|meanwhile|finally|furthermore|moreover|besides|otherwise|each|neither|either|first|second|third|next|now|again|which|who|whose|similarly|likewise|nevertheless|nonetheless|consequently|hence|additionally|afterwards|instead)\b/i;
+const DEPENDENT_START =
+  /^(?:this|these|those|that|such|also|but|and|or|so|then|however|therefore|thus|still|yet|instead|here|both|another|other|others|later|meanwhile|finally|furthermore|moreover|besides|otherwise|each|neither|either|first|second|third|next|now|again|which|who|whose|similarly|likewise|nevertheless|nonetheless|consequently|hence|additionally|afterwards|for (?:example|instance)|in (?:addition|other words|this case|that case|both cases|contrast|fact|turn|particular|short|sum|general)|as (?:a result|such|well)|after all|on the other hand|by contrast|at the same time|even so|to (?:do|see) this|let['’]s)\b/i;
+
+/** The sentence talks to the reader of a textbook or article ("in this chapter", "the following table"). */
+const READER_REFERENCE = /\b(?:(?:this|the following|the previous|the next|the last|the first) (?:chapter|section|table|figure|module|unit|article|lesson|exercise|activity|box)|in this (?:article|chapter|section|module|unit|book|text|lesson)|(?:see|shown in|listed in) (?:table|figure|chapter|section))\b/i;
 
 export interface SentenceCheck {
   ok: boolean;
@@ -81,6 +85,7 @@ export function checkFibSentence(s: string): SentenceCheck {
   if (/[;:]\s/.test(t) && n > 18) return { ok: false, reason: 'list-like' };
   if (/[–—-]{2}|\s[–—]\s/.test(t)) return { ok: false, reason: 'dash aside' };
   if (DEPENDENT_START.test(t)) return { ok: false, reason: 'depends on the previous sentence' };
+  if (READER_REFERENCE.test(t)) return { ok: false, reason: 'refers to the textbook or article' };
   if (isSensitive(t)) return { ok: false, reason: 'sensitive topic' };
   // Plain English letters only: an accented name such as "Émile" would otherwise hide a short word ("mile").
   if (/[^\x20-\x7E’]/.test(t)) return { ok: false, reason: 'unusual characters' };

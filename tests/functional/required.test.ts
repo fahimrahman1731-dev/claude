@@ -15,7 +15,7 @@ import { applyResult, inMistakeBank, mistakes, newProgress } from '../../src/eng
 import { inModePool } from '../../src/engine/questions';
 import { searchWords } from '../../src/engine/search';
 import { computeStats } from '../../src/engine/stats';
-import type { ParagraphQuestion, ResultKind, SentenceQuestion, WordProgress } from '../../src/engine/types';
+import type { InteractiveAnswers, InteractiveQuestion, ParagraphQuestion, ResultKind, SentenceQuestion, WordProgress } from '../../src/engine/types';
 import type { PracticeService } from '../../src/services/practice';
 import { importWordList, makeCustomWord } from '../../src/services/words';
 import { answersFor, makeEnv, root, vocab } from './env';
@@ -38,9 +38,12 @@ async function playOut(service: PracticeService, s: SessionRecord, correct: (q: 
 describe('TEST 1 — a wrong answer is saved, corrected and sent to the Mistake Bank', () => {
   it('records the mistake with the correct spelling; the word never comes back by itself, only in Practice My Mistakes', async () => {
     const { service, db, store, clock } = makeEnv();
-    await service.saveSettings({ timerMode: 'untimed', questionsPerSession: 20 });
+    // Fixed level, so every later question is drawn from the missed word's own level: if missed
+    // words could come back, this one (now high priority) would be among the first candidates.
+    await service.saveSettings({ timerMode: 'untimed', questionsPerSession: 20, adaptive: false, difficulty: 'easy' });
     let s = await service.startSession({ mode: 'fill-blanks' });
     const q = s.current!.question as SentenceQuestion;
+    expect(store.byId.get(q.wordId)!.difficulty).toBe('easy');
     clock.t += 4000;
     const r = await service.submit(s.id, { questionId: q.id, answers: ['qqq'], kind: 'submit' });
 
@@ -65,7 +68,10 @@ describe('TEST 1 — a wrong answer is saved, corrected and sent to the Mistake 
     // 59 more questions, and the missed word is never asked again.
     const rest = await playOut(service, await service.advance(s.id), () => true);
     expect(rest.session.endReason).toBe('Session complete.');
+    // Days later (when an old review schedule would have brought it back), it still does not come back.
+    clock.t += 24 * 3600_000;
     const second = await playOut(service, await service.startSession({ mode: 'fill-blanks' }), () => true);
+    clock.t += 30 * 24 * 3600_000;
     const spelling = await playOut(service, await service.startSession({ mode: 'spelling' }), () => true);
     const asked = [...rest.asked, ...second.asked, ...spelling.asked];
     expect(asked).toHaveLength(59);
@@ -484,7 +490,7 @@ const smallPool = (n: number) => vocab.words.filter((w) => inModePool(w, 'fill-b
 describe('One pass — normal practice ends when every new word has been asked', () => {
   it('asks each new word once, never brings a missed word back, and points to the Mistake Bank', async () => {
     const pool = smallPool(5);
-    const { service, db } = makeEnv({ words: pool });
+    const { service, db, clock } = makeEnv({ words: pool });
     await service.saveSettings({ timerMode: 'untimed', questionsPerSession: 20 });
     const { asked, session } = await playOut(service, await service.startSession({ mode: 'fill-blanks' }), (_, i) => i !== 0);
     expect(asked).toHaveLength(5);
@@ -494,7 +500,8 @@ describe('One pass — normal practice ends when every new word has been asked',
     expect(session.endReason).toMatch(/1 missed word is waiting in your Mistake Bank/);
     expect((await db.progress.get(asked[0]))!.status).toBe('learning');
 
-    // A new session has nothing to ask either: the missed word is not served by normal practice.
+    // A new session, days later, has nothing to ask either: the missed word is not served by normal practice.
+    clock.t += 7 * 24 * 3600_000;
     const again = await service.startSession({ mode: 'fill-blanks' });
     expect(again.current).toBeUndefined();
     expect(again.status).toBe('completed');
@@ -542,9 +549,9 @@ describe('Read and Complete — typed gaps follow the same rule', () => {
     const answers = q.gaps.map((g, i) => (i % 2 === 0 ? g.answer.slice(g.visible.length) : 'qqq'));
     const r = await service.submit(s.id, { questionId: q.id, answers, kind: 'submit' });
     expect(r.outcome.gaps.map((g) => g.result)).toEqual(q.gaps.map((_, i) => (i % 2 === 0 ? 'correct' : 'incorrect')));
-    // A word can appear in more than one gap: its last answer decides.
+    // A word can fill more than one gap: it gets one result for the text, and any miss counts.
     const last = new Map<string, ResultKind>();
-    for (const g of r.outcome.gaps) last.set(g.wordId, g.result);
+    for (const g of r.outcome.gaps) if (last.get(g.wordId) !== 'incorrect') last.set(g.wordId, g.result);
     const missed = new Set<string>();
     for (const [wordId, result] of last) {
       const p = (await db.progress.get(wordId))!;
@@ -561,3 +568,100 @@ describe('Read and Complete — typed gaps follow the same rule', () => {
     expect(fq.contextId).toBe(store.byId.get(fq.wordId)!.contexts[0].id);
   });
 });
+
+/** The first Read and Complete text in which some word fills two gaps. */
+function paragraphWithRepeat(): { id: string; wordId: string } {
+  for (const p of vocab.paragraphs) {
+    const seen = new Set<string>();
+    for (const g of p.gaps) {
+      if (seen.has(g.wordId)) return { id: p.id, wordId: g.wordId };
+      seen.add(g.wordId);
+    }
+  }
+  throw new Error('no paragraph repeats a word');
+}
+
+describe('Read and Complete — one result per word per text', () => {
+  for (const order of ['miss first', 'miss second'] as const) {
+    it(`a word in two gaps is never mastered and un-mastered in one answer (${order})`, async () => {
+      const { id, wordId } = paragraphWithRepeat();
+      const { service, db, store } = makeEnv();
+      await service.saveSettings({ timerMode: 'untimed' });
+      // Serve exactly that text: every other text was already served many times.
+      const meta = await service.getMeta();
+      for (const p of store.paragraphs) if (p.id !== id) meta.paragraphServed[p.id] = 50;
+      await db.kv.put({ key: 'meta', value: meta });
+      const s = await service.startSession({ mode: 'read-complete' });
+      const q = s.current!.question as ParagraphQuestion;
+      expect(q.paragraphId).toBe(id);
+      const idx = q.gaps.map((g, i) => (g.wordId === wordId ? i : -1)).filter((i) => i >= 0);
+      const wrong = order === 'miss first' ? idx[0] : idx[1];
+      const answers = q.gaps.map((g, i) => (i === wrong ? 'qqq' : g.answer.slice(g.visible.length)));
+      const r = await service.submit(s.id, { questionId: q.id, answers, kind: 'submit' });
+      const p = (await db.progress.get(wordId))!;
+      expect(p.status).toBe('learning');
+      expect(p.history.map((h) => h.event)).toEqual([]);
+      const flags = r.outcome.gaps.filter((g) => g.wordId === wordId);
+      expect(flags.some((g) => g.becameMastered || g.lostMastery)).toBe(false);
+      expect(await db.mistakes.where('wordId').equals(wordId).count()).toBe(1);
+    });
+  }
+});
+
+describe('Mistake Bank words are not tested outside Practice My Mistakes', () => {
+  it('Read and Complete shows them whole, so they cannot be fixed or missed there', async () => {
+    const { id, wordId } = paragraphWithRepeat();
+    const { service, db, store } = makeEnv();
+    await db.progress.put({ ...newProgress(wordId), status: 'learning', attempts: 1, incorrect: 1, consecutiveIncorrect: 1 });
+    const meta = await service.getMeta();
+    for (const p of store.paragraphs) if (p.id !== id) meta.paragraphServed[p.id] = 50;
+    await db.kv.put({ key: 'meta', value: meta });
+    const s = await service.startSession({ mode: 'read-complete' });
+    const q = s.current!.question as ParagraphQuestion;
+    expect(q.paragraphId).toBe(id);
+    expect(q.gaps.some((g) => g.wordId === wordId)).toBe(false);
+    // The text is still complete: the word is shown as it is.
+    expect(q.segments.map((seg, k) => seg + (k < q.gaps.length ? q.gaps[k].answer : '')).join('')).toBe(q.text);
+  });
+
+  it('an Interactive Reading blank for a Mistake Bank word counts for the passage but leaves the word as it is', async () => {
+    const { service, db, store } = makeEnv();
+    await service.saveSettings({ timerMode: 'untimed' });
+    const s = await service.startSession({ mode: 'interactive-reading' });
+    const q = s.current!.question as InteractiveQuestion;
+    const set = store.interactive.find((x) => x.id === q.setId)!;
+    const i = set.blanks.findIndex((b) => b.wordId);
+    const wordId = set.blanks[i].wordId!;
+    // Put the word in the Mistake Bank, then answer the passage with that blank wrong.
+    const before = { ...newProgress(wordId), status: 'learning' as const, attempts: 1, incorrect: 1, consecutiveIncorrect: 1 };
+    await db.progress.put(before);
+    const answers: InteractiveAnswers = { step: 5, blanks: q.blanks.map((b, k) => (k === i ? (b.answer + 1) % b.options.length : b.answer)), missing: q.missing.answer, highlights: [null, null], idea: null, title: null };
+    const r = await service.submit(s.id, { questionId: q.id, answers: [], kind: 'submit', interactive: answers });
+    expect(r.outcome.gaps[i].result).toBe('incorrect');
+    expect(await db.progress.get(wordId)).toEqual(before);
+    expect(await db.mistakes.where('wordId').equals(wordId).count()).toBe(0);
+  });
+});
+
+describe('An empty answer is a mistake', () => {
+  it('an empty Fill in the Blanks answer and empty Read and Complete gaps send the words to the Mistake Bank', async () => {
+    const { service, db } = makeEnv();
+    await service.saveSettings({ timerMode: 'untimed' });
+    let s = await service.startSession({ mode: 'fill-blanks' });
+    const q = s.current!.question as SentenceQuestion;
+    const r = await service.submit(s.id, { questionId: q.id, answers: [''], kind: 'submit' });
+    expect(r.outcome.gaps[0].result).toBe('unanswered');
+    expect((await db.progress.get(q.wordId))!.status).toBe('learning');
+    expect(await db.mistakes.where('wordId').equals(q.wordId).count()).toBe(1);
+
+    s = await service.startSession({ mode: 'read-complete' });
+    const pq = s.current!.question as ParagraphQuestion;
+    const rr = await service.submit(s.id, { questionId: pq.id, answers: pq.gaps.map(() => ''), kind: 'submit' });
+    expect(rr.outcome.gaps.every((g) => g.result === 'unanswered')).toBe(true);
+    for (const g of pq.gaps) expect((await db.progress.get(g.wordId))!.status).toBe('learning');
+
+    const fix = await service.startSession({ mode: 'fill-blanks', focus: 'mistakes' });
+    expect(fix.target).toBe(1 + new Set(pq.gaps.map((g) => g.wordId)).size);
+  });
+});
+

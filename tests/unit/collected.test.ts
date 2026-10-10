@@ -157,3 +157,28 @@ describe('real sentences for each word', () => {
     for (const w of vocab.words) for (const c of w.contexts) if (c.origin === 'collected') expect(c.src).toBeTruthy();
   });
 });
+
+describe('one good sentence per word in the shipped data', () => {
+  const first = vocab.words.map((w) => ({ w, c: w.contexts[0] }));
+  it('almost every word has a sentence no other word uses', () => {
+    const count = new Map<string, number>();
+    for (const { c } of first) count.set(c.sentence, (count.get(c.sentence) ?? 0) + 1);
+    const shared = [...count.values()].filter((n) => n > 1).reduce((a, n) => a + n, 0);
+    expect(shared).toBeLessThanOrEqual(10);
+  });
+  it('no sentence leans on missing context, talks to the reader, or gives the answer away', () => {
+    for (const { w, c } of first) {
+      expect(c.sentence, w.word).not.toMatch(/^(For (example|instance)|In (addition|other words|this case)|As a result|After all|Let['’]s)\b/);
+      expect(c.sentence, w.word).not.toMatch(/\b(this|the following) (chapter|section|table|article)\b/i);
+      expect(c.start, w.word).toBeGreaterThan(0);
+      if (w.word.length < 5)
+        for (const m of c.sentence.matchAll(/[A-Za-z]+/g))
+          if (m.index !== c.start) expect(m[0].toLowerCase().startsWith(w.word) && m[0].length > w.word.length, `${w.word}: ${c.sentence}`).toBe(false);
+    }
+  });
+  it('reference lists are never used as sentences', () => {
+    const titles = new Map((vocab.texts ?? []).map((t) => [t.id, t.title]));
+    for (const { w, c } of first) if (c.src) expect(titles.get(c.src) ?? '', w.word).not.toMatch(/^(references|bibliography)$/i);
+  });
+});
+

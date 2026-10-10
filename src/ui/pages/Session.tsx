@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { checkGap } from '../../engine/answer';
 import { contextClues } from '../../engine/clues';
+import { inModePool } from '../../engine/questions';
 import { REASON_TEXT } from '../../engine/selection';
 import { spellingRules, type Explanation } from '../../engine/spelling';
 import type { InteractiveAnswers, Mode, ParagraphQuestion, SentenceQuestion, VocabWord } from '../../engine/types';
@@ -612,13 +613,21 @@ function Summary({ session, onRestart, onPracticeMistakes }: { session: SessionR
     const ids = new Set(attempts.map((a) => a.wordId));
     return progress.filter((p) => ids.has(p.wordId) && p.status === 'mastered' && (p.masteredAt ?? 0) >= session.startedAt);
   }, [progress, attempts, session.startedAt]);
+  /** Words missed in this session that are still in the Mistake Bank (not ones mastered again since). */
   const missed = useMemo(() => {
+    const status = new Map((progress ?? []).map((p) => [p.wordId, p.status]));
     const m = new Map<string, number>();
-    for (const a of attempts ?? []) if (a.result !== 'correct' && a.result !== 'skipped') m.set(a.wordId, (m.get(a.wordId) ?? 0) + 1);
+    for (const a of attempts ?? []) if (a.result !== 'correct' && a.result !== 'skipped' && status.get(a.wordId) === 'learning') m.set(a.wordId, (m.get(a.wordId) ?? 0) + 1);
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
-  }, [attempts]);
+  }, [attempts, progress]);
   /** Words in the Mistake Bank now (from any session). */
   const toFix = useMemo(() => (progress ?? []).filter((p) => p.status === 'learning' && store.byId.has(p.wordId)).length, [progress, store]);
+  /** New words still to ask in this skill (word drills only: texts and passages can be repeated). */
+  const newLeft = useMemo(() => {
+    if (session.focus !== 'normal' || session.mode === 'read-complete' || session.mode === 'interactive-reading') return Infinity;
+    const status = new Map((progress ?? []).map((p) => [p.wordId, p.status]));
+    return store.words.filter((w) => inModePool(w, session.mode) && (status.get(w.id) ?? 'new') === 'new').length;
+  }, [progress, store, session.focus, session.mode]);
   return (
     <div className="stack">
       <div className="card">
@@ -678,9 +687,11 @@ function Summary({ session, onRestart, onPracticeMistakes }: { session: SessionR
           </button>
         ) : (
           <>
-            <button className="btn primary" onClick={() => void onRestart()}>
-              Practice again
-            </button>
+            {newLeft > 0 && (
+              <button className="btn primary" onClick={() => void onRestart()}>
+                Practice again
+              </button>
+            )}
             {toFix > 0 && (
               <button className="btn" onClick={() => void onPracticeMistakes()}>
                 Practice My Mistakes ({toFix} to fix)

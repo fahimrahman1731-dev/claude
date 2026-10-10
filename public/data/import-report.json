@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T06:02:38.199Z",
+ "generatedAt": "2026-10-10T08:45:39.809Z",
  "sources": [
   {
    "id": "guide",
@@ -248,30 +248,30 @@
   "sourceEntriesDetected": 4086,
   "sourceEntriesAccepted": 4052,
   "rejectedEntries": 34,
-  "uniqueSpellingTargets": 5836,
+  "uniqueSpellingTargets": 5784,
   "duplicatesMerged": 1451,
   "missingDefinitions": 0,
   "needingSentences": 0,
-  "practiceReady": 5836,
-  "sentenceContexts": 5836,
+  "practiceReady": 5784,
+  "sentenceContexts": 5784,
   "paragraphs": 320,
-  "paragraphGaps": 3878,
-  "totalPracticeContexts": 9714,
+  "paragraphGaps": 3877,
+  "totalPracticeContexts": 9661,
   "definitionsFromSources": 347,
   "definitionsWrittenForApp": 2243,
-  "bengaliGlosses": 4073,
+  "bengaliGlosses": 4062,
   "failedSources": 0,
   "failedSections": 0
  },
  "byPriority": {
   "high": 349,
   "medium": 1196,
-  "low": 4291
+  "low": 4239
  },
  "byDifficulty": {
-  "easy": 1940,
-  "intermediate": 1732,
-  "advanced": 2164
+  "easy": 1933,
+  "intermediate": 1714,
+  "advanced": 2137
  },
  "smallWords": 173,
  "rejected": [
@@ -538,15 +538,15 @@
    }
   ],
   "added": {
-   "count": 3246,
+   "count": 3194,
    "byLevel": {
-    "B1": 927,
-    "B2": 794,
-    "C1": 239,
-    "list only": 268,
-    "A2": 528,
-    "A1": 461,
-    "C2": 29
+    "B1": 912,
+    "B2": 776,
+    "C1": 237,
+    "list only": 259,
+    "A2": 523,
+    "A1": 459,
+    "C2": 28
    },
    "sample": [
     "abandoned",
@@ -592,21 +592,21 @@
    ]
   },
   "contextOrigins": {
-   "collected": 5666,
-   "dictionary": 18,
-   "authored": 152
+   "collected": 5610,
+   "dictionary": 0,
+   "authored": 174
   },
-  "wordsWithOnlyCollected": 5684,
+  "wordsWithOnlyCollected": 5610,
   "definitionOrigins": {
    "source": 347,
-   "dictionary": 3246,
+   "dictionary": 3194,
    "app": 2243,
    "missing": 0
   },
   "bengaliOrigins": {
    "app": 2590,
-   "dictionary": 1483,
-   "none": 1763
+   "dictionary": 1472,
+   "none": 1722
   },
   "paragraphsByCorpus": {
    "clear": 161,
@@ -616,17 +616,17 @@
   "paragraphCandidates": 3462,
   "interactiveSets": 93,
   "interactiveIssues": [],
-  "texts": 1841,
+  "texts": 2246,
   "licences": {
-   "CC BY-SA 3.0 and GFDL": 126,
-   "CC BY-SA 3.0": 110,
-   "CC BY 4.0": 305,
+   "CC BY-SA 3.0 and GFDL": 156,
+   "CC BY-SA 3.0": 136,
+   "CC BY 4.0": 369,
+   "CC BY 3.0": 10,
    "CC BY-SA": 1,
-   "CC BY 3.0": 6,
-   "CC BY-SA 4.0": 207,
-   "CC BY-NC-SA 4.0": 1085,
+   "CC BY-SA 4.0": 238,
+   "CC BY-NC-SA 4.0": 1335,
    "CC BY-NC 4.0": 1
   }
  },
- "version": "2265c35ee956"
+ "version": "e37d0b93d7fc"
 }

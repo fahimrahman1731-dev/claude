@@ -10,7 +10,7 @@ import { AppDB } from '../../src/db/db';
 import { newProgress } from '../../src/engine/progress';
 import type { WordProgress } from '../../src/engine/types';
 import { BACKUP_FORMAT, BACKUP_VERSION, exportBackup, restoreBackup } from '../../src/services/backup';
-import { makeEnv } from './env';
+import { makeEnv, vocab } from './env';
 
 let counter = 0;
 const dbName = (what: string) => `migration-${what}-${process.pid}-${counter++}`;
@@ -157,5 +157,84 @@ describe('upgrading the saved database to version 3', () => {
     await service.saveSettings({ timerMode: 'untimed' });
     const s = await service.startSession({ mode: 'fill-blanks' });
     expect(s.current?.reason).toBe('new');
+  });
+
+  it('a reopened word missed again after the reopen stays in the Mistake Bank (the attempts log decides)', async () => {
+    const name = dbName('upgrade-reopened-missed');
+    const old = version2DB(name);
+    // Old rules: mastered, reopened, missed when typed, then chosen correctly in Interactive Reading
+    // (which reset the old mistake streak and added no history).
+    const row: WordProgress = {
+      ...newProgress('w:abandon'),
+      status: 'learning',
+      attempts: 4,
+      correct: 3,
+      incorrect: 1,
+      consecutiveCorrect: 1,
+      lastPracticedAt: 700,
+      history: [
+        { at: 200, event: 'mastered' },
+        { at: 300, event: 'reopened' },
+      ],
+    };
+    await old.table('progress').bulkPut([row, { ...row, wordId: 'w:abandoned' }]);
+    // w:abandon was missed after the reopen; w:abandoned only before it.
+    await old.table('attempts').bulkPut([
+      { id: 'a1', wordId: 'w:abandon', sessionId: 'old', at: 600, result: 'incorrect', mode: 'spelling' },
+      { id: 'a2', wordId: 'w:abandoned', sessionId: 'old', at: 150, result: 'incorrect', mode: 'spelling' },
+    ]);
+    old.close();
+    const db = new AppDB(name);
+    expect((await db.progress.get('w:abandon'))!.status).toBe('learning');
+    expect((await db.progress.get('w:abandoned'))!.status).toBe('new');
+    db.close();
+  });
+
+  it('an unfinished session from the old rules does not ask its old review question', async () => {
+    const name = dbName('upgrade-open-session');
+    const old = version2DB(name);
+    const w = vocab.words.find((x) => x.word === 'abandonment')!;
+    const ctx = w.contexts[0];
+    await old.table('progress').put({ ...newProgress(w.id), status: 'learning', attempts: 1, incorrect: 1, consecutiveIncorrect: 1, lastPracticedAt: 500 });
+    const before = ctx.sentence.slice(0, ctx.start);
+    const question = {
+      kind: 'sentence',
+      id: `fill-blanks|${w.id}|${ctx.id}`,
+      mode: 'fill-blanks',
+      wordId: w.id,
+      contextId: ctx.id,
+      sentence: ctx.sentence,
+      before,
+      after: ctx.sentence.slice(ctx.end),
+      gap: { wordId: w.id, contextId: ctx.id, answer: ctx.sentence.slice(ctx.start, ctx.end), visible: 'aba', hiddenLength: ctx.end - ctx.start - 3, ukVariants: [] },
+      difficulty: w.difficulty,
+      origin: ctx.origin,
+    };
+    await old.table('sessions').put({
+      id: 's-old',
+      mode: 'fill-blanks',
+      focus: 'normal',
+      status: 'active',
+      startedAt: 400,
+      target: 20,
+      newQuota: 8,
+      reviewQuota: 12,
+      index: 3,
+      newIntroduced: 2,
+      reviewsServed: 1,
+      paragraphIds: [],
+      tally: { correct: 3, incorrect: 0, timeout: 0, unanswered: 0, skipped: 0 },
+      streak: 3,
+      bestStreak: 3,
+      current: { question, reason: 'mistake-review', startedAt: 600, limitMs: null },
+    });
+    old.close();
+    const { service } = makeEnv({ dbName: name });
+    const s = (await service.activeSession())!;
+    expect(s.id).toBe('s-old');
+    expect(s.current).toBeDefined();
+    expect((s.current!.question as { wordId: string }).wordId).not.toBe(w.id);
+    expect(s.current!.reason).toBe('new');
+    expect(s.index).toBe(3);
   });
 });

@@ -158,9 +158,25 @@ export interface ContextPick {
 }
 
 /**
+ * A short target (under 5 letters) whose sentence also shows a longer word starting
+ * with it ("pie" next to "pies", "gas" next to "gasoline") gives the answer away.
+ */
+function shortGiveaway(sentence: string, word: string, start: number): boolean {
+  if (word.length >= 5) return false;
+  for (const m of sentence.matchAll(/\p{L}+/gu)) {
+    const t = m[0].toLowerCase();
+    if (m.index !== start && t.length > word.length && t.startsWith(word)) return true;
+  }
+  return false;
+}
+
+/**
  * Up to `want` sentences for a word: real sentences first (from different texts and
- * not too similar to each other), then WordNet example sentences, then the app's own
- * sentences only when there is still no real one. The app ships one sentence per word.
+ * not too similar to each other), then the app's own sentences, then WordNet example
+ * sentences, only while there is still no real one. The app ships one sentence per word.
+ *
+ * `taken` holds real sentences already given to other words: they are used only when the
+ * word has no other good sentence, so that most words get a sentence of their own.
  */
 export function pickContexts(
   word: string,
@@ -169,23 +185,43 @@ export function pickContexts(
   lex: Lexicon,
   authored: string[],
   want = 1,
+  taken?: Set<string>,
 ): ContextPick {
   const out: Context[] = [];
   const usedTexts = new Set<string>();
   let collected = 0;
   let dictionary = 0;
   let authoredUsed = 0;
-  const fits = (c: Context) => out.every((o) => contextSimilarity(o.sentence, c.sentence, word) < 0.6);
-  for (const sid of index.byWord.get(word) ?? []) {
-    if (collected >= want) break;
-    const rec = index.sentences[sid];
-    const single = rec.textId === 'asset' || rec.textId.startsWith('cefrsp');
-    if (!single && usedTexts.has(rec.textId)) continue;
-    const c = checkContext(rec.text, word, id, 'collected');
-    if (!c.context || c.warnings.some((w) => w.startsWith('giveaway')) || !fits(c.context)) continue;
-    out.push({ ...c.context, src: rec.textId });
-    usedTexts.add(rec.textId);
-    collected++;
+  const fits = (c: Context) => out.every((o) => contextSimilarity(o.sentence, c.sentence, word) < 0.6) && !shortGiveaway(c.sentence, word, c.start);
+  const usable = (text: string, origin: 'collected' | 'authored') => {
+    const c = checkContext(text, word, id, origin);
+    return c.context && !c.warnings.some((w) => w.startsWith('giveaway')) && fits(c.context) ? c.context : undefined;
+  };
+  const ids = index.byWord.get(word) ?? [];
+  for (const shared of taken ? [false, true] : [false]) {
+    for (const sid of ids) {
+      if (collected >= want) break;
+      const rec = index.sentences[sid];
+      if (taken && taken.has(rec.text) !== shared) continue;
+      const single = rec.textId === 'asset' || rec.textId.startsWith('cefrsp');
+      if (!single && usedTexts.has(rec.textId)) continue;
+      const c = usable(rec.text, 'collected');
+      if (!c) continue;
+      out.push({ ...c, src: rec.textId });
+      usedTexts.add(rec.textId);
+      collected++;
+    }
+  }
+  if (out.length < want) {
+    // The app's own sentences, preferring ones where the word is not the first word.
+    const own = authored.map((s) => usable(s, 'authored')).filter((c): c is Context => !!c);
+    own.sort((x, y) => Number(x.start === 0) - Number(y.start === 0));
+    for (const c of own) {
+      if (out.length >= want) break;
+      if (!fits(c)) continue;
+      out.push(c);
+      authoredUsed++;
+    }
   }
   if (out.length < want) {
     for (const raw of lex[word]?.ex ?? []) {
@@ -197,22 +233,13 @@ export function pickContexts(
       s = s[0].toUpperCase() + s.slice(1);
       if (!/[.!?]$/.test(s)) s += '.';
       if (!checkFibSentence(s).ok) continue;
-      const c = checkContext(s, word, id, 'collected');
-      if (!c.context || c.warnings.some((w) => w.startsWith('giveaway')) || !fits(c.context)) continue;
-      out.push({ ...c.context, src: 'wordnet' });
+      const c = usable(s, 'collected');
+      if (!c) continue;
+      out.push({ ...c, src: 'wordnet' });
       dictionary++;
     }
   }
-  if (out.length < want) {
-    for (const s of authored) {
-      if (out.length >= want) break;
-      const c = checkContext(s, word, id, 'authored');
-      if (!c.context || c.warnings.some((w) => w.startsWith('giveaway')) || !fits(c.context)) continue;
-      out.push(c.context);
-      authoredUsed++;
-    }
-  }
-  const evidence = (index.byWord.get(word) ?? []).slice(0, 12).map((sid) => index.sentences[sid].text);
+  const evidence = ids.slice(0, 12).map((sid) => index.sentences[sid].text);
   return { contexts: out, collected, dictionary, authored: authoredUsed, evidence };
 }
 

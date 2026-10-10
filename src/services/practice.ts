@@ -43,6 +43,9 @@ export class SaveError extends Error {
   }
 }
 
+/** Reasons the current rules give for asking a word (see selectNext). */
+const CURRENT_REASONS: string[] = ['new', 'mistake-focus', 'chosen', 'mastered-review'];
+
 function newId(prefix: string): string {
   const r = typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36);
   return `${prefix}_${r}`;
@@ -106,7 +109,32 @@ export class PracticeService {
   // ---------------------------------------------------------------- sessions
   async activeSession(): Promise<SessionRecord | undefined> {
     const active = await this.db.sessions.where('status').equals('active').toArray();
-    return active.sort((a, b) => b.startedAt - a.startedAt)[0];
+    const s = active.sort((a, b) => b.startedAt - a.startedAt)[0];
+    if (s && (await this.staleQuestion(s))) {
+      // Chosen under rules or data that no longer apply: ask a fresh question instead (nothing is recorded).
+      s.current = undefined;
+      s.lastOutcome = undefined;
+      await this.db.sessions.put(s);
+      return this.advance(s.id);
+    }
+    return s;
+  }
+
+  /**
+   * An open word question that the current rules would not ask: one saved by the old review
+   * schedule (a review, a second sentence, a retention check), a new-word question for a word
+   * that has been answered since, or one whose sentence is no longer the word's sentence.
+   */
+  private async staleQuestion(s: SessionRecord): Promise<boolean> {
+    const cur = s.current;
+    if (!cur || cur.question.kind !== 'sentence') return false;
+    if (!CURRENT_REASONS.includes(cur.reason)) return true;
+    const w = this.store.byId.get(cur.question.wordId);
+    if (!w || w.contexts[0]?.id !== cur.question.gap.contextId) return true;
+    const status = (await this.db.progress.get(w.id))?.status ?? 'new';
+    if (s.focus === 'normal') return status !== 'new';
+    if (s.focus === 'mistakes') return status !== 'learning';
+    return false;
   }
 
   async startSession(opts: { mode: Mode; focus?: SessionFocus; wordIds?: string[]; target?: number }): Promise<SessionRecord> {
@@ -120,7 +148,7 @@ export class PracticeService {
       focus,
       status: 'active',
       startedAt: now,
-      target: opts.target ?? (mode === 'read-complete' ? settings.paragraphsPerSession : mode === 'interactive-reading' ? settings.interactivePerSession : settings.questionsPerSession),
+      target: opts.target ?? (await this.defaultTarget(mode, focus, settings, opts.wordIds)),
       index: 0,
       paragraphIds: [],
       interactiveIds: [],
@@ -141,6 +169,22 @@ export class PracticeService {
     return this.advance(session.id);
   }
 
+  /**
+   * How many questions a new session plans. Every word is asked at most once per session, so
+   * Practice My Mistakes covers every word waiting in the Mistake Bank, and the other word
+   * sessions never plan more questions than they have words.
+   */
+  private async defaultTarget(mode: Mode, focus: SessionFocus, settings: Settings, wordIds?: string[]): Promise<number> {
+    if (mode === 'read-complete') return settings.paragraphsPerSession;
+    if (mode === 'interactive-reading') return settings.interactivePerSession;
+    if (focus === 'words') return Math.max(1, wordIds?.length ?? 1);
+    if (focus === 'normal') return settings.questionsPerSession;
+    const progress = await this.progressMap();
+    const want = focus === 'mistakes' ? 'learning' : 'mastered';
+    const n = this.store.words.filter((w) => w.contexts.length >= 1 && progress.get(w.id)?.status === want).length;
+    return focus === 'mistakes' ? Math.max(1, n) : Math.max(1, Math.min(settings.questionsPerSession, n));
+  }
+
   /** Makes sure the session has a current question (or ends it when there is nothing left). */
   async advance(sessionId: string): Promise<SessionRecord> {
     const settings = await this.getSettings();
@@ -151,14 +195,15 @@ export class PracticeService {
         if (!s) throw new Error('Session not found.');
         if (s.status !== 'active' || s.current) return s;
         const now = this.now();
-        if (s.index >= s.target) return this.finish(s, now, 'Session complete.');
+        if (s.index >= s.target) return this.finish(s, now, s.focus === 'mistakes' ? this.nothingLeft(s, this.store.words, progress) : 'Session complete.');
         const meta = await this.getMeta();
         const level = settings.adaptive ? meta.adaptive.level : settings.difficulty;
 
         if (s.mode === 'read-complete') {
           const p = chooseParagraph(this.store.paragraphs, meta.paragraphServed, progress, level, this.rng, s.paragraphIds);
           if (!p) return this.finish(s, now, 'No more paragraphs are available.');
-          const q = paragraphQuestion(p, this.store.byId, settings.clueRule);
+          // Words waiting in the Mistake Bank are shown whole: they are fixed only in Practice My Mistakes.
+          const q = paragraphQuestion(p, this.store.byId, settings.clueRule, (id) => progress.get(id)?.status === 'learning');
           meta.paragraphServed[p.id] = (meta.paragraphServed[p.id] ?? 0) + 1;
           s.paragraphIds.push(p.id);
           const secs = questionSeconds(settings, 'read-complete', p.difficulty);
@@ -282,18 +327,16 @@ export class PracticeService {
         const perGapMs = Math.round(responseMs / Math.max(1, gaps.length));
         const outcomes: GapOutcome[] = [];
 
-        for (let i = 0; i < gaps.length; i++) {
-          const gap = gaps[i];
+        // Check every gap first. A word can fill two gaps of one text: it gets one result for
+        // the whole text (any miss counts), so it is never mastered and un-mastered in one answer.
+        const checked = gaps.map((gap, i) => {
           const word = this.store.byId.get(gap.wordId);
-          if (!word) continue;
-          const typed = input.answers[i] ?? '';
-          const attemptId = `${s.id}:${s.index}:${i}`;
-          if (await this.db.attempts.get(attemptId)) throw new Error('duplicate');
+          if (!word) return undefined;
           let result: ResultKind;
           let check: ReturnType<typeof checkGap> | undefined;
           if (input.kind === 'skip') result = 'skipped';
           else {
-            check = checkGap(gap, typed, {
+            check = checkGap(gap, input.answers[i] ?? '', {
               acceptUk: q.mode === 'fill-blanks',
               familyForms: this.store.familyForms(word),
               base: word.base,
@@ -304,9 +347,33 @@ export class PracticeService {
             else if (check.empty) result = 'unanswered';
             else result = 'incorrect';
           }
-          const prev = (await this.db.progress.get(word.id)) ?? newProgress(word.id);
-          const applied = applyResult(prev, { result, contextId: gap.contextId, responseMs: perGapMs, at: now, seq, sessionId: s.id });
-          await this.db.progress.put(applied.progress);
+          return { gap, word, result, check };
+        });
+        const deciding = new Map<string, number>();
+        const rank = (r: ResultKind) => (r === 'skipped' ? 0 : r === 'correct' ? 1 : 2);
+        checked.forEach((c, i) => {
+          if (!c) return;
+          const j = deciding.get(c.word.id);
+          if (j === undefined || rank(c.result) > rank(checked[j]!.result)) deciding.set(c.word.id, i);
+        });
+        const applied = new Map<string, { prev: WordProgress; out: ReturnType<typeof applyResult> }>();
+        for (const [wordId, i] of deciding) {
+          const c = checked[i]!;
+          const prev = (await this.db.progress.get(wordId)) ?? newProgress(wordId);
+          const out = applyResult(prev, { result: c.result, contextId: c.gap.contextId, responseMs: perGapMs, at: now, seq, sessionId: s.id });
+          await this.db.progress.put(out.progress);
+          applied.set(wordId, { prev, out });
+        }
+
+        for (let i = 0; i < gaps.length; i++) {
+          const c = checked[i];
+          if (!c) continue;
+          const { gap, word, result, check } = c;
+          const typed = input.answers[i] ?? '';
+          const attemptId = `${s.id}:${s.index}:${i}`;
+          if (await this.db.attempts.get(attemptId)) throw new Error('duplicate');
+          const { prev, out } = applied.get(word.id)!;
+          const decides = deciding.get(word.id) === i;
           const attempt: AttemptRecord = {
             id: attemptId,
             sessionId: s.id,
@@ -362,9 +429,10 @@ export class PracticeService {
             correctAnswer: gap.answer,
             result,
             errorTypes: attempt.errorTypes,
-            becameMastered: applied.becameMastered,
-            lostMastery: applied.lostMastery,
-            schedule: applied.explanation,
+            // A word's result is applied once per text: only that gap reports the change.
+            becameMastered: decides && out.becameMastered,
+            lostMastery: decides && out.lostMastery,
+            schedule: decides ? out.explanation : `The same word is also in another gap of this text: ${out.explanation}`,
             usedUkVariant: !!check?.usedUkVariant,
             previousMistakes: mistakes(prev),
           });
@@ -448,8 +516,13 @@ export class PracticeService {
       }
       if (await this.db.attempts.get(attemptId)) throw new Error('duplicate');
       const prev = (await this.db.progress.get(word.id)) ?? newProgress(word.id);
-      const applied = applyResult(prev, { result, contextId, responseMs: perItemMs, at: now, seq, sessionId: s.id }, { recognitionOnly: true });
-      await this.db.progress.put(applied.progress);
+      // A word waiting in the Mistake Bank is fixed only in Practice My Mistakes: here its blank
+      // counts for the passage score, but the word itself is left as it is.
+      const waiting = prev.status === 'learning';
+      const applied = waiting
+        ? { progress: prev, becameMastered: false, lostMastery: false, explanation: 'This word is in your Mistake Bank: fix it in Practice My Mistakes.' }
+        : applyResult(prev, { result, contextId, responseMs: perItemMs, at: now, seq, sessionId: s.id }, { recognitionOnly: true });
+      if (!waiting) await this.db.progress.put(applied.progress);
       await this.db.attempts.add({
         id: attemptId,
         sessionId: s.id,
@@ -467,7 +540,7 @@ export class PracticeService {
         hintUsed: false,
         difficulty: word.difficulty,
       });
-      if (result === 'incorrect' || result === 'timeout' || result === 'unanswered') {
+      if (!waiting && (result === 'incorrect' || result === 'timeout' || result === 'unanswered')) {
         const { sentence, at } = sentenceAt(set.text, b.start, b.end);
         await this.db.mistakes.put({
           id: attemptId,

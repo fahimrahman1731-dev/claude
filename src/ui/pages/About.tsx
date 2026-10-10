@@ -73,7 +73,7 @@ export function AboutPage() {
           </li>
           <li>
             A wrong, empty or timed-out answer puts the word in your <Link to="/mistakes">Mistake Bank</Link>. It <strong>never comes back by itself</strong>. Fix it in{' '}
-            <strong>Practice My Mistakes</strong>, in the same sentence; one correct answer there masters it, and a miss keeps it in the Mistake Bank.
+            <strong>Practice My Mistakes</strong>, in the word’s one practice sentence; one correct answer there masters it, and a miss keeps it in the Mistake Bank.
           </li>
           <li>
             There are <strong>no scheduled reviews</strong>: word practice never brings a mastered word back. Only “Review mastered words” (optional, you start it) or
@@ -82,8 +82,13 @@ export function AboutPage() {
           </li>
           <li>A skip is not counted: the word stays new and can come up in a later session.</li>
           <li>
-            In Interactive Reading, choosing the right word from options never masters it (only typing does), but a wrong choice is a mistake and sends the word to the
-            Mistake Bank. Read and Complete gaps are typed: a correct gap masters the word, a wrong one sends it to the Mistake Bank.
+            Read and Complete gaps are typed: a correct gap masters the word, a wrong one sends it to the Mistake Bank. A word that fills two gaps of one text counts
+            once (any miss counts). In Interactive Reading, choosing the right word from options never masters it (only typing does), but a wrong choice is a mistake
+            and sends the word to the Mistake Bank.
+          </li>
+          <li>
+            Words waiting in your Mistake Bank are not tested anywhere else: in a Read and Complete text they are shown whole, and in an Interactive Reading passage their
+            blank counts for the passage score but does not change the word.
           </li>
         </ul>
       </div>

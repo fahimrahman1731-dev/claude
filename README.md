@@ -101,13 +101,13 @@ One timer covers all six questions. You cannot go back, and CONTINUE stays disab
 | **OpenStax** textbooks (psychology, sociology, astronomy, biology, U.S. and world history, anthropology, lifespan development). Duolingo generated its Interactive Reading passages from open textbooks | CC BY-NC-SA 4.0 | sentences, Read and Complete texts, passages |
 | **ASSET** simplified sentences; **CEFR-SP** learner sentences | CC BY-NC 4.0; CC BY-NC-SA 4.0 / CC BY-SA 3.0 | Fill in the Blanks sentences |
 | Duolingo research appendix (Attali et al., 2022) | CC BY | the example Interactive Reading passage |
-| Princeton **WordNet** 3.0 | WordNet licence | definitions for added words, some example sentences |
+| Princeton **WordNet** 3.0 | WordNet licence | definitions for added words (its example sentences are used only when nothing better exists) |
 | **NGSL 1.2**, **NAWL 1.2**; **CEFR-J 1.5**; **Octanove C1/C2** | CC BY-SA 4.0; free with citation; CC BY-SA 4.0 | which words are realistic DET words, levels |
 | **wordfreq** | data CC BY-SA 4.0 | word frequency (Zipf) |
 | **Apertium** English–Bengali dictionary | GPL-2.0 | Bengali meanings for added words |
 
 Filters keep the material DET-like:
-- **Sentences:** one sentence of 8–22 words, stand-alone (no "This…", "However…"), plain English letters, no quotes, brackets, lists or acronyms. Headings and list items are never joined to a sentence, and textbook sentences that point to a missing figure, table or formula ("shown in ___") are left out.
+- **Sentences:** one sentence of 8–22 words, stand-alone (no "This…", "However…", "For example,…", "In other words,…"), plain English letters, no quotes, brackets, lists or acronyms. Headings, list items and reference lists are never used, and textbook sentences that point to a missing figure, table or formula ("shown in ___") or talk to the reader ("in this chapter", "the following table") are left out. A short word's sentence never shows a longer form of it ("pie" next to "pies").
 - **Read and Complete texts:** 50–100 words of plain prose with no British spellings.
 - **Topics:** anything the DET's fairness review avoids is left out: violence, war, crime, weapons, drugs and alcohol, sex and the body, death and serious illness, religion, race and politics.
 
@@ -123,10 +123,10 @@ The full report is in [`data/generated/import-report.md`](data/generated/import-
 | --- | --- |
 | Words from the two study documents (2 of 2 sources, every section OK) | 2,590 |
 | Words deleted as unrealistic DET words, each with its reason | 11 |
-| Words added from trusted lists (NGSL, NAWL, CEFR-J A1–B2, Octanove C1) that have real sentences | 3,246 |
-| Practice words in total | 5,836 |
-| Practice sentences, exactly one per word | 5,836 |
-| Of these: real / WordNet / written for the app | 5,666 / 18 / 152 |
+| Words added from trusted lists (NGSL, NAWL, CEFR-J A1–B2, Octanove C1) that have at least two good real sentences | 3,194 |
+| Practice words in total | 5,784 |
+| Practice sentences, exactly one per word, no two words sharing one (except 2 sentences, for 4 words with no other choice) | 5,784 |
+| Of these: real / written for the app | 5,610 / 174 |
 | Size of `public/data/vocab.json` | about 6.4 MB |
 | Read and Complete texts (CLEAR 161, OneStopEnglish 106, OpenStax 53) | 320, with 8–16 gaps each |
 | Interactive Reading passages (CLEAR, OneStopEnglish, OpenStax and the official research sample). The 92 written for this app were each solved blind by a second reviewer, and every answer they could argue with was fixed | 93 |
@@ -155,7 +155,7 @@ What does repeat is the **format**, the **kinds of text** (stories, news, textbo
 
 ### One sentence, one correct answer
 
-- Every word has **one** practice sentence, chosen by the build (a real one for 5,666 of the 5,836 words). Custom words keep only their first valid sentence.
+- Every word has **one** practice sentence, chosen by the build (a real one for 5,610 of the 5,784 words). Words with the fewest good sentences choose first, so almost every word gets a sentence no other word uses; small grammar words choose before them so they keep simple learner sentences. Custom words keep only their first valid sentence.
 - Fill in the Blanks, Word Spelling, Small Grammar Words and Word Endings give you **only new words** (words you have never answered). Each word is asked at most once per session.
 - **One correct typed answer masters a word** at once. It moves to the Completed Checklist.
 - A wrong, timed-out or empty answer puts the word in the **Mistake Bank** (shown as "In Mistake Bank" or "to fix"). It **never comes back by itself** in normal practice.
@@ -169,8 +169,9 @@ What does repeat is the **format**, the **kinds of text** (stories, news, textbo
 
 ### Read and Complete and Interactive Reading
 
-- Read and Complete gaps are typed. A correct gap masters the word; a wrong one sends it to the Mistake Bank.
+- Read and Complete gaps are typed. A correct gap masters the word; a wrong one sends it to the Mistake Bank. A word that fills two gaps of one text gets one result for the text (any miss counts).
 - In Interactive Reading, choosing the right word from options never masters it. A wrong choice is a mistake: the word goes to the Mistake Bank, even if it was mastered. Its history then shows "lost mastery".
+- Words waiting in the Mistake Bank are not tested anywhere else. In a Read and Complete text they are shown whole (not as gaps). In an Interactive Reading passage their blank counts for the passage score but does not change the word.
 
 ### No scheduled reviews
 
@@ -184,7 +185,7 @@ A mastered word comes back only when you choose:
 - **Reopen** makes a mastered word new again. Its history is kept.
 - You can also practise words you pick yourself from the Active Practice List or a word page.
 
-A mastered word can still appear in a Read and Complete text or an Interactive Reading passage.
+A mastered word can still appear in a Read and Complete text or an Interactive Reading passage, and a miss there sends it to the Mistake Bank.
 
 ### Progress from the previous version
 
@@ -249,7 +250,7 @@ See the comments at the top of `server/ai-proxy.mjs`.
 **Functional tests** (`tests/functional/`), run on the real practice service and data. The required tests check that:
 - one correct typed answer masters a word and moves it to the Completed Checklist;
 - a wrong, timed-out or empty answer puts the word in the Mistake Bank, and it never comes back by itself in normal practice;
-- Practice My Mistakes serves only missed words, most-missed first, in the same sentence; one correct answer there masters the word, and a miss keeps it in the Mistake Bank;
+- Practice My Mistakes serves only missed words, most-missed first, in the word's one practice sentence; one correct answer there masters the word, and a miss keeps it in the Mistake Bank;
 - every word has exactly one sentence, and each word is asked at most once per session;
 - progress saved by the previous version, and old backups, are converted: latest typed answer correct means mastered, an unfixed mistake stays in the Mistake Bank;
 - progress survives a reload, timeouts and untimed mode work, the library search finds words, 100% completion covers exactly the imported words, and a failed source is reported.

@@ -312,8 +312,10 @@ def collect_openstax() -> list[dict]:
 
             walk(content, mtitle)
             generic = re.compile(r'^(learning objectives|thinking ahead|link to learning|introduction|summary|key terms|review questions|everyday connection|dig deeper|career connection|the big picture)$', re.I)
+            # Reference lists are article titles, not sentences.
+            reference_list = re.compile(r'^(references|bibliography|works cited|further reading|sources)$', re.I)
             for k, (title, paras) in enumerate(groups):
-                if not paras:
+                if not paras or reference_list.match(title.strip()):
                     continue
                 if generic.match(title.strip()):
                     title = mtitle
