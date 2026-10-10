@@ -1,8 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { MODE_INFO } from '../engine/config';
-import type { SessionRecord } from '../db/db';
+import type { SessionFocus, SessionRecord } from '../db/db';
 
 // ---------------------------------------------------------------- DET-style frame
+
+/** Shown after the mode name for the practice the student started on purpose. */
+const FOCUS_LABEL: Record<SessionFocus, string> = {
+  normal: '',
+  mistakes: ' · My mistakes',
+  mastered: ' · Mastered words',
+  words: ' · Chosen words',
+};
 
 export interface FrameProps {
   session: SessionRecord;
@@ -36,7 +44,7 @@ export function DetFrame({
         <div className="det-head-left">{timer}</div>
         <span className="det-count" title="Question in this session">
           {MODE_INFO[session.mode].title}
-          {session.focus === 'mistakes' ? ' · My mistakes' : session.focus === 'mastered' ? ' · Review' : ''} · {shown} of {session.target}
+          {FOCUS_LABEL[session.focus] ?? ''} · {shown} of {session.target}
         </span>
         <button type="button" className="det-close" aria-label="End session" title="End session" onClick={onEnd}>
           ✕

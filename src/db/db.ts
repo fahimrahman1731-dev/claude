@@ -2,6 +2,7 @@ import Dexie, { type Table } from 'dexie';
 import type { AdaptiveState } from '../engine/adaptive';
 import type { Settings } from '../engine/config';
 import type { SelectionReason } from '../engine/selection';
+import { migrateProgress } from '../engine/progress';
 import type { AttemptRecord, Context, InteractiveAnswers, IrPart, Mode, MistakeRecord, Question, ResultKind, VocabWord, WordProgress } from '../engine/types';
 
 export interface GapOutcome {
@@ -66,12 +67,8 @@ export interface SessionRecord {
   endedAt?: number;
   /** Questions (or paragraphs) planned for this session. */
   target: number;
-  newQuota: number;
-  reviewQuota: number;
   /** Questions finished so far. */
   index: number;
-  newIntroduced: number;
-  reviewsServed: number;
   current?: CurrentQuestion;
   lastOutcome?: QuestionOutcome;
   lastWordId?: string;
@@ -91,7 +88,7 @@ export interface SessionRecord {
 export type SessionFocus = 'normal' | 'mistakes' | 'mastered' | 'words';
 
 export interface Meta {
-  /** Global question counter used by the short review intervals. */
+  /** Global question counter (it keeps counting across sessions). */
   seq: number;
   adaptive: AdaptiveState;
   paragraphServed: Record<string, number>;
@@ -161,6 +158,18 @@ export class AppDB extends Dexie {
     this.version(2).stores({
       irResults: 'id, sessionId, setId, part, at',
     });
+    // Version 3: one correct answer masters a word and there are no scheduled reviews.
+    // Saved progress is converted once (see migrateProgress).
+    this.version(3)
+      .stores({})
+      .upgrade(async (tx) => {
+        await tx
+          .table('progress')
+          .toCollection()
+          .modify((p: WordProgress, ref: { value: WordProgress }) => {
+            ref.value = migrateProgress(p);
+          });
+      });
   }
 }
 

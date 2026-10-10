@@ -2,7 +2,6 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useMemo, useState } from 'react';
 import { DRILL_MODES, MODE_INFO, READING_MODES, questionSeconds, type TimerMode } from '../../engine/config';
 import { inModePool } from '../../engine/questions';
-import { mistakes } from '../../engine/progress';
 import type { Difficulty, Mode } from '../../engine/types';
 import { META_KEY, type Meta } from '../../db/db';
 import { useApp, useProgressMap, useSettings } from '../app-context';
@@ -72,34 +71,34 @@ export function StartPracticePage() {
   });
   const [starting, setStarting] = useState<Mode | null>(null);
 
-  /** done / total for each card's progress bar. */
+  /** done / total for each card's progress bar, and that skill's words waiting in the Mistake Bank. */
   const stats = useMemo(() => {
-    const out = {} as Record<Mode, { done: number; total: number; unit: string; due: number }>;
-    const now = Date.now();
+    const out = {} as Record<Mode, { done: number; total: number; unit: string; toFix: number }>;
     for (const m of [...READING_MODES, ...DRILL_MODES] as Mode[]) {
       if (m === 'read-complete') {
         const served = meta?.paragraphServed ?? {};
-        out[m] = { done: store.paragraphs.filter((p) => served[p.id]).length, total: store.paragraphs.length, unit: 'texts done', due: 0 };
+        out[m] = { done: store.paragraphs.filter((p) => served[p.id]).length, total: store.paragraphs.length, unit: 'texts done', toFix: 0 };
         continue;
       }
       if (m === 'interactive-reading') {
         const served = meta?.interactiveServed ?? {};
-        out[m] = { done: store.interactive.filter((x) => served[x.id]).length, total: store.interactive.length, unit: 'passages done', due: 0 };
+        out[m] = { done: store.interactive.filter((x) => served[x.id]).length, total: store.interactive.length, unit: 'passages done', toFix: 0 };
         continue;
       }
       const pool = store.words.filter((w) => inModePool(w, m));
       let mastered = 0;
-      let due = 0;
+      let toFix = 0;
       for (const w of pool) {
-        const p = progress?.get(w.id);
-        if (p?.status === 'mastered') mastered++;
-        else if (p?.status === 'learning' && (p.nextReviewAt ?? 0) <= now) due++;
+        const status = progress?.get(w.id)?.status;
+        if (status === 'mastered') mastered++;
+        else if (status === 'learning') toFix++;
       }
-      out[m] = { done: mastered, total: pool.length, unit: 'words mastered', due };
+      out[m] = { done: mastered, total: pool.length, unit: 'words mastered', toFix };
     }
     return out;
   }, [store, progress, meta]);
-  const mistakeWords = useMemo(() => (progress ? [...progress.values()].filter((p) => mistakes(p) > 0 && p.status !== 'mastered' && store.byId.has(p.wordId)).length : 0), [progress, store]);
+  /** Words in the Mistake Bank: their latest answer was wrong and they are not fixed yet. */
+  const mistakeWords = useMemo(() => (progress ? [...progress.values()].filter((p) => p.status === 'learning' && store.byId.has(p.wordId)).length : 0), [progress, store]);
 
   const choose = (t: Tab) => {
     setTab(t);
@@ -137,6 +136,10 @@ export function StartPracticePage() {
         <div>
           <h1>Practice skills</h1>
           <p className="muted">Choose a skill to start. Each one follows the DET’s own rules for that question type.</p>
+          <p className="muted small">
+            You get new words only, each in one sentence. One correct answer masters a word. A missed word goes to your Mistake Bank and waits there until you fix it in
+            Practice My Mistakes.
+          </p>
         </div>
       </div>
       {active && (
@@ -178,7 +181,7 @@ export function StartPracticePage() {
                 <span className="skill-sub">
                   <span>
                     {st.done.toLocaleString()}/{st.total.toLocaleString()} {st.unit}
-                    {st.due > 0 && ` · ${st.due} due`}
+                    {st.toFix > 0 && ` · ${st.toFix} to fix`}
                   </span>
                   <span>{timerText(m)}</span>
                 </span>
@@ -187,25 +190,25 @@ export function StartPracticePage() {
             </button>
           );
         })}
-        {tab === 'drills' && (
-          <div className="skill-card static">
-            <span className="skill-icon" aria-hidden>
-              <svg viewBox="0 0 48 48" width="44" height="44">
-                <rect x="6" y="12" width="36" height="24" rx="5" fill="var(--bad-soft)" stroke="var(--bad)" strokeWidth="2" />
-                <path d="M19 19l10 10M29 19L19 29" stroke="var(--bad)" strokeWidth="3" strokeLinecap="round" />
-              </svg>
+        <div className="skill-card static">
+          <span className="skill-icon" aria-hidden>
+            <svg viewBox="0 0 48 48" width="44" height="44">
+              <rect x="6" y="12" width="36" height="24" rx="5" fill="var(--bad-soft)" stroke="var(--bad)" strokeWidth="2" />
+              <path d="M19 19l10 10M29 19L19 29" stroke="var(--bad)" strokeWidth="3" strokeLinecap="round" />
+            </svg>
+          </span>
+          <span className="skill-main">
+            <span className="skill-title">Practice My Mistakes</span>
+            <span className="skill-desc">
+              Only words whose last answer was wrong, most-missed first, each in its one sentence. One correct answer masters a word. Missed words come back only here.
             </span>
-            <span className="skill-main">
-              <span className="skill-title">Practice My Mistakes</span>
-              <span className="skill-desc">Only words you have missed, most-missed first, in new sentences where possible.</span>
-              <span>
-                <button className="btn small" disabled={!mistakeWords || !!starting} onClick={() => void start('spelling', 'mistakes')}>
-                  {mistakeWords ? `Practice ${mistakeWords} missed words` : 'No mistakes yet'}
-                </button>
-              </span>
+            <span>
+              <button className="btn small" disabled={!mistakeWords || !!starting} onClick={() => void start('spelling', 'mistakes')}>
+                {mistakeWords ? `Practice ${mistakeWords} word${mistakeWords === 1 ? '' : 's'} to fix` : 'Nothing to fix'}
+              </button>
             </span>
-          </div>
-        )}
+          </span>
+        </div>
       </div>
 
       <div className="card stack">

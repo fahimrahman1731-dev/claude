@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T13:06:27.564Z",
+ "generatedAt": "2026-10-10T06:02:38.199Z",
  "sources": [
   {
    "id": "guide",
@@ -253,10 +253,10 @@
   "missingDefinitions": 0,
   "needingSentences": 0,
   "practiceReady": 5836,
-  "sentenceContexts": 21048,
+  "sentenceContexts": 5836,
   "paragraphs": 320,
   "paragraphGaps": 3878,
-  "totalPracticeContexts": 24926,
+  "totalPracticeContexts": 9714,
   "definitionsFromSources": 347,
   "definitionsWrittenForApp": 2243,
   "bengaliGlosses": 4073,
@@ -592,11 +592,11 @@
    ]
   },
   "contextOrigins": {
-   "collected": 20569,
-   "dictionary": 47,
-   "authored": 432
+   "collected": 5666,
+   "dictionary": 18,
+   "authored": 152
   },
-  "wordsWithOnlyCollected": 5556,
+  "wordsWithOnlyCollected": 5684,
   "definitionOrigins": {
    "source": 347,
    "dictionary": 3246,
@@ -616,17 +616,17 @@
   "paragraphCandidates": 3462,
   "interactiveSets": 93,
   "interactiveIssues": [],
-  "texts": 3228,
+  "texts": 1841,
   "licences": {
-   "CC BY-SA 3.0 and GFDL": 202,
-   "CC BY-SA 3.0": 189,
-   "CC BY 4.0": 512,
-   "CC BY 3.0": 12,
+   "CC BY-SA 3.0 and GFDL": 126,
+   "CC BY-SA 3.0": 110,
+   "CC BY 4.0": 305,
    "CC BY-SA": 1,
-   "CC BY-SA 4.0": 265,
-   "CC BY-NC-SA 4.0": 2046,
+   "CC BY 3.0": 6,
+   "CC BY-SA 4.0": 207,
+   "CC BY-NC-SA 4.0": 1085,
    "CC BY-NC 4.0": 1
   }
  },
- "version": "b2a614497351"
+ "version": "2265c35ee956"
 }

@@ -107,7 +107,10 @@ describe('word list import', () => {
     expect(report.needSentences).toEqual(['quixotic']);
     expect(report.status).toBe('partial');
     expect(words[0].isCustom).toBe(true);
-    expect(words[0].contexts).toHaveLength(2);
+    // Like every word, a custom word keeps one practice sentence: the first valid one.
+    expect(words[0].contexts.map((c) => c.sentence)).toEqual(['A cool zephyr moved the curtains.']);
+    expect(report.contextsAdded).toBe(1);
+    expect(report.practiceReady).toBe(1);
   });
 });
 

@@ -30,8 +30,9 @@ export function normalizeWord(s: string): string {
 
 /**
  * Builds a custom word from the student's input. Sentences go through the
- * same checks as the imported dataset. A word with fewer than two valid,
- * different sentences is saved but cannot be practiced until more are added.
+ * same checks as the imported dataset. Like every word, it keeps one practice
+ * sentence: the first valid one. A word without a valid sentence is saved but
+ * cannot be practiced until one is added.
  */
 export function makeCustomWord(input: CustomWordInput, store: VocabStore, source = 'custom'): CustomWordResult {
   const errors: string[] = [];
@@ -81,9 +82,9 @@ export function makeCustomWord(input: CustomWordInput, store: VocabStore, source
     notes: [],
     isSmallWord: isFunctionWord(w),
     isCustom: true,
-    contexts: set.kept,
+    contexts: set.kept.slice(0, 1),
   };
-  return { word, errors, sentenceIssues: issues, practiceReady: set.kept.length >= 2 };
+  return { word, errors, sentenceIssues: issues, practiceReady: set.kept.length >= 1 };
 }
 
 /** Links a custom word to an existing family when it is that word plus an ending. */

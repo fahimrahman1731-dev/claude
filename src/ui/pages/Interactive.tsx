@@ -460,7 +460,10 @@ export function InteractiveFeedback({ outcome, bn }: { outcome: QuestionOutcome;
               {p.part === 'title' && set.titles.why && <div className="tiny muted">{set.titles.why}</div>}
             </div>
           ))}
-          <p className="tiny muted">Choosing a missing word from options is recorded, but words are mastered by spelling them (Fill in the Blanks and Read and Complete).</p>
+          <p className="tiny muted">
+            Choosing the right word from options never masters it: words are mastered by typing them (Fill in the Blanks, Read and Complete and the drills). A wrong or
+            missing choice puts the word in your Mistake Bank.
+          </p>
         </section>
       </div>
     </div>

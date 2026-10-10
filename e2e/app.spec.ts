@@ -105,30 +105,27 @@ test('TEST 8 (browser): untimed mode shows no countdown', async ({ page }) => {
   await expect(page.locator('.lb input')).toBeEditable();
 });
 
-test('TEST 10 + TEST 5 (browser): search a word, master it, and see it move to the Completed Checklist', async ({ page }) => {
+test('TEST 10 + TEST 5 (browser): search a word, master it with one correct answer, and see it move to the Completed Checklist', async ({ page }) => {
   await chooseTimer(page, 'Untimed');
   await page.goto('/#/library');
   await page.getByLabel('Search the vocabulary library').fill('significant');
   await page.getByRole('link', { name: 'significant', exact: true }).click();
   await expect(page.locator('.word-title')).toHaveText('significant');
   await expect(page.getByRole('heading', { name: 'Answer history' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Practice sentence' })).toBeVisible();
   await expect(page.getByText(/real sentence/).first()).toBeVisible();
 
   await page.getByRole('button', { name: '▶ Practice this word' }).click();
-  // one question per real sentence of the word; two correct answers in different sentences master it
-  for (let i = 0; i < 6; i++) {
-    await expect(page.locator('.det-sentence').first()).toBeVisible();
-    await answerWord(page, 'significant');
-    await expect(page.locator('.feedback-head.good')).toContainText('✓ Correct');
-    if (i === 1) await expect(page.getByText(/Mastered!/)).toBeVisible();
-    const next = page.getByRole('button', { name: /^(Next question|Finish session)/ });
-    await expect(next).toBeFocused();
-    const finishing = (await next.textContent())?.startsWith('Finish');
-    await page.keyboard.press('Enter');
-    if (finishing) break;
-    await expect(page.locator('.lb input')).toBeFocused();
-  }
+  // one word, one sentence: one correct typed answer masters it and ends the session
+  await expect(page.locator('.det-sentence')).toHaveCount(1);
+  await answerWord(page, 'significant');
+  await expect(page.locator('.feedback-head.good')).toContainText('✓ Correct');
+  await expect(page.getByText(/Mastered!/)).toBeVisible();
+  const finish = page.getByRole('button', { name: /^Finish session/ });
+  await expect(finish).toBeFocused();
+  await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { name: 'Session finished' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Mastered in this session' })).toBeVisible();
   await page.goto('/#/completed');
   await expect(page.getByRole('link', { name: 'significant', exact: true })).toBeVisible();
   await page.goto('/#/active');
@@ -136,6 +133,110 @@ test('TEST 10 + TEST 5 (browser): search a word, master it, and see it move to t
   await expect(page.getByRole('link', { name: 'significant', exact: true })).toHaveCount(0);
   await page.goto('/#/library/w%3Asignificant');
   await expect(page.getByText(/Mastered on/)).toBeVisible();
+  await expect(page.getByText(/Next review|due for review/i)).toHaveCount(0);
+});
+
+test('a missed word waits in the Mistake Bank, never comes back by itself, and one correct answer in Practice My Mistakes masters it', async ({ page }) => {
+  await chooseTimer(page, 'Untimed');
+  await page.goto('/#/settings');
+  const perSession = page.getByLabel('Questions per session');
+  await perSession.fill('3');
+  await expect(perSession).toHaveValue('3');
+  await page.goto('/#/practice');
+  await page.getByRole('button', { name: 'Start Fill in the Blanks' }).click();
+
+  // 1st question: a wrong answer sends the word to the Mistake Bank
+  await expect(page.locator('.lb input').first()).toBeFocused();
+  await expect(page.locator('.det-foot-note')).toHaveText('New word');
+  await page.locator('.lb input').first().fill('qqq');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.feedback-head.bad')).toContainText('Not quite');
+  await expect(page.getByText(/Saved to your Mistake Bank/)).toBeVisible();
+  const missed = (await page.locator('.answer-line strong').first().textContent())!.trim();
+  const missedHref = (await page.locator('.answer-line a').first().getAttribute('href'))!;
+
+  /** Skips the remaining questions of a normal session (a skip shows the word), returning the words served. */
+  const skipToTheEnd = async () => {
+    const served: string[] = [];
+    for (;;) {
+      const next = page.getByRole('button', { name: /^(Next question|Finish session)/ });
+      await expect(next).toBeFocused();
+      const finishing = (await next.textContent())?.startsWith('Finish');
+      await page.keyboard.press('Enter');
+      if (finishing) break;
+      await expect(page.locator('.lb input').first()).toBeFocused();
+      await expect(page.locator('.det-foot-note')).toHaveText('New word');
+      await page.getByRole('button', { name: 'Skip', exact: true }).click();
+      await expect(page.locator('.feedback-head.neutral')).toContainText('Skipped');
+      served.push((await page.locator('.answer-line strong').first().textContent())!.trim());
+    }
+    await expect(page.getByRole('heading', { name: 'Session finished' })).toBeVisible();
+    return served;
+  };
+
+  // The rest of this session and the whole next session serve only new words: the missed one never comes back.
+  const served = await skipToTheEnd();
+  await expect(page.getByRole('heading', { name: 'Missed in this session' })).toBeVisible();
+  await expect(page.locator(`a[href="${missedHref}"]`)).toBeVisible();
+  await page.getByRole('button', { name: 'Practice again' }).click();
+  await expect(page.locator('.lb input').first()).toBeFocused();
+  await expect(page.locator('.det-foot-note')).toHaveText('New word');
+  await page.getByRole('button', { name: 'Skip', exact: true }).click();
+  served.push((await page.locator('.answer-line strong').first().textContent())!.trim());
+  served.push(...(await skipToTheEnd()));
+  expect(served).toHaveLength(5);
+  expect(served.map((w) => w.toLowerCase())).not.toContain(missed.toLowerCase());
+
+  // Mistake Bank: the word is waiting there, to fix
+  await page.goto('/#/mistakes');
+  await expect(page.getByRole('heading', { name: 'Mistake Bank' })).toBeVisible();
+  await expect(page.getByText('1 word to fix · 0 fixed')).toBeVisible();
+  await expect(page.locator('.card', { has: page.locator(`a[href="${missedHref}"]`) }).getByText('To fix', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '▶ Practice My Mistakes' }).click();
+
+  // Practice My Mistakes: the same single sentence; one correct answer masters the word
+  await expect(page.locator('.lb input').first()).toBeFocused();
+  await expect(page.locator('.det-foot-note')).toHaveText('From your Mistake Bank');
+  await answerWord(page, missed);
+  await expect(page.locator('.feedback-head.good')).toContainText('✓ Correct');
+  await expect(page.getByText(/Mastered!/)).toBeVisible();
+  await expect(page.getByText(/left your Mistake Bank/)).toBeVisible();
+  const next = page.getByRole('button', { name: /^(Next question|Finish session)/ });
+  await expect(next).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('heading', { name: 'Session finished' })).toBeVisible();
+  await expect(page.getByText('Your Mistake Bank is empty: every missed word is mastered. Well done!')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Fixed in this session' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Nothing left to fix' })).toBeDisabled();
+
+  // counted as fixed in the Mistake Bank, and listed on the Completed Checklist
+  await page.goto('/#/mistakes');
+  await expect(page.getByText('0 words to fix · 1 fixed')).toBeVisible();
+  await expect(page.locator('.card', { has: page.locator(`a[href="${missedHref}"]`) }).getByText('✓ Fixed', { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: '▶ Practice My Mistakes' })).toBeDisabled();
+  await page.goto('/#/completed');
+  await expect(page.locator(`a[href="${missedHref}"]`).first()).toBeVisible();
+  await page.goto('/' + missedHref);
+  await expect(page.getByText(/Mastered on/)).toBeVisible();
+});
+
+test('Settings: there is no review schedule to set (no Review frequency, no retention options)', async ({ page }) => {
+  await page.goto('/#/settings');
+  await expect(page.getByRole('heading', { level: 1, name: 'Settings' })).toBeVisible();
+  await expect(page.getByText(/One correct answer masters it/)).toBeVisible();
+  await expect(page.getByText(/There are no scheduled reviews/)).toBeVisible();
+  await expect(page.getByLabel('Questions per session')).toBeVisible();
+  for (const label of [/Review frequency/i, /retention/i, /New words per session/i, /Review questions per session/i]) {
+    await expect(page.getByLabel(label)).toHaveCount(0);
+    await expect(page.getByRole('group', { name: label })).toHaveCount(0);
+  }
+  // No old review wording anywhere a student can see.
+  for (const path of ['/#/', '/#/practice', '/#/active', '/#/completed', '/#/mistakes', '/#/stats', '/#/settings', '/#/about']) {
+    await page.goto(path);
+    await expect(page.locator('h1').first()).toBeVisible();
+    const text = await page.locator('body').innerText();
+    expect(text, path).not.toMatch(/review frequency|retention|due for review|next review|spaced repetition|second sentence|two different sentences/i);
+  }
 });
 
 test('Read and Complete: a real text, letter boxes that move to the next word, scored word by word', async ({ page }) => {

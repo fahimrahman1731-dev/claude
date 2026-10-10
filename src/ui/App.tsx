@@ -41,7 +41,8 @@ function Shell() {
   const { db, store } = useApp();
   const [open, setOpen] = useState(false);
   const mastered = useLiveQuery(() => db.progress.where('status').equals('mastered').count(), [db]) ?? 0;
-  const mistakeWords = useLiveQuery(async () => new Set((await db.mistakes.toArray()).map((m) => m.wordId)).size, [db]) ?? 0;
+  // Words still to fix in the Mistake Bank (their latest answer was wrong).
+  const mistakeWords = useLiveQuery(async () => (await db.progress.where('status').equals('learning').primaryKeys()).filter((id) => store.byId.has(String(id))).length, [db, store]) ?? 0;
 
   useEffect(() => {
     const root = document.documentElement;

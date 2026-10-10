@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { applyResult, newProgress } from '../../src/engine/progress';
 import { PracticeService } from '../../src/services/practice';
 import type { InteractiveAnswers, InteractiveQuestion } from '../../src/engine/types';
 import { makeEnv } from './env';
@@ -38,11 +39,13 @@ describe('Interactive Reading in a practice session', () => {
     expect(rows).toHaveLength(q.blanks.length + 5);
     expect(rows.filter((x) => x.part === 'complete-sentences')).toHaveLength(q.blanks.length);
 
-    // Choosing the right word from options never masters a word.
+    // Choosing the right word from options never masters a word: a new word stays new.
     for (const g of r.outcome.gaps.filter((x) => x.wordId)) {
       const p = await db.progress.get(g.wordId);
-      expect(p?.status).not.toBe('mastered');
-      expect(p?.streakContextIds).toEqual([]);
+      expect(p?.status).toBe('new');
+      expect(p?.correct).toBeGreaterThan(0);
+      expect(g.becameMastered).toBe(false);
+      expect(g.schedule).toMatch(/does not master/);
     }
     // A repeated submit is ignored.
     const dup = await service.submit(s.id, { questionId: q.id, answers: [], kind: 'submit', interactive: perfect(q, []) });
@@ -72,6 +75,48 @@ describe('Interactive Reading in a practice session', () => {
       const at = m[0].answerStart!;
       expect(m[0].sentence.slice(at, at + r.outcome.gaps[0].correctAnswer.length)).toBe(r.outcome.gaps[0].correctAnswer);
     }
+    // Every missed or timed-out library word is in the Mistake Bank, with nothing scheduled.
+    for (const g of r.outcome.gaps.filter((x) => x.wordId)) {
+      const p = (await db.progress.get(g.wordId))!;
+      expect(p.status).toBe('learning');
+      expect(p.dueSeq).toBeUndefined();
+      expect(p.nextReviewAt).toBeUndefined();
+      expect(g.schedule).toMatch(/Mistake Bank/);
+    }
+  });
+
+  it('a wrong choice on a mastered word takes it out of the Completed Checklist and into the Mistake Bank', async () => {
+    const env = makeEnv();
+    const { service, store, db } = env;
+    // Find a passage whose first blank is a library word.
+    let s = await service.startSession({ mode: 'interactive-reading' });
+    let q = s.current!.question as InteractiveQuestion;
+    for (let i = 0; i < 40 && !store.interactive.find((x) => x.id === q.setId)!.blanks[0].wordId; i++) {
+      s = await service.startSession({ mode: 'interactive-reading' });
+      q = s.current!.question as InteractiveQuestion;
+    }
+    const wordId = store.interactive.find((x) => x.id === q.setId)!.blanks[0].wordId!;
+    expect(wordId).toBeTruthy();
+    // The student had mastered it by typing it correctly.
+    const typed = applyResult(newProgress(wordId), { result: 'correct', contextId: store.byId.get(wordId)!.contexts[0].id, responseMs: 1000, at: env.clock.t - 1000, seq: 1, sessionId: 'earlier' });
+    expect(typed.progress.status).toBe('mastered');
+    await db.progress.put(typed.progress);
+
+    const answers: InteractiveAnswers = { ...perfect(q, []), blanks: q.blanks.map((b, i) => (i === 0 ? (b.answer + 1) % b.options.length : b.answer)) };
+    const r = await service.submit(s.id, { questionId: q.id, answers: [], kind: 'submit', interactive: answers });
+    const g = r.outcome.gaps.find((x) => x.wordId === wordId)!;
+    expect(g.result).toBe('incorrect');
+    expect(g.lostMastery).toBe(true);
+    expect(g.schedule).toMatch(/Mistake Bank/);
+    const p = (await db.progress.get(wordId))!;
+    expect(p.status).toBe('learning');
+    expect(p.masteredAt).toBeUndefined();
+    expect(p.history.map((h) => h.event)).toEqual(['mastered', 'lost-mastery']);
+    // It is fixed in Practice My Mistakes, typed in its own sentence.
+    const fix = await service.startSession({ mode: 'interactive-reading', focus: 'mistakes' });
+    const fq = fix.current!.question;
+    expect(fq.kind).toBe('sentence');
+    expect(fq.kind === 'sentence' && fq.wordId).toBe(wordId);
   });
 
   it('lets the student move on when the open passage was removed or changed by an update', async () => {

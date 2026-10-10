@@ -1,4 +1,3 @@
-import { MASTERY, SCHEDULER } from '../../engine/config';
 import { useApp } from '../app-context';
 import { Link } from '../router';
 
@@ -22,8 +21,8 @@ export function AboutPage() {
           </li>
           <li>
             <strong>Sentences, texts and passages are real:</strong> they are taken unchanged from openly licensed texts (textbooks, learner news, encyclopedia and
-            children’s science articles, stories). Each one shows its source. Only where too few real sentences exist does a word use a sentence written for this app,
-            and it is labelled.
+            children’s science articles, stories). Each one shows its source. Every word has one practice sentence; where no suitable real sentence exists, the word
+            uses a sentence written for this app, and it is labelled.
           </li>
           <li>
             <strong>Format:</strong> timings, instructions, the letters given, the order of the Interactive Reading questions and the C-test rules follow Duolingo’s
@@ -67,15 +66,25 @@ export function AboutPage() {
         <h2>How mastery works</h2>
         <ul>
           <li>
-            A word is mastered after {MASTERY.requiredDistinctContexts} correct answers in {MASTERY.requiredDistinctContexts} different sentences, with no mistake in
-            between. The same sentence twice does not count, and choosing a word from options in Interactive Reading does not count either (only spelling it).
+            Every word has <strong>one sentence</strong>. Fill in the Blanks and the word drills give you only new words, and each word is asked once.
           </li>
-          <li>Skipping or viewing a word never counts. A wrong, empty or timed-out answer resets the run (your history is kept).</li>
           <li>
-            After a mistake the word returns after about {SCHEDULER.mistakeGaps[0].join('–')} other questions; after a 2nd mistake in a row, {SCHEDULER.mistakeGaps[1].join('–')}; after
-            a 3rd, {SCHEDULER.mistakeGaps[2][0]}. It comes back in a different sentence.
+            <strong>One correct answer masters a word</strong>: you type it correctly once and it moves to your <Link to="/completed">Completed Checklist</Link>.
           </li>
-          <li>Mastered words get retention checks after {SCHEDULER.retentionDays.join(', ')} days. Missing one sends the word back to active practice.</li>
+          <li>
+            A wrong, empty or timed-out answer puts the word in your <Link to="/mistakes">Mistake Bank</Link>. It <strong>never comes back by itself</strong>. Fix it in{' '}
+            <strong>Practice My Mistakes</strong>, in the same sentence; one correct answer there masters it, and a miss keeps it in the Mistake Bank.
+          </li>
+          <li>
+            There are <strong>no scheduled reviews</strong>: word practice never brings a mastered word back. Only “Review mastered words” (optional, you start it) or
+            reopening the word does; a reopened word is new again. A mastered word can still appear in a Read and Complete text or an Interactive Reading passage, and a
+            miss there sends it to the Mistake Bank.
+          </li>
+          <li>A skip is not counted: the word stays new and can come up in a later session.</li>
+          <li>
+            In Interactive Reading, choosing the right word from options never masters it (only typing does), but a wrong choice is a mistake and sends the word to the
+            Mistake Bank. Read and Complete gaps are typed: a correct gap masters the word, a wrong one sends it to the Mistake Bank.
+          </li>
         </ul>
       </div>
 

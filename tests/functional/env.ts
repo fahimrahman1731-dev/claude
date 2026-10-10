@@ -10,8 +10,11 @@ export const vocab: VocabData = JSON.parse(readFileSync(join(root, 'public/data/
 
 let counter = 0;
 
-/** A fresh app instance: its own IndexedDB database, a controllable clock and a seeded random generator. */
-export function makeEnv(opts: { dbName?: string; custom?: VocabWord[]; start?: number } = {}) {
+/**
+ * A fresh app instance: its own IndexedDB database, a controllable clock and a seeded random generator.
+ * `words` replaces the library words (to test what happens when a small pool runs out).
+ */
+export function makeEnv(opts: { dbName?: string; custom?: VocabWord[]; start?: number; words?: VocabWord[] } = {}) {
   const dbName = opts.dbName ?? `functional-${process.pid}-${counter++}`;
   const clock = { t: opts.start ?? new Date(2026, 9, 8, 9, 0, 0).getTime() };
   let seed = 12345;
@@ -20,7 +23,7 @@ export function makeEnv(opts: { dbName?: string; custom?: VocabWord[]; start?: n
     return (seed - 1) / 2147483646;
   };
   const db = new AppDB(dbName);
-  const store = new VocabStore(vocab, opts.custom ?? []);
+  const store = new VocabStore(opts.words ? { ...vocab, words: opts.words } : vocab, opts.custom ?? []);
   const service = new PracticeService({ db, store, now: () => clock.t, rng });
   return { db, store, service, clock, dbName };
 }

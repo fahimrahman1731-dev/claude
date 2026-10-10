@@ -3,31 +3,27 @@ import { livePriorityScore } from './priority';
 import { mistakes } from './progress';
 import type { Context, Difficulty, Paragraph, VocabWord, WordProgress } from './types';
 
-export type SelectionReason = 'mistake-review' | 'second-context' | 'due-review' | 'retention' | 'new' | 'extra-practice' | 'mistake-focus';
+export type SelectionReason = 'new' | 'mistake-focus' | 'chosen' | 'mastered-review';
 
-export const REASON_TEXT: Record<SelectionReason, string> = {
-  'mistake-review': 'Review of a recent mistake',
-  'second-context': 'Needs a correct answer in a second sentence',
-  'due-review': 'Due for review',
-  retention: 'Retention check of a mastered word',
+/** Shown under each question. Older saved sessions may still use the old reasons. */
+export const REASON_TEXT: Record<string, string> = {
   new: 'New word',
-  'extra-practice': 'Extra practice',
   'mistake-focus': 'From your Mistake Bank',
+  chosen: 'A word you chose',
+  'mastered-review': 'A mastered word you chose to review',
+  'mistake-review': 'From your Mistake Bank',
+  'second-context': 'From your earlier practice',
+  'due-review': 'From your earlier practice',
+  'extra-practice': 'A word you chose',
+  retention: 'A mastered word you chose to review',
 };
 
 export interface SelectionState {
   pool: VocabWord[];
   progress: Map<string, WordProgress>;
-  /** Global number of the question about to be asked. */
-  seq: number;
-  now: number;
   sessionId: string;
-  newIntroduced: number;
-  reviewsServed: number;
-  quotas: { newWords: number; reviews: number };
   level: Difficulty;
   adaptive: boolean;
-  retentionReviews: boolean;
   lastWordId?: string;
   focus: 'normal' | 'mistakes' | 'mastered' | 'words';
   rng: () => number;
@@ -36,12 +32,10 @@ export interface SelectionState {
 export interface Selection {
   word: VocabWord;
   reason: SelectionReason;
-  /** Which session quota this question uses: in-session follow-ups use none. */
-  bucket: 'new' | 'review' | 'none';
 }
 
-function byScore(state: SelectionState) {
-  return (a: VocabWord, b: VocabWord) => livePriorityScore(b, state.progress.get(b.id)) - livePriorityScore(a, state.progress.get(a.id));
+function byScore(progress: Map<string, WordProgress>) {
+  return (a: VocabWord, b: VocabWord) => livePriorityScore(b, progress.get(b.id)) - livePriorityScore(a, progress.get(a.id));
 }
 
 /** Picks one of the first `k` items, so the order is priority-led but not mechanical. */
@@ -51,153 +45,62 @@ function pickTop<T>(items: T[], k: number, rng: () => number): T | undefined {
 }
 
 /**
- * Chooses the next word. Order, most urgent first:
- * 1. words missed or answered once earlier in this session whose short interval has passed;
- * 2. a balanced mix of due reviews (earlier mistakes, second contexts, retention checks) and
- *    high-priority new words, within the session quotas;
- * 3. anything else, so a session never stalls.
+ * Chooses the next word. Every word is asked at most once per session, and nothing
+ * comes back by itself:
+ * - normal practice serves only words never answered yet (new words), highest priority
+ *   first, near the current difficulty level. A missed word goes to the Mistake Bank
+ *   and is not served here again;
+ * - Practice My Mistakes serves only words whose latest answer was a mistake,
+ *   most-missed first;
+ * - "mastered" and "words" serve mastered words or the words the student picked.
+ * Returns undefined when nothing is left, which ends the session.
  */
 export function selectNext(state: SelectionState): Selection | undefined {
-  const { pool, progress, seq, now, sessionId, lastWordId, rng } = state;
-  const notLast = (w: VocabWord) => w.id !== lastWordId;
-  const isDue = (p: WordProgress) => (p.dueSeq === undefined || p.dueSeq <= seq) && (p.nextReviewAt ?? 0) <= now;
+  const { pool, progress, sessionId, lastWordId, rng } = state;
+  const open = (w: VocabWord) => {
+    const p = progress.get(w.id);
+    return w.id !== lastWordId && p?.lastSessionId !== sessionId;
+  };
 
   if (state.focus === 'mistakes') {
-    const missed = pool.filter((w) => {
-      const p = progress.get(w.id);
-      return p && mistakes(p) > 0 && notLast(w) && (p.dueSeq === undefined || p.dueSeq <= seq);
-    });
+    const missed = pool.filter((w) => open(w) && progress.get(w.id)?.status === 'learning');
     missed.sort((a, b) => {
       const pa = progress.get(a.id)!;
       const pb = progress.get(b.id)!;
-      const ma = pa.status === 'mastered' ? 0 : 1;
-      const mb = pb.status === 'mastered' ? 0 : 1;
-      if (ma !== mb) return mb - ma;
-      if (pb.consecutiveIncorrect !== pa.consecutiveIncorrect) return pb.consecutiveIncorrect - pa.consecutiveIncorrect;
       if (mistakes(pb) !== mistakes(pa)) return mistakes(pb) - mistakes(pa);
       return (pb.lastPracticedAt ?? 0) - (pa.lastPracticedAt ?? 0);
     });
     const w = missed[0];
-    return w ? { word: w, reason: 'mistake-focus', bucket: 'none' } : undefined;
+    return w ? { word: w, reason: 'mistake-focus' } : undefined;
   }
 
   if (state.focus === 'mastered' || state.focus === 'words') {
-    // Review chosen words: least recently practiced first, never the same word twice in a row.
-    const cands = pool.filter((w) => {
-      const p = progress.get(w.id);
-      if (!notLast(w)) return false;
-      if (state.focus === 'mastered') return p?.status === 'mastered';
-      return !p || p.dueSeq === undefined || p.dueSeq <= seq || p.status !== 'learning';
-    });
+    const cands = pool.filter((w) => open(w) && (state.focus === 'words' || progress.get(w.id)?.status === 'mastered'));
     cands.sort((a, b) => (progress.get(a.id)?.lastPracticedAt ?? 0) - (progress.get(b.id)?.lastPracticedAt ?? 0));
-    const w = cands[0] ?? (state.focus === 'words' ? pool.find(notLast) ?? pool[0] : undefined);
-    return w ? { word: w, reason: state.focus === 'mastered' ? 'retention' : 'extra-practice', bucket: 'none' } : undefined;
+    const w = cands[0];
+    return w ? { word: w, reason: state.focus === 'mastered' ? 'mastered-review' : 'chosen' } : undefined;
   }
 
-  const urgent: VocabWord[] = [];
-  const dueLearning: VocabWord[] = [];
-  const retention: VocabWord[] = [];
-  const fresh: VocabWord[] = [];
-  const waiting: VocabWord[] = [];
-  for (const w of pool) {
-    if (!notLast(w)) continue;
-    const p = progress.get(w.id);
-    if (!p || p.status === 'new') {
-      if (!p || p.dueSeq === undefined || p.dueSeq <= seq) fresh.push(w);
-      else waiting.push(w);
-      continue;
-    }
-    if (p.status === 'learning') {
-      if (p.lastSessionId === sessionId && p.dueSeq !== undefined && p.dueSeq <= seq) urgent.push(w);
-      else if (isDue(p)) dueLearning.push(w);
-      else waiting.push(w);
-    } else if (p.status === 'mastered' && state.retentionReviews && (p.nextReviewAt ?? Infinity) <= now && (p.dueSeq === undefined || p.dueSeq <= seq)) {
-      retention.push(w);
-    }
+  const fresh = pool.filter((w) => open(w) && (progress.get(w.id)?.status ?? 'new') === 'new');
+  const target = targetLevel(state.level, state.adaptive, rng);
+  // Nearest level that still has words, starting from the target.
+  const order = [...LEVELS].sort((a, b) => Math.abs(LEVELS.indexOf(a) - LEVELS.indexOf(target)) - Math.abs(LEVELS.indexOf(b) - LEVELS.indexOf(target)));
+  for (const lvl of order) {
+    const cands = fresh.filter((w) => w.difficulty === lvl).sort(byScore(progress));
+    const w = pickTop(cands, 4, rng);
+    if (w) return { word: w, reason: 'new' };
   }
-
-  if (urgent.length) {
-    urgent.sort((a, b) => {
-      const pa = progress.get(a.id)!;
-      const pb = progress.get(b.id)!;
-      const overdue = seq - pb.dueSeq! - (seq - pa.dueSeq!);
-      return overdue !== 0 ? overdue : livePriorityScore(b, pb) - livePriorityScore(a, pa);
-    });
-    const p = progress.get(urgent[0].id)!;
-    return { word: urgent[0], reason: p.consecutiveIncorrect > 0 ? 'mistake-review' : 'second-context', bucket: 'none' };
-  }
-
-  dueLearning.sort(byScore(state));
-  retention.sort((a, b) => (progress.get(a.id)!.nextReviewAt ?? 0) - (progress.get(b.id)!.nextReviewAt ?? 0));
-  const reviewQueue: Selection[] = [
-    ...dueLearning.map((w) => ({
-      word: w,
-      reason: (progress.get(w.id)!.consecutiveIncorrect > 0 ? 'mistake-review' : 'due-review') as SelectionReason,
-      bucket: 'review' as const,
-    })),
-    ...retention.map((w) => ({ word: w, reason: 'retention' as SelectionReason, bucket: 'review' as const })),
-  ];
-  const reviewOpen = state.reviewsServed < state.quotas.reviews && reviewQueue.length > 0;
-  const newOpen = state.newIntroduced < state.quotas.newWords && fresh.length > 0;
-
-  const pickNew = (): Selection | undefined => {
-    const target = targetLevel(state.level, state.adaptive, rng);
-    // Nearest level that still has words, starting from the target.
-    const order = [...LEVELS].sort((a, b) => Math.abs(LEVELS.indexOf(a) - LEVELS.indexOf(target)) - Math.abs(LEVELS.indexOf(b) - LEVELS.indexOf(target)));
-    for (const lvl of order) {
-      const cands = fresh.filter((w) => w.difficulty === lvl).sort(byScore(state));
-      const w = pickTop(cands, 4, rng);
-      if (w) return { word: w, reason: 'new', bucket: 'new' };
-    }
-    return undefined;
-  };
-
-  if (reviewOpen && newOpen) {
-    // Keep the ratio of new to review questions close to the quotas.
-    const preferNew = state.newIntroduced * state.quotas.reviews <= state.reviewsServed * state.quotas.newWords;
-    return preferNew ? pickNew() ?? reviewQueue[0] : reviewQueue[0];
-  }
-  if (reviewOpen) return reviewQueue[0];
-  if (newOpen) return pickNew();
-
-  // Quotas used up or nothing due: keep the session going.
-  if (reviewQueue.length) return reviewQueue[0];
-  const extra = pickNew();
-  if (extra) return extra;
-  waiting.sort((a, b) => (progress.get(a.id)?.dueSeq ?? 0) - (progress.get(b.id)?.dueSeq ?? 0));
-  if (waiting.length) return { word: waiting[0], reason: 'extra-practice', bucket: 'none' };
-  const any = pool.filter(notLast);
-  const w = pickTop(any, any.length, rng) ?? pool[0];
-  return w ? { word: w, reason: 'extra-practice', bucket: 'none' } : undefined;
+  return undefined;
 }
 
-/**
- * Picks a sentence for the word: first one that would add a new distinct
- * context toward mastery, never the sentence used last time when another
- * exists, and preferably one not seen before.
- */
-export function chooseContext(w: VocabWord, p: WordProgress | undefined, rng: () => number): Context {
-  const ctxs = w.contexts;
-  if (ctxs.length <= 1 || !p) return ctxs[Math.floor(rng() * ctxs.length)] ?? ctxs[0];
-  let best: Context[] = [];
-  let bestScore = -Infinity;
-  for (const c of ctxs) {
-    let s = 0;
-    if (!p.streakContextIds.includes(c.id)) s += 4;
-    if (!p.correctContextIds.includes(c.id)) s += 2;
-    if (!p.seenContextIds.includes(c.id)) s += 1;
-    if (c.id === p.lastContextId) s -= 10;
-    if (s > bestScore) {
-      bestScore = s;
-      best = [c];
-    } else if (s === bestScore) best.push(c);
-  }
-  return best[Math.floor(rng() * best.length)];
+/** Every word is practiced in one sentence: its first (best) one. */
+export function chooseContext(w: VocabWord): Context {
+  return w.contexts[0];
 }
 
 /**
  * Chooses a Read and Complete paragraph: unseen ones first, near the target
- * difficulty, and preferring paragraphs whose gaps contain words being learned.
+ * difficulty, and preferring paragraphs with more words not answered yet.
  */
 export function chooseParagraph(
   paragraphs: Paragraph[],
@@ -212,10 +115,7 @@ export function chooseParagraph(
     .map((p) => {
       let s = -3 * (served[p.id] ?? 0);
       s -= Math.abs(LEVELS.indexOf(p.difficulty) - LEVELS.indexOf(level)) * 2;
-      for (const g of p.gaps) {
-        const pr = progress.get(g.wordId);
-        if (pr?.status === 'learning') s += pr.consecutiveIncorrect > 0 ? 1 : 0.5;
-      }
+      for (const g of p.gaps) if ((progress.get(g.wordId)?.status ?? 'new') === 'new') s += 0.25;
       return { p, s: s + rng() };
     })
     .sort((a, b) => b.s - a.s);

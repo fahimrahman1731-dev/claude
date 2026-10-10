@@ -4,8 +4,8 @@ import { checkGap } from '../../engine/answer';
 import { contextClues } from '../../engine/clues';
 import { REASON_TEXT } from '../../engine/selection';
 import { spellingRules, type Explanation } from '../../engine/spelling';
-import type { InteractiveAnswers, ParagraphQuestion, SentenceQuestion, VocabWord } from '../../engine/types';
-import type { GapOutcome, QuestionOutcome, SessionRecord } from '../../db/db';
+import type { InteractiveAnswers, Mode, ParagraphQuestion, SentenceQuestion, VocabWord } from '../../engine/types';
+import type { GapOutcome, QuestionOutcome, SessionFocus, SessionRecord } from '../../db/db';
 import { SaveError } from '../../services/practice';
 import { useApp, useSettings } from '../app-context';
 import { pct, secs } from '../format';
@@ -54,7 +54,10 @@ export function SessionPage() {
         setSession({ ...r.session });
         const settings = await service.getSettings();
         if (settings.sound && kind !== 'skip') playTone(r.outcome.gaps.every((g) => g.result === 'correct') ? 'good' : 'bad');
-        for (const g of r.outcome.gaps) if (g.becameMastered) notify(`“${g.word}” mastered and moved to the Completed Checklist.`, 'success');
+        for (const g of r.outcome.gaps) {
+          if (g.becameMastered) notify(`“${g.word}” mastered and moved to the Completed Checklist.`, 'success');
+          else if (g.lostMastery) notify(`“${g.word}” left the Completed Checklist and is now in your Mistake Bank.`, 'info');
+        }
       } catch (e) {
         const msg = e instanceof SaveError ? e.message : `Could not save: ${e instanceof Error ? e.message : String(e)}`;
         setSaveError(msg);
@@ -82,6 +85,14 @@ export function SessionPage() {
       setBusy(false);
     }
   }, [session, service, notify]);
+
+  const startNew = async (opts: { mode: Mode; focus: SessionFocus }) => {
+    try {
+      setSession(await service.startSession(opts));
+    } catch (e) {
+      notify(e instanceof Error ? e.message : String(e), 'error');
+    }
+  };
 
   const end = async () => {
     if (!session) return;
@@ -122,13 +133,8 @@ export function SessionPage() {
           {saveError && <SaveErrorBox message={saveError} onReload={() => void load()} />}
           <Summary
             session={session}
-            onRestart={async () => {
-              try {
-                setSession(await service.startSession({ mode: session.mode, focus: session.focus === 'words' ? 'normal' : session.focus }));
-              } catch (e) {
-                notify(e instanceof Error ? e.message : String(e), 'error');
-              }
-            }}
+            onRestart={() => startNew({ mode: session.mode, focus: session.focus === 'words' ? 'normal' : session.focus })}
+            onPracticeMistakes={() => startNew({ mode: 'spelling', focus: 'mistakes' })}
           />
         </main>
       </div>
@@ -214,7 +220,7 @@ function SentenceView({ frame, q, busy, onSubmit }: { frame: FrameProps; q: Sent
               Skip
             </button>
           )}
-          <span className="det-foot-note">{REASON_TEXT[cur.reason]}</span>
+          <span className="det-foot-note">{REASON_TEXT[cur.reason] ?? ''}</span>
           <button type="button" className={`det-submit${value ? ' ready' : ''}`} disabled={busy} onClick={submit}>
             Submit
           </button>
@@ -403,12 +409,14 @@ function GapDetails({ g, word, before, after, mode, bn }: { g: GapOutcome; word:
           <div>{[word, ...family].map((w) => w.word).join(' · ')}</div>
         </div>
       )}
-      <div className="explain">
-        <h4>Next review</h4>
-        <div className="small">{g.schedule}</div>
-      </div>
+      {g.schedule && (
+        <div className="explain">
+          <h4>What happens now</h4>
+          <div className="small">{g.schedule}</div>
+        </div>
+      )}
       {g.becameMastered && <div className="celebrate">🎉 Mastered! “{g.word}” moved to your Completed Checklist.</div>}
-      {g.lostMastery && <div className="alert warn">“{g.word}” went back to the Active Practice List after this retention check.</div>}
+      {g.lostMastery && <div className="alert warn">“{g.word}” left the Completed Checklist and is now in your Mistake Bank.</div>}
     </div>
   );
 }
@@ -513,6 +521,8 @@ function ParagraphFeedback({ outcome, bn }: { outcome: QuestionOutcome; bn: bool
   });
   parts.push(<span key="end">{p.text.slice(pos)}</span>);
   const wrong = gaps.map((g, i) => ({ g, i })).filter(({ g }) => g.result !== 'correct');
+  const masteredNow = gaps.filter((g) => g.becameMastered).length;
+  const toBank = new Set(gaps.filter((g) => g.wordId && (g.result === 'incorrect' || g.result === 'timeout' || g.result === 'unanswered')).map((g) => g.wordId)).size;
   const sel = open !== null ? gaps[open] : undefined;
   const selWord = sel ? store.byId.get(sel.wordId) : undefined;
   const selGap = open !== null ? p.gaps[open] : undefined;
@@ -528,6 +538,11 @@ function ParagraphFeedback({ outcome, bn }: { outcome: QuestionOutcome; bn: bool
             Small grammar words: <strong>{smallCorrect}/{small.length}</strong> · Content words: <strong>{contentCorrect}/{content}</strong>
             {small.length > smallCorrect && <span className="muted"> — small words are the quickest points; fill them first.</span>}
           </div>
+          {(masteredNow > 0 || toBank > 0) && (
+            <div className="small">
+              Newly mastered: <strong>{masteredNow}</strong> · Saved to your Mistake Bank: <strong>{toBank}</strong>
+            </div>
+          )}
           <h2 className="det-passage-title">{p.title}</h2>
           <p className="det-paragraph" style={{ margin: 0 }}>
             {parts}
@@ -586,7 +601,7 @@ function SourceLine({ src }: { src: string }) {
 
 // ---------------------------------------------------------------- summary
 
-function Summary({ session, onRestart }: { session: SessionRecord; onRestart: () => Promise<void> }) {
+function Summary({ session, onRestart, onPracticeMistakes }: { session: SessionRecord; onRestart: () => Promise<void>; onPracticeMistakes: () => Promise<void> }) {
   const { db, store } = useApp();
   const attempts = useLiveQuery(() => db.attempts.where('sessionId').equals(session.id).toArray(), [session.id]);
   const progress = useLiveQuery(() => db.progress.toArray(), []);
@@ -602,6 +617,8 @@ function Summary({ session, onRestart }: { session: SessionRecord; onRestart: ()
     for (const a of attempts ?? []) if (a.result !== 'correct' && a.result !== 'skipped') m.set(a.wordId, (m.get(a.wordId) ?? 0) + 1);
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [attempts]);
+  /** Words in the Mistake Bank now (from any session). */
+  const toFix = useMemo(() => (progress ?? []).filter((p) => p.status === 'learning' && store.byId.has(p.wordId)).length, [progress, store]);
   return (
     <div className="stack">
       <div className="card">
@@ -631,14 +648,18 @@ function Summary({ session, onRestart }: { session: SessionRecord; onRestart: ()
       </div>
       {masteredNow.length > 0 && (
         <div className="card">
-          <h2>Mastered in this session</h2>
+          <h2>{session.focus === 'mistakes' ? 'Fixed in this session' : 'Mastered in this session'}</h2>
           <p>{masteredNow.map((p) => store.byId.get(p.wordId)?.word).join(', ')}</p>
         </div>
       )}
       {missed.length > 0 && (
         <div className="card">
           <h2>Missed in this session</h2>
-          <p className="muted small">These words are already scheduled to come back soon, in different sentences.</p>
+          <p className="muted small">
+            {session.focus === 'mistakes'
+              ? 'These words stay in your Mistake Bank. Practice them again: one correct answer masters a word.'
+              : 'These words are now in your Mistake Bank. They will not come back by themselves: fix them in Practice My Mistakes, where one correct answer masters a word.'}
+          </p>
           <p>
             {missed.map(([id, n], i) => (
               <span key={id}>
@@ -651,9 +672,22 @@ function Summary({ session, onRestart }: { session: SessionRecord; onRestart: ()
         </div>
       )}
       <div className="row">
-        <button className="btn primary" onClick={() => void onRestart()}>
-          Practice again
-        </button>
+        {session.focus === 'mistakes' ? (
+          <button className="btn primary" disabled={!toFix} onClick={() => void onRestart()}>
+            {toFix ? `Practice My Mistakes again (${toFix} to fix)` : 'Nothing left to fix'}
+          </button>
+        ) : (
+          <>
+            <button className="btn primary" onClick={() => void onRestart()}>
+              Practice again
+            </button>
+            {toFix > 0 && (
+              <button className="btn" onClick={() => void onPracticeMistakes()}>
+                Practice My Mistakes ({toFix} to fix)
+              </button>
+            )}
+          </>
+        )}
         <Link to="/practice" className="btn">
           Choose another mode
         </Link>

@@ -2,48 +2,10 @@ import type { ClueRule } from './text';
 import type { Difficulty, Mode } from './types';
 
 /**
- * All learning rules live here so they can be read, tested and tuned in one place.
- * These are practice settings chosen for this app, not official DET rules or
- * scientific constants.
+ * Practice settings in one place so they can be read, tested and tuned. They are
+ * choices made for this app, not official DET rules or scientific constants. The
+ * learning rule itself (one sentence, one correct answer) is in engine/progress.ts.
  */
-export interface SchedulerConfig {
-  /** Questions to wait after the 1st, 2nd and 3rd+ consecutive mistake: [min, max] other questions. */
-  mistakeGaps: [number, number][];
-  /** After a first correct answer, wait this many other questions before asking in a new context. */
-  secondContextGap: [number, number];
-  /** After a skip, wait this many other questions. */
-  skipGap: [number, number];
-  /** Retention ladder for mastered words, in days. */
-  retentionDays: number[];
-  /** Multiplies retention intervals: "intensive" reviews mastered words sooner. */
-  reviewFrequency: Record<ReviewFrequency, number>;
-}
-
-export type ReviewFrequency = 'intensive' | 'normal' | 'relaxed';
-
-export interface MasteryPolicy {
-  /** Correct answers in different contexts, without a mistake in between, needed for mastery. */
-  requiredDistinctContexts: number;
-  /** A retention-review mistake sends a mastered word back to the Active Practice List. */
-  retentionFailureReopens: boolean;
-}
-
-export const SCHEDULER: SchedulerConfig = {
-  mistakeGaps: [
-    [3, 5],
-    [1, 2],
-    [1, 1],
-  ],
-  secondContextGap: [6, 10],
-  skipGap: [4, 8],
-  retentionDays: [1, 3, 7, 16, 35, 75],
-  reviewFrequency: { intensive: 0.6, normal: 1, relaxed: 1.5 },
-};
-
-export const MASTERY: MasteryPolicy = {
-  requiredDistinctContexts: 2,
-  retentionFailureReopens: true,
-};
 
 /** Weights for the live priority score (study-material evidence + personal history). */
 export const PRIORITY = {
@@ -100,16 +62,12 @@ export interface Settings {
   /** In Timed Mode, advanced words get the "difficult vocabulary" preset (30 s). */
   longerTimerForAdvanced: boolean;
   questionsPerSession: number;
-  newWordsPerSession: number;
-  reviewsPerSession: number;
   dailyGoal: number;
   language: LanguagePref;
   /** Show the Bengali meaning before answering (off = exam-like). */
   bengaliBeforeAnswer: boolean;
   sound: boolean;
   theme: Theme;
-  reviewFrequency: ReviewFrequency;
-  retentionReviews: boolean;
   showSkip: boolean;
   paragraphsPerSession: number;
   interactivePerSession: number;
@@ -120,9 +78,9 @@ export interface Settings {
 }
 
 /**
- * Defaults for a student who finds DET reading and spelling hard:
- * adaptive difficulty that starts easy, fewer new words, more reviews,
- * frequent retention checks and Bengali help after each answer.
+ * Defaults for a student who finds DET reading and spelling hard and wants to get
+ * through every word quickly: adaptive difficulty that starts easy and Bengali help
+ * after each answer. (There are no scheduled reviews: see engine/progress.ts.)
  */
 export const DEFAULT_SETTINGS: Settings = {
   difficulty: 'easy',
@@ -131,15 +89,11 @@ export const DEFAULT_SETTINGS: Settings = {
   customTimers: { ...MODE_TIMERS, 'fill-blanks': 30, spelling: 30, 'small-words': 15, endings: 30, 'read-complete': 240, 'interactive-reading': 600 },
   longerTimerForAdvanced: true,
   questionsPerSession: 20,
-  newWordsPerSession: 8,
-  reviewsPerSession: 12,
   dailyGoal: 40,
   language: 'en-bn',
   bengaliBeforeAnswer: false,
   sound: false,
   theme: 'system',
-  reviewFrequency: 'intensive',
-  retentionReviews: true,
   showSkip: true,
   paragraphsPerSession: 3,
   interactivePerSession: 2,

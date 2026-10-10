@@ -2,16 +2,16 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useMemo, useState } from 'react';
 import { MODE_INFO } from '../../engine/config';
 import { findOccurrences } from '../../engine/text';
-import type { MistakeRecord } from '../../engine/types';
+import type { MistakeRecord, WordProgress } from '../../engine/types';
 import { useApp, useProgressMap } from '../app-context';
-import { Chips, Empty, StatusBadge, usePager } from '../components';
+import { Chips, Empty, usePager } from '../components';
 import { dateTime, secs } from '../format';
 import { Link, navigate, wordPath } from '../router';
 
 type Filter = 'frequent' | 'recent' | 'ending' | 'missing' | 'extra' | 'transposition' | 'form' | 'timeout';
 
 const FILTERS: { value: Filter; label: string; test?: (m: MistakeRecord) => boolean }[] = [
-  { value: 'frequent', label: 'Most frequently missed' },
+  { value: 'frequent', label: 'By word (to fix first)' },
   { value: 'recent', label: 'Recently missed' },
   { value: 'ending', label: 'Incorrect word endings', test: (m) => m.errorTypes.includes('wrong-ending') },
   { value: 'missing', label: 'Missing letters', test: (m) => m.errorTypes.includes('missing-letters') || (m.errorTypes.includes('double-letter') && m.answer.length < m.correctAnswer.length) },
@@ -20,6 +20,28 @@ const FILTERS: { value: Filter; label: string; test?: (m: MistakeRecord) => bool
   { value: 'form', label: 'Wrong grammatical forms', test: (m) => m.errorTypes.includes('wrong-form') },
   { value: 'timeout', label: 'Timed out', test: (m) => m.result === 'timeout' },
 ];
+
+/** Where a missed word stands now: still in the Mistake Bank, fixed (mastered), or back among the new words. */
+type FixState = 'to-fix' | 'fixed' | 'new';
+
+function fixState(p: WordProgress | undefined): FixState {
+  return p?.status === 'learning' ? 'to-fix' : p?.status === 'mastered' ? 'fixed' : 'new';
+}
+
+const FIX_BADGE: Record<FixState, { cls: string; label: string; title: string }> = {
+  'to-fix': { cls: 'learning', label: 'To fix', title: 'Still in your Mistake Bank. One correct answer in Practice My Mistakes masters it.' },
+  fixed: { cls: 'mastered', label: '✓ Fixed', title: 'Answered correctly after the mistake: mastered.' },
+  new: { cls: 'new', label: 'New again', title: 'Not in your Mistake Bank now. It will come up again as a new word.' },
+};
+
+function FixBadge({ p }: { p: WordProgress | undefined }) {
+  const b = FIX_BADGE[fixState(p)];
+  return (
+    <span className={`badge ${b.cls}`} title={b.title}>
+      {b.label}
+    </span>
+  );
+}
 
 function Sentence({ m }: { m: MistakeRecord }) {
   const at = m.answerStart;
@@ -35,13 +57,15 @@ function Sentence({ m }: { m: MistakeRecord }) {
   );
 }
 
-function MistakeItem({ m }: { m: MistakeRecord }) {
+/** One saved mistake. `fix` adds the word's To fix / Fixed badge (the list views; word cards show it once). */
+function MistakeItem({ m, fix }: { m: MistakeRecord; fix?: { p: WordProgress | undefined } }) {
   return (
     <div className="mistake-item">
       <div className="row" style={{ gap: 8 }}>
         <strong>
           <Link to={wordPath(m.wordId)}>{m.word}</Link>
         </strong>
+        {fix && <FixBadge p={fix.p} />}
         <span>
           {m.answer ? <span className="typed-wrong">{m.answer}</span> : <span className="muted">{m.result === 'timeout' ? '(time ran out)' : '(empty)'}</span>} →{' '}
           <strong>{m.correctAnswer}</strong>
@@ -72,6 +96,7 @@ export function MistakesPage() {
   const mistakes = useLiveQuery(() => db.mistakes.orderBy('at').reverse().toArray(), [db]);
   const [filter, setFilter] = useState<Filter>('frequent');
   const [q, setQ] = useState('');
+  const [starting, setStarting] = useState(false);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -81,17 +106,27 @@ export function MistakesPage() {
   const groups = useMemo(() => {
     const g = new Map<string, MistakeRecord[]>();
     for (const m of filtered) g.set(m.wordId, [...(g.get(m.wordId) ?? []), m]);
-    return [...g.entries()].sort((a, b) => b[1].length - a[1].length || b[1][0].at - a[1][0].at);
-  }, [filtered]);
+    // Words still to fix first, then the most-missed, then the most recent.
+    const rank = (id: string) => (fixState(progress?.get(id)) === 'to-fix' ? 0 : 1);
+    return [...g.entries()].sort((a, b) => rank(a[0]) - rank(b[0]) || b[1].length - a[1].length || b[1][0].at - a[1][0].at);
+  }, [filtered, progress]);
+  /** Words in the Mistake Bank now: what Practice My Mistakes will serve. */
+  const toFix = useMemo(() => (progress ? [...progress.values()].filter((p) => p.status === 'learning' && store.byId.has(p.wordId)).length : 0), [progress, store]);
+  /** Missed words that were later answered correctly. */
+  const fixed = useMemo(() => new Set((mistakes ?? []).filter((m) => progress?.get(m.wordId)?.status === 'mastered').map((m) => m.wordId)).size, [mistakes, progress]);
   const grouped = usePager(groups, 25);
   const flat = usePager(filtered, 40);
 
   const practice = async () => {
+    if (starting) return;
+    setStarting(true);
     try {
       await service.startSession({ mode: 'spelling', focus: 'mistakes' });
       navigate('/practice/session');
     } catch (e) {
       notify(e instanceof Error ? e.message : String(e), 'error');
+    } finally {
+      setStarting(false);
     }
   };
 
@@ -105,15 +140,28 @@ export function MistakesPage() {
           <p className="muted">
             {mistakes.length} mistakes on {new Set(mistakes.map((m) => m.wordId)).size} words. Every wrong, timed-out or empty answer is saved here.
           </p>
+          <p style={{ marginTop: 6 }}>
+            <strong>{toFix}</strong> word{toFix === 1 ? '' : 's'} to fix · <strong>{fixed}</strong> fixed
+          </p>
+          <p className="small muted" style={{ marginTop: 6 }}>
+            Missed words never come back by themselves: practice them here. One correct answer masters a word.
+          </p>
         </div>
-        <button className="btn primary big" disabled={!mistakes.length} onClick={() => void practice()}>
-          ▶ Practice My Mistakes
-        </button>
+        <div className="stack" style={{ gap: 4, justifyItems: 'end' }}>
+          <button className="btn primary big" disabled={!toFix || starting} onClick={() => void practice()} aria-describedby={progress && !toFix ? 'nothing-to-fix' : undefined}>
+            ▶ Practice My Mistakes
+          </button>
+          {progress && !toFix && (
+            <span id="nothing-to-fix" className="tiny muted">
+              {mistakes.length ? 'Nothing to fix: no word is in your Mistake Bank now.' : 'Nothing to fix yet.'}
+            </span>
+          )}
+        </div>
       </div>
       {mistakes.length === 0 ? (
         <div className="card">
           <Empty title="No mistakes yet">
-            <p>When you miss a word, it is saved here with what you typed, the sentence, and the spelling rule.</p>
+            <p>When you miss a word, it is saved here with what you typed, the sentence, and the spelling rule. The word waits here until you answer it correctly in Practice My Mistakes.</p>
           </Empty>
         </div>
       ) : (
@@ -148,7 +196,7 @@ export function MistakesPage() {
                             {list.length} mistake{list.length === 1 ? '' : 's'}
                           </span>
                         </h2>
-                        {p && <StatusBadge s={p.status} />}
+                        {progress && <FixBadge p={p} />}
                       </div>
                       <details>
                         <summary className="small">
@@ -168,7 +216,7 @@ export function MistakesPage() {
             <>
               <div className="card">
                 {flat.slice.map((m) => (
-                  <MistakeItem key={m.id} m={m} />
+                  <MistakeItem key={m.id} m={m} fix={progress ? { p: progress.get(m.wordId) } : undefined} />
                 ))}
               </div>
               {flat.pager}

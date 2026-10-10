@@ -1,4 +1,3 @@
-import { MASTERY, SCHEDULER, type MasteryPolicy, type ReviewFrequency, type SchedulerConfig } from './config';
 import type { ResultKind, WordProgress } from './types';
 
 export const DAY_MS = 24 * 60 * 60 * 1000;
@@ -37,14 +36,10 @@ export interface ResultEvent {
 }
 
 export interface ApplyOptions {
-  scheduler?: SchedulerConfig;
-  mastery?: MasteryPolicy;
-  reviewFrequency?: ReviewFrequency;
-  rng?: () => number;
   /**
-   * The answer was chosen from options (Interactive Reading), not spelled.
-   * A right choice is recorded but never counts toward mastery; a wrong one is a
-   * normal mistake and brings the word back for spelling practice.
+   * The answer was chosen from options (Interactive Reading), not typed.
+   * A right choice is recorded but never masters a word; a wrong one is a
+   * mistake like any other and puts the word in the Mistake Bank.
    */
   recognitionOnly?: boolean;
 }
@@ -53,19 +48,9 @@ export interface ApplyOutcome {
   progress: WordProgress;
   becameMastered: boolean;
   lostMastery: boolean;
-  /** Other questions to wait before this word is due again (in-session intervals). */
-  gap?: number;
-  /** Days until the next review (mastered words). */
-  days?: number;
-  /** Plain-language reason for the new schedule, shown to the student. */
+  /** Plain-language result of this answer, shown to the student. */
   explanation: string;
 }
-
-export function pickInRange([min, max]: [number, number], rng: () => number): number {
-  return min + Math.floor(rng() * (max - min + 1));
-}
-
-const ORDINAL = ['1st', '2nd', '3rd'];
 
 export function mistakes(p: WordProgress): number {
   return p.incorrect + p.timeouts + p.unanswered;
@@ -76,25 +61,34 @@ export function accuracy(p: WordProgress): number | undefined {
   return p.attempts ? p.correct / p.attempts : undefined;
 }
 
+/** The word's latest answer was a mistake and it has not been fixed yet. */
+export function inMistakeBank(p: WordProgress | undefined): boolean {
+  return p?.status === 'learning';
+}
+
 /**
- * The scheduler and mastery rules in one pure function: given a word's
- * progress and one result, returns the new progress and the reason for the
- * new schedule. Nothing is persisted here.
+ * The learning rule in one pure function (nothing is saved here).
  *
- * Mastery = exact spelling, correct in `requiredDistinctContexts` different
- * contexts, with no mistake in between. A skip or a view never counts.
+ * Every word has one practice sentence, and the student goes through each word once:
+ * - a correct typed answer masters the word at once (it moves to the Completed Checklist);
+ * - a wrong, timed-out or empty answer puts it in the Mistake Bank. It never comes back
+ *   by itself: the student fixes it in Practice My Mistakes, where one correct answer
+ *   masters it;
+ * - a skip is not counted: the word stays as it was and can come back in a later session;
+ * - choosing a word from options (Interactive Reading) never masters it, but a wrong
+ *   choice is a mistake like any other.
+ * There are no scheduled reviews.
  */
 export function applyResult(prev: WordProgress, ev: ResultEvent, opts: ApplyOptions = {}): ApplyOutcome {
-  const cfg = opts.scheduler ?? SCHEDULER;
-  const policy = opts.mastery ?? MASTERY;
-  const mult = cfg.reviewFrequency[opts.reviewFrequency ?? 'normal'];
-  const rng = opts.rng ?? Math.random;
   const p: WordProgress = {
     ...prev,
     correctContextIds: [...prev.correctContextIds],
-    streakContextIds: [...prev.streakContextIds],
+    streakContextIds: [],
     seenContextIds: [...prev.seenContextIds],
     history: [...prev.history],
+    // Left over from the old review schedule: never used now.
+    nextReviewAt: undefined,
+    dueSeq: undefined,
   };
   p.lastPracticedAt = ev.at;
   p.firstPracticedAt ??= ev.at;
@@ -105,32 +99,10 @@ export function applyResult(prev: WordProgress, ev: ResultEvent, opts: ApplyOpti
 
   if (ev.result === 'skipped') {
     p.skips++;
-    const gap = pickInRange(cfg.skipGap, rng);
-    p.dueSeq = ev.seq + gap + 1;
-    return {
-      progress: p,
-      becameMastered: false,
-      lostMastery: false,
-      gap,
-      explanation: `Skipped: back after about ${gap} other questions. Skips never count toward mastery.`,
-    };
+    return { progress: p, becameMastered: false, lostMastery: false, explanation: 'Skipped: not counted. The word can come up again in a later session.' };
   }
 
   p.attempts++;
-  if (ev.result === 'correct' && opts.recognitionOnly) {
-    p.correct++;
-    p.consecutiveCorrect++;
-    p.consecutiveIncorrect = 0;
-    p.totalResponseMs += ev.responseMs;
-    p.answeredCount++;
-    if (!p.correctContextIds.includes(ev.contextId)) p.correctContextIds.push(ev.contextId);
-    return {
-      progress: p,
-      becameMastered: false,
-      lostMastery: false,
-      explanation: 'Chosen correctly. Choosing from options does not count toward mastery: the word is mastered by spelling it in two different sentences.',
-    };
-  }
   if (ev.result === 'correct') {
     p.correct++;
     p.consecutiveCorrect++;
@@ -138,46 +110,31 @@ export function applyResult(prev: WordProgress, ev: ResultEvent, opts: ApplyOpti
     p.totalResponseMs += ev.responseMs;
     p.answeredCount++;
     if (!p.correctContextIds.includes(ev.contextId)) p.correctContextIds.push(ev.contextId);
-    if (!p.streakContextIds.includes(ev.contextId)) p.streakContextIds.push(ev.contextId);
-
-    if (prev.status === 'mastered') {
-      p.intervalIndex = Math.min(prev.intervalIndex + 1, cfg.retentionDays.length - 1);
-      const days = cfg.retentionDays[p.intervalIndex] * mult;
-      p.nextReviewAt = ev.at + days * DAY_MS;
-      p.dueSeq = undefined;
-      return { progress: p, becameMastered: false, lostMastery: false, days, explanation: `Retention check passed: next review in ${fmtDays(days)}.` };
+    if (opts.recognitionOnly) {
+      const explanation =
+        prev.status === 'mastered'
+          ? 'Chosen correctly.'
+          : prev.status === 'learning'
+            ? 'Chosen correctly. The word stays in your Mistake Bank until you type it correctly in Practice My Mistakes.'
+            : 'Chosen correctly. Choosing from options does not master a word: it is mastered when you type it correctly.';
+      return { progress: p, becameMastered: false, lostMastery: false, explanation };
     }
-    if (p.streakContextIds.length >= policy.requiredDistinctContexts) {
-      p.status = 'mastered';
-      p.masteredAt = ev.at;
-      p.history.push({ at: ev.at, event: 'mastered' });
-      p.intervalIndex = 0;
-      const days = cfg.retentionDays[0] * mult;
-      p.nextReviewAt = ev.at + days * DAY_MS;
-      p.dueSeq = undefined;
-      return {
-        progress: p,
-        becameMastered: true,
-        lostMastery: false,
-        days,
-        explanation: `Correct in ${policy.requiredDistinctContexts} different sentences with no mistake in between: mastered. First retention check in ${fmtDays(days)}.`,
-      };
-    }
-    p.status = 'learning';
-    const gap = pickInRange(cfg.secondContextGap, rng);
-    p.dueSeq = ev.seq + gap + 1;
-    p.nextReviewAt = ev.at;
-    const need = policy.requiredDistinctContexts - p.streakContextIds.length;
+    if (prev.status === 'mastered') return { progress: p, becameMastered: false, lostMastery: false, explanation: 'Correct. The word is still mastered.' };
+    p.status = 'mastered';
+    p.masteredAt = ev.at;
+    p.history.push({ at: ev.at, event: 'mastered' });
     return {
       progress: p,
-      becameMastered: false,
+      becameMastered: true,
       lostMastery: false,
-      gap,
-      explanation: `Correct (${p.streakContextIds.length} of ${policy.requiredDistinctContexts} sentences). ${need} more correct answer${need > 1 ? 's' : ''} in a different sentence needed; asked again after about ${gap} other questions.`,
+      explanation:
+        prev.status === 'learning'
+          ? 'Correct: mastered. The word left your Mistake Bank and moved to your Completed Checklist.'
+          : 'Correct: mastered. The word moved to your Completed Checklist.',
     };
   }
 
-  // incorrect, timeout or unanswered: all reset the mastery streak
+  // incorrect, timeout or unanswered: the word goes to (or stays in) the Mistake Bank
   if (ev.result === 'incorrect') {
     p.incorrect++;
     p.totalResponseMs += ev.responseMs;
@@ -186,48 +143,51 @@ export function applyResult(prev: WordProgress, ev: ResultEvent, opts: ApplyOpti
   else p.unanswered++;
   p.consecutiveIncorrect++;
   p.consecutiveCorrect = 0;
-  p.streakContextIds = [];
-  p.intervalIndex = 0;
-  let lostMastery = false;
-  if (prev.status === 'mastered') {
-    if (policy.retentionFailureReopens) {
-      p.status = 'learning';
-      p.masteredAt = undefined;
-      p.history.push({ at: ev.at, event: 'retention-failed' });
-      lostMastery = true;
-    }
-  } else p.status = 'learning';
-  const step = Math.min(p.consecutiveIncorrect, cfg.mistakeGaps.length) - 1;
-  const gap = pickInRange(cfg.mistakeGaps[step], rng);
-  p.dueSeq = ev.seq + gap + 1;
-  p.nextReviewAt = ev.at;
-  const which = ORDINAL[Math.min(p.consecutiveIncorrect, 3) - 1] + (p.consecutiveIncorrect >= 3 ? ' (or later)' : '');
-  return {
-    progress: p,
-    becameMastered: false,
-    lostMastery,
-    gap,
-    explanation: `${which} mistake in a row: back after about ${gap} other question${gap === 1 ? '' : 's'}, in a different sentence.${lostMastery ? ' This word left the Completed Checklist until you master it again.' : ''}`,
-  };
+  const lostMastery = prev.status === 'mastered';
+  if (lostMastery) {
+    p.masteredAt = undefined;
+    p.history.push({ at: ev.at, event: 'lost-mastery' });
+  }
+  p.status = 'learning';
+  const n = mistakes(p);
+  const explanation =
+    prev.status === 'learning'
+      ? `Missed again (${n} mistakes on this word). It stays in your Mistake Bank until you answer it correctly.`
+      : `Saved to your Mistake Bank${lostMastery ? ' (it left the Completed Checklist)' : ''}. It will not come back by itself: fix it in Practice My Mistakes, where one correct answer masters it.`;
+  return { progress: p, becameMastered: false, lostMastery, explanation };
 }
 
-/** Puts a mastered word back into active practice at the student's request. History is kept. */
+/** Puts a mastered word back among the new words at the student's request. History is kept. */
 export function reopen(prev: WordProgress, at: number): WordProgress {
   return {
     ...prev,
-    status: prev.attempts > 0 ? 'learning' : 'new',
+    status: 'new',
     masteredAt: undefined,
     streakContextIds: [],
     consecutiveCorrect: 0,
     dueSeq: undefined,
-    nextReviewAt: at,
-    intervalIndex: 0,
+    nextReviewAt: undefined,
     history: [...prev.history, { at, event: 'reopened' }],
   };
 }
 
-function fmtDays(d: number): string {
-  if (d < 1) return `${Math.round(d * 24)} hours`;
-  const r = Math.round(d * 10) / 10;
-  return `${r} day${r === 1 ? '' : 's'}`;
+/**
+ * Converts progress saved under the old rules (two sentences for mastery, scheduled
+ * reviews) to the current ones: a word whose latest typed answer was correct is
+ * mastered, a word with an unfixed mistake is in the Mistake Bank, anything else is new.
+ * Used once when the database is upgraded and when an older backup is restored.
+ */
+export function migrateProgress(prev: WordProgress): WordProgress {
+  const p: WordProgress = { ...prev, streakContextIds: [], dueSeq: undefined, nextReviewAt: undefined, history: [...prev.history] };
+  if (prev.status !== 'learning') return p;
+  const last = prev.history[prev.history.length - 1];
+  if (prev.streakContextIds.length > 0) {
+    // Typed correctly since the last mistake: one correct answer is now enough.
+    p.status = 'mastered';
+    p.masteredAt = prev.lastPracticedAt ?? prev.firstPracticedAt;
+    p.history.push({ at: p.masteredAt ?? 0, event: 'mastered' });
+  } else if (prev.consecutiveIncorrect > 0) p.status = 'learning';
+  else if (last?.event === 'reopened') p.status = 'new';
+  else p.status = mistakes(prev) > 0 ? 'learning' : 'new';
+  return p;
 }

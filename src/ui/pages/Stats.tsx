@@ -7,6 +7,12 @@ import { useApp, useSettings } from '../app-context';
 import { DailyChart, Empty, HBars } from '../components';
 import { date, pct, secs } from '../format';
 
+const FOCUS_LABEL: Record<string, string> = {
+  mistakes: 'Practice My Mistakes',
+  mastered: 'mastered words',
+  words: 'chosen words',
+};
+
 const ERROR_LABEL: Record<string, string> = {
   'missing-letters': 'Missing letters',
   'extra-letters': 'Extra letters',
@@ -39,8 +45,8 @@ export function StatsPage() {
     return m;
   }, [irResults]);
   const stats = useMemo(
-    () => (progress && attempts ? computeStats(store.words, progress, attempts, { now: Date.now(), retentionReviews: settings.retentionReviews }) : undefined),
-    [progress, attempts, store, settings.retentionReviews],
+    () => (progress && attempts ? computeStats(store.words, progress, attempts, { now: Date.now() }) : undefined),
+    [progress, attempts, store],
   );
   const byMode = useMemo(() => {
     const m = new Map<Mode, { graded: number; correct: number; ms: number; answered: number }>();
@@ -89,6 +95,7 @@ export function StatsPage() {
           <p className="muted">
             {total.toLocaleString()} answers recorded. Accuracy = correct ÷ graded answers (correct, incorrect, timed out, unanswered). Skips are counted
             separately and never affect accuracy or mastery.
+            {` Words: ${stats.masteredWords.toLocaleString()} mastered, ${stats.mistakeWords.toLocaleString()} in your Mistake Bank, ${stats.newWords.toLocaleString()} new.`}
           </p>
         </div>
       </div>
@@ -204,7 +211,7 @@ export function StatsPage() {
                       <td className="small">{date(s.startedAt)}</td>
                       <td className="small">
                         {MODE_INFO[s.mode].title}
-                        {s.focus !== 'normal' ? ` (${s.focus})` : ''}
+                        {s.focus !== 'normal' ? ` (${FOCUS_LABEL[s.focus] ?? s.focus})` : ''}
                       </td>
                       <td className="small">{s.status}</td>
                       <td className="num">

@@ -121,11 +121,7 @@ export class PracticeService {
       status: 'active',
       startedAt: now,
       target: opts.target ?? (mode === 'read-complete' ? settings.paragraphsPerSession : mode === 'interactive-reading' ? settings.interactivePerSession : settings.questionsPerSession),
-      newQuota: settings.newWordsPerSession,
-      reviewQuota: settings.reviewsPerSession,
       index: 0,
-      newIntroduced: 0,
-      reviewsServed: 0,
       paragraphIds: [],
       interactiveIds: [],
       tally: EMPTY_TALLY(),
@@ -187,36 +183,18 @@ export class PracticeService {
           const sel = selectNext({
             pool,
             progress,
-            seq: meta.seq + 1,
-            now,
             sessionId: s.id,
-            newIntroduced: s.newIntroduced,
-            reviewsServed: s.reviewsServed,
-            quotas: { newWords: s.newQuota, reviews: s.reviewQuota },
             level,
             adaptive: settings.adaptive,
-            retentionReviews: settings.retentionReviews,
             lastWordId: s.lastWordId,
             focus: s.focus,
             rng: this.rng,
           });
-          if (!sel) {
-            return this.finish(
-              s,
-              now,
-              s.focus === 'mistakes'
-                ? 'No more mistakes are due right now. Well done!'
-                : s.focus === 'mastered'
-                  ? 'There are no mastered words to review yet.'
-                  : `Nothing left to practice in ${MODE_INFO[s.mode].title} right now.`,
-            );
-          }
-          const ctx = chooseContext(sel.word, progress.get(sel.word.id), this.rng);
+          if (!sel) return this.finish(s, now, this.nothingLeft(s, pool, progress));
+          const ctx = chooseContext(sel.word);
           const displayMode: SentenceMode =
             s.focus !== 'normal' && s.mode === 'spelling' ? (sel.word.isSmallWord ? 'small-words' : 'spelling') : (s.mode as SentenceMode);
           const q = sentenceQuestion(sel.word, ctx, displayMode, settings.clueRule);
-          if (sel.bucket === 'new') s.newIntroduced++;
-          if (sel.bucket === 'review') s.reviewsServed++;
           const secs = questionSeconds(settings, displayMode, sel.word.difficulty);
           s.current = { question: q, reason: sel.reason, startedAt: now, limitMs: secs === null ? null : secs * 1000 };
         }
@@ -229,6 +207,25 @@ export class PracticeService {
       if (e instanceof SaveError) throw e;
       throw new SaveError('The next question could not be prepared or saved.', e);
     }
+  }
+
+  /** Why a word session ended early: nothing left to ask under the one-pass rule. */
+  private nothingLeft(s: SessionRecord, pool: VocabWord[], progress: Map<string, WordProgress>): string {
+    if (s.focus === 'mistakes') {
+      const open = pool.filter((w) => progress.get(w.id)?.status === 'learning').length;
+      return open
+        ? `You have tried every word in your Mistake Bank once in this session. ${open} still need${open === 1 ? 's' : ''} a correct answer: start Practice My Mistakes again.`
+        : 'Your Mistake Bank is empty: every missed word is mastered. Well done!';
+    }
+    if (s.focus === 'mastered') return 'There are no more mastered words to review in this session.';
+    if (s.focus === 'words') return 'You have answered every word you chose.';
+    const missed = pool.filter((w) => progress.get(w.id)?.status === 'learning').length;
+    // Words skipped in this session are still new: they come back in the next session.
+    const skipped = pool.filter((w) => (progress.get(w.id)?.status ?? 'new') === 'new').length;
+    const bank = missed ? ` ${missed} missed word${missed === 1 ? ' is' : 's are'} waiting in your Mistake Bank.` : '';
+    if (skipped)
+      return `You have been through every new word in ${MODE_INFO[s.mode].title} for this session. ${skipped} skipped word${skipped === 1 ? '' : 's'} will come up again next session.${bank}`;
+    return `There are no new words left in ${MODE_INFO[s.mode].title}.${bank}`;
   }
 
   /** Saves Interactive Reading answers given so far, so a refresh resumes at the same part. */
@@ -264,7 +261,6 @@ export class PracticeService {
    * Throws SaveError if the database write fails, so the student can be told.
    */
   async submit(sessionId: string, input: SubmitInput): Promise<SubmitResult> {
-    const settings = await this.getSettings();
     const now = this.now();
     try {
       return await this.db.transaction('rw', [this.db.sessions, this.db.progress, this.db.attempts, this.db.mistakes, this.db.kv, this.db.irResults], async () => {
@@ -281,7 +277,7 @@ export class PracticeService {
         const meta = await this.getMeta();
         meta.seq += 1;
         const seq = meta.seq;
-        if (q.kind === 'interactive') return await this.submitInteractive(s, q, input, { now, seq, responseMs, meta, settings });
+        if (q.kind === 'interactive') return await this.submitInteractive(s, q, input, { now, seq, responseMs, meta });
         const gaps: Gap[] = q.kind === 'sentence' ? [q.gap] : q.gaps;
         const perGapMs = Math.round(responseMs / Math.max(1, gaps.length));
         const outcomes: GapOutcome[] = [];
@@ -309,7 +305,7 @@ export class PracticeService {
             else result = 'incorrect';
           }
           const prev = (await this.db.progress.get(word.id)) ?? newProgress(word.id);
-          const applied = applyResult(prev, { result, contextId: gap.contextId, responseMs: perGapMs, at: now, seq, sessionId: s.id }, { reviewFrequency: settings.reviewFrequency, rng: this.rng });
+          const applied = applyResult(prev, { result, contextId: gap.contextId, responseMs: perGapMs, at: now, seq, sessionId: s.id });
           await this.db.progress.put(applied.progress);
           const attempt: AttemptRecord = {
             id: attemptId,
@@ -368,10 +364,7 @@ export class PracticeService {
             errorTypes: attempt.errorTypes,
             becameMastered: applied.becameMastered,
             lostMastery: applied.lostMastery,
-            schedule:
-              s.focus === 'words' && applied.gap !== undefined
-                ? `${applied.explanation} (In this practice-selected-words session it can come back sooner; normal practice keeps the spacing.)`
-                : applied.explanation,
+            schedule: applied.explanation,
             usedUkVariant: !!check?.usedUkVariant,
             previousMistakes: mistakes(prev),
           });
@@ -410,9 +403,9 @@ export class PracticeService {
     s: SessionRecord,
     q: InteractiveQuestion,
     input: SubmitInput,
-    ctx: { now: number; seq: number; responseMs: number; meta: Meta; settings: Settings },
+    ctx: { now: number; seq: number; responseMs: number; meta: Meta },
   ): Promise<SubmitResult> {
-    const { now, seq, responseMs, meta, settings } = ctx;
+    const { now, seq, responseMs, meta } = ctx;
     const set = this.store.interactive.find((x) => x.id === q.setId);
     if (!set || set.blanks.length !== q.blanks.length) {
       // The passage was removed or changed by an update: close it without scoring anything.
@@ -455,7 +448,7 @@ export class PracticeService {
       }
       if (await this.db.attempts.get(attemptId)) throw new Error('duplicate');
       const prev = (await this.db.progress.get(word.id)) ?? newProgress(word.id);
-      const applied = applyResult(prev, { result, contextId, responseMs: perItemMs, at: now, seq, sessionId: s.id }, { reviewFrequency: settings.reviewFrequency, rng: this.rng, recognitionOnly: true });
+      const applied = applyResult(prev, { result, contextId, responseMs: perItemMs, at: now, seq, sessionId: s.id }, { recognitionOnly: true });
       await this.db.progress.put(applied.progress);
       await this.db.attempts.add({
         id: attemptId,

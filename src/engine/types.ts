@@ -19,6 +19,10 @@ export type SentenceMode = 'fill-blanks' | 'spelling' | 'small-words' | 'endings
  */
 export type ResultKind = 'correct' | 'incorrect' | 'timeout' | 'unanswered' | 'skipped';
 
+/**
+ * new = not answered yet; learning = the latest answer was a mistake, so the word is
+ * in the Mistake Bank; mastered = answered correctly (Completed Checklist).
+ */
 export type MasteryStatus = 'new' | 'learning' | 'mastered';
 
 export type ContextOrigin = 'authored' | 'collected' | 'custom' | 'ai' | 'paragraph' | 'interactive';
@@ -278,7 +282,7 @@ export interface WordProgress {
   consecutiveIncorrect: number;
   /** Every context ever answered correctly. */
   correctContextIds: string[];
-  /** Contexts answered correctly since the last mistake. Mastery needs enough distinct ones here. */
+  /** Kept for data saved under the old two-sentence rule; always empty now. */
   streakContextIds: string[];
   seenContextIds: string[];
   lastContextId?: string;
@@ -286,16 +290,17 @@ export interface WordProgress {
   answeredCount: number;
   firstPracticedAt?: number;
   lastPracticedAt?: number;
-  /** Earliest time the word may be served again (later-session, next-day and longer reviews). */
+  /** From the old review schedule (there are no scheduled reviews now); cleared on the next answer. */
   nextReviewAt?: number;
-  /** Global question number after which the word is due again (short in-session intervals). */
+  /** From the old review schedule; cleared on the next answer. */
   dueSeq?: number;
   lastSeq?: number;
   lastSessionId?: string;
-  /** Position on the retention ladder after mastery. */
+  /** From the old review schedule; not used. */
   intervalIndex: number;
   masteredAt?: number;
-  history: { at: number; event: 'mastered' | 'retention-failed' | 'reopened' }[];
+  /** 'retention-failed' comes from the old review schedule; 'lost-mastery' = a mastered word was missed. */
+  history: { at: number; event: 'mastered' | 'retention-failed' | 'lost-mastery' | 'reopened' }[];
 }
 
 export interface AttemptRecord {

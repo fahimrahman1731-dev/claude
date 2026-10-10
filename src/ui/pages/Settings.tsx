@@ -79,7 +79,7 @@ export function SettingsPage() {
           <span>
             <strong>Adaptive difficulty</strong>
             <br />
-            <span className="small muted">Moves up after about 85% correct over 8 answers, down at 50% or less. Mistake reviews always continue.</span>
+            <span className="small muted">Moves up after about 85% correct over 8 answers, down at 50% or less. Practice My Mistakes always serves every missed word.</span>
           </span>
         </label>
         <div className="stack" style={{ gap: 6 }}>
@@ -156,42 +156,20 @@ export function SettingsPage() {
       </div>
 
       <div className="card stack">
-        <h2>Sessions and reviews</h2>
+        <h2>Sessions</h2>
         <div className="grid grid-3">
           <Num label="Questions per session" value={s.questionsPerSession} min={1} max={200} onChange={(n) => set({ questionsPerSession: n })} />
-          <Num label="New words per session" value={s.newWordsPerSession} min={0} max={200} onChange={(n) => set({ newWordsPerSession: n })} />
-          <Num label="Review questions per session" value={s.reviewsPerSession} min={0} max={200} onChange={(n) => set({ reviewsPerSession: n })} hint="Mistake follow-ups inside a session are always added on top." />
           <Num label="Texts per Read and Complete session" value={s.paragraphsPerSession} min={1} max={50} onChange={(n) => set({ paragraphsPerSession: n })} />
           <Num label="Passages per Interactive Reading session" value={s.interactivePerSession} min={1} max={20} onChange={(n) => set({ interactivePerSession: n })} />
           <Num label="Daily goal (questions)" value={s.dailyGoal} min={1} max={1000} onChange={(n) => set({ dailyGoal: n })} />
         </div>
-        <div className="stack" style={{ gap: 6 }}>
-          <span className="small" style={{ fontWeight: 600 }}>
-            Review frequency for mastered words
-          </span>
-          <Segmented
-            label="Review frequency"
-            value={s.reviewFrequency}
-            onChange={(v) => set({ reviewFrequency: v })}
-            options={[
-              { value: 'intensive', label: 'Intensive' },
-              { value: 'normal', label: 'Normal' },
-              { value: 'relaxed', label: 'Relaxed' },
-            ]}
-          />
-          <span className="tiny muted">Retention checks after mastery: 1, 3, 7, 16, 35, 75 days (×0.6 intensive, ×1.5 relaxed).</span>
+        <div className="alert small">
+          <strong>How words are learned.</strong> Each word has one sentence. One correct answer masters it. A missed word waits in your{' '}
+          <Link to="/mistakes">Mistake Bank</Link> and never comes back by itself: fix it in Practice My Mistakes. There are no scheduled reviews, so there is nothing to set here.
         </div>
         <label className="check">
-          <input type="checkbox" checked={s.retentionReviews} onChange={(e) => set({ retentionReviews: e.target.checked })} />
-          <span>
-            Mastered words can come back in retention reviews
-            <br />
-            <span className="small muted">A miss in a retention review returns the word to the Active Practice List (its history is kept).</span>
-          </span>
-        </label>
-        <label className="check">
           <input type="checkbox" checked={s.showSkip} onChange={(e) => set({ showSkip: e.target.checked })} />
-          Show the Skip button (skips never count toward mastery)
+          Show the Skip button (a skip is not counted: the word stays new and can come back in a later session)
         </label>
       </div>
 
@@ -238,8 +216,8 @@ export function SettingsPage() {
       <div className="card stack">
         <h2>AI sentence generation (optional)</h2>
         <p className="small muted" style={{ margin: 0 }}>
-          Every word already has validated sentences, so this is not needed. If you run the included server (<code>npm run ai-proxy</code>, which keeps the API key on
-          the server), paste its URL here to generate extra sentences. Generated sentences are validated before they are saved.
+          Every word already has a validated sentence, so this is not needed. If you run the included server (<code>npm run ai-proxy</code>, which keeps the API key on
+          the server), paste its URL here to generate a sentence for one of your own words that has none. Generated sentences are validated before they are saved.
         </p>
         <div className="row">
           <input type="text" value={aiUrl} onChange={(e) => setAiUrl(e.target.value)} placeholder="http://localhost:8787/api/contexts" style={{ flex: '1 1 300px' }} aria-label="AI server URL" />

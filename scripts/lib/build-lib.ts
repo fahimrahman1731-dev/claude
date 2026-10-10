@@ -199,7 +199,8 @@ export function buildVocab(
       if (isBritishSpelling(w, lex, US_UK)) continue;
       if ((index.byWord.get(w)?.length ?? 0) < 2) continue;
       // Only words that really get two real (or dictionary) sentences are added.
-      const trial = pickContexts(w, `w:${w}`, index, lex, []);
+      // Added only when real text uses the word in at least two good sentences (the app shows one).
+      const trial = pickContexts(w, `w:${w}`, index, lex, [], 2);
       if (trial.contexts.length < 2) continue;
       const info = listInfo(lex, w);
       const core = info.lists.includes('ngsl') || ['A1', 'A2', 'B1'].includes(info.cefr ?? '');
@@ -236,7 +237,7 @@ export function buildVocab(
       contextOrigins.collected += pick.collected;
       contextOrigins.dictionary += pick.dictionary;
       contextOrigins.authored += pick.authored;
-      if (pick.authored === 0 && pick.contexts.length >= 2) wordsWithOnlyCollected++;
+      if (pick.authored === 0 && pick.contexts.length >= 1) wordsWithOnlyCollected++;
       set = { kept: pick.contexts, rejected: [] };
       senseEvidence = pick.evidence;
     } else {
@@ -248,6 +249,8 @@ export function buildVocab(
       }
       set = checkContextSet(contexts, m.word);
       for (const r of set.rejected) invalidSentences.push({ word: m.word, problem: `${r.reason} — “${r.sentence}”` });
+      // One practice sentence per word.
+      set = { ...set, kept: set.kept.slice(0, 1) };
     }
     const sourceDefs = m.definitions.map((d) => d.text);
     const e = lex[m.word];
@@ -333,7 +336,7 @@ export function buildVocab(
       const err = validateQuestion(sentenceQuestion(w, c, 'spelling'), w);
       if (err) invalidSentences.push({ word: m.word, problem: `question check failed: ${err}` });
     }
-    if (set.kept.length < 2) needingSentences.push(m.word);
+    if (set.kept.length < 1) needingSentences.push(m.word);
     return w;
   });
 

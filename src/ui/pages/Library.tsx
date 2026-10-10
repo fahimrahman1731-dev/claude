@@ -109,8 +109,8 @@ export function LibraryPage() {
           </select>
           <select value={status} onChange={(e) => setStatus(e.target.value)} aria-label="Status">
             <option value="">Any status</option>
-            <option value="new">Not started</option>
-            <option value="learning">Learning</option>
+            <option value="new">New</option>
+            <option value="learning">In Mistake Bank</option>
             <option value="mastered">Mastered</option>
           </select>
         </div>
@@ -174,7 +174,7 @@ export function LibraryPage() {
 
 function AddWord() {
   const { db, store, reloadStore, notify } = useApp();
-  const [form, setForm] = useState({ word: '', pos: '', definition: '', bengali: '', difficulty: '' as '' | Difficulty, s1: '', s2: '', s3: '' });
+  const [form, setForm] = useState({ word: '', pos: '', definition: '', bengali: '', difficulty: '' as '' | Difficulty, s1: '' });
   const [issues, setIssues] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
   const settings = useSettings();
@@ -184,7 +184,7 @@ function AddWord() {
     setIssues([]);
     try {
       const res = makeCustomWord(
-        { word: form.word, pos: form.pos, definition: form.definition, bengali: form.bengali, difficulty: form.difficulty || undefined, sentences: [form.s1, form.s2, form.s3] },
+        { word: form.word, pos: form.pos, definition: form.definition, bengali: form.bengali, difficulty: form.difficulty || undefined, sentences: [form.s1] },
         store,
       );
       if (!res.word) {
@@ -192,13 +192,13 @@ function AddWord() {
         return;
       }
       const problems = res.sentenceIssues.map((x) => `“${x.sentence}”: ${x.reason}`);
-      if (!res.practiceReady && settings.aiEndpoint) problems.push('Fewer than two valid sentences: you can generate more on the word’s page.');
-      else if (!res.practiceReady) problems.push('Fewer than two valid, different sentences: the word is saved but cannot be practiced until you add more on its page.');
+      if (!res.practiceReady && settings.aiEndpoint) problems.push('No valid sentence: the word is saved. Add one or generate one on the word’s page.');
+      else if (!res.practiceReady) problems.push('No valid sentence: the word is saved but cannot be practiced until you add one on its page.');
       await db.customWords.put(res.word);
       await reloadStore();
       setIssues(problems);
-      notify(`Added “${res.word.word}”${res.practiceReady ? '' : ' (needs more sentences)'}.`, res.practiceReady ? 'success' : 'info');
-      setForm({ word: '', pos: '', definition: '', bengali: '', difficulty: '', s1: '', s2: '', s3: '' });
+      notify(`Added “${res.word.word}”${res.practiceReady ? '' : ' (needs a sentence)'}.`, res.practiceReady ? 'success' : 'info');
+      setForm({ word: '', pos: '', definition: '', bengali: '', difficulty: '', s1: '' });
       navigate(wordPath(res.word.id));
     } catch (e) {
       notify(`Could not save the word: ${e instanceof Error ? e.message : String(e)}`, 'error');
@@ -242,10 +242,8 @@ function AddWord() {
           </label>
         </div>
         <label className="field">
-          Example sentences <span className="hint">At least two, in clearly different situations. Each must contain the exact word. Use [brackets] if the word appears twice.</span>
-          <input type="text" value={form.s1} onChange={set('s1')} placeholder="Sentence 1" />
-          <input type="text" value={form.s2} onChange={set('s2')} placeholder="Sentence 2" />
-          <input type="text" value={form.s3} onChange={set('s3')} placeholder="Sentence 3 (optional)" />
+          Practice sentence <span className="hint">One sentence is enough. It must contain the exact word. Use [brackets] if the word appears twice.</span>
+          <input type="text" value={form.s1} onChange={set('s1')} placeholder="Sentence" />
         </label>
         {issues.length > 0 && (
           <div className="alert warn">
@@ -300,9 +298,9 @@ function ImportList() {
       </summary>
       <div className="stack" style={{ marginTop: 12 }}>
         <p className="small muted" style={{ margin: 0 }}>
-          CSV needs a header row with <code>word</code>, and may include <code>pos</code>, <code>definition</code>, <code>bengali</code>, <code>difficulty</code> and{' '}
-          <code>sentence1</code>, <code>sentence2</code> … columns. TXT: one word per line, optionally “word - meaning”. Words already in the library are skipped and
-          listed in the report.
+          CSV needs a header row with <code>word</code>, and may include <code>pos</code>, <code>definition</code>, <code>bengali</code>, <code>difficulty</code> and a{' '}
+          <code>sentence</code> column. One sentence per word is enough: if there are more, only the first valid one is kept. TXT: one word per line, optionally “word -
+          meaning”. Words already in the library are skipped and listed in the report.
         </p>
         <div>
           <input ref={fileRef} type="file" accept=".csv,.json,.txt,.md" onChange={(e) => e.target.files?.[0] && void onFile(e.target.files[0])} aria-label="Choose a word list file" />
@@ -328,7 +326,7 @@ export function ImportReportView({ r }: { r: ImportReport }) {
         {r.alreadyInLibrary.length > 0 && <li>Already in the library (skipped): {r.alreadyInLibrary.join(', ')}</li>}
         {r.duplicatesInFile.length > 0 && <li>Repeated in the file (skipped): {r.duplicatesInFile.join(', ')}</li>}
         {r.missingDefinitions.length > 0 && <li>Missing definitions: {r.missingDefinitions.join(', ')}</li>}
-        {r.needSentences.length > 0 && <li>Need two valid sentences before practice: {r.needSentences.join(', ')}</li>}
+        {r.needSentences.length > 0 && <li>Need a valid sentence before practice: {r.needSentences.join(', ')}</li>}
         {r.failedRows.length > 0 && (
           <li>
             Failed rows:

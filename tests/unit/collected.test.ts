@@ -120,15 +120,31 @@ describe('real sentences for each word', () => {
       { id: 't2', corpus: 'ose', title: 'B', license: 'CC BY-SA 4.0', credit: 'B', genre: 'expository' as const, topic: 'x', difficulty: 'easy' as const, text: 'Many plants need water every day to grow strong and healthy roots.' },
     ];
     const index = sentenceIndex(texts);
-    const pick = pickContexts('water', 'w:water', index, {}, ['The children drank cold water after the long football match.']);
+    // The app ships one sentence per word: by default one real sentence is picked.
+    const one = pickContexts('water', 'w:water', index, {}, ['The children drank cold water after the long football match.']);
+    expect(one.contexts).toHaveLength(1);
+    expect(one.collected).toBe(1);
+    expect(one.authored).toBe(0);
+    expect(['t1', 't2']).toContain(one.contexts[0].src);
+    // More can be asked for: they come from different texts.
+    const pick = pickContexts('water', 'w:water', index, {}, ['The children drank cold water after the long football match.'], 2);
     expect(pick.collected).toBe(2);
     expect(pick.authored).toBe(0);
     expect(new Set(pick.contexts.map((c) => c.src))).toEqual(new Set(['t1', 't2']));
-    const fallback = pickContexts('crops', 'w:crops', index, {}, ['Rain helps the crops grow in the dry fields near the village.']);
+    const authored = ['Rain helps the crops grow in the dry fields near the village.'];
+    const real = pickContexts('crops', 'w:crops', index, {}, authored);
+    expect(real.contexts).toHaveLength(1);
+    expect(real.collected).toBe(1);
+    expect(real.authored).toBe(0);
+    const fallback = pickContexts('crops', 'w:crops', index, {}, authored, 2);
     expect(fallback.collected).toBe(1);
     expect(fallback.authored).toBe(1);
+    // A word with no real sentence gets the app's own sentence.
+    const only = pickContexts('village', 'w:village', index, {}, authored);
+    expect(only.contexts.map((c) => c.origin)).toEqual(['authored']);
   });
-  it('most practice sentences in the shipped data are real', () => {
+  it('most practice sentences in the shipped data are real, one per word', () => {
+    for (const w of vocab.words) expect(w.contexts, w.word).toHaveLength(1);
     let real = 0;
     let all = 0;
     for (const w of vocab.words)

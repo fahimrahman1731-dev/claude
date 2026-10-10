@@ -40,8 +40,7 @@ export function CompletedPage() {
         attempts: p.attempts,
         accuracy_percent: Math.round((accuracy(p) ?? 0) * 100),
         practice_seconds: Math.round(p.totalResponseMs / 1000),
-        example_1: w.contexts[0]?.sentence ?? '',
-        example_2: w.contexts[1]?.sentence ?? '',
+        sentence: w.contexts[0]?.sentence ?? '',
       };
     });
     download(`completed-checklist-${new Date().toISOString().slice(0, 10)}.csv`, '﻿' + toCsv(data), 'text/csv;charset=utf-8');
@@ -57,7 +56,7 @@ export function CompletedPage() {
   const reopen = async (id: string, word: string) => {
     try {
       await service.reopenWord(id);
-      notify(`“${word}” is back in the Active Practice List. Its history is kept.`, 'success');
+      notify(`“${word}” is a new word again: it is back in the Active Practice List and can come up in normal practice. Its history is kept.`, 'success');
     } catch (e) {
       notify(`Could not reopen: ${e instanceof Error ? e.message : String(e)}`, 'error');
     }
@@ -70,11 +69,21 @@ export function CompletedPage() {
         <div>
           <h1>Completed Checklist</h1>
           <p className="muted">
-            {mastered.length.toLocaleString()} mastered words — each spelled correctly in two different sentences with no mistake in between.
+            {mastered.length.toLocaleString()} mastered words — each answered correctly once in its sentence. Word practice does not ask them again unless you choose to.
           </p>
+          {mastered.length > 0 && (
+            <p className="small muted" style={{ margin: 0 }}>
+              Optional: “Review mastered words” starts a practice you choose. A miss there sends the word to your Mistake Bank.
+            </p>
+          )}
         </div>
         <div className="row">
-          <button className="btn" disabled={!mastered.length} onClick={() => void review()}>
+          <button
+            className="btn"
+            disabled={!mastered.length}
+            onClick={() => void review()}
+            title="Optional practice you start yourself. A miss sends the word to your Mistake Bank."
+          >
             ↻ Review mastered words
           </button>
           <button className="btn" disabled={!rows.length} onClick={exportCsv}>
@@ -85,7 +94,7 @@ export function CompletedPage() {
       {mastered.length === 0 ? (
         <div className="card">
           <Empty title="No mastered words yet">
-            <p>Answer a word correctly in two different sentences, without a mistake in between, and it will appear here.</p>
+            <p>Answer a word correctly once and it will appear here.</p>
             <Link to="/practice" className="btn primary">
               Start practice
             </Link>
@@ -141,9 +150,9 @@ export function CompletedPage() {
                         <div>{w.definition}</div>
                         {settings.language === 'en-bn' && w.bengali && <div className="bn muted small">{w.bengali}</div>}
                         <details className="small">
-                          <summary className="muted">Examples</summary>
+                          <summary className="muted">Sentence</summary>
                           <ul className="sentence-list">
-                            {w.contexts.slice(0, 3).map((c) => (
+                            {w.contexts.slice(0, 1).map((c) => (
                               <li key={c.id}>
                                 <MarkedSentence sentence={c.sentence} start={c.start} end={c.end} />
                               </li>
@@ -163,7 +172,7 @@ export function CompletedPage() {
                           <Link to={wordPath(w.id)} className="btn small ghost">
                             History
                           </Link>
-                          <button className="btn small" onClick={() => void reopen(w.id, w.word)}>
+                          <button className="btn small" onClick={() => void reopen(w.id, w.word)} title="Make this a new word again">
                             Reopen
                           </button>
                         </div>

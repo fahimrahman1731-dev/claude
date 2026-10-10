@@ -5,10 +5,11 @@ import { livePriority, livePriorityScore } from '../../engine/priority';
 import { accuracy, mistakes } from '../../engine/progress';
 import { spellingRules } from '../../engine/spelling';
 import { checkContext, checkContextSet } from '../../engine/validate';
+import type { Context } from '../../engine/types';
 import { generateContexts } from '../../services/ai';
 import { useApp, useSettings } from '../app-context';
 import { DifficultyBadge, MarkedSentence, PriorityBadge, StatusBadge } from '../components';
-import { date, dateTime, pct, relative, secs } from '../format';
+import { date, dateTime, pct, secs } from '../format';
 import { Link, navigate, wordPath } from '../router';
 
 const RESULT_TEXT: Record<string, string> = { correct: '✓ correct', incorrect: '✕ wrong', timeout: '⏱ timed out', unanswered: '— empty', skipped: '↷ skipped' };
@@ -20,12 +21,44 @@ const ORIGIN_TEXT: Record<string, string> = {
   paragraph: 'paragraph',
   interactive: 'Interactive Reading passage',
 };
+const HISTORY_TEXT: Record<string, string> = {
+  mastered: 'mastered',
+  'lost-mastery': 'missed after mastering (moved to the Mistake Bank)',
+  'retention-failed': 'missed an old review check',
+  reopened: 'reopened (a new word again)',
+};
 const DEF_ORIGIN: Record<string, string> = {
   source: 'from your study materials',
   dictionary: 'from Princeton WordNet (dictionary meaning; the word can have other meanings)',
   custom: 'yours',
   app: 'written for this app',
 };
+
+/** One sentence with the word marked, where it comes from and its credit. */
+function SentenceLine({ c }: { c: Context }) {
+  const { store } = useApp();
+  const cr = c.src ? store.credit(c.src) : undefined;
+  return (
+    <>
+      <MarkedSentence sentence={c.sentence} start={c.start} end={c.end} />{' '}
+      <span className="muted tiny">
+        {ORIGIN_TEXT[c.origin] ?? c.origin}
+        {cr && (
+          <>
+            {' · '}
+            {cr.url ? (
+              <a href={cr.url} target="_blank" rel="noreferrer">
+                {cr.label}
+              </a>
+            ) : (
+              cr.label
+            )}
+          </>
+        )}
+      </span>
+    </>
+  );
+}
 
 export function WordDetailPage({ id }: { id: string }) {
   const { db, store, service, report, notify, reloadStore } = useApp();
@@ -58,7 +91,7 @@ export function WordDetailPage({ id }: { id: string }) {
 
   const practice = async () => {
     try {
-      await service.startSession({ mode: 'spelling', focus: 'words', wordIds: [w.id], target: Math.max(2, w.contexts.length) });
+      await service.startSession({ mode: 'spelling', focus: 'words', wordIds: [w.id], target: 1 });
       navigate('/practice/session');
     } catch (e) {
       notify(e instanceof Error ? e.message : String(e), 'error');
@@ -83,12 +116,15 @@ export function WordDetailPage({ id }: { id: string }) {
   const generate = async () => {
     setBusy(true);
     try {
-      const r = await generateContexts(settings.aiEndpoint, w, 2);
+      const r = await generateContexts(settings.aiEndpoint, w, 1);
       if (r.added.length) {
         await db.aiContexts.bulkPut(r.added.map((c) => ({ ...c, createdAt: Date.now() })));
         await reloadStore();
       }
-      notify(`${r.added.length} new sentence(s) added${r.rejected.length ? `, ${r.rejected.length} rejected by validation` : ''}.`, r.added.length ? 'success' : 'info');
+      notify(
+        `${r.added.length ? 'Sentence added' : 'No sentence added'}${r.rejected.length ? ` (${r.rejected.length} rejected by validation)` : ''}.`,
+        r.added.length ? 'success' : 'info',
+      );
     } catch (e) {
       notify(e instanceof Error ? e.message : String(e), 'error');
     } finally {
@@ -210,11 +246,16 @@ export function WordDetailPage({ id }: { id: string }) {
           )}
         </dl>
         <div className="row" style={{ marginTop: 14 }}>
-          <button className="btn primary" disabled={w.contexts.length < 1} onClick={() => void practice()}>
+          <button
+            className="btn primary"
+            disabled={w.contexts.length < 1}
+            onClick={() => void practice()}
+            title={p?.status === 'mastered' ? 'Optional practice. A miss sends the word to your Mistake Bank.' : 'One correct answer masters the word.'}
+          >
             ▶ Practice this word
           </button>
           {p?.status === 'mastered' && (
-            <button className="btn" onClick={() => void service.reopenWord(w.id).then(() => notify('Reopened for practice.', 'success'))}>
+            <button className="btn" onClick={() => void service.reopenWord(w.id).then(() => notify('Reopened: it is a new word again.', 'success'))}>
               Reopen for practice
             </button>
           )}
@@ -235,7 +276,15 @@ export function WordDetailPage({ id }: { id: string }) {
             <dl className="kv">
               <dt>Status</dt>
               <dd>
-                {p.status === 'mastered' ? `Mastered on ${date(p.masteredAt)}` : p.status === 'learning' ? 'Learning' : 'Not started'}
+                {p.status === 'mastered' ? (
+                  `Mastered on ${date(p.masteredAt)}`
+                ) : p.status === 'learning' ? (
+                  <>
+                    In your <Link to="/mistakes">Mistake Bank</Link>: fix it in Practice My Mistakes
+                  </>
+                ) : (
+                  'New'
+                )}
               </dd>
               <dt>Attempts</dt>
               <dd>
@@ -243,20 +292,14 @@ export function WordDetailPage({ id }: { id: string }) {
               </dd>
               <dt>Accuracy</dt>
               <dd>{pct(accuracy(p))}</dd>
-              <dt>Streak</dt>
+              <dt>In a row</dt>
               <dd>
-                {p.consecutiveCorrect} correct in a row · {p.consecutiveIncorrect} wrong in a row
-              </dd>
-              <dt>Contexts</dt>
-              <dd>
-                {p.streakContextIds.length} different sentence(s) correct since the last mistake · {p.correctContextIds.length} ever
+                {p.consecutiveCorrect} correct · {p.consecutiveIncorrect} wrong
               </dd>
               <dt>Average time</dt>
               <dd>{secs(p.answeredCount ? p.totalResponseMs / p.answeredCount : undefined)}</dd>
               <dt>Last practiced</dt>
               <dd>{dateTime(p.lastPracticedAt)}</dd>
-              <dt>Next review</dt>
-              <dd>{p.status === 'mastered' && !settings.retentionReviews ? 'Retention reviews are off' : relative(p.nextReviewAt, Date.now())}</dd>
               <dt>Mistakes</dt>
               <dd>{mistakes(p)}</dd>
               {p.history.length > 0 && (
@@ -265,7 +308,7 @@ export function WordDetailPage({ id }: { id: string }) {
                   <dd className="small">
                     {p.history.map((h, i) => (
                       <div key={i}>
-                        {dateTime(h.at)}: {h.event === 'mastered' ? 'mastered' : h.event === 'retention-failed' ? 'missed a retention check (back to active)' : 'reopened for practice'}
+                        {dateTime(h.at)}: {HISTORY_TEXT[h.event] ?? h.event}
                       </div>
                     ))}
                   </dd>
@@ -292,48 +335,44 @@ export function WordDetailPage({ id }: { id: string }) {
       </div>
 
       <div className="card">
-        <h2>Practice sentences ({w.contexts.length})</h2>
-        {w.contexts.length < 2 && <div className="alert warn small">This word needs at least two different sentences before it can be mastered.</div>}
+        <h2>Practice sentence</h2>
+        {w.contexts.length < 1 && <div className="alert warn small">This word has no practice sentence yet. Add one below to practice it.</div>}
         <ol className="sentence-list">
-          {w.contexts.map((c) => (
+          {w.contexts.slice(0, 1).map((c) => (
             <li key={c.id}>
-              <MarkedSentence sentence={c.sentence} start={c.start} end={c.end} />{' '}
-              <span className="muted tiny">
-                {ORIGIN_TEXT[c.origin] ?? c.origin}
-                {c.src && (() => {
-                  const cr = store.credit(c.src);
-                  return cr ? (
-                    <>
-                      {' · '}
-                      {cr.url ? (
-                        <a href={cr.url} target="_blank" rel="noreferrer">
-                          {cr.label}
-                        </a>
-                      ) : (
-                        cr.label
-                      )}
-                    </>
-                  ) : null;
-                })()}
-                {p?.correctContextIds.includes(c.id) ? ' · answered correctly' : p?.seenContextIds.includes(c.id) ? ' · seen' : ''}
-              </span>
+              <SentenceLine c={c} />
+              {p?.correctContextIds.includes(c.id) ? <span className="muted tiny"> · answered correctly</span> : p?.seenContextIds.includes(c.id) ? <span className="muted tiny"> · seen</span> : null}
             </li>
           ))}
         </ol>
+        {w.contexts.length > 1 && (
+          <details className="small">
+            <summary className="muted">Other sentences you saved ({w.contexts.length - 1}) — not used: each word is practiced in one sentence</summary>
+            <ul className="sentence-list">
+              {w.contexts.slice(1).map((c) => (
+                <li key={c.id}>
+                  <SentenceLine c={c} />
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
         {paragraphUses.length > 0 && (
           <p className="small muted">
             Also a gap in {paragraphUses.length} Read and Complete paragraph(s): {paragraphUses.map((x) => x.title).join(', ')}.
           </p>
         )}
-        <div className="row" style={{ marginTop: 10 }}>
-          <input type="text" value={newSentence} onChange={(e) => setNewSentence(e.target.value)} placeholder={`Add your own sentence with “${w.word}”`} style={{ flex: '1 1 260px' }} aria-label="New sentence" />
-          <button className="btn" disabled={!newSentence.trim()} onClick={() => void addSentence()}>
-            Add sentence
-          </button>
-          <button className="btn" disabled={busy} onClick={() => void generate()} title={settings.aiEndpoint ? 'Ask the configured AI server for two more sentences' : 'Set up an AI server in Settings first'}>
-            {busy ? 'Generating…' : '✨ Generate 2 more (AI)'}
-          </button>
-        </div>
+        {w.contexts.length < 1 && (
+          <div className="row" style={{ marginTop: 10 }}>
+            <input type="text" value={newSentence} onChange={(e) => setNewSentence(e.target.value)} placeholder={`Add a sentence with “${w.word}”`} style={{ flex: '1 1 260px' }} aria-label="New sentence" />
+            <button className="btn" disabled={!newSentence.trim()} onClick={() => void addSentence()}>
+              Add sentence
+            </button>
+            <button className="btn" disabled={busy} onClick={() => void generate()} title={settings.aiEndpoint ? 'Ask the configured AI server for one sentence' : 'Set up an AI server in Settings first'}>
+              {busy ? 'Generating…' : '✨ Generate one (AI)'}
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="card">

@@ -12,7 +12,7 @@ export function DifficultyBadge({ d }: { d: Difficulty }) {
 }
 
 export function StatusBadge({ s }: { s: MasteryStatus }) {
-  return <span className={`badge ${s}`}>{s === 'mastered' ? '✓ Mastered' : s === 'learning' ? 'Learning' : 'Not started'}</span>;
+  return <span className={`badge ${s}`}>{s === 'mastered' ? '✓ Mastered' : s === 'learning' ? 'In Mistake Bank' : 'New'}</span>;
 }
 
 export function ProgressBar({ value, max = 1, label, good }: { value: number; max?: number; label: string; good?: boolean }) {

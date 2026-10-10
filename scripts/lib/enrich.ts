@@ -158,9 +158,9 @@ export interface ContextPick {
 }
 
 /**
- * Real sentences first (up to `max`, from different texts and not too similar),
- * then WordNet example sentences, then the app's own sentences only if a word
- * still has fewer than two.
+ * Up to `want` sentences for a word: real sentences first (from different texts and
+ * not too similar to each other), then WordNet example sentences, then the app's own
+ * sentences only when there is still no real one. The app ships one sentence per word.
  */
 export function pickContexts(
   word: string,
@@ -168,7 +168,7 @@ export function pickContexts(
   index: ReturnType<typeof sentenceIndex>,
   lex: Lexicon,
   authored: string[],
-  max = 4,
+  want = 1,
 ): ContextPick {
   const out: Context[] = [];
   const usedTexts = new Set<string>();
@@ -177,7 +177,7 @@ export function pickContexts(
   let authoredUsed = 0;
   const fits = (c: Context) => out.every((o) => contextSimilarity(o.sentence, c.sentence, word) < 0.6);
   for (const sid of index.byWord.get(word) ?? []) {
-    if (collected >= max) break;
+    if (collected >= want) break;
     const rec = index.sentences[sid];
     const single = rec.textId === 'asset' || rec.textId.startsWith('cefrsp');
     if (!single && usedTexts.has(rec.textId)) continue;
@@ -187,9 +187,9 @@ export function pickContexts(
     usedTexts.add(rec.textId);
     collected++;
   }
-  if (out.length < 2) {
+  if (out.length < want) {
     for (const raw of lex[word]?.ex ?? []) {
-      if (out.length >= 2) break;
+      if (out.length >= want) break;
       let s = raw.trim();
       // WordNet examples are often phrases ("the crowded canvas of history", "felt ashamed of
       // my torn coat"): keep only ones that start like a sentence and pass the same checks as real text.
@@ -203,9 +203,9 @@ export function pickContexts(
       dictionary++;
     }
   }
-  if (out.length < 2) {
+  if (out.length < want) {
     for (const s of authored) {
-      if (out.length >= 2) break;
+      if (out.length >= want) break;
       const c = checkContext(s, word, id, 'authored');
       if (!c.context || c.warnings.some((w) => w.startsWith('giveaway')) || !fits(c.context)) continue;
       out.push(c.context);

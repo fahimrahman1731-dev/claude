@@ -13,8 +13,8 @@ export function DashboardPage() {
   const attempts = useLiveQuery(() => db.attempts.toArray(), [db]);
   const active = useLiveQuery(() => db.sessions.where('status').equals('active').first(), [db]);
   const stats = useMemo(
-    () => (progress && attempts ? computeStats(store.words, progress, attempts, { now: Date.now(), retentionReviews: settings.retentionReviews }) : undefined),
-    [progress, attempts, store, settings.retentionReviews],
+    () => (progress && attempts ? computeStats(store.words, progress, attempts, { now: Date.now() }) : undefined),
+    [progress, attempts, store],
   );
   if (!stats) return <p className="muted">Loading…</p>;
   const failed = report?.sources.filter((s) => s.status !== 'ok') ?? [];
@@ -63,9 +63,12 @@ export function DashboardPage() {
             <li>Choose a mode in Start Practice. Small Grammar Words (D) or Fill in the Blanks (B) are good first steps.</li>
             <li>Each question shows the first half of a word. Type the missing letters; spelling must be exact.</li>
             <li>
-              A word is <strong>mastered</strong> only after you spell it correctly in <strong>two different sentences</strong> with no mistake in between.
+              Each word has <strong>one sentence</strong>. One correct answer <strong>masters</strong> it, and it moves to your Completed Checklist.
             </li>
-            <li>Missed words come back after a few questions, in a new sentence, until you master them.</li>
+            <li>
+              A missed word goes to your <Link to="/mistakes">Mistake Bank</Link>. It never comes back by itself: fix it in Practice My Mistakes. There are no
+              scheduled reviews.
+            </li>
           </ol>
         </div>
       )}
@@ -73,9 +76,13 @@ export function DashboardPage() {
       <div className="grid grid-4">
         <Stat label="Mastered" value={`${stats.masteredWords.toLocaleString()}`} sub={`of ${stats.totalWords.toLocaleString()} unique words`} />
         <Stat label="Mastery" value={`${stats.masteryPct.toFixed(1)}%`} sub={<ProgressBar value={stats.masteredWords} max={stats.totalWords} label="Mastery percentage" good />} />
-        <Stat label="Due for review" value={stats.dueWords} sub={`${stats.learningWords} words in progress`} />
+        <Stat
+          label="In Mistake Bank"
+          value={stats.mistakeWords.toLocaleString()}
+          sub={stats.mistakeWords > 0 ? <Link to="/mistakes">Fix them in Practice My Mistakes</Link> : 'No missed words to fix'}
+        />
         <Stat label="Accuracy" value={pct(stats.accuracy)} sub={`${stats.graded} graded answers`} />
-        <Stat label="Attempted" value={stats.attemptedWords} sub={`${stats.remainingWords.toLocaleString()} not yet mastered`} />
+        <Stat label="New words left" value={stats.newWords.toLocaleString()} sub={`${stats.attemptedWords.toLocaleString()} words attempted`} />
         <Stat label="Practice streak" value={`${stats.currentStreak} day${stats.currentStreak === 1 ? '' : 's'}`} sub={`Longest: ${stats.longestStreak}`} />
         <Stat label="Average response" value={secs(stats.avgResponseMs)} sub="submitted answers only" />
         <Stat label="Total practice time" value={duration(stats.totalPracticeMs)} />

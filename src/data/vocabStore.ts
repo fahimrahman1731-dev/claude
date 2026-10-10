@@ -65,7 +65,7 @@ export class VocabStore {
   }
 
   practiceReady(w: VocabWord): boolean {
-    return w.contexts.length >= 2;
+    return w.contexts.length >= 1;
   }
 }
 

@@ -61,8 +61,10 @@ export interface DashboardStats {
   attemptedWords: number;
   remainingWords: number;
   masteredWords: number;
-  learningWords: number;
-  dueWords: number;
+  /** Words whose latest answer was a mistake (in the Mistake Bank, not fixed yet). */
+  mistakeWords: number;
+  /** Words never answered. */
+  newWords: number;
   masteryPct: number;
   counts: Record<ResultKind, number>;
   graded: number;
@@ -82,7 +84,7 @@ export function computeStats(
   words: VocabWord[],
   progress: WordProgress[],
   attempts: AttemptRecord[],
-  opts: { now: number; retentionReviews: boolean; days?: number },
+  opts: { now: number; days?: number },
 ): DashboardStats {
   const wordIds = new Set(words.map((w) => w.id));
   const byId = new Map(words.map((w) => [w.id, w]));
@@ -128,11 +130,9 @@ export function computeStats(
   for (const d of Object.values(byDiff)) d.pct = d.graded ? d.correct / d.graded : undefined;
   const graded = counts.correct + counts.incorrect + counts.timeout + counts.unanswered;
   const mastered = prog.filter((p) => p.status === 'mastered').length;
-  const learning = prog.filter((p) => p.status === 'learning').length;
+  const mistakeWords = prog.filter((p) => p.status === 'learning').length;
   const attempted = prog.filter((p) => p.attempts > 0).length;
-  const due = prog.filter(
-    (p) => (p.status === 'learning' && (p.nextReviewAt ?? 0) <= opts.now) || (opts.retentionReviews && p.status === 'mastered' && (p.nextReviewAt ?? Infinity) <= opts.now),
-  ).length;
+  const answeredWords = prog.filter((p) => p.status !== 'new').length;
 
   const mostMissed = prog
     .filter((p) => mistakes(p) > 0)
@@ -166,8 +166,8 @@ export function computeStats(
     attemptedWords: attempted,
     remainingWords: words.length - mastered,
     masteredWords: mastered,
-    learningWords: learning,
-    dueWords: due,
+    mistakeWords,
+    newWords: words.length - answeredWords,
     masteryPct: words.length ? (mastered / words.length) * 100 : 0,
     counts,
     graded,

@@ -5,7 +5,13 @@ A practice app for the **reading section of the Duolingo English Test (DET)**. I
 - **Read and Complete**
 - **Interactive Reading**
 
-It also has vocabulary drills (spelling, small grammar words, word endings). It tracks every word until it is mastered, brings mistakes back on a short schedule, and keeps all progress in the browser.
+It also has vocabulary drills (spelling, small grammar words, word endings). The learning rule is simple:
+- every word has **one** practice sentence;
+- one correct typed answer **masters** the word;
+- a missed word goes to the **Mistake Bank** and stays there until you fix it in **Practice My Mistakes**. It never comes back by itself;
+- there are no scheduled reviews.
+
+All progress is kept in the browser.
 
 **Real content.** The practice sentences, Read and Complete texts and Interactive Reading passages are real, openly licensed texts copied unchanged, and each shows its source. The words come from:
 - the student's two study documents in `data/sources/`, with official DET answer words first;
@@ -82,7 +88,7 @@ One timer covers all six questions. You cannot go back, and CONTINUE stays disab
 - **1 to 3 letters (the default, as requested).** The default gives half the word, but never more than 3 letters. Short words show 1 or 2 letters, so *confusing* shows `con` and *is* shows `i`.
 - **Half the word.** Settings can switch to the DET's own rule, the first half rounded down (`conf`). Both rules give the same result for words of up to 7 letters.
 
-**Vocabulary drills** (second tab): Word Spelling, Small Grammar Words, Word Endings and Practice My Mistakes. They are extra practice, not DET question types.
+**Vocabulary drills** (second tab): Word Spelling, Small Grammar Words, Word Endings and Practice My Mistakes. They are extra practice, not DET question types. See [How practice works](#how-practice-works) for which words each one gives you.
 
 ## Collected real material
 
@@ -119,7 +125,9 @@ The full report is in [`data/generated/import-report.md`](data/generated/import-
 | Words deleted as unrealistic DET words, each with its reason | 11 |
 | Words added from trusted lists (NGSL, NAWL, CEFR-J A1–B2, Octanove C1) that have real sentences | 3,246 |
 | Practice words in total | 5,836 |
-| Practice sentences: real / WordNet / written for the app | 20,569 / 47 / 432 |
+| Practice sentences, exactly one per word | 5,836 |
+| Of these: real / WordNet / written for the app | 5,666 / 18 / 152 |
+| Size of `public/data/vocab.json` | about 6.4 MB |
 | Read and Complete texts (CLEAR 161, OneStopEnglish 106, OpenStax 53) | 320, with 8–16 gaps each |
 | Interactive Reading passages (CLEAR, OneStopEnglish, OpenStax and the official research sample). The 92 written for this app were each solved blind by a second reviewer, and every answer they could argue with was fixed | 93 |
 
@@ -145,30 +153,53 @@ What does repeat is the **format**, the **kinds of text** (stories, news, textbo
 
 ## How practice works
 
-### Mastery
+### One sentence, one correct answer
 
-A word is **mastered** when it is spelled correctly in **two different sentences in a row**, with no mistake, timeout or unanswered attempt in between. These never count toward mastery:
-- skipping or viewing a word;
-- choosing a word from options in Interactive Reading. Choosing it wrong, though, counts as a mistake and brings the word back.
+- Every word has **one** practice sentence, chosen by the build (a real one for 5,666 of the 5,836 words). Custom words keep only their first valid sentence.
+- Fill in the Blanks, Word Spelling, Small Grammar Words and Word Endings give you **only new words** (words you have never answered). Each word is asked at most once per session.
+- **One correct typed answer masters a word** at once. It moves to the Completed Checklist.
+- A wrong, timed-out or empty answer puts the word in the **Mistake Bank** (shown as "In Mistake Bank" or "to fix"). It **never comes back by itself** in normal practice.
+- A skip is not counted. The word stays new and can come back in a later session.
 
-Retention reviews come back after 1, 3, 7, 16, 35 and 75 days. The "intensive" setting multiplies these by 0.6 and "relaxed" by 1.5. A mistake on a retention review sends the word back to active practice; its history is kept.
+### Mistake Bank
 
-### Review schedule
+- **Practice My Mistakes** gives you only the words in the Mistake Bank, most-missed first. Each word is asked at most once per session, in its one sentence.
+- One correct answer there masters the word, and it leaves the Mistake Bank.
+- A wrong answer keeps it in the Mistake Bank.
 
-All the numbers are in `src/engine/config.ts`.
+### Read and Complete and Interactive Reading
 
-| Event | When the word comes back |
-| --- | --- |
-| First mistake in a row | after 3–5 other questions, in a different sentence |
-| Second mistake in a row | after 1–2 other questions |
-| Third or later mistake in a row | after 1 other question |
-| First correct answer | after 6–10 other questions, in a new sentence |
-| Skip | after 4–8 other questions |
-| Still being learned when a session ends | stays due, so the next session reviews it first |
+- Read and Complete gaps are typed. A correct gap masters the word; a wrong one sends it to the Mistake Bank.
+- In Interactive Reading, choosing the right word from options never masters it. A wrong choice is a mistake: the word goes to the Mistake Bank, even if it was mastered. Its history then shows "lost mastery".
+
+### No scheduled reviews
+
+There are none:
+- no review dates or checks after some days;
+- no Review frequency setting;
+- no quota of new words or review questions per session.
+
+A mastered word comes back only when you choose:
+- **Review mastered words** (Completed Checklist page) starts an optional practice. A miss there sends the word to the Mistake Bank.
+- **Reopen** makes a mastered word new again. Its history is kept.
+- You can also practise words you pick yourself from the Active Practice List or a word page.
+
+A mastered word can still appear in a Read and Complete text or an Interactive Reading passage.
+
+### Progress from the previous version
+
+Progress saved by the previous version is converted automatically, once, when the app opens (database version 3):
+- a word whose latest typed answer was correct becomes mastered;
+- a word with an unfixed mistake stays in the Mistake Bank;
+- a mastered word stays mastered, and anything else is new.
+
+Backups made before version 3 are converted the same way when they are restored.
 
 ### Priority
 
-Words that are answers in official DET material come first. Then come the guide's lists and recurring words, then trusted-list words. The student's own mistakes raise a word's priority. **Adaptive difficulty** starts easy, moves up after 85% correct over the last 8 answers, and moves down below 50%.
+New words that are answers in official DET material come first. Then come the guide's lists and recurring words, then trusted-list words. In Practice My Mistakes, the most-missed words come first. **Adaptive difficulty** starts easy, moves up after 85% correct over the last 8 answers, and moves down below 50%.
+
+The learning rule is in `src/engine/progress.ts` and word choice is in `src/engine/selection.ts`. Timers, priority weights and adaptive difficulty are in `src/engine/config.ts`.
 
 ## Saved data and its limits
 
@@ -185,7 +216,7 @@ Limits:
 - Clearing site data or private browsing deletes it.
 - It holds one person per browser profile.
 
-**Settings → Your data** downloads a full JSON backup (format version 2) and restores it. Backups from the previous version still restore.
+**Settings → Your data** downloads a full JSON backup (format version 3) and restores it. Older backups still restore, and their progress is converted to the current rule (see [Progress from the previous version](#progress-from-the-previous-version)).
 
 ## Deployment
 
@@ -203,7 +234,7 @@ CI (`.github/workflows/ci.yml`) runs on every push:
 
 ## Optional AI sentences
 
-This is not needed: almost every word already has real sentences. `ANTHROPIC_API_KEY=… npm run ai-proxy` starts a small server that can add sentences for custom words.
+This is not needed: every word already has its one sentence, and almost all of them are real. `ANTHROPIC_API_KEY=… npm run ai-proxy` starts a small server that can write a sentence for a custom word.
 - The key stays on the server.
 - Every sentence is validated before it is saved.
 - Server-side fallback is turned on.
@@ -215,11 +246,19 @@ See the comments at the top of `server/ai-proxy.mjs`.
 
 `npm test` runs the unit, pipeline and functional tests. `npm run test:e2e` runs the browser tests.
 
-**Functional tests** (`tests/functional/`), run on the real practice service and data:
-- the 12 required tests: mistakes and their schedule, mastery in two different sentences, persistence through a reload, timeouts, untimed mode, Practice My Mistakes, library search, 100% completion, and failed sources reported;
-- a full Interactive Reading set: shared timer, saving after each part, resuming after a refresh, scoring all six questions, partial highlight credit, the time-out case, the Mistake Bank (with the exact missed word), "choosing never masters", and skipping a passage that an update removed.
+**Functional tests** (`tests/functional/`), run on the real practice service and data. The required tests check that:
+- one correct typed answer masters a word and moves it to the Completed Checklist;
+- a wrong, timed-out or empty answer puts the word in the Mistake Bank, and it never comes back by itself in normal practice;
+- Practice My Mistakes serves only missed words, most-missed first, in the same sentence; one correct answer there masters the word, and a miss keeps it in the Mistake Bank;
+- every word has exactly one sentence, and each word is asked at most once per session;
+- progress saved by the previous version, and old backups, are converted: latest typed answer correct means mastered, an unfixed mistake stays in the Mistake Bank;
+- progress survives a reload, timeouts and untimed mode work, the library search finds words, 100% completion covers exactly the imported words, and a failed source is reported.
+
+A full Interactive Reading set is also tested: shared timer, saving after each part, resuming after a refresh, scoring all six questions, partial highlight credit, the time-out case, the Mistake Bank (with the exact missed word), "choosing never masters", and skipping a passage that an update removed.
 
 **Unit tests** cover:
+- the learning rule: one-answer mastery, the Mistake Bank, skips, "choosing never masters", reopening, and converting old progress;
+- word choice: only new words in normal practice, only Mistake Bank words in Practice My Mistakes, each word once per session;
 - the clue rule (1–3 letters, or half the word);
 - the DET C-test alternation;
 - the official Interactive Reading order and wording, and its scoring;
@@ -227,7 +266,7 @@ See the comments at the top of `server/ai-proxy.mjs`.
 - the real-text filters (topics, one sentence, headings, accented names), the sentence splitter and the deletion rules;
 - the Read and Complete gap rule around abbreviations and prices;
 - British-spelling detection;
-- how many sentences are real;
+- one sentence per word, and how many sentences are real;
 - answer checking, backups and word-list import.
 
 **Browser tests** check:
@@ -249,7 +288,7 @@ data/authored/interactive/ Interactive Reading question sets on real passages (J
 data/authored/paragraphs/ older app-written paragraphs, used only if data/collected is missing
 data/generated/           import report and raw extraction
 scripts/                  data pipeline; scripts/collect/ downloads the real material
-src/engine/               practice rules: answers, clues, scheduling, mastery, Interactive Reading scoring
+src/engine/               practice rules: answers, clues, word choice, mastery and the Mistake Bank, Interactive Reading scoring
 src/db/                   IndexedDB schema (Dexie)
 src/services/             practice sessions, backups, word import, AI client
 src/ui/                   React pages; LetterBoxes.tsx and det.tsx are the DET-style input and card

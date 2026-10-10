@@ -1,4 +1,3 @@
-import { MASTERY } from './config';
 import { livePriority } from './priority';
 import { mistakes } from './progress';
 import type { VocabWord, WordProgress } from './types';
@@ -13,7 +12,7 @@ export function isAcademic(w: VocabWord): boolean {
   );
 }
 
-export type ActiveFilter = 'all' | 'high' | 'missed' | 'small' | 'academic' | 'difficult' | 'due' | 'never';
+export type ActiveFilter = 'all' | 'high' | 'missed' | 'small' | 'academic' | 'difficult' | 'mistakes' | 'never';
 
 export const ACTIVE_FILTERS: { value: ActiveFilter; label: string }[] = [
   { value: 'all', label: 'All active words' },
@@ -22,11 +21,11 @@ export const ACTIVE_FILTERS: { value: ActiveFilter; label: string }[] = [
   { value: 'small', label: 'Small grammar words' },
   { value: 'academic', label: 'Academic vocabulary' },
   { value: 'difficult', label: 'Difficult words' },
-  { value: 'due', label: 'Due for review' },
+  { value: 'mistakes', label: 'In Mistake Bank' },
   { value: 'never', label: 'Never attempted' },
 ];
 
-export function matchesActiveFilter(f: ActiveFilter, w: VocabWord, p: WordProgress | undefined, now: number): boolean {
+export function matchesActiveFilter(f: ActiveFilter, w: VocabWord, p: WordProgress | undefined): boolean {
   switch (f) {
     case 'all':
       return true;
@@ -40,17 +39,11 @@ export function matchesActiveFilter(f: ActiveFilter, w: VocabWord, p: WordProgre
       return isAcademic(w);
     case 'difficult':
       return w.difficulty === 'advanced' || (!!p && p.consecutiveIncorrect >= 2);
-    case 'due':
-      return !!p && p.status === 'learning' && (p.nextReviewAt ?? 0) <= now;
+    case 'mistakes':
+      return p?.status === 'learning';
     case 'never':
       return !p || p.attempts === 0;
   }
-}
-
-/** Distinct sentences answered correctly since the last mistake, out of the number mastery needs. */
-export function contextProgress(p: WordProgress | undefined): string {
-  const n = p?.streakContextIds.length ?? 0;
-  return `${Math.min(n, MASTERY.requiredDistinctContexts)}/${MASTERY.requiredDistinctContexts}`;
 }
 
 export type CompletedCategory = 'all' | 'small' | 'academic' | 'easy' | 'intermediate' | 'advanced' | 'custom';

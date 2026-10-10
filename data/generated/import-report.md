@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `b2a614497351`, generated 2026-10-09T13:06:27.564Z.
+Data version `2265c35ee956`, generated 2026-10-10T06:02:38.199Z.
 
 ## Totals
 
@@ -14,12 +14,12 @@ Data version `b2a614497351`, generated 2026-10-09T13:06:27.564Z.
 | Definitions taken from the study materials | 347 |
 | Entries with missing definitions | 0 |
 | Words with a Bengali meaning | 4073 |
-| Entries needing example sentences (fewer than 2 valid) | 0 |
-| Practice-ready words (2+ distinct valid sentences) | 5836 |
-| Sentence contexts | 21048 |
+| Entries needing an example sentence (none valid) | 0 |
+| Practice-ready words (one valid practice sentence each) | 5836 |
+| Sentence contexts | 5836 |
 | Read and Complete paragraphs | 320 |
 | Paragraph gaps | 3878 |
-| Total practice contexts | 24926 |
+| Total practice contexts | 9714 |
 | Failed sources | 0 |
 | Failed sections | 0 |
 
@@ -74,17 +74,17 @@ Sentences, Read and Complete texts and Interactive Reading passages come from re
 
 | Measure | Count |
 | --- | --- |
-| Sentences: real (collected) | 20569 |
-| Sentences: WordNet examples | 47 |
-| Sentences: written for the app (only where too few real ones exist) | 432 |
-| Words practised only with real sentences | 5556 |
+| Sentences: real (collected) | 5666 |
+| Sentences: WordNet examples | 18 |
+| Sentences: written for the app (only where too few real ones exist) | 152 |
+| Words practised only with real sentences | 5684 |
 | Words added from trusted lists (NGSL, NAWL, CEFR-J, Octanove C1) | 3246 |
 | Words deleted as unrealistic DET words | 11 |
 | Read and Complete texts | clear 161, ose 106, ostx 53 (from 3462 candidates) |
 | Interactive Reading sets | 93 |
 | Definitions: study materials / WordNet / app | 347 / 3246 / 2243 |
 | Bengali: app / Apertium dictionary / none | 2590 / 1483 / 1763 |
-| Source texts used | 3228 |
+| Source texts used | 1841 |
 
 Words added by level: A1 461, A2 528, B1 927, B2 794, C1 239, C2 29, list only 268.
 
@@ -106,13 +106,13 @@ Words added by level: A1 461, A2 528, B1 927, B2 794, C1 239, C2 29, list only 2
 
 ### Licences of the texts used
 
-- CC BY-SA 3.0 and GFDL: 202 texts
-- CC BY-SA 3.0: 189 texts
-- CC BY 4.0: 512 texts
-- CC BY 3.0: 12 texts
+- CC BY-SA 3.0 and GFDL: 126 texts
+- CC BY-SA 3.0: 110 texts
+- CC BY 4.0: 305 texts
 - CC BY-SA: 1 texts
-- CC BY-SA 4.0: 265 texts
-- CC BY-NC-SA 4.0: 2046 texts
+- CC BY 3.0: 6 texts
+- CC BY-SA 4.0: 207 texts
+- CC BY-NC-SA 4.0: 1085 texts
 - CC BY-NC 4.0: 1 texts
 
 ## Rejected entries

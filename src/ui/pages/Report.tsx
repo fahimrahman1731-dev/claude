@@ -27,8 +27,8 @@ export function ReportPage() {
     ['Duplicate entries merged', t.duplicatesMerged, 'Same spelling listed in more than one place. Different forms (develop, developed) stay separate.'],
     ['Definitions from your study materials', t.definitionsFromSources],
     ['Entries with missing definitions', t.missingDefinitions],
-    ['Entries needing example sentences', t.needingSentences, 'Words with fewer than two valid, different sentences cannot be mastered yet.'],
-    ['Practice-ready words', t.practiceReady],
+    ['Entries needing a practice sentence', t.needingSentences, 'Words without a valid sentence cannot be practiced yet.'],
+    ['Practice-ready words', t.practiceReady, 'Each has one validated practice sentence.'],
     ['Sentence contexts', t.sentenceContexts],
     ['Read and Complete paragraphs / gaps', t.paragraphs, `${t.paragraphGaps} gaps`],
     ['Total practice contexts', t.totalPracticeContexts],
@@ -50,8 +50,8 @@ export function ReportPage() {
         {problems
           ? `Some sources or sections failed to import. Words from them are missing.`
           : t.needingSentences || t.missingDefinitions
-            ? `All sources were read. ${t.needingSentences} words still need sentences and ${t.missingDefinitions} need definitions.`
-            : `All ${report.sources.length} sources were read and every imported word has a definition and at least two validated sentences.`}
+            ? `All sources were read. ${t.needingSentences} words still need a sentence and ${t.missingDefinitions} need definitions.`
+            : `All ${report.sources.length} sources were read and every imported word has a definition and one validated practice sentence.`}
       </div>
       <div className="table-wrap">
         <table>
@@ -143,7 +143,7 @@ export function ReportPage() {
           </summary>
           <div className="stack small" style={{ marginTop: 10 }}>
             {report.missingDefinitions.length > 0 && <p>Missing definitions: {report.missingDefinitions.join(', ')}</p>}
-            {report.needingSentences.length > 0 && <p>Needing sentences: {report.needingSentences.join(', ')}</p>}
+            {report.needingSentences.length > 0 && <p>Needing a sentence: {report.needingSentences.join(', ')}</p>}
             {report.invalidSentences.length > 0 && (
               <ul>
                 {report.invalidSentences.map((x, i) => (
