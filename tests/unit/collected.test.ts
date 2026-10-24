@@ -182,3 +182,22 @@ describe('one good sentence per word in the shipped data', () => {
   });
 });
 
+
+describe('Fill in the Blanks uses the 3,000 most important verified words', () => {
+  const fib = vocab.words.filter((w) => w.tags.includes('fib-top'));
+  it('has exactly 3,000 words, all content words that Fill in the Blanks can ask', () => {
+    expect(fib).toHaveLength(3000);
+    for (const w of fib) expect(w.isSmallWord, w.word).toBe(false);
+  });
+  it('keeps every official DET word that Fill in the Blanks can ask', () => {
+    const official = vocab.words.filter((w) => w.evidence.includes('official') && !w.isSmallWord && w.pos.some((p) => ['n', 'v', 'adj', 'adv'].includes(p)) && !w.tags.includes('british-word'));
+    for (const w of official) expect(w.tags, w.word).toContain('fib-top');
+  });
+  it('every word from a word list alone is backed by at least two research signals', () => {
+    for (const w of fib)
+      if (w.evidence.every((e) => e === 'trusted-list')) {
+        const signals = Number(!!w.cefr) + Number((w.lists ?? []).some((l) => l === 'ngsl' || l === 'nawl')) + Number((w.zipf ?? 0) >= 3);
+        expect(signals, w.word).toBeGreaterThanOrEqual(2);
+      }
+  });
+});

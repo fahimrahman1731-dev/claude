@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T01:15:40.645Z",
+ "generatedAt": "2026-10-24T01:30:14.729Z",
  "sources": [
   {
    "id": "guide",
@@ -615,6 +615,53 @@
   },
   "paragraphCandidates": 3462,
   "interactiveSets": 93,
+  "fib": {
+   "limit": 3000,
+   "official": 1177,
+   "studied": 1054,
+   "otherMaterials": 160,
+   "lists": 609,
+   "unverified": [
+    "activists",
+    "atrium",
+    "colonization",
+    "crest",
+    "cyber",
+    "donuts",
+    "esteem",
+    "fairness",
+    "footprints",
+    "hallway",
+    "hefty",
+    "inhospitable",
+    "judicial",
+    "lingered",
+    "minuscule",
+    "operative",
+    "outsource",
+    "pillars",
+    "pyramids",
+    "rooftops",
+    "solidify",
+    "sweetly",
+    "ubiquitous",
+    "vapor",
+    "wellness",
+    "wrongful"
+   ],
+   "lastIncluded": [
+    "deserve",
+    "dollar",
+    "empty",
+    "mile",
+    "prize",
+    "singing",
+    "warning",
+    "admit",
+    "attitude",
+    "definition"
+   ]
+  },
   "interactiveIssues": [],
   "texts": 2246,
   "licences": {
@@ -628,5 +675,5 @@
    "CC BY-NC 4.0": 1
   }
  },
- "version": "6ceacdb11dc3"
+ "version": "f0860f7881f0"
 }

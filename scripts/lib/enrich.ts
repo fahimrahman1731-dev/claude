@@ -47,6 +47,42 @@ export function listInfo(lex: Lexicon, word: string): { lists: string[]; cefr?: 
   return { lists: [...lists].sort(), cefr };
 }
 
+/**
+ * Independent research signals for how important a word is for the DET: it is on a CEFR-level
+ * word list (CEFR-J A1–B2, Octanove C1–C2), on a core list (NGSL or NAWL), and frequent in real
+ * English (wordfreq Zipf 3.0 or more, about once per million words). Inflected forms count for
+ * their lemma ("authorities" for "authority"). `score` ranks words with the same evidence.
+ */
+export function researchSignals(lex: Lexicon, word: string): { count: number; score: number; cefr?: string; core: boolean; zipf: number } {
+  const forms = new Set([word, ...(lex[word]?.lemmas ?? [])]);
+  const strip: [RegExp, string][] = [
+    [/ies$/, 'y'],
+    [/ied$/, 'y'],
+    [/es$/, ''],
+    [/s$/, ''],
+    [/ed$/, ''],
+    [/ed$/, 'e'],
+    [/ing$/, ''],
+    [/ing$/, 'e'],
+    [/(.)\1(ed|ing)$/, '$1'],
+  ];
+  for (const [re, rep] of strip) {
+    const f = word.replace(re, rep);
+    if (f !== word && f.length >= 3 && lex[f]) forms.add(f);
+  }
+  let cefr: string | undefined;
+  let core = false;
+  for (const f of forms) {
+    const info = listInfo(lex, f);
+    if (info.cefr && (!cefr || info.cefr < cefr)) cefr = info.cefr;
+    if (info.lists.includes('ngsl') || info.lists.includes('nawl')) core = true;
+  }
+  const zipf = lex[word]?.z ?? 0;
+  const count = Number(!!cefr) + Number(core) + Number(zipf >= 3);
+  const level = cefr ? ({ A1: 3, A2: 3, B1: 3, B2: 2.5, C1: 2, C2: 1 } as Record<string, number>)[cefr] ?? 0 : 0;
+  return { count, score: level + (core ? 1.5 : 0) + Math.max(0, Math.min(zipf, 6) - 3), cefr, core, zipf };
+}
+
 /** In NGSL, NAWL, CEFR-J (A1–B2) or Octanove C1: the general and academic words the DET draws on. */
 export function inTrustedLists(lex: Lexicon, word: string): boolean {
   const { lists, cefr } = listInfo(lex, word);

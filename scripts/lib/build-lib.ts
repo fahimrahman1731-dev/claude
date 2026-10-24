@@ -7,7 +7,7 @@ import type { Context, Difficulty, InteractiveSet, Paragraph, ParagraphGap, Text
 import { checkContext, checkContextSet } from '../../src/engine/validate';
 import type { AuthoredParagraph, AuthoredWord } from './authored';
 import type { CollectedText } from './collected';
-import { chooseParagraphs, deletionReason, inTrustedLists, isBritishSpelling, listInfo, paragraphCandidates, pickContexts, senseForContexts, sentenceIndex, type Lexicon, type SingleSentence } from './enrich';
+import { chooseParagraphs, deletionReason, inTrustedLists, isBritishSpelling, listInfo, paragraphCandidates, pickContexts, researchSignals, senseForContexts, sentenceIndex, type Lexicon, type SingleSentence } from './enrich';
 import type { ExtractionResult, MergedWord } from './extract-lib';
 
 /** American → British spellings, applied to words that are in the dataset (accepted in Fill in the Blanks only). */
@@ -73,6 +73,8 @@ export interface BuildReport {
 }
 
 export interface CollectedSummary {
+  /** How the Fill in the Blanks words were chosen and verified. */
+  fib?: { limit: number; official: number; studied: number; otherMaterials: number; lists: number; unverified: string[]; lastIncluded: string[] };
   deleted: { word: string; reason: string }[];
   added: { count: number; byLevel: Record<string, number>; sample: string[] };
   contextOrigins: { collected: number; dictionary: number; authored: number };
@@ -357,19 +359,34 @@ export function buildVocab(
     return w;
   });
 
-  // Fill in the Blanks practices only the FIB_LIMIT most important words: every word from the
-  // study materials first (strongest evidence first), then the most common trusted-list words.
+  // Fill in the Blanks practices only the FIB_LIMIT most important words, each one verified.
+  // Duolingo's own item research predicts vocabulary items from corpus frequency and from
+  // presence in CEFR-level word lists (Sharpnack et al. 2024, "BanditCAT and AutoIRT"), so
+  // those are the independent research signals here, next to the study materials:
+  // - official DET material: always kept;
+  // - words the study guide selects (or teaches as a spelling trap or Fill in the Blanks word):
+  //   kept when at least one research signal confirms them;
+  // - other words from the materials (wrong options, third-party lists) and list-only words:
+  //   kept only when at least two research signals agree.
+  // Within each group the most important come first (CEFR level, core list, frequency).
   const fibCandidates = words.filter((w) => !w.isSmallWord && w.pos.some((p) => ['n', 'v', 'adj', 'adv'].includes(p)) && !w.tags.includes('british-word') && w.contexts.length > 0);
-  const fromLists = (w: VocabWord) => w.evidence.length === 1 && w.evidence[0] === 'trusted-list';
-  fibCandidates.sort(
-    (a, b) =>
-      Number(fromLists(a)) - Number(fromLists(b)) ||
-      b.evidenceScore - a.evidenceScore ||
-      Number(b.tags.includes('core-list')) - Number(a.tags.includes('core-list')) ||
-      (b.zipf ?? 0) - (a.zipf ?? 0) ||
-      a.word.localeCompare(b.word),
-  );
-  for (const w of fibCandidates.slice(0, FIB_LIMIT)) w.tags.push('fib-top');
+  const fibRank = fibCandidates.map((w) => {
+    const r = researchSignals(lex, w.word);
+    const ev = new Set<string>(w.evidence);
+    const studied =
+      ['author-selection', 'best-estimate', 'recurring', 'strategy-example'].some((e) => ev.has(e)) ||
+      w.tags.some((t) => t.startsWith('spelling-trap:') || t === 'fib-official' || t === 'fib-level' || t === 'fib-meaning');
+    const fromMaterials = w.evidence.some((e) => e !== 'trusted-list');
+    const group = ev.has('official') ? 0 : studied ? (r.count >= 1 ? 1 : -1) : fromMaterials ? (r.count >= 2 ? 2 : -1) : r.count >= 2 ? 3 : -1;
+    return { w, group, score: r.score, signals: r.count };
+  });
+  const fibUnverified = fibRank.filter((x) => x.group < 0 && x.w.evidence.some((e) => e !== 'trusted-list')).map((x) => x.w.word).sort();
+  const fibChosen = fibRank
+    .filter((x) => x.group >= 0)
+    .sort((a, b) => a.group - b.group || b.score - a.score || a.w.word.localeCompare(b.w.word))
+    .slice(0, FIB_LIMIT);
+  for (const x of fibChosen) x.w.tags.push('fib-top');
+  const fibByGroup = [0, 1, 2, 3].map((g) => fibChosen.filter((x) => x.group === g).length);
 
   // Word families: link each form to its base when the base is also in the dataset.
   const byWord = new Map(words.map((w) => [w.word, w]));
@@ -536,6 +553,15 @@ export function buildVocab(
             paragraphsByCorpus,
             paragraphCandidates: candidateCount,
             interactiveSets: interactive.length,
+            fib: {
+              limit: FIB_LIMIT,
+              official: fibByGroup[0],
+              studied: fibByGroup[1],
+              otherMaterials: fibByGroup[2],
+              lists: fibByGroup[3],
+              unverified: fibUnverified,
+              lastIncluded: fibChosen.slice(-10).map((x) => x.w.word),
+            },
             interactiveIssues,
             texts: texts.length,
             licences,

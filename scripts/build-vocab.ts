@@ -134,6 +134,21 @@ function toMarkdown(r: BuildReport, version: string): string {
   if (r.collected) {
     const c = r.collected;
     const o = c.contextOrigins;
+    if (c.fib) {
+      const f = c.fib;
+      lines.push('## Fill in the Blanks: the 3,000 most important words', '');
+      lines.push(
+        `Fill in the Blanks practices ${f.limit.toLocaleString()} verified words. The research signals are the ones Duolingo's own item research uses for vocabulary (corpus frequency and CEFR-level word lists), plus the core lists NGSL and NAWL.`,
+        '',
+      );
+      lines.push('| Group | Rule | Words |', '| --- | --- | --- |');
+      lines.push(`| Official DET material | always kept | ${f.official} |`);
+      lines.push(`| Selected by the study guide | confirmed by 1+ research signal | ${f.studied} |`);
+      lines.push(`| Other words from the materials (wrong options, third-party lists) | confirmed by 2+ research signals | ${f.otherMaterials} |`);
+      lines.push(`| Trusted word lists only | confirmed by 2+ research signals, most important first | ${f.lists} |`, '');
+      lines.push(`Words from the materials left out because no research source confirms them (${f.unverified.length}): ${f.unverified.join(', ') || 'none'}.`, '');
+      lines.push(`Last words included: ${f.lastIncluded.join(', ')}.`, '');
+    }
     lines.push('## Real collected material', '');
     lines.push('Sentences, Read and Complete texts and Interactive Reading passages come from real, openly licensed texts (see data/collected and scripts/collect/collect.py). Nothing is copied from live DET tests.', '');
     lines.push('| Measure | Count |', '| --- | --- |');

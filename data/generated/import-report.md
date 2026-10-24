@@ -1,6 +1,6 @@
 # Vocabulary import and validation report
 
-Data version `6ceacdb11dc3`, generated 2026-10-24T01:15:40.645Z.
+Data version `f0860f7881f0`, generated 2026-10-24T01:30:14.729Z.
 
 ## Totals
 
@@ -67,6 +67,21 @@ Priority: high 349, medium 1196, low 4239. Difficulty: easy 1933, intermediate 1
 ## Notes
 
 - Bank 1 says 37 more small words filled one gap each, but does not list them. They cannot be imported.
+
+## Fill in the Blanks: the 3,000 most important words
+
+Fill in the Blanks practices 3,000 verified words. The research signals are the ones Duolingo's own item research uses for vocabulary (corpus frequency and CEFR-level word lists), plus the core lists NGSL and NAWL.
+
+| Group | Rule | Words |
+| --- | --- | --- |
+| Official DET material | always kept | 1177 |
+| Selected by the study guide | confirmed by 1+ research signal | 1054 |
+| Other words from the materials (wrong options, third-party lists) | confirmed by 2+ research signals | 160 |
+| Trusted word lists only | confirmed by 2+ research signals, most important first | 609 |
+
+Words from the materials left out because no research source confirms them (26): activists, atrium, colonization, crest, cyber, donuts, esteem, fairness, footprints, hallway, hefty, inhospitable, judicial, lingered, minuscule, operative, outsource, pillars, pyramids, rooftops, solidify, sweetly, ubiquitous, vapor, wellness, wrongful.
+
+Last words included: deserve, dollar, empty, mile, prize, singing, warning, admit, attitude, definition.
 
 ## Real collected material
 
