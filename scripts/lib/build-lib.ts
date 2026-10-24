@@ -357,6 +357,20 @@ export function buildVocab(
     return w;
   });
 
+  // Fill in the Blanks practices only the FIB_LIMIT most important words: every word from the
+  // study materials first (strongest evidence first), then the most common trusted-list words.
+  const fibCandidates = words.filter((w) => !w.isSmallWord && w.pos.some((p) => ['n', 'v', 'adj', 'adv'].includes(p)) && !w.tags.includes('british-word') && w.contexts.length > 0);
+  const fromLists = (w: VocabWord) => w.evidence.length === 1 && w.evidence[0] === 'trusted-list';
+  fibCandidates.sort(
+    (a, b) =>
+      Number(fromLists(a)) - Number(fromLists(b)) ||
+      b.evidenceScore - a.evidenceScore ||
+      Number(b.tags.includes('core-list')) - Number(a.tags.includes('core-list')) ||
+      (b.zipf ?? 0) - (a.zipf ?? 0) ||
+      a.word.localeCompare(b.word),
+  );
+  for (const w of fibCandidates.slice(0, FIB_LIMIT)) w.tags.push('fib-top');
+
   // Word families: link each form to its base when the base is also in the dataset.
   const byWord = new Map(words.map((w) => [w.word, w]));
   const parent = new Map<string, string>();
@@ -542,6 +556,9 @@ export function buildVocab(
  * not be tracked).
  */
 export const MAX_GAPS = 16;
+
+/** How many words Fill in the Blanks practices. */
+export const FIB_LIMIT = 3000;
 
 export function selectGaps(text: string, byWord: Map<string, VocabWord>, maxGaps = MAX_GAPS): Omit<ParagraphGap, 'contextId'>[] {
   const sentences = splitSentences(text);

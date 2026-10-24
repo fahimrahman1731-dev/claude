@@ -8,7 +8,8 @@ export function inModePool(w: VocabWord, mode: Mode): boolean {
   switch (mode) {
     case 'fill-blanks':
       // Only nouns, verbs, adjectives and adverbs; never small words like "the" or "of".
-      return !w.isSmallWord && w.pos.some((p) => ['n', 'v', 'adj', 'adv'].includes(p)) && !w.tags.includes('british-word');
+      // Only the 3,000 most important words (tagged by the build), plus the student's own words.
+      return (w.isCustom || w.tags.includes('fib-top')) && !w.isSmallWord && w.pos.some((p) => ['n', 'v', 'adj', 'adv'].includes(p)) && !w.tags.includes('british-word');
     case 'spelling':
       return !w.isSmallWord;
     case 'small-words':
